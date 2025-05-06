@@ -1,0 +1,80 @@
+@import 'config.css';
+
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container.column{
+    flex-direction: column;
+}
+
+.flex-container.even{
+    justify-content: space-evenly;
+}
+
+.padding-x{
+    padding-inline: var(--standard-padding-x);
+}
+
+.text-big{
+    font-size: var(--big-font-size);
+    font-weight: bold;
+}
+
+.text-medium{
+    font-size: var(--medium-font-size);
+}
+
+.text-small{
+    font-size: var(--small-font-size);
+}
+
+.color-title-highlight{
+    color: var(--theme-title-highlight-color);
+}
+
+
+
+
+
+/* drop down menu */
+.menu-container{
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button{
+    background-color: transparent;
+    border: none;
+}
+ 
+.menu-content {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, 0);
+    background-color: var(--theme-menu-background-color);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
