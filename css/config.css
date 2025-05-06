@@ -8,22 +8,30 @@
     
     --theme-background-color: azure;
     --theme-text-color: #374151;
+    --theme-section-background-color: #bbcaca;
+    --theme-section-shadow-color: #3f4145;
     --theme-nav-text-color: #374151;
     --theme-title-highlight-color: #3b82f6;
     --theme-nav-shadow: rgba(0, 0, 0, 0.2);
     --theme-icon-color: #1f1f1f;
-    --theme-icon-color-hover: #3b82f6;
+    --theme-icon-hover-color: #3b82f6;
+    --theme-menu-content-color: #1f1f1f;
+    --theme-menu-content-hover-color: #3b82f6;
     --theme-menu-background-color: azure;
     
 }
 
 body.dark-theme {
-    --theme-background-color: #34353a;
+    --theme-background-color: #27282b;
+    --theme-section-background-color: #1e1f21;
+    --theme-section-shadow-color: #3f4145;
     --theme-text-color: azure;
     --theme-nav-text-color: #6d7580;
     --theme-title-highlight-color: #3b82f6;
     --theme-nav-shadow: rgba(80, 78, 78, 0.2);
     --theme-icon-color: azure;
-    --theme-icon-color-hover: #3b82f6;
+    --theme-icon-hover-color: #3b82f6;
     --theme-menu-background-color: #34353a;
+    --theme-menu-content-color: azure;
+    --theme-menu-content-hover-color: #3b82f6;
 }

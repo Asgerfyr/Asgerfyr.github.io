@@ -2,30 +2,11 @@
 @import 'config.css';
 
 
-body{
-    background-color: var(--theme-background-color);
-    font-family: "Roboto" "Open Sans";
-    color: var(--text-color)
-}
-
-section{
-    background-color: var(--theme-background-color);
-}
-
-nav{
-    background-color: var(--theme-background-color);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    box-shadow: 0 4px 7px var(--theme-nav-shadow);
-    color: var(--nav-text-color)
-}
-
 @media (max-width: 700px){
     nav .menu-content#nav-menu{
         position: absolute;
+        top:35px;
         transform:translate(-80%, 0);
-        width: 400px;
         font-size: var(--medium-font-size);
     }
 
@@ -34,8 +15,41 @@ nav{
         justify-content: space-between;
     }
 
+    .menu-content a {
+        padding-inline: 100px;
+    }
+
     nav .theme-toggle{
         padding-bottom: 30px;
+    }
+
+}
+
+@media (min-width: 700px){
+    nav .menu-button#nav-menu{
+        display:none;
+    }
+    
+    nav .menu-content#nav-menu{
+        display:block;
+        position: relative;
+        background-color: transparent;
+        font-size: var(--medium-font-size);
+        box-shadow: none;
+        transform: none;
+    }
+
+    nav .flex-container#nav-menu{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-content a {
+        padding-inline: 20px;
+    }
+
+    nav .theme-toggle .icon{
+        transform: translateY(-25%);
     }
 
 }
@@ -59,11 +73,11 @@ nav .theme-toggle .icon{
 }
 
 nav .theme-toggle .icon:hover{
-    color: var(--theme-icon-color-hover);
+    color: var(--theme-icon-hover-color);
 }
 
 nav .icon.dark{
-    left: 3px;
+    left: 0px;
     opacity: 1;
     z-index: 0;
 }
