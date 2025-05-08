@@ -14,52 +14,31 @@
   </head>
   <body class="dark-theme">
     <!-- Hero Section -->
-    <header
-      class="py-0 bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
-    >
-      <div
-        class="md:h-80 sm:h-auto max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 flex flex-col md:flex-row items-center"
-      >
-        <div class="md:py-20 md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span class="text-yellow-300">Asger Stidsen</span>
-          </h1>
-          <h2 class="text-2xl md:text-3xl font-semibold mb-6">
-            Full Stack Developer
-          </h2>
-          <p class="text-lg mb-8">
-            yap yap tilfældig ting at skrive her
-          </p>
-          <div class="flex space-x-4">
-            <a
-              href="#contact"
-              class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
-              >Hire Me</a
-            >
-            <a
-              href="#projects"
-              class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition"
-              >View Work</a
-            >
-          </div>
+    <header>
+      <div id="header-skill-title" class="absolute">
+        <h2>Full-Stack Developer</h2>
+      </div>
+      <div class="absolute" id="front-text-box">
+        <h1>Hi, I'm <span class="color-title-highlight">Asger Stidsen</span></h1>
+        
+        <p>yap yap tilfældig ting at skrive her</p>
+        <div>
+          <a href="#contact">Hire Me</a>
+          <a href="#projects">View Work</a>
         </div>
-        <div class="md:h-full md:w-1/2 flex justify-center">
-          <div class="relative">
-            <div
-              class="front_image_box overflow-hidden border-1 border-white shadow-xl"
-            >
+      </div>
+      <div class="absolute" id="front-image-box">
+        <div class="overflow-hidden fill">
+          <div class="reletive skew-10 fill-y">
+            <div class="skew-20 fill-y">
               <img
                 src="https://i.pinimg.com/736x/36/cd/b2/36cdb2253f2a033b86335c2b5c8aa0a3.jpg"
                 alt="Profile Picture"
-                class="w-full h-full object-cover"
+                class="fill-y"
               />
             </div>
-            <div
-              class="absolute -bottom-5 -right-5 bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-bold"
-            >
-              Available for work
-            </div>
           </div>
+          <div class="bg-yellow absolute bottom-90 no-wrap right-100 transMid round-20 p5">Available for work</div>
         </div>
       </div>
     </header>
