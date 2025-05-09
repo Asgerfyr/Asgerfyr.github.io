@@ -89,6 +89,15 @@ section{
     height: 100%;
 }
 
+.one-to-one{
+    aspect-ratio: 1/1;
+}
+
+.auto-x{
+    width: auto;
+    object-fit: contain;
+}
+
 .no-wrap{
     white-space: nowrap;
 }

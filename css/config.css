@@ -22,7 +22,8 @@
     --theme-menu-content-hover-color: #3b82f6;
     --theme-menu-background-color: azure;
     --theme-frontpage-title-text-color: #374151;
-    
+    --theme-typewriter-color: #9f6513;
+    --subtle-standout-color: #e6e4d5;
 }
 
 body.dark-theme {
@@ -39,4 +40,6 @@ body.dark-theme {
     --theme-menu-content-color: azure;
     --theme-menu-content-hover-color: #3b82f6;
     --theme-frontpage-title-text-color: #7c7c7c;
+    --theme-typewriter-color: #dfa14a;
+    --subtle-standout-color: #2b2a27;
 }
