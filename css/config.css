@@ -1,45 +1,60 @@
 :root {
     --standard-padding-x: 10vw;
 
-    --big-font-size: 32px;
-    --medium-font-size: 24px;
-    --small-font-size: 16px;
-    --xxl-font-size: 100px;
+    --big-font-size: 3vw;
+    --medium-font-size: 2.5vw;
+    --small-font-size: 1vw;
+    --xl-font-size: 5vw;
+    --xxl-font-size: 10vw;
 
     --frontpage-title-text-outline: 1px;
     --frontpage-title-text-outline-neg: calc(-1* var(--frontpage-title-text-outline));
     
-    --theme-background-color: azure;
-    --theme-text-color: #374151;
-    --theme-section-background-color: #bbcaca;
+    --theme-background-color: #fbf6cb;
+    --theme-text-color: #311c11;
+    --theme-section-background-color: #bba783;
     --theme-section-shadow-color: #3f4145;
-    --theme-nav-text-color: #374151;
-    --theme-title-highlight-color: #3b82f6;
-    --theme-nav-shadow: rgba(0, 0, 0, 0.2);
+    --theme-nav-text-color: #311c11;
+    --theme-highlight-color: #b45430;
+    --theme-nav-shadow: #311c11;
     --theme-icon-color: #1f1f1f;
-    --theme-icon-hover-color: #3b82f6;
-    --theme-menu-content-color: #1f1f1f;
-    --theme-menu-content-hover-color: #3b82f6;
-    --theme-menu-background-color: azure;
-    --theme-frontpage-title-text-color: #374151;
-    --theme-typewriter-color: #9f6513;
-    --subtle-standout-color: #e6e4d5;
+    --theme-icon-hover-color: #b45430;
+    --theme-menu-content-color: #311c11;
+    --theme-menu-content-hover-color: #b45430;
+    --theme-menu-background-color: #9f6c40;
+    --theme-frontpage-title-text-color: #311c11;
+    --theme-typewriter-cursor-color: #9f6513;
+    --theme-subtle-standout-color: #bba783;
 }
 
+/* remove:  
+I see every bug as a breadcrumb leading to a better solution.
+I believe great code is both logical and expressive.
+I build with both curiosity and intention.
+
+
+i like:
+Complexity doesn't scare me—it inspires me.
+Every problem is an opportunity in disguise.
+I think in patterns, not panic.
+I don’t look for quick fixes—I look for lasting solutions.
+I turn constraints into creative opportunities.
+ */
+
 body.dark-theme {
-    --theme-background-color: #27282b;
-    --theme-section-background-color: #1e1f21;
+    --theme-background-color: #311c11;
+    --theme-text-color: #fbf6cb;
+    --theme-section-background-color: #2b2a27;
     --theme-section-shadow-color: #3f4145;
-    --theme-text-color: azure;
-    --theme-nav-text-color: #6d7580;
-    --theme-title-highlight-color: #3b82f6;
+    --theme-nav-text-color: #fbf6cb;
+    --theme-highlight-color: #dfa14a;
     --theme-nav-shadow: rgba(80, 78, 78, 0.2);
-    --theme-icon-color: azure;
-    --theme-icon-hover-color: #3b82f6;
-    --theme-menu-background-color: #34353a;
-    --theme-menu-content-color: azure;
-    --theme-menu-content-hover-color: #3b82f6;
-    --theme-frontpage-title-text-color: #7c7c7c;
-    --theme-typewriter-color: #dfa14a;
-    --subtle-standout-color: #2b2a27;
+    --theme-icon-color: #fbf6cb;
+    --theme-icon-hover-color: #dfa14a;
+    --theme-menu-content-color: #fbf6cb;
+    --theme-menu-content-hover-color: #dfa14a;
+    --theme-menu-background-color: #2b2a27;
+    --theme-frontpage-title-text-color: #fbf6cb;
+    --theme-typewriter-cursor-color: #dfa14a;
+    --theme-subtle-standout-color: #3f2a20;
 }

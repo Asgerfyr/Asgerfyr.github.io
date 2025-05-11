@@ -33,7 +33,7 @@
             {"string": "", "typeStyle": "deleteTo", "pauseFor": 1000},
             {"string": "Full-Stack Developer", "pauseFor": 4000},
             {"string": "i", "typeStyle": "deleteTo", "pauseFor": 1000},
-            {"string": "Interest in Mathematics", "pauseFor": 2000},
+            {"string": "Interest in Mathematics", "pauseFor": 1000},
             {"string": "<div style=\"display:block;\">Interest in Mathematics</div>", "typeStyle": "blink", "pauseFor": 100}, 
             {"string": "and robotics", "pauseFor": 2000},
             {"string": "<div style=\"display:block;\">Interest in Mathematics</div>", "typeStyle": "deleteTo"},
@@ -48,11 +48,42 @@
         <h1>
           Hi, I'm <span class="color-title-highlight">Asger Stidsen</span>
         </h1>
-
-        <p class="typewriter type-error">yap yap tilfældig ting at skrive her</p>
-        <div class="a-buttons">
-          <a  href="#contact">Hire Me</a>
-          <a href="#projects">View Work</a>
+        <div class="js-tryper-container">
+          <p class="js-tryper"
+            style="display: inline" id="quotes-typewriter"
+            data-info='{"strings": [
+{ "string": "I think in patterns, not panic.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I see every project as a chance to grow and contribute.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "Every problem is an opportunity in disguise.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I genuinely enjoy figuring things out.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I turn constraints into creative opportunities.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "Complexity dose not scare me, it inspires me.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I believe problem-solving should feel like play.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I solve problems with curiosity, not just code.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "For me, coding is problem-solving with purpose.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I do not look for quick fixes, I look for lasting solutions.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
+{ "string": "I have fun making ideas work.", "pauseFor": 5000 },
+{ "string": "", "typeStyle": "deleteTo", "pauseFor": 300 }
+],
+          "typeSpeed": 200,
+          "loop": true}'
+            ></p>
+          <div class="js-curser" style="display: inline"></div>
+        </div>
+        
+        <div>
+          <a class="a-button" href="#contact">Hire Me</a>
+          <a class="a-button" href="#projects">View Work</a>
         </div>
       </div>
       <div class="absolute" id="front-image-box">
@@ -66,7 +97,7 @@
             />
           </div>
           <div
-            class="bg-yellow absolute bottom-90 no-wrap right-100 transMid round-20 p5"
+            class="highlight absolute bottom-90 no-wrap right-100 transMid round-20 p5"
           >
             Available for work
           </div>
