@@ -104,7 +104,7 @@ nav{
     height: 100vh;
 }
 
-#front-image-box{
+#header-image-box{
     /* transform: skew(-20deg);
     margin-left: calc(100vh * 0.364 /2);
     width: calc(100% - (100vh * 0.364 )); */
@@ -113,14 +113,14 @@ nav{
     width: calc(100% - (100vh * 0.17633 ));
 }
 
-#front-image-box{
+#header-image-box{
     width: 25vw;
     height: 100vh;
     right:15vw;
     background-color: var(--theme-subtle-standout-color);
 }
 
-#front-image{
+#header-image{
     position: absolute;
     bottom:0;
     height: 80%;
@@ -138,19 +138,19 @@ nav{
 
     color: var(--theme-background-color);
     
-    text-shadow: var(--frontpage-title-text-outline-neg) 0 2px var(--theme-frontpage-title-text-color),
-                 var(--frontpage-title-text-outline-neg) var(--frontpage-title-text-outline-neg) 2px var(--theme-frontpage-title-text-color),
-                 0 var(--frontpage-title-text-outline-neg) 2px var(--theme-frontpage-title-text-color),
-                 var(--frontpage-title-text-outline) var(--frontpage-title-text-outline-neg) 2px var(--theme-frontpage-title-text-color),
-                 0 var(--frontpage-title-text-outline) 2px var(--theme-frontpage-title-text-color),
-                 var(--frontpage-title-text-outline) var(--frontpage-title-text-outline) 2px var(--theme-frontpage-title-text-color),
-                 var(--frontpage-title-text-outline) 0 2px var(--theme-frontpage-title-text-color),
-                 var(--frontpage-title-text-outline-neg) var(--frontpage-title-text-outline) 2px var(--theme-frontpage-title-text-color)
+    text-shadow: var(--header-title-text-outline-neg) 0 2px var(--theme-header-title-text-color),
+                 var(--header-title-text-outline-neg) var(--header-title-text-outline-neg) 2px var(--theme-header-title-text-color),
+                 0 var(--header-title-text-outline-neg) 2px var(--theme-header-title-text-color),
+                 var(--header-title-text-outline) var(--header-title-text-outline-neg) 2px var(--theme-header-title-text-color),
+                 0 var(--header-title-text-outline) 2px var(--theme-header-title-text-color),
+                 var(--header-title-text-outline) var(--header-title-text-outline) 2px var(--theme-header-title-text-color),
+                 var(--header-title-text-outline) 0 2px var(--theme-header-title-text-color),
+                 var(--header-title-text-outline-neg) var(--header-title-text-outline) 2px var(--theme-header-title-text-color)
 }
 
 
 
-#front-text-box{
+#header-text-box{
     top: 50vh;
     margin-left: 50px;
     display: flex;

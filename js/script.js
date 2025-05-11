@@ -88,12 +88,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         top: targetElement.offsetTop - 80,
         behavior: "smooth",
       });
-
-      // Close mobile menu if open
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (!mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.add("hidden");
-      }
     }
   });
 });
@@ -184,7 +178,7 @@ function typewriterDeleteTo(container) {
 
   // get current string to delete to
   const currentString = strings[currentStringData.index].string;
-  
+
   // delete a char in the string
   DOM_typer.innerHTML = DOM_typer.innerHTML.slice(0, -1);
   // if the object dosent match the object to delete to

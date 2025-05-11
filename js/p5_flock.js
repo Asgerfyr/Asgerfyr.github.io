@@ -39,7 +39,6 @@ function setup() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log("Element is on screen!");
         loop(); // start drawing
       } else {
         noLoop(); // stop drawing

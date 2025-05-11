@@ -7,8 +7,8 @@
     --xl-font-size: 5vw;
     --xxl-font-size: 10vw;
 
-    --frontpage-title-text-outline: 1px;
-    --frontpage-title-text-outline-neg: calc(-1* var(--frontpage-title-text-outline));
+    --header-title-text-outline: 1px;
+    --header-title-text-outline-neg: calc(-1* var(--header-title-text-outline));
     
     --theme-background-color: #fbf6cb;
     --theme-text-color: #311c11;
@@ -22,9 +22,10 @@
     --theme-menu-content-color: #311c11;
     --theme-menu-content-hover-color: #b45430;
     --theme-menu-background-color: #9f6c40;
-    --theme-frontpage-title-text-color: #311c11;
+    --theme-header-title-text-color: #311c11;
     --theme-typewriter-cursor-color: #9f6513;
     --theme-subtle-standout-color: #bba783;
+    --theme-to-top-arrow-background: #a97257;
 }
 
 /* remove:  
@@ -54,7 +55,8 @@ body.dark-theme {
     --theme-menu-content-color: #fbf6cb;
     --theme-menu-content-hover-color: #dfa14a;
     --theme-menu-background-color: #2b2a27;
-    --theme-frontpage-title-text-color: #fbf6cb;
+    --theme-header-title-text-color: #fbf6cb;
     --theme-typewriter-cursor-color: #dfa14a;
     --theme-subtle-standout-color: #3f2a20;
+    --theme-to-top-arrow-background: #53382c;
 }
