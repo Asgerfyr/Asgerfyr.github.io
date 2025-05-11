@@ -95,6 +95,15 @@ nav{
 
 /* front page */
 
+#header-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 66vw;
+    height: 100vh;
+}
+
 #front-image-box{
     /* transform: skew(-20deg);
     margin-left: calc(100vh * 0.364 /2);
