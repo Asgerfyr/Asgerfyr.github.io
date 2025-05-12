@@ -83,10 +83,6 @@ section {
     color: var(--theme-highlight-color);
 }
 
-.skew-10 {
-    transform: skew(10deg);
-}
-
 .fill {
     width: 100%;
     height: 100%;
@@ -279,7 +275,7 @@ section {
     animation: to-top-arrow-animation-in linear 1.5s forwards;
 }
 
-.to-top-arrow-trigger:not(.in-viewport) .to-top-arrow {
+.to-top-arrow-trigger:not(.in-viewport) .to-top-arrow.animate {
     animation: to-top-arrow-animation-out 1s linear  forwards;
 }
 

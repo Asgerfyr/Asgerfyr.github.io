@@ -15,8 +15,8 @@ const functions = {
   },
   repelAlly: (diffrence, distence2) => {
     return {
-      x: -(diffrence.x * 10) / (distence2 / (20 * width)) / 10000,
-      y: -(diffrence.y * 10) / (distence2 / (20 * width)) / 10000,
+      x: -(diffrence.x * 10) / (distence2 / (15 * width)) / 10000,
+      y: -(diffrence.y * 10) / (distence2 / (15 * width)) / 10000,
     };
   },
   reactThreat: (diffrence, distence2) => {
@@ -177,13 +177,13 @@ class Particle {
       this.vel.y = 0;
     }
 
-    this.vel.x = constrain(this.vel.x, -20, 20);
-    this.vel.y = constrain(this.vel.y, -20, 20);
+    this.vel.x = constrain(this.vel.x, -10, 10);
+    this.vel.y = constrain(this.vel.y, -10, 10);
   }
 
   draw() {
     push();
-    stroke("blue");
+    stroke(color(120, 120, 150, 100));
     strokeWeight(2);
     translate(this.pos.x, this.pos.y);
     line(0, 0, this.vel.x, this.vel.y);
@@ -224,7 +224,7 @@ class Threat {
 
   draw() {
     push();
-    stroke("red");
+    stroke(color(255, 150, 150, 50));
     strokeWeight(10);
     translate(this.pos.x, this.pos.y);
     line(0, 0, this.vel.x, this.vel.y);

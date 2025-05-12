@@ -95,14 +95,33 @@ nav{
 
 /* front page */
 
-#header-canvas{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 66vw;
-    height: 100vh;
+
+
+@media (min-width: 700px){
+    #header-canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 66vw;
+        height: 100vh;
+    }
+
 }
+
+@media (max-width: 700px){
+    #header-canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+
+
 
 #header-image-box{
     /* transform: skew(-20deg);
@@ -117,15 +136,28 @@ nav{
     width: 25vw;
     height: 100vh;
     right:15vw;
-    background-color: var(--theme-subtle-standout-color);
+    background:  linear-gradient(110deg, var(--theme-background-color) 0%, var(--theme-subtle-standout-color) 50%, var(--theme-background-color) 100%);
+    box-shadow: 0 0 10px var(--dark-shadow-color);
+}
+
+#header-image-container{
+    height: 100vh;
+    width: calc(100% + 100vh * 0.17633);
+    transform: translateX(calc(-100vh * 0.17633 / 2)) skew(10deg);;
 }
 
 #header-image{
     position: absolute;
     bottom:0;
     height: 80%;
-    left: -13%;
+    object-fit: cover;
     /* transform: translateX(-50%); */
+}
+
+#header-image-text{
+    right:15vw;
+
+    
 }
 
 #header-skill-title{
