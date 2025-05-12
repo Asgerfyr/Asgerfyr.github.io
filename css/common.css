@@ -4,13 +4,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 body {
     overflow-x: hidden;
     background-color: var(--theme-background-color);
     font-family: "Roboto" "Open Sans";
-    color: var(--text-color)
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
 }
 
 nav {
@@ -187,13 +189,13 @@ section {
 
 
 .a-button {
-    padding: 10px;
-    margin: 50px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 15px;
     border: none;
     background-color: var(--theme-subtle-standout-color);
     color: var(--theme-text-color);
-    font-size: 16px;
+    font-size: max(2vw, 15px);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -226,7 +228,9 @@ section {
     text-underline-offset: 3px;
 }
 
-
+.pu-5 {
+    padding-top: 5vh;
+}
 
 
 .typewriter {
@@ -284,7 +288,7 @@ section {
     transform: translateY(-100vh) scale(0.5, 1);
   }
 
-  19% {
+  18% {
     transform: translateY(50px) scale(0.5, 1);
   }
 

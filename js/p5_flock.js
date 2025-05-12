@@ -49,13 +49,20 @@ function setup() {
 }
 
 function draw() {
+  //resize canvas to the size of the header
+  if(frameCount%60==0){
+    canvasDiv = select("#header-canvas");
+    let w = canvasDiv.width;
+    let h = canvasDiv.height;
+    resizeCanvas(w, h);
+  }
   clear();
   folk_handeler.updateParticles();
   folk_handeler.draw();
 }
 
 class Main {
-  constructor(num_particles_ = 100, num_threats_ = 3, update_jump_ = 1) {
+  constructor(num_particles_ = 200, num_threats_ = 3, update_jump_ = 1) {
     this.particles = [];
     while (num_particles_--) {
       this.particles.push(new Particle());
@@ -184,7 +191,7 @@ class Particle {
   draw() {
     push();
     stroke(color(120, 120, 150, 100));
-    strokeWeight(2);
+    strokeWeight(4);
     translate(this.pos.x, this.pos.y);
     line(0, 0, this.vel.x, this.vel.y);
     pop();
