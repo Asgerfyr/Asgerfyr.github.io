@@ -19,7 +19,7 @@ nav {
     background-color: var(--theme-background-color);
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 5;
     box-shadow: 0 -4px 10px 10px var(--theme-nav-shadow);
     color: var(--nav-text-color)
 }
@@ -37,9 +37,21 @@ section {
     margin: 20px;
     margin-block: 40px;
     border-radius: 10px;
+    animation: section-fade-in ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
 }
 
-
+@keyframes section-fade-in {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 
 .flex-container {
@@ -254,6 +266,7 @@ section {
 .to-top-arrow-trigger {
     position: sticky;
     top: 50vh;
+    z-index: 100;
     /* midt på siden */
     height: 1px;
     /* usynlig trigger */

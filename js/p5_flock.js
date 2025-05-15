@@ -48,6 +48,13 @@ function setup() {
   observer.observe(canvasDiv.elt);
 }
 
+window.addEventListener('resize', () => {
+  canvasDiv = select("#header-canvas");
+  let w = canvasDiv.width;
+  let h = canvasDiv.height;
+  resizeCanvas(w, h);
+});
+
 function draw() {
   //resize canvas to the size of the header
   if(frameCount%60==0){

@@ -22,59 +22,6 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
   document.querySelector(".theme-toggle").classList.toggle("dark-theme");
 });
 
-// Project filter functionality
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Update active button
-    filterButtons.forEach((btn) => {
-      btn.classList.remove("bg-blue-600", "text-white");
-      btn.classList.add("bg-white", "text-gray-700");
-    });
-    button.classList.remove("bg-white", "text-gray-700");
-    button.classList.add("bg-blue-600", "text-white");
-
-    // Filter projects
-    const filter = button.dataset.filter;
-    projectCards.forEach((card) => {
-      if (filter === "all" || card.classList.contains(filter)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  });
-});
-
-// Modal functionality
-function openModal(projectId) {
-  const modal = document.getElementById(`${projectId}-modal`);
-  modal.classList.remove("opacity-0", "pointer-events-none");
-  modal.classList.add("opacity-100", "pointer-events-auto");
-  document.body.classList.add("overflow-hidden");
-}
-
-function closeModal() {
-  const modals = document.querySelectorAll(".modal");
-  modals.forEach((modal) => {
-    modal.classList.remove("opacity-100", "pointer-events-auto");
-    modal.classList.add("opacity-0", "pointer-events-none");
-  });
-  document.body.classList.remove("overflow-hidden");
-}
-
-// Close modal when clicking outside
-const modals = document.querySelectorAll(".modal");
-modals.forEach((modal) => {
-  modal.addEventListener("click", (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
-      closeModal();
-    }
-  });
-});
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
