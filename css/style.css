@@ -156,6 +156,10 @@ nav{
         font-size: var(--medium-font-size);
     }
 
+    #about-image{
+        width: 33vw;
+    }
+
 }
 
 @media (orientation: portrait) OR (max-width: 700px){
@@ -208,6 +212,10 @@ nav{
     #header-text-undertitle{
         font-size: var(--xl-font-size);
     }
+
+    #about-image{
+        width: 66vw;
+    }
 }
 
 #header-skill-title *{
@@ -230,8 +238,12 @@ nav{
 
 #quotes-typewriter{
   margin-top: 50vh;
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
+}
+
+#quotes-curser{
+  font-size: 3vw;
 }
 
 /* side stuff */

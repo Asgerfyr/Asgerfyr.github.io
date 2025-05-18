@@ -116,22 +116,22 @@
         <h2 class="text-3xl font-bold text-center mb-12">
           About <span class="text-blue-600">Me</span>
         </h2>
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/3 mb-10 md:mb-0 flex flex-col justify-center">
-            <div class="w-64 h-64 rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
-                alt="About Me"
-                class="w-full h-full object-cover"
-              />
-            </div>
+        <div class="flex flex-col gap-12 items-center ">
+          <div class="rounded-lg overflow-hidden shadow-xl"
+               id="about-image">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
+              alt="About Me"
+              class="w-full object-cover"
+            />
+          </div>
 
-            <div class="js-tryper-container">
-              <p
-                class="js-tryper"
-                style="display: inline"
-                id="quotes-typewriter"
-                data-info='{"strings": [
+          <div class="js-tryper-container">
+            <p
+              class="js-tryper text-"
+              style="display: inline"
+              id="quotes-typewriter"
+              data-info='{"strings": [
 { "string": "I think in patterns, not panic.", "pauseFor": 5000 },
 { "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
 { "string": "I see every project as a chance to grow and contribute.", "pauseFor": 5000 },
@@ -155,21 +155,20 @@
 { "string": "I have fun making ideas work.", "pauseFor": 5000 },
 { "string": "", "typeStyle": "deleteTo", "pauseFor": 300 }
 ],
-          "typeSpeed": 60,
-          "loop": true}'
-              ></p>
-              <div class="js-curser" style="display: inline"></div>
-            </div>
+        "typeSpeed": 60,
+        "loop": true}'
+            ></p>
+            <div class="js-curser" id="quotes-curser" style="display: inline"></div>
           </div>
           <div class="md:w-2/3 md:pl-12">
             <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-            <p class="mb-6 leading-relaxed">
+            <p class="mb-6 leading-relaxed text-2xl">
               Jeg er en 19-årig studerende på HTX's computer science-linje i
               Aarhus C. Min dagligdag er præget af udfordrende projekter, hvor
               kreativ tænkning og evnen til at løse komplekse problemstillinger
               er afgørende.
             </p>
-            <p class="mb-6 leading-relaxed">
+            <p class="mb-6 leading-relaxed text-2xl">
               har jeg en stærk interesse i at hjælpe andre. Jeg har altid været
               den, der tager initiativ og udvikler kreative løsninger på andres
               udfordringer. Det giver mig stor tilfredsstillelse at kunne gøre
@@ -218,32 +217,15 @@
         </p>
 
         <!-- Project Filter -->
-        <div class="flex justify-center mb-12">
-          <div class="inline-flex rounded-md shadow-sm">
+        <div class="flex justify-center mb-12 w-2/3">
+          <div class="project-filters  inline-flex rounded-md shadow-sm">
             <button
               data-filter="all"
               class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white"
             >
               All Projects
             </button>
-            <button
-              data-filter="web"
-              class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50"
-            >
-              Web Apps
-            </button>
-            <button
-              data-filter="mobile"
-              class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50"
-            >
-              Mobile Apps
-            </button>
-            <button
-              data-filter="design"
-              class="filter-btn px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-gray-700 hover:bg-gray-50"
-            >
-              UI/UX Design
-            </button>
+            
           </div>
         </div>
 

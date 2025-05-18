@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    get_porject_data_frontpage("api/project.json");
+    get_porject_data_frontpage("data/frontpage_project.json");
 });
 
 async function get_porject_data_frontpage(json_url) {
@@ -8,9 +8,8 @@ async function get_porject_data_frontpage(json_url) {
         const response = await fetch(json_url);
         const data = await response.json();
         insert_projects_to_section(data);
-
+        filterSetup();
     } catch (error) {
-        console.error("Fejl ved indsættelse af projekter:", error);
     }
 }
 
@@ -27,9 +26,10 @@ function insert_projects_to_section(data_) {
             insert_project_to_modal({ key, project });
             closeModalWhenClickOutsideSetup();
         } catch (error) {
-            console.error(`error in project ${key}: `, error);
         }
     })
+
+    addFilterButton(data_);
 
 }
 
@@ -41,14 +41,61 @@ function validateProject(project) {
     if (typeof project.description !== "string") throw new Error(`description is missing not a string`);
     if (typeof project.topics !== "object") throw new Error(`topics is missing not a array`);
     if (typeof project.topicsSummery !== "object") throw new Error(`topicsSummery is missing not a array`);
-    if (typeof project.category !== "string") throw new Error(`category is missing not a string`);
+    if (typeof project.category !== "object") throw new Error(`category is missing not a array`);
     if (typeof project.date !== "string") throw new Error(`date is missing not a string`);
     if (typeof project.link !== "string") throw new Error(`link is missing not a string`);
+}
+
+function addFilterButton(data_) {
+    const filterButtonsContainer = document.querySelector(`.project-filters`);
+
+    const filters = getCommonFilters(data_);
+    const lastFilter = filters.at(-1);
+
+    filters.forEach(filter => {
+        const filterButton = document.createElement("button");
+        filterButton.className = "filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50";
+        if (filter == lastFilter) filterButton.classList.add("rounded-r");
+        filterButton.dataset.filter = filter;
+        filterButton.textContent = filter;
+        filterButtonsContainer.appendChild(filterButton);
+    });
+}   
+
+function getCommonFilters(data_) {
+
+    let filters = {};
+
+    Object.values(data_).forEach(project => {
+        project.category.forEach(category => {
+            if (!filters[category]) filters[category] = 0;
+            filters[category] += 1;
+        })
+    });
+
+
+    const filterAmount = 5;
+
+    let currentFilterCountFilterint = 0;
+
+    while (Object.keys(filters).length > filterAmount){
+        
+        Object.entries(filters).forEach(([filter, count]) => {
+            if (count < currentFilterCountFilterint) delete filters[filter];
+        });
+
+        console.warn(`while result: ${Object.keys(filters).length > filterAmount} \n filters length: ${Object.keys(filters).length} \n currentFilterCountFilterint: ${currentFilterCountFilterint}`);
+
+        currentFilterCountFilterint++;
+    }
+
+    return Object.keys(filters);
 }
 
 function insert_project({ project_grid, key, project }) {
     const card = document.createElement("div");
     card.className = "project-card";
+    card.classList.add(...project.category);
     card.id = `Project-${key}`;
     card.onclick = () => openModal(key);
 
@@ -58,7 +105,7 @@ function insert_project({ project_grid, key, project }) {
     const image = document.createElement("img");
     image.src = project.image;
     image.alt = project.title;
-    image.className = "w-full h-full object-cover transition duration-500 hover:scale-110";
+    image.className = "project-image transition duration-500 hover:scale-110";
 
     imageWrap.appendChild(image);
 
@@ -126,12 +173,12 @@ function insert_project_to_modal({ key, project }) {
     modalContent.appendChild(modalHeader);
 
     const modalImageContainer = document.createElement("div");
-    modalImageContainer.className = "mb-6";
+    modalImageContainer.className = "mb-6 h-64";
 
     const modalImage = document.createElement("img");
     modalImage.src = project.image;
     modalImage.alt = project.title;
-    modalImage.className = "w-full h-64 object-cover rounded-lg";
+    modalImage.className = "project-image rounded-lg";
 
     modalImageContainer.appendChild(modalImage);
     modalContent.appendChild(modalImageContainer);
@@ -149,7 +196,7 @@ function insert_project_to_modal({ key, project }) {
 
     const modalCategoryValue = document.createElement("p");
     modalCategoryValue.className = "text-gray-700";
-    modalCategoryValue.textContent = project.category;
+    modalCategoryValue.textContent = project.category.join(" / ");
     modalCategoryContainer.appendChild(modalCategoryValue);
 
     const modalDateContainer = document.createElement("div");
@@ -233,34 +280,33 @@ function insert_project_to_modal({ key, project }) {
     body.appendChild(modal);
 }
 
+function filterSetup() {
+    // Project filter functionality
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
 
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Update active button
+            filterButtons.forEach((btn) => {
+                btn.classList.remove("bg-blue-600", "text-white");
+                btn.classList.add("bg-white", "text-gray-700");
+            });
+            button.classList.remove("bg-white", "text-gray-700");
+            button.classList.add("bg-blue-600", "text-white");
 
-
-// Project filter functionality
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
-
-filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        // Update active button
-        filterButtons.forEach((btn) => {
-            btn.classList.remove("bg-blue-600", "text-white");
-            btn.classList.add("bg-white", "text-gray-700");
-        });
-        button.classList.remove("bg-white", "text-gray-700");
-        button.classList.add("bg-blue-600", "text-white");
-
-        // Filter projects
-        const filter = button.dataset.filter;
-        projectCards.forEach((card) => {
-            if (filter === "all" || card.classList.contains(filter)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+            // Filter projects
+            const filter = button.dataset.filter;
+            projectCards.forEach((card) => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
         });
     });
-});
+}
 
 // Modal functionality
 function openModal(projectId) {
