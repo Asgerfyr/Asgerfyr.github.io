@@ -26,7 +26,7 @@
     }
 
     nav .theme-toggle .icon{
-        transform: translateY(-25%);
+        transform: translateY(-40%);
     }
 
 }
@@ -245,6 +245,12 @@ nav{
 #quotes-curser{
   font-size: 3vw;
 }
+
+.about-text div{
+    line-height: 1.625;
+    font-size: 5vw;
+}
+
 
 /* side stuff */
 

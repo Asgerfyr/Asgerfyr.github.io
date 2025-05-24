@@ -108,6 +108,7 @@
           </div>
         </div>
       </div>
+      <script src="js/nav.js"></script>
     </nav>
 
     <!-- About Section -->
@@ -160,21 +161,21 @@
             ></p>
             <div class="js-curser" id="quotes-curser" style="display: inline"></div>
           </div>
-          <div class="md:w-2/3 md:pl-12">
+          <div class="w-5/6">
             <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-            <p class="mb-6 leading-relaxed text-2xl">
-              Jeg er en 19-årig studerende på HTX's computer science-linje i
+            <div class="mb-6 about-text">
+              <div> Jeg er en 19-årig studerende på HTX's computer science-linje i
               Aarhus C. Min dagligdag er præget af udfordrende projekter, hvor
               kreativ tænkning og evnen til at løse komplekse problemstillinger
-              er afgørende.
-            </p>
+              er afgørende.</div>
+            </div>
             <p class="mb-6 leading-relaxed text-2xl">
               har jeg en stærk interesse i at hjælpe andre. Jeg har altid været
               den, der tager initiativ og udvikler kreative løsninger på andres
               udfordringer. Det giver mig stor tilfredsstillelse at kunne gøre
               en forskel.
             </p>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="flex gap-12">
               <div>
                 <p class="font-medium">
                   <span class="text-blue-600">Name:</span> Asger Stidsen
@@ -217,7 +218,7 @@
         </p>
 
         <!-- Project Filter -->
-        <div class="flex justify-center mb-12 w-2/3">
+        <div class="m-auto flex justify-center mb-12 w-2/3">
           <div class="project-filters  inline-flex rounded-md shadow-sm">
             <button
               data-filter="all"
@@ -271,68 +272,65 @@
             <div class="space-y-6">
               <div>
                 <div class="flex justify-between mb-1">
-                  <span class="font-medium">JavaScript/TypeScript</span>
-                  <span class="font-medium">95%</span>
+                  <span class="font-medium">JavaScript</span>
+                  <span class="font-medium">80%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 95%"
+                    style="width: 80%"
                   ></div>
                 </div>
               </div>
               <div>
                 <div class="flex justify-between mb-1">
-                  <span class="font-medium">React & React Native</span>
-                  <span class="font-medium">90%</span>
+                  <span class="font-medium">C#</span>
+                  <span class="font-medium">50%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 90%"
+                    style="width: 50%"
                   ></div>
-                </div>
               </div>
               <div>
                 <div class="flex justify-between mb-1">
                   <span class="font-medium">Node.js & Express</span>
-                  <span class="font-medium">88%</span>
+                  <span class="font-medium">40%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 88%"
+                    style="width: 40%"
                   ></div>
                 </div>
               </div>
               <div>
                 <div class="flex justify-between mb-1">
-                  <span class="font-medium">UI/UX Design</span>
-                  <span class="font-medium">85%</span>
+                  <span class="font-medium">3D modeling/3D printing</span>
+                  <span class="font-medium">70%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 85%"
+                    style="width: 70%"
                   ></div>
                 </div>
               </div>
               <div>
                 <div class="flex justify-between mb-1">
-                  <span class="font-medium">Database Management</span>
-                  <span class="font-medium">82%</span>
+                  <span class="font-medium">Database and Mysql</span>
+                  <span class="font-medium">60%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 82%"
+                    style="width: 60%"
                   ></div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Skill Tree -->
         </div>
       </div>
     </section>
@@ -358,7 +356,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Email</h4>
-                  <p class="text-gray-600">Asger@example.com</p>
+                  <p class="text-gray-600">Asger.g.stidsen@gmail.com</p>
                 </div>
               </div>
               <div class="flex items-start">
@@ -367,7 +365,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Phone</h4>
-                  <p class="text-gray-600">+1 (555) 123-4567</p>
+                  <p class="text-gray-600">+45 50 56 91 45</p>
                 </div>
               </div>
               <div class="flex items-start">
@@ -376,7 +374,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Location</h4>
-                  <p class="text-gray-600">San Francisco, California</p>
+                  <p class="text-gray-600">Hadsten 8370, Denmark</p>
                 </div>
               </div>
             </div>
@@ -470,14 +468,14 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 mr-20">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-4 md:mb-0">
             <span class="text-xl font-bold">MyPortfolio</span>
-            <p class="text-gray-400 mt-2">© 2023 All Rights Reserved</p>
+            <p class="text-gray-400 mt-2">© 2025 All Rights Reserved</p>
           </div>
           <div class="flex space-x-6">
-            <a href="#" class="text-gray-400 hover:text-white transition"
+            <a href="#header" class="text-gray-400 hover:text-white transition"
               >Home</a
             >
             <a href="#about" class="text-gray-400 hover:text-white transition"
@@ -496,6 +494,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/typewriter.js"></script>
   </body>
 </html>

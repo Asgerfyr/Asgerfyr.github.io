@@ -5,7 +5,7 @@
     "description": "Developed a comprehensive e-commerce platform for a fashion retailer with features including product catalog, shopping cart, user authentication, payment processing, and admin dashboard. The platform supports multiple payment gateways and has an integrated inventory management system.",
     "topics": ["ESP32", "Bluetooth", "Embedded Systems", "Audio Amplifier", "3D Printing"],
     "topicsSummery": ["Hardware Design", "IoT", "DIY Electronics"],
-    "category": ["IoT_Project", "Embedded_System"],
+    "category": ["IoT", "Embedded_System"],
     "date": "March 2025",
     "link": "#"
 },
@@ -17,7 +17,7 @@
   "description": "Byggede et moderne og responsivt portfolio website for at præsentere mine projekter, tekniske færdigheder og baggrund. Siden er lavet med fokus på performance, enkel navigation og elegant UI. Den indeholder en projektside, CV-download, kontaktformular og blogsektion. Designet med komponentbaseret struktur og animationsovergange.",
   "topics": ["React", "Tailwind CSS", "Framer Motion", "EmailJS", "Vite"],
   "topicsSummery": ["Figma", "UI/UX", "Responsivt Design"],
-  "category": ["Web_Application", "Design"],
+  "category": ["Web", "Design"],
   "date": "February 2025",
   "link": "#"
 },
@@ -29,7 +29,7 @@
   "description": "Udviklede en app til at kontrollere og automatisere smarthome-enheder som lys, termostater og sikkerhedssystemer. Integreret med populære platforme som Google Home og Alexa, med brugervenligt interface og realtidsstatus.",
   "topics": ["React Native", "Node.js", "MQTT", "Firebase"],
   "topicsSummery": ["UI/UX Design", "Prototyping"],
-  "category": ["Mobile_Application", "IoT"],
+  "category": ["Mobile", "IoT"],
   "date": "January 2024",
   "link": "#"
 },
@@ -41,7 +41,7 @@
   "description": "Byggede en webapp, der viser detaljeret vejrdata fra flere API’er. Brugere kan se temperatur, vind, og prognoser for deres område med grafik og animationer for bedre visualisering.",
   "topics": ["React", "OpenWeather API", "D3.js", "CSS Animations"],
   "topicsSummery": ["Data Visualization", "UI Design"],
-  "category": ["Web_Application", "Data_Visualization", "IoT"],
+  "category": ["Web", "Data_Visual", "IoT"],
   "date": "July 2023",
   "link": "#"
 },
@@ -53,7 +53,7 @@
   "description": "Udviklede en platform, hvor brugere kan tilføje deres kryptovalutaholdinger, følge prisudviklinger og få analyser. Integreret med realtidsdata og notifikationer ved store ændringer.",
   "topics": ["Vue.js", "Node.js", "CoinGecko API", "Firebase"],
   "topicsSummery": ["UI/UX", "Mobile Responsiveness"],
-  "category": ["Web_Application", "Finance"],
+  "category": ["Web", "Finance"],
   "date": "November 2023",
   "link": "#"
 },
@@ -65,7 +65,7 @@
   "description": "Skabte en app med interaktive øvelser, quizzer og daglige udfordringer for at hjælpe brugere med at lære nye sprog. Indeholder brugerprogression, badges og fællesskabsfunktioner.",
   "topics": ["Flutter", "Firebase", "Gamification", "REST API"],
   "topicsSummery": ["UX Design", "Mobile Development"],
-  "category": ["Mobile_Application", "Education", "IoT"],
+  "category": ["Mobile", "Education", "IoT"],
   "date": "December 2024",
   "link": "#"
 },
