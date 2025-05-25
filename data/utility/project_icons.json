@@ -1,0 +1,12 @@
+{
+    "microchip": {"name": "microchip", "color": "blue"},
+    "code": {"name": "code", "color": "green"},
+    "3d_parts": {"name": "cube", "color": "purple"},
+    "cube": {"name": "cube", "color": "purple"},
+    "power": {"name": "bolt", "color": "yellow"},
+    "gauge": {"name": "tachometer-alt", "color": "blue"},
+    "battery": {"name": "battery-three-quarters", "color": "green"},
+    "scale": {"name": "weight", "color": "purple"},
+
+    "missingIcon": {"name":"notdef", "color":"fuchsia"}
+}

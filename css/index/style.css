@@ -1,5 +1,5 @@
 
-@import 'config.css';
+@import '../common/config.css';
 
 
 @media (orientation: landscape) and (min-width: 701px){
@@ -69,7 +69,6 @@ nav{
         position: absolute;
         color: var(--theme-icon-color);
         opacity: 0;
-        z-index: -1;
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -78,19 +77,16 @@ nav{
     }
 
     .icon.dark{
-        left: 0px;
+        /* left: 0px; */
         opacity: 1;
-        z-index: 0;
     }
 
     .dark-theme .icon.dark{
         opacity: 0;
-        z-index: -1;
     }
 
     .dark-theme .icon.light{
         opacity: 1;
-        z-index: 0;
     }
 }
 

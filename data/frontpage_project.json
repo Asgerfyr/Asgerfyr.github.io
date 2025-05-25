@@ -1,13 +1,13 @@
 {
-"Underbed_Sound_System":{"title": "Underbed Sound System",
+"BT_Sound_System":{"title": "BT Sound System",
     "image": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
-    "sub_description": "Et trådløst lydsystem gemt under sengen, kompatibelt med flere enheder.",
+    "sub_description": "Et trådløst Bluetooth lydsystem til at eliminere kabler, kompatibelt med forskelige enheder.",
     "description": "Developed a comprehensive e-commerce platform for a fashion retailer with features including product catalog, shopping cart, user authentication, payment processing, and admin dashboard. The platform supports multiple payment gateways and has an integrated inventory management system.",
     "topics": ["ESP32", "Bluetooth", "Embedded Systems", "Audio Amplifier", "3D Printing"],
     "topicsSummery": ["Hardware Design", "IoT", "DIY Electronics"],
     "category": ["IoT", "Embedded_System"],
     "date": "March 2025",
-    "link": "#"
+    "link": "BT Sound System"
 },
 
 "Portfolio_Website": {
@@ -17,9 +17,9 @@
   "description": "Byggede et moderne og responsivt portfolio website for at præsentere mine projekter, tekniske færdigheder og baggrund. Siden er lavet med fokus på performance, enkel navigation og elegant UI. Den indeholder en projektside, CV-download, kontaktformular og blogsektion. Designet med komponentbaseret struktur og animationsovergange.",
   "topics": ["React", "Tailwind CSS", "Framer Motion", "EmailJS", "Vite"],
   "topicsSummery": ["Figma", "UI/UX", "Responsivt Design"],
-  "category": ["Web", "Design"],
-  "date": "February 2025",
-  "link": "#"
+  "category": ["Web", "Frontend", "Design", "Documentation"],
+  "date": "April 2025",
+  "link": "404"
 },
 
 "Smart_Home_Controller": {
@@ -31,7 +31,7 @@
   "topicsSummery": ["UI/UX Design", "Prototyping"],
   "category": ["Mobile", "IoT"],
   "date": "January 2024",
-  "link": "#"
+  "link": "404"
 },
 
 "Weather_Dashboard": {
@@ -43,7 +43,7 @@
   "topicsSummery": ["Data Visualization", "UI Design"],
   "category": ["Web", "Data_Visual", "IoT"],
   "date": "July 2023",
-  "link": "#"
+  "link": "404"
 },
 
 "Crypto_Portfolio_Manager": {
@@ -55,7 +55,7 @@
   "topicsSummery": ["UI/UX", "Mobile Responsiveness"],
   "category": ["Web", "Finance"],
   "date": "November 2023",
-  "link": "#"
+  "link": "404"
 },
 
 "Language_Learning_App": {
@@ -67,7 +67,7 @@
   "topicsSummery": ["UX Design", "Mobile Development"],
   "category": ["Mobile", "Education", "IoT"],
   "date": "December 2024",
-  "link": "#"
+  "link": "404"
 },
 
 "Automated_Garden_System": {
@@ -79,6 +79,6 @@
   "topicsSummery": ["Embedded Systems", "IoT"],
   "category": ["IoT_Project", "Web_Application"],
   "date": "August 2024",
-  "link": "#"
+  "link": "404"
 }
 }

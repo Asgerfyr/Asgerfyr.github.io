@@ -287,11 +287,16 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    opacity: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--theme-icon-color);
     background-color: var(--theme-to-top-arrow-background);
+}
+
+.to-top-arrow:hover{
+    opacity: 1;
 }
 
 .to-top-arrow-trigger .to-top-arrow.animate {

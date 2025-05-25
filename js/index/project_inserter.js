@@ -1,7 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    Project.get_porject_data_frontpage("data/frontpage_project.json");
+    Project.get_project_data_frontpage("data/frontpage_project.json");
 });
 
 
@@ -17,19 +17,19 @@ class ProjectObject {
     }
 
 
-    async get_porject_data_frontpage(json_url) {
+    async get_project_data_frontpage(json_url) {
         try {
             const response = await fetch(json_url);
             const data = await response.json();
             this.insert_projects_to_section(data);
-            this.filterSetup();
         } catch (error) {
+            console.error("Project error:", error);
         }
     }
 
 
     insert_projects_to_section(data_) {
-        let project_section = document.querySelector("#projects");
+        let project_section = document.getElementById("projects");
 
         let project_grid = project_section.querySelector("#projects-grid");
 
@@ -39,7 +39,9 @@ class ProjectObject {
                 this.insert_project({ project_grid, key, project });
                 this.insert_project_to_modal({ key, project });
                 this.closeModalWhenClickOutsideSetup();
+                this.filterSetup();
             } catch (error) {
+                console.error("Insert error:", error);
             }
         })
         this.getCommonFilters(data_);
@@ -125,8 +127,6 @@ class ProjectObject {
         const sortetFilters = Object.fromEntries(Object.entries(filters).sort(([, a], [, b]) => b - a));
 
         this.categorys = Object.keys(sortetFilters);
-
-        console.log(this.categorys);
 
         return;
     }
@@ -303,7 +303,7 @@ class ProjectObject {
         modalOptionsContainer.appendChild(modalCloseButton);
 
         const modalLinkButton = document.createElement("a");
-        modalLinkButton.href = project.link;
+        modalLinkButton.href = `pages/project.html?project=${project.link}`;
         modalLinkButton.className = "bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition";
         modalLinkButton.textContent = "Visit Project";
         modalOptionsContainer.appendChild(modalLinkButton);
@@ -321,7 +321,7 @@ class ProjectObject {
 
     filterSetup() {
         // Project filter functionality
-        const filterContainer = document.querySelector(".project-filters");
+        const filterContainer = document.getElementsByClassName("project-filters")[0];
         const projectCards = document.querySelectorAll(".project-card");
 
         filterContainer.addEventListener("click", (e) => {

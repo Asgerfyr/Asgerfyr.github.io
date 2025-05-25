@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" data-badged-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
+    <title>404 - Project Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        .shaking {
+            animation: shake 0.5s ease-in-out infinite;
+        }
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 min-h-screen flex flex-col items-center justify-center text-white overflow-hidden">
+    <div id="cursor-trail-container"></div>
+    
+    <div class="text-center px-4">
+        <div class="floating mb-8">
+            <i class="fas fa-ghost text-8xl text-white"></i>
+            <div class="text-4xl font-bold mt-4">404</div>
+        </div>
+        
+        <h1 class="text-5xl font-bold mb-4 glow">Oops! This project doesn't exist.</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            The page you're looking for vanished into the digital void. 
+            Maybe it was never here, or maybe it got lost in cyberspace.
+        </p>
+        
+        <div class="bg-black bg-opacity-30 rounded-lg p-6 mb-8 border border-white border-opacity-20">
+            <div class="flex items-center justify-center mb-4">
+                <i class="fas fa-robot text-3xl text-purple-300 mr-3"></i>
+                <span class="text-xl font-semibold text-purple-200">AI-Generated 404 Page</span>
+            </div>
+            <p class="text-sm text-gray-300">
+                This creative 404 experience was crafted by artificial intelligence to make your 
+                dead-end journey a little more delightful.
+            </p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button id="confetti-btn" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105">
+                <i class="fas fa-party-horn mr-2"></i> Throw Confetti
+            </button>
+            <button id="dance-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105">
+                <i class="fas fa-music mr-2"></i> Make Ghost Dance
+            </button>
+            <a href="/" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all transform hover:scale-105 text-center">
+                <i class="fas fa-home mr-2"></i> Go Home
+            </a>
+        </div>
+    </div>
+
+    <div class="absolute bottom-4 left-0 right-0 text-center text-sm text-gray-400">
+        Lost but not forgotten • AI-powered error page
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        // Confetti effect
+        document.getElementById('confetti-btn').addEventListener('click', function() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+
+        // Dancing ghost
+        const ghost = document.querySelector('.fa-ghost');
+        document.getElementById('dance-btn').addEventListener('click', function() {
+            ghost.classList.toggle('shaking');
+            this.innerHTML = ghost.classList.contains('shaking') ? 
+                '<i class="fas fa-stop mr-2"></i> Stop Dancing' : 
+                '<i class="fas fa-music mr-2"></i> Make Ghost Dance';
+        });
+
+        // Colorful cursor trail
+        document.addEventListener('mousemove', function(e) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            
+            // Random pastel color
+            const hue = Math.floor(Math.random() * 360);
+            trail.style.backgroundColor = `hsla(${hue}, 100%, 80%, 0.7)`;
+            
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            
+            document.getElementById('cursor-trail-container').appendChild(trail);
+            
+            // Remove trail after animation completes
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                trail.style.transform = `translate(-50%, -50%) scale(0)`;
+                setTimeout(() => trail.remove(), 300);
+            }, 500);
+        });
+
+        // Random glow color change
+        setInterval(() => {
+            const hue = Math.floor(Math.random() * 360);
+            document.querySelector('.glow').style.textShadow = `0 0 10px hsla(${hue}, 100%, 80%, 0.8)`;
+        }, 2000);
+    </script>
+</body>
+</html>

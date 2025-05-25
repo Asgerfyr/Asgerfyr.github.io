@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/project/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Project Documentation</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="nav-link">Overview</a>
+                    <a href="#code" class="nav-link">Code</a>
+                    <a href="#electronics" class="nav-link">Electronics</a>
+                    <a href="#3dprinting" class="nav-link">3D Printing</a>
+                    <a href="#conclusion" class="nav-link">Conclusion</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="section-anchor mb-16">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-info-circle text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Project Overview</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+                        <p class="text-gray-600 mb-4">
+                            This project aims to create an innovative solution combining software, electronics, and 3D printed components. 
+                            The system integrates multiple technologies to achieve its objectives.
+                        </p>
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Objectives</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                            <li>Develop a functional prototype with integrated components</li>
+                            <li>Implement efficient and maintainable code</li>
+                            <li>Design custom electronic circuits</li>
+                            <li>Create 3D printed enclosures and mechanical parts</li>
+                            <li>Document all aspects thoroughly for future reference</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-microchip text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Microcontroller Integration</h4>
+                                    <p class="text-sm text-gray-500">ESP32/Arduino/Raspberry Pi based control</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-code text-green-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Custom Software</h4>
+                                    <p class="text-sm text-gray-500">Python/C++/JavaScript implementation</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-cube text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">3D Printed Parts</h4>
+                                    <p class="text-sm text-gray-500">Custom designed enclosures and mechanisms</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-bolt text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Power Management</h4>
+                                    <p class="text-sm text-gray-500">Efficient power delivery and battery systems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-images text-blue-500 mr-3"></i>
+                    Project Images
+                </h3>
+                <div class="image-gallery">
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Project+Overview" alt="Project Overview" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Complete Assembly</h4>
+                            <p class="text-sm text-gray-500">Fully assembled prototype</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=System+Diagram" alt="System Diagram" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">System Diagram</h4>
+                            <p class="text-sm text-gray-500">Architecture overview</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Workflow" alt="Workflow" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Workflow</h4>
+                            <p class="text-sm text-gray-500">Project development stages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Section -->
+        <section id="code" class="section-anchor mb-16">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-code text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Code Documentation</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Software Architecture</h3>
+                        <p class="text-gray-600 mb-4">
+                            The software follows a modular architecture with clear separation of concerns. 
+                            Main components include the control logic, communication module, and user interface.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Dependencies</h3>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Library1 v2.3.4 - For sensor communication</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>FrameworkX v1.5.0 - Core application framework</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>UtilityPack v0.9.1 - Helper functions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Key Algorithms</h3>
+                        <p class="text-gray-600 mb-4">
+                            The system implements several custom algorithms for data processing and control logic:
+                        </p>
+                        <div class="bg-gray-800 text-white rounded-lg p-4 text-sm">
+                            <pre><code>// Sample algorithm for sensor data processing
+function processSensorData(data) {
+    // Apply calibration offsets
+    let calibrated = data.map(item => {
+        return {
+            x: item.x * CALIBRATION.x,
+            y: item.y * CALIBRATION.y,
+            z: item.z * CALIBRATION.z
+        };
+    });
+    
+    // Apply noise reduction filter
+    return kalmanFilter(calibrated);
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-images text-blue-500 mr-3"></i>
+                    Code Screenshots
+                </h3>
+                <div class="image-gallery">
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Main+Code" alt="Main Code" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Main Control Loop</h4>
+                            <p class="text-sm text-gray-500">Primary application logic</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Class+Diagram" alt="Class Diagram" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Class Diagram</h4>
+                            <p class="text-sm text-gray-500">Object-oriented structure</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=UI+Code" alt="UI Code" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">User Interface</h4>
+                            <p class="text-sm text-gray-500">Frontend implementation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electronics Section -->
+        <section id="electronics" class="section-anchor mb-16">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-microchip text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Electronics Documentation</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Circuit Design</h3>
+                        <p class="text-gray-600 mb-4">
+                            The electronic system consists of a microcontroller interfacing with various sensors and actuators. 
+                            Power management was carefully designed to ensure stable operation.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Components List</h3>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b">
+                                        <th class="text-left py-2">Component</th>
+                                        <th class="text-left py-2">Specification</th>
+                                        <th class="text-left py-2">Qty</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-2">Microcontroller</td>
+                                        <td class="py-2">ESP32-WROOM</td>
+                                        <td class="py-2">1</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-2">Temperature Sensor</td>
+                                        <td class="py-2">DS18B20</td>
+                                        <td class="py-2">2</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-2">Motor Driver</td>
+                                        <td class="py-2">L298N</td>
+                                        <td class="py-2">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Power Supply</td>
+                                        <td class="py-2">5V 3A</td>
+                                        <td class="py-2">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Schematic Details</h3>
+                        <p class="text-gray-600 mb-4">
+                            The schematic was designed with signal integrity and power distribution in mind. 
+                            Key considerations included:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4">
+                            <li>Proper decoupling capacitors near each IC</li>
+                            <li>Separate analog and digital grounds</li>
+                            <li>Appropriate trace widths for power lines</li>
+                            <li>ESD protection on exposed connectors</li>
+                        </ul>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Pin Configuration</h3>
+                        <div class="bg-gray-800 text-white rounded-lg p-4 text-sm">
+                            <pre>Microcontroller Pinout:
+- GPIO4  : I2C SDA
+- GPIO5  : I2C SCL
+- GPIO12 : PWM Motor Control
+- GPIO13 : Sensor Interrupt
+- GPIO14 : Status LED</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-images text-blue-500 mr-3"></i>
+                    Electronics Images
+                </h3>
+                <div class="image-gallery">
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Schematic" alt="Schematic" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Circuit Schematic</h4>
+                            <p class="text-sm text-gray-500">Complete circuit diagram</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=PCB+Design" alt="PCB Design" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">PCB Layout</h4>
+                            <p class="text-sm text-gray-500">Board design overview</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Assembled+Board" alt="Assembled Board" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Assembled Board</h4>
+                            <p class="text-sm text-gray-500">Final soldered version</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Printing Section -->
+        <section id="3dprinting" class="section-anchor mb-16">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-cube text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">3D Printing Documentation</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Design Process</h3>
+                        <p class="text-gray-600 mb-4">
+                            The mechanical parts were designed in Fusion 360 with careful consideration of printability, 
+                            structural integrity, and assembly requirements. Iterative prototyping helped refine the designs.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Print Specifications</h3>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b">
+                                        <th class="text-left py-2">Parameter</th>
+                                        <th class="text-left py-2">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-2">Printer</td>
+                                        <td class="py-2">Prusa i3 MK3S</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-2">Material</td>
+                                        <td class="py-2">PLA/PETG</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-2">Layer Height</td>
+                                        <td class="py-2">0.2mm</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="py-2">Infill</td>
+                                        <td class="py-2">20-30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2">Supports</td>
+                                        <td class="py-2">Tree (where needed)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Design Features</h3>
+                        <p class="text-gray-600 mb-4">
+                            The 3D models incorporate several smart design elements:
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4">
+                            <li>Snap-fit joints for tool-less assembly</li>
+                            <li>Integrated cable management channels</li>
+                            <li>Service access points</li>
+                            <li>Ventilation slots for heat dissipation</li>
+                            <li>Mounting points for electronics</li>
+                        </ul>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">STL File Details</h3>
+                        <div class="bg-gray-800 text-white rounded-lg p-4 text-sm">
+                            <pre>File naming convention:
+- Enclosure_Top_v2.stl
+- Mounting_Bracket_Final.stl
+- Cover_Plate_R1.stl
+
+Print time estimates:
+- Main body: 4h 23m
+- Cover: 2h 15m
+- Bracket: 1h 45m</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-images text-blue-500 mr-3"></i>
+                    3D Printing Images
+                </h3>
+                <div class="image-gallery">
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=3D+Model" alt="3D Model" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">3D Model</h4>
+                            <p class="text-sm text-gray-500">CAD rendering</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Printed+Parts" alt="Printed Parts" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Printed Parts</h4>
+                            <p class="text-sm text-gray-500">Fresh off the printer</p>
+                        </div>
+                    </div>
+                    <div class="image-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Assembled+Unit" alt="Assembled Unit" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-medium">Final Assembly</h4>
+                            <p class="text-sm text-gray-500">All components together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="section-anchor">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-flag-checkered text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Project Conclusion</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Results</h3>
+                        <p class="text-gray-600 mb-4">
+                            The project successfully achieved its primary objectives, delivering a functional prototype 
+                            that integrates software, electronics, and mechanical components as planned.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Key Metrics</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tachometer-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Performance</h4>
+                                    <p class="text-sm text-gray-500">Achieved 95% of target processing speed</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-battery-three-quarters text-green-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Power Efficiency</h4>
+                                    <p class="text-sm text-gray-500">18% improvement over baseline</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-weight text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Weight</h4>
+                                    <p class="text-sm text-gray-500">Final assembly: 320g (target: 350g)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-lightbulb text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        Early integration testing would have revealed mechanical/electronic interface issues sooner.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Future Improvements</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                            <li>Implement wireless communication module</li>
+                            <li>Redesign mounting system for easier maintenance</li>
+                            <li>Add water resistance to enclosure</li>
+                            <li>Optimize power consumption further</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Project Documentation</h3>
+                    <p class="text-gray-400">
+                        Comprehensive report covering all aspects of the project development including code, electronics, and 3D printing.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition">Overview</a></li>
+                        <li><a href="#code" class="text-gray-400 hover:text-white transition">Code</a></li>
+                        <li><a href="#electronics" class="text-gray-400 hover:text-white transition">Electronics</a></li>
+                        <li><a href="#3dprinting" class="text-gray-400 hover:text-white transition">3D Printing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Project Info</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>Completion Date: June 2023</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Team: 3 Members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Duration: 4 Months</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 Project Documentation Report. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const mobileMenu = document.querySelector('.md\\:flex');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-16');
+            mobileMenu.classList.toggle('right-6');
+            mobileMenu.classList.toggle('bg-white');
+            mobileMenu.classList.toggle('p-4');
+            mobileMenu.classList.toggle('rounded-lg');
+            mobileMenu.classList.toggle('shadow-lg');
+            mobileMenu.classList.toggle('space-y-4');
+        });
+    </script>
+
+    <script src="/js/project/insertProject.js"></script>
+
+    <script src="/js/common/smooth-sctolling-links.js"></script>
+</body>
+</html>

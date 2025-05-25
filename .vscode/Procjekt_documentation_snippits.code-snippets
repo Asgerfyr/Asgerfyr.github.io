@@ -1,0 +1,120 @@
+{
+	// subsectiont
+	"setup text subsection": {
+		"scope": "json",
+		"prefix": "doc-text",
+		"body": [
+			"{",
+			"  \"type\": \"text\",",
+			"  \"content\": \"{${1:Content}}\"",
+			"}$2"
+		],
+		"description": "Insert taxt subsection"
+	},
+	"setup code subsection": {
+		"scope": "json",
+		"prefix": "doc-code",
+		"body": [
+			"{",
+			"  \"type\": \"code\",",
+			"  \"language\": \"${1:js}\",",
+			"  \"content\": \"${2:Code}\"",
+			"}$3"
+		],
+		"description": "Insert code subsection"
+	},
+	"setup list subsection": {
+		"scope": "json",
+		"prefix": "doc-list",
+		"body": [
+			"{",
+			"  \"type\": \"list\",",
+			"  \"content\": [",
+			"    \"${1:list_item_1}\",",
+			"    \"${2:list_item_2}\"",
+			"  ]",
+			"}$3"
+		],
+		"description": "Insert list subsection"
+	},
+	"setup checklist subsection": {
+		"scope": "json",
+		"prefix": "doc-checklist",
+		"body": [
+			"{",
+			"  \"type\": \"checklist\",",
+			"  \"content\": [",
+			"    {",
+			"      \"checked\": ${1:true},",
+			"      \"text\": \"${2:Item 1}\"",
+			"    },",
+			"    {",
+			"      \"checked\": ${3:true},",
+			"      \"text\": \"${4:Item 2}\"",
+			"    }",
+			"  ]",
+			"}$5"
+		],
+		"description": "Insert checklist subsection"
+	},
+	"setup table subsection": {
+		"scope": "json",
+		"prefix": "doc-table",
+		"body": [
+			"{",
+			"  \"type\": \"table\",",
+			"  \"content\": {",
+			"    \"headers\": [",
+			"      \"${1:Header 1}\",",
+			"      \"${2:Header 2}\",",
+			"    ],",
+			"    \"rows\": [",
+			"      [",
+			"        \"${3:Row 1 Col 1}\",",
+			"        \"${4:Row 1 Col 2}\",",
+			"      ],",
+			"      [",
+			"        \"${5:Row 2 Col 1}\",",
+			"        \"${6:Row 2 Col 2}\",",
+			"      ]",
+			"    ]",
+			"  }",
+			"}$7"
+		],
+		"description": "Insert table subsection"
+	},
+	//sections
+	"setup empty section": {
+		"scope": "json",
+		"prefix": "doc-empty",
+		"body": [
+			"{",
+			"  \"icon\": \"${1:icon}\",",
+			"  \"title\": \"${2:section_title}\", // Documentation tilføjes automatisk",
+			"  \"content\": {",
+			"    \"${2:section_title}\": [",
+			"         ",
+			"     ]",
+			"  },",
+			"  \"images\": {",
+			"    \"image_title\": \"${3:image_title}\", // section_title tilføjes automatisk (default: images)",
+			"    \"image_elements\": [",
+			"      {",
+			"        \"url\": \"${4:image_url_1}\",",
+			"        \"alt\": \"${5:image_alt_1}\",",
+			"        \"title\": \"${3:image_title}\",",
+			"        \"caption\": \"${6:image_caption_1}\"",
+			"      },",
+			"      {",
+			"        \"url\": \"${7:image_url_2}\",",
+			"        \"alt\": \"${8:image_alt_2}\",",
+			"        \"title\": \"${3:image_title}\",",
+			"        \"caption\": \"${9:image_caption_2}\"",
+			"      }",
+			"    ]",
+			"  }",
+			"}$0"
+		],
+		"description": "Insert empty section with images only"
+	}
+}

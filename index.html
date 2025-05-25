@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>My Portfolio</title>
+    <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" data-badged-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
+    <title>Asger Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/common/standerd.css" />
+    <link rel="stylesheet" href="/css/index/style.css" />
   </head>
   <body class="dark-theme">
     <!-- Hero Section -->
     <header id="header">
       <div id="header-canvas"></div>
-      <script src="js/p5_flock.js"></script>
+      <script src="/js/index/p5_flock.js"></script>
       <div id="header-skill-title" class="absolute">
         <div class="js-tryper-container">
           <h2
@@ -86,7 +87,7 @@
     </header>
 
     <nav>
-      <div class="flex-container padding-x">
+      <div class="flex-container px-20">
         <div id="nav-header">
           <a href="#header" class="text-big color-title-highlight">Portfolio</a>
         </div>
@@ -108,7 +109,7 @@
           </div>
         </div>
       </div>
-      <script src="js/nav.js"></script>
+      <script src="/js/common/nav.js"></script>
     </nav>
 
     <!-- About Section -->
@@ -243,13 +244,13 @@
           </button>
         </div>
       </div>
-      <script src="js/project_inserter.js"></script>
+      <script src="/js/index/project_inserter.js"></script>
     </section>
 
     <!-- To-Top-Arrow -->
     <div class="to-top-arrow-trigger">
       <a href="#header" class="to-top-arrow">↑</a>
-      <script src="js/to-top-arrow.js"></script>
+      <script src="/js/common/to-top-arrow.js"></script>
     </div>
     
 
@@ -270,18 +271,20 @@
           <div class="lg:w-1/2">
             <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
             <div class="space-y-6">
+
               <div>
                 <div class="flex justify-between mb-1">
                   <span class="font-medium">JavaScript</span>
-                  <span class="font-medium">80%</span>
+                  <span class="font-medium">85%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                   <div
                     class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 80%"
+                    style="width: 85%"
                   ></div>
                 </div>
               </div>
+
               <div>
                 <div class="flex justify-between mb-1">
                   <span class="font-medium">C#</span>
@@ -292,7 +295,22 @@
                     class="bg-blue-600 h-2.5 rounded-full"
                     style="width: 50%"
                   ></div>
+                </div>
               </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="font-medium">Python</span>
+                  <span class="font-medium">40%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-blue-600 h-2.5 rounded-full"
+                    style="width: 40%"
+                  ></div>
+                </div>
+              </div>
+
               <div>
                 <div class="flex justify-between mb-1">
                   <span class="font-medium">Node.js & Express</span>
@@ -305,18 +323,7 @@
                   ></div>
                 </div>
               </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">3D modeling/3D printing</span>
-                  <span class="font-medium">70%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 70%"
-                  ></div>
-                </div>
-              </div>
+              
               <div>
                 <div class="flex justify-between mb-1">
                   <span class="font-medium">Database and Mysql</span>
@@ -329,6 +336,33 @@
                   ></div>
                 </div>
               </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="font-medium">3D modeling/3D printing</span>
+                  <span class="font-medium">70%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-blue-600 h-2.5 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="font-medium">Design</span>
+                  <span class="font-medium">30%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                  <div
+                    class="bg-blue-600 h-2.5 rounded-full"
+                    style="width: 30%"
+                  ></div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -472,7 +506,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-4 md:mb-0">
             <span class="text-xl font-bold">MyPortfolio</span>
-            <p class="text-gray-400 mt-2">© 2025 All Rights Reserved</p>
+            <p class="text-gray-400 mt-2">© 2025 Asger Stidsen. Written content may not be copied or reused. Code and layout may be used with proper credit.</p>
           </div>
           <div class="flex space-x-6">
             <a href="#header" class="text-gray-400 hover:text-white transition"
@@ -494,6 +528,7 @@
       </div>
     </footer>
 
-    <script src="js/typewriter.js"></script>
+    <script src="/js/common/typewriter.js"></script>
+    <script src="/js/common/smooth-sctolling-links.js"></script>
   </body>
 </html>

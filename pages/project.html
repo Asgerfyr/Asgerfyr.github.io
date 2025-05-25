@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png"
+        data-badged-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" rel="shortcut icon"
+        href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
+    <title>Project Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/project/style.css">
+    <!-- code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
+                    <h1 id="project-title" class="text-2xl font-bold text-gray-800"> Documentation</h1>
+                </div>
+                <div id="nav-links" class="hidden md:flex space-x-8">
+                    <a href="#overview" class="nav-link">Overview</a>
+                    <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="section-anchor mb-16">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-info-circle text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Project Overview</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+                        <p id="description" class="text-gray-600 mb-4">
+                            <!-- filled in by javascript -->
+                        </p>
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Objectives</h3>
+                        <ul id="objectives-list" class="list-disc pl-6 space-y-2 text-gray-600">
+                            <!-- filled in by javascript -->
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+                        <div id="features" class="space-y-4">
+                            <!-- filled in by javascript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-images text-blue-500 mr-3"></i>
+                    Project Images
+                </h3>
+                <div class="image-gallery">
+                    <!-- filled in by javascript -->
+                </div>
+            </div>
+        </section>
+
+        <div id="main-sections">
+            <!-- filled in by javascript -->
+
+        </div>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="section-anchor">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-flag-checkered text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-2xl font-bold">Project Conclusion</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Results</h3>
+                        <p id="results" class="text-gray-600 mb-4">
+                            The project successfully achieved its primary objectives, delivering a functional prototype
+                            that integrates software, electronics, and mechanical components as planned.
+                        </p>
+
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Key Metrics</h3>
+                        <div id="metrics" class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tachometer-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Performance</h4>
+                                    <p class="text-sm text-gray-500">Achieved 95% of target processing speed</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-battery-three-quarters text-green-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Power Efficiency</h4>
+                                    <p class="text-sm text-gray-500">18% improvement over baseline</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-weight text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Weight</h4>
+                                    <p class="text-sm text-gray-500">Final assembly: 320g (target: 350g)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-lightbulb text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p id="learned" class="text-sm text-yellow-700">
+                                        Early integration testing would have revealed mechanical/electronic interface
+                                        issues sooner.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4 mt-6">Future Improvements</h3>
+                        <ul id="improvements-list" class="list-disc pl-6 space-y-2 text-gray-600">
+                            <li>Implement wireless communication module</li>
+                            <li>Redesign mounting system for easier maintenance</li>
+                            <li>Add water resistance to enclosure</li>
+                            <li>Optimize power consumption further</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Project Documentation</h3>
+                    <p class="text-gray-400">
+                        Comprehensive report covering all aspects of the project development including code,
+                        electronics, and 3D printing.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition">Overview</a></li>
+                        <li><a href="#code" class="text-gray-400 hover:text-white transition">Code</a></li>
+                        <li><a href="#electronics" class="text-gray-400 hover:text-white transition">Electronics</a>
+                        </li>
+                        <li><a href="#3dprinting" class="text-gray-400 hover:text-white transition">3D Printing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Project Info</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <div>
+                                <span class="block">Completion Date: </span>
+                                <span id="completion-date">June 2023</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Team: <span id="team-size">3</span> Members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Duration: <span id="duration">4 Months</span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Asger Stidsen. Written content may not be copied or reused. Code and layout may be used with proper credit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const mobileMenu = document.querySelector('.md\\:flex');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-16');
+            mobileMenu.classList.toggle('right-6');
+            mobileMenu.classList.toggle('bg-white');
+            mobileMenu.classList.toggle('p-4');
+            mobileMenu.classList.toggle('rounded-lg');
+            mobileMenu.classList.toggle('shadow-lg');
+            mobileMenu.classList.toggle('space-y-4');
+        });
+    </script>
+
+    <script src="/js/project/insertProject.js"></script>
+
+    <script src="/js/common/smooth-sctolling-links.js"></script>
+    
+    
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

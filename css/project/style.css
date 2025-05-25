@@ -1,0 +1,60 @@
+.section-anchor {
+    scroll-margin-top: 100px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-card {
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.code-block {
+    font-family: 'Courier New', monospace;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.section-grid-container {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-grid-container {
+        column-count: 1;
+    }
+}
+
+.section-grid-container * {
+    break-inside: avoid;
+}

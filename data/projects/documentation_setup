@@ -1,0 +1,142 @@
+
+{
+    "overview": {
+        "description": "{{project_overview_description}}",
+        "objectives": [
+            "{{objective_1}}",
+            "{{objective_2}}",
+            "{{objective_3}}"
+        ],
+        "features": [
+            {
+                "icon": "{{feature_icon_1}}",
+                "title": "{{feature_title_1}}",
+                "description": "{{feature_description_1}}"
+            },
+            {
+                "icon": "{{feature_icon_2}}",
+                "title": "{{feature_title_2}}",
+                "description": "{{feature_description_2}}"
+            }
+        ],
+        "images": [
+            {
+                "url": "{{image_url}}",
+                "alt": "{{image_alt}}",
+                "title": "{{image_title}}",
+                "caption": "{{image_caption}}"
+            }
+        ]
+    },
+    "sections": [
+        {
+            "icon": "{{section_icon}}",
+            "title": "{{section_title}}", //Tilføjer automatisk Documentation til titel ved indsættelse på rapport
+            "content": {
+                "{{section_title}}": [
+                    {
+                        "type": "text",
+                        "content": "{{section_text}}"
+                    },
+                    {
+                        "type": "code",
+                        "language": "{{section_code_language}}",
+                        "content": "{{section_code}}"
+                    },
+                    {
+                        "type": "list",
+                        "content": [
+                            "{{list_item_1}}",
+                            "{{list_item_2}}"
+                        ]
+                    },
+                    {
+                        "type": "checklist",
+                        "content": [
+                            {
+                                "checked": {{checklist_item_1_checked_boolean}},
+                                "text": "{{checklist_item_1_text}}"
+                            },
+                            {
+                                "checked": {{checklist_item_2_checked_boolean}},
+                                "text": "{{checklist_item_2_text}}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "content": {
+                            "headers": [
+                                "{{table_header_1}}",
+                                "{{table_header_2}}",
+                                "{{table_header_3}}"
+                            ],
+                            "rows": [
+                                [
+                                    "{{table_row_1_column_1}}",
+                                    "{{table_row_1_column_2}}",
+                                    "{{table_row_1_column_3}}"
+                                ],
+                                [
+                                    "{{table_row_2_column_1}}",
+                                    "{{table_row_2_column_2}}",
+                                    "{{table_row_2_column_3}}"
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            },
+            "images": {
+                "image_title": "{{image_title}}", //Tilføjer automatisk section_title foran image_title ved indsættelse på rapport (hvis ikke difineret standartværdi er "images")
+                "image_elements": [
+                    {
+                        "url": "{{image_url}}",
+                        "alt": "{{image_alt}}",
+                        "title": "{{image_title}}",
+                        "caption": "{{image_caption}}"
+                    },
+                    {
+                        "url": "{{image_url}}",
+                        "alt": "{{image_alt}}",
+                        "title": "{{image_title}}",
+                        "caption": "{{image_caption}}"
+                    }
+                ]
+            }
+        }
+    ],
+    "conclusion": {
+        "results": "{{conclusion_results}}",
+        "metrics": [
+            {
+                "icon": "{{conclusion_key_metrics_icon_1}}",
+                "title": "{{conclusion_key_metrics_title_1}}",
+                "metrics_result": "{{conclusion_key_metrics_result_1}}"
+            },
+            {
+                "icon": "{{conclusion_key_metrics_icon_2}}",
+                "title": "{{conclusion_key_metrics_title_2}}",
+                "metrics_result": "{{conclusion_key_metrics_result_2}}"
+            },
+            {
+                "icon": "{{conclusion_key_metrics_icon_3}}",
+                "title": "{{conclusion_key_metrics_title_3}}",
+                "metrics_result": "{{conclusion_key_metrics_result_3}}"
+            }
+        ],
+        "Learned": "{{conclusion_lessons_learned}}",
+        "improvements": [
+            "{{conclusion_future_improvements_1}}",
+            "{{conclusion_future_improvements_2}}",
+            "{{conclusion_future_improvements_3}}",
+            "{{conclusion_future_improvements_4}}"
+        ]
+    }
+}
+
+
+
+
+
+# https://jsonformatter.org/json-escape    text with special characters to json format
