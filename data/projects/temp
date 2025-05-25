@@ -1,0 +1,303 @@
+{
+    "info":{
+        "completion_date": "June 2023",
+        "team_size": 3,
+        "duration": "5 Months"
+    },
+    
+    "overview": {
+        "description": "Dette projekt er et trådløst Bluetooth-musikanlæg bygget ind under en seng. Det er baseret på en ESP32, som modtager lyd via Bluetooth og sender det videre til en eksisterende analog forstærker. Projektet forbedrer et ældre lydanlæg ved at gøre det kompatibelt med moderne enheder og fjerne behovet for kabler. Løsningen fokuserer på lavpris-komponenter, sikkerhed, støjfiltrering og enkel konstruktion.",
+        "objectives": [
+            "Udvikle en funktionel prototype med integrerede komponenter",
+            "Implementere effektiv og vedligeholdelsesvenlig kode i Arduino-miljø",
+            "Designe skræddersyet elektronik og strømfiltrering",
+            "Skabe 3D-printet kabinet og komponentholder",
+            "Dokumentere strømforsyning, signalvej og mekanisk opbygning"
+        ],
+        "features": [
+            {
+                "icon": "microchip",
+                "title": "Mikrokontroller-integration",
+                "description": "ESP32 med Bluetooth A2DP-modtagelse og lydstreaming"
+            },
+            {
+                "icon": "code",
+                "title": "Egen software",
+                "description": "Arduino C++ med BluetoothA2DPSink-bibliotek"
+            },
+            {
+                "icon": "3d_parts",
+                "title": "3D-modeldesign og -printede dele",
+                "description": "Specialdesignet kasse opdelt i strøm og lydsektion"
+            },
+            {
+                "icon": "power",
+                "title": "Strømstyring",
+                "description": "230V AC til 5V DC-konvertering, sikker adskillelse og støjfiltrering"
+            }
+        ],
+        "images": [
+            {
+                "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                "alt": "Project Overview",
+                "title": "Complete Assembly",
+                "caption": "Fully assembled prototype"
+            }
+        ]
+    },
+    "sections": [
+        {
+            "icon": "code",
+            "title": "Code",
+            "content": {
+                "Software Architecture": [
+                    {
+                        "type": "text",
+                        "content": "The software follows a modular architecture with clear separation of concerns. Main components include the control logic, communication module, and user interface."
+                    }
+                ],
+                "Dependencies": [
+                    {
+                        "type": "checklist",
+                        "content": [
+                            {
+                                "checked": true,
+                                "text": "Library1 v2.3.4 - For sensor communication"
+                            },
+                            {
+                                "checked": true,
+                                "text": "FrameworkX v1.5.0 - Core application framework"
+                            },
+                            {
+                                "checked": true,
+                                "text": "UtilityPack v0.9.1 - Helper functions"
+                            }
+                        ]
+                    }
+                ],
+                "Key Algorithms": [
+                    {
+                        "type": "text",
+                        "content": "The system implements several custom algorithms for data processing and control logic:"
+                    },
+                    {
+                        "type": "code",
+                        "Language": "js",
+                        "content": "// Sample algorithm for sensor data processing\r\nfunction processSensorData(data) {\r\n    // Apply calibration offsets\r\n    let calibrated = data.map(item => {\r\n        return {\r\n            x: item.x * CALIBRATION.x,\r\n            y: item.y * CALIBRATION.y,\r\n            z: item.z * CALIBRATION.z\r\n        };\r\n    });\r\n    \r\n    // Apply noise reduction filter\r\n    return kalmanFilter(calibrated);\r\n}"
+                    }
+                ]
+            },
+            "images": {
+                "image_title": "screenshots",
+                "image_elements": [
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    },
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    }
+                ]
+            }
+        },
+        {
+            "icon": "microchip",
+            "title": "Electronics",
+            "content": {
+                "Circuit Design": [
+                    {
+                        "type": "text",
+                        "content": "The electronic system consists of a microcontroller interfacing with various sensors and actuators. Power management was carefully designed to ensure stable operation."
+                    }
+                ],
+                "Component List": [
+                    {
+                        "type": "table",
+                        "content": {
+                            "headers": [
+                                "Component",
+                                "Description",
+                                "Qty"
+                            ],
+                            "rows": [
+                                [
+                                    "Microcontroller",
+                                    "ESP32-WROOM",
+                                    "1"
+                                ],
+                                [
+                                    "Temperature Sensor",
+                                    "DS18B20",
+                                    "2"
+                                ],
+                                [
+                                    "Motor Driver",
+                                    "L298N",
+                                    "1"
+                                ],
+                                [
+                                    "Power Supply",
+                                    "5V 3A",
+                                    "1"
+                                ]
+                            ]
+                        }
+                    }
+                ],
+                "Schematic Details": [
+                    {
+                        "type": "text",
+                        "content": "Detailed schematic of the electronic system."
+                    },
+                    {
+                        "type": "list",
+                        "content": [
+                            "Proper decoupling capacitors near each IC",
+                            "Separate analog and digital grounds",
+                            "Appropriate trace widths for power lines",
+                            "ESD protection on exposed connectors"
+                        ]
+                    }
+                ],
+                "Pin Configuration": [
+                    {
+                        "type": "code",
+                        "content": "Microcontroller Pinout:\r\n- GPIO4  : I2C SDA\r\n- GPIO5  : I2C SCL\r\n- GPIO12 : PWM Motor Control\r\n- GPIO13 : Sensor Interrupt\r\n- GPIO14 : Status LED"
+                    }
+                ]
+            },
+            "images": {
+                "image_elements": [
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    },
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    }
+                ]
+            }
+        },
+        {
+            "icon": "3d_parts",
+            "title": "3D Printing",
+            "content": {
+                "Design Process": [
+                    {
+                        "type": "text",
+                        "content": "The mechanical parts were designed in Fusion 360 with careful consideration of printability, structural integrity, and assembly requirements. Iterative prototyping helped refine the designs."
+                    }
+                ],
+                "Print Specifications": [
+                    {
+                        "type": "table",
+                        "content": {
+                            "headers": [
+                                "Parameter",
+                                "Value"
+                            ],
+                            "rows": [
+                                [
+                                    "Printer",
+                                    "Prusa i3 MK3S"
+                                ],
+                                [
+                                    "Material",
+                                    "PLA/PETG"
+                                ],
+                                [
+                                    "Layer Height",
+                                    "0.2mm"
+                                ],
+                                [
+                                    "Infill",
+                                    "20-30%"
+                                ],
+                                [
+                                    "Supports",
+                                    "Tree (where needed)"
+                                ]
+                            ]
+                        }
+                    }
+                ],
+                "Design Features":[
+                    {
+                      "type": "text",
+                      "content": "{The 3D models incorporate several smart design elements:}"
+                    },
+                    {
+                      "type": "list",
+                      "content": [
+                        "Snap-fit joints for tool-less assembly",
+                        "Integrated cable management channels",
+                        "Service access points",
+                        "Ventilation slots for heat dissipation",
+                        "Mounting points for electronics"
+                      ]
+                    }
+                ],
+                "STL File Details": [
+                    {
+                      "type": "code",
+                      "content": "File naming convention:\r\n- Enclosure_Top_v2.stl\r\n- Mounting_Bracket_Final.stl\r\n- Cover_Plate_R1.stl\r\n\r\nPrint time estimates:\r\n- Main body: 4h 23m\r\n- Cover: 2h 15m\r\n- Bracket: 1h 45m"
+                    }
+                ]
+            },
+            "images":{
+                "image_elements": [
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    },
+                    {
+                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
+                        "alt": "Project Overview",
+                        "title": "Complete Assembly",
+                        "caption": "Fully assembled prototype"
+                    }
+                ]
+            }
+        }
+    ],
+    "conclusion": {
+        "results": "Dette projekt er et trådløst Bluetooth-musikanlæg bygget ind under en seng. Det er baseret på en ESP32, som modtager lyd via Bluetooth og sender det videre til en eksisterende analog forstærker. Projektet forbedrer et ældre lydanlæg ved at gøre det kompatibelt med moderne enheder og fjerne behovet for kabler. Løsningen fokuserer på lavpris-komponenter, sikkerhed, støjfiltrering og enkel konstruktion.",
+        "metrics": [
+            {
+                "icon": "gauge",
+                "title": "Performance",
+                "result": "Achieved 95% of target processing speed"
+            },
+            {
+                "icon": "battery",
+                "title": "Power Efficiency",
+                "result": "18% improvement over baseline"
+            },
+            {
+                "icon": "scale",
+                "title": "Weight",
+                "result": "Final assembly: 320g (target: 350g)"
+            }
+        ],
+        "learned": "Early integration testing would have revealed mechanical/electronic interface issues sooner.",
+        "improvements": [
+            "Implement wireless communication module",
+            "Redesign mounting system for easier maintenance",
+            "Add water resistance to enclosure",
+            "Optimize power consumption further"
+        ]
+        
+    }
+}

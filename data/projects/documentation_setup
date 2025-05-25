@@ -1,7 +1,11 @@
-
 {
+    "info": {
+        "completion_date": "{{completion_date}}",
+        "team_size": {{team_size}},
+        "duration": "{{duration}}"
+    },
     "overview": {
-        "description": "{{project_overview_description}}",
+        "description": "{{project_overview_description}}", // A brief summary of the project
         "objectives": [
             "{{objective_1}}",
             "{{objective_2}}",
@@ -30,18 +34,18 @@
     },
     "sections": [
         {
-            "icon": "{{section_icon}}",
-            "title": "{{section_title}}", //Tilføjer automatisk Documentation til titel ved indsættelse på rapport
+            "icon": "{{section_icon}}", // Icon representing the section
+            "title": "{{section_title}}", // Title of the section
             "content": {
                 "{{section_title}}": [
                     {
                         "type": "text",
-                        "content": "{{section_text}}"
+                        "content": "{{section_text}}" // Textual content of the section
                     },
                     {
                         "type": "code",
                         "language": "{{section_code_language}}",
-                        "content": "{{section_code}}"
+                        "content": "{{section_code}}" // Code snippets related to the section
                     },
                     {
                         "type": "list",
@@ -54,7 +58,7 @@
                         "type": "checklist",
                         "content": [
                             {
-                                "checked": {{checklist_item_1_checked_boolean}},
+                                "checked": {{checklist_item_1_checked_boolean}}, // Boolean indicating if the checklist item is checked
                                 "text": "{{checklist_item_1_text}}"
                             },
                             {
@@ -88,7 +92,7 @@
                 ]
             },
             "images": {
-                "image_title": "{{image_title}}", //Tilføjer automatisk section_title foran image_title ved indsættelse på rapport (hvis ikke difineret standartværdi er "images")
+                "image_title": "{{image_title}}", //Automatically adds section_title before image_title when inserted into report (if not defined the standard value is "images")
                 "image_elements": [
                     {
                         "url": "{{image_url}}",
@@ -107,25 +111,25 @@
         }
     ],
     "conclusion": {
-        "results": "{{conclusion_results}}",
+        "results": "{{conclusion_results}}", // Summary of the project results
         "metrics": [
             {
                 "icon": "{{conclusion_key_metrics_icon_1}}",
                 "title": "{{conclusion_key_metrics_title_1}}",
-                "metrics_result": "{{conclusion_key_metrics_result_1}}"
+                "result": "{{conclusion_key_metrics_result_1}}"
             },
             {
                 "icon": "{{conclusion_key_metrics_icon_2}}",
                 "title": "{{conclusion_key_metrics_title_2}}",
-                "metrics_result": "{{conclusion_key_metrics_result_2}}"
+                "result": "{{conclusion_key_metrics_result_2}}"
             },
             {
                 "icon": "{{conclusion_key_metrics_icon_3}}",
                 "title": "{{conclusion_key_metrics_title_3}}",
-                "metrics_result": "{{conclusion_key_metrics_result_3}}"
+                "result": "{{conclusion_key_metrics_result_3}}"
             }
         ],
-        "Learned": "{{conclusion_lessons_learned}}",
+        "learned": "{{conclusion_lessons_learned}}", // Key learnings from the project
         "improvements": [
             "{{conclusion_future_improvements_1}}",
             "{{conclusion_future_improvements_2}}",
@@ -137,6 +141,5 @@
 
 
 
-
-
 # https://jsonformatter.org/json-escape    text with special characters to json format
+

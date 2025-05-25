@@ -115,7 +115,7 @@ class ProjectObject {
             }
 
             const icon_container = document.createElement("div");
-            icon_container.classList = `bg-${icon.color}-100 p-2 rounded-full mr-3`;
+            icon_container.classList = `bg-${icon.color}-100 p-3 rounded-full mr-3 w-7 flex justify-center items-center`;
 
             const icon_element = document.createElement("i");
             icon_element.classList = `fas fa-${icon.name} text-${icon.color}-500`;

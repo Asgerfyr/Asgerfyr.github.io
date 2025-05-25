@@ -1,303 +1,271 @@
 {
-    "info":{
-        "completion_date": "June 2023",
-        "team_size": 3,
-        "duration": "5 Months"
+    "info": {
+        "completion_date": "May 2025",
+        "team_size": 1,
+        "duration": "3 Months"
     },
-    
     "overview": {
-        "description": "Dette projekt er et trådløst Bluetooth-musikanlæg bygget ind under en seng. Det er baseret på en ESP32, som modtager lyd via Bluetooth og sender det videre til en eksisterende analog forstærker. Projektet forbedrer et ældre lydanlæg ved at gøre det kompatibelt med moderne enheder og fjerne behovet for kabler. Løsningen fokuserer på lavpris-komponenter, sikkerhed, støjfiltrering og enkel konstruktion.",
+        "description": "Projektet omhandler udviklingen af et trådløst Bluetooth-musikanlæg designet til diskret montering under en seng. Det moderniserer et ældre analogt lydsystem ved at tilføje trådløs streamingkapabilitet, som gør det muligt at forbinde smartphones, tablets og computere uden brug af kabler, hvilket øger fleksibiliteten og brugervenligheden.",
         "objectives": [
-            "Udvikle en funktionel prototype med integrerede komponenter",
-            "Implementere effektiv og vedligeholdelsesvenlig kode i Arduino-miljø",
-            "Designe skræddersyet elektronik og strømfiltrering",
-            "Skabe 3D-printet kabinet og komponentholder",
-            "Dokumentere strømforsyning, signalvej og mekanisk opbygning"
+            "Udvikle en stabil og brugervenlig trådløs lydmodtager baseret på ESP32 med Bluetooth A2DP streaming",
+            "Designe en strømforsyning med fysisk og elektrisk adskillelse mellem 230 V AC og lavspændingskredsløb (5 V DC) for at sikre elsikkerhed",
+            "Udarbejde et kompakt kabinet med 3D-print, som fysisk adskiller strømforsyning og lyd-kredsløbet",
+            "Udvikle pålideligt kredsløb og firmware, der sikrer stabil streaming og nem integration med eksisterende lydsystem",
+            "Anvende 3D-modellering til at optimere kabinetdesign med fokus på funktionalitet og enkel installation"
         ],
         "features": [
             {
                 "icon": "microchip",
-                "title": "Mikrokontroller-integration",
-                "description": "ESP32 med Bluetooth A2DP-modtagelse og lydstreaming"
-            },
-            {
-                "icon": "code",
-                "title": "Egen software",
-                "description": "Arduino C++ med BluetoothA2DPSink-bibliotek"
-            },
-            {
-                "icon": "3d_parts",
-                "title": "3D-modeldesign og -printede dele",
-                "description": "Specialdesignet kasse opdelt i strøm og lydsektion"
+                "title": "ESP32 Bluetooth-integration",
+                "description": "Implementering af Bluetooth A2DP-protokol på ESP32 for trådløs modtagelse af lydsignaler."
             },
             {
                 "icon": "power",
-                "title": "Strømstyring",
-                "description": "230V AC til 5V DC-konvertering, sikker adskillelse og støjfiltrering"
+                "title": "Strømforsyning med sikker isolation",
+                "description": "Omformning af 230 V AC til 5 V DC med fysisk og elektrisk adskillelse mellem netspænding og lavspændingskredsløb."
+            },
+            {
+                "icon": "circuit-board",
+                "title": "Kredsløbsdesign",
+                "description": "Udvikling af elektronisk kredsløb med minimal elektrisk støj ved hjælp af passivt RC-filter."
+            },
+            {
+                "icon": "code",
+                "title": "Firmwareudvikling",
+                "description": "Programmering af ESP32 med Bluetooth A2DP-profil ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering."
+            },
+            {
+                "icon": "3d-print",
+                "title": "3D-modellering og printning",
+                "description": "Design af et kompakt kabinet med fokus på fysisk adskillelse af strømforsyning og lydsektion, effektiv varmeafledning og enkel installation under sengen."
             }
         ],
         "images": [
             {
-                "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                "alt": "Project Overview",
-                "title": "Complete Assembly",
-                "caption": "Fully assembled prototype"
+                "url": "https://i.pinimg.com/736x/28/85/fb/2885fbb7427c9ed0e11563d3a6294c2d.jpg",
+                "alt": "Trådløst Bluetooth-musikanlæg under seng",
+                "title": "Færdigmonteret prototype",
+                "caption": "Trådløst Bluetooth-musikanlæg installeret under seng"
+            },
+            {
+                "url": "https://i.pinimg.com/236x/d7/f4/e9/d7f4e957e879cd4d2c65af7c69fe611a.jpg",
+                "alt": "Trådløst Bluetooth-musikanlæg fra toppen",
+                "title": "Prototype fra top",
+                "caption": "Trådløst Bluetooth-musikanlæg set oppe fra med ledningsmontering"
             }
         ]
     },
     "sections": [
         {
-            "icon": "code",
-            "title": "Code",
+            "icon": "hardware",
+            "title": "Hardware",
             "content": {
-                "Software Architecture": [
+                "Intro": [
                     {
                         "type": "text",
-                        "content": "The software follows a modular architecture with clear separation of concerns. Main components include the control logic, communication module, and user interface."
+                        "content": "Denne sektion beskriver de centrale hardwarekomponenter i projektet samt deres tilslutninger. Alle komponenter er valgt med fokus på sikkerhed, kompatibilitet og enkel integration. <div class=\"h-5\"></div>"
                     }
                 ],
-                "Dependencies": [
-                    {
-                        "type": "checklist",
-                        "content": [
-                            {
-                                "checked": true,
-                                "text": "Library1 v2.3.4 - For sensor communication"
-                            },
-                            {
-                                "checked": true,
-                                "text": "FrameworkX v1.5.0 - Core application framework"
-                            },
-                            {
-                                "checked": true,
-                                "text": "UtilityPack v0.9.1 - Helper functions"
-                            }
-                        ]
-                    }
-                ],
-                "Key Algorithms": [
-                    {
-                        "type": "text",
-                        "content": "The system implements several custom algorithms for data processing and control logic:"
-                    },
-                    {
-                        "type": "code",
-                        "Language": "js",
-                        "content": "// Sample algorithm for sensor data processing\r\nfunction processSensorData(data) {\r\n    // Apply calibration offsets\r\n    let calibrated = data.map(item => {\r\n        return {\r\n            x: item.x * CALIBRATION.x,\r\n            y: item.y * CALIBRATION.y,\r\n            z: item.z * CALIBRATION.z\r\n        };\r\n    });\r\n    \r\n    // Apply noise reduction filter\r\n    return kalmanFilter(calibrated);\r\n}"
-                    }
-                ]
-            },
-            "images": {
-                "image_title": "screenshots",
-                "image_elements": [
-                    {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
-                    },
-                    {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
-                    }
-                ]
-            }
-        },
-        {
-            "icon": "microchip",
-            "title": "Electronics",
-            "content": {
-                "Circuit Design": [
-                    {
-                        "type": "text",
-                        "content": "The electronic system consists of a microcontroller interfacing with various sensors and actuators. Power management was carefully designed to ensure stable operation."
-                    }
-                ],
-                "Component List": [
+                "Komponentliste": [
                     {
                         "type": "table",
                         "content": {
                             "headers": [
-                                "Component",
-                                "Description",
-                                "Qty"
+                                "Komponent",
+                                "Antal",
+                                "Specifikation",
+                                "Funktion"
                             ],
                             "rows": [
                                 [
-                                    "Microcontroller",
-                                    "ESP32-WROOM",
-                                    "1"
+                                    "ESP32 DevKit v1",
+                                    "1",
+                                    "-",
+                                    "Bluetooth-modtagelse og audio-output"
                                 ],
                                 [
-                                    "Temperature Sensor",
-                                    "DS18B20",
-                                    "2"
+                                    "Standard USB strømreguleringenhed",
+                                    "1",
+                                    "230V AC → 5V DC, 2A, CE-godkendt",
+                                    "Forsyning med isolation via USB"
                                 ],
                                 [
-                                    "Motor Driver",
-                                    "L298N",
-                                    "1"
+                                    "USB-kabel",
+                                    "1",
+                                    "USB-A til Micro USB",
+                                    "Strøm til ESP32 via Micro USB"
                                 ],
                                 [
-                                    "Power Supply",
-                                    "5V 3A",
-                                    "1"
+                                    "3,5 mm jack hunstik",
+                                    "1",
+                                    "Stereo",
+                                    "Analog lydudgang ─> forstærker"
+                                ],
+                                [
+                                    "Modstand",
+                                    "1",
+                                    "20 Ω",
+                                    "RC-filter"
+                                ],
+                                [
+                                    "Kondensator",
+                                    "1",
+                                    "Elektrolytisk",
+                                    "RC-filter"
+                                ],
+                                [
+                                    "Stikdåse hun",
+                                    "2",
+                                    "Til 230V",
+                                    "USB strømregulering i kabinet og forstærker"
+                                ],
+                                [
+                                    "Stik han",
+                                    "1",
+                                    "Til 230V",
+                                    "Tilslutning i stikkontakt for strømforsyning"
+                                ],
+                                [
+                                    "PLA til 3D-print",
+                                    "110 g",
+                                    "Hvid PLA",
+                                    "Kabinetproduktion"
+                                ],
+                                [
+                                    "screw",
+                                    "2",
+                                    "2mm X 11mm",
+                                    "Kabinet montering"
                                 ]
                             ]
                         }
                     }
                 ],
-                "Schematic Details": [
+                "Pinout": [
                     {
                         "type": "text",
-                        "content": "Detailed schematic of the electronic system."
+                        "content": "ESP32 bruger sine indbyggede DAC'er (GPIO 25 og 26) til at sende lyd i 0,6–1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32’s GND."
                     },
                     {
-                        "type": "list",
-                        "content": [
-                            "Proper decoupling capacitors near each IC",
-                            "Separate analog and digital grounds",
-                            "Appropriate trace widths for power lines",
-                            "ESD protection on exposed connectors"
-                        ]
-                    }
-                ],
-                "Pin Configuration": [
-                    {
                         "type": "code",
-                        "content": "Microcontroller Pinout:\r\n- GPIO4  : I2C SDA\r\n- GPIO5  : I2C SCL\r\n- GPIO12 : PWM Motor Control\r\n- GPIO13 : Sensor Interrupt\r\n- GPIO14 : Status LED"
+                        "language": "plaintext",
+                        "content": "ESP32 GPIO 25 ──────> DAC_R → Jack-stik højre (R)\nESP32 GPIO 26 ──────> DAC_L → Jack-stik venstre (L)\nESP32 GND     ──────> Jack-stik ground (G)"
                     }
                 ]
             },
             "images": {
                 "image_elements": [
                     {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
+                        "url": "https://i.pinimg.com/236x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "alt": "Strømforsyning i kabinet",
+                        "title": "Strømforsyning i kabinet",
+                        "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
                     },
                     {
+                        "url": "https://i.pinimg.com/236x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
+                        "alt": "ESP32 til Jack-stik kredsløb",
+                        "title": "ESP32 til Jack-stik kredsløb",
+                        "caption": "Kredsløbet mellem ESP32 og Jack-stik"
+                    }
+
+                ]
+            }
+        },
+        {
+            "icon": "microchip",
+            "title": "Lydsystem og Bluetooth-integration",
+            "content": {
+                "Lydsystem og Bluetooth-integration": [
+                    {
+                        "type": "text",
+                        "content": "ESP32 anvendes som Bluetooth A2DP-modtager, der streamer lyd trådløst til den eksisterende analogforstærker. Signalkæden inkluderer modtagelse af Bluetooth-lydsignalet, behandling med AnalogAudioStream, og analog output via 3,5 mm jack-stik. Støjfiltrering med passive RC-filtre har reduceret lavfrekvent brum og statisk interferens."
+                    },
+                    {
+                        "type": "code",
+                        "language": "cpp",
+                        "content": "#include \"AudioTools.h\"\n#include \"BluetoothA2DPSink.h\"\n\nAnalogAudioStream out;\nBluetoothA2DPSink a2dp_sink(out);\n\nvoid setup() {\n    a2dp_sink.start(\"AGS_SPEAKER\", true);\n    a2dp_sink.set_volume(50);\n    a2dp_sink.reconnect();\n}"
+                    },
+                    {
+                        "type": "list",
+                        "content": [
+                            "Start med Bluetooth-navn \"AGS_SPEAKER\"",
+                            "Initial volumeniveau sat til 50 %",
+                            "Automatisk genforbindelse til tidligere parret enhed",
+                            "Brug af originale BluetoothA2DPSink-funktioner"
+                        ]
+                    }
+                ]
+            },
+            "images": {
+                "image_title": "Bluetooth og lyd",
+                "image_elements": [
+                    {
                         "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
+                        "alt": "ESP32 Bluetooth-modul",
+                        "title": "Bluetooth-modul",
+                        "caption": "ESP32 som Bluetooth A2DP modtager"
                     }
                 ]
             }
         },
         {
             "icon": "3d_parts",
-            "title": "3D Printing",
+            "title": "3D-design og fysisk konstruktion",
             "content": {
-                "Design Process": [
+                "3D-design og fysisk konstruktion": [
                     {
                         "type": "text",
-                        "content": "The mechanical parts were designed in Fusion 360 with careful consideration of printability, structural integrity, and assembly requirements. Iterative prototyping helped refine the designs."
-                    }
-                ],
-                "Print Specifications": [
-                    {
-                        "type": "table",
-                        "content": {
-                            "headers": [
-                                "Parameter",
-                                "Value"
-                            ],
-                            "rows": [
-                                [
-                                    "Printer",
-                                    "Prusa i3 MK3S"
-                                ],
-                                [
-                                    "Material",
-                                    "PLA/PETG"
-                                ],
-                                [
-                                    "Layer Height",
-                                    "0.2mm"
-                                ],
-                                [
-                                    "Infill",
-                                    "20-30%"
-                                ],
-                                [
-                                    "Supports",
-                                    "Tree (where needed)"
-                                ]
-                            ]
-                        }
-                    }
-                ],
-                "Design Features":[
-                    {
-                      "type": "text",
-                      "content": "{The 3D models incorporate several smart design elements:}"
+                        "content": "Kabinet og komponentholder er designet i OneShape og 3D-printet. Kassen er opdelt i to sektioner for strømforsyning og lavspændings-lydsignal for at sikre elektrisk sikkerhed og funktionel adskillelse. Låget fastgøres med et skruesystem for nem adgang, og hele modulet er dimensioneret til nem montering under en seng."
                     },
                     {
-                      "type": "list",
-                      "content": [
-                        "Snap-fit joints for tool-less assembly",
-                        "Integrated cable management channels",
-                        "Service access points",
-                        "Ventilation slots for heat dissipation",
-                        "Mounting points for electronics"
-                      ]
-                    }
-                ],
-                "STL File Details": [
-                    {
-                      "type": "code",
-                      "content": "File naming convention:\r\n- Enclosure_Top_v2.stl\r\n- Mounting_Bracket_Final.stl\r\n- Cover_Plate_R1.stl\r\n\r\nPrint time estimates:\r\n- Main body: 4h 23m\r\n- Cover: 2h 15m\r\n- Bracket: 1h 45m"
+                        "type": "list",
+                        "content": [
+                            "Opdeling i AC- og DC-sektioner",
+                            "Skruesystem til låsning af kabinet",
+                            "Kompakt design til under seng-montering",
+                            "3D-printede dele til nem montering og vedligeholdelse"
+                        ]
                     }
                 ]
             },
-            "images":{
+            "images": {
+                "image_title": "3D-printet kabinet",
                 "image_elements": [
                     {
                         "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
-                    },
-                    {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "Project Overview",
-                        "title": "Complete Assembly",
-                        "caption": "Fully assembled prototype"
+                        "alt": "3D-printet kabinet til musikanlæg",
+                        "title": "3D-printet kabinet",
+                        "caption": "Designet opdelt i strøm og lydsektion"
                     }
                 ]
             }
         }
     ],
     "conclusion": {
-        "results": "Dette projekt er et trådløst Bluetooth-musikanlæg bygget ind under en seng. Det er baseret på en ESP32, som modtager lyd via Bluetooth og sender det videre til en eksisterende analog forstærker. Projektet forbedrer et ældre lydanlæg ved at gøre det kompatibelt med moderne enheder og fjerne behovet for kabler. Løsningen fokuserer på lavpris-komponenter, sikkerhed, støjfiltrering og enkel konstruktion.",
+        "results": "Projektet leverer en funktionel, trådløs Bluetooth-lydløsning under sengen, som opfylder krav om brugervenlighed, sikkerhed og lydkvalitet med minimal kompleksitet og lave omkostninger. Det demonstrerer anvendelsen af ESP32 til praktiske lydprojekter og muliggør videre eksperimenter med signalforbedring og systemintegration.",
         "metrics": [
             {
-                "icon": "gauge",
-                "title": "Performance",
-                "result": "Achieved 95% of target processing speed"
+                "icon": "bluetooth",
+                "title": "Bluetooth-stabilitet",
+                "result": "Robust forbindelse og pålidelig streaming ved 50% volumen"
             },
             {
-                "icon": "battery",
-                "title": "Power Efficiency",
-                "result": "18% improvement over baseline"
+                "icon": "power",
+                "title": "Elsikkerhed",
+                "result": "Fysisk og elektrisk isolation sikret med CE-komponenter"
             },
             {
-                "icon": "scale",
-                "title": "Weight",
-                "result": "Final assembly: 320g (target: 350g)"
+                "icon": "sound",
+                "title": "Lydkvalitet",
+                "result": "Effektiv støjreduktion med passive RC-filtre"
             }
         ],
-        "learned": "Early integration testing would have revealed mechanical/electronic interface issues sooner.",
+        "learned": "Vigtigheden af fysisk og elektrisk adskillelse for sikkerhed og støjreduktion blev tydeligt, og tidlige tests af filtre sparede tid i slutfasen.",
         "improvements": [
-            "Implement wireless communication module",
-            "Redesign mounting system for easier maintenance",
-            "Add water resistance to enclosure",
-            "Optimize power consumption further"
+            "Implementere digital lydforstærkning for bedre signalstyrke",
+            "Udvikle brugergrænseflade til volumen og enhedsvalg",
+            "Integrere strømstyringsfunktioner for lavere forbrug",
+            "Forbedre kabinetdesign for bedre varmeafledning"
         ]
-        
     }
 }
