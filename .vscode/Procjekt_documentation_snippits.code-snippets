@@ -6,7 +6,7 @@
 		"body": [
 			"{",
 			"  \"type\": \"text\",",
-			"  \"content\": \"{${1:Content}}\"",
+			"  \"content\": \"${1:Content}\"",
 			"}$2"
 		],
 		"description": "Insert taxt subsection"

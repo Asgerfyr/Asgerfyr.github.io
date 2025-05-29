@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -13,6 +12,12 @@ body {
     font-family: "Roboto" "Open Sans";
     color: var(--text-color);
     transition: all 0.3s ease-in-out;
+    transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+}
+
+body *{
+    transition: all 0.3s ease-in-out;
+    transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
 nav {

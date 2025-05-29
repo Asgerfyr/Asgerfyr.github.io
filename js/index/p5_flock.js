@@ -197,6 +197,8 @@ class Particle {
 
   draw() {
     push();
+    //stroke(color(120, 120, 150, 2.8));
+    // strokeWeight(200);
     stroke(color(120, 120, 150, 100));
     strokeWeight(4);
     translate(this.pos.x, this.pos.y);

@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" data-badged-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
-    <title>Asger Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.dom.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="/css/common/standerd.css" />
-    <link rel="stylesheet" href="/css/index/style.css" />
-  </head>
-  <body class="dark-theme">
-    <!-- Hero Section -->
-    <header id="header">
-      <div id="header-canvas"></div>
-      <script src="/js/index/p5_flock.js"></script>
-      <div id="header-skill-title" class="absolute">
-        <div class="js-tryper-container">
-          <h2
-            class="js-tryper"
-            style="display: inline"
-            data-info='{"strings": [{"string": "", "typeStyle": "deleteTo", "pauseFor": 500},
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png"
+    data-badged-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png" rel="shortcut icon"
+    href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
+  <title>Asger Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="p5js" src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.dom.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/common/standerd.css" />
+  <link rel="stylesheet" href="/css/index/style.css" />
+</head>
+
+<body class="dark-theme">
+  <!-- Hero Section -->
+  <header id="header">
+    <div id="header-canvas"></div>
+    <script src="/js/index/p5_flock.js"></script>
+    <div id="header-skill-title" class="absolute">
+      <div class="js-tryper-container">
+        <h2 class="js-tryper" style="display: inline" data-info='{"strings": [{"string": "", "typeStyle": "deleteTo", "pauseFor": 500},
             {"string": "Frontend Developer", "pauseFor": 300},
             {"string": "<div class=\"type-error\">Frontend</div> Developer", "typeStyle": "blink", "pauseFor": 1000},
             {"string": "<div class=\"type-error\">Frontend</div>", "typeStyle": "deleteTo"},
@@ -46,96 +43,81 @@
             {"string": "<div style=\"display:block;\">Interest in Mathematics</div>", "typeStyle": "deleteTo"},
             {"string": "Interest in Mathematics", "typeStyle": "blink"}],
           "typeSpeed": 60,
-          "loop": true}'
-          ></h2>
-          <div class="js-curser" style="display: inline"></div>
-        </div>
+          "loop": true}'></h2>
+        <div class="js-curser" style="display: inline"></div>
       </div>
-      <div class="absolute" id="header-text-box">
-        <h1>
-          Hi, I'm <span class="color-title-highlight">Asger Stidsen</span>
-        </h1>
+    </div>
+    <div class="absolute" id="header-text-box">
+      <h1>
+        Hi, I'm <span class="color-title-highlight">Asger Stidsen</span>
+      </h1>
 
-        <h2 id="header-text-undertitle">The world need solutions not problems</h2>
+      <h2 id="header-text-undertitle">The world need solutions not problems</h2>
 
-        <div class="flex-container pu-5">
-          <a class="a-button" href="#contact">Hire Me</a>
-          <a class="a-button" href="#projects">View Work</a>
-        </div>
+      <div class="flex-container pu-5">
+        <a class="a-button" href="#contact">Hire Me</a>
+        <a class="a-button" href="#projects">View Work</a>
       </div>
-      <div class="overflow-hidden absolute" id="header-image-box">
-          <div class="reletive skew-10 fill-y" id="header-image-container">
-            <img
-              src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
-              alt="Profile Picture"
-              class="fill-y"
-              id="header-image"
-            />
-          </div>
-          
-        </div>
-        <div
-          class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text"
-        >
-          Available for work
-        </div>
-
-        <div
-          class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text"
-        >
-          Just a template image for now
-        </div>
+    </div>
+    <div class="overflow-hidden absolute" id="header-image-box">
+      <div class="reletive skew-10 fill-y" id="header-image-container">
+        <img
+          src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
+          alt="Profile Picture" class="fill-y" id="header-image" />
       </div>
-    </header>
 
-    <nav>
-      <div class="flex-container px-20">
-        <div id="nav-header">
-          <a href="#header" class="text-big color-title-highlight">Portfolio</a>
-        </div>
-        <div class="menu-container" id="nav-menu">
-          <button class="menu-button" id="nav-menu" onclick="toggleMenu(this)">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="menu-content" id="nav-menu">
-            <div class="flex-container" id="nav-menu">
-              <a href="#about" class="color-menu-opstion">About</a>
-              <a href="#projects" class="color-menu-opstion">Projects</a>
-              <a href="#skills" class="color-menu-opstion">Skills</a>
-              <a href="#contact" class="color-menu-opstion">Contact</a>
-              <button class="theme-toggle dark-theme menu-button">
-                <i class="fa-solid fa-moon dark icon"></i>
-                <i class="fa-solid fa-sun light icon"></i>
-              </button>
-            </div>
+    </div>
+    <div class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text">
+      Available for work
+    </div>
+
+    <div class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text">
+      Just a template image for now
+    </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="flex-container px-20">
+      <div id="nav-header">
+        <a href="#header" class="text-big color-title-highlight">Portfolio</a>
+      </div>
+      <div class="menu-container" id="nav-menu">
+        <button class="menu-button" id="nav-menu" onclick="toggleMenu(this)">
+          <i class="fas fa-bars" style="font-size: var(--big-font-size)"></i>
+        </button>
+        <div class="menu-content" id="nav-menu">
+          <div class="flex-container" id="nav-menu">
+            <a href="#about" class="color-menu-opstion">About</a>
+            <a href="#projects" class="color-menu-opstion">Projects</a>
+            <a href="#skills" class="color-menu-opstion">Skills</a>
+            <a href="#contact" class="color-menu-opstion">Contact</a>
+            <button class="theme-toggle dark-theme menu-button">
+              <i class="fa-solid fa-moon dark icon"></i>
+              <i class="fa-solid fa-sun light icon"></i>
+            </button>
           </div>
         </div>
       </div>
-      <script src="/js/common/nav.js"></script>
-    </nav>
+    </div>
+    <script src="/js/common/nav.js"></script>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12">
-          About <span class="text-blue-600">Me</span>
-        </h2>
-        <div class="flex flex-col gap-12 items-center ">
-          <div class="rounded-lg overflow-hidden shadow-xl"
-               id="about-image">
-            <img
-              src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
-              alt="About Me"
-              class="w-full object-cover"
-            />
-          </div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">
+        About <span class="text-blue-600">Me</span>
+      </h2>
+      <div class="flex flex-col gap-12 items-center ">
+        <div class="rounded-lg overflow-hidden shadow-xl" id="about-image">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczO6hI24SQsTkdeUlf6S_quUtsouxmuqtnd44QA0ifRfjiRYhanT7HDEsHW77vs9kSFxtZNwcSrp6fcIgWT_PvyofRdgUHCjX31v1xKq_In5xyHNoeI_BuvkRxff4v-fdLCSCb5DMsazVlXoYBVpxyZS=w772-h1029-s-no-gm?authuser=0"
+            alt="About Me" class="w-full object-cover" />
+        </div>
 
-          <div class="js-tryper-container">
-            <p
-              class="js-tryper text-"
-              style="display: inline"
-              id="quotes-typewriter"
-              data-info='{"strings": [
+        <div class="js-tryper-container">
+          <p class="js-tryper text-" style="display: inline" id="quotes-typewriter" data-info='{"strings": [
 { "string": "I think in patterns, not panic.", "pauseFor": 5000 },
 { "string": "", "typeStyle": "deleteTo", "pauseFor": 300 },
 { "string": "I see every project as a chance to grow and contribute.", "pauseFor": 5000 },
@@ -160,377 +142,347 @@
 { "string": "", "typeStyle": "deleteTo", "pauseFor": 300 }
 ],
         "typeSpeed": 60,
-        "loop": true}'
-            ></p>
-            <div class="js-curser" id="quotes-curser" style="display: inline"></div>
-          </div>
-          <div class="w-5/6">
-            <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-            <div class="mb-6 about-text">
-              <div> Jeg er en 19-årig studerende på HTX's computer science-linje i
+        "loop": true}'></p>
+          <div class="js-curser" id="quotes-curser" style="display: inline"></div>
+        </div>
+        <div class="w-5/6">
+          <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+          <div class="mb-6 text-2xl">
+            <div> Jeg er en 19-årig studerende på HTX's computer science-linje i
               Aarhus C. Min dagligdag er præget af udfordrende projekter, hvor
               kreativ tænkning og evnen til at løse komplekse problemstillinger
               er afgørende.</div>
+          </div>
+          <p class="mb-6 leading-relaxed text-2xl">
+            har jeg en stærk interesse i at hjælpe andre. Jeg har altid været
+            den, der tager initiativ og udvikler kreative løsninger på andres
+            udfordringer. Det giver mig stor tilfredsstillelse at kunne gøre
+            en forskel.
+          </p>
+          <div class="flex gap-12">
+            <div>
+              <p class="font-medium">
+                <span class="text-blue-600">Name:</span> Asger Stidsen
+              </p>
+              <p class="font-medium">
+                <span class="text-blue-600">Email:</span> Asger@example.com
+              </p>
             </div>
-            <p class="mb-6 leading-relaxed text-2xl">
-              har jeg en stærk interesse i at hjælpe andre. Jeg har altid været
-              den, der tager initiativ og udvikler kreative løsninger på andres
-              udfordringer. Det giver mig stor tilfredsstillelse at kunne gøre
-              en forskel.
-            </p>
-            <div class="flex gap-12">
-              <div>
-                <p class="font-medium">
-                  <span class="text-blue-600">Name:</span> Asger Stidsen
-                </p>
-                <p class="font-medium">
-                  <span class="text-blue-600">Email:</span> Asger@example.com
-                </p>
-              </div>
-              <div>
-                <p class="font-medium">
-                  <span class="text-blue-600">From:</span> San Francisco, CA
-                </p>
-                <p class="font-medium">
-                  <span class="text-blue-600">Freelance:</span> Available
-                </p>
-              </div>
+            <div>
+              <p class="font-medium">
+                <span class="text-blue-600">From:</span> San Francisco, CA
+              </p>
+              <p class="font-medium">
+                <span class="text-blue-600">Freelance:</span> Available
+              </p>
             </div>
-            <div class="mt-8">
-              <a
-                href="#"
-                class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center"
-              >
-                Download CV <i class="fas fa-download ml-2"></i>
-              </a>
-            </div>
+          </div>
+          <div class="mt-8">
+            <a href="#"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center">
+              Download CV <i class="fas fa-download ml-2"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-4">
-          My <span class="text-blue-600">Projects</span>
-        </h2>
-        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Click on any project to view more
-          details.
-        </p>
-
-        <!-- Project Filter -->
-        <div class="m-auto flex justify-center mb-12 w-2/3">
-          <div class="project-filters  inline-flex rounded-md shadow-sm">
-            <button
-              data-filter="all"
-              class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white"
-            >
-              All Projects
-            </button>
-            
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        </div>
-
-        <div class="text-center mt-12">
-          <button
-            class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition"
-          >
-            View All Projects
-          </button>
-        </div>
-      </div>
-      <script src="/js/index/project_inserter.js"></script>
-    </section>
-
-    <!-- To-Top-Arrow -->
-    <div class="to-top-arrow-trigger">
-      <a href="#header" class="to-top-arrow">↑</a>
-      <script src="/js/common/to-top-arrow.js"></script>
     </div>
-    
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-4">
+        My <span class="text-blue-600">Projects</span>
+      </h2>
+      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        Here are some of my recent projects. Click on any project to view more
+        details.
+      </p>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-4">
-          My <span class="text-blue-600">Skills</span>
-        </h2>
-        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Here's an overview of my technical skills and expertise across
-          different areas.
-        </p>
+      <!-- Project Filter -->
+      <div class="m-auto flex justify-center mb-12 w-2/3">
+        <div class="project-filters  inline-flex rounded-md shadow-sm">
+          <button data-filter="all"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white">
+            All Projects
+          </button>
 
-        <div class="flex flex-col lg:flex-row gap-12">
-          <!-- Skill Bars -->
-          <div class="lg:w-1/2">
-            <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
-            <div class="space-y-6">
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">JavaScript</span>
-                  <span class="font-medium">85%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 85%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">C#</span>
-                  <span class="font-medium">50%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">Python</span>
-                  <span class="font-medium">40%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 40%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">Node.js & Express</span>
-                  <span class="font-medium">40%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 40%"
-                  ></div>
-                </div>
-              </div>
-              
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">Database and Mysql</span>
-                  <span class="font-medium">60%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 60%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">3D modeling/3D printing</span>
-                  <span class="font-medium">70%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 70%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="font-medium">Design</span>
-                  <span class="font-medium">30%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-blue-600 h-2.5 rounded-full"
-                    style="width: 30%"
-                  ></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-4">
-          Get In <span class="text-blue-600">Touch</span>
-        </h2>
-        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to discuss potential opportunities?
-          Feel free to reach out!
-        </p>
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div class="flex flex-col lg:flex-row gap-12">
-          <div class="lg:w-1/2">
-            <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <i class="fas fa-envelope text-blue-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium">Email</h4>
-                  <p class="text-gray-600">Asger.g.stidsen@gmail.com</p>
-                </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <button
+          class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
+          View All Projects
+        </button>
+      </div>
+    </div>
+    <script src="/js/index/project_inserter.js"></script>
+  </section>
+
+  <!-- To-Top-Arrow -->
+  <div class="to-top-arrow-trigger">
+    <a href="#header" class="to-top-arrow">↑</a>
+    <script src="/js/common/to-top-arrow.js"></script>
+  </div>
+
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-4">
+        My <span class="text-blue-600">Skills</span>
+      </h2>
+      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        Here's an overview of my technical skills and expertise across
+        different areas.
+      </p>
+
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Skill Bars -->
+        <div class="lg:w-1/2">
+          <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
+          <div class="space-y-6">
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">JavaScript</span>
+                <span class="font-medium">85%</span>
               </div>
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <i class="fas fa-phone-alt text-blue-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium">Phone</h4>
-                  <p class="text-gray-600">+45 50 56 91 45</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                  <i class="fas fa-map-marker-alt text-blue-600"></i>
-                </div>
-                <div>
-                  <h4 class="font-medium">Location</h4>
-                  <p class="text-gray-600">Hadsten 8370, Denmark</p>
-                </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mt-10 mb-6">Follow Me</h3>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">C#</span>
+                <span class="font-medium">50%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Python</span>
+                <span class="font-medium">40%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Node.js & Express</span>
+                <span class="font-medium">40%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Database and Mysql</span>
+                <span class="font-medium">60%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">3D modeling/3D printing</span>
+                <span class="font-medium">70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Design</span>
+                <span class="font-medium">30%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-4">
+        Get In <span class="text-blue-600">Touch</span>
+      </h2>
+      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        Have a project in mind or want to discuss potential opportunities?
+        Feel free to reach out!
+      </p>
+
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2">
+          <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-envelope text-blue-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Email</h4>
+                <p class="text-gray-600">Asger.g.stidsen@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-phone-alt text-blue-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Phone</h4>
+                <p class="text-gray-600">+45 50 56 91 45</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-map-marker-alt text-blue-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">Location</h4>
+                <p class="text-gray-600">Hadsten 8370, Denmark</p>
+              </div>
             </div>
           </div>
 
-          <div class="lg:w-1/2">
-            <form class="bg-white p-8 rounded-lg shadow-md">
-              <div class="mb-6">
-                <label for="name" class="block text-gray-700 font-medium mb-2"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div class="mb-6">
-                <label for="email" class="block text-gray-700 font-medium mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div class="mb-6">
-                <label
-                  for="subject"
-                  class="block text-gray-700 font-medium mb-2"
-                  >Subject</label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div class="mb-6">
-                <label
-                  for="message"
-                  class="block text-gray-700 font-medium mb-2"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
-              >
-                Send Message
-              </button>
-            </form>
+          <h3 class="text-xl font-semibold mt-10 mb-6">Follow Me</h3>
+          <div class="flex space-x-4">
+            <a href="https://github.com/asgerfyr"
+              class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/asger-stidsen-a906902b0/"
+              class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/30637407/asger-stidsen" target="_blank" rel="noopener"
+              class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="max-w-7xl mx-auto px-4 mr-20">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0">
-            <span class="text-xl font-bold">MyPortfolio</span>
-            <p class="text-gray-400 mt-2">© 2025 Asger Stidsen. Written content may not be copied or reused. Code and layout may be used with proper credit.</p>
-          </div>
-          <div class="flex space-x-6">
-            <a href="#header" class="text-gray-400 hover:text-white transition"
-              >Home</a
-            >
-            <a href="#about" class="text-gray-400 hover:text-white transition"
-              >About</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-400 hover:text-white transition"
-              >Projects</a
-            >
-            <a href="#contact" class="text-gray-400 hover:text-white transition"
-              >Contact</a
-            >
-          </div>
+        <div class="lg:w-1/2">
+          <form id="contact-form" class="bg-white p-8 rounded-lg shadow-md text-gray-700">
+            <div class="mb-6">
+              <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+              <input type="text" id="name" name=""
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+              <input type="email" id="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="mb-6">
+              <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+              <input type="text" id="subject"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+              <textarea id="message" rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+              Send Message
+            </button>
+          </form>
+          <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+          <script src="js/index/contact-send.js"></script>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="/js/common/typewriter.js"></script>
-    <script src="/js/common/smooth-sctolling-links.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 mr-20">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <span class="text-xl font-bold">MyPortfolio</span>
+          <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
+            Code and layout may be used with proper credit.</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#header" class="text-gray-400 hover:text-white transition">Home</a>
+          <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+          <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+          <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/common/typewriter.js"></script>
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+
+  <!-- temp live reload -->
+  <script>
+
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+
+</body>
+
 </html>

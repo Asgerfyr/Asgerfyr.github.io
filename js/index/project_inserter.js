@@ -80,11 +80,9 @@ class ProjectObject {
             maxSize: { width: maxWidth, filters: maxFilters }
         } = this.siteFilterAmountConfig;
 
-        let mapped = map(screenWidth, minWidth, maxWidth, minFilters, maxFilters);
-        mapped = constrain(mapped, minFilters, maxFilters);
+        let mapped = customMap(screenWidth, minWidth, maxWidth, minFilters, maxFilters);
+        mapped = customConstrain(mapped, minFilters, maxFilters);
         const targetFilterAmount = Math.floor(mapped) + 1; // +1 for "all" filter button
-
-        console.log(targetFilterAmount);
 
         if (targetFilterAmount == filterButtons.length) return;
 
@@ -152,7 +150,7 @@ class ProjectObject {
         content.className = "p-6";
 
         const title = document.createElement("h3");
-        title.className = "text-xl font-semibold mb-2";
+        title.className = "text-xl font-semibold mb-2 text-black";
         title.textContent = project.title;
 
         const description = document.createElement("p");
@@ -190,7 +188,7 @@ class ProjectObject {
         modal.appendChild(modalOverlay);
 
         const modalContainer = document.createElement("div");
-        modalContainer.className = "modal-container bg-white w-11/12 md:max-w-3xl mx-auto rounded shadow-lg z-50 overflow-y-auto max-h-screen";
+        modalContainer.className = "modal-container bg-white w-11/12 md:max-w-3xl mx-auto rounded shadow-lg z-50 overflow-y-auto max-h-full";
 
         const modalContent = document.createElement("div");
         modalContent.className = "modal-content py-4 text-left px-6";
@@ -266,7 +264,7 @@ class ProjectObject {
 
         const modalDescriptionValue = document.createElement("p");
         modalDescriptionValue.className = "text-gray-700";
-        modalDescriptionValue.textContent = project.description;
+        modalDescriptionValue.innerHTML = project.description;
         modalDescriptionContainer.appendChild(modalDescriptionValue);
 
         modalContent.appendChild(modalDescriptionContainer);
@@ -383,6 +381,14 @@ class ProjectObject {
         });
     }
 
+}
+
+function customMap(val, in_min, in_max, out_min, out_max) {
+    return ((val - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+}
+
+function customConstrain(val, min, max) {
+    return Math.min(Math.max(val, min), max);
 }
 
 
