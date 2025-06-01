@@ -7,6 +7,8 @@
     "gauge": {"name": "tachometer-alt", "color": "blue"},
     "battery": {"name": "battery-three-quarters", "color": "green"},
     "scale": {"name": "weight", "color": "purple"},
+    "circuit": {"name":"circle-nodes", "color":"teal"},
 
     "missingIcon": {"name":"notdef", "color":"fuchsia"}
 }
+

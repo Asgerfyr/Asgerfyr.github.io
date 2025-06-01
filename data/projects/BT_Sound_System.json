@@ -7,7 +7,7 @@
     "overview": {
         "description": "Projektet omhandler udviklingen af et trådløst Bluetooth-musikanlæg designet til diskret montering under en seng. Det moderniserer et ældre analogt lydsystem ved at tilføje trådløs streamingkapabilitet, som gør det muligt at forbinde smartphones, tablets og computere uden brug af kabler, hvilket øger fleksibiliteten og brugervenligheden.",
         "objectives": [
-            "Udvikle en stabil og brugervenlig trådløs lydmodtager baseret på ESP32 med Bluetooth A2DP streaming",
+            "Udvikle en stabil og brugervenlig trådløs lydmodtager baseret på ESP32 med <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr> streaming",
             "Designe en strømforsyning med fysisk og elektrisk adskillelse mellem 230 V AC og lavspændingskredsløb (5 V DC) for at sikre elsikkerhed",
             "Udarbejde et kompakt kabinet med 3D-print, som fysisk adskiller strømforsyning og lyd-kredsløbet",
             "Udvikle pålideligt kredsløb og firmware, der sikrer stabil streaming og nem integration med eksisterende lydsystem",
@@ -17,7 +17,7 @@
             {
                 "icon": "microchip",
                 "title": "ESP32 Bluetooth-integration",
-                "description": "Implementering af Bluetooth A2DP-protokol på ESP32 for trådløs modtagelse af lydsignaler."
+                "description": "Implementering af <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr>-protokol på ESP32 for trådløs modtagelse af lydsignaler."
             },
             {
                 "icon": "power",
@@ -25,14 +25,14 @@
                 "description": "Omformning af 230 V AC til 5 V DC med fysisk og elektrisk adskillelse mellem netspænding og lavspændingskredsløb."
             },
             {
-                "icon": "circuit-board",
+                "icon": "circuit",
                 "title": "Kredsløbsdesign",
                 "description": "Udvikling af elektronisk kredsløb med minimal elektrisk støj ved hjælp af passivt RC-filter."
             },
             {
                 "icon": "code",
                 "title": "Firmwareudvikling",
-                "description": "Programmering af ESP32 med Bluetooth A2DP-profil ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering."
+                "description": "Programmering af ESP32 med <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr> ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering."
             },
             {
                 "icon": "3d-print",
@@ -48,7 +48,7 @@
                 "caption": "Trådløst Bluetooth-musikanlæg installeret under seng"
             },
             {
-                "url": "https://i.pinimg.com/236x/d7/f4/e9/d7f4e957e879cd4d2c65af7c69fe611a.jpg",
+                "url": "https://i.pinimg.com/736x/d7/f4/e9/d7f4e957e879cd4d2c65af7c69fe611a.jpg",
                 "alt": "Trådløst Bluetooth-musikanlæg fra toppen",
                 "title": "Prototype fra top",
                 "caption": "Trådløst Bluetooth-musikanlæg set oppe fra med ledningsmontering"
@@ -57,7 +57,7 @@
     },
     "sections": [
         {
-            "icon": "hardware",
+            "icon": "microchip",
             "title": "Hardware",
             "content": {
                 "Intro": [
@@ -144,7 +144,7 @@
                 "Pinout": [
                     {
                         "type": "text",
-                        "content": "ESP32 bruger sine indbyggede DAC'er (GPIO 25 og 26) til at sende lyd i 0,6–1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32’s GND."
+                        "content": "ESP32 bruger sine indbyggede <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> (GPIO 25 og 26) til at sende lyd i 0,6–1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32’s GND."
                     },
                     {
                         "type": "code",
@@ -156,75 +156,249 @@
             "images": {
                 "image_elements": [
                     {
-                        "url": "https://i.pinimg.com/236x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
                         "alt": "Strømforsyning i kabinet",
                         "title": "Strømforsyning i kabinet",
                         "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
                     },
                     {
-                        "url": "https://i.pinimg.com/236x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
+                        "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
                         "alt": "ESP32 til Jack-stik kredsløb",
                         "title": "ESP32 til Jack-stik kredsløb",
                         "caption": "Kredsløbet mellem ESP32 og Jack-stik"
                     }
-
                 ]
             }
         },
         {
-            "icon": "microchip",
-            "title": "Lydsystem og Bluetooth-integration",
+            "icon": "code",
+            "title": "Kode",
             "content": {
-                "Lydsystem og Bluetooth-integration": [
+                "Formålet med koden": [
                     {
                         "type": "text",
-                        "content": "ESP32 anvendes som Bluetooth A2DP-modtager, der streamer lyd trådløst til den eksisterende analogforstærker. Signalkæden inkluderer modtagelse af Bluetooth-lydsignalet, behandling med AnalogAudioStream, og analog output via 3,5 mm jack-stik. Støjfiltrering med passive RC-filtre har reduceret lavfrekvent brum og statisk interferens."
+                        "content": "Koden gør ESP32 i stand til at modtage og afspille lyd via <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr>."
+                    }
+                ],
+                "Kode": [
+                    {
+                        "type": "text",
+                        "content": "BluetoothA2DPSink er et bibliotek til ESP32, der håndterer <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr>-modtagelse og afspiller lyd via <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr>. Det fungerer uden brug af <abbr data-tooltip=\"Espressif IoT Development Framework\">ESP-IDF</abbr> og kræver minimal konfiguration."
                     },
                     {
                         "type": "code",
                         "language": "cpp",
-                        "content": "#include \"AudioTools.h\"\n#include \"BluetoothA2DPSink.h\"\n\nAnalogAudioStream out;\nBluetoothA2DPSink a2dp_sink(out);\n\nvoid setup() {\n    a2dp_sink.start(\"AGS_SPEAKER\", true);\n    a2dp_sink.set_volume(50);\n    a2dp_sink.reconnect();\n}"
+                        "content": "#include \"AudioTools.h\"\r\n#include \"BluetoothA2DPSink.h\"\r\n\r\nAnalogAudioStream out;\r\nBluetoothA2DPSink a2dp_sink(out);\r\n\r\nvoid setup() {\r\n    a2dp_sink.start(\"MyMusic\");\r\n}\r\n\r\nvoid loop() {\r\n}"
                     },
+                    {
+                        "type": "text",
+                        "content": "Link til biblioteket: <a href=\"https://github.com/pschatzmann/ESP32-A2DP?tab=readme-ov-file#user-content-a-simple-i2s-example-a2ds-sink-using-default-pins\" target=\"_blank\" >https://github.com/pschatzmann/ESP32-A2DP</a>"
+                    }
+                ],
+                "Ændringer": [
                     {
                         "type": "list",
                         "content": [
-                            "Start med Bluetooth-navn \"AGS_SPEAKER\"",
-                            "Initial volumeniveau sat til 50 %",
-                            "Automatisk genforbindelse til tidligere parret enhed",
-                            "Brug af originale BluetoothA2DPSink-funktioner"
+                            "set_volume(50)",
+                            "set_auto_reconnect(true)"
                         ]
+                    },
+                    {
+                        "type": "text",
+                        "content": "ESP32’ens start()-funktion sætter som standard lydstyrken til 0. Derfor er set_volume(50) tilføjet, så enheden starter med en passende lydstyrke på 50 %."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Derudover er reconnect() implementeret, så ESP’en automatisk forsøger at genoprette forbindelsen til den sidst tilsluttede enhed, hvis strømmen afbrydes og enheden genstarter."
                     }
                 ]
             },
             "images": {
-                "image_title": "Bluetooth og lyd",
                 "image_elements": [
                     {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "ESP32 Bluetooth-modul",
-                        "title": "Bluetooth-modul",
-                        "caption": "ESP32 som Bluetooth A2DP modtager"
+                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "alt": "Strømforsyning i kabinet",
+                        "title": "Strømforsyning i kabinet",
+                        "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
+                        "alt": "ESP32 til Jack-stik kredsløb",
+                        "title": "ESP32 til Jack-stik kredsløb",
+                        "caption": "Kredsløbet mellem ESP32 og Jack-stik"
                     }
                 ]
             }
         },
         {
-            "icon": "3d_parts",
-            "title": "3D-design og fysisk konstruktion",
+            "icon": "circuit",
+            "title": "Kredsløb",
             "content": {
-                "3D-design og fysisk konstruktion": [
+                "RC-filter – hvad og hvorfor": [
                     {
                         "type": "text",
-                        "content": "Kabinet og komponentholder er designet i OneShape og 3D-printet. Kassen er opdelt i to sektioner for strømforsyning og lavspændings-lydsignal for at sikre elektrisk sikkerhed og funktionel adskillelse. Låget fastgøres med et skruesystem for nem adgang, og hele modulet er dimensioneret til nem montering under en seng."
+                        "content": "For at fjerne støj fra ESP32’s <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> er der tilføjet et simpelt RC-lavpasfilter. Det forbedrer lydkvaliteten og dæmper uønskede højfrekvente signaler."
+                    }
+                ],
+                "Funktion og virkemåde": [
+                    {
+                        "type": "text",
+                        "content": "RC-kredsløbet fungerer som et passivt lavpasfilter, der reducerer højfrekvent støj fra strømforsyningen, som ellers kunne påvirke lydkvaliteten (se kredsløbsbilledet nedenfor). Filtreringen sker ved, at modstanden og kondensatoren sammen dæmper hurtige spændingsændringer, hvilket sikrer en mere stabil og støjsvag spænding til ESP32. Den fysiske opbygning og lodning af kredsløbet kan ses på billedet af det loddede produkt nedenfor."
+                    }
+                ],
+                "Hvorfor dette kredsløb?": [
+                    {
+                        "type": "text",
+                        "content": "Kredsløbet er valgt for at fjerne elektrisk støj fra strømforsyningen, som kan forårsage uønsket lydstøj. Specifikt blev der observeret støj, der blev værre ved lav volumen, hvilket RC-filtret effektivt dæmper."
+                    }
+                ],
+                "Andre løsninger": [
+                    {
+                        "type": "text",
+                        "content": "Andre løsninger som aktive filtre eller brug af eksterne DAC-moduler blev vurderet, men blev ikke valgt på grund af projektets hurtige forløb og da projektet er en forbedring på et system, der skal erstattes i fremtiden."
+                    }
+                ]
+            },
+            "images": {
+                "image_elements": [
+                    {
+                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "alt": "Strømforsyning i kabinet",
+                        "title": "Strømforsyning i kabinet",
+                        "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
+                        "alt": "ESP32 til Jack-stik kredsløb",
+                        "title": "ESP32 til Jack-stik kredsløb",
+                        "caption": "Kredsløbet mellem ESP32 og Jack-stik"
+                    }
+                ]
+            }
+        },
+        {
+            "icon": "plug",
+            "title": "Valg af komponenter",
+            "content": {
+                "Kort beskrivelse": [
+                    {
+                        "type": "text",
+                        "content": "Denne sektion gennemgår valget og placeringen af strømkomponenter i projektet – fra tilslutning til lavspændingsforsyning – med fokus på sikkerhed og overholdelse af lovgivning."
+                    }
+                ],
+                "230 V strømtilslutning": [
+                    {
+                        "type": "text",
+                        "content": "Systemet tilsluttes via et 230 V hanstik. Dette muliggør nem og sikker forbindelse til en almindelig stikkontakt."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Efter hanstikket fordeles 230 V internt via to stikdåser (hun), som er fastmonteret i kassen:"
                     },
                     {
                         "type": "list",
                         "content": [
-                            "Opdeling i AC- og DC-sektioner",
-                            "Skruesystem til låsning af kabinet",
-                            "Kompakt design til under seng-montering",
-                            "3D-printede dele til nem montering og vedligeholdelse"
+                            "En stikdåse forsyner forstærkeren direkte.",
+                            "En stikdåse bruges til at tilslutte en 5 V USB-strømforsyning."
                         ]
+                    }
+                ],
+                "5 V lavspænding til ESP32": [
+                    {
+                        "type": "text",
+                        "content": "En standard 5 V USB-strømforsyning (med CE-mærkning) er tilsluttet en af de interne stikdåser og sidder sammen med ESP32’en og lavspændingskredsløbet i et isoleret kammer."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Herfra leverer den 5 V DC til ESP32-modulet via et Micro-USB kabel."
+                    }
+                ],
+                "Seperaring af lavspænding": [
+                    {
+                        "type": "text",
+                        "content": "ESP32, det analoge lydkredsløb og 5 V-reguleringen er placeret i et separat kammer, som er fysisk adskilt fra de øvrige 230 V-komponenter. Der er ingen tilgængelige 230 V-forbindelser i dette rum – kun lavspænding."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Se billeder herunder for at se hvordan kabinetet er adskilt fra resten af kabinettet."
+                    }
+                ],
+                "Sikkerhed": [
+                    {
+                        "type": "list",
+                        "content": [
+                            "Alle 230 V-komponenter er CE-godkendte.",
+                            "Kabinettet er lukket og kræver værktøj for adgang til strømførende dele.",
+                            "230 V og lavspænding er seperæret i et isoleret kammer."
+                        ]
+                    }
+                ],
+                "Varmeudvikling": [
+                    {
+                        "type": "text",
+                        "content": "Kabinettet har store udskæringer, som giver passiv luftgennemstrømning og sikrer stabil drift."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Under brug er der ikke registreret mærkbar varmeudvikling i strømforsyningen eller ESP32’en, men ventilationsåbningerne er tilføjet som en ekstra sikkerhedsforanstaltning."
+                    },
+                    {
+                        "type": "text",
+                        "content": "læs sektionen herunder for flere detailjer om kabinettet."
+                    }
+                ]
+            },
+            "images": {
+                "image_elements": [
+                    {
+                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "alt": "Strømforsyning i kabinet",
+                        "title": "Strømforsyning i kabinet",
+                        "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
+                        "alt": "ESP32 til Jack-stik kredsløb",
+                        "title": "ESP32 til Jack-stik kredsløb",
+                        "caption": "Kredsløbet mellem ESP32 og Jack-stik"
+                    }
+                ]
+            }
+        },
+        {
+            "icon": "cube",
+            "title": "3D-design og fysisk konstruktion",
+            "content": {
+                "Formål": [
+                    {
+                        "type": "text",
+                        "content": "Kassen er designet til at samle og beskytte systemets komponenter samt sikre elektrisk adskillelse mellem netspænding og lavspænding. Kabinettet bidrager dermed til både sikkerhed og organisering af systemet."
+                    }
+                ],
+                "Designvalg": [
+                    {
+                        "type": "text",
+                        "content": "Som der kan ses på tegningen herunder, er kassen konstrueret med to separate kamre: ét til 230 V-komponenter og ét til ESP32’en og det analoge lyd- / RC-kredsløb. Dette design minimerer risiko for elektrisk interferens og gør montage og vedligeholdelse mere overskuelig."
+                    },
+                    {
+                        "type": "text",
+                        "content": "Strømindgangen er placeret i toppen, mens udgange til henholdsvis forstærker (venstre) og lyd (højre via jackstik) findes i bunden af kassen."
+                    },
+                    {
+                      "type": "text",
+                      "content": "Derudover er der indarbejdet store udskæringer i kabinettet, som sikrer naturlig ventilation. Selvom hverken strømforsyning eller ESP32 afgiver nævneværdig varme under drift, fungerer åbningerne som en ekstra sikkerhedsforanstaltning ved længere tids brug og bidrager til passiv køling."
+                    }
+                ],
+                "Fremstilling": [
+                    {
+                      "type": "text",
+                      "content": "Kabinettet er designet i Onshape og består af en bund og et låg, der fastgøres med to skruer. Først blev alle komponenter modelleret digitalt for at bestemme deres dimensioner. De blev derefter placeret med fokus på at minimere det samlede rumfang, samtidig med at der blev taget højde for tilstrækkelig plads til kabelføring. Baseret på denne opstilling blev selve kassen designet omkring komponenterne. Kabinettet indeholder en intern skillevæg, der adskiller netspænding (230 V) fra lavspændings- og lydkredsløbet for at øge sikkerheden og mindske risikoen for interferens."
+                    }
+                ],
+                "Print og samling": [
+                    {
+                      "type": "text",
+                      "content": "Kassen er 3D-printet på en Ender 3 V2, hvor top og bund samles med to skruer, som der i modelleringen er lavet præcise huller til for at sikre nem montage. Stikdåserne er monteret i kassen med lim, da deres huller var for store, og stikdåserne derfor kunne glide og falde ud."
                     }
                 ]
             },

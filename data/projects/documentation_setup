@@ -89,6 +89,59 @@
                             ]
                         }
                     }
+                ],
+                "{{section_title}}": [
+                    {
+                        "type": "text",
+                        "content": "{{section_text}}" // Textual content of the section
+                    },
+                    {
+                        "type": "code",
+                        "language": "{{section_code_language}}",
+                        "content": "{{section_code}}" // Code snippets related to the section
+                    },
+                    {
+                        "type": "list",
+                        "content": [
+                            "{{list_item_1}}",
+                            "{{list_item_2}}"
+                        ]
+                    },
+                    {
+                        "type": "checklist",
+                        "content": [
+                            {
+                                "checked": {{checklist_item_1_checked_boolean}}, // Boolean indicating if the checklist item is checked
+                                "text": "{{checklist_item_1_text}}"
+                            },
+                            {
+                                "checked": {{checklist_item_2_checked_boolean}},
+                                "text": "{{checklist_item_2_text}}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "content": {
+                            "headers": [
+                                "{{table_header_1}}",
+                                "{{table_header_2}}",
+                                "{{table_header_3}}"
+                            ],
+                            "rows": [
+                                [
+                                    "{{table_row_1_column_1}}",
+                                    "{{table_row_1_column_2}}",
+                                    "{{table_row_1_column_3}}"
+                                ],
+                                [
+                                    "{{table_row_2_column_1}}",
+                                    "{{table_row_2_column_2}}",
+                                    "{{table_row_2_column_3}}"
+                                ]
+                            ]
+                        }
+                    }
                 ]
             },
             "images": {

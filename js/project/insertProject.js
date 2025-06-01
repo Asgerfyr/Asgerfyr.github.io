@@ -33,6 +33,7 @@ class ProjectObject {
             const response = await fetch(`/data/projects/${this.project.replaceAll(" ", "_")}.json`);
             const data = await response.json();
             if (!data) throw new Error(`Fetched data form ${this.project} is undefined`);
+            console.log(data);
             this.insertProject(data);
         } catch (error) {
             console.error("Project error:", error);
