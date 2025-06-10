@@ -35,7 +35,7 @@
                 "description": "Programmering af ESP32 med <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr> ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering."
             },
             {
-                "icon": "3d-print",
+                "icon": "cube",
                 "title": "3D-modellering og printning",
                 "description": "Design af et kompakt kabinet med fokus på fysisk adskillelse af strømforsyning og lydsektion, effektiv varmeafledning og enkel installation under sengen."
             }
@@ -249,7 +249,7 @@
                 "Hvorfor dette kredsløb?": [
                     {
                         "type": "text",
-                        "content": "Kredsløbet er valgt for at fjerne elektrisk støj fra strømforsyningen, som kan forårsage uønsket lydstøj. Specifikt blev der observeret støj, der blev værre ved lav volumen, hvilket RC-filtret effektivt dæmper."
+                        "content": "Kredsløbet er valgt for at fjerne elektrisk støj ved til og frakobling, som kan forårsage uønsket lydstøj. Specifikt blev der observeret støj, der blev værre ved lav volumen, hvilket RC-filtret effektivt dæmper."
                     }
                 ],
                 "Andre løsninger": [
@@ -367,7 +367,7 @@
         },
         {
             "icon": "cube",
-            "title": "3D-design og fysisk konstruktion",
+            "title": "3D-design konstruktion",
             "content": {
                 "Formål": [
                     {
@@ -413,15 +413,58 @@
                     }
                 ]
             }
+        },
+        {
+            "icon": "test",
+            "title": "test",
+            "content": {
+                "Overordnet": [
+                    {
+                        "type": "text",
+                        "content": "Systemet er blevet testet i praksis med fokus på lydkvalitet, støjniveau og stabilitet ved til- og frakobling. Lydkvaliteten vurderes som acceptabel til det tilsigtede brug. Der forekommer fortsat en vis statisk støj og et lavfrekvent signal i forbindelse med til- og frakobling af musik, men dette er blevet reduceret betydeligt med implementeringen af RC-kredsløbet. Støjen er dermed mindre fremtrædende og påvirker i mindre grad brugeroplevelsen end før."
+                    },
+                    {
+                      "type": "text",
+                      "content": "Testresultater"
+                    },
+                    {
+                      "type": "checklist",
+                      "content": [
+                        {
+                          "checked": true,
+                          "text": "Lydkvaliteten er acceptabel til formålet"
+                        },
+                        {
+                          "checked": false,
+                          "text": "Perfekt lydkvalitet"
+                        },
+                        {
+                          "checked": true,
+                          "text": "Støjreduktion med RC-kredsløbet"
+                        },
+                        {
+                          "checked": true,
+                          "text": "Reduceret fra- og tilkoblingssignal med RC-kredsløbet"
+                        }
+                      ]
+                    }
+                ],
+                "Test af støj og interferens": [
+                    {
+                        "type": "text",
+                        "content": "Gentagne tests tyder på, at noget af støjen stammer fra statisk elektricitet. Når kroppen nærmer sig visse dele af systemet, ændres det statiske støjbillede, hvilket sandsynligvis skyldes, at forstærkeren og ESP ikke er jordet. Dette kan forklare den vedvarende lavfrekvente støj og den følsomme reaktion på berøring. Da dette er et hobbyprojekt uden jordforbindelse til alle enheder, accepteres dette som en kendt begrænsning i systemet."
+                    }
+                ]
+            }
         }
     ],
     "conclusion": {
-        "results": "Projektet leverer en funktionel, trådløs Bluetooth-lydløsning under sengen, som opfylder krav om brugervenlighed, sikkerhed og lydkvalitet med minimal kompleksitet og lave omkostninger. Det demonstrerer anvendelsen af ESP32 til praktiske lydprojekter og muliggør videre eksperimenter med signalforbedring og systemintegration.",
+        "results": "Projektet leverer en funktionel, trådløs Bluetooth-lydløsning, der opfylder krav til brugervenlighed, sikkerhed og lydkvalitet med minimal kompleksitet og lave omkostninger. Løsningen fjerner behovet for ledninger til forstærkeren og demonstrerer anvendelsen af ESP32 i praktiske lydprojekter, hvilket åbner op for videre eksperimenter med signalforbedring og systemintegration.",
         "metrics": [
             {
                 "icon": "bluetooth",
                 "title": "Bluetooth-stabilitet",
-                "result": "Robust forbindelse og pålidelig streaming ved 50% volumen"
+                "result": "Robust forbindelse og pålidelig streaming"
             },
             {
                 "icon": "power",
@@ -434,12 +477,13 @@
                 "result": "Effektiv støjreduktion med passive RC-filtre"
             }
         ],
-        "learned": "Vigtigheden af fysisk og elektrisk adskillelse for sikkerhed og støjreduktion blev tydeligt, og tidlige tests af filtre sparede tid i slutfasen.",
+        "learned": "Jordforbindelser er essentielle i elektriske komponenter for at reducere støj, især i lydkomponenter, der arbejder med frekvenser med lav amplitude.",
         "improvements": [
-            "Implementere digital lydforstærkning for bedre signalstyrke",
-            "Udvikle brugergrænseflade til volumen og enhedsvalg",
-            "Integrere strømstyringsfunktioner for lavere forbrug",
-            "Forbedre kabinetdesign for bedre varmeafledning"
+            "Inkorporering af jordforbindelse for at reducere støj",
+            "Forbedring af passive RC-kredsløb for bedre stabilitet",
+            "Udskiftning af USB-strømregulering for at minimere støj",
+            "Tilføjelse af deep sleep-funktionalitet for lavere strømforbrug",
+            "Implementering af nyere afstandsforstærkerløsning for lavere strømforbrug og forbedret signal kvalitet"
         ]
     }
 }

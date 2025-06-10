@@ -172,7 +172,7 @@ class ProjectObject {
             if (!value_) throw new Error(`Element ${key_} is undefined`);
         });
 
-        const elementid = title.replaceAll(" ", "_");
+        const elementid = "_"+title.replaceAll(" ", "_");
         const section_container = document.createElement("section");
         section_container.classList = "section-anchor mb-16";
         section_container.id = elementid;
@@ -231,6 +231,8 @@ class ProjectObject {
         documentation_container.appendChild(documentation_content);
 
         section_container.appendChild(documentation_container);
+
+        if(!section_.images) return section_container;
 
         let { image_title, image_elements } = section_.images;
         

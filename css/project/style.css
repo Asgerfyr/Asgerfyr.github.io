@@ -8,15 +8,20 @@ section a {
     color: blue;
 }
 
+abbr {
+  position: relative; /* This is key! */
+}
+
 /* Custom tooltip*/
 abbr:hover::after {
   content: attr(data-tooltip);
   position: absolute;
+  transform: translateX(-20%);
   background-color: #333;
   color: #fff;
   padding: 6px 10px;
   border-radius: 6px;
-  top: 120%;
+  top: 120%; /* Relative to the abbr now */
   left: 0;
   white-space: nowrap;
   z-index: 10;
@@ -54,6 +59,8 @@ abbr:hover::after {
 
 .nav-link {
     position: relative;
+    margin : 10px;
+    font-size: 1.5vw;
 }
 
 .nav-link::after {

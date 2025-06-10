@@ -8,6 +8,10 @@
     "battery": {"name": "battery-three-quarters", "color": "green"},
     "scale": {"name": "weight", "color": "purple"},
     "circuit": {"name":"circle-nodes", "color":"teal"},
+    "test": {"name":"vial-circle-check", "color":"green"},
+    "plug": {"name":"plug", "color":"blue"},
+    "bluetooth": {"name": "bluetooth-b fa-brands", "color": "blue"},
+    "sound": {"name": "volume-high", "color": "violet"},
 
     "missingIcon": {"name":"notdef", "color":"fuchsia"}
 }
