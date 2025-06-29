@@ -13,6 +13,9 @@ class ProjectObject {
 
         this.icons;
         this.getIcons().then(data => this.icons = data);
+
+        this.imageShowcaseContainer = document.getElementById("image_showcase_container");
+        this.imageShowcase = document.getElementById("image_showcase");
     }
 
     async getIcons() {
@@ -71,6 +74,7 @@ class ProjectObject {
             console.error("Insert conclusion error:", error);
         }
 
+        this.addImageShowcaseEventListeners();
         addSmoothScrolling();
         hljs.highlightAll();
     }
@@ -467,8 +471,25 @@ class ProjectObject {
 
         });
 
-
     }
+
+    addImageShowcaseEventListeners() {
+        const imageCards = document.querySelectorAll(".image-card");
+
+        imageCards.forEach((card) => {
+            card.addEventListener("mouseenter", () => {
+                const img = card.querySelector("img");
+                this.imageShowcase.src = img.src;
+                this.imageShowcase.alt = img.alt;
+                this.imageShowcaseContainer.classList.remove("invis");
+            });
+
+            card.addEventListener("mouseleave", () => {
+                this.imageShowcaseContainer.classList.add("invis");
+            });
+        });
+    }
+
 
     insertConclusion(conclusion_) {
 

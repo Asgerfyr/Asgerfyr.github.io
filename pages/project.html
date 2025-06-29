@@ -207,6 +207,8 @@
         </div>
     </footer>
 
+    <div id="image_showcase_container" class="invis"><img id="image_showcase" src="https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg" alt=""></div>
+
     <script>
 
         // Mobile menu toggle
@@ -214,17 +216,7 @@
         const mobileMenu = document.querySelector('.md\\:flex');
 
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            mobileMenu.classList.toggle('flex-col');
-            mobileMenu.classList.toggle('absolute');
-            mobileMenu.classList.toggle('top-16');
-            mobileMenu.classList.toggle('right-6');
-            mobileMenu.classList.toggle('bg-white');
-            mobileMenu.classList.toggle('p-4');
-            mobileMenu.classList.toggle('rounded-lg');
-            mobileMenu.classList.toggle('shadow-lg');
-            mobileMenu.classList.toggle('space-y-4');
+            ['hidden', 'flex', 'flex-col', 'absolute', 'top-16', 'right-6', 'bg-white', 'p-4', 'rounded-lg', 'shadow-lg', 'space-y-4'].forEach(cls => mobileMenu.classList.toggle(cls));
         });
     </script>
 
