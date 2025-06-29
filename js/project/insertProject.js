@@ -33,7 +33,6 @@ class ProjectObject {
             const response = await fetch(`/data/projects/${this.project.replaceAll(" ", "_")}.json`);
             const data = await response.json();
             if (!data) throw new Error(`Fetched data form ${this.project} is undefined`);
-            console.log(data);
             this.insertProject(data);
         } catch (error) {
             console.error("Project error:", error);
@@ -84,7 +83,9 @@ class ProjectObject {
             if (!value) throw new Error(`Element ${key} is undefined`);
         });
 
-        document.getElementById("project-title").innerHTML = `${this.project} Documentation`;
+        document.getElementById("project-title").innerHTML = `${this.project}`;
+
+        document.querySelector("title").innerHTML = `${this.project} Documentation`;
 
         const overview_container = document.getElementById("overview");
 
