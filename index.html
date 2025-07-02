@@ -337,8 +337,8 @@
         Feel free to reach out!
       </p>
 
-      <div class="flex flex-col lg:flex-row gap-12">
-        <div class="lg:w-1/2">
+      <div class="flex flex-col md:flex-row gap-12 ">
+        <div class="md:w-1/2">
           <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
           <div class="space-y-6">
             <div class="flex items-start">
@@ -347,7 +347,7 @@
               </div>
               <div>
                 <h4 class="font-medium">Email</h4>
-                <p class="text-gray-600">Asger.g.stidsen@gmail.com</p>
+                <p class="text-white-600">Asger.g.stidsen@gmail.com</p>
               </div>
             </div>
             <div class="flex items-start">
@@ -356,7 +356,7 @@
               </div>
               <div>
                 <h4 class="font-medium">Phone</h4>
-                <p class="text-gray-600">+45 50 56 91 45</p>
+                <p class="text-white-600">+45 50 56 91 45</p>
               </div>
             </div>
             <div class="flex items-start">
@@ -365,7 +365,7 @@
               </div>
               <div>
                 <h4 class="font-medium">Location</h4>
-                <p class="text-gray-600">Hadsten 8370, Denmark</p>
+                <p class="text-white-600">Hadsten 8370, Denmark</p>
               </div>
             </div>
           </div>
@@ -387,26 +387,26 @@
           </div>
         </div>
 
-        <div class="lg:w-1/2">
+        <div class="md:w-1/2">
           <form id="contact-form" class="bg-white p-8 rounded-lg shadow-md text-gray-700">
             <div class="mb-6">
               <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-              <input type="text" id="name" name=""
+              <input type="text" id="name" name="name"
                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <div class="mb-6">
               <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-              <input type="email" id="email"
+              <input type="email" id="email" name="email"
                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <div class="mb-6">
               <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-              <input type="text" id="subject"
+              <input type="text" id="subject" name="subject"
                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <div class="mb-6">
               <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-              <textarea id="message" rows="4"
+              <textarea id="message" rows="4" name="message"
                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
             </div>
             <button type="submit"
@@ -414,12 +414,13 @@
               Send Message
             </button>
           </form>
-          <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
           <script src="js/index/contact-send.js"></script>
         </div>
       </div>
     </div>
   </section>
+  <div id="popup">Beskeden er sendt</div>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8">

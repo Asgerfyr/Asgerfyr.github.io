@@ -1,20 +1,24 @@
-// emailjs.init("YOUR_USER_ID");
+emailjs.init("yMVVcoLqT3RY12VH1");
 
 const form = document.getElementById('contact-form');
-console.log(form);
+let popup;
+
+document.addEventListener('DOMContentLoaded', function () {
+    popup = document.getElementById('popup');
+});
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    const formData = new FormData(form);
-
-    const data = Object.fromEntries(formData.entries());
-
-    console.log(formData);
-
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-    //     .then(() => {
-    //         alert('Besked sendt!');
-    //         form.reset();
-    //     }, (error) => {
-    //         alert('Fejl ved afsendelse: ' + error.text);
-    //     });
+    emailjs.sendForm('service_portfser', 'template_os79533', form)
+        .then(() => {
+            console.log(popup);
+            popup.textContent = 'Besked er sendt';
+            popup.classList.add('active');
+            setTimeout(() => {
+                popup.classList.remove('active');
+            }, 2000);
+            form.reset();
+        }, (error) => {
+            alert('Fejl ved afsendelse: ' + error.text);
+        });
 });

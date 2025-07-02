@@ -251,45 +251,24 @@ nav{
     font-size: 5vw;
 }
 
-
-/* side stuff */
-
-
-.skill-tree {
-    position: relative;
-}
-.skill-tree::before {
-    content: '';
-    position: absolute;
-    top: 0;
+#popup {
+    position: fixed;
+    bottom: 20px;
     left: 50%;
-    width: 2px;
-    height: 100%;
-    background: #3b82f6;
     transform: translateX(-50%);
+    background-color: var(--theme-background-color);
+    color: var(--theme-text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
-.skill-branch {
-    position: relative;
+
+#popup.active {
+    opacity: 1;
 }
-.skill-branch::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 30px;
-    border-left: 2px solid #3b82f6;
-    border-bottom: 2px solid #3b82f6;
-    border-bottom-left-radius: 10px;
-}
-.skill-branch:nth-child(even)::before {
-    left: auto;
-    right: 50%;
-    border-left: none;
-    border-right: 2px solid #3b82f6;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 0;
-}
+
 .project-card {
     background-color: white;
     border-radius: 0.5rem;
