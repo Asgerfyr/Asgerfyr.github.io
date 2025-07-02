@@ -31,6 +31,10 @@ abbr:hover::after {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.table-overflow {
+    overflow-x: auto;
+}
+
 
 .section-anchor {
     scroll-margin-top: 100px;
@@ -80,6 +84,16 @@ abbr:hover::after {
 .nav-link:hover::after {
     width: 100%;
 }
+
+.quick-link {
+    color: #9ca3af;
+    transition: color 0.3s ease;
+}
+
+.quick-link:hover {
+    color: white;
+}
+
 
 .section-grid-container {
     column-count: 2;

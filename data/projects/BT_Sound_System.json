@@ -84,7 +84,7 @@
                                     "Bluetooth-modtagelse og audio-output"
                                 ],
                                 [
-                                    "Standard USB strømreguleringenhed",
+                                    "Standard USB strømreguleringsenhed",
                                     "1",
                                     "230V AC → 5V DC, 2A, CE-godkendt",
                                     "Forsyning med isolation via USB"
@@ -212,22 +212,6 @@
                         "content": "Derudover er reconnect() implementeret, så ESP’en automatisk forsøger at genoprette forbindelsen til den sidst tilsluttede enhed, hvis strømmen afbrydes og enheden genstarter."
                     }
                 ]
-            },
-            "images": {
-                "image_elements": [
-                    {
-                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
-                        "alt": "Strømforsyning i kabinet",
-                        "title": "Strømforsyning i kabinet",
-                        "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
-                    },
-                    {
-                        "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
-                        "alt": "ESP32 til Jack-stik kredsløb",
-                        "title": "ESP32 til Jack-stik kredsløb",
-                        "caption": "Kredsløbet mellem ESP32 og Jack-stik"
-                    }
-                ]
             }
         },
         {
@@ -243,7 +227,7 @@
                 "Funktion og virkemåde": [
                     {
                         "type": "text",
-                        "content": "RC-kredsløbet fungerer som et passivt lavpasfilter, der reducerer højfrekvent støj fra strømforsyningen, som ellers kunne påvirke lydkvaliteten (se kredsløbsbilledet nedenfor). Filtreringen sker ved, at modstanden og kondensatoren sammen dæmper hurtige spændingsændringer, hvilket sikrer en mere stabil og støjsvag spænding til ESP32. Den fysiske opbygning og lodning af kredsløbet kan ses på billedet af det loddede produkt nedenfor."
+                        "content": "RC-kredsløbet fungerer som et passivt lavpasfilter, der reducerer højfrekvent støj fra strømforsyningen, som ellers kunne påvirke lydkvaliteten (se kredsløbsbilledet nedenfor). Filtreringen sker ved, at modstanden(Serieforbindet til 20Ω) og kondensatoren sammen dæmper hurtige spændingsændringer, hvilket sikrer en mere stabil og støjsvag spænding til ESP32. Den fysiske opbygning og lodning af kredsløbet kan ses på billedet af det loddede produkt nedenfor."
                     }
                 ],
                 "Hvorfor dette kredsløb?": [
@@ -263,6 +247,12 @@
                 "image_elements": [
                     {
                         "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "alt": "Tegning af strømforsyning i kabinet",
+                        "title": "Tegning strømforsyning i kabinet",
+                        "caption": "Markup af komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/2a/2b/f8/2a2bf8409632e18084392f9424f2fa42.jpg",
                         "alt": "Strømforsyning i kabinet",
                         "title": "Strømforsyning i kabinet",
                         "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
@@ -351,10 +341,16 @@
             "images": {
                 "image_elements": [
                     {
-                        "url": "https://i.pinimg.com/736x/0c/6d/75/0c6d75481eafe2b591511573dd33c1c3.jpg",
+                        "url": "https://i.pinimg.com/736x/2a/2b/f8/2a2bf8409632e18084392f9424f2fa42.jpg",
                         "alt": "Strømforsyning i kabinet",
                         "title": "Strømforsyning i kabinet",
                         "caption": "Komponenterne i kabinet der udgøre strømforsyning til ESP32 og forstærker"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/61/ef/73/61ef730630d40ff10fac3bc3ef1f33b5.jpg",
+                        "alt": "Billed af ESP32 til Jack-stik kredsløb",
+                        "title": "Billed af ESP32 til Jack-stik kredsløb",
+                        "caption": "Billed af kredsløbet mellem ESP32 og Jack-stik"
                     },
                     {
                         "url": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
@@ -406,10 +402,16 @@
                 "image_title": "3D-printet kabinet",
                 "image_elements": [
                     {
-                        "url": "https://th.bing.com/th/id/R.ca7a78412c32eeabeb0394671ec388cf?rik=kuQMpITA%2fKYyXg&pid=",
-                        "alt": "3D-printet kabinet til musikanlæg",
-                        "title": "3D-printet kabinet",
+                        "url": "https://i.pinimg.com/736x/bc/96/ee/bc96ee8cac9052e0f3bff97759a6224e.jpg",
+                        "alt": "3D-model af kabinet bund med opdeling",
+                        "title": "3D-model af kabinet bund",
                         "caption": "Designet opdelt i strøm og lydsektion"
+                    },
+                    {
+                        "url": "https://i.pinimg.com/736x/43/46/c9/4346c9090c5341d9b7b37a8c121fd60d.jpg",
+                        "alt": "3D-model af kabinet til musikanlæg",
+                        "title": "3D-model af kabinet",
+                        "caption": "Design med bund og top"
                     }
                 ]
             }

@@ -177,11 +177,12 @@ class ProjectObject {
             if (!value_) throw new Error(`Element ${key_} is undefined`);
         });
 
-        const elementid = "_"+title.replaceAll(" ", "_");
+        const elementid = "_" + title.replaceAll(" ", "_");
         const section_container = document.createElement("section");
         section_container.classList = "section-anchor mb-16";
         section_container.id = elementid;
 
+        //Insert a nav-link to the section 
         const nav_links = document.getElementById("nav-links");
         const nav_link = document.createElement("a");
         nav_link.classList = "nav-link";
@@ -190,7 +191,20 @@ class ProjectObject {
 
         const conclusion_nav_link = document.getElementById("conclusion-link");
 
-        nav_links.insertBefore(nav_link,conclusion_nav_link);
+        nav_links.insertBefore(nav_link, conclusion_nav_link);
+
+        //insert bottom quick-link at end of page to the section
+        const quick_links = document.getElementById("quick-links");
+        const quick_link_container = document.createElement("li");
+        const quick_link = document.createElement("a");
+        quick_link.classList = "quick-link";
+        quick_link.innerHTML = title;
+        quick_link.href = `#${elementid}`;
+
+        quick_link_container.appendChild(quick_link);
+
+        quick_links.appendChild(quick_link_container);
+
 
         const documentation_container = document.createElement("div");
         documentation_container.classList = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
@@ -237,10 +251,10 @@ class ProjectObject {
 
         section_container.appendChild(documentation_container);
 
-        if(!section_.images) return section_container;
+        if (!section_.images) return section_container;
 
         let { image_title, image_elements } = section_.images;
-        
+
         if (!image_elements) throw new Error(`image_elements is undefined`);
 
         if (!image_title) image_title = "images";
@@ -258,18 +272,18 @@ class ProjectObject {
         images_header.innerHTML += `${title} ${image_title}`;
 
         images_container.appendChild(images_header);
-        
+
         const image_gallery = document.createElement("div");
         image_gallery.classList = "image-gallery";
 
         images_container.appendChild(image_gallery);
 
-        try{
+        try {
             this.insertImages(image_gallery, image_elements);
-        } catch (error){
+        } catch (error) {
             console.error("Section image insert:", error);
         }
-        
+
         section_container.appendChild(images_container);
 
         return section_container;
@@ -304,7 +318,7 @@ class ProjectObject {
                 subSection.appendChild(sub_section_element);
 
 
-            }catch (error) {
+            } catch (error) {
                 console.error(`Sub Section error on ${key_}:`, error);
             }
 
@@ -330,7 +344,7 @@ class ProjectObject {
 
         const code_element = document.createElement("code");
         code_element.innerHTML = sub_sections_.content;
-        if(!!sub_sections_.language) code_element.classList = `language-${sub_sections_.language}`;
+        if (!!sub_sections_.language) code_element.classList = `language-${sub_sections_.language}`;
 
         code_container.appendChild(code_element);
         sub_section.appendChild(code_container);
@@ -343,7 +357,7 @@ class ProjectObject {
         const sub_section = document.createElement("ul");
         sub_section.classList = "list-disc pl-6 space-y-2 text-gray-600 mb-4";
 
-        sub_sections_.content.forEach((item)=>{
+        sub_sections_.content.forEach((item) => {
             const item_element = document.createElement("li");
             item_element.innerHTML = item;
             sub_section.appendChild(item_element);
@@ -360,9 +374,9 @@ class ProjectObject {
         const list_container = document.createElement("ul");
         list_container.classList = "space-y-2";
 
-        sub_sections_.content.forEach((item)=>{
+        sub_sections_.content.forEach((item) => {
 
-            const {checked, text} = item;
+            const { checked, text } = item;
 
             Object.entries({ checked, text }).forEach(([key_, value_]) => {
                 if (value_ === undefined) throw new Error(`Element ${key_} is undefined`);
@@ -371,7 +385,7 @@ class ProjectObject {
             const item_container = document.createElement("li");
             item_container.classList = "flex items-center";
 
-            const item_check_class = checked ? "check-circle text-green": "times-circle text-red";
+            const item_check_class = checked ? "check-circle text-green" : "times-circle text-red";
 
             const icon_element = document.createElement("i");
             icon_element.classList = `fas fa-${item_check_class}-500 mr-2`;
@@ -392,14 +406,14 @@ class ProjectObject {
 
     createTableSubSection(sub_sections_) {
 
-        const {headers, rows} = sub_sections_.content;
+        const { headers, rows } = sub_sections_.content;
 
         Object.entries({ headers, rows }).forEach(([key_, value_]) => {
             if (!value_) throw new Error(`Element ${key_} is undefined`);
         })
 
         const sub_section = document.createElement("div");
-        sub_section.classList = "bg-gray-100 rounded-lg p-4";
+        sub_section.classList = "table-overflow bg-gray-100 rounded-lg p-4";
 
         const table_container = document.createElement("table");
         table_container.classList = "w-full";
@@ -408,9 +422,9 @@ class ProjectObject {
         const table_head_row = document.createElement("tr");
         table_head_row.classList = "border-b";
 
-        headers.forEach((header)=>{
+        headers.forEach((header) => {
             const table_head_cell = document.createElement("th");
-            table_head_cell.classList = "text-left py-2";
+            table_head_cell.classList = "text-left py-2 px-2";
             table_head_cell.innerHTML = header;
             table_head_row.appendChild(table_head_cell);
         })
@@ -419,12 +433,12 @@ class ProjectObject {
 
         const table_body_container = document.createElement("tbody");
 
-        rows.forEach((row, index)=>{
+        rows.forEach((row, index) => {
             const table_body_row = document.createElement("tr");
 
-            if(index < rows.length - 1)table_body_row.classList = "border-b";
+            if (index < rows.length - 1) table_body_row.classList = "border-b";
 
-            row.forEach((cell)=>{
+            row.forEach((cell) => {
                 const table_body_cell = document.createElement("td");
                 table_body_cell.classList = "py-2";
                 table_body_cell.innerHTML = cell;
@@ -445,7 +459,7 @@ class ProjectObject {
 
     insertImages(container_, images_) {
 
-        const image_container = (!container_.classList.contains("image-gallery"))? container_.querySelector(".image-gallery") : container_;
+        const image_container = (!container_.classList.contains("image-gallery")) ? container_.querySelector(".image-gallery") : container_;
 
         if (!image_container) throw new Error(`Element image-gallery is undefined`);
 
@@ -547,7 +561,7 @@ class ProjectObject {
         })
 
         conclusion_container.querySelector("#learned").innerHTML = learned;
-        
+
         const improvements_container = conclusion_container.querySelector("#improvements-list");
 
         improvements_container.innerHTML = "";
