@@ -34,6 +34,7 @@ class ProjectObject {
 
         try {
             const response = await fetch(`/data/projects/${this.project.replaceAll(" ", "_")}.json`);
+            if (!response.ok) {Error404();}
             const data = await response.json();
             if (!data) throw new Error(`Fetched data form ${this.project} is undefined`);
             this.insertProject(data);

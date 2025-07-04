@@ -147,30 +147,33 @@
         </div>
         <div class="w-5/6">
           <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-          <div class="mb-6 text-2xl">
-            <div> Jeg er en 19-årig studerende på HTX's computer science-linje i
-              Aarhus C. Min dagligdag er præget af udfordrende projekter, hvor
-              kreativ tænkning og evnen til at løse komplekse problemstillinger
-              er afgørende.</div>
+          <div id="about-me" class="compresed mb-6">
+            <div class="flex flex-col gap-8 about-text">
+              <div>Mit navn er Asger, jeg er <span class="age"></span>-år og læser til softwareingeniør efter at have afsluttet en HTX med Matematik A, Fysik A og Programmering B. Jeg har en stor passion for at kode og udvikle løsninger - både digitale og fysiske - som gør hverdagen lettere og mere effektiv gennem automatisering.</div>
+              <div>Mine interesser spænder bredt: fra hardware til backend, fra databasedesign til frontend-udvikling. Jeg ser mig selv som en fullstack-udvikler og nyder at arbejde i hele stacken - både når det handler om logik, struktur og brugeroplevelse. Jeg udforsker stadig, hvilken retning jeg vil specialisere mig i.</div>
+              <div>En særlig drivkraft for mig er arbejdet med robotter og fysiske enheder. Jeg fascineres af, hvordan nogle linjer kode kan få en fysisk maskine til at bevæge sig, reagere og udføre opgaver i den virkelige verden. At kombinere elektronik og programmering i praktiske løsninger er en central del af flere af <a href="#projects">mine projekter</a>.</div>
+              <div>Jeg prioriterer struktur og skalerbarhed i mine løsninger. Min <a href="/pages/project.html?project=portfolio-hjemmeside">portfolio-hjemmeside</a> er et eksempel: Den er bygget op omkring et JSON-baseret system, så nye projekter let kan tilføjes uden at kode en ny underside hver gang. Det giver overblik - og sparer tid.</div>
+              <div>I mit arbejde anvender jeg bl.a. Trello til at organisere idéer og prioritere opgaver. Jeg arbejder målrettet og fokuserer på at udvikle løsninger, der er både robuste og fremtidssikrede - både teknisk og konceptuelt.</div>
+              <div>Gennem mit studie har jeg opnået gode samarbejdsevner og erfaring med værktøjer som Git og versionsstyring i praksis. Det har givet mig en forståelse for, hvordan man kan arbejde effektivt sammen på større projekter, hvor struktur og dokumentation er afgørende.</div>
+              <div>Du kan se nogle af mine projekter <a href="#projects">her</a>.</div>
+            </div>
+            <div id="fade"></div>
+            <button id="about-me-read-more" onclick="readMore()">↓</button>
+            <script src="/js/index/page-function.js"></script>
           </div>
-          <p class="mb-6 leading-relaxed text-2xl">
-            har jeg en stærk interesse i at hjælpe andre. Jeg har altid været
-            den, der tager initiativ og udvikler kreative løsninger på andres
-            udfordringer. Det giver mig stor tilfredsstillelse at kunne gøre
-            en forskel.
-          </p>
+
           <div class="flex gap-12">
             <div>
               <p class="font-medium">
-                <span class="text-blue-600">Name:</span> Asger Stidsen
+                <span class="text-blue-600">Name:</span> Asger Grundtdal Stidsen
               </p>
               <p class="font-medium">
-                <span class="text-blue-600">Email:</span> Asger@example.com
+                <span class="text-blue-600">Email:</span> asger.g.stidsen@gmail.com
               </p>
             </div>
             <div>
               <p class="font-medium">
-                <span class="text-blue-600">From:</span> San Francisco, CA
+                <span class="text-blue-600">From:</span> Hadsten, Denmark
               </p>
               <p class="font-medium">
                 <span class="text-blue-600">Freelance:</span> Available
@@ -414,7 +417,7 @@
               Send Message
             </button>
           </form>
-          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           <script src="js/index/contact-send.js"></script>
         </div>
       </div>
@@ -441,6 +444,7 @@
     </div>
   </footer>
 
+  <script src="/js/common/inserts.js"></script>
   <script src="/js/common/typewriter.js"></script>
   <script src="/js/common/smooth-sctolling-links.js"></script>
 
