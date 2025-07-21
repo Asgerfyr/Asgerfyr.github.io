@@ -12,6 +12,18 @@
     "plug": {"name":"plug", "color":"blue"},
     "bluetooth": {"name": "bluetooth-b fa-brands", "color": "blue"},
     "sound": {"name": "volume-high", "color": "violet"},
+    "user-lock": {"name": "user-lock", "color": "orange"},
+    "lock": {"name": "lock", "color": "violet"},
+    "map": {"name": "map", "color": "green"},
+    "wifi": {"name": "wifi", "color": "blue"},
+    "puzzle-piece": {"name": "puzzle-piece", "color": "yellow"},
+    "ui": {"name": "users-viewfinder", "color": "teal"},
+    "user": {"name": "user", "color": "orange"},
+    "settings": {"name": "fa-solid fa-gears", "color": "blue"},
+    "function": {"name": "fa-solid fa-gears", "color": "blue"},
+    "gears": {"name": "fa-solid fa-gears", "color": "blue"},
+    "server": {"name": "fa-solid fa-server", "color": "purple"},
+    "database": {"name": "fa-solid fa-database", "color": "blue"},
 
     "missingIcon": {"name":"notdef", "color":"fuchsia"}
 }

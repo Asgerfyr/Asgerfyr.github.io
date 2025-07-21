@@ -86,7 +86,7 @@
 	//sections
 	"setup empty section": {
 		"scope": "json",
-		"prefix": "doc-empty",
+		"prefix": "doc-section",
 		"body": [
 			"{",
 			"  \"icon\": \"${1:icon}\",",
@@ -116,5 +116,30 @@
 			"}$0"
 		],
 		"description": "Insert empty section with images only"
+	},
+	//section images
+	"setup section images": {
+		"scope": "json",
+		"prefix": "doc-images",
+		"body": [
+			"\"images\": {",
+			"  \"image_title\": \"${1:image_title}\", // section_title tilføjes automatisk (default: images)",
+			"  \"image_elements\": [",
+			"    {",
+			"      \"url\": \"${4:image_url_1}\",",
+			"      \"alt\": \"${5:image_alt_1}\",",
+			"      \"title\": \"${3:image_title}\",",
+			"      \"caption\": \"${6:image_caption_1}\"",
+			"    },",
+			"    {",
+			"      \"url\": \"${7:image_url_2}\",",
+			"      \"alt\": \"${8:image_alt_2}\",",
+			"      \"title\": \"${3:image_title}\",",
+			"      \"caption\": \"${9:image_caption_2}\"",
+			"    }",
+			"  ]",
+			"}$0"
+		],
+		"description": "Insert images to a section"
 	}
 }

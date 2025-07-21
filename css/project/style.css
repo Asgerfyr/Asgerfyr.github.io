@@ -67,6 +67,9 @@ abbr:hover::after {
     position: relative;
     margin: 10px;
     font-size: 1.5vw;
+    font-weight: bold;
+    box-shadow: #33333333 2px 2px 10px;
+    padding-right: 5px;
 }
 
 
@@ -139,4 +142,15 @@ abbr:hover::after {
     object-fit: contain;
     border: #242323 solid 5px;
     border-radius: 10px;
+}
+
+
+
+
+#team-members a{
+    color: #3b82f6;
+}
+
+#team-members a:hover{
+    color: #2563eb;
 }

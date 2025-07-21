@@ -1,0 +1,243 @@
+{
+    "info": {
+        "completion_date": "1. Maj 2025",
+        "team_size": 3,
+        "team_members": [
+            {
+                "name": "Asger Grundtdal Stidsen",
+                "role": "Main backend dev and miner frontend"
+            },
+            {
+                "name": "Noah Oscar Telling Cadieux",
+                "role": "Main Frontend Dev",
+                "link": "https://github.com/noahcadieux"
+            },
+            {
+                "name": "Bastian Casper Willmarst Bonnesen",  
+                "role": "Backend dev, designer og test administator",
+                "link": "https://github.com/BastianBonnesen"
+            }
+        ],
+        "duration": "1 uge"
+    },
+    "overview": {
+        "description": "MilWeb er et webbaseret informationssystem designet til militær brug. Projektet er udarbejdet som et afsluttende eksamensprojekt i 3.g informatik og kombinerer teknisk udvikling med praktisk anvendelse i en realistisk kontekst. Formålet med projektet er at give generaler et overblik over troppebevægelser og soldaternes status via en brugervenlig platform. Projektet muliggør samtidig, at soldater kan indsende deres positioner og modtage ordrer fra generalen. Systemet er rolleopdelt, hvor brugere identificeres som enten soldat eller general, og får adgang til specifikke funktioner baseret på deres rolle. MilWeb anvender moderne webteknologier og datasikkerhedsmetoder for at sikre, at følsomme militære data ikke tilgængeliggøres for uautoriserede brugere. Visualisering sker gennem kortkomponenter, og al data gemmes krypteret i en relationsdatabase.",
+        "objectives": [
+            "Udvikle sikkert login med rollebaseret adgang",
+            "Visualisere troppepositioner i realtid med Leaflet.js",
+            "Beskytte data med AES- og SHA256-kryptering",
+            "Strukturere databasen med klare relationer",
+            "Skabe en enkel og brugervenlig grænseflade"
+        ],
+        "features": [
+            {
+                "icon": "user-lock",
+                "title": "Rollebaseret login og sikkerhed",
+                "description": "Brugerne logger ind via en loginside, og deres adgang bestemmes af brugerrollen (soldat eller general). Dette sikrer, at soldater kun kan se og sende deres egne data, mens generaler har fuldt overblik."
+            },
+            {
+                "icon": "map",
+                "title": "Interaktivt kort (Leaflet.js)",
+                "description": "Generalens interface viser et interaktivt kort, hvor troppernes positioner vises som farvede markører. Disse opdateres i realtid og giver overblik over kampzoner og enheders status."
+            },
+            {
+                "icon": "lock",
+                "title": "Sikkerhed og kryptering",
+                "description": "Adgangskoder hashes med SHA256, og data i databasen krypteres med AES for at forhindre datatyveri. HTTPS sikrer, at al kommunikation mellem klient og server er krypteret."
+            },
+            {
+                "icon": "wifi",
+                "title": "Realtidskommunikation",
+                "description": "Systemet bruger fetch API'er til at sende og hente data mellem frontend og backend. Det giver en hurtig og dynamisk brugeroplevelse uden at genindlæse sider."
+            },
+            {
+                "icon": "puzzle-piece",
+                "title": "Session og adgangskontrol",
+                "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan se bestemte sider og udføre bestemte handlinger."
+            }
+        ],
+        "images": [
+            {
+                "url": "https://i.pinimg.com/736x/28/85/fb/2885fbb7427c9ed0e11563d3a6294c2d.jpg",
+                "alt": "Trådløst Bluetooth-musikanlæg under seng",
+                "title": "Færdigmonteret prototype",
+                "caption": "Trådløst Bluetooth-musikanlæg installeret under seng"
+            }
+        ]
+    },
+    "sections": [
+        {
+            "icon": "circuit",
+            "title": "System Architecture",
+            "content": {
+                "Frontend": [
+                    {
+                        "type": "text",
+                        "content": "Udviklet i HTML, CSS og JavaScript. Kortet er lavet med Leaflet.js, og designet bygger på gestaltlovene for at sikre brugervenlighed. Soldatsiden er optimeret til mobilbrug, mens generalsiden er lavet til desktopbrug."
+                    }
+                ],
+                "Backend": [
+                    {
+                        "type": "text",
+                        "content": "Udviklet i Node.js med Express. Serveren bruger moduler og routers til at organisere forskellige endpoints, og anvender sessions for at huske login-status. Data hentes og sendes via GET og POST requests."
+                    }
+                ],
+                "Database": [
+                    {
+                      "type": "text",
+                      "content": "MySQL anvendes til at gemme bruger- og missionsdata. Databasen indeholder relationelle tabeller for soldater, squads, missioner, advarsler og kommandoer. De fleste felter i databasen er krypteret med AES."
+                    }
+                ],
+                    
+                "Database Model": [
+                    {
+                      "type": "text",
+                      "content": "Database-designet er lavet ud fra en E/R-model. Blandt tabellerne findes:"
+                    },
+                    {
+                      "type": "list",
+                      "content": [
+                        "login: gemmer login-id, kodeord og salt",
+                        "soldier: indeholder status, navn, og rettigheder",
+                        "squad: organiserer soldater i grupper med statusinformation",
+                        "mission: gemmer missioner og deres tilhørende squads",
+                        "warning og command: gemmer kritiske informationer, f.eks. advarsler og ordrer"
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "content": "Positioner lagres i squad_location og knyttes til squads over tid. Dette muliggør historisk sporing."
+                    }
+                ]
+            }
+        },
+        {
+          "icon": "ui",
+          "title": "UI Design",
+          "content": {
+            "General-side": [
+                {
+                    "type": "text",
+                    "content": "Har adgang til:"
+                },
+                 {
+                   "type": "list",
+                   "content": [
+                     "Kortvisning med troppepositioner",
+                     "Tabel med detaljeoplysninger",
+                     "Sider til at sende missioner og vise advarsler"
+                   ]
+                 }
+             ],
+             "Soldat-side": [
+                {
+                  "type": "text",
+                  "content": "Meget simpel brugerflade med inputfelter til ID, position og status. Kun mulighed for at sende data, ikke se andres oplysninger."
+                }
+             ],
+             "Skitser": [
+                {
+                  "type": "text",
+                  "content": "Brugerfladen blev planlagt vha. skitser og flowdiagrammer, som hjalp med placering af tabeller, kort og navigationsbarer. Der blev taget højde for „figur/baggrund“ og „nærhed“ i layoutet."
+                }
+             ]
+          }
+        },
+        {
+          "icon": "code",
+          "title": "Code",
+          "content": {
+            "null": [
+                 {
+                   "type": "text",
+                   "content": "Koden er opdelt i moduler. Middleware validerer adgangsrettigheder, mens routere dirigerer forespørgsler."
+                 }
+             ],
+            "Eksempel på GET-request": [
+                {
+                  "type": "code",
+                  "language": "js",
+                  "content": "fetch(\"/general/get_data\")\n  .then(res => res.json())\n  .then(data => console.log(data));"
+                }
+            ],
+            "Eksempel på POST-request": [
+                {
+                  "type": "code",
+                  "language": "js",
+                  "content": "fetch(\"/mission/send\", {\n   method: \"POST\",\n   headers: {\"Content-Type\": \"application/json\"},\n   body: JSON.stringify({ name: \"Alpha\", info: \"Angreb øst\" })\n});"
+                }
+            ]
+          }
+        },
+        {
+          "icon": "test",
+          "title": "Testing & Evaluation",
+          "content": {
+            "null": [
+                {
+                  "type": "text",
+                  "content": "Systemet blev testet med brugere i to roller:"
+                },
+                {
+                  "type": "list",
+                  "content": [
+                    "Soldat: testede login og position-afsendelse",
+                    "General: testede kortvisning og missioner"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": "Brugerne kunne generelt finde rundt og bruge systemet. Kritik gik på:"
+                },
+                {
+                  "type": "list",
+                  "content": [
+                    "For mange overlappende markører på kortet",
+                    "Manglende mulighed for at følge en bestemt squad på tværs af sider",
+                    "Manual dataindtastning som tidskrævende"
+                  ]
+                } 
+            ]
+            
+          }
+        }
+    ],
+    "conclusion": {
+        "results": "MilWeb fungerer som et rollebaseret, sikkert og brugervenligt system til militær koordinering. Systemet opfylder de vigtigste krav, herunder sikker login, visualisering af troppebevægelser og datakryptering.", 
+        "metrics": [
+            {
+                "icon": "lock",
+                "title": "Login og sikkerhed",
+                "result": "Rollebaseret login med hashing og sessionsstyring fungerer stabilt"
+            },
+            {
+                "icon": "map",
+                "title": "Kortvisning",
+                "result": "Leaflet.js kort med realtidsdata fungerer, men har problemer med overlap"
+            },
+            {
+                "icon": "user",
+                "title": "Brugeroplevelse",
+                "result": "Intuitivt interface, dog tidskrævende manuel dataindtastning"
+            },
+            {
+                "icon": "function",
+                "title": "Soldat-funktion",
+                "result": "Enkel funktionalitet, men mangler mulighed for at se missioner"
+            },
+            {
+                "icon": "database",
+                "title": "Datastruktur",
+                "result": "Klar database med krypterede felter og stærke relationer"
+            }
+        ],
+        "learned": "Vi har lært at udvikle et sikkert og brugervenligt system med rollebaseret adgang, sessionshåndtering og krypteret datalagring. Gennem arbejdet med Leaflet.js har vi fået erfaring med visualisering af realtidsdata, og vi har opnået indsigt i prototyping, databasedesign og praktisk implementering af sikkerhedsteknikker.",
+        "improvements": [
+            "Forbedret markørstyring og filtrering på kortet",
+            "Mulighed for soldater at se egne missioner og opgaver",
+            "Bedre brugerflow mellem generalens sider - fx følge en squad direkte",
+            "Bedre validering af URL'er mod sårbarheder",
+            "Udbygning af database med historik og flere relationer"
+        ]
+    }
+}

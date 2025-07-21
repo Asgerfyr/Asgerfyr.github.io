@@ -1,4 +1,15 @@
 {
+"MilWeb": {
+  "title": "MilWeb",
+  "image": "https://i.pinimg.com/736x/9f/ab/96/9fab9693c09373298cbb7123a704aba4.jpg",
+  "sub_description": "Et militært koordineringssystem til visualisering og håndtering af troppebevægelser.",
+  "description": "MilWeb er et afsluttende 3.g eksamensprojekt i informatik, hvor vi udviklede et webbaseret militærsystem til generaler og soldater. Systemet gør det muligt at visualisere troppepositioner i realtid, sende missioner og beskeder, samt sikre data med moderne kryptering. Projektet inkluderer frontend, backend, database og sikkerhed – og er skabt med fokus på både teknisk kompleksitet og brugervenlighed.",
+  "topics": ["Node.js", "Express", "Leaflet.js", "MySQL", "HTML/CSS", "JavaScript"],
+  "topicsSummery": ["Sikkerhed", "UI/UX", "Rollebaseret adgang", "Responsivt Design"],
+  "category": ["Web", "Fullstack", "Backend", "Frontend", "Database", "Sikkerhed"],
+  "date": "May 2025",
+  "link": "MilWeb"
+},
 "BT_Sound_System":{"title": "BT Sound System",
     "image": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
     "sub_description": "Et trådløst Bluetooth lydsystem til at eliminere kabler, kompatibelt med forskelige enheder.",
@@ -21,4 +32,5 @@
   "date": "April 2025",
   "link": "404"
 }
+
 }

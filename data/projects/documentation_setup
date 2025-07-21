@@ -2,6 +2,20 @@
     "info": {
         "completion_date": "{{completion_date}}",
         "team_size": {{team_size}},
+        "team_members": [   // optional
+            {
+                "name": "{{team_member_1_name}}",
+                "role": "{{team_member_1_role}}"
+            },
+            {
+                "name": "{{team_member_2_name}}",
+                "role": "{{team_member_2_role}}"
+            },
+            {
+                "name": "{{team_member_3_name}}",
+                "role": "{{team_member_3_role}}"
+            }
+        ],
         "duration": "{{duration}}"
     },
     "overview": {

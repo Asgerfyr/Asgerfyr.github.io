@@ -33,7 +33,7 @@ class ProjectObject {
 
         let project_grid = project_section.querySelector("#projects-grid");
 
-        Object.entries(data_).forEach(([key, project]) => {
+        Object.entries(data_).reverse().forEach(([key, project]) => {
             try {
                 this.validateProject(project);
                 this.insert_project({ project_grid, key, project });

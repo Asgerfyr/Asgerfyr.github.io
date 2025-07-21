@@ -234,6 +234,8 @@ class ProjectObject {
         const documentation_content = document.createElement("div");
         documentation_content.classList = "section-grid-container";
 
+
+        // Create the content of the section  / subsections
         Object.entries(content).forEach(([key_, sub_sections_]) => {
             try {
                 Object.entries({ key_, sub_sections_ }).forEach(([key__, value__]) => {
@@ -297,7 +299,7 @@ class ProjectObject {
 
         const header = document.createElement("h3");
         header.classList = "text-xl font-bold mb-4";
-        header.innerHTML = key_;
+        header.innerHTML = (key_=="null") ? "" : key_;
 
         subSection.appendChild(header);
 
@@ -576,7 +578,7 @@ class ProjectObject {
     }
 
     insertInfo(info) {
-        const { completion_date, team_size, duration } = info;
+        const { completion_date, team_size, duration, team_members } = info;
 
         Object.entries({ completion_date, team_size, duration }).forEach(([key, value]) => {
             if (!value) throw new Error(`Element ${key} is undefined`);
@@ -585,6 +587,40 @@ class ProjectObject {
         document.getElementById("completion-date").innerHTML = completion_date;
         document.getElementById("team-size").innerHTML = team_size;
         document.getElementById("duration").innerHTML = duration;
+
+        if(!team_members) return;
+
+        const footer_grid = document.getElementById("footer-grid");
+        footer_grid.classList.remove("md:grid-cols-3");
+        footer_grid.classList.add("md:grid-cols-4");
+
+        const team_members_container = document.createElement("div")
+        team_members_container.innerHTML=
+        `
+        <h3 class="text-lg font-semibold mb-4">Project Team</h3>
+        <ul id="team-members" class="text-gray-400 space-y-2">
+        </ul>
+        `;
+
+        footer_grid.appendChild(team_members_container);
+
+        const team_members_list = team_members_container.querySelector("#team-members");
+
+        team_members.forEach((member)=> {
+
+            const name_string = (!member.link)?member.name: `<a href="${member.link}" target="_blank">${member.name}</a>`;
+
+            const member_element = document.createElement("li")
+            member_element.innerHTML = 
+            `
+                <i class="fas fa-user mr-2"></i>
+                <div> <div>${name_string}</div> <div>${member.role}</div></div>
+            `;
+            member_element.classList = "flex items-center";
+
+            team_members_list.appendChild(member_element);
+        });
+        
     }
 
 
