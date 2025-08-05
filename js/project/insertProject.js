@@ -299,7 +299,7 @@ class ProjectObject {
 
         const header = document.createElement("h3");
         header.classList = "text-xl font-bold mb-4";
-        header.innerHTML = (key_=="null") ? "" : key_;
+        header.innerHTML = (key_.toLowerCase()=="null") ? "" : key_;
 
         subSection.appendChild(header);
 

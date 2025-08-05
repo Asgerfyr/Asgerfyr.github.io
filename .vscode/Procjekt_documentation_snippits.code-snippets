@@ -83,6 +83,19 @@
 		],
 		"description": "Insert table subsection"
 	},
+
+
+	"setup subsection": {
+		"scope": "json",
+		"prefix": "doc-subsection",
+		"body": [
+			"\"${1:name}\": [",
+			"  ${2:content}",
+			"]"
+		],
+		"description": "Insert content to subsection"
+	},
+
 	//sections
 	"setup empty section": {
 		"scope": "json",
