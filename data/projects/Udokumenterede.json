@@ -1,0 +1,52 @@
+{
+  "info": {
+    "completion_date": "nan",
+    "team_size": 1,
+    "duration": "nan"
+  },
+  "overview": {
+    "description": "Nogle projekter er endnu ikke dokumenteret eller befinder sig i en ufuldstændig tilstand. Her er en liste over disse projekter. Derudover findes der tidligere projekter, hvor dokumentationen er gået tabt, og som derfor ikke kan vises i deres fulde form.",
+    "objectives": [
+    ],
+    "features": [
+    ],
+    "images": [
+    ]
+  },
+  "sections": [
+    {
+      "icon": "icon",
+      "title": "section_title", // Documentation tilføjes automatisk
+      "content": {
+        "section_title": [
+             
+         ]
+      },
+      "images": {
+        "image_title": "image_title", // section_title tilføjes automatisk (default: images)
+        "image_elements": [
+          {
+            "url": "image_url_1",
+            "alt": "image_alt_1",
+            "title": "image_title",
+            "caption": "image_caption_1"
+          },
+          {
+            "url": "image_url_2",
+            "alt": "image_alt_2",
+            "title": "image_title",
+            "caption": "image_caption_2"
+          }
+        ]
+      }
+    }
+  ],
+  "conclusion": {
+    "results": " ",
+    "metrics": [
+    ],
+    "learned": " ",
+    "improvements": [
+    ]
+  }
+}

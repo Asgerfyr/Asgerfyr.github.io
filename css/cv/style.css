@@ -62,11 +62,11 @@ header {
 }
 
 #header-image {
-    margin: 19px 0 0 51px;
-    width: calc(265px - 2*51px);
-    height: calc(265px - 2*51px);
-    border-radius: calc((265px - 2*51px)/2);
-    background: #9a0f0f;
+    margin: 10px 0 0 40px;
+    width: calc(265px - 2*40px);
+    height: calc(265px - 2*40px);
+    border-radius: calc((265px - 2*40px)/2);
+    background: #eee7e1;
 }
 
 #header-text-container {

@@ -144,7 +144,7 @@
                 "Pinout": [
                     {
                         "type": "text",
-                        "content": "ESP32 bruger sine indbyggede <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> (GPIO 25 og 26) til at sende lyd i 0,6–1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32’s GND."
+                        "content": "ESP32 bruger sine indbyggede <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> (GPIO 25 og 26) til at sende lyd i 0,6-1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32's GND."
                     },
                     {
                         "type": "code",
@@ -205,11 +205,11 @@
                     },
                     {
                         "type": "text",
-                        "content": "ESP32’ens start()-funktion sætter som standard lydstyrken til 0. Derfor er set_volume(50) tilføjet, så enheden starter med en passende lydstyrke på 50 %."
+                        "content": "ESP32'ens start()-funktion sætter som standard lydstyrken til 0. Derfor er set_volume(50) tilføjet, så enheden starter med en passende lydstyrke på 50 %."
                     },
                     {
                         "type": "text",
-                        "content": "Derudover er reconnect() implementeret, så ESP’en automatisk forsøger at genoprette forbindelsen til den sidst tilsluttede enhed, hvis strømmen afbrydes og enheden genstarter."
+                        "content": "Derudover er reconnect() implementeret, så ESP'en automatisk forsøger at genoprette forbindelsen til den sidst tilsluttede enhed, hvis strømmen afbrydes og enheden genstarter."
                     }
                 ]
             }
@@ -218,10 +218,10 @@
             "icon": "circuit",
             "title": "Kredsløb",
             "content": {
-                "RC-filter – hvad og hvorfor": [
+                "RC-filter - hvad og hvorfor": [
                     {
                         "type": "text",
-                        "content": "For at fjerne støj fra ESP32’s <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> er der tilføjet et simpelt RC-lavpasfilter. Det forbedrer lydkvaliteten og dæmper uønskede højfrekvente signaler."
+                        "content": "For at fjerne støj fra ESP32's <abbr data-tooltip=\"Digital-to-Analog Converter outputs\">DAC-udgange</abbr> er der tilføjet et simpelt RC-lavpasfilter. Det forbedrer lydkvaliteten og dæmper uønskede højfrekvente signaler."
                     }
                 ],
                 "Funktion og virkemåde": [
@@ -273,7 +273,7 @@
                 "Kort beskrivelse": [
                     {
                         "type": "text",
-                        "content": "Denne sektion gennemgår valget og placeringen af strømkomponenter i projektet – fra tilslutning til lavspændingsforsyning – med fokus på sikkerhed og overholdelse af lovgivning."
+                        "content": "Denne sektion gennemgår valget og placeringen af strømkomponenter i projektet - fra tilslutning til lavspændingsforsyning - med fokus på sikkerhed og overholdelse af lovgivning."
                     }
                 ],
                 "230 V strømtilslutning": [
@@ -296,7 +296,7 @@
                 "5 V lavspænding til ESP32": [
                     {
                         "type": "text",
-                        "content": "En standard 5 V USB-strømforsyning (med CE-mærkning) er tilsluttet en af de interne stikdåser og sidder sammen med ESP32’en og lavspændingskredsløbet i et isoleret kammer."
+                        "content": "En standard 5 V USB-strømforsyning (med CE-mærkning) er tilsluttet en af de interne stikdåser og sidder sammen med ESP32'en og lavspændingskredsløbet i et isoleret kammer."
                     },
                     {
                         "type": "text",
@@ -306,7 +306,7 @@
                 "Seperaring af lavspænding": [
                     {
                         "type": "text",
-                        "content": "ESP32, det analoge lydkredsløb og 5 V-reguleringen er placeret i et separat kammer, som er fysisk adskilt fra de øvrige 230 V-komponenter. Der er ingen tilgængelige 230 V-forbindelser i dette rum – kun lavspænding."
+                        "content": "ESP32, det analoge lydkredsløb og 5 V-reguleringen er placeret i et separat kammer, som er fysisk adskilt fra de øvrige 230 V-komponenter. Der er ingen tilgængelige 230 V-forbindelser i dette rum - kun lavspænding."
                     },
                     {
                         "type": "text",
@@ -330,7 +330,7 @@
                     },
                     {
                         "type": "text",
-                        "content": "Under brug er der ikke registreret mærkbar varmeudvikling i strømforsyningen eller ESP32’en, men ventilationsåbningerne er tilføjet som en ekstra sikkerhedsforanstaltning."
+                        "content": "Under brug er der ikke registreret mærkbar varmeudvikling i strømforsyningen eller ESP32'en, men ventilationsåbningerne er tilføjet som en ekstra sikkerhedsforanstaltning."
                     },
                     {
                         "type": "text",
@@ -374,7 +374,7 @@
                 "Designvalg": [
                     {
                         "type": "text",
-                        "content": "Som der kan ses på tegningen herunder, er kassen konstrueret med to separate kamre: ét til 230 V-komponenter og ét til ESP32’en og det analoge lyd- / RC-kredsløb. Dette design minimerer risiko for elektrisk interferens og gør montage og vedligeholdelse mere overskuelig."
+                        "content": "Som der kan ses på tegningen herunder, er kassen konstrueret med to separate kamre: ét til 230 V-komponenter og ét til ESP32'en og det analoge lyd- / RC-kredsløb. Dette design minimerer risiko for elektrisk interferens og gør montage og vedligeholdelse mere overskuelig."
                     },
                     {
                         "type": "text",
@@ -388,7 +388,7 @@
                 "Fremstilling": [
                     {
                       "type": "text",
-                      "content": "Kabinettet er designet i Onshape og består af en bund og et låg, der fastgøres med to skruer. Først blev alle komponenter modelleret digitalt for at bestemme deres dimensioner. De blev derefter placeret med fokus på at minimere det samlede rumfang, samtidig med at der blev taget højde for tilstrækkelig plads til kabelføring. Baseret på denne opstilling blev selve kassen designet omkring komponenterne. Kabinettet indeholder en intern skillevæg, der adskiller netspænding (230 V) fra lavspændings- og lydkredsløbet for at øge sikkerheden og mindske risikoen for interferens."
+                      "content": "Kabinettet er designet i Onshape og består af en bund og et låg, der fastgøres med to skruer. Først blev alle komponenter modelleret digitalt for at bestemme deres dimensioner. De blev derefter placeret med fokus på at minimere det samlede rumfang, samtidig med at der blev taget højde for tilstrækkelig plads til kabelføring. Baseret på denne opstilling blev selve kassen designet omkring komponenterne. Kabinettet indeholder en intern skillevæg, der adskiller netspænding (230 V) fra lavspændings- og lydkredsløbet for at øge sikkerheden og mindske risikoen for interferens."
                     }
                 ],
                 "Print og samling": [

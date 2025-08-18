@@ -9,7 +9,7 @@
             },
             {
                 "name": "Noah Oscar Telling Cadieux",
-                "role": "Main Frontend Dev",
+                "role": "Main Frontend Dev, Ui designer and tester",
                 "link": "https://github.com/Katz2293"
             },
             {
@@ -17,7 +17,7 @@
                 "role": "Backend dev, designer og test administator"
             }
         ],
-        "duration": "1 uge"
+        "duration": "3 uge"
     },
     "overview": {
         "description": "MilWeb er et webbaseret informationssystem designet til militær brug. Projektet er udarbejdet som et afsluttende eksamensprojekt i 3.g informatik og kombinerer teknisk udvikling med praktisk anvendelse i en realistisk kontekst. Formålet med projektet er at give generaler et overblik over troppebevægelser og soldaternes status via en brugervenlig platform. Projektet muliggør samtidig, at soldater kan indsende deres positioner og modtage ordrer fra generalen. Systemet er rolleopdelt, hvor brugere identificeres som enten soldat eller general, og får adgang til specifikke funktioner baseret på deres rolle. MilWeb anvender moderne webteknologier og datasikkerhedsmetoder for at sikre, at følsomme militære data ikke tilgængeliggøres for uautoriserede brugere. Visualisering sker gennem kortkomponenter, og al data gemmes krypteret i en relationsdatabase.",
