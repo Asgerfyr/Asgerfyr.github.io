@@ -224,6 +224,7 @@
 
       <div class="text-center mt-12">
         <button
+          onclick="popup('This feature is not yet implemented')"
           class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
           View All Projects
         </button>
@@ -270,10 +271,10 @@
             <div>
               <div class="flex justify-between mb-1">
                 <span class="font-medium">C#</span>
-                <span class="font-medium">50%</span>
+                <span class="font-medium">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
               </div>
             </div>
 
@@ -451,48 +452,7 @@
   <script src="/js/common/inserts.js"></script>
   <script src="/js/common/typewriter.js"></script>
   <script src="/js/common/smooth-sctolling-links.js"></script>
-
-
-
-  <!-- temp live reload -->
-  <script>
-
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
+  <script src="/js/common/popup.js"></script>
 
 </body>
 

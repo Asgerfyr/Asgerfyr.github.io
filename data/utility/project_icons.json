@@ -24,6 +24,9 @@
     "gears": {"name": "fa-solid fa-gears", "color": "blue"},
     "server": {"name": "fa-solid fa-server", "color": "purple"},
     "database": {"name": "fa-solid fa-database", "color": "blue"},
+    "idea": {"name": "lightbulb", "color": "yellow"},
+    "fire": {"name": "fire", "color": "red"},
+    "home": {"name": "house", "color": "blue"},
 
     "missingIcon": {"name":"notdef", "color":"fuchsia"}
 }
