@@ -15,27 +15,250 @@
   },
   "sections": [
     {
-      "icon": "icon",
-      "title": "section_title", // Documentation tilføjes automatisk
+      "icon": "fire",
+      "title": "Styring af brændselsfyr",
       "content": {
-        "section_title": [
-             
-         ]
-      },
-      "images": {
-        "image_title": "image_title", // section_title tilføjes automatisk (default: images)
-        "image_elements": [
+        "Baggrund": [
           {
-            "url": "image_url_1",
-            "alt": "image_alt_1",
-            "title": "image_title",
-            "caption": "image_caption_1"
+            "type": "text",
+            "content": "Fyret er udstyret med en vandpumpe, der cirkulerer varmt vand ind i huset og trækker koldt vand ud. Den eksisterende automatik har en udfordring: pumpen slukker ved en højere temperatur end ønsket. Dette resulterer i, at brugbar varme går tabt. Projektets formål er at udvikle en ny styring, som kan overtage pumpens regulering med mere fleksibilitet og intelligens."
+          }
+        ],
+        "Problemløsning": [
+          {
+            "type": "text",
+            "content": "Den nye løsning tilføjer et parallelt styringssystem, der kan konfigurere pumpen til at slukke ved en lavere temperatur. Dette sikrer, at mere af den producerede varme udnyttes. Systemet inddrager også yderligere faktorer fra fyret, så styringen bliver dynamisk fremfor statisk."
           },
           {
-            "url": "image_url_2",
-            "alt": "image_alt_2",
-            "title": "image_title",
-            "caption": "image_caption_2"
+            "type": "list",
+            "content": [
+              "Justérbar stoptemperatur for pumpen",
+              "Intelligent styring baseret på flere målepunkter",
+              "Optimeret varmeudnyttelse til huset"
+            ]
+          }
+        ],
+        "Kommunikation": [
+          {
+            "type": "text",
+            "content": "Systemet anvender ESP32-enheder, der kommunikerer via ESP-NOW. Dette gør det muligt at fjernstyre og overvåge fyret, selvom Wi-Fi-dækning ikke når ud til fyret. Fra en kontrol-ESP kan man enten bruge en lokal hjemmeside eller fysiske knapper til at interagere med systemet."
+          },
+          {
+            "type": "checklist",
+            "content": [
+              {
+                "checked": true,
+                "text": "Opsætning af ESP-NOW til drift mellem ESP-enheder"
+              },
+              {
+                "checked": true,
+                "text": "Webgrænseflade til lokal styring"
+              },
+              {
+                "checked": true,
+                "text": "Implementering af knapbaseret manuel styring"
+              },
+              {
+                "checked": false,
+                "text": "Montage af Systemet i fyret"
+              }
+            ]
+          }
+        ],
+        "Udvikling": [
+          {
+            "type": "text",
+            "content": "Oprindeligt var systemet baseret på to ESP-enheder med ESP-NOW. Senere er løsningen blevet videreudviklet til at være drevet af HomeAssistant OS. Dette reducerer kompleksiteten ved at kræve kun én ESP, der integreres direkte med et stærkere netværk. Denne ændring åbner samtidig for nem integration med eksterne API’er og services, hvilket gør systemet skalerbart og mere brugervenligt."
+          },
+          {
+            "type": "list",
+            "content": [
+              "Forenklet arkitektur: kun én ESP kræves",
+              "Integration med tredjeparts API'er og smart home-services"
+            ]
+          }
+        ],
+        "Systemoversigt": [
+          {
+            "type": "table",
+            "content": {
+              "headers": [
+                "Komponent",
+                "Funktion",
+                "Status"
+              ],
+              "rows": [
+                [
+                  "ESP32",
+                  "Styring og kommunikation",
+                  "Implementeret"
+                ],
+                [
+                  "ESP-NOW",
+                  "Trådløs forbindelse uden Wi-Fi",
+                  "Ændret til HomeAssistant OS"
+                ],
+                [
+                  "HomeAssistant OS",
+                  "Central styring og integration",
+                  "implementeret"
+                ],
+                [
+                  "Webgrænseflade",
+                  "Fjernstyring og monitorering",
+                  "Implementeret"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "images": {
+        "image_title": "Systemarkitektur",
+        "image_elements": [
+          {
+            "url": "https://i.pinimg.com/1200x/e0/f3/e9/e0f3e9e5d4e4d09419556da7ce241377.jpg",
+            "alt": "Flowdiagram for Microcontroller",
+            "title": "Flowdiagram for Microcontroller",
+            "caption": "Oversigt over hvordan ESP32, Håndtere kommunikation og styring af brændselsfyr."
+          },
+          {
+            "url": "https://i.pinimg.com/736x/b8/1f/da/b81fda51a6dc9bb572bc10d1aeb5e784.jpg",
+            "alt": "Kontrold ESP",
+            "title": "Kontrold ESP",
+            "caption": "ESP'en der kummunikerer med fyret og brugeren"
+          },
+          {
+            "url": "https://i.pinimg.com/736x/97/ad/f0/97adf0bbf0512fa40802f6a920e9d149.jpg",
+            "alt": "Pumpe styring ESP",
+            "title": "Pumpe styring ESP",
+            "caption": "ESP'en der styrer pumpen og modtager data fra fyret og kontrol ESP'en"
+          }
+        ]
+      }
+    },
+    {
+      "icon": "idea",
+      "title": "LED-strip sving",
+      "content": {
+        "Baggrund": [
+          {
+            "type": "text",
+            "content": "LED-strips er designet til at være fleksible i længden, men de har begrænset evne til at dreje skarpe hjørner. Den traditionelle metode er at klippe strippen over og lodde forbindelser mellem de to stykker, men dette medfører permanente samlinger."
+          }
+        ],
+        "Problemløsning": [
+          {
+            "type": "text",
+            "content": "For at undgå at beskadige LED-strips har jeg udviklet et blødt sving, der giver mulighed for at føre strippen rundt om hjørner uden indgreb. Løsningen gør det muligt at genbruge strippen i andre opsætninger, da der ikke er behov for at klippe eller lodde."
+          },
+          {
+            "type": "list",
+            "content": [
+              "Ingen behov for klipning eller lodning",
+              "Bevarer strippen intakt og genanvendelig",
+              "Muliggør bløde kurver i installationer"
+            ]
+          }
+        ],
+        "Udvikling": [
+          {
+            "type": "text",
+            "content": "Det bløde sving er udviklet som en fysisk tilpasning, der kan føjes til LED-installationen. Det sikrer både mekanisk stabilitet og fleksibilitet, så strippen kan monteres i forskellige omgivelser uden permanente ændringer."
+          }
+        ],
+        "Systemoversigt": [
+          {
+            "type": "table",
+            "content": {
+              "headers": [
+                "Egenskab",
+                "Traditionel løsning",
+                "Ny løsning"
+              ],
+              "rows": [
+                [
+                  "Installation i hjørner",
+                  "Klip og lodning nødvendig",
+                  "Blødt sving uden indgreb"
+                ],
+                [
+                  "Genbrug af strip",
+                  "Begrænset - kræver samlinger",
+                  "Fuld genbrug uden samlinger"
+                ],
+                [
+                  "Holdbarhed",
+                  "Afhænger af loddepunkter",
+                  "Bevarer fabriksintegritet"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "images": {
+        "image_title": "Design af blødt LED-sving",
+        "image_elements": [
+          {
+            "url": "https://i.pinimg.com/1200x/2b/11/76/2b1176c9f4f4a7d1c211270bee12a215.jpg",
+            "alt": "billed af blødt LED-stripsving",
+            "title": "Blødt LED-sving",
+            "caption": "Hvordan LED-strip kan føres rundt i hjørner uden lodning."
+          },
+          {
+            "url": "https://i.pinimg.com/1200x/f3/2b/33/f32b33e524f33417334b8886d49f819d.jpg",
+            "alt": "billed af blødt LED-stripsving",
+            "title": "Blødt LED-sving",
+            "caption": " Hvordan LED-strip kan føres rundt i hjørner uden lodning."
+          }
+        ]
+      }
+    },
+    {
+      "icon": "home",
+      "title": "Home Assistant OS på gammel PC",
+      "content": {
+        "Home Assistant OS på gammel PC": [
+          {
+            "type": "text",
+            "content": "Home Assistant OS er installeret på en gammel PC. Systemet har sit eget wakeword og giver kontrol over lys og temperatur i huset."
+          }
+        ]
+      },
+      "images": {
+        "image_elements": [
+          {
+            "url": "https://i.pinimg.com/1200x/0d/c1/9d/0dc19d3166f6f5dfb34c927939ef5e20.jpg",
+            "alt": "Billed af pc der kører Home Assistant OS",
+            "title": "Home Assistant OS kørt på en gammel PC",
+            "caption": "Dette er den gamle PC der køre Home Assistant OS."
+          }
+        ]
+      }
+    },
+    {
+      "icon": "cube",
+      "title": "4x4x4-Led cube med arduino mega",
+      "content": {
+        "beskrivelse": [
+          {
+            "type": "text",
+            "content": "Projektet er en LED-cube bestående af 64 hvide LED'er. Disse er forbundet i rækker og lag, hvor hver LED kan styres individuelt ved at skabe en spændingsforskel over den ønskede række og det ønskede lag."
+          },
+          {
+            "type": "text",
+            "content": "Styringen sker gennem en Arduino Mega, som har tilstrækkeligt med pins til at håndtere alle LED'erne: 16 pins til rækkerne og 4 pins til lagene. For at undgå uønsket aktivering af LED'er tændes hvert lag separat. LED'erne lyser i en cyklus på 4 lag, hvilket for øjet fremstår som om de relevante LED'er er tændt konstant."
+          }
+        ]
+      },
+      "images": {
+        "image_elements": [
+          {
+            "url": "https://i.pinimg.com/1200x/85/56/59/8556595ca35b46c311e3cebb825d00d1.jpg",
+            "alt": "4x4x4-led cube",
+            "title": "4x4x4 LED Cube",
+            "caption": "En 4x4x4 LED Cube lavet hvor arduino mege er fjernet til et andet procjekt."
           }
         ]
       }
