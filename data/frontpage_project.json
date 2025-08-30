@@ -27,7 +27,7 @@
     "image": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
     "sub_description": "Et trådløst Bluetooth lydsystem til at eliminere kabler, kompatibelt med forskelige enheder.",
     "description": "Projektet omhandler udviklingen af et trådløst Bluetooth-musikanlæg designet til diskret montering under en seng. Det moderniserer et ældre analogt lydsystem ved at tilføje trådløs streamingkapabilitet, som gør det muligt at forbinde smartphones, tablets og computere uden brug af kabler, hvilket øger fleksibiliteten og brugervenligheden.",
-    "topics": ["ESP32", "Bluetooth", "Embedded Systems", "Audio Amplifier", "3D Printing"],
+    "topics": ["ESP32", "Bluetooth", "Embedded Systems", "Audio Amplifier", "3D Printing", "microcontroller"],
     "topicsSummery": ["Hardware Design", "IoT", "DIY Electronics"],
     "category": ["IoT", "Embedded_System"],
     "date": "May 2025",
@@ -41,7 +41,7 @@
   "description": "Byggede et moderne og responsivt portfolio website for at præsentere mine projekter, tekniske færdigheder og baggrund. Siden er lavet med fokus på performance, enkel navigation og elegant UI. Den indeholder en projektside, CV-download, kontaktformular og blogsektion. Designet med komponentbaseret struktur og animationsovergange.",
   "topics": ["React", "Tailwind CSS", "Framer Motion", "EmailJS", "Vite"],
   "topicsSummery": ["Figma", "UI/UX", "Responsivt Design"],
-  "category": ["Web", "Frontend", "Design", "Documentation"],
+  "category": ["Web", "Frontend", "Design"],
   "date": "April 2025",
   "link": "404"
 }

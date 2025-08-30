@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/project_viewer/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Projects</title>
+</head>
+<body class="dark-theme">
+    <div id="page-container">
+        <div id="header">
+            <a href="/" id="home"><i class="fa-solid fa-house"></i></a>
+            <h1>Project Viewer</h1>
+        </div>
+        <div id="content-layout-container">
+            <div id="sidebar">
+                <input type="text" placeholder="Search" oninput="handleSearch(this.value)">
+                <div id="all-selection-container">
+                    <button id="all-selection" onclick="handleCategorySelect('All')">All</button>
+                </div>
+                <div id="category-selection">
+                    <!-- Category buttons will be dynamically inserted here -->
+                </div>
+            </div>
+            <div id="main-content">
+                <div id="sorting-options">
+                    <button onclick="sortButtonClick(this)" id="sort-by-date" class="sort_button">Sort by Date <span class="arrow">↑</span></button>
+                    <button onclick="sortButtonClick(this)" id="sort-by-name" class="sort_button">Sort by Name <span class="arrow">↓</span></button>
+                </div>
+                <div id="project-list">
+                    <!-- Project items will be dynamically inserted here -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/project_viewer/project_holder.js"></script>
+    <script src="/js/project_viewer/actions.js"></script>
+    
+    <script src="/js/project_viewer/project_inserter.js"></script>
+</body>

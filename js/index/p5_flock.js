@@ -82,6 +82,7 @@ class Main {
     this.update_jump = update_jump_ + 1;
   }
 
+  //dette er forfærdeligt optimeret i forhold til BIG O, så dette skal laves om når jeg ikke har vigtigere ting at lave
   updateParticles() {
     this.update_jump = ceil(this.particles.length / 300);
     for (

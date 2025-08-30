@@ -52,6 +52,7 @@ body.dark-theme {
     --theme-section-shadow-color: #3f4145;
     --theme-nav-text-color: #fbf6cb;
     --theme-highlight-color: #dfa14a;
+    --theme-highlight-color-rgb: 223, 161, 74;
     --theme-nav-shadow: rgba(80, 78, 78, 0.2);
     --theme-icon-color: #fbf6cb;
     --theme-icon-hover-color: #dfa14a;
