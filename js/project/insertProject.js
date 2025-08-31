@@ -11,8 +11,7 @@ class ProjectObject {
         if (!this.project) Error404();
         if (this.project == "404") Error404();
 
-        this.icons;
-        this.getIcons().then(data => this.icons = data);
+        this.icons = [];
 
         this.imageShowcaseContainer = document.getElementById("image_showcase_container");
         this.imageShowcase = document.getElementById("image_showcase");
@@ -37,6 +36,7 @@ class ProjectObject {
             if (!response.ok) {Error404();}
             const data = await response.json();
             if (!data) throw new Error(`Fetched data form ${this.project} is undefined`);
+            await this.getIcons().then(data => this.icons = data);
             this.insertProject(data);
         } catch (error) {
             console.error("Project error:", error);
