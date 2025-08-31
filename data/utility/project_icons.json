@@ -27,6 +27,7 @@
     "idea": {"name": "lightbulb", "color": "yellow"},
     "fire": {"name": "fire", "color": "red"},
     "home": {"name": "house", "color": "blue"},
+    "recycle": {"name": "recycle", "color": "green"},
 
     "missingIcon": {"name":"notdef", "color":"fuchsia"}
 }

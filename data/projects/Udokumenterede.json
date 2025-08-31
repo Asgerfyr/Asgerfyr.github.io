@@ -262,6 +262,73 @@
           }
         ]
       }
+    },
+    {
+      "icon": "recycle",
+      "title": "Affaldssortering",
+      "content": {
+        "Baggrund": [
+          {
+            "type": "text",
+            "content": "Projektet er et   affaldssorteringssystem til husholdninger, der kan genkende og sortere affald i fem kategorier. Systemet er udviklet som et eksamensprojekt i robotteknologi."
+          }
+        ],
+        "Problemløsning": [
+          
+          {
+            "type": "text",
+            "content": "Løsningen anvender en kombination af   kunstig intelligens (AI), elektronik og programmering til at sortere affaldet. En AI-model genkender affaldstyperne, og en Arduino styrer et transportbånd og servomotorer til sorteringsarme."
+          },
+          {
+            "type": "text",
+            "content": "kunstig intelligens (AI), elektronik og programmering til at sortere affaldet. Efter en indledende analyse, hvor man overvejede forskellige løsningsprincipper såsom frit fald og skråt fald, valgte man en løsning med et transportbånd og servomotorer til sorteringsarme."
+          },
+          {
+            "type": "text",
+            "content": "Valget af transportbånd i stedet for f.eks. frit fald eller skråt fald skyldtes, at et transportbånd giver større kontrol og udsætter systemet for mindre belastning."
+          }
+        ],
+        "Kommunikation": [
+          {
+            "type": "text",
+            "content": "Systemet bruger et eksternt kamera, f.eks. en mobiltelefon, til billedgenkendelse. En AI-model, der er trænet i   Google Teachable Machine, identificerer affaldstypen."
+          },
+          {
+            "type": "text",
+            "content": "Denne information sendes via Wi-Fi til en   ESP8266, som derefter kommunikerer via seriel forbindelse med en Arduino."
+          },
+          {
+            "type": "text",
+            "content": "Systemet viser data om sorteringen på et   LCD-display."
+          }
+        ],
+        "Udvikling": [
+          {
+            "type": "text",
+            "content": "Produktet består af en   DC-motor til transportbåndet og 4 servomotorer til sorteringsarmene, der leder affaldet ned i de rigtige beholdere."
+          },
+          {
+            "type": "text",
+            "content": "Udviklingsprocessen involverede at bygge et stativ og at samle og kode de forskellige elektroniske komponenter. Der blev også implementeret en       nødstopfunktion med en \"kill-switch\"."
+          },
+          {
+            "type": "text",
+            "content": "Et af de problemer, der opstod, var, at friktionen mellem armene og transportbåndet var for stor, hvilket blev løst ved at påsætte elektrisk tape og modificere armenes spidser."
+          }
+        ],
+        "Systemoversigt": [
+          {
+            "type": "list",
+            "content": [
+              "Billedgenkendelse: Anvender en AI-model via en mobiltelefons kamera til at genkende affaldstyper.",
+              "Transport: Et transportb   nd drevet af en DC-motor flytter affaldet.",
+              "Sortering: Fire servomotorer styrer sorteringsarme, der skubber affaldet i fem beholdere. En af beholderne er til ukendt affald.",
+              "Kommunikation: Data sendes fra en telefon til en ESP8266 og videre til en Arduino via seriel kommunikation.",
+              "Datavisning: Et LCD-display viser den sorterede m ngde affald."
+            ]
+          }
+        ]
+      }
     }
   ],
   "conclusion": {
