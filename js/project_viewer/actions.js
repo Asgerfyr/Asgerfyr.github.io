@@ -11,20 +11,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 // Handle category selection
 function handleCategorySelect(category) {
-    // Remove active class from all category buttons
-    document.querySelectorAll('#all-selection, #category-selection button').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    // Add active class to selected button
-    const selectedButton = category === 'All' 
-        ? document.getElementById('all-selection')
-        : document.getElementById(category);
-    if (selectedButton) {
-        selectedButton.classList.add('active');
-    }
-
     projectHolder.setCategory(category);
+    updateCategoryButtons(projectHolder);
     updateProjectDisplay();
 }
 

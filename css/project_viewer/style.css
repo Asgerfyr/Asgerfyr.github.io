@@ -80,6 +80,13 @@ button:hover {
     font-weight: bold;
 }
 
+#all-selection.active {
+    opacity: 1;
+    font-weight: bold;
+    color:#e5e7eb;
+    background-color: var(--theme-accent-color);
+}
+
 #category-selection {
     display: flex;
     flex-direction: column;
@@ -104,6 +111,7 @@ button:hover {
 #category-selection button.active {
     opacity: 1;
     font-weight: bold;
+    color:#e5e7eb;
     background-color: var(--theme-accent-color);
 }
 

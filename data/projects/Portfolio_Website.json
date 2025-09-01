@@ -1,0 +1,154 @@
+{
+  "info": {
+    "completion_date": "April 2025",
+    "team_size": 1,
+    "team_members": [
+      {
+        "name": "Asger Fyrstenborg",
+        "role": "Fullstack Developer, Designer"
+      }
+    ],
+    "duration": "2 måneder"
+  },
+  "overview": {
+    "description": "Et moderne portfolio website til præsentation af projekter, færdigheder og kontaktinformation. Siden er bygget med fokus på skalerbarhed, brugervenlighed og et elegant, responsivt design.",
+    "objectives": [
+      "Præsentere projekter og tekniske kompetencer på en overskuelig måde",
+      "Sikre nem navigation og hurtig adgang til information",
+      "Muliggøre nem udvidelse og vedligeholdelse af indholdet"
+    ],
+    "features": [
+      {
+        "icon": "🖥️",
+        "title": "Responsivt Design",
+        "description": "Siden tilpasser sig alle skærmstørrelser og enheder for optimal brugeroplevelse."
+      },
+      {
+        "icon": "⚡",
+        "title": "Hurtig Ydeevne",
+        "description": "Bygget med moderne frontend-teknologier for lynhurtig indlæsning og navigation."
+      },
+      {
+        "icon": "🧩",
+        "title": "Komponentbaseret Arkitektur",
+        "description": "Genanvendelige komponenter gør det let at udvide og vedligeholde websitet."
+      },
+      {
+        "icon": "📄",
+        "title": "CV og Kontakt",
+        "description": "Indeholder CV-download og kontaktformular for direkte henvendelser."
+      }
+    ],
+    "images": [
+      {
+        "url": "https://i.pinimg.com/736x/83/04/77/8304774632a374472f5f01fc73ddeab5.jpg",
+        "alt": "Portfolio Website Screenshot",
+        "title": "Portfolio Website Forside",
+        "caption": "Forsiden af portfolio websitet med projektoversigt og navigation."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "icon": "🧑‍💻",
+      "title": "Teknologier og Arkitektur",
+      "content": {
+        "Teknologier og Arkitektur": [
+          {
+            "type": "list",
+            "content": [
+              "React (SPA)",
+              "Tailwind CSS",
+              "Framer Motion (animationer)",
+              "EmailJS (kontaktformular)",
+              "Vite (build tool)",
+              "Figma (UI/UX design)"
+            ]
+          },
+          {
+            "type": "text",
+            "content": "Projektet er bygget med et komponentbaseret design, hvilket gør det let at tilføje nye sektioner og projekter uden at ændre grundstrukturen."
+          }
+        ]
+      },
+      "images": {
+        "image_title": "Arkitektur Diagram",
+        "image_elements": [
+          {
+            "url": "https://i.imgur.com/4M7IWwP.png",
+            "alt": "Komponentstruktur",
+            "title": "Komponentstruktur",
+            "caption": "Oversigt over komponentopbygning og dataflow."
+          }
+        ]
+      }
+    },
+    {
+      "icon": "🎨",
+      "title": "Design og Brugervenlighed",
+      "content": {
+        "Design og Brugervenlighed": [
+          {
+            "type": "text",
+            "content": "Designet er minimalistisk og let at navigere, med fokus på læsbarhed og hurtig adgang til information. Farvepaletten er rolig og professionel, og alle elementer er optimeret til både desktop og mobil."
+          },
+          {
+            "type": "checklist",
+            "content": [
+              {"checked": true, "text": "Responsivt layout"},
+              {"checked": true, "text": "Letforståelig navigation"},
+              {"checked": true, "text": "Hurtig adgang til projekter og kontakt"},
+              {"checked": true, "text": "Tilgængelighed for alle brugere"}
+            ]
+          }
+        ]
+      },
+      "images": {
+        "image_title": "Design Eksempler",
+        "image_elements": [
+          {
+            "url": "https://i.imgur.com/8zQbQkT.png",
+            "alt": "Mobilvisning af portfolio",
+            "title": "Mobilvisning",
+            "caption": "Portfolio websitet på mobil."
+          }
+        ]
+      }
+    },
+    {
+      "icon": "🔗",
+      "title": "Integrationer",
+      "content": {
+        "Integrationer": [
+          {
+            "type": "list",
+            "content": [
+              "EmailJS til kontaktformular (direkte e-mail fra siden)",
+              "CV-download som PDF",
+              "Eksterne links til projekter og GitHub"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "image_title": "Integrationer",
+        "image_elements": []
+      }
+    }
+  ],
+  "conclusion": {
+    "results": "Portfolio websitet har gjort det let at præsentere projekter og kompetencer for potentielle arbejdsgivere og samarbejdspartnere. Siden er nem at udvide og vedligeholde, og brugervenligheden er i top.",
+    "metrics": [
+      {"icon": "⏱️", "title": "Indlæsningstid", "result": "<1 sekund på moderne enheder"},
+      {"icon": "📱", "title": "Responsivitet", "result": "100% mobilvenlig"},
+      {"icon": "🧩", "title": "Udvidelsesmuligheder", "result": "Let at tilføje nye projekter og sektioner"}
+    ],
+    "learned": "Vigtigheden af komponentbaseret udvikling og at prioritere brugervenlighed og skalerbarhed fra starten.",
+    "improvements": [
+      "Tilføje blogsektion med artikler og guides",
+      "Implementere dark mode",
+      "Flere sprogvalg (internationalisering)",
+      "Endnu flere animationer og microinteractions"
+    ]
+  }
+}
