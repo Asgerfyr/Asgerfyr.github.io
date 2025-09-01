@@ -210,11 +210,21 @@ function updateCategoryButtons(projectHolder) {
         button.textContent = `${category}`;
         button.onclick = () => handleCategorySelect(category);
         
-        // Add active class if this is the current category
-        if (category === projectHolder.currentCategory) {
+        // Add active class if this category is selected
+        if (projectHolder.selectedCategories.includes(category)) {
             button.classList.add('active');
         }
         
         categorySelection.appendChild(button);
     });
+
+    // Update the 'All' button state
+    const allButton = document.getElementById('all-selection');
+    if (allButton) {
+        if (projectHolder.selectedCategories.includes('All')) {
+            allButton.classList.add('active');
+        } else {
+            allButton.classList.remove('active');
+        }
+    }
 }

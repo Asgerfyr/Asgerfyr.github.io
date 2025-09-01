@@ -3,7 +3,7 @@ class ProjectHolder {
         this.projects = [];
         this.categories = new Map();
         this.categoryOrder = []; // Track order of appearance
-        this.currentCategory = 'All';
+        this.selectedCategories = ['All'];
         this.searchQuery = '';
         this.sortType = 'date';
         this.sortOrder = 'asc';
@@ -62,9 +62,9 @@ class ProjectHolder {
         let filteredProjects = this.projects;
 
         // Apply category filter
-        if (this.currentCategory !== 'All') {
+        if (!this.selectedCategories.includes('All')) {
             filteredProjects = filteredProjects.filter(project => 
-                project.categories.includes(this.currentCategory)
+                project.categories.some(category => this.selectedCategories.includes(category))
             );
         }
 
@@ -132,7 +132,27 @@ class ProjectHolder {
     }
 
     setCategory(category) {
-        this.currentCategory = category;
+        if (category === 'All') {
+            // If selecting 'All', clear other selections
+            this.selectedCategories = ['All'];
+        } else {
+            // Remove 'All' if it's selected
+            if (this.selectedCategories.includes('All')) {
+                this.selectedCategories = [];
+            }
+            
+            // Toggle the category
+            const index = this.selectedCategories.indexOf(category);
+            if (index > -1) {
+                this.selectedCategories.splice(index, 1);
+                // If no categories are selected, default to 'All'
+                if (this.selectedCategories.length === 0) {
+                    this.selectedCategories = ['All'];
+                }
+            } else {
+                this.selectedCategories.push(category);
+            }
+        }
     }
 
     setSearchQuery(query) {
