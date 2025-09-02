@@ -32,18 +32,6 @@
     "category": ["IoT", "Embedded_System"],
     "date": "May 2025",
     "link": "BT Sound System"
-},
-
-"Portfolio_Website": {
-  "title": "Portfolio Website",
-  "image": "https://i.pinimg.com/736x/83/04/77/8304774632a374472f5f01fc73ddeab5.jpg",
-  "sub_description": "Et personligt website til præsentation af projekter, færdigheder og kontaktinfo.",
-  "description": "Byggede et moderne og responsivt portfolio website for at præsentere mine projekter, tekniske færdigheder og baggrund. Siden er lavet med fokus på skalerbarhed, enkel navigation og elegant UI. Den indeholder en projektside, CV-download, kontaktformular og blogsektion. Designet med komponentbaseret struktur og animationsovergange.",
-  "topics": ["React", "Tailwind CSS", "Framer Motion", "EmailJS", "Vite"],
-  "topicsSummery": ["Figma", "UI/UX", "Responsivt Design"],
-  "category": ["Web", "Frontend", "Design"],
-  "date": "April 2025",
-  "link": "Portfolio Website"
 }
 
 }
