@@ -28,7 +28,7 @@
     <button onclick="importJSON()" class="text-sm border border-gray-300 rounded px-3 py-1 hover:bg-gray-50"><i class="fas fa-upload mr-1"></i>Import</button>
     <button onclick="copyJSON()" class="text-sm bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-700"><i class="fas fa-copy mr-1"></i>Copy JSON</button>
     <button onclick="downloadJSON()" class="text-sm bg-green-600 text-white rounded px-3 py-1 hover:bg-green-700"><i class="fas fa-download mr-1"></i>Download</button>
-    <a id="preview-link" href="/pages/template.html?page=__preview" target="_blank" class="text-sm bg-gray-800 text-white rounded px-3 py-1 hover:bg-gray-700"><i class="fas fa-eye mr-1"></i>Preview</a>
+    <button onclick="previewPage()" class="text-sm bg-gray-800 text-white rounded px-3 py-1 hover:bg-gray-700"><i class="fas fa-eye mr-1"></i>Preview</button>
   </header>
 
   <div class="flex flex-1 overflow-hidden">
@@ -48,11 +48,19 @@
           <span class="text-xs text-gray-400">Click a component on the left to add it</span>
         </div>
         <div id="layout-list" class="space-y-1 mb-4">
-          <div class="text-gray-400 text-sm text-center py-8" id="empty-hint">No components yet — click one from the palette</div>
+          <div class="text-gray-400 text-sm text-center py-8">No components yet — click one from the palette</div>
         </div>
         <div class="border-t pt-3">
-          <label class="block text-xs font-medium text-gray-500 mb-1">Page Scripts (one URL per line)</label>
-          <textarea id="scripts-input" rows="3" class="w-full text-xs border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="/js/common/typewriter.js&#10;/js/common/smooth-sctolling-links.js" oninput="updateJSON()"></textarea>
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-xs font-medium text-gray-500">Scripts</label>
+            <span class="text-xs text-gray-400">click to toggle</span>
+          </div>
+          <div id="scripts-known" class="flex flex-wrap gap-1 mb-2"></div>
+          <div class="flex gap-1">
+            <input id="custom-script-url" type="text" placeholder="Custom URL…" class="flex-1 text-xs border rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-blue-400" />
+            <button type="button" onclick="addCustomScript()" class="text-xs bg-gray-100 border rounded px-2 py-1 hover:bg-gray-200">+ Add</button>
+          </div>
+          <div id="scripts-custom" class="flex flex-wrap gap-1 mt-1"></div>
         </div>
       </div>
 
@@ -75,19 +83,31 @@
     </aside>
 
   </div>
-
+  <!-- Icon picker overlay -->
+  <div id="icon-picker" onclick="if(event.target===this)closeIconPicker()" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.18);align-items:center;justify-content:center">
+    <div style="background:#fff;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.25);width:300px;max-height:330px;display:flex;flex-direction:column;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid #e5e7eb">
+        <i class="fas fa-icons" style="color:#9ca3af;font-size:.875rem"></i>
+        <input type="text" id="icon-search" autocomplete="off" placeholder="Search icons…" style="flex:1;border:0;outline:none;font-size:.875rem" oninput="filterIcons(this.value)" />
+        <button type="button" onclick="closeIconPicker()" style="color:#9ca3af;background:0;border:0;cursor:pointer"><i class="fas fa-times text-xs"></i></button>
+      </div>
+      <div id="icon-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:8px;overflow-y:auto;max-height:270px"></div>
+    </div>
+  </div>
   <script>
-    // ─── Component Schemas ─────────────────────────────────────────────────────
+    // ─── Schemas ───────────────────────────────────────────────────────────────
+    // isSnippet=true entries add a pre-filled Html component rather than a new component
     const SCHEMAS = {
-      // Layout
+
+      // ── Layout ──────────────────────────────────────────────────────────────
       Section: {
         cat: 'Layout', icon: 'fa-layer-group', color: 'blue',
-        desc: 'Section wrapper with optional heading and child components',
+        desc: 'Section wrapper with heading and child components',
         props: {
-          heading: { type: 'html', label: 'Heading HTML', ph: 'My <span class="text-blue-600">Section</span>' },
-          id:      { type: 'text', label: 'Section ID', ph: 'my-section' },
-          children:{ type: 'children', label: 'Child Components (JSON array)' },
-        }
+          heading:  { type: 'html',     label: 'Heading HTML', ph: 'My Section' },
+          id:       { type: 'text',     label: 'Section ID',   ph: 'my-section' },
+          children: { type: 'children', label: 'Child Components (JSON array)' },
+        },
       },
       Grid: {
         cat: 'Layout', icon: 'fa-grid-2', color: 'blue',
@@ -99,73 +119,214 @@
         }
       },
 
-      // Content
+      // ── Content ──────────────────────────────────────────────────────────────
       Html: {
         cat: 'Content', icon: 'fa-code', color: 'purple',
         desc: 'Raw HTML — maximum flexibility',
         props: {
-          html:      { type: 'html', label: 'HTML Content', ph: '<p>Hello <strong>world</strong></p>' },
-          tag:       { type: 'select', label: 'Wrapper tag', opts: ['div','p','span','article','aside','section','header','footer'] },
-          className: { type: 'text', label: 'CSS Classes', ph: 'text-gray-600 mb-4' },
-          id:        { type: 'text', label: 'ID' },
-        }
+          html:      { type: 'html',   label: 'HTML Content', ph: '<p>Hello <strong>world</strong></p>' },
+          tag:       { type: 'select', label: 'Wrapper tag',  opts: ['div','p','span','article','aside','main'] },
+          className: { type: 'text',   label: 'CSS Classes',  ph: 'text-gray-600 mb-4' },
+          id:        { type: 'text',   label: 'ID' },
+        },
       },
       CodeBlock: {
         cat: 'Content', icon: 'fa-terminal', color: 'gray',
         desc: 'Syntax-highlighted code block',
         props: {
           code:     { type: 'code', label: 'Code' },
-          language: { type: 'text', label: 'Language', ph: 'javascript / python / cpp / plaintext' },
-        }
+          language: { type: 'text', label: 'Language', ph: 'javascript / python / cpp' },
+        },
       },
       TypewriterText: {
         cat: 'Content', icon: 'fa-keyboard', color: 'indigo',
         desc: 'Animated typewriter text (requires typewriter.js in scripts)',
         props: {
-          tag:       { type: 'select', label: 'Element', opts: ['p','h1','h2','h3','span'] },
-          strings:   { type: 'json', label: 'Strings (JSON)', ph: '[{"string":"Hello World","pauseFor":2000}]' },
-          typeSpeed: { type: 'number', label: 'Type speed ms', default: 60 },
-          loop:      { type: 'bool', label: 'Loop', default: true },
-        }
+          tag:       { type: 'select', label: 'Element',        opts: ['p','h1','h2','h3','span'] },
+          strings:   { type: 'tw-strings', label: 'Strings' },
+          typeSpeed: { type: 'number', label: 'Type speed ms',  default: 60 },
+          loop:      { type: 'bool',   label: 'Loop',           default: true },
+        },
       },
 
-      // Portfolio
+      // ── Portfolio ────────────────────────────────────────────────────────────
       Header: {
         cat: 'Portfolio', icon: 'fa-heading', color: 'orange',
-        desc: 'Full-screen hero header with image, typewriter and CTA buttons',
+        desc: 'Full-screen hero header with image and CTA buttons',
         props: {
-          name:      { type: 'text', label: 'Your Name', ph: 'Asger Stidsen' },
-          subtitle:  { type: 'text', label: 'Subtitle', ph: 'The world need solutions not problems' },
-          image:     { type: 'url',  label: 'Profile image URL' },
-          imageText: { type: 'text', label: 'Image badge text', ph: 'Available for work' },
-          buttons:   { type: 'links', label: 'CTA Buttons (text / href)' },
-        }
+          name:      { type: 'text',  label: 'Your Name',        ph: 'Asger Stidsen' },
+          subtitle:  { type: 'text',  label: 'Subtitle',         ph: 'The world need solutions not problems' },
+          image:     { type: 'url',   label: 'Profile image URL' },
+          imageText: { type: 'text',  label: 'Image badge text', ph: 'Available for work' },
+          buttons:   { type: 'links', label: 'CTA Buttons' },
+        },
       },
       Navigation: {
         cat: 'Portfolio', icon: 'fa-bars', color: 'gray',
         desc: 'Sticky nav bar with hamburger menu and theme toggle',
         props: {
-          brand: { type: 'text', label: 'Brand name', ph: 'Portfolio' },
-          links: { type: 'links', label: 'Nav links (text / href)' },
-        }
+          brand: { type: 'text',  label: 'Brand name', ph: 'Portfolio' },
+          links: { type: 'links', label: 'Nav links' },
+        },
       },
-      About:       { cat: 'Portfolio', icon: 'fa-user', color: 'teal', desc: 'About me section', props: {} },
+      About:       { cat: 'Portfolio', icon: 'fa-user',       color: 'teal',   desc: 'About me section', props: {} },
       ProjectList: {
         cat: 'Portfolio', icon: 'fa-folder-open', color: 'green',
-        desc: 'Grid of project cards loaded from a JSON file',
-        props: {
-          dataSource: { type: 'url', label: 'Data source', ph: '/data/frontpage_project.json' },
-        }
+        desc: 'Project card grid from JSON data source',
+        props: { dataSource: { type: 'url', label: 'Data source', ph: '/data/frontpage_project.json' } },
       },
-      ProjectDetail: { cat: 'Portfolio', icon: 'fa-file-alt', color: 'blue', desc: 'Full project doc page — reads ?project= from URL', props: {} },
-      Skills:  { cat: 'Portfolio', icon: 'fa-chart-bar',  color: 'yellow', desc: 'Skills section',  props: {} },
-      Contact: { cat: 'Portfolio', icon: 'fa-envelope',   color: 'red',    desc: 'Contact section', props: {} },
-      Footer:  { cat: 'Portfolio', icon: 'fa-flag',       color: 'gray',   desc: 'Footer',          props: {} },
+      Skills:  { cat: 'Portfolio', icon: 'fa-chart-bar', color: 'yellow', desc: 'Skills section',  props: {} },
+      Contact: { cat: 'Portfolio', icon: 'fa-envelope',  color: 'red',    desc: 'Contact section', props: {} },
+      Footer:  { cat: 'Portfolio', icon: 'fa-flag',      color: 'gray',   desc: 'Footer',          props: {} },
+
+      // ── Project Page ─────────────────────────────────────────────────────────
+      ProjectHeader: {
+        cat: 'Project Page', icon: 'fa-heading', color: 'blue',
+        desc: 'Sticky header bar with title and section nav links',
+        props: { title: { type: 'text', label: 'Project title', ph: 'My Project' } },
+      },
+      ProjectOverview: {
+        cat: 'Project Page', icon: 'fa-info-circle', color: 'teal',
+        desc: 'Overview: description, objectives, features, images',
+        props: {
+          description: { type: 'html', label: 'Description' },
+          objectives:  { type: 'string-array', label: 'Objectives' },
+          features:    { type: 'feature-list', label: 'Features' },
+          images:      { type: 'image-list', label: 'Images' },
+        },
+      },
+      ProjectSection: {
+        cat: 'Project Page', icon: 'fa-layer-group', color: 'purple',
+        desc: 'Documentation section — text / code / list / checklist / table subsections',
+        props: {
+          icon:    { type: 'icon-picker', label: 'Icon' },
+          title:   { type: 'text', label: 'Section title', ph: 'Hardware' },
+          content: { type: 'section-content', label: 'Content' },
+          images:  { type: 'section-images', label: 'Section Images' },
+        },
+      },
+      ProjectConclusion: {
+        cat: 'Project Page', icon: 'fa-flag-checkered', color: 'green',
+        desc: 'Conclusion: results, lessons learned, improvements list',
+        props: {
+          results:      { type: 'html', label: 'Results' },
+          learned:      { type: 'html', label: 'Lessons Learned' },
+          improvements: { type: 'string-array', label: 'Future Improvements' },
+        },
+      },
+      ProjectInfo: {
+        cat: 'Project Page', icon: 'fa-id-card', color: 'orange',
+        desc: 'Project metadata: completion date, team size, duration',
+        props: {
+          completion_date: { type: 'text',   label: 'Completion date', ph: 'May 2025' },
+          team_size:       { type: 'number', label: 'Team size',        default: 1 },
+          duration:        { type: 'text',   label: 'Duration',         ph: '3 Months' },
+          team_members:    { type: 'team-list', label: 'Team members' },
+        },
+      },
+
+      // ── Quick Insert (snippets → add a pre-filled Html component) ─────────────
+      _Paragraph: {
+        cat: 'Quick Insert', icon: 'fa-paragraph', color: 'gray',
+        label: 'Paragraph', desc: 'Plain text paragraph',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<p class="text-gray-700">Enter your text here.</p>' },
+      },
+      _BoldText: {
+        cat: 'Quick Insert', icon: 'fa-bold', color: 'gray',
+        label: 'Bold Text', desc: 'Paragraph with bold emphasis',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<p class="text-gray-700"><strong>Bold text</strong> and normal text here.</p>' },
+      },
+      _Heading: {
+        cat: 'Quick Insert', icon: 'fa-heading', color: 'gray',
+        label: 'Heading (h2)', desc: 'Section heading',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<h2 class="text-2xl font-bold text-gray-800 mb-2">Heading Text</h2>' },
+      },
+      _Divider: {
+        cat: 'Quick Insert', icon: 'fa-minus', color: 'gray',
+        label: 'Divider', desc: 'Horizontal rule separator',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<hr class="border-gray-200 my-6" />' },
+      },
+      _BulletList: {
+        cat: 'Quick Insert', icon: 'fa-list-ul', color: 'blue',
+        label: 'Bullet List', desc: 'Unordered bullet list',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>' },
+      },
+      _NumberedList: {
+        cat: 'Quick Insert', icon: 'fa-list-ol', color: 'blue',
+        label: 'Numbered List', desc: 'Ordered numbered list',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<ol class="list-decimal list-inside space-y-1 text-gray-700 ml-4">\n  <li>Step 1</li>\n  <li>Step 2</li>\n  <li>Step 3</li>\n</ol>' },
+      },
+      _DataTable: {
+        cat: 'Quick Insert', icon: 'fa-table', color: 'green',
+        label: 'Table', desc: 'Simple data table',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<table class="w-full text-sm border-collapse">\n  <thead class="bg-gray-50">\n    <tr>\n      <th class="border border-gray-200 px-3 py-2 text-left font-semibold">Column A</th>\n      <th class="border border-gray-200 px-3 py-2 text-left font-semibold">Column B</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td class="border border-gray-200 px-3 py-2">Row 1, A</td>\n      <td class="border border-gray-200 px-3 py-2">Row 1, B</td>\n    </tr>\n    <tr class="bg-gray-50">\n      <td class="border border-gray-200 px-3 py-2">Row 2, A</td>\n      <td class="border border-gray-200 px-3 py-2">Row 2, B</td>\n    </tr>\n  </tbody>\n</table>' },
+      },
+      _Callout: {
+        cat: 'Quick Insert', icon: 'fa-circle-info', color: 'yellow',
+        label: 'Callout', desc: 'Highlighted info / alert box',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<div class="bg-blue-50 border-l-4 border-blue-400 px-4 py-3 rounded">\n  <p class="text-blue-800 font-semibold text-sm">Note</p>\n  <p class="text-blue-700 text-sm mt-1">Enter your callout text here.</p>\n</div>' },
+      },
+      _Image: {
+        cat: 'Quick Insert', icon: 'fa-image', color: 'purple',
+        label: 'Image', desc: 'Responsive image with caption',
+        isSnippet: true, snippetComponent: 'Html',
+        snippetProps: { html: '<figure class="text-center my-4">\n  <img src="/path/to/image.jpg" alt="Image description" class="mx-auto rounded-lg shadow-md max-w-full" />\n  <figcaption class="text-sm text-gray-500 mt-2">Image caption</figcaption>\n</figure>' },
+      },
     };
 
+    // ─── Script catalogue ──────────────────────────────────────────────────────
+    const KNOWN_SCRIPTS = [
+      { label: 'Smooth Scroll',  url: '/js/common/smooth-sctolling-links.js' },
+      { label: 'To-Top Arrow',   url: '/js/common/to-top-arrow.js' },
+      { label: 'Typewriter',     url: '/js/common/typewriter.js' },
+      { label: 'Navigation JS',  url: '/js/common/nav.js' },
+      { label: 'Popup',          url: '/js/common/popup.js' },
+      { label: 'Inserts (age)',  url: '/js/common/inserts.js' },
+      { label: 'Contact Form',   url: '/js/index/contact-send.js' },
+    ];
+    const COMPONENT_SCRIPTS = {
+      TypewriterText: ['/js/common/typewriter.js'],
+      Navigation:     ['/js/common/nav.js'],
+      Contact:        ['/js/index/contact-send.js'],
+    };
+
+    // Font Awesome solid icon names (without the fa- prefix)
+    const ICONS = [
+      'code','terminal','microchip','laptop','desktop','server','database','hard-drive',
+      'cloud','cloud-arrow-up','wifi','bluetooth','usb','battery-full','plug','power-off',
+      'gear','gears','wrench','screwdriver-wrench','bug','code-branch','layer-group','sitemap','network-wired',
+      'palette','pen','pen-nib','paintbrush','ruler','object-group','shapes','vector-square',
+      'calculator','flask','atom','brain','robot','microscope','dna','infinity',
+      'chart-line','chart-bar','chart-pie','chart-simple','table',
+      'image','photo-film','video','music','camera','microphone','headphones','film',
+      'file','file-code','file-lines','folder','folder-open','book','book-open','bookmark','clipboard','tag','tags','newspaper',
+      'user','users','user-group','building','briefcase','graduation-cap','id-card','person',
+      'plus','minus','check','xmark','trash','pen-to-square','copy','upload','download','share-nodes','link','arrows-rotate',
+      'house','bars','list','magnifying-glass','filter','sort','grip',
+      'envelope','comment','comments','phone','bell','inbox','message',
+      'lock','lock-open','shield','key','fingerprint',
+      'circle-check','circle-info','circle-exclamation','triangle-exclamation',
+      'star','heart','fire','bolt','lightbulb','flag','award','trophy',
+      'clock','calendar','hourglass','stopwatch',
+      'cube','cubes','box','boxes-stacked','hammer','toolbox',
+      'globe','tower-broadcast','satellite-dish',
+      'play','pause','stop','rotate',
+      'mobile','tablet','print','keyboard','eye','hand-pointer',
+    ];
+
     // ─── State ─────────────────────────────────────────────────────────────────
-    let layout = [];       // [{ component, props }]
+    let layout = [];
     let selected = -1;
+    let scripts = ['/js/common/smooth-sctolling-links.js']; // smooth scroll on by default
+    let _pickerState = null;
 
     // ─── Palette ───────────────────────────────────────────────────────────────
     function buildPalette() {
@@ -184,9 +345,9 @@
           const s = SCHEMAS[name];
           const item = document.createElement('div');
           item.className = 'palette-item rounded px-2 py-1.5 flex items-center gap-2 text-sm';
-          item.innerHTML = `<i class="fas ${s.icon} text-${s.color}-500 w-4 text-center text-xs"></i><span>${name}</span>`;
+          item.innerHTML = `<i class="fas ${s.icon} text-${s.color}-500 w-4 text-center text-xs"></i><span>${s.label ?? name}</span>`;
           item.title = s.desc;
-          item.onclick = () => addComponent(name);
+          item.addEventListener('click', () => addComponent(name));
           el.appendChild(item);
         }
       }
@@ -194,25 +355,30 @@
 
     // ─── Layout CRUD ───────────────────────────────────────────────────────────
     function addComponent(name) {
-      const defaults = {};
-      for (const [k, p] of Object.entries(SCHEMAS[name]?.props ?? {})) {
-        if (p.default !== undefined) defaults[k] = p.default;
-        if (p.type === 'links') defaults[k] = [];
+      const schema = SCHEMAS[name];
+      if (!schema) return;
+      if (schema.isSnippet) {
+        layout.push({ component: schema.snippetComponent, props: { ...schema.snippetProps } });
+      } else {
+        const defaults = {};
+        for (const [k, p] of Object.entries(schema.props ?? {})) {
+          if (p.default !== undefined) defaults[k] = p.default;
+          if (p.type === 'links') defaults[k] = [];
+        }
+        layout.push({ component: name, props: defaults });
       }
-      layout.push({ component: name, props: defaults });
       selected = layout.length - 1;
+      autoAddScripts(name);
       render();
     }
 
-    function removeComponent(i, e) {
-      e.stopPropagation();
+    function removeComponent(i) {
       layout.splice(i, 1);
       if (selected >= layout.length) selected = layout.length - 1;
       render();
     }
 
-    function moveUp(i, e) {
-      e.stopPropagation();
+    function moveUp(i) {
       if (i === 0) return;
       [layout[i - 1], layout[i]] = [layout[i], layout[i - 1]];
       if (selected === i) selected = i - 1;
@@ -220,8 +386,7 @@
       render();
     }
 
-    function moveDown(i, e) {
-      e.stopPropagation();
+    function moveDown(i) {
       if (i === layout.length - 1) return;
       [layout[i], layout[i + 1]] = [layout[i + 1], layout[i]];
       if (selected === i) selected = i + 1;
@@ -243,32 +408,46 @@
 
     function renderLayout() {
       const list = document.getElementById('layout-list');
-      const hint = document.getElementById('empty-hint');
+      list.innerHTML = '';
       if (!layout.length) {
-        hint.style.display = '';
-        list.innerHTML = '';
-        list.appendChild(hint);
+        list.innerHTML = '<div class="text-gray-400 text-sm text-center py-8">No components yet — click one from the palette</div>';
         return;
       }
-      hint.style.display = 'none';
-      list.innerHTML = '';
       layout.forEach((item, i) => {
-        const s = SCHEMAS[item.component];
+        const s = SCHEMAS[item.component] ?? {};
         const div = document.createElement('div');
-        div.className = `layout-item border rounded px-3 py-2 flex items-center gap-2 text-sm ${i === selected ? 'selected border-blue-400' : 'border-gray-200 bg-white'}`;
-        div.onclick = () => selectItem(i);
-        div.innerHTML = `
-          <i class="fas ${s?.icon ?? 'fa-cube'} text-${s?.color ?? 'gray'}-500 text-xs w-4 text-center flex-shrink-0"></i>
-          <span class="flex-1 font-medium">${item.component}</span>
-          <button onclick="moveUp(${i},event)" class="text-gray-400 hover:text-gray-700 px-1" title="Move up"><i class="fas fa-chevron-up text-xs"></i></button>
-          <button onclick="moveDown(${i},event)" class="text-gray-400 hover:text-gray-700 px-1" title="Move down"><i class="fas fa-chevron-down text-xs"></i></button>
-          <button onclick="removeComponent(${i},event)" class="text-red-400 hover:text-red-600 px-1" title="Remove"><i class="fas fa-times text-xs"></i></button>
-        `;
+        div.className = `layout-item border rounded px-3 py-2 flex items-center gap-2 text-sm ${
+          i === selected ? 'selected border-blue-400' : 'border-gray-200 bg-white'
+        }`;
+        div.addEventListener('click', () => selectItem(i));
+
+        const ico = document.createElement('i');
+        ico.className = `fas ${s.icon ?? 'fa-cube'} text-${s.color ?? 'gray'}-500 text-xs w-4 text-center flex-shrink-0`;
+        div.appendChild(ico);
+
+        const lbl = document.createElement('span');
+        lbl.className = 'flex-1 font-medium';
+        lbl.textContent = item.component;
+        div.appendChild(lbl);
+
+        const mkBtn = (fa, title, cb, cls = 'text-gray-400 hover:text-gray-700') => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = `${cls} px-1 flex-shrink-0`;
+          b.title = title;
+          b.innerHTML = `<i class="fas ${fa} text-xs"></i>`;
+          b.addEventListener('click', e => { e.stopPropagation(); cb(); });
+          return b;
+        };
+        div.appendChild(mkBtn('fa-chevron-up',   'Move up',   () => moveUp(i)));
+        div.appendChild(mkBtn('fa-chevron-down', 'Move down', () => moveDown(i)));
+        div.appendChild(mkBtn('fa-times',        'Remove',    () => removeComponent(i), 'text-red-400 hover:text-red-600'));
         list.appendChild(div);
       });
     }
 
     function renderForm() {
+      closeIconPicker();
       const panel = document.getElementById('config-panel');
       if (selected < 0 || selected >= layout.length) {
         panel.innerHTML = '<p class="text-gray-400 text-sm">Select a component in the layout to configure it</p>';
@@ -293,12 +472,12 @@
 
         if (p.type === 'text' || p.type === 'url') {
           html += `<input type="text" class="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="${p.ph ?? ''}" value="${escHtml(String(val ?? ''))}"
-            onchange="setProp('${key}', this.value)" />`;
+            placeholder="${escHtml(p.ph ?? '')}" value="${escHtml(String(val ?? ''))}"
+            oninput="setProp('${key}', this.value)" />`;
         } else if (p.type === 'number') {
           html += `<input type="number" class="w-24 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            value="${val ?? (p.default ?? '')}"
-            onchange="setProp('${key}', Number(this.value))" />`;
+            value="${escHtml(String(val ?? (p.default ?? '')))}"
+            onchange="const n=Number(this.value);if(!isNaN(n))setProp('${key}',n)" />`;
         } else if (p.type === 'bool') {
           html += `<input type="checkbox" class="mt-1" ${val ?? p.default ? 'checked' : ''}
             onchange="setProp('${key}', this.checked)" />`;
@@ -307,30 +486,124 @@
           (p.opts ?? []).forEach(o => { html += `<option ${val === o ? 'selected' : ''}>${o}</option>`; });
           html += `</select>`;
         } else if (p.type === 'html' || p.type === 'code') {
-          html += `<textarea rows="3" class="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="${p.ph ?? (p.type === 'html' ? 'HTML allowed' : 'Code here')}"
-            onchange="setProp('${key}', this.value)">${escHtml(String(val ?? ''))}</textarea>`;
+          html += `<textarea rows="4" class="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="${escHtml(p.ph ?? (p.type === 'html' ? 'HTML allowed' : 'Code here'))}"
+            oninput="setProp('${key}', this.value)">${escHtml(String(val ?? ''))}</textarea>`;
           if (p.type === 'html') html += `<p class="text-xs text-gray-400 mt-0.5">HTML tags allowed</p>`;
         } else if (p.type === 'json' || p.type === 'children') {
           const hint = p.type === 'children'
             ? 'Array of {component, props} objects'
             : 'JSON value';
-          html += `<textarea rows="4" class="w-full border rounded px-2 py-1 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="${p.ph ?? hint}"
-            onchange="setJSONProp('${key}', this.value)">${escHtml(val !== undefined ? JSON.stringify(val, null, 2) : '')}</textarea>`;
-          html += `<p class="text-xs text-gray-400 mt-0.5">${hint}</p>`;
+          html += `<textarea rows="5" class="w-full border rounded px-2 py-1 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="${escHtml(p.ph ?? hint)}"
+            oninput="setJSONProp('${key}', this.value)">${escHtml(val !== undefined ? JSON.stringify(val, null, 2) : '')}</textarea>`;
+          html += `<p class="text-xs text-gray-400 mt-0.5">${escHtml(hint)}</p>`;
         } else if (p.type === 'links') {
           const links = (val ?? []);
           html += `<div id="links-${key}" class="space-y-1">`;
           links.forEach((l, li) => {
             html += `<div class="links-row flex gap-1">
-              <input type="text" placeholder="Label" value="${escHtml(l.text ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" onchange="setLink('${key}',${li},'text',this.value)" />
-              <input type="text" placeholder="URL / #anchor" value="${escHtml(l.href ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" onchange="setLink('${key}',${li},'href',this.value)" />
+              <input type="text" placeholder="Label" value="${escHtml(l.text ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" oninput="setLink('${key}',${li},'text',this.value)" />
+              <input type="text" placeholder="URL / #anchor" value="${escHtml(l.href ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" oninput="setLink('${key}',${li},'href',this.value)" />
               <button onclick="removeLink('${key}',${li})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button>
             </div>`;
           });
           html += `</div>`;
           html += `<button onclick="addLink('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add link</button>`;
+        } else if (p.type === 'tw-strings') {
+          const rows = Array.isArray(val) ? val : [];
+          html += `<div class="space-y-1">`;
+          rows.forEach((row, ri) => {
+            html += `<div class="flex gap-1 items-center">
+              <input type="text" placeholder="Text" value="${escHtml(row.string ?? '')}" class="flex-1 min-w-0 border rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400" oninput="setTwRow('${key}',${ri},'string',this.value)" />
+              <select class="border rounded px-1 py-1 text-xs" title="Type style" onchange="setTwRow('${key}',${ri},'typeStyle',this.value)">
+                <option value="">write</option>
+                <option value="deleteTo"${row.typeStyle === 'deleteTo' ? ' selected' : ''}>deleteTo</option>
+                <option value="blink"${row.typeStyle === 'blink' ? ' selected' : ''}>blink</option>
+              </select>
+              <input type="number" placeholder="ms" value="${escHtml(String(row.pauseFor ?? ''))}" class="w-16 border rounded px-1 py-1 text-xs" title="Pause for (ms)" onchange="setTwRowNum('${key}',${ri},'pauseFor',this.value)" />
+              <button type="button" onclick="removeTwRow('${key}',${ri})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button>
+            </div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addTwRow('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add string</button>`;
+        } else if (p.type === 'icon-picker') {
+          const iconVal = String(val ?? '');
+          html += `<div class="flex gap-2 items-center">`;
+          html += `<i id="icon-prev-${key}" class="fas fa-${escHtml(iconVal)} fa-fw text-xl text-gray-600 flex-shrink-0 w-8 text-center"></i>`;
+          html += `<input type="text" id="icon-inp-${key}" value="${escHtml(iconVal)}" placeholder="icon name (e.g. microchip)" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400" oninput="setProp('${key}',this.value);var el=document.getElementById('icon-prev-${key}');if(el)el.className='fas fa-'+this.value+' fa-fw text-xl text-gray-600 flex-shrink-0 w-8 text-center'" />`;
+          html += `<button type="button" onclick="openIconPicker('prop','${key}',null,null)" class="border rounded px-2 py-1 text-xs text-gray-600 hover:bg-blue-50 flex-shrink-0"><i class="fas fa-icons mr-1 text-xs"></i>Pick</button>`;
+          html += `</div>`;
+        } else if (p.type === 'string-array') {
+          const items = Array.isArray(val) ? val : [];
+          html += `<div class="space-y-1">`;
+          items.forEach((item, ii) => {
+            html += `<div class="flex gap-1 items-center"><input type="text" value="${escHtml(String(item))}" class="flex-1 border rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400" oninput="setStringItem('${key}',${ii},this.value)" /><button type="button" onclick="removeRow('${key}',${ii})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button></div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addStringItem('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add item</button>`;
+        } else if (p.type === 'feature-list') {
+          const items = Array.isArray(val) ? val : [];
+          html += `<div class="space-y-2">`;
+          items.forEach((feat, fi) => {
+            html += `<div class="border rounded p-2 space-y-1"><div class="flex items-center justify-between"><span class="text-xs font-medium text-gray-500">Feature ${fi + 1}</span><button type="button" onclick="removeRow('${key}',${fi})" class="text-red-400 hover:text-red-600"><i class="fas fa-times text-xs"></i></button></div>`;
+            html += `<div class="flex gap-1 items-center"><i id="icon-prev-${key}-${fi}" class="fas fa-${escHtml(feat.icon??'cube')} fa-fw text-sm text-gray-400 flex-shrink-0 w-5 text-center"></i><input type="text" id="icon-inp-${key}-${fi}" placeholder="icon" value="${escHtml(feat.icon??'')}" class="w-16 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${fi},'icon',this.value);var p=document.getElementById('icon-prev-${key}-${fi}');if(p)p.className='fas fa-'+this.value+' fa-fw text-sm text-gray-400 flex-shrink-0 w-5 text-center'" /><button type="button" onclick="openIconPicker('field','${key}',${fi},'icon')" class="text-xs border rounded px-1 py-1 hover:bg-blue-50 text-gray-500 flex-shrink-0" title="Pick icon"><i class="fas fa-icons"></i></button><input type="text" placeholder="Title" value="${escHtml(feat.title??'')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${fi},'title',this.value)" /></div>`;
+            html += `<textarea rows="2" placeholder="Description" class="w-full border rounded px-2 py-1 text-xs resize-none" oninput="setField('${key}',${fi},'description',this.value)">${escHtml(feat.description ?? '')}</textarea></div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addFeature('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add feature</button>`;
+        } else if (p.type === 'image-list') {
+          const items = Array.isArray(val) ? val : [];
+          html += `<div class="space-y-2">`;
+          items.forEach((img, ii) => {
+            html += `<div class="border rounded p-2 space-y-1"><div class="flex items-center justify-between"><span class="text-xs font-medium text-gray-500">Image ${ii + 1}</span><button type="button" onclick="removeRow('${key}',${ii})" class="text-red-400 hover:text-red-600"><i class="fas fa-times text-xs"></i></button></div>`;
+            html += `<input type="text" placeholder="URL" value="${escHtml(img.url ?? '')}" class="w-full border rounded px-2 py-1 text-xs" oninput="setField('${key}',${ii},'url',this.value)" />`;
+            html += `<div class="flex gap-1"><input type="text" placeholder="Alt text" value="${escHtml(img.alt ?? '')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${ii},'alt',this.value)" /><input type="text" placeholder="Caption" value="${escHtml(img.caption ?? '')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${ii},'caption',this.value)" /></div></div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addImage('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add image</button>`;
+        } else if (p.type === 'team-list') {
+          const items = Array.isArray(val) ? val : [];
+          html += `<div class="space-y-1">`;
+          items.forEach((member, mi) => {
+            html += `<div class="border rounded p-1.5 space-y-1"><div class="flex gap-1 items-center"><input type="text" placeholder="Name" value="${escHtml(member.name ?? '')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${mi},'name',this.value)" /><input type="text" placeholder="Role" value="${escHtml(member.role ?? '')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setField('${key}',${mi},'role',this.value)" /><button type="button" onclick="removeRow('${key}',${mi})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button></div><div class="flex gap-1 items-center"><i class="fas fa-link text-gray-400 text-xs w-4 text-center flex-shrink-0"></i><input type="url" placeholder="Link URL (optional)" value="${escHtml(member.link ?? '')}" class="flex-1 border rounded px-2 py-0.5 text-xs" oninput="setField('${key}',${mi},'link',this.value)" /></div></div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addMember('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add member</button>`;
+        } else if (p.type === 'section-images') {
+          const elems = (val && Array.isArray(val.image_elements)) ? val.image_elements : [];
+          html += `<div class="space-y-1">`;
+          elems.forEach((img, ii) => {
+            html += `<div class="flex gap-1 items-center"><input type="text" placeholder="URL" value="${escHtml(img.url ?? '')}" class="flex-1 border rounded px-2 py-1 text-xs" oninput="setSectionImageField('${key}',${ii},'url',this.value)" /><input type="text" placeholder="Alt" value="${escHtml(img.alt ?? '')}" class="w-24 border rounded px-2 py-1 text-xs" oninput="setSectionImageField('${key}',${ii},'alt',this.value)" /><button type="button" onclick="removeSectionImage('${key}',${ii})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button></div>`;
+          });
+          html += `</div>`;
+          html += `<button type="button" onclick="addSectionImage('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add image</button>`;
+        } else if (p.type === 'section-content') {
+          const content = (val && typeof val === 'object' && !Array.isArray(val)) ? val : {};
+          const sectionEntries = Object.entries(content);
+          html += `<div class="space-y-2">`;
+          if (!sectionEntries.length) html += `<p class="text-xs text-gray-400 italic">No sections yet.</p>`;
+          sectionEntries.forEach(([sName, sitems], si) => {
+            const sItems = Array.isArray(sitems) ? sitems : [];
+            html += `<div class="border rounded overflow-hidden"><div class="flex items-center gap-1 bg-gray-50 px-2 py-1 border-b"><input type="text" value="${escHtml(sName)}" class="flex-1 text-xs font-semibold bg-transparent border-0 focus:outline-none focus:ring-1 focus:ring-blue-400 rounded px-1" onchange="renameSubsection('${key}',${si},this.value)" /><button type="button" onclick="removeSubsection('${key}',${si})" class="text-red-400 hover:text-red-600 flex-shrink-0"><i class="fas fa-times text-xs"></i></button></div><div class="p-1.5 space-y-1">`;
+            sItems.forEach((item, ii) => {
+              const typeOpts = ['text','code','list','checklist','table'].map(t => `<option value="${t}"${item.type===t?' selected':''}>${t}</option>`).join('');
+              html += `<div class="flex gap-1 items-start border rounded p-1 bg-white"><select class="text-xs border rounded px-1 py-0.5 flex-shrink-0 mt-0.5" onchange="setSectionItemType('${key}',${si},${ii},this.value)">${typeOpts}</select>`;
+              if (item.type === 'text') {
+                html += `<textarea rows="2" class="flex-1 text-xs border rounded px-1 py-0.5 resize-none" placeholder="Text content" oninput="setSectionItemField('${key}',${si},${ii},'content',this.value)">${escHtml(item.content??'')}</textarea>`;
+              } else if (item.type === 'code') {
+                html += `<div class="flex-1 space-y-0.5"><input type="text" placeholder="Language" value="${escHtml(item.language??'')}" class="w-full text-xs border rounded px-1 py-0.5" oninput="setSectionItemField('${key}',${si},${ii},'language',this.value)" /><textarea rows="2" class="w-full text-xs border rounded px-1 py-0.5 font-mono resize-none" placeholder="Code" oninput="setSectionItemField('${key}',${si},${ii},'content',this.value)">${escHtml(item.content??'')}</textarea></div>`;
+              } else if (item.type === 'list' || item.type === 'checklist') {
+                html += `<textarea rows="3" class="flex-1 text-xs border rounded px-1 py-0.5 resize-none" placeholder="One item per line" oninput="setSectionItemItems('${key}',${si},${ii},this.value)">${escHtml((item.items??[]).join('\n'))}</textarea>`;
+              } else {
+                html += `<div class="flex-1 space-y-0.5"><input type="text" placeholder="Headers: Col A,Col B" value="${escHtml((item.headers??[]).join(','))}" class="w-full text-xs border rounded px-1 py-0.5" oninput="setSectionItemHeaders('${key}',${si},${ii},this.value)" /><textarea rows="2" class="w-full text-xs border rounded px-1 py-0.5 font-mono resize-none" placeholder="val1,val2 (one row per line)" oninput="setSectionItemRows('${key}',${si},${ii},this.value)">${escHtml((item.rows??[]).map(r=>r.join(',')).join('\n'))}</textarea></div>`;
+              }
+              html += `<button type="button" onclick="removeSectionItem('${key}',${si},${ii})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button></div>`;
+            });
+            html += `<select class="mt-1 text-xs border rounded px-1 py-0.5 w-full" onchange="if(this.value)addSectionItem('${key}',${si},this.value)"><option value="">+ Add item…</option><option value="text">text</option><option value="code">code</option><option value="list">list</option><option value="checklist">checklist</option><option value="table">table</option></select>`;
+            html += `</div></div>`;
+          });
+          html += `<button type="button" onclick="addSubsection('${key}')" class="w-full text-xs text-blue-600 hover:text-blue-800 border border-dashed border-blue-300 rounded py-1 hover:bg-blue-50 mt-1"><i class="fas fa-plus mr-1"></i>Add subsection</button></div>`;
         }
         html += `</div>`;
       });
@@ -348,9 +621,10 @@
 
     function setJSONProp(key, raw) {
       if (selected < 0) return;
-      try { layout[selected].props[key] = JSON.parse(raw); }
-      catch { /* keep old value on parse error */ }
-      updateJSON();
+      try {
+        layout[selected].props[key] = JSON.parse(raw);
+        updateJSON();
+      } catch { /* keep old value on parse error */ }
     }
 
     function addLink(key) {
@@ -372,18 +646,251 @@
       updateJSON();
     }
 
+    function addTwRow(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push({ string: '' });
+      render();
+    }
+
+    function removeTwRow(key, i) {
+      if (selected < 0) return;
+      layout[selected].props[key].splice(i, 1);
+      render();
+    }
+
+    function setTwRow(key, i, field, value) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      if (value === '' || value === undefined) delete layout[selected].props[key][i][field];
+      else layout[selected].props[key][i][field] = value;
+      updateJSON();
+    }
+
+    function setTwRowNum(key, i, field, value) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      const n = Number(value);
+      if (value === '' || isNaN(n)) delete layout[selected].props[key][i][field];
+      else layout[selected].props[key][i][field] = n;
+      updateJSON();
+    }
+
+    // ─── Generic array helpers ─────────────────────────────────────────────────
+    function removeRow(key, i) {
+      if (selected < 0) return;
+      layout[selected].props[key].splice(i, 1);
+      render();
+    }
+    function setField(key, i, field, value) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key][i][field] = value;
+      updateJSON();
+    }
+    function addStringItem(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push('');
+      render();
+    }
+    function setStringItem(key, i, value) {
+      if (selected < 0) return;
+      layout[selected].props[key][i] = value;
+      updateJSON();
+    }
+    function addFeature(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push({ icon: '', title: '', description: '' });
+      render();
+    }
+    function addImage(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push({ url: '', alt: '', caption: '' });
+      render();
+    }
+    function addMember(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push({ name: '', role: '' });
+      render();
+    }
+
+    // ─── Section images helpers ────────────────────────────────────────────────
+    function addSectionImage(key) {
+      if (selected < 0) return;
+      if (!layout[selected].props[key] || typeof layout[selected].props[key] !== 'object') layout[selected].props[key] = { image_elements: [] };
+      if (!Array.isArray(layout[selected].props[key].image_elements)) layout[selected].props[key].image_elements = [];
+      layout[selected].props[key].image_elements.push({ url: '', alt: '' });
+      render();
+    }
+    function removeSectionImage(key, i) {
+      if (selected < 0) return;
+      layout[selected].props[key].image_elements.splice(i, 1);
+      render();
+    }
+    function setSectionImageField(key, i, field, value) {
+      if (selected < 0) return;
+      layout[selected].props[key].image_elements[i][field] = value;
+      updateJSON();
+    }
+
+    // ─── Section content helpers ───────────────────────────────────────────────
+    function _getContent(key) {
+      if (!layout[selected].props[key] || typeof layout[selected].props[key] !== 'object' || Array.isArray(layout[selected].props[key])) layout[selected].props[key] = {};
+      return layout[selected].props[key];
+    }
+    function addSubsection(key) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      let name = 'Section'; let n = 2;
+      while (name in content) name = `Section ${n++}`;
+      content[name] = [];
+      render();
+    }
+    function removeSubsection(key, si) {
+      if (selected < 0) return;
+      const keys = Object.keys(_getContent(key));
+      if (si >= 0 && si < keys.length) { delete layout[selected].props[key][keys[si]]; render(); }
+    }
+    function renameSubsection(key, si, newName) {
+      if (selected < 0 || !newName.trim()) return;
+      const entries = Object.entries(_getContent(key));
+      if (si < 0 || si >= entries.length) return;
+      const rebuilt = {};
+      entries.forEach(([k, v], i) => { rebuilt[i === si ? newName.trim() : k] = v; });
+      layout[selected].props[key] = rebuilt;
+      updateJSON();
+    }
+    function addSectionItem(key, si, type) {
+      if (selected < 0 || !type) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (!sKey) return;
+      const tmpls = { text:{type:'text',content:''}, code:{type:'code',content:'',language:''}, list:{type:'list',items:[]}, checklist:{type:'checklist',items:[]}, table:{type:'table',headers:[],rows:[]} };
+      content[sKey].push({ ...tmpls[type] });
+      render();
+    }
+    function removeSectionItem(key, si, ii) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (sKey) { content[sKey].splice(ii, 1); render(); }
+    }
+    function setSectionItemType(key, si, ii, type) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (!sKey) return;
+      const tmpls = { text:{type:'text',content:''}, code:{type:'code',content:'',language:''}, list:{type:'list',items:[]}, checklist:{type:'checklist',items:[]}, table:{type:'table',headers:[],rows:[]} };
+      content[sKey][ii] = { ...tmpls[type] };
+      render();
+    }
+    function setSectionItemField(key, si, ii, field, value) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (sKey) { content[sKey][ii][field] = value; updateJSON(); }
+    }
+    function setSectionItemItems(key, si, ii, raw) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (sKey) { content[sKey][ii].items = raw.split('\n').map(s => s.trim()).filter(Boolean); updateJSON(); }
+    }
+    function setSectionItemHeaders(key, si, ii, value) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (sKey) { content[sKey][ii].headers = value.split(',').map(s => s.trim()).filter(Boolean); updateJSON(); }
+    }
+    function setSectionItemRows(key, si, ii, raw) {
+      if (selected < 0) return;
+      const content = _getContent(key);
+      const sKey = Object.keys(content)[si];
+      if (sKey) { content[sKey][ii].rows = raw.split('\n').map(line => line.split(',').map(s => s.trim())).filter(r => r.some(Boolean)); updateJSON(); }
+    }
+
+    // ─── Script management ────────────────────────────────────────────────────────
+    function autoAddScripts(name) {
+      const toAdd = COMPONENT_SCRIPTS[name] ?? [];
+      let added = false;
+      for (const url of toAdd) {
+        if (!scripts.includes(url)) { scripts.push(url); added = true; }
+      }
+      if (added) { renderScripts(); updateJSON(); }
+    }
+
+    function toggleKnownScript(url) {
+      const idx = scripts.indexOf(url);
+      if (idx >= 0) scripts.splice(idx, 1);
+      else scripts.push(url);
+      renderScripts();
+      updateJSON();
+    }
+
+    function addCustomScript() {
+      const input = document.getElementById('custom-script-url');
+      const url = (input.value ?? '').trim();
+      if (!url || scripts.includes(url)) return;
+      scripts.push(url);
+      input.value = '';
+      renderScripts();
+      updateJSON();
+    }
+
+    function removeCustomScript(url) {
+      scripts = scripts.filter(s => s !== url);
+      renderScripts();
+      updateJSON();
+    }
+
+    function renderScripts() {
+      const knownEl = document.getElementById('scripts-known');
+      const customEl = document.getElementById('scripts-custom');
+      if (!knownEl || !customEl) return;
+      const knownUrls = new Set(KNOWN_SCRIPTS.map(s => s.url));
+      knownEl.innerHTML = '';
+      for (const ks of KNOWN_SCRIPTS) {
+        const active = scripts.includes(ks.url);
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = `text-xs px-2 py-0.5 rounded-full border transition-colors ${
+          active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-500 border-gray-300 hover:border-blue-400'
+        }`;
+        chip.textContent = ks.label;
+        chip.title = ks.url;
+        chip.addEventListener('click', () => { toggleKnownScript(ks.url); });
+        knownEl.appendChild(chip);
+      }
+      const customScripts = scripts.filter(s => !knownUrls.has(s));
+      customEl.innerHTML = '';
+      for (const url of customScripts) {
+        const chip = document.createElement('span');
+        chip.className = 'inline-flex items-center gap-1 text-xs bg-blue-50 text-blue-800 border border-blue-200 px-2 py-0.5 rounded-full';
+        const lbl = document.createElement('span');
+        lbl.className = 'max-w-28 truncate';
+        lbl.textContent = url.split('/').pop() ?? url;
+        lbl.title = url;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'text-blue-400 hover:text-red-500 font-bold leading-none';
+        btn.textContent = '×';
+        btn.addEventListener('click', () => removeCustomScript(url));
+        chip.append(lbl, btn);
+        customEl.appendChild(chip);
+      }
+    }
+
     // ─── JSON output ───────────────────────────────────────────────────────────
     function buildConfig() {
       const title = document.getElementById('page-title-input').value || 'My Page';
-      const scriptsRaw = document.getElementById('scripts-input').value.trim();
-      const scripts = scriptsRaw ? scriptsRaw.split('\n').map(s => s.trim()).filter(Boolean) : [];
       return {
         pageTitle: title,
         ...(scripts.length ? { scripts } : {}),
-        layout: layout.map(({ component, props }) => ({
-          component,
-          props: cleanProps(props),
-        })),
+        layout: layout.map(({ component, props }) => ({ component, props: cleanProps(props) })),
       };
     }
 
@@ -392,6 +899,7 @@
       for (const [k, v] of Object.entries(props)) {
         if (v === '' || v === null || v === undefined) continue;
         if (Array.isArray(v) && !v.length) continue;
+        if (typeof v === 'object' && !Array.isArray(v) && v !== null && !Object.keys(v).length) continue;
         out[k] = v;
       }
       return out;
@@ -416,11 +924,15 @@
     function downloadJSON() {
       const slug = (document.getElementById('page-title-input').value || 'my-page')
         .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-      const json = JSON.stringify(buildConfig(), null, 2);
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(buildConfig(), null, 2)], { type: 'application/json' }));
       a.download = `${slug}.json`;
       a.click();
+    }
+
+    function previewPage() {
+      sessionStorage.setItem('creator-preview', JSON.stringify(buildConfig()));
+      window.open('/pages/template.html?page=__preview', '_blank');
     }
 
     function importJSON() {
@@ -435,9 +947,10 @@
           try {
             const config = JSON.parse(ev.target.result);
             document.getElementById('page-title-input').value = config.pageTitle ?? '';
-            document.getElementById('scripts-input').value = (config.scripts ?? []).join('\n');
+            scripts = config.scripts ?? [];
             layout = (config.layout ?? []).map(d => ({ component: d.component, props: d.props ?? {} }));
             selected = -1;
+            renderScripts();
             render();
           } catch { alert('Invalid JSON file'); }
         };
@@ -450,11 +963,69 @@
       return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    // ─── Page title changes ────────────────────────────────────────────────────
-    document.getElementById('page-title-input').addEventListener('input', updateJSON);
+    // ─── Icon picker ──────────────────────────────────────────────────────────────
+    function openIconPicker(type, key, idx, field) {
+      _pickerState = { type, key, idx, field };
+      const el = document.getElementById('icon-picker');
+      el.style.display = 'flex';
+      const search = document.getElementById('icon-search');
+      search.value = '';
+      search.focus();
+      filterIcons('');
+    }
+
+    function closeIconPicker() {
+      const el = document.getElementById('icon-picker');
+      if (el) el.style.display = 'none';
+      _pickerState = null;
+    }
+
+    function selectIcon(iconName) {
+      if (!_pickerState) return;
+      const { type, key, idx, field } = _pickerState;
+      if (type === 'prop') {
+        setProp(key, iconName);
+        const input = document.getElementById(`icon-inp-${key}`);
+        if (input) input.value = iconName;
+        const prev = document.getElementById(`icon-prev-${key}`);
+        if (prev) prev.className = `fas fa-${iconName} fa-fw text-xl text-gray-600 flex-shrink-0 w-8 text-center`;
+      } else if (type === 'field') {
+        setField(key, idx, field, iconName);
+        const input = document.getElementById(`icon-inp-${key}-${idx}`);
+        if (input) input.value = iconName;
+        const prev = document.getElementById(`icon-prev-${key}-${idx}`);
+        if (prev) prev.className = `fas fa-${iconName} fa-fw text-sm text-gray-400 flex-shrink-0 w-5 text-center`;
+      }
+      closeIconPicker();
+    }
+
+    function filterIcons(query) {
+      const grid = document.getElementById('icon-grid');
+      if (!grid) return;
+      const q = query.toLowerCase().trim();
+      const filtered = q ? ICONS.filter(n => n.includes(q)) : ICONS;
+      grid.innerHTML = '';
+      filtered.slice(0, 70).forEach(name => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.title = name;
+        btn.style.cssText = 'display:flex;flex-direction:column;align-items:center;padding:4px 2px;border-radius:4px;border:0;background:transparent;cursor:pointer;color:#6b7280';
+        btn.innerHTML = `<i class="fas fa-${name} fa-fw" style="font-size:14px"></i><span style="font-size:9px;line-height:1.3;max-width:38px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px">${name}</span>`;
+        btn.onmouseenter = () => { btn.style.background = '#eff6ff'; btn.style.color = '#2563eb'; };
+        btn.onmouseleave = () => { btn.style.background = 'transparent'; btn.style.color = '#6b7280'; };
+        btn.addEventListener('click', () => selectIcon(name));
+        grid.appendChild(btn);
+      });
+      if (!filtered.length) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#9ca3af;font-size:.75rem;padding:16px">No icons found</p>';
+      }
+    }
 
     // ─── Init ──────────────────────────────────────────────────────────────────
+    document.getElementById('page-title-input').addEventListener('input', updateJSON);
+    document.getElementById('custom-script-url').addEventListener('keydown', e => { if (e.key === 'Enter') addCustomScript(); });
     buildPalette();
+    renderScripts();
     updateJSON();
   </script>
 </body>

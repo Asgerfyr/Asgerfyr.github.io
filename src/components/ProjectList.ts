@@ -10,6 +10,7 @@ interface ProjectData {
   category: string[];
   date: string;
   link: string;
+  pageKey?: string;  // set when the project has a component-based page
 }
 
 export const ProjectList = {
@@ -187,7 +188,9 @@ export const ProjectList = {
     actions.style.cssText = 'display:flex;gap:0.75rem;flex-wrap:wrap';
 
     const viewBtn = document.createElement('a');
-    viewBtn.href = `/pages/template.html?page=project&project=${encodeURIComponent(project.link)}`;
+    viewBtn.href = project.pageKey
+      ? `/pages/template.html?page=${project.pageKey}`
+      : `/pages/template.html?page=project&project=${encodeURIComponent(project.link)}`;
     viewBtn.style.cssText = 'background:#3b82f6;color:white;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:500;font-size:0.875rem';
     viewBtn.textContent = 'View Full Project →';
 

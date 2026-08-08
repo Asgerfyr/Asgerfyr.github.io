@@ -1,0 +1,90 @@
+{
+  "pageTitle": "Portfolio Website Documentation",
+  "scripts": ["/js/common/smooth-sctolling-links.js"],
+  "layout": [
+    { "component": "ProjectHeader", "props": { "title": "Portfolio Website" } },
+    {
+      "component": "ProjectOverview",
+      "props": {
+        "description": "Et moderne portfolio website til præsentation af projekter, færdigheder og kontaktinformation. Siden er bygget med fokus på skalerbarhed, brugervenlighed og et elegant, responsivt design.",
+        "objectives": [
+          "Præsentere projekter og tekniske kompetencer på en overskuelig måde",
+          "Sikre nem navigation og hurtig adgang til information",
+          "Muliggøre nem udvidelse og vedligeholdelse af indholdet"
+        ],
+        "features": [
+          { "icon": "ui",          "title": "Responsivt Design",             "description": "Siden tilpasser sig alle skærmstørrelser og enheder for optimal brugeroplevelse." },
+          { "icon": "gauge",       "title": "Hurtig Ydeevne",                "description": "Bygget med moderne frontend-teknologier for lynhurtig indlæsning og navigation." },
+          { "icon": "puzzle-piece","title": "Komponentbaseret Arkitektur",   "description": "Genanvendelige komponenter gør det let at udvide og vedligeholde websitet." },
+          { "icon": "user",        "title": "CV og Kontakt",                 "description": "Indeholder CV-download og kontaktformular for direkte henvendelser." }
+        ],
+        "images": [
+          { "url": "https://i.pinimg.com/736x/83/04/77/8304774632a374472f5f01fc73ddeab5.jpg", "alt": "Portfolio Website Screenshot", "caption": "Forsiden af portfolio websitet med projektoversigt og navigation." }
+        ]
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "code",
+        "title": "Teknologier og Arkitektur",
+        "content": {
+          "Teknologier og Arkitektur": [
+            { "type": "list", "content": ["TypeScript + esbuild (bundle)", "Tailwind CSS", "EmailJS (kontaktformular)", "Font Awesome (ikoner)", "p5.js (header animation)", "highlight.js (kodeblokke)"] },
+            { "type": "text", "content": "Projektet er bygget med et komponentbaseret design, hvilket gør det let at tilføje nye sektioner og projekter uden at ændre grundstrukturen. Sider defineres som JSON-konfigurationsfiler." }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "ui",
+        "title": "Design og Brugervenlighed",
+        "content": {
+          "Design og Brugervenlighed": [
+            { "type": "text", "content": "Designet er minimalistisk og let at navigere, med fokus på læsbarhed og hurtig adgang til information. Farvepaletten er rolig og professionel, og alle elementer er optimeret til både desktop og mobil." },
+            { "type": "checklist", "content": [
+              {"checked": true,  "text": "Responsivt layout"},
+              {"checked": true,  "text": "Letforståelig navigation"},
+              {"checked": true,  "text": "Hurtig adgang til projekter og kontakt"},
+              {"checked": true,  "text": "Tilgængelighed for alle brugere"}
+            ]}
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "plug",
+        "title": "Integrationer",
+        "content": {
+          "Integrationer": [{ "type": "list", "content": ["EmailJS til kontaktformular (direkte e-mail fra siden)", "CV-download som PDF via html2pdf.js", "Eksterne links til projekter og GitHub"] }]
+        }
+      }
+    },
+    {
+      "component": "ProjectConclusion",
+      "props": {
+        "results": "Portfolio websitet har gjort det let at præsentere projekter og kompetencer for potentielle arbejdsgivere og samarbejdspartnere. Siden er nem at udvide og vedligeholde, og brugervenligheden er i top.",
+        "learned": "Vigtigheden af komponentbaseret udvikling og at prioritere brugervenlighed og skalerbarhed fra starten.",
+        "improvements": [
+          "Tilføje blogsektion med artikler og guides",
+          "Implementere dark mode toggle",
+          "Flere sprogvalg (internationalisering)",
+          "Endnu flere animationer og microinteractions"
+        ]
+      }
+    },
+    {
+      "component": "ProjectInfo",
+      "props": {
+        "completion_date": "April 2025",
+        "team_size": 1,
+        "duration": "2 måneder",
+        "team_members": [{ "name": "Asger Grundtdal Stidsen", "role": "Fullstack Developer, Designer" }]
+      }
+    }
+  ]
+}

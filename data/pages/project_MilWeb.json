@@ -1,0 +1,151 @@
+{
+  "pageTitle": "MilWeb Documentation",
+  "scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js",
+    "/js/common/smooth-sctolling-links.js"
+  ],
+  "layout": [
+    { "component": "ProjectHeader", "props": { "title": "MilWeb" } },
+    {
+      "component": "ProjectOverview",
+      "props": {
+        "description": "MilWeb er et webbaseret informationssystem designet til militær brug. Projektet er udarbejdet som et afsluttende eksamensprojekt i 3.g informatik og kombinerer teknisk udvikling med praktisk anvendelse i en realistisk kontekst. Formålet er at give generaler et overblik over troppebevægelser og soldaternes status via en brugervenlig platform.",
+        "objectives": [
+          "Udvikle sikkert login med rollebaseret adgang",
+          "Visualisere troppepositioner i realtid med Leaflet.js",
+          "Beskytte data med AES- og SHA256-kryptering",
+          "Strukturere databasen med klare relationer",
+          "Skabe en enkel og brugervenlig grænseflade"
+        ],
+        "features": [
+          { "icon": "user-lock", "title": "Rollebaseret login og sikkerhed", "description": "Brugerne logger ind via en loginside, og deres adgang bestemmes af brugerrollen (soldat eller general)." },
+          { "icon": "map", "title": "Interaktivt kort (Leaflet.js)", "description": "Generalens interface viser et interaktivt kort, hvor troppernes positioner vises som farvede markører i realtid." },
+          { "icon": "lock", "title": "Sikkerhed og kryptering", "description": "Adgangskoder hashes med SHA256, og data i databasen krypteres med AES. HTTPS sikrer kommunikationen." },
+          { "icon": "wifi", "title": "Realtidskommunikation", "description": "Systemet bruger fetch API'er til at sende og hente data mellem frontend og backend dynamisk." },
+          { "icon": "puzzle-piece", "title": "Session og adgangskontrol", "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan tilgå bestemte sider." }
+        ],
+        "images": [
+          { "url": "https://i.pinimg.com/736x/c1/0c/ca/c10ccabf808683e2e2c8dcc1927b93d1.jpg", "alt": "Login side", "caption": "Login side med rollebaseret adgang" },
+          { "url": "https://i.pinimg.com/736x/9f/ab/96/9fab9693c09373298cbb7123a704aba4.jpg", "alt": "General side med kort", "caption": "General side med kort og troppepositioner" },
+          { "url": "https://i.pinimg.com/736x/77/e7/4a/77e74a280c91e09dfb2939efa0fa9dbb.jpg", "alt": "Troop Info Side", "caption": "Siden hvor generaler kan læse informationer om gemt data" },
+          { "url": "https://i.pinimg.com/736x/1b/c2/51/1bc2511f66a130a9f6cee8fdd0a3837a.jpg", "alt": "Data Transmission Interface", "caption": "Interface til afsendelse af data fra generalen" }
+        ]
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "circuit",
+        "title": "System Architecture",
+        "content": {
+          "Frontend": [{ "type": "text", "content": "Udviklet i HTML, CSS og JavaScript. Kortet er lavet med Leaflet.js, og designet bygger på gestaltlovene for at sikre brugervenlighed. Soldatsiden er optimeret til mobilbrug, mens generalsiden er lavet til desktopbrug." }],
+          "Backend": [{ "type": "text", "content": "Udviklet i Node.js med Express. Serveren bruger moduler og routers til at organisere forskellige endpoints, og anvender sessions for at huske login-status." }],
+          "Database": [{ "type": "text", "content": "MySQL anvendes til at gemme bruger- og missionsdata. Databasen indeholder relationelle tabeller for soldater, squads, missioner, advarsler og kommandoer. De fleste felter er krypteret med AES." }],
+          "Database Model": [
+            { "type": "text", "content": "Database-designet er lavet ud fra en E/R-model. Blandt tabellerne findes:" },
+            { "type": "list", "content": ["login: gemmer login-id, kodeord og salt", "soldier: indeholder status, navn og rettigheder", "squad: organiserer soldater i grupper med statusinformation", "mission: gemmer missioner og deres tilhørende squads", "warning og command: gemmer kritiske informationer"] },
+            { "type": "text", "content": "Positioner lagres i squad_location og knyttes til squads over tid. Dette muliggør historisk sporing." }
+          ]
+        },
+        "images": { "image_elements": [
+          { "url": "https://i.pinimg.com/736x/39/a0/c8/39a0c8260258cecbc5ea01a029b39471.jpg", "alt": "Sideflow af MilWeb", "caption": "Sideflow af MilWeb, der viser forskellige sider afhængig af login rolle" },
+          { "url": "https://i.pinimg.com/736x/87/2a/c6/872ac63dced2ecc66b35f4a61895a630.jpg", "alt": "ER-diagram af MilWeb-databasen", "caption": "ER-diagram af MilWeb-databasen" }
+        ]}
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "ui",
+        "title": "UI Design",
+        "content": {
+          "null": [{ "type": "text", "content": "Brugerfladen i MilWeb er designet med fokus på enkelhed, funktionalitet og tydelig rolleopdeling. Der er udviklet to adskilte grænseflader - én til soldater og én til generaler." }],
+          "Designprincipper": [
+            { "type": "text", "content": "Brugergrænsefladen bygger på centrale gestaltlove for at sikre overskuelighed og brugervenlighed:" },
+            { "type": "list", "content": ["Figur/baggrund: Vigtige elementer skiller sig tydeligt ud fra baggrunden.", "Nærhed: Relaterede elementer er placeret tæt sammen.", "Lighed: Elementer med samme funktion har ens udseende.", "Lukkethed: Formularer og funktioner er visuelt grupperet.", "Responsivitet: Layout tilpasser sig brugerens enhed."] }
+          ],
+          "Generalens interface": [
+            { "type": "text", "content": "Generalsiden er designet til større skærme og har et informationsrigt layout." },
+            { "type": "list", "content": ["Kort (Leaflet.js): Viser squads som farvede cirkler med popups.", "Tabelvisning: Viser squads med status, position og ID.", "Navigation: En topbar med links til kort, missioner og advarsler.", "Filtrering: Brugeren kan skjule visse typer data."] }
+          ],
+          "Soldatens interface": [
+            { "type": "text", "content": "Soldatsiden er enkel og mobiloptimeret." },
+            { "type": "list", "content": ["Inputfelter: ID, latitude, longitude og evt. status.", "Send-knap: Afsender data til databasen via POST-request.", "Minimal navigation: Kun én funktion pr. side.", "Visuel enkelhed: Ingen overflødig grafik eller menuer."] }
+          ]
+        },
+        "images": { "image_title": "& Skitser", "image_elements": [
+          { "url": "https://i.pinimg.com/736x/09/c0/82/09c082bd5378d84f13dd11ebe59107f8.jpg", "alt": "Skitse af MilWeb login side", "caption": "En håndskitse af login siden" },
+          { "url": "https://i.pinimg.com/736x/7a/7d/f4/7a7df4bf7fee76a6eeb2e52939bbf9a0.jpg", "alt": "Skitse af general map side", "caption": "En håndskitse af general map siden uden filter" },
+          { "url": "https://i.pinimg.com/736x/09/03/fe/0903feea76c69b22d9f744ce4b932d1f.jpg", "alt": "General map side med filter", "caption": "En håndskitse af general map siden med filter" },
+          { "url": "https://i.pinimg.com/736x/fe/d0/5c/fed05cd2bf524ca18bd71792c79e38e4.jpg", "alt": "Skitse af soldat side", "caption": "En håndskitse af soldat siden med data-indtastning" }
+        ]}
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "code",
+        "title": "Code",
+        "content": {
+          "null": [{ "type": "text", "content": "Koden er opdelt i moduler for at sikre overblik, genbrug og skalerbarhed. Backend er opbygget med Express.js og anvender både routers, middleware og controller-funktioner." }],
+          "Modulstruktur": [{ "type": "list", "content": ["Routers: Hver funktion har sin egen routerfil, som modtager GET og POST-requests.", "Middleware: En central komponent der håndterer autentifikation og rettighedstjek.", "Controllers: Funktioner som tilgår databasen og håndterer forretningslogik.", "Database-connector: Et modul, der laver forbindelse til MySQL-databasen."] }],
+          "Rettighedskontrol med middleware": [
+            { "type": "text", "content": "Middleware-funktionen sikrer, at brugeren er logget ind og har de nødvendige rettigheder til at tilgå en rute." },
+            { "type": "code", "language": "js", "content": "app.use((req, res, next) => {\n  if (!req.session.user) return res.status(403).send(\"Ikke logget ind\");\n  const roles = sitePermission(req.url);\n  if (!roles.includes(req.session.user.role)) return res.status(403).send(\"Ingen adgang\");\n  next();\n});" }
+          ],
+          "Eksempel: GET-request": [
+            { "type": "code", "language": "js", "content": "fetch(\"/general/get_data\")\n  .then(res => res.json())\n  .then(data => console.log(data));" },
+            { "type": "code", "language": "js", "content": "router.get(\"/get_data\", async (req, res) => {\n  const [rows] = await db.query(\"SELECT * FROM squads\");\n  res.json(rows);\n});" }
+          ],
+          "Eksempel: POST-request": [
+            { "type": "code", "language": "js", "content": "fetch(\"/mission/send\", {\n  method: \"POST\",\n  headers: {\"Content-Type\": \"application/json\"},\n  body: JSON.stringify({ name: \"Alpha\", info: \"Angreb øst\" })\n});" },
+            { "type": "code", "language": "js", "content": "router.post(\"/send\", async (req, res) => {\n  const { name, info } = req.body;\n  await db.query(\"INSERT INTO mission (name, description) VALUES (?, ?)\", [name, info]);\n  res.sendStatus(200);\n});" }
+          ]
+        },
+        "images": { "image_title": "Snippits", "image_elements": [
+          { "url": "https://i.pinimg.com/736x/e1/20/41/e12041a0c587c04683265cec428bfcc9.jpg", "alt": "authentication function", "caption": "This function ensures user authentication and authorization." },
+          { "url": "https://i.pinimg.com/736x/be/ba/69/beba6960f62ea69e4e7097417039d3ae.jpg", "alt": "Kode til rettighedsniveau", "caption": "Kode til at hente brugerens rettighedsniveau fra databasen" }
+        ]}
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "test",
+        "title": "Testing-Evaluation",
+        "content": {
+          "null": [{ "type": "text", "content": "Systemet blev testet løbende gennem udviklingsfasen og afslutningsvis evalueret gennem brugertests med fiktive scenarier for soldat og general." }],
+          "Testresultater": [{ "type": "table", "content": { "headers": ["Funktion","Resultat","Kommentar"], "rows": [["Login (begge roller)","✔️","Let at forstå, fungerede stabilt"],["Position-afsendelse (soldat)","✔️","Hurtigt og simpelt"],["Kortvisning (general)","⚠️","Let at bruge, men overlappende markører skabte forvirring"],["Mission-afsendelse","⚠️","Funktionel, men krævede meget manuel indtastning"],["Navigation mellem sider","⚠️","Forvirrende at finde samme squad på tværs af sider"],["Responsivitet","✔️","Soldatsiden fungerede godt på mobil, generalsiden på desktop"]] } }],
+          "Identificerede forbedringspunkter": [{ "type": "list", "content": ["Markørstyring på kort: Bedre håndtering og filtrering af overlappende positioner.", "Brugerflow: Funktion til at følge en specifik squad på tværs af sider.", "Forminput: Drop-downs eller preutfyldte felter kunne erstatte manuel indtastning.", "Mission-overblik for soldat: Mangler mulighed for at se tildelte missioner."] }]
+        }
+      }
+    },
+    {
+      "component": "ProjectConclusion",
+      "props": {
+        "results": "MilWeb fungerer som et rollebaseret, sikkert og brugervenligt system til militær koordinering. Systemet opfylder de vigtigste krav, herunder sikker login, visualisering af troppebevægelser og datakryptering.",
+        "learned": "Vi lærte, at små sikkerhedshuller som URL-manipulation og manglende brugeroverblik kan give utilsigtet adgang og dårlig brugeroplevelse. Fremover vil vi prioritere grundigere test af adgangskontrol og bedre brugerflow.",
+        "improvements": [
+          "Forbedret markørstyring og filtrering på kortet",
+          "Mulighed for soldater at se egne missioner og opgaver",
+          "Bedre brugerflow mellem generalens sider",
+          "Bedre validering af URL'er mod sårbarheder",
+          "Udbygning af database med historik og flere relationer"
+        ]
+      }
+    },
+    {
+      "component": "ProjectInfo",
+      "props": {
+        "completion_date": "1. Maj 2025",
+        "team_size": 3,
+        "duration": "3 uge",
+        "team_members": [
+          { "name": "Asger Grundtdal Stidsen", "role": "Main backend dev and minor frontend" },
+          { "name": "Noah Oscar Telling Cadieux", "role": "Main Frontend Dev, UI designer and tester", "link": "https://github.com/Katz2293" },
+          { "name": "Bastian Casper Willmarst Bonnesen", "role": "Backend dev, designer og test administrator" }
+        ]
+      }
+    }
+  ]
+}

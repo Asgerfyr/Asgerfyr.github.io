@@ -63,6 +63,12 @@
       });
     }
     static async loadConfig(path) {
+      if (path.includes("__preview")) {
+        const stored = sessionStorage.getItem("creator-preview");
+        if (!stored)
+          throw new Error("No preview data \u2014 open from the Page Creator");
+        return JSON.parse(stored);
+      }
       const response = await fetch(path);
       if (!response.ok)
         throw new Error(`Failed to load config: ${path}`);
@@ -225,10 +231,6 @@
           About <span class="text-blue-600">Me</span>
         </h2>
         <div class="flex flex-col gap-12 items-center">
-          <div class="rounded-lg overflow-hidden shadow-xl" id="about-image">
-            <img src="https://lh3.googleusercontent.com/pw/AP1GczOJb3pnzFFkb7Q1KbAmq4SPZIjbsEGxuie2m5pBoePLfhLNr2_PJJEd3KiglNymEqL4daZuYnr8_5ETdOKFQ58dVPONeV9slgA-jU1xRnrB6oWPmxu9LvKe3cU_nkPPS-if7xu7oWkcFvMmQJXMp6hu=w759-h1074-s-no-gm?authuser=0"
-              alt="About Me" class="w-full object-cover" />
-          </div>
           <div class="js-tryper-container">
             <p class="js-tryper" style="display: inline" id="quotes-typewriter"></p>
             <div class="js-curser" id="quotes-curser" style="display: inline"></div>
@@ -254,7 +256,7 @@
               </div>
               <div>
                 <p class="font-medium"><span class="text-blue-600">From:</span> Hadsten, Denmark</p>
-                <p class="font-medium"><span class="text-blue-600">Freelance:</span> Available</p>
+                <p class="font-medium"><span class="text-blue-600">Currently:</span> Employed</p>
               </div>
             </div>
             <div class="mt-8 flex flex-wrap gap-x-8 gap-y-6">
@@ -432,7 +434,7 @@
       const actions = document.createElement("div");
       actions.style.cssText = "display:flex;gap:0.75rem;flex-wrap:wrap";
       const viewBtn = document.createElement("a");
-      viewBtn.href = `/pages/template.html?page=project&project=${encodeURIComponent(project.link)}`;
+      viewBtn.href = project.pageKey ? `/pages/template.html?page=${project.pageKey}` : `/pages/template.html?page=project&project=${encodeURIComponent(project.link)}`;
       viewBtn.style.cssText = "background:#3b82f6;color:white;padding:0.625rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:500;font-size:0.875rem";
       viewBtn.textContent = "View Full Project \u2192";
       actions.appendChild(viewBtn);
@@ -460,385 +462,6 @@
       modal.appendChild(closeBtn);
       overlay.appendChild(modal);
       document.body.appendChild(overlay);
-    }
-  };
-
-  // src/components/ProjectDetail.ts
-  var ProjectDetail = {
-    async render(_props) {
-      const wrapper = document.createElement("div");
-      const key = new URLSearchParams(window.location.search).get("project");
-      if (!key || key === "404") {
-        wrapper.innerHTML = `<div class="p-16 text-center"><p class="text-red-600 text-xl mb-4">Project not found</p><a href="/" class="text-blue-500">\u2190 Go home</a></div>`;
-        return wrapper;
-      }
-      if (!document.querySelector('link[href="/css/project/style.css"]')) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "/css/project/style.css";
-        document.head.appendChild(link);
-      }
-      try {
-        const [data, icons] = await Promise.all([
-          fetch(`/data/projects/${key.split(" ").join("_")}.json`).then((r) => {
-            if (!r.ok)
-              throw new Error(`Project not found: ${key}`);
-            return r.json();
-          }),
-          fetch("/data/utility/project_icons.json").then((r) => r.json())
-        ]);
-        document.title = `${key} Documentation`;
-        const showcase = this.createShowcase();
-        wrapper.appendChild(showcase);
-        wrapper.appendChild(this.renderHeader(key));
-        const main = document.createElement("main");
-        main.className = "container mx-auto px-6 py-8";
-        wrapper.appendChild(main);
-        const quickLinks = document.createElement("ul");
-        quickLinks.className = "space-y-2";
-        quickLinks.innerHTML = '<li><a href="#overview" class="quick-link">Overview</a></li>';
-        const navLinks = wrapper.querySelector("#nav-links");
-        main.appendChild(this.renderOverview(data.overview, icons));
-        if (data.sections?.length) {
-          const sectionsEl = document.createElement("div");
-          sectionsEl.id = "main-sections";
-          main.appendChild(sectionsEl);
-          data.sections.forEach((s) => {
-            try {
-              sectionsEl.appendChild(this.renderSection(s, icons, navLinks, quickLinks));
-            } catch (e) {
-              console.error(`Section error: ${s.title}`, e);
-            }
-          });
-        }
-        if (data.conclusion)
-          main.appendChild(this.renderConclusion(data.conclusion));
-        wrapper.appendChild(this.renderFooter(data.info, quickLinks));
-        requestAnimationFrame(() => {
-          const hljs = window["hljs"];
-          if (typeof hljs?.["highlightAll"] === "function")
-            hljs["highlightAll"]();
-        });
-      } catch (e) {
-        console.error("ProjectDetail error:", e);
-        wrapper.innerHTML = `<div class="p-16 text-center"><p class="text-red-600 text-xl mb-4">Failed to load project "${key}"</p><a href="/" class="text-blue-500">\u2190 Go home</a></div>`;
-      }
-      return wrapper;
-    },
-    createShowcase() {
-      const el = document.createElement("div");
-      el.id = "image_showcase_container";
-      el.className = "invis fixed inset-0 z-50 flex items-center justify-center p-4 cursor-pointer";
-      el.style.backgroundColor = "rgba(0,0,0,0.8)";
-      el.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323" />';
-      el.addEventListener("click", () => el.classList.toggle("invis"));
-      return el;
-    },
-    renderHeader(key) {
-      const header = document.createElement("div");
-      header.className = "bg-white shadow-md sticky top-0 z-40";
-      header.innerHTML = `
-      <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fa-solid fa-house"></i></a>
-      <div class="container mx-auto px-6 pl-9 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center">
-            <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
-            <h1 class="text-2xl font-bold text-gray-800">${key} Documentation</h1>
-          </div>
-          <div id="nav-links" class="hidden md:flex">
-            <a href="#overview" class="nav-link">Overview</a>
-            <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
-          </div>
-        </div>
-      </div>
-    `;
-      return header;
-    },
-    renderOverview(overview, icons) {
-      const section = document.createElement("div");
-      section.id = "overview";
-      section.className = "section-anchor mb-16";
-      const card = document.createElement("div");
-      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
-      card.innerHTML = `
-      <div class="flex items-center mb-6">
-        <i class="fas fa-info-circle text-blue-500 text-2xl mr-3"></i>
-        <h2 class="text-xl font-bold">Project Overview</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Project Description</h3>
-          <p class="text-gray-600 mb-6">${overview.description ?? ""}</p>
-          <h3 class="text-xl font-semibold mb-4">Objectives</h3>
-          <ul class="list-disc pl-6 space-y-2 text-gray-600">
-            ${(overview.objectives ?? []).map((o) => `<li>${o}</li>`).join("")}
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Key Features</h3>
-          <div class="space-y-4">
-            ${(overview.features ?? []).map((f) => {
-        const ic = icons[f.icon] ?? icons["missingIcon"];
-        return `
-                <div class="flex items-start">
-                  <div class="bg-${ic.color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
-                    <i class="fas fa-${ic.name} text-${ic.color}-500"></i>
-                  </div>
-                  <div><h4 class="font-medium">${f.title}</h4><p class="text-sm text-gray-500">${f.description}</p></div>
-                </div>`;
-      }).join("")}
-          </div>
-        </div>
-      </div>
-    `;
-      section.appendChild(card);
-      if (overview.images?.length) {
-        const imgCard = document.createElement("div");
-        imgCard.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
-        imgCard.innerHTML = `
-        <h3 class="text-xl font-semibold mb-6 flex items-center">
-          <i class="fas fa-images text-blue-500 mr-3"></i>Project Images
-        </h3>
-        <div class="image-gallery">
-          ${overview.images.map((img) => `
-            <div class="image-card cursor-pointer" onclick="var s=document.getElementById('image_showcase');s.src='${img.url}';s.alt='${img.alt}';document.getElementById('image_showcase_container').classList.remove('invis')">
-              <img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" />
-              <p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>
-            </div>`).join("")}
-        </div>
-      `;
-        section.appendChild(imgCard);
-      }
-      return section;
-    },
-    renderSection(s, icons, navLinks, quickLinks) {
-      const id = "_" + s.title.split(" ").join("_");
-      const container = document.createElement("div");
-      container.className = "section-anchor mb-16";
-      container.id = id;
-      const navLink = document.createElement("a");
-      navLink.className = "nav-link";
-      navLink.textContent = s.title;
-      navLink.href = `#${id}`;
-      const conclusionLink = navLinks.querySelector("#conclusion-link");
-      if (conclusionLink)
-        navLinks.insertBefore(navLink, conclusionLink);
-      const li = document.createElement("li");
-      const ql = document.createElement("a");
-      ql.className = "quick-link";
-      ql.textContent = s.title;
-      ql.href = `#${id}`;
-      li.appendChild(ql);
-      quickLinks.appendChild(li);
-      const iconObj = icons[s.icon] ?? icons["missingIcon"];
-      const card = document.createElement("div");
-      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
-      card.innerHTML = `
-      <div class="flex items-center mb-6">
-        <i class="fas fa-${iconObj.name} text-blue-500 text-2xl mr-3"></i>
-        <h2 class="text-2xl font-bold">${s.title} Documentation</h2>
-      </div>
-    `;
-      const grid = document.createElement("div");
-      grid.className = "section-grid-container";
-      Object.entries(s.content).forEach(([key, subs]) => {
-        grid.appendChild(this.renderSubSection(key, subs));
-      });
-      card.appendChild(grid);
-      container.appendChild(card);
-      if (s.images?.image_elements?.length) {
-        container.appendChild(this.renderImageGallery(`${s.title} ${s.images.image_title ?? "Images"}`, s.images.image_elements));
-      }
-      return container;
-    },
-    renderSubSection(key, items) {
-      const div = document.createElement("div");
-      const h3 = document.createElement("h3");
-      h3.className = "text-xl font-bold mb-4";
-      h3.innerHTML = key.toLowerCase() === "null" ? "" : key;
-      div.appendChild(h3);
-      items.forEach((item) => {
-        try {
-          div.appendChild(this.renderSubItem(item));
-        } catch (e) {
-          console.error(`SubItem render error (${item.type}):`, e);
-        }
-      });
-      return div;
-    },
-    renderSubItem(item) {
-      switch (item.type) {
-        case "text": {
-          const p = document.createElement("p");
-          p.className = "text-gray-600 mb-4";
-          p.innerHTML = item.content;
-          return p;
-        }
-        case "code": {
-          const wrap = document.createElement("div");
-          wrap.className = "bg-gray-800 text-white rounded-lg p-2 text-sm mb-4";
-          const pre = document.createElement("pre");
-          const code = document.createElement("code");
-          if (item.language)
-            code.className = `language-${item.language}`;
-          code.innerHTML = item.content;
-          pre.appendChild(code);
-          wrap.appendChild(pre);
-          return wrap;
-        }
-        case "list": {
-          const ul = document.createElement("ul");
-          ul.className = "list-disc pl-6 space-y-2 text-gray-600 mb-4";
-          item.content.forEach((t) => {
-            const li = document.createElement("li");
-            li.innerHTML = t;
-            ul.appendChild(li);
-          });
-          return ul;
-        }
-        case "checklist": {
-          const wrap = document.createElement("div");
-          wrap.className = "bg-gray-100 rounded-lg p-4 mb-4";
-          const ul = document.createElement("ul");
-          ul.className = "space-y-2";
-          item.content.forEach(({ checked, text }) => {
-            const li = document.createElement("li");
-            li.className = "flex items-center";
-            li.innerHTML = `<i class="fas fa-${checked ? "check-circle text-green" : "times-circle text-red"}-500 mr-2"></i><span>${text}</span>`;
-            ul.appendChild(li);
-          });
-          wrap.appendChild(ul);
-          return wrap;
-        }
-        case "table": {
-          const { headers, rows } = item.content;
-          const wrap = document.createElement("div");
-          wrap.className = "table-overflow bg-gray-100 rounded-lg p-4 mb-4";
-          const table = document.createElement("table");
-          table.className = "w-full";
-          const thead = document.createElement("thead");
-          const tr = document.createElement("tr");
-          tr.className = "border-b";
-          headers.forEach((h) => {
-            const th = document.createElement("th");
-            th.className = "text-left py-2 px-2";
-            th.innerHTML = h;
-            tr.appendChild(th);
-          });
-          thead.appendChild(tr);
-          table.appendChild(thead);
-          const tbody = document.createElement("tbody");
-          rows.forEach((row, i) => {
-            const tr2 = document.createElement("tr");
-            if (i < rows.length - 1)
-              tr2.className = "border-b";
-            row.forEach((cell) => {
-              const td = document.createElement("td");
-              td.className = "py-2 px-2 text-sm";
-              td.innerHTML = cell;
-              tr2.appendChild(td);
-            });
-            tbody.appendChild(tr2);
-          });
-          table.appendChild(tbody);
-          wrap.appendChild(table);
-          return wrap;
-        }
-        default: {
-          const p = document.createElement("p");
-          p.className = "text-gray-400 text-sm mb-4";
-          p.textContent = `[Unknown type: ${item.type}]`;
-          return p;
-        }
-      }
-    },
-    renderImageGallery(heading, images) {
-      const card = document.createElement("div");
-      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
-      card.innerHTML = `
-      <h3 class="text-xl font-semibold mb-6 flex items-center">
-        <i class="fas fa-images text-blue-500 mr-3"></i>${heading}
-      </h3>
-      <div class="image-gallery">
-        ${images.map((img) => `
-          <div class="image-card cursor-pointer" onclick="var s=document.getElementById('image_showcase');s.src='${img.url}';s.alt='${img.alt}';document.getElementById('image_showcase_container').classList.remove('invis')">
-            <img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" />
-            <p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>
-          </div>`).join("")}
-      </div>
-    `;
-      return card;
-    },
-    renderConclusion(c) {
-      const section = document.createElement("div");
-      section.id = "conclusion";
-      section.className = "section-anchor";
-      const card = document.createElement("div");
-      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
-      card.innerHTML = `
-      <div class="flex items-center mb-6">
-        <i class="fas fa-flag-checkered text-blue-500 text-2xl mr-3"></i>
-        <h2 class="text-2xl font-bold">Project Conclusion</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Results</h3>
-          <p class="text-gray-600 mb-4">${c.results ?? ""}</p>
-        </div>
-        <div>
-          ${c.learned ? `
-            <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
-            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
-              <i class="fas fa-lightbulb text-yellow-400 mt-1 flex-shrink-0"></i>
-              <p class="text-sm text-yellow-700">${c.learned}</p>
-            </div>` : ""}
-          ${c.improvements?.length ? `
-            <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
-            <ul class="list-disc pl-6 space-y-2 text-gray-600">
-              ${c.improvements.map((i) => `<li>${i}</li>`).join("")}
-            </ul>` : ""}
-        </div>
-      </div>
-    `;
-      section.appendChild(card);
-      return section;
-    },
-    renderFooter(info, quickLinks) {
-      const footer = document.createElement("div");
-      footer.className = "bg-gray-800 text-white py-8 mt-12";
-      const inner = document.createElement("div");
-      inner.className = "container mx-auto px-6";
-      const grid = document.createElement("div");
-      grid.className = "grid md:grid-cols-3 gap-8";
-      const col1 = document.createElement("div");
-      col1.innerHTML = `<h3 class="text-lg font-semibold mb-4">Project Documentation</h3><p class="text-gray-400">Comprehensive report covering all aspects of the project development.</p>`;
-      const col2 = document.createElement("div");
-      col2.innerHTML = '<h3 class="text-lg font-semibold mb-4">Quick Links</h3>';
-      col2.appendChild(quickLinks);
-      const col3 = document.createElement("div");
-      col3.innerHTML = `
-      <h3 class="text-lg font-semibold mb-4">Project Info</h3>
-      <ul class="text-gray-400 space-y-2">
-        <li class="flex items-center"><i class="fas fa-calendar-alt mr-2"></i><div><span class="block text-xs">Completion Date</span>${info.completion_date ?? "N/A"}</div></li>
-        <li class="flex items-center"><i class="fas fa-user mr-2"></i>Team: ${info.team_size ?? 1} ${(info.team_size ?? 1) === 1 ? "Member" : "Members"}</li>
-        <li class="flex items-center"><i class="fas fa-clock mr-2"></i>Duration: ${info.duration ?? "N/A"}</li>
-      </ul>
-      ${info.team_members?.length ? `
-        <h4 class="text-sm font-semibold mt-4 mb-2 text-gray-300">Team Members</h4>
-        <ul id="team-members" class="text-gray-400 text-sm space-y-1">
-          ${info.team_members.map((m) => `<li>${m.link ? `<a href="${m.link}" class="text-blue-400 hover:text-blue-300">${m.name}</a>` : m.name} \u2014 ${m.role}</li>`).join("")}
-        </ul>` : ""}
-    `;
-      grid.appendChild(col1);
-      grid.appendChild(col2);
-      grid.appendChild(col3);
-      inner.appendChild(grid);
-      const copy = document.createElement("div");
-      copy.className = "border-t border-gray-700 mt-8 pt-8 text-center text-gray-400";
-      copy.innerHTML = "<p>\xA9 2025 Asger Stidsen. Written content may not be copied or reused. Code and layout may be used with proper credit.</p>";
-      inner.appendChild(copy);
-      footer.appendChild(inner);
-      return footer;
     }
   };
 
@@ -1141,7 +764,8 @@
           sub_description: p["sub_description"] || "",
           date: p["date"] || "",
           topics: p["topics"] || [],
-          topicsSummery: p["topicsSummery"] || []
+          topicsSummery: p["topicsSummery"] || [],
+          pageKey: p["pageKey"] || void 0
         }));
         categories.clear();
         categories.set("All", projects.length);
@@ -1235,7 +859,7 @@
             </div>
             <div class="modal-footer">
               <div class="modal-actions">
-                <a href="/pages/template.html?page=project&project=${encodeURIComponent(p.link)}" class="btn btn-primary">View Full Project</a>
+                <a href="${p.pageKey ? `/pages/template.html?page=${p.pageKey}` : `/pages/template.html?page=project&project=${encodeURIComponent(p.link)}`}" class="btn btn-primary">View Full Project</a>
               </div>
             </div>
           </div>
@@ -1298,12 +922,373 @@
     }
   };
 
+  // src/components/ProjectHeader.ts
+  var ProjectHeader = {
+    render(props) {
+      const title = props.title ?? "Project";
+      document.title = `${title} Documentation`;
+      const div = document.createElement("div");
+      div.className = "bg-white shadow-md sticky top-0 z-40";
+      div.innerHTML = `
+      <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fa-solid fa-house"></i></a>
+      <div class="container mx-auto px-6 pl-9 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
+            <h1 class="text-2xl font-bold text-gray-800">${title} Documentation</h1>
+          </div>
+          <div id="nav-links" class="hidden md:flex">
+            <a href="#overview" class="nav-link">Overview</a>
+            <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
+          </div>
+        </div>
+      </div>
+    `;
+      return div;
+    }
+  };
+
+  // src/utils/project.ts
+  function ensureShowcase() {
+    if (document.getElementById("image_showcase_container"))
+      return;
+    const el = document.createElement("div");
+    el.id = "image_showcase_container";
+    el.className = "invis fixed inset-0 z-50 flex items-center justify-content p-4 cursor-pointer";
+    el.style.cssText = "background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center";
+    el.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323" />';
+    el.addEventListener("click", () => el.classList.toggle("invis"));
+    document.body.appendChild(el);
+  }
+  function openShowcase(url, alt) {
+    ensureShowcase();
+    const img = document.getElementById("image_showcase");
+    img.src = url;
+    img.alt = alt;
+    document.getElementById("image_showcase_container").classList.remove("invis");
+  }
+  function renderImageGallery(heading, images) {
+    ensureShowcase();
+    const card = document.createElement("div");
+    card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
+    const h3 = document.createElement("h3");
+    h3.className = "text-xl font-semibold mb-6 flex items-center";
+    h3.innerHTML = `<i class="fas fa-images text-blue-500 mr-3"></i>${heading}`;
+    card.appendChild(h3);
+    const gallery = document.createElement("div");
+    gallery.className = "image-gallery";
+    images.forEach((img) => {
+      const item = document.createElement("div");
+      item.className = "image-card cursor-pointer";
+      item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>`;
+      item.addEventListener("click", () => openShowcase(img.url, img.alt));
+      gallery.appendChild(item);
+    });
+    card.appendChild(gallery);
+    return card;
+  }
+  function renderSubItem(item) {
+    switch (item.type) {
+      case "text": {
+        const p = document.createElement("p");
+        p.className = "text-gray-600 mb-4";
+        p.innerHTML = item.content;
+        return p;
+      }
+      case "code": {
+        const wrap = document.createElement("div");
+        wrap.className = "bg-gray-800 text-white rounded-lg p-2 text-sm mb-4";
+        const pre = document.createElement("pre");
+        const code = document.createElement("code");
+        if (item.language)
+          code.className = `language-${item.language}`;
+        code.innerHTML = item.content;
+        pre.appendChild(code);
+        wrap.appendChild(pre);
+        return wrap;
+      }
+      case "list": {
+        const ul = document.createElement("ul");
+        ul.className = "list-disc pl-6 space-y-2 text-gray-600 mb-4";
+        item.content.forEach((t) => {
+          const li = document.createElement("li");
+          li.innerHTML = t;
+          ul.appendChild(li);
+        });
+        return ul;
+      }
+      case "checklist": {
+        const wrap = document.createElement("div");
+        wrap.className = "bg-gray-100 rounded-lg p-4 mb-4";
+        const ul = document.createElement("ul");
+        ul.className = "space-y-2";
+        item.content.forEach(({ checked, text }) => {
+          const li = document.createElement("li");
+          li.className = "flex items-center";
+          li.innerHTML = `<i class="fas fa-${checked ? "check-circle text-green" : "times-circle text-red"}-500 mr-2"></i><span>${text}</span>`;
+          ul.appendChild(li);
+        });
+        wrap.appendChild(ul);
+        return wrap;
+      }
+      case "table": {
+        const { headers, rows } = item.content;
+        const wrap = document.createElement("div");
+        wrap.className = "table-overflow bg-gray-100 rounded-lg p-4 mb-4";
+        const table = document.createElement("table");
+        table.className = "w-full";
+        const thead = document.createElement("thead");
+        const hrow = document.createElement("tr");
+        hrow.className = "border-b";
+        headers.forEach((h) => {
+          const th = document.createElement("th");
+          th.className = "text-left py-2 px-2";
+          th.innerHTML = h;
+          hrow.appendChild(th);
+        });
+        thead.appendChild(hrow);
+        table.appendChild(thead);
+        const tbody = document.createElement("tbody");
+        rows.forEach((row, i) => {
+          const tr = document.createElement("tr");
+          if (i < rows.length - 1)
+            tr.className = "border-b";
+          row.forEach((cell) => {
+            const td = document.createElement("td");
+            td.className = "py-2 px-2 text-sm";
+            td.innerHTML = cell;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        wrap.appendChild(table);
+        return wrap;
+      }
+      default: {
+        const p = document.createElement("p");
+        p.className = "text-gray-400 text-sm mb-2";
+        p.textContent = `[Unknown type: ${item.type}]`;
+        return p;
+      }
+    }
+  }
+  async function fetchIcons() {
+    const res = await fetch("/data/utility/project_icons.json");
+    return res.json();
+  }
+
+  // src/components/ProjectOverview.ts
+  var ProjectOverview = {
+    async render(props) {
+      const description = props.description ?? "";
+      const objectives = props.objectives ?? [];
+      const features = props.features ?? [];
+      const images = props.images ?? [];
+      const icons = features.length ? await fetchIcons() : {};
+      const wrapper = document.createElement("div");
+      wrapper.id = "overview";
+      wrapper.className = "section-anchor mb-16 container mx-auto px-6 pt-8";
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
+      card.innerHTML = `
+      <div class="flex items-center mb-6">
+        <i class="fas fa-info-circle text-blue-500 text-2xl mr-3"></i>
+        <h2 class="text-xl font-bold">Project Overview</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+          <p class="text-gray-600 mb-6">${description}</p>
+          <h3 class="text-xl font-semibold mb-4">Objectives</h3>
+          <ul class="list-disc pl-6 space-y-2 text-gray-600">
+            ${objectives.map((o) => `<li>${o}</li>`).join("")}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+          <div class="space-y-4">
+            ${features.map((f) => {
+        const ic = icons[f.icon] ?? icons["missingIcon"] ?? { name: "question", color: "gray" };
+        return `
+                <div class="flex items-start">
+                  <div class="bg-${ic.color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
+                    <i class="fas fa-${ic.name} text-${ic.color}-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">${f.title}</h4>
+                    <p class="text-sm text-gray-500">${f.description}</p>
+                  </div>
+                </div>`;
+      }).join("")}
+          </div>
+        </div>
+      </div>
+    `;
+      wrapper.appendChild(card);
+      if (images.length) {
+        ensureShowcase();
+        const imgCard = document.createElement("div");
+        imgCard.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
+        imgCard.innerHTML = `
+        <h3 class="text-xl font-semibold mb-6 flex items-center">
+          <i class="fas fa-images text-blue-500 mr-3"></i>Project Images
+        </h3>
+        <div class="image-gallery"></div>
+      `;
+        const gallery = imgCard.querySelector(".image-gallery");
+        images.forEach((img) => {
+          const item = document.createElement("div");
+          item.className = "image-card cursor-pointer";
+          item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>`;
+          item.addEventListener("click", () => openShowcase(img.url, img.alt));
+          gallery.appendChild(item);
+        });
+        wrapper.appendChild(imgCard);
+      }
+      return wrapper;
+    }
+  };
+
+  // src/components/ProjectSection.ts
+  var ProjectSection = {
+    async render(props) {
+      const icon = props.icon ?? "cube";
+      const title = props.title ?? "Section";
+      const content = props.content ?? {};
+      const images = props.images;
+      const icons = await fetchIcons();
+      const iconObj = icons[icon] ?? icons["missingIcon"] ?? { name: "cube", color: "blue" };
+      const id = "_" + title.split(" ").join("_");
+      const wrapper = document.createElement("div");
+      wrapper.className = "section-anchor mb-16 container mx-auto px-6";
+      wrapper.id = id;
+      requestAnimationFrame(() => {
+        const navLinks = document.getElementById("nav-links");
+        const conclusionLink = document.getElementById("conclusion-link");
+        if (navLinks && conclusionLink) {
+          const a = document.createElement("a");
+          a.className = "nav-link";
+          a.textContent = title;
+          a.href = `#${id}`;
+          navLinks.insertBefore(a, conclusionLink);
+        }
+      });
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
+      card.innerHTML = `
+      <div class="flex items-center mb-6">
+        <i class="fas fa-${iconObj.name} text-blue-500 text-2xl mr-3"></i>
+        <h2 class="text-2xl font-bold">${title} Documentation</h2>
+      </div>
+    `;
+      const grid = document.createElement("div");
+      grid.className = "section-grid-container";
+      Object.entries(content).forEach(([key, subs]) => {
+        const subDiv = document.createElement("div");
+        const h3 = document.createElement("h3");
+        h3.className = "text-xl font-bold mb-4";
+        h3.innerHTML = key.toLowerCase() === "null" ? "" : key;
+        subDiv.appendChild(h3);
+        subs.forEach((item) => {
+          try {
+            subDiv.appendChild(renderSubItem(item));
+          } catch (e) {
+            console.error(`ProjectSection render error (${item.type}):`, e);
+          }
+        });
+        grid.appendChild(subDiv);
+      });
+      card.appendChild(grid);
+      wrapper.appendChild(card);
+      if (images?.image_elements?.length) {
+        wrapper.appendChild(
+          renderImageGallery(`${title} ${images.image_title ?? "Images"}`, images.image_elements)
+        );
+      }
+      return wrapper;
+    }
+  };
+
+  // src/components/ProjectConclusion.ts
+  var ProjectConclusion = {
+    render(props) {
+      const results = props.results ?? "";
+      const learned = props.learned ?? "";
+      const improvements = props.improvements ?? [];
+      const wrapper = document.createElement("div");
+      wrapper.id = "conclusion";
+      wrapper.className = "section-anchor container mx-auto px-6 pb-8";
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
+      card.innerHTML = `
+      <div class="flex items-center mb-6">
+        <i class="fas fa-flag-checkered text-blue-500 text-2xl mr-3"></i>
+        <h2 class="text-2xl font-bold">Project Conclusion</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Results</h3>
+          <p class="text-gray-600 mb-4">${results}</p>
+        </div>
+        <div>
+          ${learned ? `
+            <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
+              <i class="fas fa-lightbulb text-yellow-400 mt-1 flex-shrink-0"></i>
+              <p class="text-sm text-yellow-700">${learned}</p>
+            </div>` : ""}
+          ${improvements.length ? `
+            <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
+            <ul class="list-disc pl-6 space-y-2 text-gray-600">
+              ${improvements.map((i) => `<li>${i}</li>`).join("")}
+            </ul>` : ""}
+        </div>
+      </div>
+    `;
+      wrapper.appendChild(card);
+      return wrapper;
+    }
+  };
+
+  // src/components/ProjectInfo.ts
+  var ProjectInfo = {
+    render(props) {
+      const date = props.completion_date ?? "";
+      const size = props.team_size ?? 1;
+      const members = props.team_members ?? [];
+      const dur = props.duration ?? "";
+      const wrapper = document.createElement("div");
+      wrapper.className = "container mx-auto px-6 pb-8";
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
+      card.innerHTML = `
+      <div class="flex items-center mb-6">
+        <i class="fas fa-info text-blue-500 text-2xl mr-3"></i>
+        <h2 class="text-2xl font-bold">Project Info</h2>
+      </div>
+      <div class="flex flex-wrap gap-8 text-gray-600">
+        ${date ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">${date}</p></div>` : ""}
+        ${dur ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">${dur}</p></div>` : ""}
+        <div>
+          <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+          <p class="font-medium">${size === 1 ? "Solo project" : `${size} members`}</p>
+          ${members.length ? `<ul class="mt-2 space-y-1 text-sm">
+            ${members.map((m) => `<li>${m.link ? `<a href="${m.link}" class="text-blue-500 hover:underline">${m.name}</a>` : m.name} \u2014 ${m.role}</li>`).join("")}
+          </ul>` : ""}
+        </div>
+      </div>
+    `;
+      wrapper.appendChild(card);
+      return wrapper;
+    }
+  };
+
   // src/app.ts
   ComponentRegistry.register("Header", Header);
   ComponentRegistry.register("Navigation", Navigation);
   ComponentRegistry.register("About", About);
   ComponentRegistry.register("ProjectList", ProjectList);
-  ComponentRegistry.register("ProjectDetail", ProjectDetail);
   ComponentRegistry.register("Skills", Skills);
   ComponentRegistry.register("Contact", Contact);
   ComponentRegistry.register("Footer", Footer);
@@ -1313,6 +1298,11 @@
   ComponentRegistry.register("CodeBlock", CodeBlock);
   ComponentRegistry.register("TypewriterText", TypewriterText);
   ComponentRegistry.register("ProjectViewer", ProjectViewer);
+  ComponentRegistry.register("ProjectHeader", ProjectHeader);
+  ComponentRegistry.register("ProjectOverview", ProjectOverview);
+  ComponentRegistry.register("ProjectSection", ProjectSection);
+  ComponentRegistry.register("ProjectConclusion", ProjectConclusion);
+  ComponentRegistry.register("ProjectInfo", ProjectInfo);
   var page = new URLSearchParams(window.location.search).get("page") ?? "home";
   PageBuilder.render(`/data/pages/${page}.json`);
 })();

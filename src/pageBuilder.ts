@@ -53,6 +53,11 @@ export class PageBuilder {
   }
 
   private static async loadConfig(path: string): Promise<PageConfig> {
+    if (path.includes('__preview')) {
+      const stored = sessionStorage.getItem('creator-preview');
+      if (!stored) throw new Error('No preview data — open from the Page Creator');
+      return JSON.parse(stored) as PageConfig;
+    }
     const response = await fetch(path);
     if (!response.ok) throw new Error(`Failed to load config: ${path}`);
     return response.json() as Promise<PageConfig>;

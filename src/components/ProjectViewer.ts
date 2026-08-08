@@ -2,6 +2,7 @@ interface Project {
   id: string; title: string; link: string; image: string;
   categories: string[]; description: string; sub_description: string;
   date: string; topics: string[]; topicsSummery: string[];
+  pageKey?: string;  // set when the project has a component-based page
 }
 
 export const ProjectViewer = {
@@ -64,6 +65,7 @@ export const ProjectViewer = {
         date: (p['date'] as string) || '',
         topics:       (p['topics']       as string[]) || [],
         topicsSummery:(p['topicsSummery'] as string[]) || [],
+        pageKey:      (p['pageKey']       as string) || undefined,
       }));
 
       categories.clear();
@@ -160,7 +162,7 @@ export const ProjectViewer = {
             </div>
             <div class="modal-footer">
               <div class="modal-actions">
-                <a href="/pages/template.html?page=project&project=${encodeURIComponent(p.link)}" class="btn btn-primary">View Full Project</a>
+                <a href="${p.pageKey ? `/pages/template.html?page=${p.pageKey}` : `/pages/template.html?page=project&project=${encodeURIComponent(p.link)}`}" class="btn btn-primary">View Full Project</a>
               </div>
             </div>
           </div>

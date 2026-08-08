@@ -9,7 +9,8 @@
   "topicsSummery": [],
   "category": [],
   "date": "",
-  "link": "Udokumenterede"
+  "link": "Udokumenterede",
+  "pageKey": "project_Udokumenterede"
 },
 
 "MilWeb": {
@@ -21,7 +22,8 @@
   "topicsSummery": ["Sikkerhed", "UI/UX", "Rollebaseret adgang", "Responsivt Design"],
   "category": ["Web", "Fullstack", "Backend", "Frontend", "Database", "Sikkerhed"],
   "date": "May 2025",
-  "link": "MilWeb"
+  "link": "MilWeb",
+  "pageKey": "project_MilWeb"
 },
 "BT_Sound_System":{"title": "BT Sound System",
     "image": "https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg",
@@ -31,7 +33,8 @@
     "topicsSummery": ["Hardware Design", "IoT", "DIY Electronics"],
     "category": ["IoT", "Embedded_System"],
     "date": "May 2025",
-    "link": "BT Sound System"
+    "link": "BT Sound System",
+    "pageKey": "project_BT_Sound_System"
 }
 
 }

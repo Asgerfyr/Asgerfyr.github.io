@@ -37,10 +37,6 @@ export const About = {
           About <span class="text-blue-600">Me</span>
         </h2>
         <div class="flex flex-col gap-12 items-center">
-          <div class="rounded-lg overflow-hidden shadow-xl" id="about-image">
-            <img src="https://lh3.googleusercontent.com/pw/AP1GczOJb3pnzFFkb7Q1KbAmq4SPZIjbsEGxuie2m5pBoePLfhLNr2_PJJEd3KiglNymEqL4daZuYnr8_5ETdOKFQ58dVPONeV9slgA-jU1xRnrB6oWPmxu9LvKe3cU_nkPPS-if7xu7oWkcFvMmQJXMp6hu=w759-h1074-s-no-gm?authuser=0"
-              alt="About Me" class="w-full object-cover" />
-          </div>
           <div class="js-tryper-container">
             <p class="js-tryper" style="display: inline" id="quotes-typewriter"></p>
             <div class="js-curser" id="quotes-curser" style="display: inline"></div>
@@ -66,7 +62,7 @@ export const About = {
               </div>
               <div>
                 <p class="font-medium"><span class="text-blue-600">From:</span> Hadsten, Denmark</p>
-                <p class="font-medium"><span class="text-blue-600">Freelance:</span> Available</p>
+                <p class="font-medium"><span class="text-blue-600">Currently:</span> Employed</p>
               </div>
             </div>
             <div class="mt-8 flex flex-wrap gap-x-8 gap-y-6">
