@@ -1,0 +1,34 @@
+import { ComponentRegistry } from './componentRegistry';
+import { PageBuilder } from './pageBuilder';
+import { Header } from './components/Header';
+import { Navigation } from './components/Navigation';
+import { About } from './components/About';
+import { ProjectList } from './components/ProjectList';
+import { ProjectDetail } from './components/ProjectDetail';
+import { Skills } from './components/Skills';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
+import { Html } from './components/Html';
+import { Section } from './components/Section';
+import { Grid } from './components/Grid';
+import { CodeBlock } from './components/CodeBlock';
+import { TypewriterText } from './components/TypewriterText';
+import { ProjectViewer } from './components/ProjectViewer';
+
+ComponentRegistry.register('Header', Header);
+ComponentRegistry.register('Navigation', Navigation);
+ComponentRegistry.register('About', About);
+ComponentRegistry.register('ProjectList', ProjectList);
+ComponentRegistry.register('ProjectDetail', ProjectDetail);
+ComponentRegistry.register('Skills', Skills);
+ComponentRegistry.register('Contact', Contact);
+ComponentRegistry.register('Footer', Footer);
+ComponentRegistry.register('Html', Html);
+ComponentRegistry.register('Section', Section);
+ComponentRegistry.register('Grid', Grid);
+ComponentRegistry.register('CodeBlock', CodeBlock);
+ComponentRegistry.register('TypewriterText', TypewriterText);
+ComponentRegistry.register('ProjectViewer', ProjectViewer);
+
+const page = new URLSearchParams(window.location.search).get('page') ?? 'home';
+PageBuilder.render(`/data/pages/${page}.json`);

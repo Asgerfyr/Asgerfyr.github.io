@@ -12,23 +12,26 @@
 
     --header-title-text-outline: 1px;
     --header-title-text-outline-neg: calc(-1* var(--header-title-text-outline));
-    
-    --theme-background-color: #FFFFFF;
-    --theme-text-color: #000000;
-    --theme-section-background-color: #F0F0F0;
-    --theme-section-shadow-color: #C0C0C0;
-    --theme-nav-text-color: #000000;
-    --theme-highlight-color: #0000FF;
-    --theme-nav-shadow: #A0A0A0;
-    --theme-icon-color: #808080;
-    --theme-icon-hover-color: #0000FF;
-    --theme-menu-content-color: #000000;
-    --theme-menu-content-hover-color: #0000FF;
-    --theme-menu-background-color: #F0F0F0;
-    --theme-header-title-text-color: #000000;
-    --theme-typewriter-cursor-color: #F0F0F0;
-    --theme-subtle-standout-color: #E0E0E0;
-    --theme-to-top-arrow-background: #E0E0E0;
+
+    /* Central light theme — matches project page style */
+    --theme-background-color: #f9fafb;
+    --theme-text-color: #1f2937;
+    --text-color: #1f2937;
+    --theme-section-background-color: #ffffff;
+    --theme-section-shadow-color: rgba(0, 0, 0, 0.07);
+    --theme-nav-text-color: #1f2937;
+    --theme-highlight-color: #3b82f6;
+    --theme-highlight-color-rgb: 59, 130, 246;
+    --theme-nav-shadow: rgba(0, 0, 0, 0.1);
+    --theme-icon-color: #6b7280;
+    --theme-icon-hover-color: #3b82f6;
+    --theme-menu-content-color: #374151;
+    --theme-menu-content-hover-color: #3b82f6;
+    --theme-menu-background-color: #ffffff;
+    --theme-header-title-text-color: #1f2937;
+    --theme-typewriter-cursor-color: #3b82f6;
+    --theme-subtle-standout-color: #f3f4f6;
+    --theme-to-top-arrow-background: #e5e7eb;
 }
 
 /* remove:  

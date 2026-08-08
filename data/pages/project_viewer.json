@@ -1,0 +1,6 @@
+{
+  "pageTitle": "Project Viewer",
+  "layout": [
+    { "component": "ProjectViewer", "props": {} }
+  ]
+}

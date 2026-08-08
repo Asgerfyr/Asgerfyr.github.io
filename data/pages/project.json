@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Project Documentation",
+  "scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js",
+    "/js/common/smooth-sctolling-links.js"
+  ],
+  "layout": [
+    { "component": "ProjectDetail", "props": {} }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "pageTitle": "Asger Portfolio",
+  "scripts": [
+    "/js/common/typewriter.js",
+    "/js/index/page-function.js",
+    "/js/common/smooth-sctolling-links.js",
+    "/js/common/popup.js",
+    "/js/common/inserts.js",
+    "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
+    "/js/index/contact-send.js"
+  ],
+  "layout": [
+    {
+      "component": "Header",
+      "props": {
+        "name": "Asger Stidsen",
+        "subtitle": "The world need solutions not problems",
+        "image": "https://lh3.googleusercontent.com/pw/AP1GczNXYtG9ojyJwpLSrcnfs8Anyadk74geiYaMybjpqLMEMpx2lDX2iZlg7MlINoMKJ-2eJzh_20XUoun4UBcwrUH3pA6JbTnmX3QpkAsmuLdQmOhcIS8-NaBIdlmOgr3m35lCy6v0ba0qvBb7gOyhhNML=w570-h820-s-no-gm?authuser=0",
+        "imageText": "Just a template image for now",
+        "buttons": [
+          { "text": "Hire Me", "href": "#contact" },
+          { "text": "View Work", "href": "#projects" }
+        ]
+      }
+    },
+    {
+      "component": "Navigation",
+      "props": {
+        "brand": "Portfolio",
+        "links": [
+          { "text": "About", "href": "#about" },
+          { "text": "Projects", "href": "#projects" },
+          { "text": "Skills", "href": "#skills" },
+          { "text": "Contact", "href": "#contact" }
+        ]
+      }
+    },
+    { "component": "About", "props": {} },
+    {
+      "component": "ProjectList",
+      "props": { "dataSource": "/data/frontpage_project.json" }
+    },
+    { "component": "Skills", "props": {} },
+    { "component": "Contact", "props": {} },
+    { "component": "Footer", "props": {} }
+  ]
+}

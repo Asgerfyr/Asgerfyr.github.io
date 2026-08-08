@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Creator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .palette-item { cursor: pointer; transition: background .15s; }
+    .palette-item:hover { background: #eff6ff; }
+    .layout-item { cursor: pointer; transition: background .15s; }
+    .layout-item:hover { background: #f9fafb; }
+    .layout-item.selected { background: #eff6ff; border-color: #3b82f6; }
+    pre { white-space: pre-wrap; word-break: break-all; }
+    textarea { font-family: ui-monospace, monospace; }
+    .links-row input { min-width: 0; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 h-screen flex flex-col overflow-hidden">
+
+  <!-- Top bar -->
+  <header class="bg-white border-b px-4 py-2 flex items-center gap-4 flex-shrink-0">
+    <span class="font-bold text-blue-600 text-lg"><i class="fas fa-hammer mr-2"></i>Page Creator</span>
+    <label class="text-sm font-medium text-gray-600">Title:</label>
+    <input id="page-title-input" type="text" value="My Page" class="border rounded px-2 py-1 text-sm w-48 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <div class="flex-1"></div>
+    <button onclick="importJSON()" class="text-sm border border-gray-300 rounded px-3 py-1 hover:bg-gray-50"><i class="fas fa-upload mr-1"></i>Import</button>
+    <button onclick="copyJSON()" class="text-sm bg-blue-600 text-white rounded px-3 py-1 hover:bg-blue-700"><i class="fas fa-copy mr-1"></i>Copy JSON</button>
+    <button onclick="downloadJSON()" class="text-sm bg-green-600 text-white rounded px-3 py-1 hover:bg-green-700"><i class="fas fa-download mr-1"></i>Download</button>
+    <a id="preview-link" href="/pages/template.html?page=__preview" target="_blank" class="text-sm bg-gray-800 text-white rounded px-3 py-1 hover:bg-gray-700"><i class="fas fa-eye mr-1"></i>Preview</a>
+  </header>
+
+  <div class="flex flex-1 overflow-hidden">
+
+    <!-- Left: Component palette -->
+    <aside class="w-44 bg-white border-r overflow-y-auto flex-shrink-0">
+      <div id="palette" class="p-2"></div>
+    </aside>
+
+    <!-- Center: Layout + form -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+
+      <!-- Layout list -->
+      <div class="flex-1 overflow-y-auto p-4">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold text-gray-700">Page Layout</h2>
+          <span class="text-xs text-gray-400">Click a component on the left to add it</span>
+        </div>
+        <div id="layout-list" class="space-y-1 mb-4">
+          <div class="text-gray-400 text-sm text-center py-8" id="empty-hint">No components yet — click one from the palette</div>
+        </div>
+        <div class="border-t pt-3">
+          <label class="block text-xs font-medium text-gray-500 mb-1">Page Scripts (one URL per line)</label>
+          <textarea id="scripts-input" rows="3" class="w-full text-xs border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="/js/common/typewriter.js&#10;/js/common/smooth-sctolling-links.js" oninput="updateJSON()"></textarea>
+        </div>
+      </div>
+
+      <!-- Component config form -->
+      <div class="border-t bg-white flex-shrink-0 overflow-y-auto" style="max-height: 45%">
+        <div id="config-panel" class="p-4">
+          <p class="text-gray-400 text-sm">Select a component in the layout to configure it</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: JSON preview -->
+    <aside class="w-80 bg-gray-900 flex flex-col flex-shrink-0">
+      <div class="flex items-center justify-between px-3 py-2 border-b border-gray-700">
+        <span class="text-xs font-mono text-gray-400">JSON Output</span>
+        <button onclick="copyJSON()" class="text-xs text-blue-400 hover:text-blue-300"><i class="fas fa-copy mr-1"></i>copy</button>
+      </div>
+      <pre id="json-preview" class="flex-1 overflow-y-auto text-xs text-green-400 p-3 font-mono leading-relaxed"></pre>
+    </aside>
+
+  </div>
+
+  <script>
+    // ─── Component Schemas ─────────────────────────────────────────────────────
+    const SCHEMAS = {
+      // Layout
+      Section: {
+        cat: 'Layout', icon: 'fa-layer-group', color: 'blue',
+        desc: 'Section wrapper with optional heading and child components',
+        props: {
+          heading: { type: 'html', label: 'Heading HTML', ph: 'My <span class="text-blue-600">Section</span>' },
+          id:      { type: 'text', label: 'Section ID', ph: 'my-section' },
+          children:{ type: 'children', label: 'Child Components (JSON array)' },
+        }
+      },
+      Grid: {
+        cat: 'Layout', icon: 'fa-grid-2', color: 'blue',
+        desc: 'CSS grid layout with nested components',
+        props: {
+          columns:  { type: 'number', label: 'Columns (desktop)', default: 2 },
+          gap:      { type: 'number', label: 'Gap', default: 8 },
+          children: { type: 'children', label: 'Child Components (JSON array)' },
+        }
+      },
+
+      // Content
+      Html: {
+        cat: 'Content', icon: 'fa-code', color: 'purple',
+        desc: 'Raw HTML — maximum flexibility',
+        props: {
+          html:      { type: 'html', label: 'HTML Content', ph: '<p>Hello <strong>world</strong></p>' },
+          tag:       { type: 'select', label: 'Wrapper tag', opts: ['div','p','span','article','aside','section','header','footer'] },
+          className: { type: 'text', label: 'CSS Classes', ph: 'text-gray-600 mb-4' },
+          id:        { type: 'text', label: 'ID' },
+        }
+      },
+      CodeBlock: {
+        cat: 'Content', icon: 'fa-terminal', color: 'gray',
+        desc: 'Syntax-highlighted code block',
+        props: {
+          code:     { type: 'code', label: 'Code' },
+          language: { type: 'text', label: 'Language', ph: 'javascript / python / cpp / plaintext' },
+        }
+      },
+      TypewriterText: {
+        cat: 'Content', icon: 'fa-keyboard', color: 'indigo',
+        desc: 'Animated typewriter text (requires typewriter.js in scripts)',
+        props: {
+          tag:       { type: 'select', label: 'Element', opts: ['p','h1','h2','h3','span'] },
+          strings:   { type: 'json', label: 'Strings (JSON)', ph: '[{"string":"Hello World","pauseFor":2000}]' },
+          typeSpeed: { type: 'number', label: 'Type speed ms', default: 60 },
+          loop:      { type: 'bool', label: 'Loop', default: true },
+        }
+      },
+
+      // Portfolio
+      Header: {
+        cat: 'Portfolio', icon: 'fa-heading', color: 'orange',
+        desc: 'Full-screen hero header with image, typewriter and CTA buttons',
+        props: {
+          name:      { type: 'text', label: 'Your Name', ph: 'Asger Stidsen' },
+          subtitle:  { type: 'text', label: 'Subtitle', ph: 'The world need solutions not problems' },
+          image:     { type: 'url',  label: 'Profile image URL' },
+          imageText: { type: 'text', label: 'Image badge text', ph: 'Available for work' },
+          buttons:   { type: 'links', label: 'CTA Buttons (text / href)' },
+        }
+      },
+      Navigation: {
+        cat: 'Portfolio', icon: 'fa-bars', color: 'gray',
+        desc: 'Sticky nav bar with hamburger menu and theme toggle',
+        props: {
+          brand: { type: 'text', label: 'Brand name', ph: 'Portfolio' },
+          links: { type: 'links', label: 'Nav links (text / href)' },
+        }
+      },
+      About:       { cat: 'Portfolio', icon: 'fa-user', color: 'teal', desc: 'About me section', props: {} },
+      ProjectList: {
+        cat: 'Portfolio', icon: 'fa-folder-open', color: 'green',
+        desc: 'Grid of project cards loaded from a JSON file',
+        props: {
+          dataSource: { type: 'url', label: 'Data source', ph: '/data/frontpage_project.json' },
+        }
+      },
+      ProjectDetail: { cat: 'Portfolio', icon: 'fa-file-alt', color: 'blue', desc: 'Full project doc page — reads ?project= from URL', props: {} },
+      Skills:  { cat: 'Portfolio', icon: 'fa-chart-bar',  color: 'yellow', desc: 'Skills section',  props: {} },
+      Contact: { cat: 'Portfolio', icon: 'fa-envelope',   color: 'red',    desc: 'Contact section', props: {} },
+      Footer:  { cat: 'Portfolio', icon: 'fa-flag',       color: 'gray',   desc: 'Footer',          props: {} },
+    };
+
+    // ─── State ─────────────────────────────────────────────────────────────────
+    let layout = [];       // [{ component, props }]
+    let selected = -1;
+
+    // ─── Palette ───────────────────────────────────────────────────────────────
+    function buildPalette() {
+      const cats = {};
+      for (const [name, s] of Object.entries(SCHEMAS)) {
+        if (!cats[s.cat]) cats[s.cat] = [];
+        cats[s.cat].push(name);
+      }
+      const el = document.getElementById('palette');
+      for (const [cat, names] of Object.entries(cats)) {
+        const label = document.createElement('p');
+        label.className = 'text-xs font-semibold text-gray-400 uppercase mt-3 mb-1 px-1';
+        label.textContent = cat;
+        el.appendChild(label);
+        for (const name of names) {
+          const s = SCHEMAS[name];
+          const item = document.createElement('div');
+          item.className = 'palette-item rounded px-2 py-1.5 flex items-center gap-2 text-sm';
+          item.innerHTML = `<i class="fas ${s.icon} text-${s.color}-500 w-4 text-center text-xs"></i><span>${name}</span>`;
+          item.title = s.desc;
+          item.onclick = () => addComponent(name);
+          el.appendChild(item);
+        }
+      }
+    }
+
+    // ─── Layout CRUD ───────────────────────────────────────────────────────────
+    function addComponent(name) {
+      const defaults = {};
+      for (const [k, p] of Object.entries(SCHEMAS[name]?.props ?? {})) {
+        if (p.default !== undefined) defaults[k] = p.default;
+        if (p.type === 'links') defaults[k] = [];
+      }
+      layout.push({ component: name, props: defaults });
+      selected = layout.length - 1;
+      render();
+    }
+
+    function removeComponent(i, e) {
+      e.stopPropagation();
+      layout.splice(i, 1);
+      if (selected >= layout.length) selected = layout.length - 1;
+      render();
+    }
+
+    function moveUp(i, e) {
+      e.stopPropagation();
+      if (i === 0) return;
+      [layout[i - 1], layout[i]] = [layout[i], layout[i - 1]];
+      if (selected === i) selected = i - 1;
+      else if (selected === i - 1) selected = i;
+      render();
+    }
+
+    function moveDown(i, e) {
+      e.stopPropagation();
+      if (i === layout.length - 1) return;
+      [layout[i], layout[i + 1]] = [layout[i + 1], layout[i]];
+      if (selected === i) selected = i + 1;
+      else if (selected === i + 1) selected = i;
+      render();
+    }
+
+    function selectItem(i) {
+      selected = i;
+      render();
+    }
+
+    // ─── Render ────────────────────────────────────────────────────────────────
+    function render() {
+      renderLayout();
+      renderForm();
+      updateJSON();
+    }
+
+    function renderLayout() {
+      const list = document.getElementById('layout-list');
+      const hint = document.getElementById('empty-hint');
+      if (!layout.length) {
+        hint.style.display = '';
+        list.innerHTML = '';
+        list.appendChild(hint);
+        return;
+      }
+      hint.style.display = 'none';
+      list.innerHTML = '';
+      layout.forEach((item, i) => {
+        const s = SCHEMAS[item.component];
+        const div = document.createElement('div');
+        div.className = `layout-item border rounded px-3 py-2 flex items-center gap-2 text-sm ${i === selected ? 'selected border-blue-400' : 'border-gray-200 bg-white'}`;
+        div.onclick = () => selectItem(i);
+        div.innerHTML = `
+          <i class="fas ${s?.icon ?? 'fa-cube'} text-${s?.color ?? 'gray'}-500 text-xs w-4 text-center flex-shrink-0"></i>
+          <span class="flex-1 font-medium">${item.component}</span>
+          <button onclick="moveUp(${i},event)" class="text-gray-400 hover:text-gray-700 px-1" title="Move up"><i class="fas fa-chevron-up text-xs"></i></button>
+          <button onclick="moveDown(${i},event)" class="text-gray-400 hover:text-gray-700 px-1" title="Move down"><i class="fas fa-chevron-down text-xs"></i></button>
+          <button onclick="removeComponent(${i},event)" class="text-red-400 hover:text-red-600 px-1" title="Remove"><i class="fas fa-times text-xs"></i></button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function renderForm() {
+      const panel = document.getElementById('config-panel');
+      if (selected < 0 || selected >= layout.length) {
+        panel.innerHTML = '<p class="text-gray-400 text-sm">Select a component in the layout to configure it</p>';
+        return;
+      }
+      const item = layout[selected];
+      const schema = SCHEMAS[item.component];
+      const propEntries = Object.entries(schema?.props ?? {});
+
+      if (!propEntries.length) {
+        panel.innerHTML = `<p class="text-sm font-semibold text-gray-700 mb-1">${item.component}</p><p class="text-xs text-gray-400">${schema?.desc ?? ''}</p><p class="text-xs text-gray-400 mt-2">No configuration needed.</p>`;
+        return;
+      }
+
+      let html = `<p class="text-sm font-semibold text-gray-700 mb-3">${item.component} <span class="font-normal text-gray-400 text-xs">— ${schema?.desc ?? ''}</span></p>`;
+      html += '<div class="grid grid-cols-1 gap-3">';
+
+      propEntries.forEach(([key, p]) => {
+        html += `<div>`;
+        html += `<label class="block text-xs font-medium text-gray-600 mb-1">${p.label}</label>`;
+        const val = item.props[key];
+
+        if (p.type === 'text' || p.type === 'url') {
+          html += `<input type="text" class="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="${p.ph ?? ''}" value="${escHtml(String(val ?? ''))}"
+            onchange="setProp('${key}', this.value)" />`;
+        } else if (p.type === 'number') {
+          html += `<input type="number" class="w-24 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            value="${val ?? (p.default ?? '')}"
+            onchange="setProp('${key}', Number(this.value))" />`;
+        } else if (p.type === 'bool') {
+          html += `<input type="checkbox" class="mt-1" ${val ?? p.default ? 'checked' : ''}
+            onchange="setProp('${key}', this.checked)" />`;
+        } else if (p.type === 'select') {
+          html += `<select class="border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="setProp('${key}', this.value)">`;
+          (p.opts ?? []).forEach(o => { html += `<option ${val === o ? 'selected' : ''}>${o}</option>`; });
+          html += `</select>`;
+        } else if (p.type === 'html' || p.type === 'code') {
+          html += `<textarea rows="3" class="w-full border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="${p.ph ?? (p.type === 'html' ? 'HTML allowed' : 'Code here')}"
+            onchange="setProp('${key}', this.value)">${escHtml(String(val ?? ''))}</textarea>`;
+          if (p.type === 'html') html += `<p class="text-xs text-gray-400 mt-0.5">HTML tags allowed</p>`;
+        } else if (p.type === 'json' || p.type === 'children') {
+          const hint = p.type === 'children'
+            ? 'Array of {component, props} objects'
+            : 'JSON value';
+          html += `<textarea rows="4" class="w-full border rounded px-2 py-1 text-xs font-mono focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="${p.ph ?? hint}"
+            onchange="setJSONProp('${key}', this.value)">${escHtml(val !== undefined ? JSON.stringify(val, null, 2) : '')}</textarea>`;
+          html += `<p class="text-xs text-gray-400 mt-0.5">${hint}</p>`;
+        } else if (p.type === 'links') {
+          const links = (val ?? []);
+          html += `<div id="links-${key}" class="space-y-1">`;
+          links.forEach((l, li) => {
+            html += `<div class="links-row flex gap-1">
+              <input type="text" placeholder="Label" value="${escHtml(l.text ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" onchange="setLink('${key}',${li},'text',this.value)" />
+              <input type="text" placeholder="URL / #anchor" value="${escHtml(l.href ?? '')}" class="flex-1 border rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400" onchange="setLink('${key}',${li},'href',this.value)" />
+              <button onclick="removeLink('${key}',${li})" class="text-red-400 hover:text-red-600 px-1 flex-shrink-0"><i class="fas fa-times text-xs"></i></button>
+            </div>`;
+          });
+          html += `</div>`;
+          html += `<button onclick="addLink('${key}')" class="mt-1 text-xs text-blue-600 hover:text-blue-800"><i class="fas fa-plus mr-1"></i>Add link</button>`;
+        }
+        html += `</div>`;
+      });
+
+      html += '</div>';
+      panel.innerHTML = html;
+    }
+
+    // ─── Prop helpers ──────────────────────────────────────────────────────────
+    function setProp(key, value) {
+      if (selected < 0) return;
+      layout[selected].props[key] = value;
+      updateJSON();
+    }
+
+    function setJSONProp(key, raw) {
+      if (selected < 0) return;
+      try { layout[selected].props[key] = JSON.parse(raw); }
+      catch { /* keep old value on parse error */ }
+      updateJSON();
+    }
+
+    function addLink(key) {
+      if (selected < 0) return;
+      if (!Array.isArray(layout[selected].props[key])) layout[selected].props[key] = [];
+      layout[selected].props[key].push({ text: '', href: '' });
+      render();
+    }
+
+    function removeLink(key, i) {
+      if (selected < 0) return;
+      layout[selected].props[key].splice(i, 1);
+      render();
+    }
+
+    function setLink(key, i, field, value) {
+      if (selected < 0) return;
+      layout[selected].props[key][i][field] = value;
+      updateJSON();
+    }
+
+    // ─── JSON output ───────────────────────────────────────────────────────────
+    function buildConfig() {
+      const title = document.getElementById('page-title-input').value || 'My Page';
+      const scriptsRaw = document.getElementById('scripts-input').value.trim();
+      const scripts = scriptsRaw ? scriptsRaw.split('\n').map(s => s.trim()).filter(Boolean) : [];
+      return {
+        pageTitle: title,
+        ...(scripts.length ? { scripts } : {}),
+        layout: layout.map(({ component, props }) => ({
+          component,
+          props: cleanProps(props),
+        })),
+      };
+    }
+
+    function cleanProps(props) {
+      const out = {};
+      for (const [k, v] of Object.entries(props)) {
+        if (v === '' || v === null || v === undefined) continue;
+        if (Array.isArray(v) && !v.length) continue;
+        out[k] = v;
+      }
+      return out;
+    }
+
+    function updateJSON() {
+      const json = JSON.stringify(buildConfig(), null, 2);
+      document.getElementById('json-preview').textContent = json;
+    }
+
+    function copyJSON() {
+      const json = JSON.stringify(buildConfig(), null, 2);
+      navigator.clipboard.writeText(json).then(() => {
+        const btn = document.querySelector('[onclick="copyJSON()"]');
+        if (!btn) return;
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
+        setTimeout(() => { btn.innerHTML = orig; }, 1500);
+      });
+    }
+
+    function downloadJSON() {
+      const slug = (document.getElementById('page-title-input').value || 'my-page')
+        .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const json = JSON.stringify(buildConfig(), null, 2);
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+      a.download = `${slug}.json`;
+      a.click();
+    }
+
+    function importJSON() {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = '.json';
+      input.onchange = e => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+          try {
+            const config = JSON.parse(ev.target.result);
+            document.getElementById('page-title-input').value = config.pageTitle ?? '';
+            document.getElementById('scripts-input').value = (config.scripts ?? []).join('\n');
+            layout = (config.layout ?? []).map(d => ({ component: d.component, props: d.props ?? {} }));
+            selected = -1;
+            render();
+          } catch { alert('Invalid JSON file'); }
+        };
+        reader.readAsText(file);
+      };
+      input.click();
+    }
+
+    function escHtml(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ─── Page title changes ────────────────────────────────────────────────────
+    document.getElementById('page-title-input').addEventListener('input', updateJSON);
+
+    // ─── Init ──────────────────────────────────────────────────────────────────
+    buildPalette();
+    updateJSON();
+  </script>
+</body>
+</html>
