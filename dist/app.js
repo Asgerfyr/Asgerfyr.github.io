@@ -160,12 +160,12 @@
           <a href="#header" class="text-big color-title-highlight">${p.brand ?? "Portfolio"}</a>
         </div>
         <div class="menu-container" id="nav-menu">
-          <button class="menu-button" id="nav-menu-btn">
+          <button class="menu-button" id="nav-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars" style="font-size: var(--big-font-size)"></i>
           </button>
           <div class="menu-content" id="nav-menu-content">
-            <div class="flex-container" id="nav-menu">
-              ${links.map((l) => `<a href="${l.href}" class="color-menu-opstion">${l.text}</a>`).join("")}
+            <div class="flex-container" id="nav-menu-items">
+              ${links.map((l) => `<a href="${l.href}" class="nav-menu-link">${l.text}</a>`).join("")}
               <button class="theme-toggle dark-theme menu-button">
                 <i class="fa-solid fa-moon dark icon"></i>
                 <i class="fa-solid fa-sun light icon"></i>
@@ -177,12 +177,48 @@
     `;
       const menuBtn = nav.querySelector("#nav-menu-btn");
       const menuContent = nav.querySelector("#nav-menu-content");
+      const menuLinks = nav.querySelectorAll(".nav-menu-link");
       menuBtn?.addEventListener("click", () => menuContent?.classList.toggle("show"));
       window.addEventListener("click", (e) => {
-        if (!e.target.closest(".menu-button")) {
+        if (!e.target.closest(".menu-button") && !e.target.closest(".nav-menu-link")) {
           menuContent?.classList.remove("show");
         }
       });
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = link.getAttribute("href");
+          if (href?.startsWith("#")) {
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              const offset = 80;
+              const distanceToTargetY = targetElement.getBoundingClientRect().top - offset;
+              smoothScrollTo(distanceToTargetY, 1e3);
+              menuContent?.classList.remove("show");
+            }
+          }
+        });
+      });
+      const smoothScrollTo = (distance, duration = 500) => {
+        const startY = window.scrollY;
+        let startTime = null;
+        const animation = (currentTime) => {
+          if (!startTime)
+            startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          const ease = easeInOutQuad(progress);
+          window.scrollTo(0, startY + distance * ease);
+          if (progress < 1) {
+            requestAnimationFrame(animation);
+          }
+        };
+        const easeInOutQuad = (t) => {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        };
+        requestAnimationFrame(animation);
+      };
       const themeBtn = nav.querySelector(".theme-toggle");
       themeBtn?.addEventListener("click", () => {
         document.body.classList.toggle("dark-theme");
@@ -931,19 +967,60 @@
       div.className = "bg-white shadow-md sticky top-0 z-40";
       div.innerHTML = `
       <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fa-solid fa-house"></i></a>
-      <div class="container mx-auto px-6 pl-9 py-4">
+      <div class="container mx-auto px-6 pl-9 py-2">
         <div class="flex items-center justify-between">
-          <div class="flex items-center">
+          <div class="flex items-center title-wrap">
             <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
-            <h1 class="text-2xl font-bold text-gray-800">${title} Documentation</h1>
+            <div class="title">
+              <h1 class="project-title">${title}</h1>
+              <span class="project-subtitle">Documentation</span>
+            </div>
           </div>
-          <div id="nav-links" class="hidden md:flex">
-            <a href="#overview" class="nav-link">Overview</a>
-            <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
+
+          <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+            <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections \u25BC</button>
+            <div id="nav-links" class="sections-panel" aria-hidden="true">
+              <a href="#overview" class="nav-link">Overview</a>
+              <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
+            </div>
           </div>
         </div>
       </div>
     `;
+      setTimeout(() => {
+        const toggle = div.querySelector("#sections-toggle");
+        const panel = div.querySelector("#nav-links");
+        if (!toggle || !panel)
+          return;
+        function closePanel() {
+          panel.classList.remove("open");
+          panel.setAttribute("aria-hidden", "true");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.textContent = "Sections \u25BC";
+        }
+        function openPanel() {
+          panel.classList.add("open");
+          panel.setAttribute("aria-hidden", "false");
+          toggle.setAttribute("aria-expanded", "true");
+          toggle.textContent = "Sections \u25B2";
+        }
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (panel.classList.contains("open"))
+            closePanel();
+          else
+            openPanel();
+        });
+        panel.addEventListener("click", (e) => {
+          const t = e.target;
+          if (t && t.tagName === "A")
+            closePanel();
+        });
+        document.addEventListener("click", (e) => {
+          if (!div.contains(e.target))
+            closePanel();
+        });
+      }, 50);
       return div;
     }
   };
@@ -977,13 +1054,59 @@
     card.appendChild(h3);
     const gallery = document.createElement("div");
     gallery.className = "image-gallery";
+    let hoverTimer = null;
+    let pinnedItem = null;
+    function clearHoverTimer() {
+      if (hoverTimer !== null) {
+        window.clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+    }
     images.forEach((img) => {
       const item = document.createElement("div");
       item.className = "image-card cursor-pointer";
       item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>`;
-      item.addEventListener("click", () => openShowcase(img.url, img.alt));
+      item.addEventListener("pointerenter", (ev) => {
+        if (pinnedItem)
+          return;
+        clearHoverTimer();
+        if (ev.pointerType === "mouse" || ev.pointerType === "pen") {
+          hoverTimer = window.setTimeout(() => {
+            openShowcase(img.url, img.alt);
+            hoverTimer = null;
+          }, 1e3);
+        }
+      });
+      item.addEventListener("pointerleave", () => {
+        clearHoverTimer();
+        if (!pinnedItem) {
+          const container2 = document.getElementById("image_showcase_container");
+          if (container2)
+            container2.classList.add("invis");
+        }
+      });
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const container2 = document.getElementById("image_showcase_container");
+        if (!container2)
+          return;
+        if (pinnedItem === item) {
+          pinnedItem = null;
+          container2.classList.add("invis");
+        } else {
+          pinnedItem = item;
+          openShowcase(img.url, img.alt);
+        }
+      });
       gallery.appendChild(item);
     });
+    const container = document.getElementById("image_showcase_container");
+    if (container) {
+      container.addEventListener("click", () => {
+        pinnedItem = null;
+        container.classList.add("invis");
+      });
+    }
     card.appendChild(gallery);
     return card;
   }
@@ -1159,7 +1282,26 @@
       const images = props.images;
       const icons = await fetchIcons();
       const iconObj = icons[icon] ?? icons["missingIcon"] ?? { name: "cube", color: "blue" };
-      const id = "_" + title.split(" ").join("_");
+      const slugify = (s) => {
+        let str = (s || "").toString().trim();
+        str = str.replace(/<[^>]*>/g, "");
+        try {
+          str = str.normalize("NFKD").replace(/\p{M}/gu, "");
+        } catch (e) {
+        }
+        str = str.toLowerCase();
+        str = str.replace(/[^a-z0-9\s\-_]/g, "");
+        str = str.replace(/[\s\-]+/g, "_");
+        str = str.replace(/_+/g, "_");
+        str = str.replace(/^_+|_+$/g, "");
+        return "_" + (str || "section");
+      };
+      let baseId = slugify(title);
+      let id = baseId;
+      let suffix = 1;
+      while (document.getElementById(id)) {
+        id = `${baseId}_${suffix++}`;
+      }
       const wrapper = document.createElement("div");
       wrapper.className = "section-anchor mb-16 container mx-auto px-6";
       wrapper.id = id;
@@ -1168,12 +1310,45 @@
         const conclusionLink = document.getElementById("conclusion-link");
         if (navLinks && conclusionLink) {
           const a = document.createElement("a");
-          a.className = "nav-link";
-          a.textContent = title;
+          a.className = "nav-link section-item";
+          const existing = navLinks.querySelectorAll(".section-item").length;
+          const idx = existing + 1;
+          const titleText = title;
+          a.innerHTML = `<span class="section-number">${idx}</span><span class="section-text">${titleText}</span>`;
           a.href = `#${id}`;
+          a.title = title;
+          a.setAttribute("data-section-index", String(idx));
           navLinks.insertBefore(a, conclusionLink);
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetElement = document.querySelector(`#${id}`);
+            if (targetElement) {
+              const offset = 80;
+              const distanceToTargetY = targetElement.getBoundingClientRect().top - offset;
+              smoothScrollTo(distanceToTargetY, 1e3);
+            }
+          });
         }
       });
+      const smoothScrollTo = (distance, duration = 500) => {
+        const startY = window.scrollY;
+        let startTime = null;
+        const animation = (currentTime) => {
+          if (!startTime)
+            startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          const ease = easeInOutQuad(progress);
+          window.scrollTo(0, startY + distance * ease);
+          if (progress < 1) {
+            requestAnimationFrame(animation);
+          }
+        };
+        const easeInOutQuad = (t) => {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        };
+        requestAnimationFrame(animation);
+      };
       const card = document.createElement("div");
       card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
       card.innerHTML = `

@@ -35,6 +35,18 @@
     "date": "May 2025",
     "link": "BT Sound System",
     "pageKey": "project_BT_Sound_System"
+},
+"Light_Regulation_System": {
+  "title": "Light Regulation System",
+  "image": "https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0",
+  "sub_description": "Intelligent automatisk lysregulering baseret på tilstedeværelse og naturligt lys.",
+  "description": "Et embedded system til automatisk energieffektiv lyscontrol. Arduino Mega 2560 styrer sensorer og LED'er, mens Raspberry Pi udfører avanceret databehandling og grafisk interface. Systemet justerer lysintensitet dynamisk baseret på bevægelsesdetektering og naturligt lys, med fuld datahistorik i NumPy arrays for senere analyse.",
+  "topics": ["Python", "C++", "NumPy", "Arduino", "Raspberry Pi", "UART", "Embedded Systems"],
+  "topicsSummery": ["Pipeline Architecture", "Centralized Logic", "IoT", "Real-time Control"],
+  "category": ["IoT", "Embedded_System", "Python", "Backend"],
+  "date": "May 2026",
+  "link": "Light Regulation System",
+  "pageKey": "project_LR_Light_Regulation"
 }
 
 }

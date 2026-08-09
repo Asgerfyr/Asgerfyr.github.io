@@ -32,13 +32,74 @@ export function renderImageGallery(heading: string, images: ProjectImage[]): HTM
   card.appendChild(h3);
   const gallery = document.createElement('div');
   gallery.className = 'image-gallery';
+
+  // Shared state to manage hover delay and pinned (clicked) image
+  let hoverTimer: number | null = null;
+  let pinnedItem: HTMLElement | null = null;
+
+  function clearHoverTimer() {
+    if (hoverTimer !== null) {
+      window.clearTimeout(hoverTimer);
+      hoverTimer = null;
+    }
+  }
+
   images.forEach(img => {
     const item = document.createElement('div');
     item.className = 'image-card cursor-pointer';
     item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ''}</p>`;
-    item.addEventListener('click', () => openShowcase(img.url, img.alt));
+
+    // Pointer enter: for mouse/pen devices, show after 1s hover
+    item.addEventListener('pointerenter', (ev: PointerEvent) => {
+      // If another item is pinned (clicked), don't react to hover
+      if (pinnedItem) return;
+      clearHoverTimer();
+      // Only show on hover for non-touch pointers
+      if (ev.pointerType === 'mouse' || ev.pointerType === 'pen') {
+        hoverTimer = window.setTimeout(() => {
+          openShowcase(img.url, img.alt);
+          hoverTimer = null;
+        }, 1000);
+      }
+    });
+
+    // Pointer leave: clear pending hover and close if not pinned
+    item.addEventListener('pointerleave', () => {
+      clearHoverTimer();
+      if (!pinnedItem) {
+        const container = document.getElementById('image_showcase_container');
+        if (container) container.classList.add('invis');
+      }
+    });
+
+    // Click/tap toggles pin state. If tapped when not pinned, pin and open. If already pinned, unpin and close.
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const container = document.getElementById('image_showcase_container');
+      if (!container) return;
+      if (pinnedItem === item) {
+        // unpin and close
+        pinnedItem = null;
+        container.classList.add('invis');
+      } else {
+        // pin this item, open showcase
+        pinnedItem = item;
+        openShowcase(img.url, img.alt);
+      }
+    });
+
     gallery.appendChild(item);
   });
+
+  // Clicking the overlay will unpin and close
+  const container = document.getElementById('image_showcase_container');
+  if (container) {
+    container.addEventListener('click', () => {
+      pinnedItem = null;
+      container.classList.add('invis');
+    });
+  }
+
   card.appendChild(gallery);
   return card;
 }

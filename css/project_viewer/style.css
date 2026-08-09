@@ -20,15 +20,114 @@ button:hover {
 #page-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* let header size naturally while keeping a full-page minimum */
+    min-height: 100vh;
 }
 
 #header {
+    position: relative;
     background-color: var(--theme-background-color);
     color: var(--theme-text-color);
-    padding: 20px;
-    text-align: center;
+    padding: 8px 16px;
+    text-align: left;
 }
+
+/* Ensure the inner container controls layout (prevent outer centering which caused wrapping) */
+#header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Scoped header/title/nav adjustments for project pages only */
+.title-wrap { display:flex; align-items:center; gap:0.75rem; }
+.title { max-width: 60%; min-width: 0; }
+.project-title { font-size: clamp(1rem, 2.4vw, 1.5rem); margin:0; font-weight:700; color: #111827; line-height:1.1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.project-subtitle { font-size: 0.9rem; color: #6b7280; margin-top:2px; }
+
+/* Title flex */
+.title { flex: 1 1 auto; }
+
+/* Sections panel dropdown (compact header): hidden by default, opens below header */
+#nav-links.sections-panel { 
+  display: none !important; 
+  position: absolute; 
+  right: 1rem; 
+  top: 100%; 
+  background: var(--theme-section-background-color); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12); 
+  border-radius: 8px; 
+  padding: 6px; 
+  z-index: 60; 
+  max-height: 320px; 
+  overflow-y: auto; 
+  min-width: 240px; 
+  flex-direction: column;
+}
+
+#nav-links.sections-panel.open { 
+  display: flex !important; 
+}
+
+/* Section items inside the panel - override global .nav-link styles */
+#nav-links.sections-panel .nav-link { 
+  display: flex; 
+  align-items: center; 
+  padding: 8px 10px; 
+  white-space: nowrap; 
+  color: var(--theme-text-color); 
+  text-decoration: none;
+  margin: 0;
+  box-shadow: none;
+  font-size: inherit;
+  font-weight: normal;
+  gap: 8px;
+}
+
+#nav-links.sections-panel .nav-link:hover { 
+  background: var(--theme-subtle-standout-color); 
+}
+
+#nav-links.sections-panel .nav-link + .nav-link { 
+  border-top: 1px solid rgba(0,0,0,0.04); 
+}
+
+/* Number badge - fix spacing here */
+#nav-links.sections-panel .nav-link .section-number { 
+  background: #eef2ff; 
+  color: #1e40af; 
+  font-weight: 700; 
+  padding: 2px 6px; 
+  border-radius: 4px; 
+  font-size: 0.7rem; 
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Section text - truncate if needed */
+#nav-links.sections-panel .nav-link .section-text { 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  font-size: 0.85rem; 
+  flex-grow: 1;
+  min-width: 0;
+}
+.menu-button { background: transparent; border: 1px solid transparent; padding: 6px 8px; border-radius: 6px; }
+.menu-button:hover { background: rgba(0,0,0,0.03); }
+
+/* Make navigation smaller inside project viewer so it doesn't consume large vertical space */
+/* Override global vw-driven variables with constrained, responsive sizes for project pages */
+#header, #header * { font-family: var(--font-family, "Roboto", "Open Sans"); }
+#header { font-size: clamp(14px, 1.2vw, 16px); min-height:48px; max-height:none; overflow:visible; }
+#nav-links, #nav-links .nav-link, .nav-link { font-size: clamp(13px, 1.1vw, 15px); }
+
+/* Ensure the absolute home link doesn't enlarge the header height */
+#home { top: 0.5rem; }
+
+/* Make sure section link labels don't reflow into multiple lines */
+#nav-links .nav-link { white-space: nowrap; }
 
 #home {
     position: absolute;
@@ -36,6 +135,19 @@ button:hover {
     left: 0.75rem;
     color: var(--theme-icon-color);
 }
+
+/* Project header title layout */
+.title-wrap { display:flex; align-items:center; gap:0.75rem; }
+.title { display:flex; flex-direction:column; align-items:flex-start; max-width:60vw; }
+.project-title { font-size: clamp(1rem, 2.4vw, 1.5rem); margin:0; font-weight:700; color: #111827; line-height:1.1; word-break:break-word; }
+.project-subtitle { font-size: 0.9rem; color: #6b7280; margin-top:2px; }
+
+/* Nav links: keep them on a single line and truncate if necessary */
+#nav-links { display:flex; gap:0.5rem; align-items:center; }
+#nav-links .nav-link { max-width: 12rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+
+/* Ensure long section titles inserted into nav won't force header height */
+.nav-link { display: inline-block; vertical-align: middle; }
 
 #content-layout-container {
     display: flex;

@@ -2,11 +2,11 @@
 
 /* nav */
 @media (orientation: landscape) and (min-width: 701px) {
-    nav .menu-button#nav-menu {
+    nav .menu-button#nav-menu-btn {
         display: none;
     }
 
-    nav .menu-content#nav-menu {
+    nav .menu-content#nav-menu-content {
         display: block;
         position: relative;
         background-color: transparent;
@@ -15,36 +15,64 @@
         transform: none;
     }
 
-    nav .flex-container#nav-menu {
+    nav .flex-container#nav-menu-items {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .menu-content a {
+    .menu-content a.nav-menu-link {
         padding-inline: 20px;
     }
 
 }
 
 @media (orientation: portrait) OR (max-width: 700px) {
-    nav .menu-content#nav-menu {
+    nav .menu-content#nav-menu-content {
+        display: none;
         position: absolute;
-        top: 35px;
-        transform: translate(-80%, 0);
-        font-size: var(--big-font-size);
-    }
-
-    nav .flex-container#nav-menu {
+        right: 1rem;
+        top: 100%;
+        transform: none;
+        background-color: var(--theme-section-background-color);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: 8px;
+        z-index: 60;
+        min-width: 200px;
         flex-direction: column;
-        justify-content: space-between;
+        margin: 0;
     }
 
-    .menu-content a {
-        padding-inline: 100px;
+    nav .menu-content#nav-menu-content.show {
+        display: flex;
+    }
+
+    nav .flex-container#nav-menu-items {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .menu-content a.nav-menu-link {
+        padding: 12px 16px;
+        color: var(--theme-text-color);
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: block;
+        transition: background-color 0.2s ease;
+    }
+
+    .menu-content a.nav-menu-link:hover {
+        background-color: var(--theme-subtle-standout-color);
+    }
+
+    .menu-content a.nav-menu-link + a.nav-menu-link {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     nav .theme-toggle {
-        padding-bottom: 30px;
+        padding: 12px 16px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
 }

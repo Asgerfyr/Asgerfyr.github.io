@@ -13,7 +13,37 @@ export const ProjectSection = {
     const icons = await fetchIcons();
     const iconObj = icons[icon] ?? icons['missingIcon'] ?? { name: 'cube', color: 'blue' };
 
-    const id = '_' + title.split(' ').join('_');
+    // Create a safe slug id for the section heading so anchors work with special characters
+    const slugify = (s: string) => {
+      let str = (s || '').toString().trim();
+      // strip HTML tags
+      str = str.replace(/<[^>]*>/g, '');
+      // try to normalize diacritics to ASCII (if supported)
+      try {
+        str = str.normalize('NFKD').replace(/\p{M}/gu, '');
+      } catch (e) {
+        // ignore if normalize with unicode properties unsupported
+      }
+      str = str.toLowerCase();
+      // remove characters that are not alphanumeric, space, dash or underscore
+      str = str.replace(/[^a-z0-9\s\-_]/g, '');
+      // replace spaces and dashes with underscore
+      str = str.replace(/[\s\-]+/g, '_');
+      // collapse multiple underscores
+      str = str.replace(/_+/g, '_');
+      // trim leading/trailing underscores
+      str = str.replace(/^_+|_+$/g, '');
+      return '_' + (str || 'section');
+    };
+
+    // ensure id is unique in the document
+    let baseId = slugify(title);
+    let id = baseId;
+    let suffix = 1;
+    while (document.getElementById(id)) {
+      id = `${baseId}_${suffix++}`;
+    }
+
     const wrapper = document.createElement('div');
     wrapper.className = 'section-anchor mb-16 container mx-auto px-6';
     wrapper.id = id;
@@ -24,12 +54,57 @@ export const ProjectSection = {
       const conclusionLink = document.getElementById('conclusion-link');
       if (navLinks && conclusionLink) {
         const a = document.createElement('a');
-        a.className = 'nav-link';
-        a.textContent = title;
-        a.href = `#${id}`;
-        navLinks.insertBefore(a, conclusionLink);
+          a.className = 'nav-link section-item';
+          // compute section index among existing section-items
+          const existing = navLinks.querySelectorAll('.section-item').length;
+          const idx = existing + 1;
+          // use full title, CSS will handle overflow
+          const titleText = title;
+          // build structured content: number + text
+          a.innerHTML = `<span class="section-number">${idx}</span><span class="section-text">${titleText}</span>`;
+          a.href = `#${id}`;
+          // show full title on hover via native tooltip
+          a.title = title;
+          a.setAttribute('data-section-index', String(idx));
+          navLinks.insertBefore(a, conclusionLink);
+          
+          // Add smooth scrolling listener to this link
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetElement = document.querySelector(`#${id}`);
+            if (targetElement) {
+              const offset = 80;
+              const distanceToTargetY = targetElement.getBoundingClientRect().top - offset;
+              smoothScrollTo(distanceToTargetY, 1000);
+            }
+          });
       }
     });
+
+    // Smooth scroll helper function
+    const smoothScrollTo = (distance: number, duration: number = 500) => {
+      const startY = window.scrollY;
+      let startTime: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutQuad(progress);
+
+        window.scrollTo(0, startY + distance * ease);
+
+        if (progress < 1) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      const easeInOutQuad = (t: number) => {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      };
+
+      requestAnimationFrame(animation);
+    };
 
     const card = document.createElement('div');
     card.className = 'bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8';

@@ -128,12 +128,12 @@ abbr:hover::after {
     display: flex;
     justify-content: center;
     z-index: 1000;
-    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
 .invis{
     opacity: 0;
+    pointer-events: none;
 }
 
 #image_showcase {
@@ -153,4 +153,74 @@ abbr:hover::after {
 
 #team-members a:hover{
     color: #2563eb;
+}
+
+/* Project Header Sections Panel - Override .nav-link for project header */
+#nav-links {
+    display: none !important;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 60;
+    max-height: 400px;
+    overflow-y: auto;
+    min-width: 250px;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+
+#nav-links.open {
+    display: flex !important;
+}
+
+#nav-links .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    box-shadow: none;
+    position: relative;
+    text-decoration: none;
+    color: #1f2937;
+}
+
+#nav-links .nav-link::after {
+    display: none;
+}
+
+#nav-links .nav-link:hover {
+    background: #f3f4f6;
+}
+
+#nav-links .nav-link + .nav-link {
+    border-top: 1px solid #e5e7eb;
+}
+
+#nav-links .section-number {
+    background: #eef2ff;
+    color: #1e40af;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+#nav-links .section-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    flex-grow: 1;
+    max-width: 150px;
 }
