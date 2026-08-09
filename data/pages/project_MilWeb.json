@@ -150,6 +150,10 @@
           { "name": "Bastian Casper Willmarst Bonnesen", "role": "Backend dev, designer og test administrator" }
         ]
       }
+    },
+    {
+      "component": "Footer",
+      "props": {}
     }
   ]
 }

@@ -136,7 +136,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "exchange",
+        "icon": "arrows-rotate",
         "color": "green",
         "title": "Router Klasse - Central Routing",
         "content": {
@@ -182,7 +182,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "cable",
+        "icon": "ethernet",
         "color": "cyan",
         "title": "UART Communication: Raspberry Pi ↔ Arduino",
         "content": {
@@ -211,7 +211,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "test",
+        "icon": "vial",
         "color": "blue",
         "title": "Testing Strategi og Resultater",
         "content": {
@@ -338,6 +338,10 @@
           { "label": "Documentation", "icon": "book", "url": "" }
         ]
       }
+    },
+    {
+      "component": "Footer",
+      "props": {}
     }
   ]
 }

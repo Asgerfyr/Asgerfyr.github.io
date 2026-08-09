@@ -88,6 +88,10 @@
         "duration": "2 måneder",
         "team_members": [{ "name": "Asger Grundtdal Stidsen", "role": "Fullstack Developer, Designer" }]
       }
+    },
+    {
+      "component": "Footer",
+      "props": {}
     }
   ]
 }

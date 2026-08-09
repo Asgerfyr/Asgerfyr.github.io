@@ -119,6 +119,10 @@
         "team_size": 1,
         "duration": "Løbende"
       }
+    },
+    {
+      "component": "Footer",
+      "props": {}
     }
   ]
 }

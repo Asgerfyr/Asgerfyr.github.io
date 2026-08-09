@@ -10,12 +10,6 @@ export const Footer = {
             <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
               Code and layout may be used with proper credit.</p>
           </div>
-          <div class="flex space-x-6">
-            <a href="#header" class="text-gray-400 hover:text-white transition">Home</a>
-            <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
-            <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
-            <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
-          </div>
         </div>
       </div>
     `;

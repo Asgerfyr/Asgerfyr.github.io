@@ -21,7 +21,9 @@ export const ProjectInfo = {
           <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
           <div class="flex flex-wrap gap-3">
             ${links.map(l => {
-              const iconHtml = l.icon ? `<i class="fas fa-${l.icon}"></i>` : '';
+              const isBrandIcon = ['github', 'gitlab', 'linkedin', 'twitter', 'facebook', 'instagram', 'youtube', 'discord'].includes(l.icon || '');
+              const prefix = isBrandIcon ? 'fab' : 'fas';
+              const iconHtml = l.icon ? `<i class="${prefix} fa-${l.icon}"></i>` : '';
               return `
                 <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
                   ${iconHtml}

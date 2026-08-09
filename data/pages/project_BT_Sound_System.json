@@ -81,7 +81,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "circuit",
+        "icon": "microchip",
         "title": "Kredsløb",
         "content": {
           "RC-filter - hvad og hvorfor": [
@@ -124,6 +124,10 @@
         "team_size": 1,
         "duration": "3 Months"
       }
+    },
+    {
+      "component": "Footer",
+      "props": {}
     }
   ]
 }

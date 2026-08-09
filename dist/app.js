@@ -643,12 +643,6 @@
             <p class="text-gray-400 mt-2 max-w-[40vw]">\xA9 2025 Asger Stidsen. Written content may not be copied or reused.
               Code and layout may be used with proper credit.</p>
           </div>
-          <div class="flex space-x-6">
-            <a href="#header" class="text-gray-400 hover:text-white transition">Home</a>
-            <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
-            <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
-            <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
-          </div>
         </div>
       </div>
     `;
@@ -1447,7 +1441,9 @@
           <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
           <div class="flex flex-wrap gap-3">
             ${links.map((l) => {
-          const iconHtml = l.icon ? `<i class="fas fa-${l.icon}"></i>` : "";
+          const isBrandIcon = ["github", "gitlab", "linkedin", "twitter", "facebook", "instagram", "youtube", "discord"].includes(l.icon || "");
+          const prefix = isBrandIcon ? "fab" : "fas";
+          const iconHtml = l.icon ? `<i class="${prefix} fa-${l.icon}"></i>` : "";
           return `
                 <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
                   ${iconHtml}
