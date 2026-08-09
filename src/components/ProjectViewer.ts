@@ -7,6 +7,16 @@ interface Project {
 
 export const ProjectViewer = {
   async render(_props: Record<string, unknown>): Promise<HTMLElement> {
+    // Ensure Font Awesome is loaded first
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+      const faLink = document.createElement('link');
+      faLink.rel = 'stylesheet';
+      faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+      document.head.appendChild(faLink);
+      // Wait a brief moment for Font Awesome to load
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    
     if (!document.querySelector('link[href="/css/project_viewer/style.css"]')) {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
@@ -19,7 +29,7 @@ export const ProjectViewer = {
     container.id = 'page-container';
     container.innerHTML = `
       <div id="header">
-        <a href="/" id="home"><i class="fa-solid fa-house"></i></a>
+        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
         <h1>Project Viewer</h1>
       </div>
       <div id="content-layout-container">
@@ -32,7 +42,7 @@ export const ProjectViewer = {
         </div>
         <div id="main-content">
           <div id="sorting-options">
-            <button id="sort-by-date" class="sort_button active">Sort by Date <span class="arrow">↑</span></button>
+            <button id="sort-by-date" class="sort_button active">Sort by Date <span class="arrow">↓</span></button>
             <button id="sort-by-name" class="sort_button">Sort by Name <span class="arrow">↓</span></button>
           </div>
           <div id="project-list"></div>
@@ -43,10 +53,10 @@ export const ProjectViewer = {
     // State
     let projects: Project[] = [];
     const categories = new Map<string, number>();
-    let selected = 'All';
+    let selected = new Set<string>(); // Multiple selection with checkboxes
     let search = '';
     let sortType: 'date' | 'name' = 'date';
-    let sortOrder: 'asc' | 'desc' = 'asc';
+    let sortOrder: 'asc' | 'desc' = 'desc'; // Latest first by default
 
     const listEl = container.querySelector<HTMLElement>('#project-list')!;
     const catEl  = container.querySelector<HTMLElement>('#category-selection')!;
@@ -80,7 +90,10 @@ export const ProjectViewer = {
     // Helpers
     const getFiltered = (): Project[] => {
       let r = [...projects];
-      if (selected !== 'All') r = r.filter(p => p.categories.includes(selected));
+      // If no categories selected, show all; otherwise filter to projects with at least one selected category
+      if (selected.size > 0) {
+        r = r.filter(p => p.categories.some(c => selected.has(c)));
+      }
       if (search) {
         const q = search.toLowerCase();
         r = r.filter(p =>
@@ -111,15 +124,34 @@ export const ProjectViewer = {
     const buildCategories = () => {
       catEl.innerHTML = '';
       const allBtn = container.querySelector<HTMLButtonElement>('#all-selection')!;
-      allBtn.className = selected === 'All' ? 'active' : '';
-      allBtn.onclick = () => { selected = 'All'; buildCategories(); refresh(); };
+      // "All" button is active when no categories are selected
+      allBtn.className = selected.size === 0 ? 'active' : '';
+      allBtn.onclick = () => { selected.clear(); buildCategories(); refresh(); };
 
       [...categories.entries()].filter(([c]) => c !== 'All').forEach(([cat]) => {
-        const btn = document.createElement('button');
-        btn.textContent = `${cat} (${categories.get(cat)})`;
-        btn.className = selected === cat ? 'active' : '';
-        btn.onclick = () => { selected = cat; buildCategories(); refresh(); };
-        catEl.appendChild(btn);
+        const label = document.createElement('label');
+        label.className = 'category-checkbox-label';
+        
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'category-checkbox';
+        checkbox.checked = selected.has(cat);
+        checkbox.onchange = function(this: HTMLInputElement) {
+          if (this.checked) {
+            selected.add(cat);
+          } else {
+            selected.delete(cat);
+          }
+          buildCategories();
+          refresh();
+        };
+        
+        const text = document.createElement('span');
+        text.textContent = `${cat} (${categories.get(cat)})`;
+        
+        label.appendChild(checkbox);
+        label.appendChild(text);
+        catEl.appendChild(label);
       });
     };
 

@@ -751,6 +751,13 @@
   // src/components/ProjectViewer.ts
   var ProjectViewer = {
     async render(_props) {
+      if (!document.querySelector('link[href*="font-awesome"]')) {
+        const faLink = document.createElement("link");
+        faLink.rel = "stylesheet";
+        faLink.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+        document.head.appendChild(faLink);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
       if (!document.querySelector('link[href="/css/project_viewer/style.css"]')) {
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -762,7 +769,7 @@
       container.id = "page-container";
       container.innerHTML = `
       <div id="header">
-        <a href="/" id="home"><i class="fa-solid fa-house"></i></a>
+        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
         <h1>Project Viewer</h1>
       </div>
       <div id="content-layout-container">
@@ -775,7 +782,7 @@
         </div>
         <div id="main-content">
           <div id="sorting-options">
-            <button id="sort-by-date" class="sort_button active">Sort by Date <span class="arrow">\u2191</span></button>
+            <button id="sort-by-date" class="sort_button active">Sort by Date <span class="arrow">\u2193</span></button>
             <button id="sort-by-name" class="sort_button">Sort by Name <span class="arrow">\u2193</span></button>
           </div>
           <div id="project-list"></div>
@@ -784,10 +791,10 @@
     `;
       let projects = [];
       const categories = /* @__PURE__ */ new Map();
-      let selected = "All";
+      let selected = /* @__PURE__ */ new Set();
       let search = "";
       let sortType = "date";
-      let sortOrder = "asc";
+      let sortOrder = "desc";
       const listEl = container.querySelector("#project-list");
       const catEl = container.querySelector("#category-selection");
       try {
@@ -815,8 +822,9 @@
       }
       const getFiltered = () => {
         let r = [...projects];
-        if (selected !== "All")
-          r = r.filter((p) => p.categories.includes(selected));
+        if (selected.size > 0) {
+          r = r.filter((p) => p.categories.some((c) => selected.has(c)));
+        }
         if (search) {
           const q = search.toLowerCase();
           r = r.filter(
@@ -841,22 +849,33 @@
       const buildCategories = () => {
         catEl.innerHTML = "";
         const allBtn = container.querySelector("#all-selection");
-        allBtn.className = selected === "All" ? "active" : "";
+        allBtn.className = selected.size === 0 ? "active" : "";
         allBtn.onclick = () => {
-          selected = "All";
+          selected.clear();
           buildCategories();
           refresh();
         };
         [...categories.entries()].filter(([c]) => c !== "All").forEach(([cat]) => {
-          const btn = document.createElement("button");
-          btn.textContent = `${cat} (${categories.get(cat)})`;
-          btn.className = selected === cat ? "active" : "";
-          btn.onclick = () => {
-            selected = cat;
+          const label = document.createElement("label");
+          label.className = "category-checkbox-label";
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.className = "category-checkbox";
+          checkbox.checked = selected.has(cat);
+          checkbox.onchange = function() {
+            if (this.checked) {
+              selected.add(cat);
+            } else {
+              selected.delete(cat);
+            }
             buildCategories();
             refresh();
           };
-          catEl.appendChild(btn);
+          const text = document.createElement("span");
+          text.textContent = `${cat} (${categories.get(cat)})`;
+          label.appendChild(checkbox);
+          label.appendChild(text);
+          catEl.appendChild(label);
         });
       };
       const makeCard = (p) => {
@@ -968,7 +987,7 @@
       const div = document.createElement("div");
       div.className = "bg-white shadow-md sticky top-0 z-40";
       div.innerHTML = `
-      <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fa-solid fa-house"></i></a>
+      <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fas fa-home"></i></a>
       <div class="container mx-auto px-6 pl-9 py-2">
         <div class="flex items-center justify-between">
           <div class="flex items-center title-wrap">
