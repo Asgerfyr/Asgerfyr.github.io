@@ -415,8 +415,11 @@
       const content = document.createElement("div");
       content.className = "p-6";
       const title = document.createElement("h3");
-      title.className = "text-xl font-semibold mb-2 text-black";
+      title.className = "text-xl font-semibold mb-1 text-black";
       title.textContent = project.title;
+      const date = document.createElement("p");
+      date.className = "text-sm text-gray-500 mb-3";
+      date.textContent = project.date;
       const desc = document.createElement("p");
       desc.className = "text-gray-600 mb-4";
       desc.textContent = project.sub_description;
@@ -429,6 +432,7 @@
         topics.appendChild(span);
       });
       content.appendChild(title);
+      content.appendChild(date);
       content.appendChild(desc);
       content.appendChild(topics);
       card.appendChild(imageWrap);
@@ -440,7 +444,7 @@
       const overlay = document.createElement("div");
       overlay.style.cssText = "position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(0,0,0,0.6)";
       const modal = document.createElement("div");
-      modal.style.cssText = "background:white;border-radius:0.75rem;max-width:640px;width:100%;overflow:hidden;position:relative;box-shadow:0 25px 50px rgba(0,0,0,0.3);max-height:90vh;display:flex;flex-direction:column";
+      modal.style.cssText = `background:var(--theme-section-background-color);color:var(--theme-text-color);border-radius:0.75rem;max-width:640px;width:100%;overflow:hidden;position:relative;box-shadow:0 25px 50px rgba(0,0,0,0.3);max-height:90vh;display:flex;flex-direction:column`;
       const img = document.createElement("img");
       img.src = project.image;
       img.alt = project.title;
@@ -448,22 +452,25 @@
       const body = document.createElement("div");
       body.style.cssText = "padding:1.5rem;overflow-y:auto";
       const titleEl = document.createElement("h2");
-      titleEl.style.cssText = "font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;color:#111827";
+      titleEl.style.cssText = `font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;color:var(--theme-text-color)`;
       titleEl.textContent = project.title;
+      const dateEl = document.createElement("p");
+      dateEl.style.cssText = `font-size:0.875rem;color:var(--theme-text-color);opacity:0.7;margin-bottom:1rem`;
+      dateEl.textContent = project.date;
       const descEl = document.createElement("p");
-      descEl.style.cssText = "color:#6b7280;margin-bottom:1rem;line-height:1.6";
+      descEl.style.cssText = `color:var(--theme-text-color);margin-bottom:1rem;line-height:1.6;opacity:0.9`;
       descEl.textContent = project.sub_description;
       const tags = document.createElement("div");
       tags.style.cssText = "display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem";
       project.topicsSummery.forEach((t) => {
         const span = document.createElement("span");
-        span.style.cssText = "background:#dbeafe;color:#1e40af;font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:9999px";
+        span.style.cssText = `background:var(--theme-highlight-color);color:white;font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:9999px;opacity:0.9`;
         span.textContent = t;
         tags.appendChild(span);
       });
       project.category.forEach((c) => {
         const span = document.createElement("span");
-        span.style.cssText = "background:#f0fdf4;color:#166534;font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:9999px";
+        span.style.cssText = `background:var(--theme-subtle-standout-color);color:var(--theme-text-color);font-size:0.75rem;padding:0.25rem 0.625rem;border-radius:9999px;opacity:0.8`;
         span.textContent = c;
         tags.appendChild(span);
       });
@@ -475,6 +482,7 @@
       viewBtn.textContent = "View Full Project \u2192";
       actions.appendChild(viewBtn);
       body.appendChild(titleEl);
+      body.appendChild(dateEl);
       body.appendChild(descEl);
       body.appendChild(tags);
       body.appendChild(actions);
@@ -1459,6 +1467,21 @@
     }
   };
 
+  // src/components/ToTopArrow.ts
+  var ToTopArrow = {
+    render(props) {
+      const trigger = document.createElement("div");
+      trigger.className = "to-top-arrow-trigger";
+      const arrow = document.createElement("button");
+      arrow.className = "to-top-arrow";
+      arrow.title = "Back to top";
+      arrow.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      arrow.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+      trigger.appendChild(arrow);
+      return trigger;
+    }
+  };
+
   // src/app.ts
   ComponentRegistry.register("Header", Header);
   ComponentRegistry.register("Navigation", Navigation);
@@ -1478,6 +1501,7 @@
   ComponentRegistry.register("ProjectSection", ProjectSection);
   ComponentRegistry.register("ProjectConclusion", ProjectConclusion);
   ComponentRegistry.register("ProjectInfo", ProjectInfo);
+  ComponentRegistry.register("ToTopArrow", ToTopArrow);
   var page = new URLSearchParams(window.location.search).get("page") ?? "home";
   PageBuilder.render(`/data/pages/${page}.json`);
 })();

@@ -137,8 +137,8 @@ nav {
         width: 25vw;
         height: 100vh;
         right: 15vw;
-        background: linear-gradient(110deg, var(--theme-background-color) 0%, var(--theme-subtle-standout-color) 50%, var(--theme-background-color) 100%);
-        box-shadow: 0 0 10px var(--dark-shadow-color);
+        background: linear-gradient(110deg, var(--theme-text-color) 0%, #2d3748 50%, var(--theme-text-color) 100%);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     #header-image-container {

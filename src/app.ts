@@ -18,6 +18,7 @@ import { ProjectOverview } from './components/ProjectOverview';
 import { ProjectSection } from './components/ProjectSection';
 import { ProjectConclusion } from './components/ProjectConclusion';
 import { ProjectInfo } from './components/ProjectInfo';
+import { ToTopArrow } from './components/ToTopArrow';
 
 ComponentRegistry.register('Header', Header);
 ComponentRegistry.register('Navigation', Navigation);
@@ -37,6 +38,7 @@ ComponentRegistry.register('ProjectOverview', ProjectOverview);
 ComponentRegistry.register('ProjectSection', ProjectSection);
 ComponentRegistry.register('ProjectConclusion', ProjectConclusion);
 ComponentRegistry.register('ProjectInfo', ProjectInfo);
+ComponentRegistry.register('ToTopArrow', ToTopArrow);
 
 const page = new URLSearchParams(window.location.search).get('page') ?? 'home';
 PageBuilder.render(`/data/pages/${page}.json`);

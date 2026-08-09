@@ -6,6 +6,7 @@
     "/js/common/smooth-sctolling-links.js",
     "/js/common/popup.js",
     "/js/common/inserts.js",
+    "/js/common/to-top-arrow.js",
     "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
     "/js/index/contact-send.js"
   ],
@@ -40,6 +41,7 @@
       "component": "ProjectList",
       "props": { "dataSource": "/data/frontpage_project.json" }
     },
+    { "component": "ToTopArrow", "props": {} },
     { "component": "Skills", "props": {} },
     { "component": "Contact", "props": {} },
     { "component": "Footer", "props": {} }

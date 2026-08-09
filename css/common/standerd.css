@@ -20,6 +20,23 @@ body *{
     transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
+/* Enhanced button styling for better visibility */
+button,
+a[class*="btn"],
+a[class*="button"],
+.button,
+[role="button"] {
+    transition: all 0.3s ease;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
 nav {
     background-color: var(--theme-background-color);
     position: sticky;
@@ -38,10 +55,10 @@ section {
     background-color: var(--theme-section-background-color);
     color: var(--theme-text-color);
     padding-block: 50px;
-    box-shadow: 0 4px 10px var(--theme-section-shadow-color);
+    box-shadow: 0 10px 30px var(--theme-section-shadow-color);
     margin: 20px;
     margin-block: 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     animation: section-fade-in ease-in;
     animation-timeline: view();
     animation-range: entry 0% entry 30%;
@@ -216,11 +233,18 @@ section {
     margin: 20px;
     border-radius: 15px;
     border: none;
-    background-color: var(--theme-subtle-standout-color);
-    color: var(--theme-text-color);
+    background-color: var(--theme-highlight-color);
+    color: white;
     font-size: max(2vw, 15px);
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    font-weight: 600;
+}
+
+.a-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 .hidden {

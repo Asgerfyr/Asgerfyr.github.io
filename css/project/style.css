@@ -224,3 +224,86 @@ abbr:hover::after {
     flex-grow: 1;
     max-width: 150px;
 }
+
+/* Projects Section - Styled as a proper section box */
+#projects {
+    background-color: var(--theme-section-background-color);
+    color: var(--theme-text-color);
+    padding-block: 50px;
+    box-shadow: 0 10px 30px var(--theme-section-shadow-color);
+    margin: 20px;
+    margin-block: 40px;
+    border-radius: 12px;
+}
+
+#projects h2 {
+    color: var(--theme-text-color) !important;
+}
+
+#projects span.text-blue-600 {
+    color: var(--theme-highlight-color) !important;
+}
+
+#projects p {
+    color: var(--theme-text-color);
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--theme-section-background-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: var(--theme-highlight-color);
+}
+
+.project-card h3 {
+    color: var(--theme-text-color) !important;
+}
+
+.project-card p {
+    color: var(--theme-text-color);
+}
+
+/* Filter Buttons */
+.filter-btn {
+    transition: all 0.3s ease;
+    border: 2px solid var(--theme-highlight-color);
+    font-weight: 600;
+}
+
+.filter-btn.bg-blue-600 {
+    background-color: var(--theme-highlight-color) !important;
+    border-color: var(--theme-highlight-color) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn:not(.bg-blue-600) {
+    background-color: var(--theme-section-background-color) !important;
+    color: var(--theme-text-color) !important;
+    border-color: var(--theme-highlight-color) !important;
+}
+
+.filter-btn:not(.bg-blue-600):hover {
+    background-color: var(--theme-subtle-standout-color) !important;
+}
+
+/* View All Projects Button */
+#projects .border-2 {
+    border-color: var(--theme-highlight-color) !important;
+    color: var(--theme-highlight-color) !important;
+}
+
+#projects .border-2:hover {
+    background-color: var(--theme-highlight-color) !important;
+    color: white !important;
+}
