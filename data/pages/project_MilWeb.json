@@ -18,11 +18,11 @@
           "Skabe en enkel og brugervenlig grænseflade"
         ],
         "features": [
-          { "icon": "user-lock", "title": "Rollebaseret login og sikkerhed", "description": "Brugerne logger ind via en loginside, og deres adgang bestemmes af brugerrollen (soldat eller general)." },
-          { "icon": "map", "title": "Interaktivt kort (Leaflet.js)", "description": "Generalens interface viser et interaktivt kort, hvor troppernes positioner vises som farvede markører i realtid." },
-          { "icon": "lock", "title": "Sikkerhed og kryptering", "description": "Adgangskoder hashes med SHA256, og data i databasen krypteres med AES. HTTPS sikrer kommunikationen." },
-          { "icon": "wifi", "title": "Realtidskommunikation", "description": "Systemet bruger fetch API'er til at sende og hente data mellem frontend og backend dynamisk." },
-          { "icon": "puzzle-piece", "title": "Session og adgangskontrol", "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan tilgå bestemte sider." }
+          { "icon": "user-lock", "color": "orange", "title": "Rollebaseret login og sikkerhed", "description": "Brugerne logger ind via en loginside, og deres adgang bestemmes af brugerrollen (soldat eller general)." },
+          { "icon": "map", "color": "green", "title": "Interaktivt kort (Leaflet.js)", "description": "Generalens interface viser et interaktivt kort, hvor troppernes positioner vises som farvede markører i realtid." },
+          { "icon": "lock", "color": "violet", "title": "Sikkerhed og kryptering", "description": "Adgangskoder hashes med SHA256, og data i databasen krypteres med AES. HTTPS sikrer kommunikationen." },
+          { "icon": "wifi", "color": "cyan", "title": "Realtidskommunikation", "description": "Systemet bruger fetch API'er til at sende og hente data mellem frontend og backend dynamisk." },
+          { "icon": "puzzle-piece", "color": "yellow", "title": "Session og adgangskontrol", "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan tilgå bestemte sider." }
         ],
         "images": [
           { "url": "https://i.pinimg.com/736x/c1/0c/ca/c10ccabf808683e2e2c8dcc1927b93d1.jpg", "alt": "Login side", "caption": "Login side med rollebaseret adgang" },
@@ -35,7 +35,8 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "circuit",
+        "icon": "microchip",
+        "color": "purple",
         "title": "System Architecture",
         "content": {
           "Frontend": [{ "type": "text", "content": "Udviklet i HTML, CSS og JavaScript. Kortet er lavet med Leaflet.js, og designet bygger på gestaltlovene for at sikre brugervenlighed. Soldatsiden er optimeret til mobilbrug, mens generalsiden er lavet til desktopbrug." }],
@@ -56,7 +57,8 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "ui",
+        "icon": "users-viewfinder",
+        "color": "orange",
         "title": "UI Design",
         "content": {
           "null": [{ "type": "text", "content": "Brugerfladen i MilWeb er designet med fokus på enkelhed, funktionalitet og tydelig rolleopdeling. Der er udviklet to adskilte grænseflader - én til soldater og én til generaler." }],
@@ -85,6 +87,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "code",
+        "color": "green",
         "title": "Code",
         "content": {
           "null": [{ "type": "text", "content": "Koden er opdelt i moduler for at sikre overblik, genbrug og skalerbarhed. Backend er opbygget med Express.js og anvender både routers, middleware og controller-funktioner." }],
@@ -112,6 +115,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "test",
+        "color": "blue",
         "title": "Testing-Evaluation",
         "content": {
           "null": [{ "type": "text", "content": "Systemet blev testet løbende gennem udviklingsfasen og afslutningsvis evalueret gennem brugertests med fiktive scenarier for soldat og general." }],

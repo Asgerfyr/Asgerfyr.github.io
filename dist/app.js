@@ -1204,10 +1204,6 @@
       }
     }
   }
-  async function fetchIcons() {
-    const res = await fetch("/data/utility/project_icons.json");
-    return res.json();
-  }
 
   // src/components/ProjectOverview.ts
   var ProjectOverview = {
@@ -1216,7 +1212,6 @@
       const objectives = props.objectives ?? [];
       const features = props.features ?? [];
       const images = props.images ?? [];
-      const icons = features.length ? await fetchIcons() : {};
       const wrapper = document.createElement("div");
       wrapper.id = "overview";
       wrapper.className = "section-anchor mb-16 container mx-auto px-6 pt-8";
@@ -1240,11 +1235,11 @@
           <h3 class="text-xl font-semibold mb-4">Key Features</h3>
           <div class="space-y-4">
             ${features.map((f) => {
-        const ic = icons[f.icon] ?? icons["missingIcon"] ?? { name: "question", color: "gray" };
+        const color = f.color || "blue";
         return `
                 <div class="flex items-start">
-                  <div class="bg-${ic.color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
-                    <i class="fas fa-${ic.name} text-${ic.color}-500"></i>
+                  <div class="bg-${color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
+                    <i class="fas fa-${f.icon} text-${color}-500"></i>
                   </div>
                   <div>
                     <h4 class="font-medium">${f.title}</h4>
@@ -1285,11 +1280,10 @@
   var ProjectSection = {
     async render(props) {
       const icon = props.icon ?? "cube";
+      const color = props.color ?? "blue";
       const title = props.title ?? "Section";
       const content = props.content ?? {};
       const images = props.images;
-      const icons = await fetchIcons();
-      const iconObj = icons[icon] ?? icons["missingIcon"] ?? { name: "cube", color: "blue" };
       const slugify = (s) => {
         let str = (s || "").toString().trim();
         str = str.replace(/<[^>]*>/g, "");
@@ -1361,7 +1355,7 @@
       card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8";
       card.innerHTML = `
       <div class="flex items-center mb-6">
-        <i class="fas fa-${iconObj.name} text-blue-500 text-2xl mr-3"></i>
+        <i class="fas fa-${icon} text-${color}-500 text-2xl mr-3"></i>
         <h2 class="text-2xl font-bold">${title} Documentation</h2>
       </div>
     `;
@@ -1441,10 +1435,30 @@
       const size = props.team_size ?? 1;
       const members = props.team_members ?? [];
       const dur = props.duration ?? "";
+      const links = props.project_links ?? [];
       const wrapper = document.createElement("div");
       wrapper.className = "container mx-auto px-6 pb-8";
       const card = document.createElement("div");
       card.className = "bg-white rounded-xl shadow-md overflow-hidden p-6";
+      let linksHtml = "";
+      if (links.length) {
+        linksHtml = `
+        <div>
+          <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
+          <div class="flex flex-wrap gap-3">
+            ${links.map((l) => {
+          const iconHtml = l.icon ? `<i class="fas fa-${l.icon}"></i>` : "";
+          return `
+                <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
+                  ${iconHtml}
+                  ${l.label}
+                </a>
+              `;
+        }).join("")}
+          </div>
+        </div>
+      `;
+      }
       card.innerHTML = `
       <div class="flex items-center mb-6">
         <i class="fas fa-info text-blue-500 text-2xl mr-3"></i>
@@ -1461,6 +1475,7 @@
           </ul>` : ""}
         </div>
       </div>
+      ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-200">${linksHtml}</div>` : ""}
     `;
       wrapper.appendChild(card);
       return wrapper;

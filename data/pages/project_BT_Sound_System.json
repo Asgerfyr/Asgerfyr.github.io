@@ -21,11 +21,11 @@
           "Anvende 3D-modellering til at optimere kabinetdesign med fokus på funktionalitet og enkel installation"
         ],
         "features": [
-          { "icon": "microchip", "title": "ESP32 Bluetooth-integration", "description": "Implementering af <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr>-protokol på ESP32 for trådløs modtagelse af lydsignaler." },
-          { "icon": "power", "title": "Strømforsyning med sikker isolation", "description": "Omformning af 230 V AC til 5 V DC med fysisk og elektrisk adskillelse mellem netspænding og lavspændingskredsløb." },
-          { "icon": "circuit", "title": "Kredsløbsdesign", "description": "Udvikling af elektronisk kredsløb med minimal elektrisk støj ved hjælp af passivt RC-filter." },
-          { "icon": "code", "title": "Firmwareudvikling", "description": "Programmering af ESP32 med <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr> ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering." },
-          { "icon": "cube", "title": "3D-modellering og printning", "description": "Design af et kompakt kabinet med fokus på fysisk adskillelse af strømforsyning og lydsektion, effektiv varmeafledning og enkel installation under sengen." }
+          { "icon": "microchip", "color": "blue", "title": "ESP32 Bluetooth-integration", "description": "Implementering af <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr>-protokol på ESP32 for trådløs modtagelse af lydsignaler." },
+          { "icon": "bolt", "color": "yellow", "title": "Strømforsyning med sikker isolation", "description": "Omformning af 230 V AC til 5 V DC med fysisk og elektrisk adskillelse mellem netspænding og lavspændingskredsløb." },
+          { "icon": "microchip", "color": "purple", "title": "Kredsløbsdesign", "description": "Udvikling af elektronisk kredsløb med minimal elektrisk støj ved hjælp af passivt RC-filter." },
+          { "icon": "code", "color": "green", "title": "Firmwareudvikling", "description": "Programmering af ESP32 med <abbr data-tooltip=\"Advanced Audio Distribution Profile\">Bluetooth A2DP</abbr> ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering." },
+          { "icon": "cube", "color": "purple", "title": "3D-modellering og printning", "description": "Design af et kompakt kabinet med fokus på fysisk adskillelse af strømforsyning og lydsektion, effektiv varmeafledning og enkel installation under sengen." }
         ],
         "images": [
           { "url": "https://i.pinimg.com/736x/28/85/fb/2885fbb7427c9ed0e11563d3a6294c2d.jpg", "alt": "Trådløst Bluetooth-musikanlæg under seng", "caption": "Trådløst Bluetooth-musikanlæg installeret under seng" },

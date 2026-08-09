@@ -18,11 +18,11 @@
           "Tilbyde real-time diagnostik og brugervenlig mode-kontrol (auto/manual/regulating)"
         ],
         "features": [
-          { "icon": "lightbulb", "title": "Adaptiv Lysregulering", "description": "Dynamisk justering af lysintensitet baseret på tilstedeværelse, tidsvindue og naturligt lys måling." },
-          { "icon": "database", "title": "Struktureret Historik", "description": "NumPy-baseret tilstandslager som bevarer fuldstændig datahistorik for analyse og debugging." },
-          { "icon": "microchip", "title": "Centraliseret Logik", "description": "Alle lyskontrol-beslutninger i én Processor klasse - undgår distribueret og redundant kode." },
-          { "icon": "wifi", "title": "UART Pipeline", "description": "Robust seriel kommunikation mellem Arduino og Raspberry Pi med error handling og connection resilience." },
-          { "icon": "sliders", "title": "Intelligent Mode-kontrol", "description": "Brugervenlig styring af Auto/Manual/Regulating modes med enkel abstraktion og klare overgange." }
+          { "icon": "lightbulb", "color": "yellow", "title": "Adaptiv Lysregulering", "description": "Dynamisk justering af lysintensitet baseret på tilstedeværelse, tidsvindue og naturligt lys måling." },
+          { "icon": "database", "color": "blue", "title": "Struktureret Historik", "description": "NumPy-baseret tilstandslager som bevarer fuldstændig datahistorik for analyse og debugging." },
+          { "icon": "microchip", "color": "purple", "title": "Centraliseret Logik", "description": "Alle lyskontrol-beslutninger i én Processor klasse - undgår distribueret og redundant kode." },
+          { "icon": "wifi", "color": "cyan", "title": "UART Pipeline", "description": "Robust seriel kommunikation mellem Arduino og Raspberry Pi med error handling og connection resilience." },
+          { "icon": "sliders", "color": "green", "title": "Intelligent Mode-kontrol", "description": "Brugervenlig styring af Auto/Manual/Regulating modes med enkel abstraktion og klare overgange." }
         ],
         "images": [
           { "url": "https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0", "alt": "LR System Overview", "caption": "Systemet med Arduino, Raspberry Pi og touch display" }
@@ -33,6 +33,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "sitemap",
+        "color": "blue",
         "title": "Arkitektur: Pipeline-Model med 6 Komponenter",
         "content": {
           "Arkitektonisk Design": [
@@ -79,6 +80,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "database",
+        "color": "blue",
         "title": "Data Klasse - Central State Storage",
         "content": {
           "Formål og Design": [
@@ -106,6 +108,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "microchip",
+        "color": "purple",
         "title": "Processor Klasse: Centraliseret Kontrollogik",
         "content": {
           "Arkitektonisk Betydning": [
@@ -134,6 +137,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "exchange",
+        "color": "green",
         "title": "Router Klasse - Central Routing",
         "content": {
           "Rolle i Systemet": [
@@ -179,6 +183,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "cable",
+        "color": "cyan",
         "title": "UART Communication: Raspberry Pi ↔ Arduino",
         "content": {
           "Raspberry Pi UART Driver": [
@@ -207,6 +212,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "test",
+        "color": "blue",
         "title": "Testing Strategi og Resultater",
         "content": {
           "Teststrategi": [
@@ -235,6 +241,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "cube",
+        "color": "purple",
         "title": "Hardware Arkitektur",
         "content": {
           "System Layout": [
@@ -267,6 +274,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "user",
+        "color": "orange",
         "title": "Min Rolle & Tekn Bidrag",
         "content": {
           "Primære Ansvar (Høj Indflydelse)": [
@@ -323,6 +331,11 @@
         "team_members": [
           { "name": "Asger Grundtdal Stidsen", "role": ""},
           { "name": "Yusuf Cakir", "role": ""}
+        ],
+        "project_links": [
+          { "label": "Repository: Raspberry pi", "icon": "github", "url": "https://github.com/UNIprojekter/S2-RPI" },
+          { "label": "Repository: Arduino", "icon": "github", "url": "https://github.com/UNIprojekter/S2-ARDUINO" },
+          { "label": "Documentation", "icon": "book", "url": "" }
         ]
       }
     }

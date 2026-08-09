@@ -13,10 +13,10 @@
           "Muliggøre nem udvidelse og vedligeholdelse af indholdet"
         ],
         "features": [
-          { "icon": "ui",          "title": "Responsivt Design",             "description": "Siden tilpasser sig alle skærmstørrelser og enheder for optimal brugeroplevelse." },
-          { "icon": "gauge",       "title": "Hurtig Ydeevne",                "description": "Bygget med moderne frontend-teknologier for lynhurtig indlæsning og navigation." },
-          { "icon": "puzzle-piece","title": "Komponentbaseret Arkitektur",   "description": "Genanvendelige komponenter gør det let at udvide og vedligeholde websitet." },
-          { "icon": "user",        "title": "CV og Kontakt",                 "description": "Indeholder CV-download og kontaktformular for direkte henvendelser." }
+          { "icon": "users-viewfinder", "color": "orange", "title": "Responsivt Design",             "description": "Siden tilpasser sig alle skærmstørrelser og enheder for optimal brugeroplevelse." },
+          { "icon": "tachometer-alt", "color": "blue", "title": "Hurtig Ydeevne",                "description": "Bygget med moderne frontend-teknologier for lynhurtig indlæsning og navigation." },
+          { "icon": "puzzle-piece",         "color": "yellow", "title": "Komponentbaseret Arkitektur",   "description": "Genanvendelige komponenter gør det let at udvide og vedligeholde websitet." },
+          { "icon": "user",           "color": "orange", "title": "CV og Kontakt",                 "description": "Indeholder CV-download og kontaktformular for direkte henvendelser." }
         ],
         "images": [
           { "url": "https://i.pinimg.com/736x/83/04/77/8304774632a374472f5f01fc73ddeab5.jpg", "alt": "Portfolio Website Screenshot", "caption": "Forsiden af portfolio websitet med projektoversigt og navigation." }
@@ -27,6 +27,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "code",
+        "color": "green",
         "title": "Teknologier og Arkitektur",
         "content": {
           "Teknologier og Arkitektur": [
@@ -39,7 +40,8 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "ui",
+        "icon": "users-viewfinder",
+        "color": "orange",
         "title": "Design og Brugervenlighed",
         "content": {
           "Design og Brugervenlighed": [
@@ -58,6 +60,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "plug",
+        "color": "green",
         "title": "Integrationer",
         "content": {
           "Integrationer": [{ "type": "list", "content": ["EmailJS til kontaktformular (direkte e-mail fra siden)", "CV-download som PDF via html2pdf.js", "Eksterne links til projekter og GitHub"] }]

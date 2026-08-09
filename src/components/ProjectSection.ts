@@ -1,4 +1,4 @@
-import { fetchIcons, renderSubItem, renderImageGallery } from '../utils/project';
+import { renderSubItem, renderImageGallery } from '../utils/project';
 import type { ProjectImage, SubSectionItem } from '../utils/project';
 
 interface SectionImages { image_title?: string; image_elements: ProjectImage[]; }
@@ -6,12 +6,10 @@ interface SectionImages { image_title?: string; image_elements: ProjectImage[]; 
 export const ProjectSection = {
   async render(props: Record<string, unknown>): Promise<HTMLElement> {
     const icon    = (props.icon    as string) ?? 'cube';
+    const color   = (props.color   as string) ?? 'blue';
     const title   = (props.title   as string) ?? 'Section';
     const content = (props.content as Record<string, SubSectionItem[]>) ?? {};
     const images  = props.images   as SectionImages | undefined;
-
-    const icons = await fetchIcons();
-    const iconObj = icons[icon] ?? icons['missingIcon'] ?? { name: 'cube', color: 'blue' };
 
     // Create a safe slug id for the section heading so anchors work with special characters
     const slugify = (s: string) => {
@@ -110,7 +108,7 @@ export const ProjectSection = {
     card.className = 'bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8';
     card.innerHTML = `
       <div class="flex items-center mb-6">
-        <i class="fas fa-${iconObj.name} text-blue-500 text-2xl mr-3"></i>
+        <i class="fas fa-${icon} text-${color}-500 text-2xl mr-3"></i>
         <h2 class="text-2xl font-bold">${title} Documentation</h2>
       </div>
     `;

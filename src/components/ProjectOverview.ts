@@ -1,7 +1,7 @@
-import { fetchIcons, renderImageGallery, ensureShowcase, openShowcase } from '../utils/project';
-import type { ProjectIcon, ProjectImage } from '../utils/project';
+import { renderImageGallery, ensureShowcase, openShowcase } from '../utils/project';
+import type { ProjectImage } from '../utils/project';
 
-interface Feature { icon: string; title: string; description: string; }
+interface Feature { icon: string; title: string; description: string; color?: string; }
 
 export const ProjectOverview = {
   async render(props: Record<string, unknown>): Promise<HTMLElement> {
@@ -9,8 +9,6 @@ export const ProjectOverview = {
     const objectives  = (props.objectives  as string[]) ?? [];
     const features    = (props.features    as Feature[]) ?? [];
     const images      = (props.images      as ProjectImage[]) ?? [];
-
-    const icons = features.length ? await fetchIcons() : {} as Record<string, ProjectIcon>;
 
     const wrapper = document.createElement('div');
     wrapper.id = 'overview';
@@ -36,11 +34,11 @@ export const ProjectOverview = {
           <h3 class="text-xl font-semibold mb-4">Key Features</h3>
           <div class="space-y-4">
             ${features.map(f => {
-              const ic = icons[f.icon] ?? icons['missingIcon'] ?? { name: 'question', color: 'gray' };
+              const color = f.color || 'blue';
               return `
                 <div class="flex items-start">
-                  <div class="bg-${ic.color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
-                    <i class="fas fa-${ic.name} text-${ic.color}-500"></i>
+                  <div class="bg-${color}-100 p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem">
+                    <i class="fas fa-${f.icon} text-${color}-500"></i>
                   </div>
                   <div>
                     <h4 class="font-medium">${f.title}</h4>

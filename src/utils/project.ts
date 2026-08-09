@@ -1,4 +1,3 @@
-export interface ProjectIcon { name: string; color: string; }
 export interface ProjectImage { url: string; alt: string; title?: string; caption?: string; }
 export interface SubSectionItem { type: string; content: unknown; language?: string; }
 
@@ -180,7 +179,4 @@ export function renderSubItem(item: SubSectionItem): HTMLElement {
   }
 }
 
-export async function fetchIcons(): Promise<Record<string, ProjectIcon>> {
-  const res = await fetch('/data/utility/project_icons.json');
-  return res.json() as Promise<Record<string, ProjectIcon>>;
-}
+// Image showcase utilities (rest of the file remains unchanged)

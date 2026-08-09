@@ -144,7 +144,7 @@ nav {
     #header-image-container {
         height: 100vh;
         width: calc(100% + 100vh * 0.17633);
-        transform: translateX(calc(-100vh * 0.17633 / 2)) skew(10deg);
+        transform: translateX(calc(-100vh * 0.14 / 2)) skew(10deg);
         ;
     }
 

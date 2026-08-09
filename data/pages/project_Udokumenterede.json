@@ -16,6 +16,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "fire",
+        "color": "red",
         "title": "Styring af brændselsfyr",
         "content": {
           "Baggrund": [{ "type": "text", "content": "Fyret er udstyret med en vandpumpe, der cirkulerer varmt vand ind i huset. Den eksisterende automatik har en udfordring: pumpen slukker ved en højere temperatur end ønsket, hvilket resulterer i, at brugbar varme går tabt. Projektets formål er at udvikle en ny styring med mere fleksibilitet." }],
@@ -48,7 +49,8 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "idea",
+        "icon": "lightbulb",
+        "color": "yellow",
         "title": "LED-strip sving",
         "content": {
           "Baggrund": [{ "type": "text", "content": "LED-strips er designet til at være fleksible i længden, men har begrænset evne til at dreje skarpe hjørner. Den traditionelle metode er at klippe strippen over og lodde forbindelser, men dette medfører permanente samlinger." }],
@@ -68,6 +70,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "home",
+        "color": "green",
         "title": "Home Assistant OS på gammel PC",
         "content": {
           "Home Assistant OS på gammel PC": [{ "type": "text", "content": "Home Assistant OS er installeret på en gammel PC. Systemet har sit eget wakeword og giver kontrol over lys og temperatur i huset." }]
@@ -81,6 +84,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "cube",
+        "color": "purple",
         "title": "4x4x4-LED cube med Arduino Mega",
         "content": {
           "beskrivelse": [
@@ -97,6 +101,7 @@
       "component": "ProjectSection",
       "props": {
         "icon": "recycle",
+        "color": "green",
         "title": "Affaldssortering",
         "content": {
           "Baggrund": [{ "type": "text", "content": "Projektet er et affaldssorteringssystem til husholdninger, der kan genkende og sortere affald i fem kategorier. Systemet er udviklet som et eksamensprojekt i robotteknologi." }],
