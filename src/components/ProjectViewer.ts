@@ -29,7 +29,7 @@ export const ProjectViewer = {
     container.id = 'page-container';
     container.innerHTML = `
       <div id="header">
-        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
+        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; color: #3b82f6;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
         <h1>Project Viewer</h1>
       </div>
       <div id="content-layout-container">

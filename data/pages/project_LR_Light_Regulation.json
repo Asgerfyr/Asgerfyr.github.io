@@ -5,7 +5,12 @@
     "/js/common/smooth-sctolling-links.js"
   ],
   "layout": [
-    { "component": "ProjectHeader", "props": { "title": "Light Regulation System (LR)" } },
+    {
+      "component": "ProjectHeader",
+      "props": {
+        "title": "Light Regulation System (LR)"
+      }
+    },
     {
       "component": "ProjectOverview",
       "props": {
@@ -18,14 +23,53 @@
           "Tilbyde real-time diagnostik og brugervenlig mode-kontrol (auto/manual/regulating)"
         ],
         "features": [
-          { "icon": "lightbulb", "color": "yellow", "title": "Adaptiv Lysregulering", "description": "Dynamisk justering af lysintensitet baseret på tilstedeværelse, tidsvindue og naturligt lys måling." },
-          { "icon": "database", "color": "blue", "title": "Struktureret Historik", "description": "NumPy-baseret tilstandslager som bevarer fuldstændig datahistorik for analyse og debugging." },
-          { "icon": "microchip", "color": "purple", "title": "Centraliseret Logik", "description": "Alle lyskontrol-beslutninger i én Processor klasse - undgår distribueret og redundant kode." },
-          { "icon": "wifi", "color": "cyan", "title": "UART Pipeline", "description": "Robust seriel kommunikation mellem Arduino og Raspberry Pi med error handling og connection resilience." },
-          { "icon": "sliders", "color": "green", "title": "Intelligent Mode-kontrol", "description": "Brugervenlig styring af Auto/Manual/Regulating modes med enkel abstraktion og klare overgange." }
+          {
+            "icon": "lightbulb",
+            "color": "yellow",
+            "title": "Adaptiv Lysregulering",
+            "description": "Dynamisk justering af lysintensitet baseret på tilstedeværelse, tidsvindue og naturligt lys måling."
+          },
+          {
+            "icon": "database",
+            "color": "blue",
+            "title": "Struktureret Historik",
+            "description": "NumPy-baseret tilstandslager som bevarer fuldstændig datahistorik for analyse og debugging."
+          },
+          {
+            "icon": "microchip",
+            "color": "purple",
+            "title": "Centraliseret Logik",
+            "description": "Alle lyskontrol-beslutninger i én Processor klasse - undgår distribueret og redundant kode."
+          },
+          {
+            "icon": "wifi",
+            "color": "cyan",
+            "title": "UART Pipeline",
+            "description": "Robust seriel kommunikation mellem Arduino og Raspberry Pi med error handling og connection resilience."
+          },
+          {
+            "icon": "sliders",
+            "color": "green",
+            "title": "Intelligent Mode-kontrol",
+            "description": "Brugervenlig styring af Auto/Manual/Regulating modes med enkel abstraktion og klare overgange."
+          }
         ],
         "images": [
-          { "url": "https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0", "alt": "LR System Overview", "caption": "Systemet med Arduino, Raspberry Pi og touch display" }
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0",
+            "alt": "LR System Overview",
+            "caption": "Systemet med Arduino, Raspberry Pi og touch display"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczPuA9zVaT1mvplhfdb2GgVzSWFaJmKaGdyk0YIyBA-gcT1kaZV0DCYp8GdbuD0uS2hdyPauDeQLS-s9ISvk3XneHm_NZ49JMT1FqoYcwO2CfCrCo_jUeaZ6q2_tq-scsrPaKj6TRlVo3wbghScqnjpj=w1393-h1045-s-no-gm?authuser=0",
+            "alt": "LR graf og indstilling af lysintensitet",
+            "caption": "Graf og manuel indstilling af lysintensitet"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczPXlXXiOGq6cJB62xUtNeYJqf4OnLgB9a3pIZQO7MSas4AuuqS9u3Ycc7A1RAZ0PzjZyjpKFxO3bRQ-KLNzCjX4G5j4AMmHMF9Mm_y1Qzf4u70rz6taK0JFUpO_3C6SByxaf77zmr0ebEgW6hytFOw7=w1393-h1045-s-no-gm?authuser=0",
+            "alt": "LR indstilling side til indstilling af manuel og regulering",
+            "caption": "Indstilling af lys regulering (auto, regulering og manuel styring)"
+          }
         ]
       }
     },
@@ -37,41 +81,94 @@
         "title": "Arkitektur: Pipeline-Model med 6 Komponenter",
         "content": {
           "Arkitektonisk Design": [
-            { "type": "text", "content": "Systemet implementeres som en <strong>klassisk pipeline-arkitektur</strong>: Data flows envejen gennem komponenter, hvor hver transformerer input til output for næste komponent. Dette sikrer:" },
-            { "type": "list", "content": [
-              "Separation of concerns - hver klasse har ét klart ansvar",
-              "Testabilitet - hver komponent kan enhedstestes isoleret",
-              "Vedligeholdelse - ændringer i én komponent påvirker ikke andre",
-              "Udvidelse - nye features tilføjes uden at modificere eksisterende kode"
-            ] }
+            {
+              "type": "text",
+              "content": "Systemet implementeres som en <strong>klassisk pipeline-arkitektur</strong>: Data flows envejen gennem komponenter, hvor hver transformerer input til output for næste komponent. Dette sikrer:"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Separation of concerns - hver klasse har ét klart ansvar",
+                "Testabilitet - hver komponent kan enhedstestes isoleret",
+                "Vedligeholdelse - ændringer i én komponent påvirker ikke andre",
+                "Udvidelse - nye features tilføjes uden at modificere eksisterende kode"
+              ]
+            }
           ],
           "De 6 Komponenter": [
-            { "type": "text", "content": "<strong>Raspberry Pi (Python) - Min Primære Bidrag:</strong>" },
-            { "type": "list", "content": [
-              "<strong>1. UART Driver</strong> - Seriel kommunikation (read/write) med Arduino",
-              "<strong>2. Data</strong> - NumPy-baseret struktureret historiklager",
-              "<strong>3. Processor</strong> - Centraliseret lyskontrol-logik og beslutninger",
-              "<strong>4. Router</strong> - Kommando-routing og tilstandsændringer (testing & bug-fixing)"
-            ] },
-            { "type": "text", "content": "<strong>Raspberry Pi (Python) - Andre Komponenter:</strong>" },
-            { "type": "list", "content": [
-              "<strong>5. GUI</strong> - Brugergrænsefladen med slider, mode-knapper, status-display",
-              "<strong>6. Developer GUI</strong> - Diagnostik, datavisning, health-check, test-data injection"
-            ] },
-            { "type": "text", "content": "<strong>Arduino (C++) - Min Sekundære Bidrag:</strong>" },
-            { "type": "list", "content": [
-              "UART Driver (OOP refactoring) - Kommunikation med Raspberry Pi",
-              "Router - Kommando-routing og sensor-broadcasting"
-            ] }
+            {
+              "type": "text",
+              "content": "<strong>Raspberry Pi (Python) - Min Primære Bidrag:</strong>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>1. UART Driver</strong> - Seriel kommunikation (read/write) med Arduino",
+                "<strong>2. Data</strong> - NumPy-baseret struktureret historiklager",
+                "<strong>3. Processor</strong> - Centraliseret lyskontrol-logik og beslutninger",
+                "<strong>4. Router</strong> - Kommando-routing og tilstandsændringer (testing & bug-fixing)"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "<strong>Raspberry Pi (Python) - Andre Komponenter:</strong>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>5. GUI</strong> - Brugergrænsefladen med slider, mode-knapper, status-display",
+                "<strong>6. Developer GUI</strong> - Diagnostik, datavisning, health-check, test-data injection"
+              ]
+            },
+            {
+              "type": "text",
+              "content": "<strong>Arduino (C++) - Min Sekundære Bidrag:</strong>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "UART Driver (OOP refactoring) - Kommunikation med Raspberry Pi",
+                "Router - Kommando-routing og sensor-broadcasting"
+              ]
+            }
           ],
           "Dataflow Pipeline": [
-            { "type": "code", "language": "plaintext", "content": "Arduino Sensors\n    ↓\n[Arduino UART] → (serial port) → [Raspberry Pi UART Driver]\n                                         ↓\n                                    [Router.uart_rout()]\n                                         ↓\n                                    [Processor.add()]\n                                         ↓\n                                     [Data.add()]\n                                         ↓\n                                   (stored in NumPy array)\n                                         ↓\n                                    [Router] ←→ [GUI]\n(Data flows one direction through pipeline. Router returns state to GUI)" }
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Arduino Sensors\n    ↓\n[Arduino UART] → (serial port) → [Raspberry Pi UART Driver]\n                                         ↓\n                                    [Router.uart_rout()]\n                                         ↓\n                                    [Processor.add()]\n                                         ↓\n                                     [Data.add()]\n                                         ↓\n                                   (stored in NumPy array)\n                                         ↓\n                                    [Router] ←→ [GUI]\n(Data flows one direction through pipeline. Router returns state to GUI)"
+            }
           ],
           "Reverse Command Flow": [
-            { "type": "code", "language": "plaintext", "content": "GUI User Input (slider, button)\n        ↓\n  [Router.add(request)]\n        ↓\n  [Processor.add()] ← processes with existing state\n        ↓\n  [Data.add()] ← stores new state (returns datapoint)\n        ↓\n  [Router] ← returns new state ← (then Router sends to UART or returns to GUI)\n        ↓\n   Arduino LED/control" }
-          ],
-          "IMAGE_PLACEHOLDER_ARCHITECTURE_DIAGRAM": [
-            { "type": "text", "content": "<em style='color: #999;'>[Komplet pipeline-arkitektur diagram med alle 6 komponenter og dataflow - indsæt billede her]</em>" }
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "GUI User Input (slider, button)\n        ↓\n  [Router.add(request)]\n        ↓\n  [Processor.add()] ← processes with existing state\n        ↓\n  [Data.add()] ← stores new state (returns datapoint)\n        ↓\n  [Router] ← returns new state ← (then Router sends to UART or returns to GUI)\n        ↓\n   Arduino LED/control"
+            }
+          ]
+        },
+        "images": {
+          "image_elements": [
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczPBWQ2Sg3UnWd044wFpt-r1_HXvS1thrXCzYRjjpauG-8-B3XQq_rFQZpPrUKO1he0zf6x0-W6pPN58xIYfHRiQkeGb4zlLAZCOq-sJJPx0bvnjd-s009JxEaLFR5Z9fQMeLY8VmB7sNsy8hfVJMShl=w1875-h884-s-no-gm?authuser=0",
+              "alt": "Klasse diagram af Arduino"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczNja9QVZ6KZJyjI3UrN1YSK9pwU62rPjSSFH0U0XYpF1obfsoSsxLyL9PQZgtVe33KOH_igO47QvoyY-cwpjlzqEht1WOJlYS94P-v5zsbMm3W6b_ZTY1b2eTdax14GZDH63lhA0qle_lDhNob2m0Qm=w1875-h1011-s-no-gm?authuser=0",
+              "alt": "Klasse diagram af Raspberry pi"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczP8-pE6Ge0Mp--SoEOtkb8C3FkRfH9locPETk-ZXKEIRcXlSRH8g3sy5Vu6xxn361RuIduIVPsD-yTv-4n9NU5Tky361yxubuW9Beqs4ZhDxa-8Q0NV_h0J5ilwr9oCsAA3MIwdlGXHIKs2j-yyYJGo=w1875-h1000-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 2"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczN30X2U_B7gDyoNlkNHSDeAPTTUiQhj8mqzAmaXYDHJb8oDjK7foDSu_yETgbaOsEoYpjtYh85u5QffNmUFpbJDYd2QiOsdznvfa6DmRvt-37tBnJs3A_Nnn5fsFMJI1RrnS1Hznis5v3bibGJ93qh1=w1875-h757-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 3"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczNS9GSV4Z7C_uT_EptbeKgd-xXzm76pimmQWiFd2o07itJylqRBC4acQ422WwnPZD4xC89QwsYgaa2VSoCtUsMgLEyp5tetjwAdBD31idniY69lqTrFCz_GS9JDOg_wWcBDgE6q_Crs4eEhRVxjB2ln=w1875-h539-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 6"
+            }
           ]
         }
       }
@@ -84,22 +181,89 @@
         "title": "Data Klasse - Central State Storage",
         "content": {
           "Formål og Design": [
-            { "type": "text", "content": "Data-klassen fungerer som systemets centrale tilstandslager. Den bevarer fuldstændig historik over alle systemtilstande ved at oprette nye datapoint ved hver ændring, i stedet for at overskrive eksisterende data." },
-            { "type": "text", "content": "Denne tilgang sikrer, at historiske data altid er tilgængelige for analyse, mens det nyeste tilstand forbliver let tilgængeligt." }
+            {
+              "type": "text",
+              "content": "Data-klassen fungerer som systemets centrale tilstandslager. Den bevarer fuldstændig historik over alle systemtilstande ved at oprette nye datapoint ved hver ændring, i stedet for at overskrive eksisterende data."
+            },
+            {
+              "type": "text",
+              "content": "Denne tilgang sikrer, at historiske data altid er tilgængelige for analyse, mens det nyeste tilstand forbliver let tilgængeligt."
+            }
           ],
           "Datastruktur": [
-            { "type": "text", "content": "Internt bruger Data-klassen en NumPy-struktureret array til effektiv lagring:" },
-            { "type": "table", "content": { "headers": ["Felt","Beskrivelse","Type"], "rows": [["lux","Naturligt lys måling (lux)","int"], ["motion","Bevægelsesdetektering","bool"], ["current","Energiforbrug (mA)","float"], ["light_intensity","LED intensitet (0-100%)","int"], ["light_auto","Automatisk mode aktiv","bool"], ["light_regulating","Reguleringstilstand aktiv","bool"], ["time","Timestamp","datetime"], ["light_on","LED'er tændt/slukket","bool"]] } }
+            {
+              "type": "text",
+              "content": "Internt bruger Data-klassen en NumPy-struktureret array til effektiv lagring:"
+            },
+            {
+              "type": "table",
+              "content": {
+                "headers": [
+                  "Felt",
+                  "Beskrivelse",
+                  "Type"
+                ],
+                "rows": [
+                  [
+                    "lux",
+                    "Naturligt lys måling (lux)",
+                    "int"
+                  ],
+                  [
+                    "motion",
+                    "Bevægelsesdetektering",
+                    "bool"
+                  ],
+                  [
+                    "current",
+                    "Energiforbrug (mA)",
+                    "float"
+                  ],
+                  [
+                    "light_intensity",
+                    "LED intensitet (0-100%)",
+                    "int"
+                  ],
+                  [
+                    "light_auto",
+                    "Automatisk mode aktiv",
+                    "bool"
+                  ],
+                  [
+                    "light_regulating",
+                    "Reguleringstilstand aktiv",
+                    "bool"
+                  ],
+                  [
+                    "time",
+                    "Timestamp",
+                    "datetime"
+                  ],
+                  [
+                    "light_on",
+                    "LED'er tændt/slukket",
+                    "bool"
+                  ]
+                ]
+              }
+            }
           ],
           "Vigtige Metoder": [
-            { "type": "code", "language": "python", "content": "# Tilføj nyt datapoint\ndata.add(lux=450, motion=True, current=125, light_intensity=75)\n\n# Hent alle datapoints\nall_points = data.get_data()\n\n# Hent datapoints inden for tidsinterval\nrecent = data.get_data(start_time=now - timedelta(hours=1))\n\n# Filtrer specifikke felter\nlux_values = data.get_data(filter=['lux'])" }
+            {
+              "type": "code",
+              "language": "python",
+              "content": "# Tilføj nyt datapoint\ndata.add(lux=450, motion=True, current=125, light_intensity=75)\n\n# Hent alle datapoints\nall_points = data.get_data()\n\n# Hent datapoints inden for tidsinterval\nrecent = data.get_data(start_time=now - timedelta(hours=1))\n\n# Filtrer specifikke felter\nlux_values = data.get_data(filter=['lux'])"
+            }
           ],
           "Løste Problemer": [
-            { "type": "text", "content": "<strong>Filter-håndtering:</strong> Hvis et enkelt filtrerværdi blev passeret som string, blev det tolket som tegn-sekvens. Løsningen normaliseredes inputtet, så enkelværdier altid blev behandlet som ét felt." },
-            { "type": "text", "content": "<strong>Single-result Inkonsistens:</strong> Når kun ét datapoint blev returneret, returnerede funktionen nogle gange et enkelt objekt i stedet for en liste. Løsningen sikrer altid et list-return, selv for ét datapoint." }
-          ],
-          "IMAGE_PLACEHOLDER_DATA_CLASS_DIAGRAM": [
-            { "type": "text", "content": "<em style='color: #999;'>[UML klassearkitektur for Data-klassen - indsæt billede her]</em>" }
+            {
+              "type": "text",
+              "content": "<strong>Filter-håndtering:</strong> Hvis et enkelt filtrerværdi blev passeret som string, blev det tolket som tegn-sekvens. Løsningen normaliseredes inputtet, så enkelværdier altid blev behandlet som ét felt."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Single-result Inkonsistens:</strong> Når kun ét datapoint blev returneret, returnerede funktionen nogle gange et enkelt objekt i stedet for en liste. Løsningen sikrer altid et list-return, selv for ét datapoint."
+            }
           ]
         }
       }
@@ -112,23 +276,39 @@
         "title": "Processor Klasse: Centraliseret Kontrollogik",
         "content": {
           "Arkitektonisk Betydning": [
-            { "type": "text", "content": "Processor er hjerte af systemet. Den modtager indgående data (sensordata eller brugerbeslutninger), men <strong>kræver IKKE alle felter</strong>. Hvis et felt ikke er specificeret (None), slår Processor det op fra historikken og bevarer tidligere værdi. Dette muliggør partielle state-updates." },
-            { "type": "text", "content": "Kritisk designbeslutning: <strong>ALLE lyskontrol-beslutninger centraliseres her</strong>. Processor indeholder al logik til at bestemme on/off-tilstand og lysintensitet. Dette undgår redundant logik spredt på tværs af GUI, Router og andre komponenter." },
-            { "type": "list", "content": [
-              "<strong>GUI kan sende kun</strong> slider-ændringer (light_intensity). Processor bruger eksisterende motion, lux, mode fra Data.",
-              "<strong>Arduino kan sende kun</strong> sensor-værdier (lux, motion, current). Processor holder eksisterende light_on, light_regulating status.",
-              "<strong>System bevarer automatisk tilstand</strong> uden at komponenter behøver at håndtere state-kombinatorik."
-            ] }
+            {
+              "type": "text",
+              "content": "Processor er hjerte af systemet. Den modtager indgående data (sensordata eller brugerbeslutninger), men <strong>kræver IKKE alle felter</strong>. Hvis et felt ikke er specificeret (None), slår Processor det op fra historikken og bevarer tidligere værdi. Dette muliggør partielle state-updates."
+            },
+            {
+              "type": "text",
+              "content": "Kritisk designbeslutning: <strong>ALLE lyskontrol-beslutninger centraliseres her</strong>. Processor indeholder al logik til at bestemme on/off-tilstand og lysintensitet. Dette undgår redundant logik spredt på tværs af GUI, Router og andre komponenter."
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>GUI kan sende kun</strong> slider-ændringer (light_intensity). Processor bruger eksisterende motion, lux, mode fra Data.",
+                "<strong>Arduino kan sende kun</strong> sensor-værdier (lux, motion, current). Processor holder eksisterende light_on, light_regulating status.",
+                "<strong>System bevarer automatisk tilstand</strong> uden at komponenter behøver at håndtere state-kombinatorik."
+              ]
+            }
           ],
           "Processor.add() Implementering": [
-            { "type": "code", "language": "python", "content": "class Processor:\n    def __init__(self, data):\n        self._data = data\n    \n    def add(self, lux=None, motion=None, current=None, light_intensity=None,\n            light_auto=None, light_regulating=None, fixed_intensity=None, light_on=None):\n        \"\"\"Transformerer input til ny systemtilstand.\"\"\"\n        \n        AUTO_TIME_THRESHOLD = 60 * 5  # 5 minutter\n        \n        # Få nuværende state\n        [auto, regulating] = self._data.get_data(item_name_filter=(\"light_auto\",\"light_regulating\"))\n        \n        if light_auto is None:\n            light_auto = auto\n        if light_regulating is None:\n            light_regulating = regulating\n        \n        # BESLUTNING 1: Skal lyset være tændt eller slukket?\n        if light_auto:\n            if motion == True:\n                light_on = True\n            else:\n                recent_motion = self._data.get_data(\n                    interval=(time.time() - AUTO_TIME_THRESHOLD, time.time()),\n                    item_name_filter=(\"motion\",)\n                )\n                light_on = any(recent_motion) if len(recent_motion) > 0 else False\n        else:\n            if light_on is None:\n                light_on = light_intensity > 0 if light_intensity is not None else self._data.get_data(item_name_filter=(\"light_on\",))[0]\n        \n        # BESLUTNING 2: Hvor intens skal lyset være?\n        if light_on:\n            if fixed_intensity is None:\n                fixed_intensity = self._data.get_fixed_intensity()\n            \n            if light_regulating:\n                if lux is None:\n                    lux = self._data.get_data(item_name_filter=(\"lux\",))[0]\n                light_intensity = self.calculate_intensity(lux, fixed_intensity)\n            else:\n                light_intensity = fixed_intensity\n        else:\n            light_intensity = 0\n        \n        data_point = self._data.add(lux, motion, current, light_intensity,\n                                    light_auto, light_regulating, fixed_intensity, light_on)\n        return data_point\n    \n    def calculate_intensity(self, lux, fixed_intensity):\n        \"\"\"Jo mere naturligt lys, jo mindre kunstig lys.\"\"\"\n        return min(255 - lux, fixed_intensity)" }
+            {
+              "type": "code",
+              "language": "python",
+              "content": "class Processor:\n    def __init__(self, data):\n        self._data = data\n    \n    def add(self, lux=None, motion=None, current=None, light_intensity=None,\n            light_auto=None, light_regulating=None, fixed_intensity=None, light_on=None):\n        \"\"\"Transformerer input til ny systemtilstand.\"\"\"\n        \n        AUTO_TIME_THRESHOLD = 60 * 5  # 5 minutter\n        \n        # Få nuværende state\n        [auto, regulating] = self._data.get_data(item_name_filter=(\"light_auto\",\"light_regulating\"))\n        \n        if light_auto is None:\n            light_auto = auto\n        if light_regulating is None:\n            light_regulating = regulating\n        \n        # BESLUTNING 1: Skal lyset være tændt eller slukket?\n        if light_auto:\n            if motion == True:\n                light_on = True\n            else:\n                recent_motion = self._data.get_data(\n                    interval=(time.time() - AUTO_TIME_THRESHOLD, time.time()),\n                    item_name_filter=(\"motion\",)\n                )\n                light_on = any(recent_motion) if len(recent_motion) > 0 else False\n        else:\n            if light_on is None:\n                light_on = light_intensity > 0 if light_intensity is not None else self._data.get_data(item_name_filter=(\"light_on\",))[0]\n        \n        # BESLUTNING 2: Hvor intens skal lyset være?\n        if light_on:\n            if fixed_intensity is None:\n                fixed_intensity = self._data.get_fixed_intensity()\n            \n            if light_regulating:\n                if lux is None:\n                    lux = self._data.get_data(item_name_filter=(\"lux\",))[0]\n                light_intensity = self.calculate_intensity(lux, fixed_intensity)\n            else:\n                light_intensity = fixed_intensity\n        else:\n            light_intensity = 0\n        \n        data_point = self._data.add(lux, motion, current, light_intensity,\n                                    light_auto, light_regulating, fixed_intensity, light_on)\n        return data_point\n    \n    def calculate_intensity(self, lux, fixed_intensity):\n        \"\"\"Jo mere naturligt lys, jo mindre kunstig lys.\"\"\"\n        return min(255 - lux, fixed_intensity)"
+            }
           ],
           "To Vigtige Logik-beslutninger": [
-            { "type": "text", "content": "<strong>1. On/Off Bestemmelse:</strong> AUTO-mode tjekker for bevægelse indenfor 5-minutter. MANUAL-mode er bruger-kontrolleret." },
-            { "type": "text", "content": "<strong>2. Intensitet Bestemmelse:</strong> REGULATING justerer dynamisk baseret på lux. FIXED bruger brugerdefineret værdi." }
-          ],
-          "IMAGE_PLACEHOLDER_PROCESSOR_LOGIC": [
-            { "type": "text", "content": "<em style='color: #999;'>[Processor beslutningsflow diagram - indsæt billede her]</em>" }
+            {
+              "type": "text",
+              "content": "<strong>1. On/Off Bestemmelse:</strong> AUTO-mode tjekker for bevægelse indenfor 5-minutter. MANUAL-mode er bruger-kontrolleret."
+            },
+            {
+              "type": "text",
+              "content": "<strong>2. Intensitet Bestemmelse:</strong> REGULATING justerer dynamisk baseret på lux. FIXED bruger brugerdefineret værdi."
+            }
           ]
         }
       }
@@ -141,40 +321,58 @@
         "title": "Router Klasse - Central Routing",
         "content": {
           "Rolle i Systemet": [
-            { "type": "text", "content": "Router er det centrale routingpunkt der forbinder:" },
-            { "type": "list", "content": [
-              "UART (Arduino kommunikation)",
-              "GUI (bruger input)",
-              "Developer GUI (diagnostik)",
-              "Processor (logik)",
-              "Data (state storage)"
-            ] }
+            {
+              "type": "text",
+              "content": "Router er det centrale routingpunkt der forbinder:"
+            },
+            {
+              "type": "list",
+              "content": [
+                "UART (Arduino kommunikation)",
+                "GUI (bruger input)",
+                "Developer GUI (diagnostik)",
+                "Processor (logik)",
+                "Data (state storage)"
+              ]
+            }
           ],
           "Primære Udfordringer": [
-            { "type": "text", "content": "UART kommunikation ankommer som strings. Router skal derfor:" },
-            { "type": "list", "content": [
-              "Identificere kommandotypen",
-              "Validere string-formatet",
-              "Parse datapoint-værdier",
-              "Konvertere til korrekte datatyper",
-              "Forward til Processor eller relevant komponent"
-            ] }
+            {
+              "type": "text",
+              "content": "UART kommunikation ankommer som strings. Router skal derfor:"
+            },
+            {
+              "type": "list",
+              "content": [
+                "Identificere kommandotypen",
+                "Validere string-formatet",
+                "Parse datapoint-værdier",
+                "Konvertere til korrekte datatyper",
+                "Forward til Processor eller relevant komponent"
+              ]
+            }
           ],
           "Centrale Metoder": [
-            { "type": "list", "content": [
-              "<strong>add(requested_state)</strong> - Sender state-ændring gennem Processor, får resultat, gemmer i Data, returnerer ny state til GUI/UART",
-              "<strong>uart_rout(uart_string)</strong> - Parser Arduino-besked, identificerer kommandotype (L/M/C/H/I/A), kalder add() eller health_check()",
-              "<strong>get_data(filters)</strong> - Henter historiske data fra Data-klasse, bruges af Developer GUI til analyse",
-              "<strong>remove_data(index)</strong> - Sletter datapoint fra historik",
-              "<strong>health_check()</strong> - Returnerer systemstatus (forbindelse, sensorer, data consistency)"
-            ] }
+            {
+              "type": "list",
+              "content": [
+                "<strong>add(requested_state)</strong> - Sender state-ændring gennem Processor, får resultat, gemmer i Data, returnerer ny state til GUI/UART",
+                "<strong>uart_rout(uart_string)</strong> - Parser Arduino-besked, identificerer kommandotype (L/M/C/H/I/A), kalder add() eller health_check()",
+                "<strong>get_data(filters)</strong> - Henter historiske data fra Data-klasse, bruges af Developer GUI til analyse",
+                "<strong>remove_data(index)</strong> - Sletter datapoint fra historik",
+                "<strong>health_check()</strong> - Returnerer systemstatus (forbindelse, sensorer, data consistency)"
+              ]
+            }
           ],
           "Implementerings Aspekter": [
-            { "type": "text", "content": "<strong>State Flow:</strong> GUI → Router.add() → Processor → Data → Router returnerer ny state til GUI. Reverse: Arduino UART → Router.uart_rout() → samme flow." },
-            { "type": "text", "content": "<strong>Data Retrieval:</strong> Developer GUI kalder Router.get_data(), som queries Data-klasse historik. Router er transparent forwarder, Data-klasse ejer al state." }
-          ],
-          "IMAGE_PLACEHOLDER_ROUTER_DATAFLOW": [
-            { "type": "text", "content": "<em style='color: #999;'>[Router dataflow diagram - indsæt billede her]</em>" }
+            {
+              "type": "text",
+              "content": "<strong>State Flow:</strong> GUI → Router.add() → Processor → Data → Router returnerer ny state til GUI. Reverse: Arduino UART → Router.uart_rout() → samme flow."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Data Retrieval:</strong> Developer GUI kalder Router.get_data(), som queries Data-klasse historik. Router er transparent forwarder, Data-klasse ejer al state."
+            }
           ]
         }
       }
@@ -187,23 +385,58 @@
         "title": "UART Communication: Raspberry Pi ↔ Arduino",
         "content": {
           "Raspberry Pi UART Driver": [
-            { "type": "code", "language": "python", "content": "class Uart_driver:\n    \"\"\"Driver for UART serial communication with Arduino.\"\"\"\n    \n    def __init__(self, port=\"COM19\", baudrate=9600, timeout=1):\n        try:\n            self.ser = serial.Serial(port, baudrate, timeout=timeout)\n        except serial.SerialException as e:\n            print(f\"Error: {e}\")\n            self.ser = None\n        \n        if self.ser:\n            self.ser.reset_input_buffer()\n            time.sleep(1)  # Wait for Arduino reset\n    \n    def write(self, data) -> None:\n        \"\"\"Send data to Arduino with newline termination.\"\"\"\n        if self.ser is None:\n            return\n        \n        try:\n            if isinstance(data, str):\n                data = data.encode()\n            self.ser.write(data)\n            self.ser.write(b'\\n')\n        except serial.SerialException:\n            self.ser = None\n    \n    def read(self):\n        \"\"\"Read one line from Arduino (until newline).\"\"\"\n        if self.ser is None:\n            return None\n        try:\n            line = self.ser.readline().decode('utf-8').strip()\n            return line if line else None\n        except (serial.SerialException, UnicodeDecodeError):\n            return None" }
+            {
+              "type": "code",
+              "language": "python",
+              "content": "class Uart_driver:\n    \"\"\"Driver for UART serial communication with Arduino.\"\"\"\n    \n    def __init__(self, port=\"COM19\", baudrate=9600, timeout=1):\n        try:\n            self.ser = serial.Serial(port, baudrate, timeout=timeout)\n        except serial.SerialException as e:\n            print(f\"Error: {e}\")\n            self.ser = None\n        \n        if self.ser:\n            self.ser.reset_input_buffer()\n            time.sleep(1)  # Wait for Arduino reset\n    \n    def write(self, data) -> None:\n        \"\"\"Send data to Arduino with newline termination.\"\"\"\n        if self.ser is None:\n            return\n        \n        try:\n            if isinstance(data, str):\n                data = data.encode()\n            self.ser.write(data)\n            self.ser.write(b'\\n')\n        except serial.SerialException:\n            self.ser = None\n    \n    def read(self):\n        \"\"\"Read one line from Arduino (until newline).\"\"\"\n        if self.ser is None:\n            return None\n        try:\n            line = self.ser.readline().decode('utf-8').strip()\n            return line if line else None\n        except (serial.SerialException, UnicodeDecodeError):\n            return None"
+            }
           ],
           "Arduino UART Driver (C++)": [
-            { "type": "code", "language": "cpp", "content": "// uart_driver.h - Arduino UART interface\nclass UART_driver {\npublic:\n    UART_driver(USART_t *usart, uint32_t BaudRate, uint8_t DataBit, bool RX_INT);\n    \n    void write(String str) const;\n    String read() const;\n    bool data_available() const;\n    \nprivate:\n    USART_t *_usart;\n    uint32_t _baudRate;\n    uint8_t _dataBit;\n    bool _RX_INT;\n};" }
+            {
+              "type": "code",
+              "language": "cpp",
+              "content": "// uart_driver.h - Arduino UART interface\nclass UART_driver {\npublic:\n    UART_driver(USART_t *usart, uint32_t BaudRate, uint8_t DataBit, bool RX_INT);\n    \n    void write(String str) const;\n    String read() const;\n    bool data_available() const;\n    \nprivate:\n    USART_t *_usart;\n    uint32_t _baudRate;\n    uint8_t _dataBit;\n    bool _RX_INT;\n};"
+            }
           ],
           "Arduino Router - Kommando Routing": [
-            { "type": "code", "language": "cpp", "content": "class Router {\npublic:\n    Router(UART_driver* uart_prt, Sensor_driver* sensor_prt, LED* light_prt);\n    \n    void send_all_sensor();       // Broadcast all sensor data\n    void uart_rout(String message); // Route incoming commands\n    \nprivate:\n    UART_driver* _uart_prt;\n    Sensor_driver* _sensor_prt;\n    LED* _light_prt;\n};" }
+            {
+              "type": "code",
+              "language": "cpp",
+              "content": "class Router {\npublic:\n    Router(UART_driver* uart_prt, Sensor_driver* sensor_prt, LED* light_prt);\n    \n    void send_all_sensor();       // Broadcast all sensor data\n    void uart_rout(String message); // Route incoming commands\n    \nprivate:\n    UART_driver* _uart_prt;\n    Sensor_driver* _sensor_prt;\n    LED* _light_prt;\n};"
+            }
           ],
           "Kommunikationsprotokol": [
-            { "type": "code", "language": "plaintext", "content": "# Arduino → Raspberry Pi (single-character prefix + data)\nL230           → Lux sensor reading\nM1             → Motion detected (1=true, 0=false)\nC125           → Current reading\nL450|M1|C125   → All sensor data at once (from A command)\n\n# Raspberry Pi → Arduino (commands)\nH              → Health check (Arduino responds with 'H')\nI75            → Set intensity to 75\nL              → Request lux reading\nM              → Request motion status\nC              → Request current reading\nA              → Request all sensor data" }
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "# Arduino → Raspberry Pi (single-character prefix + data)\nL230           → Lux sensor reading\nM1             → Motion detected (1=true, 0=false)\nC125           → Current reading\nL450|M1|C125   → All sensor data at once (from A command)\n\n# Raspberry Pi → Arduino (commands)\nH              → Health check (Arduino responds with 'H')\nI75            → Set intensity to 75\nL              → Request lux reading\nM              → Request motion status\nC              → Request current reading\nA              → Request all sensor data"
+            }
           ],
           "Kritiske Løsninger": [
-            { "type": "text", "content": "<strong>Problem: Program crash uden Arduino tilsluttet</strong><br>read() blokerede uendeligt hvis Arduino ikke var tilsluttet.<br><strong>Løsning:</strong> Connection check, try/catch, return None if disconnected. Tillader udvikling uden hardware." },
-            { "type": "text", "content": "<strong>Problem: Partial messages</strong><br>Hvis UART data kom i flere chunks, var message ufuldstændig.<br><strong>Løsning:</strong> read() blocker indtil newline modtages." }
-          ],
-          "IMAGE_PLACEHOLDER_UART_PROTOCOL": [
-            { "type": "text", "content": "<em style='color: #999;'>[UART message format og sequence diagram - indsæt billede her]</em>" }
+            {
+              "type": "text",
+              "content": "<strong>Problem: Program crash uden Arduino tilsluttet</strong><br>read() blokerede uendeligt hvis Arduino ikke var tilsluttet.<br><strong>Løsning:</strong> Connection check, try/catch, return None if disconnected. Tillader udvikling uden hardware."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Problem: Partial messages</strong><br>Hvis UART data kom i flere chunks, var message ufuldstændig.<br><strong>Løsning:</strong> read() blocker indtil newline modtages."
+            }
+          ]
+        },
+        "images": {
+          "image_elements": [
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczP8-pE6Ge0Mp--SoEOtkb8C3FkRfH9locPETk-ZXKEIRcXlSRH8g3sy5Vu6xxn361RuIduIVPsD-yTv-4n9NU5Tky361yxubuW9Beqs4ZhDxa-8Q0NV_h0J5ilwr9oCsAA3MIwdlGXHIKs2j-yyYJGo=w1875-h1000-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 2"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczN30X2U_B7gDyoNlkNHSDeAPTTUiQhj8mqzAmaXYDHJb8oDjK7foDSu_yETgbaOsEoYpjtYh85u5QffNmUFpbJDYd2QiOsdznvfa6DmRvt-37tBnJs3A_Nnn5fsFMJI1RrnS1Hznis5v3bibGJ93qh1=w1875-h757-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 3"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczNS9GSV4Z7C_uT_EptbeKgd-xXzm76pimmQWiFd2o07itJylqRBC4acQ422WwnPZD4xC89QwsYgaa2VSoCtUsMgLEyp5tetjwAdBD31idniY69lqTrFCz_GS9JDOg_wWcBDgE6q_Crs4eEhRVxjB2ln=w1875-h539-s-no-gm?authuser=0",
+              "alt": "Sekvensdiagram af usecase 6"
+            }
           ]
         }
       }
@@ -216,23 +449,89 @@
         "title": "Testing Strategi og Resultater",
         "content": {
           "Teststrategi": [
-            { "type": "text", "content": "Enheds-testing blev brugt selektivt. Mange klasser var tæt koblet, så isoleret testing ville krævet mange stubs. Større vægt blev derfor lagt på integration testing." },
-            { "type": "text", "content": "Debugger blev også brugt til step-through eksekution for at identificere hvor inputs resulterede i uventet output." }
+            {
+              "type": "text",
+              "content": "Enheds-testing blev brugt selektivt. Mange klasser var tæt koblet, så isoleret testing ville krævet mange stubs. Større vægt blev derfor lagt på integration testing."
+            },
+            {
+              "type": "text",
+              "content": "Debugger blev også brugt til step-through eksekution for at identificere hvor inputs resulterede i uventet output."
+            }
           ],
           "Processor Testing": [
-            { "type": "code", "language": "python", "content": "# Test Processor med forskellige input-værdier\ntest_cases = [\n    {'motion': True, 'lux': 100, 'mode': 'auto', 'expect_light': True},\n    {'motion': False, 'lux': 800, 'mode': 'auto', 'expect_light': False},\n    {'motion': False, 'lux': 100, 'mode': 'manual', 'set_intensity': 50, 'expect_intensity': 50},\n]\n\nfor case in test_cases:\n    result = processor.process(case)\n    assert result['light_on'] == case['expect_light']" }
+            {
+              "type": "code",
+              "language": "python",
+              "content": "# Test Processor med forskellige input-værdier\ntest_cases = [\n    {'motion': True, 'lux': 100, 'mode': 'auto', 'expect_light': True},\n    {'motion': False, 'lux': 800, 'mode': 'auto', 'expect_light': False},\n    {'motion': False, 'lux': 100, 'mode': 'manual', 'set_intensity': 50, 'expect_intensity': 50},\n]\n\nfor case in test_cases:\n    result = processor.process(case)\n    assert result['light_on'] == case['expect_light']"
+            }
           ],
           "UART Testing": [
-            { "type": "text", "content": "<strong>Tidlig testing:</strong> Arduino IDE serial monitor tilføjede automatisk carriage return efter newline, hvilket fik protokol til at mismatch." },
-            { "type": "text", "content": "<strong>Løsning:</strong> Testing blev moved til direkte Raspberry Pi ↔ Arduino integration. Integration tests viste stabil kommunikation uden observeret datatab." }
+            {
+              "type": "text",
+              "content": "<strong>Tidlig testing:</strong> Arduino IDE serial monitor tilføjede automatisk carriage return efter newline, hvilket fik protokol til at mismatch."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> Testing blev moved til direkte Raspberry Pi ↔ Arduino integration. Integration tests viste stabil kommunikation uden observeret datatab."
+            }
           ],
           "Acceptance Test Resultater": [
-            { "type": "table", "content": { "headers": ["Use Case","Status","Noter"], "rows": [["Bevægelse-baseret auto on/off","⚠️ Partial","Motion sensor detection period matchede ikke test-specifikation. Sensor havde længere response time end forventet."], ["Naturligt lys regulering","⚠️ Partial","Test konfiguration tillod ikke regulering: system blev ikke instrueret til at aktivere regulating mode (light_regulating=false)."], ["Manuel kontrol","✔️","GUI slider, mode-switching, og manuel intensitet-kontrol virked som specificeret."], ["Energi/strøm display","⚠️ Partial","ACS712 + opamp hardware var ikke kompatibelt. Sensor producerede for meget støj til nøjagtige målinger."], ["Mode switching","✔️","Auto/Manual/Regulating mode-transitions virked korrekt. Test spec selv var uklar om forventet adfærd."], ["Developer Health Check","✔️","Health check virked. UX-problem: status ændrede sig for hurtigt til at være synlig."]] } }
+            {
+              "type": "table",
+              "content": {
+                "headers": [
+                  "Use Case",
+                  "Status",
+                  "Noter"
+                ],
+                "rows": [
+                  [
+                    "Bevægelse-baseret auto on/off",
+                    "⚠️ Partial",
+                    "Motion sensor detection period matchede ikke test-specifikation. Sensor havde længere response time end forventet."
+                  ],
+                  [
+                    "Naturligt lys regulering",
+                    "⚠️ Partial",
+                    "Test konfiguration tillod ikke regulering: system blev ikke instrueret til at aktivere regulating mode (light_regulating=false)."
+                  ],
+                  [
+                    "Manuel kontrol",
+                    "✔️",
+                    "GUI slider, mode-switching, og manuel intensitet-kontrol virked som specificeret."
+                  ],
+                  [
+                    "Energi/strøm display",
+                    "⚠️ Partial",
+                    "ACS712 + opamp hardware var ikke kompatibelt. Sensor producerede for meget støj til nøjagtige målinger."
+                  ],
+                  [
+                    "Mode switching",
+                    "✔️",
+                    "Auto/Manual/Regulating mode-transitions virked korrekt. Test spec selv var uklar om forventet adfærd."
+                  ],
+                  [
+                    "Developer Health Check",
+                    "✔️",
+                    "Health check virked. UX-problem: status ændrede sig for hurtigt til at være synlig."
+                  ]
+                ]
+              }
+            }
           ],
           "Identificerede Fejl": [
-            { "type": "text", "content": "<strong>Motion Sensor:</strong> Af og til detekteringsfejl kunne få lyset til at slukke uventet." },
-            { "type": "text", "content": "<strong>Strøm Sensor:</strong> Ikke kalibreret mod kendt strøm. Målinger var derfor unøjagtige." },
-            { "type": "text", "content": "<strong>Extra Set Knap:</strong> Implementering krævede extra bekræftelse i stedet for at slider-selv udløste ændring." }
+            {
+              "type": "text",
+              "content": "<strong>Motion Sensor:</strong> Af og til detekteringsfejl kunne få lyset til at slukke uventet."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Strøm Sensor:</strong> Ikke kalibreret mod kendt strøm. Målinger var derfor unøjagtige."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Extra Set Knap:</strong> Implementering krævede extra bekræftelse i stedet for at slider-selv udløste ændring."
+            }
           ]
         }
       }
@@ -245,27 +544,55 @@
         "title": "Hardware Arkitektur",
         "content": {
           "System Layout": [
-            { "type": "text", "content": "Hardwaren var split i separate moduler frem for én PCB. Dette tillod moduler at være placeret på forskellige fysiske lokationer og gjorde debugging lettere." },
-            { "type": "list", "content": [
-              "Arduino Mega 2560 - sensor og LED kontrol",
-              "Raspberry Pi + touch display - data processing og GUI",
-              "ACS712 current sensor - strømmåling",
-              "Operationel forstærker - current signal amplification",
-              "LED/transistor modul - lyscontrol",
-              "Motion sensor - bevægelsesdetektering",
-              "Light sensor (LDR) - naturligt lys måling"
-            ] }
+            {
+              "type": "text",
+              "content": "Hardwaren var split i separate moduler frem for én PCB. Dette tillod moduler at være placeret på forskellige fysiske lokationer og gjorde debugging lettere."
+            },
+            {
+              "type": "list",
+              "content": [
+                "Arduino Mega 2560 - sensor og LED kontrol",
+                "Raspberry Pi + touch display - data processing og GUI",
+                "ACS712 current sensor - strømmåling",
+                "Operationel forstærker - current signal amplification",
+                "LED/transistor modul - lyscontrol",
+                "Motion sensor - bevægelsesdetektering",
+                "Light sensor (LDR) - naturligt lys måling"
+              ]
+            }
           ],
           "UART Forbindelse": [
-            { "type": "text", "content": "Raspberry Pi og Arduino kommunikerer gennem crossed UART forbindelse." },
-            { "type": "code", "language": "plaintext", "content": "Arduino TX (pin 18) → Raspberry Pi RX (GPIO 15)\nArduino RX (pin 19) ← Raspberry Pi TX (GPIO 14)\nCommon GND" }
+            {
+              "type": "text",
+              "content": "Raspberry Pi og Arduino kommunikerer gennem crossed UART forbindelse."
+            },
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Arduino TX (pin 18) → Raspberry Pi RX (GPIO 15)\nArduino RX (pin 19) ← Raspberry Pi TX (GPIO 14)\nCommon GND"
+            }
           ],
           "Kritiske Designbeslutninger": [
-            { "type": "text", "content": "<strong>Strøm Sensor:</strong> ACS712 producerede kun små spændingsændringer ved lav LED-strøm. Operationel forstærker blev tilføjet for at øge måleområde, men introducerede støj der reducerede nyttelighed." },
-            { "type": "text", "content": "<strong>LED Kontrol:</strong> Otte LED'er drevet gennem BD139 NPN transistor i stedet for direkte Arduino pins. 24mA per LED med 63Ω modstand. 470Ω base-modstand for transistor. Danner basis for PWM lys-intensitet kontrol." }
-          ],
-          "IMAGE_PLACEHOLDER_HARDWARE_DIAGRAM": [
-            { "type": "text", "content": "<em style='color: #999;'>[Hardware forbindelses diagram - indsæt billede her]</em>" }
+            {
+              "type": "text",
+              "content": "<strong>Strøm Sensor:</strong> ACS712 producerede kun små spændingsændringer ved lav LED-strøm. Operationel forstærker blev tilføjet for at øge måleområde, men introducerede støj der reducerede nyttelighed."
+            },
+            {
+              "type": "text",
+              "content": "<strong>LED Kontrol:</strong> Otte LED'er drevet gennem BD139 NPN transistor i stedet for direkte Arduino pins. 24mA per LED med 63Ω modstand. 470Ω base-modstand for transistor. Danner basis for PWM lys-intensitet kontrol."
+            }
+          ]
+        },
+        "images": {
+          "image_elements": [
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczMYOm5038P_tMNLsF3qH94PVQmgfFRsy1xNdCKPYLzdgOvelvxVP5mKSv6ErGaOTMZHAZlsgy_wg7-KDsfXD6RkKCxIGzkHMmtrc0AH0zWEj5CuFK0Dvgv2-ZdU-zSXBShv1ihHLg0I85LrCM4fqWgP=w918-h1045-s-no-gm?authuser=0",
+              "alt": "BDD"
+            },
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczMd9365_P086Hf8UIqEEcv1l_dEa1ZBFqvg7iQYp3sRzoK8_v26vZWgYoCDKc9SNwd_KqFlOJNpq2rse7Ck2k6zer8Np6zaI4wv3XZCEups5O26dnT28gpnxdZ07VP0XvjNEfE7LLJBXkS8V3_u3yn6=w1507-h1045-s-no-gm?authuser=0",
+              "alt": "IBD"
+            }
           ]
         }
       }
@@ -278,31 +605,57 @@
         "title": "Min Rolle & Tekn Bidrag",
         "content": {
           "Primære Ansvar (Høj Indflydelse)": [
-            { "type": "text", "content": "<strong>Raspberry Pi Python:</strong>" },
-            { "type": "list", "content": [
-              "✔️ <strong>Data Klasse</strong> - NumPy-baseret struktureret historiklager med intelligent filtrering",
-              "✔️ <strong>Processor Klasse</strong> - Centraliseret lyskontrol-logik med intelligent state management (booleans: light_on, light_auto, light_regulating)",
-              "✔️ <strong>UART Driver (Rpi)</strong> - Robust seriel kommunikation med error handling og connection resilience"
-            ] }
+            {
+              "type": "text",
+              "content": "<strong>Raspberry Pi Python:</strong>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "✔️ <strong>Data Klasse</strong> - NumPy-baseret struktureret historiklager med intelligent filtrering",
+                "✔️ <strong>Processor Klasse</strong> - Centraliseret lyskontrol-logik med intelligent state management (booleans: light_on, light_auto, light_regulating)",
+                "✔️ <strong>UART Driver (Rpi)</strong> - Robust seriel kommunikation med error handling og connection resilience"
+              ]
+            }
           ],
           "Sekundære Ansvar (Medium Indflydelse)": [
-            { "type": "text", "content": "<strong>Arduino C++:</strong>" },
-            { "type": "list", "content": [
-              "✔️ <strong>UART Driver refactoring</strong> - Konverteret fra funktional til OOP stil",
-              "✔️ <strong>Router</strong> - Kommando-routing og sensor data broadcasting"
-            ] }
+            {
+              "type": "text",
+              "content": "<strong>Arduino C++:</strong>"
+            },
+            {
+              "type": "list",
+              "content": [
+                "✔️ <strong>UART Driver refactoring</strong> - Konverteret fra funktional til OOP stil",
+                "✔️ <strong>Router</strong> - Kommando-routing og sensor data broadcasting"
+              ]
+            }
           ],
           "Testing & Bug Fixing": [
-            { "type": "text", "content": "<strong>Raspberry Pi Router:</strong> Debugging af integration mellem UART, Router, Processor, og Data. Identificering og fix af dataflow-problemer." }
+            {
+              "type": "text",
+              "content": "<strong>Raspberry Pi Router:</strong> Debugging af integration mellem UART, Router, Processor, og Data. Identificering og fix af dataflow-problemer."
+            }
           ],
           "Technical Highlights": [
-            { "type": "list", "content": [
-              "NumPy dtype-driven development for type-safety ved høj performance",
-              "Centraliseret state management (single source of truth)",
-              "Centraliseret kontrollogik (alle beslutninger på ét sted)",
-              "Robust error-handling uden hardware dependency",
-              "Simpel abstraktion af mode-kontrol uden over-modellering"
-            ] }
+            {
+              "type": "list",
+              "content": [
+                "NumPy dtype-driven development for type-safety ved høj performance",
+                "Centraliseret state management (single source of truth)",
+                "Centraliseret kontrollogik (alle beslutninger på ét sted)",
+                "Robust error-handling uden hardware dependency",
+                "Simpel abstraktion af mode-kontrol uden over-modellering"
+              ]
+            }
+          ]
+        },
+       "images": {
+          "image_elements": [
+            {
+              "url": "https://lh3.googleusercontent.com/pw/AP1GczOPByGlApCup61Qy6UxrEF9PJ3_ZHVd8HOPCfaC2kvbQ89NULVdjUsJlPnh0NLneCF9t_WsAF8327OC-Dmnnd5HLBKHKTV5nRDnV0B_1uggQhdqC9Q-YRcLhpUZasRHo25n0WkwB7MrNSrnAdIRihb3=w784-h1045-s-no-gm?authuser=0",
+              "alt": "selfie in the morning working"
+            }
           ]
         }
       }
@@ -329,13 +682,31 @@
         "team_size": 5,
         "duration": "1 semester",
         "team_members": [
-          { "name": "Asger Grundtdal Stidsen", "role": ""},
-          { "name": "Yusuf Cakir", "role": ""}
+          {
+            "name": "Asger Grundtdal Stidsen",
+            "role": ""
+          },
+          {
+            "name": "Yusuf Cakir",
+            "role": ""
+          }
         ],
         "project_links": [
-          { "label": "Repository: Raspberry pi", "icon": "github", "url": "https://github.com/UNIprojekter/S2-RPI" },
-          { "label": "Repository: Arduino", "icon": "github", "url": "https://github.com/UNIprojekter/S2-ARDUINO" },
-          { "label": "Documentation", "icon": "book", "url": "" }
+          {
+            "label": "Repository: Raspberry pi",
+            "icon": "github",
+            "url": "https://github.com/UNIprojekter/S2-RPI"
+          },
+          {
+            "label": "Repository: Arduino",
+            "icon": "github",
+            "url": "https://github.com/UNIprojekter/S2-ARDUINO"
+          },
+          {
+            "label": "Documentation",
+            "icon": "book",
+            "url": ""
+          }
         ]
       }
     },

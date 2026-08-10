@@ -8,7 +8,12 @@ export function ensureShowcase(): void {
   el.id = 'image_showcase_container';
   el.className = 'invis fixed inset-0 z-50 flex items-center justify-content p-4 cursor-pointer';
   el.style.cssText = 'background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center';
-  el.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323" />';
+  el.innerHTML = `
+    <img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323;background-color:white" />
+    <div id="showcase-nav" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:white;text-align:center;font-size:14px;opacity:0.7">
+      <p>Use ← → arrow keys to navigate</p>
+    </div>
+  `;
   el.addEventListener('click', () => el.classList.toggle('invis'));
   document.body.appendChild(el);
 }
@@ -32,46 +37,25 @@ export function renderImageGallery(heading: string, images: ProjectImage[]): HTM
   const gallery = document.createElement('div');
   gallery.className = 'image-gallery';
 
-  // Shared state to manage hover delay and pinned (clicked) image
-  let hoverTimer: number | null = null;
+  // Shared state to manage current image and pinned (clicked) image
+  let currentImageIndex: number = 0;
   let pinnedItem: HTMLElement | null = null;
 
-  function clearHoverTimer() {
-    if (hoverTimer !== null) {
-      window.clearTimeout(hoverTimer);
-      hoverTimer = null;
+  function updateShowcaseImage(index: number) {
+    if (index >= 0 && index < images.length) {
+      currentImageIndex = index;
+      openShowcase(images[index].url, images[index].alt);
     }
   }
 
-  images.forEach(img => {
+  const items: HTMLElement[] = [];
+
+  images.forEach((img, index) => {
     const item = document.createElement('div');
     item.className = 'image-card cursor-pointer';
-    item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ''}</p>`;
+    item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg bg-white" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ''}</p>`;
 
-    // Pointer enter: for mouse/pen devices, show after 1s hover
-    item.addEventListener('pointerenter', (ev: PointerEvent) => {
-      // If another item is pinned (clicked), don't react to hover
-      if (pinnedItem) return;
-      clearHoverTimer();
-      // Only show on hover for non-touch pointers
-      if (ev.pointerType === 'mouse' || ev.pointerType === 'pen') {
-        hoverTimer = window.setTimeout(() => {
-          openShowcase(img.url, img.alt);
-          hoverTimer = null;
-        }, 1000);
-      }
-    });
-
-    // Pointer leave: clear pending hover and close if not pinned
-    item.addEventListener('pointerleave', () => {
-      clearHoverTimer();
-      if (!pinnedItem) {
-        const container = document.getElementById('image_showcase_container');
-        if (container) container.classList.add('invis');
-      }
-    });
-
-    // Click/tap toggles pin state. If tapped when not pinned, pin and open. If already pinned, unpin and close.
+    // Click/tap toggles pin state. If clicked when not pinned, pin and open. If already pinned, unpin and close.
     item.addEventListener('click', (e) => {
       e.stopPropagation();
       const container = document.getElementById('image_showcase_container');
@@ -83,12 +67,30 @@ export function renderImageGallery(heading: string, images: ProjectImage[]): HTM
       } else {
         // pin this item, open showcase
         pinnedItem = item;
+        currentImageIndex = index;
         openShowcase(img.url, img.alt);
       }
     });
 
+    items.push(item);
     gallery.appendChild(item);
   });
+
+  // Add keyboard navigation for arrow keys
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (!pinnedItem) return; // Only navigate when an image is pinned
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const newIndex = (currentImageIndex - 1 + images.length) % images.length;
+      updateShowcaseImage(newIndex);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      const newIndex = (currentImageIndex + 1) % images.length;
+      updateShowcaseImage(newIndex);
+    }
+  };
+
+  document.addEventListener('keydown', handleKeyDown);
 
   // Clicking the overlay will unpin and close
   const container = document.getElementById('image_showcase_container');

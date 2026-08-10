@@ -50,6 +50,10 @@ abbr:hover::after {
     transition: transform 0.3s ease;
 }
 
+.image-card img {
+    background-color: white;
+}
+
 .image-card:hover {
     transform: translateY(-5px);
 }
@@ -142,6 +146,7 @@ abbr:hover::after {
     object-fit: contain;
     border: #242323 solid 5px;
     border-radius: 10px;
+    background-color: white;
 }
 
 

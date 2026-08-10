@@ -769,7 +769,7 @@
       container.id = "page-container";
       container.innerHTML = `
       <div id="header">
-        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
+        <a href="/" id="home" style="display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; color: #3b82f6;"><i class="fas fa-home" style="font-size: 1.25rem;"></i></a>
         <h1>Project Viewer</h1>
       </div>
       <div id="content-layout-container">
@@ -1054,7 +1054,12 @@
     el.id = "image_showcase_container";
     el.className = "invis fixed inset-0 z-50 flex items-center justify-content p-4 cursor-pointer";
     el.style.cssText = "background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center";
-    el.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323" />';
+    el.innerHTML = `
+    <img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323;background-color:white" />
+    <div id="showcase-nav" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:white;text-align:center;font-size:14px;opacity:0.7">
+      <p>Use \u2190 \u2192 arrow keys to navigate</p>
+    </div>
+  `;
     el.addEventListener("click", () => el.classList.toggle("invis"));
     document.body.appendChild(el);
   }
@@ -1075,37 +1080,19 @@
     card.appendChild(h3);
     const gallery = document.createElement("div");
     gallery.className = "image-gallery";
-    let hoverTimer = null;
+    let currentImageIndex = 0;
     let pinnedItem = null;
-    function clearHoverTimer() {
-      if (hoverTimer !== null) {
-        window.clearTimeout(hoverTimer);
-        hoverTimer = null;
+    function updateShowcaseImage(index) {
+      if (index >= 0 && index < images.length) {
+        currentImageIndex = index;
+        openShowcase(images[index].url, images[index].alt);
       }
     }
-    images.forEach((img) => {
+    const items = [];
+    images.forEach((img, index) => {
       const item = document.createElement("div");
       item.className = "image-card cursor-pointer";
-      item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>`;
-      item.addEventListener("pointerenter", (ev) => {
-        if (pinnedItem)
-          return;
-        clearHoverTimer();
-        if (ev.pointerType === "mouse" || ev.pointerType === "pen") {
-          hoverTimer = window.setTimeout(() => {
-            openShowcase(img.url, img.alt);
-            hoverTimer = null;
-          }, 1e3);
-        }
-      });
-      item.addEventListener("pointerleave", () => {
-        clearHoverTimer();
-        if (!pinnedItem) {
-          const container2 = document.getElementById("image_showcase_container");
-          if (container2)
-            container2.classList.add("invis");
-        }
-      });
+      item.innerHTML = `<img src="${img.url}" alt="${img.alt}" class="w-full h-48 object-cover rounded-lg bg-white" /><p class="text-sm text-gray-500 mt-2 text-center">${img.caption ?? ""}</p>`;
       item.addEventListener("click", (e) => {
         e.stopPropagation();
         const container2 = document.getElementById("image_showcase_container");
@@ -1116,11 +1103,27 @@
           container2.classList.add("invis");
         } else {
           pinnedItem = item;
+          currentImageIndex = index;
           openShowcase(img.url, img.alt);
         }
       });
+      items.push(item);
       gallery.appendChild(item);
     });
+    const handleKeyDown = (e) => {
+      if (!pinnedItem)
+        return;
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        const newIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateShowcaseImage(newIndex);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        const newIndex = (currentImageIndex + 1) % images.length;
+        updateShowcaseImage(newIndex);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
     const container = document.getElementById("image_showcase_container");
     if (container) {
       container.addEventListener("click", () => {
