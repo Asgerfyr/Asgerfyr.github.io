@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Lucide CDN</title>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <h1>Lucide CDN Test</h1>
+  <div id="test-container" style="border: 1px solid red; padding: 20px;"></div>
+  
+  <script>
+    console.log('window.lucide:', window.lucide);
+    console.log('window.lucide.createIcons:', window.lucide?.createIcons);
+    console.log('window.lucide.icons:', window.lucide?.icons);
+    
+    // Test rendering
+    const container = document.getElementById('test-container');
+    
+    // Method 1: Direct rendering with data-lucide attribute
+    container.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    `;
+    
+    if (window.lucide && window.lucide.createIcons) {
+      console.log('Running createIcons...');
+      window.lucide.createIcons();
+    }
+    
+    // Show all available icons
+    if (window.lucide && window.lucide.icons) {
+      const iconNames = Object.keys(window.lucide.icons).slice(0, 10);
+      console.log('First 10 icons:', iconNames);
+    }
+  </script>
+</body>
+</html>
