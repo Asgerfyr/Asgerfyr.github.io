@@ -6,6 +6,7 @@
   <title>Page Creator</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
   <style>
     .palette-item { cursor: pointer; transition: background .15s; }
     .palette-item:hover { background: #eff6ff; }
@@ -307,28 +308,19 @@
       ToTopArrow:     ['/js/common/to-top-arrow.js'],
     };
 
-    // Font Awesome solid icon names (without the fa- prefix)
+    // Lucide icon names only
     const ICONS = [
-      'code','terminal','microchip','laptop','desktop','server','database','hard-drive',
-      'cloud','cloud-arrow-up','wifi','bluetooth','usb','battery-full','plug','power-off',
-      'gear','gears','wrench','screwdriver-wrench','bug','code-branch','layer-group','sitemap','network-wired',
-      'palette','pen','pen-nib','paintbrush','ruler','object-group','shapes','vector-square',
-      'calculator','flask','atom','brain','robot','microscope','dna','infinity',
-      'chart-line','chart-bar','chart-pie','chart-simple','table',
-      'image','photo-film','video','music','camera','microphone','headphones','film',
-      'file','file-code','file-lines','folder','folder-open','book','book-open','bookmark','clipboard','tag','tags','newspaper',
-      'user','users','user-group','building','briefcase','graduation-cap','id-card','person',
-      'plus','minus','check','xmark','trash','pen-to-square','copy','upload','download','share-nodes','link','arrows-rotate',
-      'house','bars','list','magnifying-glass','filter','sort','grip',
-      'envelope','comment','comments','phone','bell','inbox','message',
-      'lock','lock-open','shield','key','fingerprint',
-      'circle-check','circle-info','circle-exclamation','triangle-exclamation',
-      'star','heart','fire','bolt','lightbulb','flag','award','trophy',
-      'clock','calendar','hourglass','stopwatch',
-      'cube','cubes','box','boxes-stacked','hammer','toolbox',
-      'globe','tower-broadcast','satellite-dish',
-      'play','pause','stop','rotate',
-      'mobile','tablet','print','keyboard','eye','hand-pointer',
+      'arrow-left','arrow-right','arrow-up','arrow-down',
+      'chevron-left','chevron-right','chevron-up','chevron-down',
+      'code','code-2','terminal','github','gitlab','database','server','cpu','package','zap',
+      'smartphone','palette','mail','message-square','phone','link','share-2','external-link',
+      'download','upload','save','refresh','search','settings','lock','unlock',
+      'eye','eye-off','user','users','clock','calendar','map-pin','target','heart','star','bookmark','flag',
+      'check','check-circle','x-circle','alert-circle','info','help-circle',
+      'file','folder','image','video','music','edit','trash-2','copy','git-branch','git-merge',
+      'shield','bell','menu','x','home','send','delete','copy-check','copy-x',
+      'plug','power','power-off','minimize','maximize','plus','minus','equal',
+      'box','boxes','rotate-cw','rotate-ccw','skip-back','skip-forward','fast-forward','rewind',
     ];
 
     // ─── State ─────────────────────────────────────────────────────────────────
@@ -997,13 +989,31 @@
         const input = document.getElementById(`icon-inp-${key}`);
         if (input) input.value = iconName;
         const prev = document.getElementById(`icon-prev-${key}`);
-        if (prev) prev.className = `fas fa-${iconName} fa-fw text-xl text-gray-600 flex-shrink-0 w-8 text-center`;
+        if (prev) {
+          prev.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-${iconName}" data-lucide="${iconName}" style="width:20px;height:20px"></svg>`;
+          if (window.lucide && window.lucide.createIcons) {
+            try {
+              window.lucide.createIcons();
+            } catch (e) {
+              console.warn('Lucide createIcons error:', e);
+            }
+          }
+        }
       } else if (type === 'field') {
         setField(key, idx, field, iconName);
         const input = document.getElementById(`icon-inp-${key}-${idx}`);
         if (input) input.value = iconName;
         const prev = document.getElementById(`icon-prev-${key}-${idx}`);
-        if (prev) prev.className = `fas fa-${iconName} fa-fw text-sm text-gray-400 flex-shrink-0 w-5 text-center`;
+        if (prev) {
+          prev.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-${iconName}" data-lucide="${iconName}" style="width:16px;height:16px"></svg>`;
+          if (window.lucide && window.lucide.createIcons) {
+            try {
+              window.lucide.createIcons();
+            } catch (e) {
+              console.warn('Lucide createIcons error:', e);
+            }
+          }
+        }
       }
       closeIconPicker();
     }
@@ -1014,17 +1024,37 @@
       const q = query.toLowerCase().trim();
       const filtered = q ? ICONS.filter(n => n.includes(q)) : ICONS;
       grid.innerHTML = '';
+      
       filtered.slice(0, 70).forEach(name => {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.title = name;
-        btn.style.cssText = 'display:flex;flex-direction:column;align-items:center;padding:4px 2px;border-radius:4px;border:0;background:transparent;cursor:pointer;color:#6b7280';
-        btn.innerHTML = `<i class="fas fa-${name} fa-fw" style="font-size:14px"></i><span style="font-size:9px;line-height:1.3;max-width:38px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px">${name}</span>`;
+        btn.className = 'icon-picker-btn';
+        btn.style.cssText = 'display:flex;flex-direction:column;align-items:center;padding:4px 2px;border-radius:4px;border:0;background:transparent;cursor:pointer;color:#6b7280;gap:2px;transition:all 0.15s';
+        
+        // Create SVG with data-lucide attribute so createIcons can find it
+        btn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-${name}" data-lucide="${name}" style="width:14px;height:14px">
+            <!-- Lucide will replace this -->
+          </svg>
+          <span style="font-size:9px;line-height:1.3;max-width:38px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${name}</span>
+        `;
+        
         btn.onmouseenter = () => { btn.style.background = '#eff6ff'; btn.style.color = '#2563eb'; };
         btn.onmouseleave = () => { btn.style.background = 'transparent'; btn.style.color = '#6b7280'; };
         btn.addEventListener('click', () => selectIcon(name));
         grid.appendChild(btn);
       });
+      
+      // Let Lucide render all the icons at once
+      if (window.lucide && window.lucide.createIcons) {
+        try {
+          window.lucide.createIcons();
+        } catch (e) {
+          console.warn('Lucide createIcons error:', e);
+        }
+      }
+      
       if (!filtered.length) {
         grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#9ca3af;font-size:.75rem;padding:16px">No icons found</p>';
       }

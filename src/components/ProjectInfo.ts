@@ -1,3 +1,5 @@
+import { iconRegistry } from '../utils/icons';
+
 interface TeamMember { name: string; role: string; link?: string; }
 
 export const ProjectInfo = {
@@ -21,9 +23,7 @@ export const ProjectInfo = {
           <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
           <div class="flex flex-wrap gap-3">
             ${links.map(l => {
-              const isBrandIcon = ['github', 'gitlab', 'linkedin', 'twitter', 'facebook', 'instagram', 'youtube', 'discord'].includes(l.icon || '');
-              const prefix = isBrandIcon ? 'fab' : 'fas';
-              const iconHtml = l.icon ? `<i class="${prefix} fa-${l.icon}"></i>` : '';
+              const iconHtml = l.icon ? iconRegistry.renderIconHTML(l.icon, { size: '1rem' }) : '';
               return `
                 <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
                   ${iconHtml}
@@ -38,7 +38,10 @@ export const ProjectInfo = {
 
     card.innerHTML = `
       <div class="flex items-center mb-6">
-        <i class="fas fa-info text-blue-500 text-2xl mr-3"></i>
+        ${iconRegistry.renderIconHTML('info', {
+          size: '1.5rem',
+          className: 'text-blue-500 mr-3',
+        })}
         <h2 class="text-2xl font-bold">Project Info</h2>
       </div>
       <div class="flex flex-wrap gap-8 text-gray-600">

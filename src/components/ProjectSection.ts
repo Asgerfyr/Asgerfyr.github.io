@@ -1,11 +1,12 @@
 import { renderSubItem, renderImageGallery } from '../utils/project';
+import { iconRegistry } from '../utils/icons';
 import type { ProjectImage, SubSectionItem } from '../utils/project';
 
 interface SectionImages { image_title?: string; image_elements: ProjectImage[]; }
 
 export const ProjectSection = {
   async render(props: Record<string, unknown>): Promise<HTMLElement> {
-    const icon    = (props.icon    as string) ?? 'cube';
+    const icon    = (props.icon    as string) ?? 'box';
     const color   = (props.color   as string) ?? 'blue';
     const title   = (props.title   as string) ?? 'Section';
     const content = (props.content as Record<string, SubSectionItem[]>) ?? {};
@@ -106,9 +107,18 @@ export const ProjectSection = {
 
     const card = document.createElement('div');
     card.className = 'bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8';
+    
+    // Render icon using the icon registry
+    const iconHTML = iconRegistry.renderIconHTML(icon, {
+      size: '1.5rem',
+      className: `text-${color}-500`,
+    });
+    
     card.innerHTML = `
       <div class="flex items-center mb-6">
-        <i class="fas fa-${icon} text-${color}-500 text-2xl mr-3"></i>
+        <div style="margin-right: 0.75rem; display: flex; align-items: center; justify-content: center;">
+          ${iconHTML}
+        </div>
         <h2 class="text-2xl font-bold">${title} Documentation</h2>
       </div>
     `;

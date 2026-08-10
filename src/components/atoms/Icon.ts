@@ -1,10 +1,11 @@
 import type { IconProps } from '../../types';
+import { iconRegistry } from '../../utils/icons';
 
 export class Icon {
   static render(props: IconProps): HTMLElement {
-    const i = document.createElement('i');
-    i.className = props.icon;
-    if (props.size) i.style.fontSize = props.size;
-    return i;
+    return iconRegistry.renderIcon(props.icon, {
+      size: props.size,
+      className: props.className,
+    });
   }
 }
