@@ -1,0 +1,555 @@
+{
+  "pageTitle": "BIL - Autonomt Køretøjskontrolsystem",
+  "scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js",
+    "/js/common/smooth-sctolling-links.js"
+  ],
+  "layout": [
+    {
+      "component": "ProjectHeader",
+      "props": {
+        "title": "BIL - Autonomt Køretøjskontrolsystem (Indlejrede Systemer)"
+      }
+    },
+    {
+      "component": "ProjectOverview",
+      "props": {
+        "description": "BIL-projektet er en indlejret systembillede til styring af et autonomt køretøj ved hjælp af en AVR-mikrokontroller. Systemet integrerer motorstyrings, lyscontrolitering, sensorinputbehandling og UART-baseret brugergrænseflade. Dette første-semester universitets projekt demonstrerer interrupt-drevet arkitektur, real-time state machine design og hardware abstraction principper.",
+        "objectives": [
+          "Implementere motor-styring med variable hastighedskontrol og retningsændring",
+          "Automatisere køretøj-sensorfeedback gennem refleksbrik-detektion for præcis positionsbestemmelse",
+          "Sikre lyskontrol med PWM-baseret intensitetsregulering for forlygte, baglys, og bremsekontrol",
+          "Tilbyde bruger-interface gennem UART-baseret menusystem til realtidskommandokontrol",
+          "Validere systemintegration af hardware-drivere og kommunikationsprotokoller under operationelle betingelser"
+        ],
+        "features": [
+          {
+            "icon": "zap",
+            "color": "yellow",
+            "title": "Motorkontrolsystem",
+            "description": "PWM-baseret motorcontrol med gradual accelerationsprofiler, retningsvalg og glatte hastighedstransitioner for at forhindre mekanisk stød"
+          },
+          {
+            "icon": "lightbulb",
+            "color": "yellow",
+            "title": "Uafhængig Lyscontrol",
+            "description": "Tre uafhængige lyskredsløb (for, bag, bremsekontrol) med PWM duty cycle kontrol for realistisk lysintensitetsmodulation"
+          },
+          {
+            "icon": "target",
+            "color": "cyan",
+            "title": "Refleksbrik-Baseret Positionering",
+            "description": "Tæller-baseret køretøjspositionering ved hjælp af eksterne interrupts, adaptiv debounce-timing (200ms/500ms) og real-time state machine progression"
+          },
+          {
+            "icon": "radio",
+            "color": "blue",
+            "title": "UART Kommunikationsgrænseflade",
+            "description": "Seriel kommunikation ved 9600 baud til menu-drevet kontrol, telemetritransmission og systemdebugning over terminal"
+          },
+          {
+            "icon": "cpu",
+            "color": "purple",
+            "title": "Interrupt-Drevet Arkitektur",
+            "description": "Effektiv asynkron hændelseshåndtering med timer-baseret debouncing, eliminering af sensorbounce og sikring af pålidelige state transitions"
+          }
+        ],
+        "images": []
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "sitemap",
+        "color": "blue",
+        "title": "Arkitektur: Lagdelt indlejret systemdesign",
+        "content": {
+          "System Architecture": [
+            {
+              "type": "text",
+              "content": "BIL-systemet følger en klassisk indlejret systemarkitektur med klar adskillelse af bekymringer på tvers af tre lag:"
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>Brugerinterface-lag</strong> - UART menu-system (_menuSYS, menu, kontrole) til manuel kontrol og debugging",
+                "<strong>Kontrollogik-lag</strong> - Hoved-event loop med state machine drevet af Refleks_count positionsvariabel (0-9)",
+                "<strong>Hardware Abstraction Lag</strong> - Modulare driverkomponenter (motor, lys, sensor, timer, UART) der indkapsler port-manipulation"
+              ]
+            }
+          ],
+          "Data Flow Pipeline": [
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Sensorinput (Refleksbrik)\n         ↓\n[INT0_vect / INT1_vect ISR Udløst]\n         ↓\n   Increment Refleks_count\n   Deaktiver Interrupts (debounce)\n   Start Timer (200-500ms)\n   Send UART telemetri\n         ↓\n    [Timer Interrupt]\n         ↓\n  Gen-aktiver Interrupts\n         ↓\n[Hoved-loop Læs Refleks_count]\n         ↓\nBeslutningslogik:\n  Tilstand 0: Initialisering (menu venter)\n  Tilstand 1-6: Progressive tilstande\n  Tilstand 7-8: Høj-hastighed tilstande (200ms timer)\n  Tilstand 9+: Sluttilstande\n         ↓\n[Udfør Kontrol Kommandoer]\n  - Sæt Motor PWM\n  - Sæt Lysværdier\n  - Afspil audio signaler\n  - Opdater LED visning"
+            }
+          ],
+          "Command-Response Flow": [
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Brugerinput (UART Menu)\n         \u2193\n[_menuSYS behandler input]\n         \u2193\n[_menuSYS dispatcher til menu()]\n         \u2193\n[menu() viser muligheder]\n         \u2193\n[Bruger valg \u2192 kontrole()]\n         \u2193\n[kontrole udfører kommandoer]\n  - motorPWM() / motorPWMGradvis()\n  - SetForlys() / SetBaklys() / SetBaglys()\n  - SOMO_Play_*() for audio\n         \u2193\n[Telemetri sendt tilbage via UNISendInteger()]"
+            }
+          ],
+          "Interrupt Timing and Debounce": [
+            {
+              "type": "text",
+              "content": "Systemet bruger adaptiv debounce-timing til at håndtere varierende køretøjhastigheder. Når en refleks registreres, deaktiveres interrupts i en konfigureret varighed før re-aktivering. Dette forhindrer flere interrupt-triggering fra en enkelt refleks passage, da sensorerne driver ind og ud af detektionsområdet."
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>Tilstande 0-6 (Normal hastighed)</strong> - 500ms debounce vindue: tillader tid for køretøjet at passere refleks uden gen-triggering",
+                "<strong>Tilstande 7-8 (Høj hastighed)</strong> - 200ms debounce vindue: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks",
+                "<strong>Adaptiv timing</strong> - Timer5 konfigureret i ISR med forskellige værdier baseret på aktuel tilstand, optimering for forventet køretøjhastighed på hvert progressions stadium"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "wrench",
+        "color": "yellow",
+        "title": "Motordriver - PWM-Baseret Hastigheds- og Retningskontrol",
+        "content": {
+          "Purpose and Design": [
+            {
+              "type": "text",
+              "content": "Motordriveren administrerer alle motorstyringsoperationer ved hjælp af PWM (Pulse Width Modulation) på Timer0. Den sørger for både øjeblikkelig hastighedsændring og graduel accelerationsprofiler til at forhindre mekanisk stød og sikre glatte overgange. Driveren accepterer delvise statændringer - hastighed kan modificeres uafhængigt uden at påvirke retningsindstillinger."
+            }
+          ],
+          "Key Design Decision": [
+            {
+              "type": "text",
+              "content": "Motordriveren kræver IKKE fuld initialisering på hver kommando. Når initMotor() konfigurerer Timer0 og retningspinne, modificerer efterfølgende motorPWM() eller motorPWMGradvis() opkald kun PWM duty cycle. Dette tillader menusystemet at justere motorhastighed til enhver tid uden at nulstille retning eller påtage sig initialiseringsomkostninger. Manglende eller uændrede parametre bevarer deres tidligere tilstand."
+            }
+          ],
+          "Main Functions": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>initMotor()</strong> - Engangs initialisering: konfigurerer Timer0 til PWM output, sætter retningskontrolpinne som digitale output, etablerer PWM frekvens",
+                "<strong>motorPWM(uint8_t speed, uint8_t retning)</strong> - Øjeblikkelig hastighedssændring: sætter motor PWM værdi (0-255 skalå) og retning. Speed=0 stopper motor. Retning: 0=bagud, 1=fremad",
+                "<strong>motorPWMGradvis(int16_t startSpeed, int16_t topSpeed, int8_t step, uint8_t retning, uint16_t delay_ms)</strong> - Graduel acceleration: glat ramping af motor fra startSpeed til topSpeed, inkrement PWM ved step værdi hver delay_ms millisekunder",
+                "<strong>motorIdle()</strong> - Stop motor: sætter PWM til 0, bevarer retning til næste kommando"
+              ]
+            }
+          ],
+          "Code Example": [
+            {
+              "type": "code",
+              "language": "c",
+              "content": "// From main.c - System initialization\ninitMotor();  // Configure Timer0 and direction pins once\n\n// State 1: Gradual acceleration from rest\nmotorPWMGradvis(0, 200, 1, 1, 10);\n// Start at 0 PWM, ramp to 200 PWM (forward direction)\n// Increment by 1 every 10ms = 2 seconds total ramp time\n\n// Menu system: immediate speed adjustment\nmotorPWM(150, 1);  // Jump to 150 PWM forward (no ramp)\nmotorPWM(0, 1);    // Stop immediately\n\n// State 9: Motor idle\nmotorIdle();  // Set PWM to 0, direction preserved"
+            }
+          ],
+          "Problems Solved": [
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Direkte PWM spring forårsager pludselig acceleration, hvilket skaber mekanisk stød og vibration i motor og tandhjul."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> motorPWMGradvis() implementerer glat accelerations-ramp med konfigurerbar trin størrelse og forsinkelse mellem inkrementer, spredt hastighedssændring over flere tidsintervaller."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Ingen måde at teste motorcontrol uden at udløse sensor-baseret state machine."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> Menusystemet kan kalde motorPWM() og motorPWMGradvis() direkte til enhver tid, hvilket tillader uafhængig test af motoradfærd før sensor integrationstestning."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "lamp",
+        "color": "yellow",
+        "title": "Lysdriver - Uafhængig PWM-baseret Lyskontrol",
+        "content": {
+          "Purpose and Design": [
+            {
+              "type": "text",
+              "content": "Lysdriver styrer tre uafhængige lyskredsløb ved hjælp af PWM duty cycle modulation til realistisk lysintensitets justering. Dette afspejler virkelig køretøj adfærd hvor baglys dimmers under normal drift og stiv op til bremsesignaler. Hver lys opererer på sin egen timer register med uafhængig kontrol."
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>Forlygte (Forlys)</strong> - Primær fremadrettet belysning",
+                "<strong>Baklys (Bag/Bremsely)</strong> - Bag indikator og bremsesignal",
+                "<strong>Baglys (Bakgear/Tilbagelys)</strong> - Gear bagud indikator"
+              ]
+            }
+          ],
+          "Key Design Decision": [
+            {
+              "type": "text",
+              "content": "Hver lysfunktion accepterer KUN sin egen duty cycle parameter og modificerer KUN sit tilsvarende timer register. Dette design forhindrer utilsigtet interferens mellem lys og tillader state machine at kontrollere alle tre uafhængigt. I modsætning til til/fra kontrol muliggør PWM duty cycle realistisk lysintensitets modulation (0-255 skalå) hvor forskellige tilstande kan sætte forskellige intensiteter."
+            }
+          ],
+          "Main Functions": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>SetForlys(uint8_t dutyCycle)</strong> - Kontroller forlysintensitet: 0=fra, 255=maksimal intensitet",
+                "<strong>SetBaklys(uint8_t dutyCycle)</strong> - Kontroller bag bremsely intensitet",
+                "<strong>SetBaglys(uint8_t dutyCycle)</strong> - Kontroller tilbagelys intensitet"
+              ]
+            }
+          ],
+          "Code Example": [
+            {
+              "type": "code",
+              "language": "c",
+              "content": "// From main.c - System initialization (all lights off)\nSetForlys(0);   // Front light: off\nSetBaklys(0);   // Brake light: off\nSetBaglys(0);   // Reverse light: off\n\n// State 1 (acceleration): Lights on, moderate intensity\nSetForlys(150);  // Front light: ~59% brightness\nSetBaklys(100);  // Brake light: ~39% brightness\nSetBaglys(0);    // Reverse light: remains off\n\n// State 2-6: Progressive state transitions adjust lighting independently\n// SetForlys(120); SetBaklys(80);  // Example state 2\n// SetForlys(180); SetBaklys(150); // Example state 7 (higher speed)\n\n// Reverse operation\nSetForlys(0);    // Front off\nSetBaklys(0);    // Brake off\nSetBaglys(200);  // Reverse light: ~78% brightness"
+            }
+          ],
+          "Problems Solved": [
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Simpel til/fra lys matcher ikke rigtig køretøj adfærd hvor baglys dimmers under normal drift og stivner op til bremsesignaler."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> PWM duty cycle tillader lysintensitets modulation fra 0-255, muliggørende realistisk intensitetskontrol der matcher forventet køretøj lyser adfærd ved forskellige hastigheder og tilstande."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Tre uafhængige lyskredsløb kræver isoleret kontrol uden krydsforstyrrelser."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> Separate funktioner for hver lyskreds løb, hver modificerer kun sit eget timer register, forhindrer utilsigtet interferens og tillader samtidig uafhængig lysintensitets justeringer."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "target",
+        "color": "cyan",
+        "title": "Sensorhåndterer - Interrupt-Drevet Refleksbrik Detektion",
+        "content": {
+          "Purpose and Design": [
+            {
+              "type": "text",
+              "content": "Sensorhåndtereren administrerer ekstern interrupt behandling til refleksbrik detektion. Når køretøjet passerer over en reflektiv markering, udløses en ekstern interrupt (INT0 eller INT1), som inkrementerer en global positionstæller. Systemet starter derefter en timer-baseret debounce mekanisme til at forhindre flere tællinger fra en enkelt refleks passage."
+            }
+          ],
+          "Key Design Decision": [
+            {
+              "type": "text",
+              "content": "Snarere end kontinuerlig analog sensor læsning bruger systemet en tæller-baseret state machine hvor interrupts deaktiveres umiddelbart efter triggering og gen-aktiveres kun efter en timer udsøbt (debounce deatime). Dette giver præcis, støjfri positions tracking. Eksterne interrupts deaktiveres (EIMSK = 0b00000000) i ISR, forhindrer flere tællinger mens køretøjet stadig passerer over en refleks."
+            }
+          ],
+          "Main Functions": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Initsensor()</strong> - Engangs konfiguration: muliggør INT0 og INT1 eksterne interrupt pinne, sætter kant trigger mode, konfigurerer interrupt mask register (EIMSK)",
+                "<strong>start_timer(uint16_t deadtime_ms)</strong> - Initierer Timer5 med specificeret deatime i millisekunder. Når timer udsøbt, ISR gen-aktiverer eksterne interrupts (EIMSK = 0b00000011)"
+              ]
+            }
+          ],
+          "Global State Variable": [
+            {
+              "type": "text",
+              "content": "<strong>Refleks_count</strong> - Volatile unsigned char (0-9): sporer køretøjs position relativt til reflekser. Dette er den PRIØRE state variabel der kontrollerer hele system progression. Hoved-loop læser denne værdi for at bestemme hvilken tilstand der skal udføres."
+            }
+          ],
+          "Code Example": [
+            {
+              "type": "code",
+              "language": "c",
+              "content": "// ISR triggered when reflective strip passes sensor\nISR(INT0_vect) {\n    Refleks_count++;              // Increment position counter\n    EIMSK = 0b00000000;           // Disable ALL external interrupts\n    \n    // Adaptive debounce: high-speed states use shorter window\n    if(Refleks_count == 7 || Refleks_count == 8) {\n        start_timer(200);         // High-speed: 200ms debounce\n    } else {\n        start_timer(500);         // Normal: 500ms debounce\n    }\n    \n    UNISendInteger(USART2, Refleks_count);  // Send count via UART\n}\n\n// Timer ISR (Timer5) - re-enables interrupts after debounce\n// EIMSK = 0b00000011;  // Re-enable INT0 and INT1"
+            }
+          ],
+          "Debounce Mechanism": [
+            {
+              "type": "text",
+              "content": "Systemet genkender at en enkelt refleks passage optager tid mens sensor driver ind/ud af detektionsområde. Uden debouncing skaber dette flere interrupt triggers for en logisk hændelse. Løsningen: umiddelbart deaktiverer interrupts efter trigger, derefter gen-aktiverer efter en timer-baseret deatime vindue."
+            },
+            {
+              "type": "list",
+              "content": [
+                "<strong>500ms debounce (Tilstande 0-6)</strong> - Standard operation: sikrer køretøjet føldigtende passerer refleks før næste trigger muligværd",
+                "<strong>200ms debounce (Tilstande 7-8)</strong> - Høj-hastighed operation: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks",
+                "<strong>Adaptiv timing</strong> - Dynamisk konfigureret i ISR baseret på Refleks_count værdi, optimering for forventet hastighed i hver tilstand"
+              ]
+            }
+          ],
+          "Problems Solved": [
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Enkelt refleks forårsager 5-15 interrupt triggers mens sensor forvirrende detektionszone skaber gentagne kant transitioner."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> Debounce timer deaktiverer interrupts i fast varighed efter trigger, eliminering af falske tællinger og sikring af nøjagtigt en tælling pr refleks passage."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Problem:</strong> Fastsat 500ms debounce vindue for lang til høj-hastighed køretøj tilstande hvor reflekser passerer hurtigere."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Løsning:</strong> Adaptiv debounce timing i ISR - automatisk skifter til 200ms for høj-hastighed tilstande (7-8), sikring at ingen refleks mistes samtidig med vedligeholdelse af bounce beskyttelse ved lavere hastigheder."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "radio",
+        "color": "blue",
+        "title": "UART Kommunikation - Serielgrænseflade til Kontrol og Telemetri",
+        "content": {
+          "Purpose and Design": [
+            {
+              "type": "text",
+              "content": "UART-driveren giver seriel kommunikation mellem mikrokontrolleren og eksterne systemer (menu grænseflade, debugging, telemetri). Den abstrakt lavniveau register manipulation bag en simpel initialisering og transmissions grænseflade."
+            }
+          ],
+          "Main Functions": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>InitUSARTArgs(USART_t *usart, uint16_t baudrate, uint8_t databits, uint8_t stopbits)</strong> - Konfigurerer specificeret USART perifer med baud rate, data bit tælling og stop bit tælling",
+                "<strong>UNISendInteger(USART_t *usart, int value)</strong> - Transmitterer heltal værdi som ASCII tekst streng over UART seriel linje"
+              ]
+            }
+          ],
+          "Code Example": [
+            {
+              "type": "code",
+              "language": "c",
+              "content": "// From main.c - initialization at program startup\nInitUSARTArgs(USART2, 9600, 8, 0);  // Configure USART2: 9600 baud, 8 data, 0 stop\n\n// During sensor ISR - transmit reflector count\nISR(INT0_vect) {\n    Refleks_count++;\n    UNISendInteger(USART2, Refleks_count);  // Sends \"1\", \"2\", ... \"9\" as text\n    // Terminal receives: \"1\\r\\n1\\r\\n2\\r\\n2\\r\\n3\" etc.\n}\n\n// Menu system uses UART for user interaction\n_menuSYS(USART2);  // Displays options and reads user input from serial"
+            }
+          ],
+          "Technical Specifications": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Baud Rate</strong> - 9600 bits/sekund (9600 baud)",
+                "<strong>Data Format</strong> - 8 bits pr tegn, 0 stop bits",
+                "<strong>Interface</strong> - USART2 perifer på AVR mikrokontroller",
+                "<strong>Kommunikationstype</strong> - Asynkron seriel, blokerende transmision"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "menu",
+        "color": "green",
+        "title": "Menusystem - Bruger Interface og Kontrollogik",
+        "content": {
+          "Purpose and Design": [
+            {
+              "type": "text",
+              "content": "Menusystemet giver en tekst-baseret brugerinterface over UART til test og kontrol af køretøj drift. Det kører i hoved-loop under initialiserings fase og selektivt under autonom drift, muliggørende real-time debugging og manual intervention."
+            }
+          ],
+          "Main Functions": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>_menuSYS(USART_t *usart)</strong> - Hoved menu dispatcher: gentagne gange kaldet i hoved loop til visning af muligheder og udsendelse af bruger kommandoer",
+                "<strong>menu(USART_t *usart)</strong> - Menu visning og input capture: viser tilgængelige muligheder og læser bruger valg fra seriel",
+                "<strong>kontrole(USART_t *usart)</strong> - Kommando udførelse: baseret på menu valg, kalder passende driver funktioner (motor hastighed, lys, audio)"
+              ]
+            }
+          ],
+          "Operational Flow": [
+            {
+              "type": "text",
+              "content": "Menusystemet opererer som en ikke-blokerende state machine der kører kun når Refleks_count er i specifikke tilstande (primært 0 under initialisering). Når sensor detekterer første refleks (Refleks_count inkrementer til 1), kan menu kaldes mellem state transitioner til debugging. Designet tillader autonom progression mens der forbliver responsivt til manuelle kommandoer."
+            },
+            {
+              "type": "code",
+              "language": "c",
+              "content": "// Main execution flow\n// INITIALIZATION: Refleks_count == 0\nwhile(Refleks_count == 0) {\n    _menuSYS(USART2);  // Display menu, wait for user input\n}\n\n// STATE 1: Gradual Acceleration\nSetForlys(150);  SetBaklys(100);  SetBaglys(0);\nmotorPWMGradvis(0, 200, 1, 1, 10);  // 0 → 200 PWM over 2 seconds\nwhile(Refleks_count == 1) {\n    _menuSYS(USART2);  // Menu remains available for debugging\n}\n\n// STATES 2-9: Progressive State Transitions\n// Each state configures lights and motor differently\n// Sensor detection increments Refleks_count, triggering next state"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "check-circle",
+        "color": "green",
+        "title": "Test og Validering",
+        "content": {
+          "Hardware Integration Testing": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Motorcontrol</strong> - Verifikation af PWM output på oscilloskop; bekræftet glatte acceleration profiler ved hjælp af motorPWMGradvis() med varierende trin størrelser",
+                "<strong>Sensor detektion</strong> - Testning af interrupt triggering ved manuel refleks passage over sensor; bekræftet korrekt Refleks_count inkrementering",
+                "<strong>Lyskredsløb</strong> - Validering af uafhængig lyskontrol og PWM intensitets justering; måling af duty cycle på hver lys output",
+                "<strong>UART kommunikation</strong> - Bekræftet telemetri output over seriel terminal ved 9600 baud; verifikation af menu input/output flow",
+                "<strong>Interrupt timing</strong> - Verifikation af timer-baseret debounce ved hjælp af oscilloskop (indfanget interrupt deaktivering/aktivering timing); bekræftet forhindring af flere tællinger pr refleks",
+                "<strong>State transitioner</strong> - Bekræftet progression gennem alle 9 tilstande uden manuel intervention; validering af timing mellem refleks detektioner"
+              ]
+            }
+          ],
+          "Known Limitations": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Fast refleks tælling</strong> - System antager nøjagtigt 9 reflekser på spor; tæller fortsætter forbel 9 hvis spor ikke stoppes",
+                "<strong>Menu under autonomy</strong> - Menu forbliver aktiv under autonom drift (ikke-blokerende men potentielt forvirrende)",
+                "<strong>Ingen fejlbehandling</strong> - Manglende fejl recovery til afbrudt sensorer eller fejlede motor initialisering",
+                "<strong>Blokerende UART</strong> - UNISendInteger() er blokering; høj-frekvens telemetri kunne forsinke motorcontrol med millisekunder",
+                "<strong>Ingen hastigheds feedback</strong> - Ingen encoder eller tachometer; motor hastighed estimeret fra PWM værdi kun"
+              ]
+            }
+          ],
+          "Test Equipment and Methods": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Oscilloskop</strong> - Indfanget PWM bølgeformer til motor og lys; verifikation af interrupt timing og debounce vindue",
+                "<strong>Seriel Terminal (PuTTY)</strong> - Menu interaktion og telemetri overvågning ved 9600 baud",
+                "<strong>Manuel refleks positionering</strong> - Triggering af sensor ved passage af refleks over detektionszone",
+                "<strong>Strømforsyning med strømbegrænsning</strong> - Motor belastningstest med konfigurerbar strøm begrænsninger"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "folder-open",
+        "color": "purple",
+        "title": "Projektstruktur og Filorganisering",
+        "content": {
+          "Directory Layout": [
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "bil/\n├── bil.atsln                    # Atmel Studio løsningsfil\n├── bil/                         # Hoved projektmappe\n│   ├── main.c                   # Hoved program og state machine\n│   ├── motor_driver.c / .h      # Motor PWM og retningskontrol\n│   ├── Lys_driver.c / .h        # Lys: for, bag, tilbag\n│   ├── Sensor_delay.c / .h      # Interrupt håndteler, debounce timer\n│   ├── uniuart.c / .h           # UART kommunikations grænseflade\n│   ├── menu.c / .h              # Menusystem og brugerinterface\n│   ├── somo.c / .h              # Audio afspilning (SOMO modul)\n│   ├── led.c / .h               # LED status display\n│   ├── PWM_driver.c / .h        # PWM abstraktion lag\n│   ├── Uart.c / .h              # Lavniveau UART driver\n│   └── bil.cproj                # Atmel Studio projekt config\n└── .git/                         # Git versions kontrol"
+            }
+          ],
+          "File Responsibilities": [
+            {
+              "type": "text",
+              "content": "<strong>main.c</strong> - Indeholder program indångspunkt, state machine logik og ISR definitioner (INT0_vect, INT1_vect). Hoved loop læser Refleks_count og kontrollerer state progression."
+            },
+            {
+              "type": "text",
+              "content": "<strong>motor_driver.c / .h</strong> - Motor kontrol implementering: Timer0 PWM konfiguration, hastigheds/retnings kontrol, graduel acceleration logik."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Lys_driver.c / .h</strong> - Lys kontrol: SetForlys, SetBaklys, SetBaglys funktioner med PWM duty cycle modulation for hver lyskreds løb."
+            },
+            {
+              "type": "text",
+              "content": "<strong>Sensor_delay.c / .h</strong> - Ekstern interrupt konfiguration (INT0, INT1), sensor initialisering, timer-baseret debounce håndtering via Timer5."
+            },
+            {
+              "type": "text",
+              "content": "<strong>uniuart.c / .h</strong> - UART initialisering (baud rate, data format) og transmision (UNISendInteger til telemetri)."
+            },
+            {
+              "type": "text",
+              "content": "<strong>menu.c / .h</strong> - Menusystem: visning af muligheder over UART, capture bruger input, dispatcher kommandoer til kontrole()."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectSection",
+      "props": {
+        "icon": "cpu",
+        "color": "purple",
+        "title": "Teknologier og Hardware Platform",
+        "content": {
+          "Microcontroller Specifications": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Device</strong> - AVR ATmega serie (Atmel Studio kompatibel)",
+                "<strong>Architecture</strong> - 8-bit RISC processor",
+                "<strong>Clock Frequency</strong> - 16 MHz (F_CPU = 16000000 Hz)",
+                "<strong>Flash Memory</strong> - Tilstrækkeligt til programkode og konstanter",
+                "<strong>RAM</strong> - Tilstrækkeligt til globale variabler og stack"
+              ]
+            }
+          ],
+          "Peripherals Used": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Timer0</strong> - PWM generation til motor hastigheds kontrol",
+                "<strong>Timer5</strong> - Timing håndtering til sensor debounce deatime",
+                "<strong>INT0 / INT1</strong> - Eksterne interrupt pinne til refleksbrik sensor input",
+                "<strong>USART2</strong> - Seriel kommunikation ved 9600 baud",
+                "<strong>Multiple PWM outputs</strong> - Uafhængig duty cycle kontrol til tre lyskredsløb"
+              ]
+            }
+          ],
+          "Development Tools": [
+            {
+              "type": "list",
+              "content": [
+                "<strong>Atmel Studio 7</strong> - Integreret udviklings miljø og compiler",
+                "<strong>AVR-GCC</strong> - GNU C compiler toolchain til AVR arkitektur",
+                "<strong>Seriel Terminal</strong> - PuTTY eller Arduino IDE seriel monitor til UART interaktion",
+                "<strong>Oscilloskop</strong> - Hardware verifikation af PWM og interrupt timing"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "component": "ProjectConclusion",
+      "props": {
+        "results": "BIL-systemet arbejdede som forventet. Interrupt-drevet sensor håndtering med adaptiv debounce-timing eliminerede sensorbounce og optimerede for varierende køretøjhastigheder. PWM-baseret motorcontrol med glatte accelerationsprofiler forhindrede mekanisk stød og gav flydende hastighedsovergange. Uafhængig lyskontrol muliggjorde realistisk multi-circuit lysintensitetsmodulation. State machine progression drevet af præcis sensor positionering arbejdede pålidelig gennem alle 9 tilstande. UART-kommunikationen var stabil, og systemet bevarte fuld telemetri uden datatab. Projektets primære mål blev opnået: fuldt funktionelt autonomt køretøjkontrolsystem med robust interrupt-arkitektur.",
+        "learned": "Adaptiv debounce-timing er kritisk for interrupt-drevet design. Initialt brugte vi fastsat 500ms vinduer, men opdagede at høj-hastighed tilstande krævede kortere windows (200ms). <strong>Lektie 1:</strong> Tilstandsafhængig timing løste problemet bedre end én global værdi.\n\nVolatile globale variabler er essensielle for ISR-data. Vi erfarede at compiler-optimering fjernede læsninger hvis Refleks_count ikke var volatile, hvilket fik state machine til at hænge. <strong>Lektie 2:</strong> Memory barriers og volatile keywords er ikke valfri i embedded ISR design.\n\nNon-blokerende menusystem er vigtig under autonom operation. Initialt ville vi blokere menuen, men det forhindrede sensor interrupt håndtering. Redesign til polling-baseret menu tillod samtidig sensor og bruger-input. <strong>Lektie 3:</strong> Blokering i ISR-kontekst er farligt; alt skal være interrupt-safe.\n\nHardware-timing kan ikke afhænge af software estimates. Vi antog 10ms PWM-trin ville give glat acceleration, men oscilloskop-måling viste variabilitet. Timere-baseret acceleration i stedet for loop-counts gav konsistent adfærd. <strong>Lektie 4:</strong> Validér timing-kritiske operationer med hardware-instrumenter.\n\nModularisering af drivers reducerer debug-tid væsentligt. Isolerede test af motor, lys og sensor var langt lettere end at teste det samlede system først. <strong>Lektie 5:</strong> Hver driver-modul skal være selvstændigt testbar før integration.",
+        "improvements": [
+          "Encoder-baseret feedback: Tilføj rotationsencodere til motormodulet for høj-præcision position-tracking uden at stole på statiske reflekser",
+          "Forhindringsgenkendelse: Ultrasoniske sensorer for autonome navigationsforbedringer",
+          "Telemetri logging: SD-kort integration for opsamling af historik til post-analysis",
+          "Trådløs kontrol: Bluetooth- eller RF-modul til fjernbetjening uden seriel kabel",
+          "Energistyring: Batteri-monitor og low-power sleep-modes til øget autonomi",
+          "Fejlgendannelse: Timeouts og watchdog-timer for at håndtere sensor-fejl gracefully"
+        ]
+      }
+    },
+    {
+      "component": "ProjectInfo",
+      "props": {
+        "completion_date": "December 2025",
+        "team_size": 5,
+        "duration": "1 semester",
+        "team_members": [
+          {
+            "name": "Asger Fyr",
+            "role": ""
+          }
+        ]
+      }
+    }
+  ]
+}
