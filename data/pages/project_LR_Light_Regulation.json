@@ -701,11 +701,6 @@
             "label": "Repository: Arduino",
             "icon": "github",
             "url": "https://github.com/UNIprojekter/S2-ARDUINO"
-          },
-          {
-            "label": "Documentation",
-            "icon": "book",
-            "url": ""
           }
         ]
       }
