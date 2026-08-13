@@ -1,63 +1,44 @@
 export const ProjectHeader = {
-  render(props: Record<string, unknown>): HTMLElement {
+  render(props: Record<string, unknown> = {}): string {
     const title = (props.title as string) ?? 'Project';
-    document.title = `${title} Documentation`;
+    const sections = (props.sections as string[]) ?? ['Overview', 'Conclusion'];
+    
+    const sectionLinks = sections
+      .map(section => `<a href="#${section.toLowerCase().replace(/\s+/g, '-')}" class="nav-link">${section}</a>`)
+      .join('\n                ');
 
-    const div = document.createElement('div');
-    div.className = 'bg-white shadow-md sticky top-0 z-40';
-    div.innerHTML = `
-      <a href="/" class="absolute top-3 left-3 text-blue-500"><i class="fas fa-home"></i></a>
-      <div class="container mx-auto px-6 pl-9 py-2">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center title-wrap">
-            <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
-            <div class="title">
-              <h1 class="project-title">${title}</h1>
-              <span class="project-subtitle">Documentation</span>
+    return `
+      <div class="bg-white shadow-md sticky top-0 z-40">
+        <a href="/" class="absolute top-3 left-3 text-blue-500">
+          <svg class="lucide-icon" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="container mx-auto px-6 pl-9 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center title-wrap">
+              <svg class="lucide-icon mr-3" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;">
+                <path d="M19 3H5c-1 0-2 1-2 2v14c0 1 1 2 2 2h14c1 0 2-1 2-2V5c0-1-1-2-2-2z"></path>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h2"></path>
+              </svg>
+              <div class="title">
+                <h1 class="project-title">${title}</h1>
+                <span class="project-subtitle">Documentation</span>
+              </div>
             </div>
-          </div>
 
-          <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
-            <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
-            <div id="nav-links" class="sections-panel" aria-hidden="true">
-              <a href="#overview" class="nav-link">Overview</a>
-              <a id="conclusion-link" href="#conclusion" class="nav-link">Conclusion</a>
+            <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+              <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
+              <div id="nav-links" class="sections-panel" aria-hidden="true">
+                ${sectionLinks}
+              </div>
             </div>
           </div>
         </div>
       </div>
     `;
-
-    // add toggle behavior for sections dropdown
-    setTimeout(() => {
-      const toggle = div.querySelector('#sections-toggle') as HTMLButtonElement | null;
-      const panel = div.querySelector('#nav-links') as HTMLElement | null;
-      if (!toggle || !panel) return;
-      
-      function closePanel() {
-        panel!.classList.remove('open');
-        panel!.setAttribute('aria-hidden', 'true');
-        toggle!.setAttribute('aria-expanded', 'false');
-        toggle!.textContent = 'Sections ▼';
-      }
-      function openPanel() {
-        panel!.classList.add('open');
-        panel!.setAttribute('aria-hidden', 'false');
-        toggle!.setAttribute('aria-expanded', 'true');
-        toggle!.textContent = 'Sections ▲';
-      }
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (panel!.classList.contains('open')) closePanel(); else openPanel();
-      });
-      // close when clicking a link
-      panel.addEventListener('click', (e) => { const t = e.target as HTMLElement; if (t && t.tagName === 'A') closePanel(); });
-      // close on outside click
-      document.addEventListener('click', (e) => {
-        if (!div.contains(e.target as Node)) closePanel();
-      });
-    }, 50);
-
-    return div;
   },
 };

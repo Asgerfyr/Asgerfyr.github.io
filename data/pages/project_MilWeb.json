@@ -22,7 +22,7 @@
           { "icon": "map", "color": "green", "title": "Interaktivt kort (Leaflet.js)", "description": "Generalens interface viser et interaktivt kort, hvor troppernes positioner vises som farvede markører i realtid." },
           { "icon": "lock", "color": "violet", "title": "Sikkerhed og kryptering", "description": "Adgangskoder hashes med SHA256, og data i databasen krypteres med AES. HTTPS sikrer kommunikationen." },
           { "icon": "wifi", "color": "cyan", "title": "Realtidskommunikation", "description": "Systemet bruger fetch API'er til at sende og hente data mellem frontend og backend dynamisk." },
-          { "icon": "puzzle-piece", "color": "yellow", "title": "Session og adgangskontrol", "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan tilgå bestemte sider." }
+          { "icon": "lock", "color": "yellow", "title": "Session og adgangskontrol", "description": "En middleware-komponent på serversiden sikrer, at kun brugere med rette adgangsrettigheder kan tilgå bestemte sider." }
         ],
         "images": [
           { "url": "https://i.pinimg.com/736x/c1/0c/ca/c10ccabf808683e2e2c8dcc1927b93d1.jpg", "alt": "Login side", "caption": "Login side med rollebaseret adgang" },
@@ -57,7 +57,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "users-viewfinder",
+        "icon": "users",
         "color": "orange",
         "title": "UI Design",
         "content": {
@@ -114,7 +114,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "test",
+        "icon": "beaker",
         "color": "blue",
         "title": "Testing-Evaluation",
         "content": {

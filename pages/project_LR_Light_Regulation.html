@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio">
+  <title>Light Regulation System</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/css/common/standerd.css">
+  <link rel="stylesheet" href="/css/common/config.css">
+  
+  <link rel="stylesheet" href="/css/project/style.css">
+  
+</head>
+<body>
+  
+      <div class="bg-white shadow-md sticky top-0 z-40">
+        <a href="/" class="absolute top-3 left-3 text-blue-500">
+          <svg class="lucide-icon" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="container mx-auto px-6 pl-9 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center title-wrap">
+              <svg class="lucide-icon mr-3" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;">
+                <path d="M19 3H5c-1 0-2 1-2 2v14c0 1 1 2 2 2h14c1 0 2-1 2-2V5c0-1-1-2-2-2z"></path>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h2"></path>
+              </svg>
+              <div class="title">
+                <h1 class="project-title">Light Regulation System (LR)</h1>
+                <span class="project-subtitle">Documentation</span>
+              </div>
+            </div>
+
+            <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+              <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
+              <div id="nav-links" class="sections-panel" aria-hidden="true">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#conclusion" class="nav-link">Conclusion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="overview" class="section-anchor mb-16 container mx-auto px-6 pt-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Overview</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+              <p class="text-gray-600 mb-6">Et intelligent belysningssystem designet til at optimere energiforbrug gennem automatisk lyskontrol baseret på tilstedeværelse og naturligt lys. Systemet kombinerer Arduino Mega 2560 til sensor- og LED-styring med Raspberry Pi til avanceret databehandling og grafisk interface.</p>
+              <h3 class="text-xl font-semibold mb-4">Objectives</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Automatisere belysning baseret på tilstedeværelse og naturligt lys med konsistent feedback-loop</li><li>Reducere energiforbrug gennem intelligent lysregulering og historiebevaring</li><li>Implementere en modulopbygget pipeline-arkitektur med klare ansvarsgrænser</li><li>Sikre pålidelig UART-kommunikation mellem Arduino og Raspberry Pi</li><li>Tilbyde real-time diagnostik og brugervenlig mode-kontrol (auto/manual/regulating)</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+              <div class="space-y-4">
+                
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fefce8; color: #eab308">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Adaptiv Lysregulering</h4>
+            <p class="text-sm text-gray-500">Dynamisk justering af lysintensitet baseret på tilstedeværelse, tidsvindue og naturligt lys måling.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #eff6ff; color: #3b82f6">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Struktureret Historik</h4>
+            <p class="text-sm text-gray-500">NumPy-baseret tilstandslager som bevarer fuldstændig datahistorik for analyse og debugging.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #faf5ff; color: #a855f7">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Centraliseret Logik</h4>
+            <p class="text-sm text-gray-500">Alle lyskontrol-beslutninger i én Processor klasse - undgår distribueret og redundant kode.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #ecf0ff; color: #06b6d4">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01" /><path d="M2 8.82a15 15 0 0 1 20 0" /><path d="M5 12.859a10 10 0 0 1 14 0" /><path d="M8.5 16.429a5 5 0 0 1 7 0" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">UART Pipeline</h4>
+            <p class="text-sm text-gray-500">Robust seriel kommunikation mellem Arduino og Raspberry Pi med error handling og connection resilience.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #f0fdf4; color: #22c55e">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h4" /><path d="M12 21v-9" /><path d="M12 8V3" /><path d="M17 16h4" /><path d="M19 12V3" /><path d="M19 21v-5" /><path d="M3 14h4" /><path d="M5 10V3" /><path d="M5 21v-7" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Intelligent Mode-kontrol</h4>
+            <p class="text-sm text-gray-500">Brugervenlig styring af Auto/Manual/Regulating modes med enkel abstraktion og klare overgange.</p>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8 mt-8">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" /><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" /><circle cx="13" cy="7" r="1" fill="currentColor" /><rect x="8" y="2" width="14" height="14" rx="2" /></svg></span>Project Images
+        </h3>
+        <div class="image-gallery">
+          
+      <div class="image-card cursor-pointer">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0" alt="LR System Overview" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Systemet med Arduino, Raspberry Pi og touch display</p>
+      </div>
+    
+      <div class="image-card cursor-pointer">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPuA9zVaT1mvplhfdb2GgVzSWFaJmKaGdyk0YIyBA-gcT1kaZV0DCYp8GdbuD0uS2hdyPauDeQLS-s9ISvk3XneHm_NZ49JMT1FqoYcwO2CfCrCo_jUeaZ6q2_tq-scsrPaKj6TRlVo3wbghScqnjpj=w1393-h1045-s-no-gm?authuser=0" alt="LR graf og indstilling af lysintensitet" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Graf og manuel indstilling af lysintensitet</p>
+      </div>
+    
+      <div class="image-card cursor-pointer">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPXlXXiOGq6cJB62xUtNeYJqf4OnLgB9a3pIZQO7MSas4AuuqS9u3Ycc7A1RAZ0PzjZyjpKFxO3bRQ-KLNzCjX4G5j4AMmHMF9Mm_y1Qzf4u70rz6taK0JFUpO_3C6SByxaf77zmr0ebEgW6hytFOw7=w1393-h1045-s-no-gm?authuser=0" alt="LR indstilling side til indstilling af manuel og regulering" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Indstilling af lys regulering (auto, regulering og manuel styring)</p>
+      </div>
+    
+        </div>
+      </div>
+    
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Arkitektur: Pipeline-Model med 6 Komponenter Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Arkitektonisk Design</h3><p class="text-gray-600 mb-4">Systemet implementeres som en <strong>klassisk pipeline-arkitektur</strong>: Data flows envejen gennem komponenter, hvor hver transformerer input til output for næste komponent. Dette sikrer:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>Separation of concerns - hver klasse har ét klart ansvar</li><li>Testabilitet - hver komponent kan enhedstestes isoleret</li><li>Vedligeholdelse - ændringer i én komponent påvirker ikke andre</li><li>Udvidelse - nye features tilføjes uden at modificere eksisterende kode</li></ul></div><div><h3 class="text-xl font-semibold mb-4">De 6 Komponenter</h3><p class="text-gray-600 mb-4"><strong>Raspberry Pi (Python) - Min Primære Bidrag:</strong></p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>1. UART Driver</strong> - Seriel kommunikation (read/write) med Arduino</li><li><strong>2. Data</strong> - NumPy-baseret struktureret historiklager</li><li><strong>3. Processor</strong> - Centraliseret lyskontrol-logik og beslutninger</li><li><strong>4. Router</strong> - Kommando-routing og tilstandsændringer (testing & bug-fixing)</li></ul><p class="text-gray-600 mb-4"><strong>Raspberry Pi (Python) - Andre Komponenter:</strong></p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>5. GUI</strong> - Brugergrænsefladen med slider, mode-knapper, status-display</li><li><strong>6. Developer GUI</strong> - Diagnostik, datavisning, health-check, test-data injection</li></ul><p class="text-gray-600 mb-4"><strong>Arduino (C++) - Min Sekundære Bidrag:</strong></p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>UART Driver (OOP refactoring) - Kommunikation med Raspberry Pi</li><li>Router - Kommando-routing og sensor-broadcasting</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Dataflow Pipeline</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Arduino Sensors
+    ↓
+[Arduino UART] → (serial port) → [Raspberry Pi UART Driver]
+                                         ↓
+                                    [Router.uart_rout()]
+                                         ↓
+                                    [Processor.add()]
+                                         ↓
+                                     [Data.add()]
+                                         ↓
+                                   (stored in NumPy array)
+                                         ↓
+                                    [Router] ←→ [GUI]
+(Data flows one direction through pipeline. Router returns state to GUI)</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Reverse Command Flow</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">GUI User Input (slider, button)
+        ↓
+  [Router.add(request)]
+        ↓
+  [Processor.add()] ← processes with existing state
+        ↓
+  [Data.add()] ← stores new state (returns datapoint)
+        ↓
+  [Router] ← returns new state ← (then Router sends to UART or returns to GUI)
+        ↓
+   Arduino LED/control</code></pre></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Data Klasse - Central State Storage Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Formål og Design</h3><p class="text-gray-600 mb-4">Data-klassen fungerer som systemets centrale tilstandslager. Den bevarer fuldstændig historik over alle systemtilstande ved at oprette nye datapoint ved hver ændring, i stedet for at overskrive eksisterende data.</p><p class="text-gray-600 mb-4">Denne tilgang sikrer, at historiske data altid er tilgængelige for analyse, mens det nyeste tilstand forbliver let tilgængeligt.</p></div><div><h3 class="text-xl font-semibold mb-4">Datastruktur</h3><p class="text-gray-600 mb-4">Internt bruger Data-klassen en NumPy-struktureret array til effektiv lagring:</p><div class="overflow-x-auto mb-4"><table class="w-full border-collapse border border-gray-300"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Felt</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Beskrivelse</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Type</th></tr></thead><tbody><tr><td class="border border-gray-300 px-4 py-2">lux</td><td class="border border-gray-300 px-4 py-2">Naturligt lys måling (lux)</td><td class="border border-gray-300 px-4 py-2">int</td></tr><tr><td class="border border-gray-300 px-4 py-2">motion</td><td class="border border-gray-300 px-4 py-2">Bevægelsesdetektering</td><td class="border border-gray-300 px-4 py-2">bool</td></tr><tr><td class="border border-gray-300 px-4 py-2">current</td><td class="border border-gray-300 px-4 py-2">Energiforbrug (mA)</td><td class="border border-gray-300 px-4 py-2">float</td></tr><tr><td class="border border-gray-300 px-4 py-2">light_intensity</td><td class="border border-gray-300 px-4 py-2">LED intensitet (0-100%)</td><td class="border border-gray-300 px-4 py-2">int</td></tr><tr><td class="border border-gray-300 px-4 py-2">light_auto</td><td class="border border-gray-300 px-4 py-2">Automatisk mode aktiv</td><td class="border border-gray-300 px-4 py-2">bool</td></tr><tr><td class="border border-gray-300 px-4 py-2">light_regulating</td><td class="border border-gray-300 px-4 py-2">Reguleringstilstand aktiv</td><td class="border border-gray-300 px-4 py-2">bool</td></tr><tr><td class="border border-gray-300 px-4 py-2">time</td><td class="border border-gray-300 px-4 py-2">Timestamp</td><td class="border border-gray-300 px-4 py-2">datetime</td></tr><tr><td class="border border-gray-300 px-4 py-2">light_on</td><td class="border border-gray-300 px-4 py-2">LED'er tændt/slukket</td><td class="border border-gray-300 px-4 py-2">bool</td></tr></tbody></table></div></div><div><h3 class="text-xl font-semibold mb-4">Vigtige Metoder</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-python"># Tilføj nyt datapoint
+data.add(lux=450, motion=True, current=125, light_intensity=75)
+
+# Hent alle datapoints
+all_points = data.get_data()
+
+# Hent datapoints inden for tidsinterval
+recent = data.get_data(start_time=now - timedelta(hours=1))
+
+# Filtrer specifikke felter
+lux_values = data.get_data(filter=['lux'])</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Løste Problemer</h3><p class="text-gray-600 mb-4"><strong>Filter-håndtering:</strong> Hvis et enkelt filtrerværdi blev passeret som string, blev det tolket som tegn-sekvens. Løsningen normaliseredes inputtet, så enkelværdier altid blev behandlet som ét felt.</p><p class="text-gray-600 mb-4"><strong>Single-result Inkonsistens:</strong> Når kun ét datapoint blev returneret, returnerede funktionen nogle gange et enkelt objekt i stedet for en liste. Løsningen sikrer altid et list-return, selv for ét datapoint.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-purple-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Processor Klasse: Centraliseret Kontrollogik Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Arkitektonisk Betydning</h3><p class="text-gray-600 mb-4">Processor er hjerte af systemet. Den modtager indgående data (sensordata eller brugerbeslutninger), men <strong>kræver IKKE alle felter</strong>. Hvis et felt ikke er specificeret (None), slår Processor det op fra historikken og bevarer tidligere værdi. Dette muliggør partielle state-updates.</p><p class="text-gray-600 mb-4">Kritisk designbeslutning: <strong>ALLE lyskontrol-beslutninger centraliseres her</strong>. Processor indeholder al logik til at bestemme on/off-tilstand og lysintensitet. Dette undgår redundant logik spredt på tværs af GUI, Router og andre komponenter.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>GUI kan sende kun</strong> slider-ændringer (light_intensity). Processor bruger eksisterende motion, lux, mode fra Data.</li><li><strong>Arduino kan sende kun</strong> sensor-værdier (lux, motion, current). Processor holder eksisterende light_on, light_regulating status.</li><li><strong>System bevarer automatisk tilstand</strong> uden at komponenter behøver at håndtere state-kombinatorik.</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Processor.add() Implementering</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-python">class Processor:
+    def __init__(self, data):
+        self._data = data
+    
+    def add(self, lux=None, motion=None, current=None, light_intensity=None,
+            light_auto=None, light_regulating=None, fixed_intensity=None, light_on=None):
+        """Transformerer input til ny systemtilstand."""
+        
+        AUTO_TIME_THRESHOLD = 60 * 5  # 5 minutter
+        
+        # Få nuværende state
+        [auto, regulating] = self._data.get_data(item_name_filter=("light_auto","light_regulating"))
+        
+        if light_auto is None:
+            light_auto = auto
+        if light_regulating is None:
+            light_regulating = regulating
+        
+        # BESLUTNING 1: Skal lyset være tændt eller slukket?
+        if light_auto:
+            if motion == True:
+                light_on = True
+            else:
+                recent_motion = self._data.get_data(
+                    interval=(time.time() - AUTO_TIME_THRESHOLD, time.time()),
+                    item_name_filter=("motion",)
+                )
+                light_on = any(recent_motion) if len(recent_motion) > 0 else False
+        else:
+            if light_on is None:
+                light_on = light_intensity > 0 if light_intensity is not None else self._data.get_data(item_name_filter=("light_on",))[0]
+        
+        # BESLUTNING 2: Hvor intens skal lyset være?
+        if light_on:
+            if fixed_intensity is None:
+                fixed_intensity = self._data.get_fixed_intensity()
+            
+            if light_regulating:
+                if lux is None:
+                    lux = self._data.get_data(item_name_filter=("lux",))[0]
+                light_intensity = self.calculate_intensity(lux, fixed_intensity)
+            else:
+                light_intensity = fixed_intensity
+        else:
+            light_intensity = 0
+        
+        data_point = self._data.add(lux, motion, current, light_intensity,
+                                    light_auto, light_regulating, fixed_intensity, light_on)
+        return data_point
+    
+    def calculate_intensity(self, lux, fixed_intensity):
+        """Jo mere naturligt lys, jo mindre kunstig lys."""
+        return min(255 - lux, fixed_intensity)</code></pre></div><div><h3 class="text-xl font-semibold mb-4">To Vigtige Logik-beslutninger</h3><p class="text-gray-600 mb-4"><strong>1. On/Off Bestemmelse:</strong> AUTO-mode tjekker for bevægelse indenfor 5-minutter. MANUAL-mode er bruger-kontrolleret.</p><p class="text-gray-600 mb-4"><strong>2. Intensitet Bestemmelse:</strong> REGULATING justerer dynamisk baseret på lux. FIXED bruger brugerdefineret værdi.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-green-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Router Klasse - Central Routing Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Rolle i Systemet</h3><p class="text-gray-600 mb-4">Router er det centrale routingpunkt der forbinder:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>UART (Arduino kommunikation)</li><li>GUI (bruger input)</li><li>Developer GUI (diagnostik)</li><li>Processor (logik)</li><li>Data (state storage)</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Primære Udfordringer</h3><p class="text-gray-600 mb-4">UART kommunikation ankommer som strings. Router skal derfor:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>Identificere kommandotypen</li><li>Validere string-formatet</li><li>Parse datapoint-værdier</li><li>Konvertere til korrekte datatyper</li><li>Forward til Processor eller relevant komponent</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Centrale Metoder</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>add(requested_state)</strong> - Sender state-ændring gennem Processor, får resultat, gemmer i Data, returnerer ny state til GUI/UART</li><li><strong>uart_rout(uart_string)</strong> - Parser Arduino-besked, identificerer kommandotype (L/M/C/H/I/A), kalder add() eller health_check()</li><li><strong>get_data(filters)</strong> - Henter historiske data fra Data-klasse, bruges af Developer GUI til analyse</li><li><strong>remove_data(index)</strong> - Sletter datapoint fra historik</li><li><strong>health_check()</strong> - Returnerer systemstatus (forbindelse, sensorer, data consistency)</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Implementerings Aspekter</h3><p class="text-gray-600 mb-4"><strong>State Flow:</strong> GUI → Router.add() → Processor → Data → Router returnerer ny state til GUI. Reverse: Arduino UART → Router.uart_rout() → samme flow.</p><p class="text-gray-600 mb-4"><strong>Data Retrieval:</strong> Developer GUI kalder Router.get_data(), som queries Data-klasse historik. Router er transparent forwarder, Data-klasse ejer al state.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-cyan-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.247 7.761a6 6 0 0 1 0 8.478" /><path d="M19.075 4.933a10 10 0 0 1 0 14.134" /><path d="M4.925 19.067a10 10 0 0 1 0-14.134" /><path d="M7.753 16.239a6 6 0 0 1 0-8.478" /><circle cx="12" cy="12" r="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">UART Communication: Raspberry Pi ↔ Arduino Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Raspberry Pi UART Driver</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-python">class Uart_driver:
+    """Driver for UART serial communication with Arduino."""
+    
+    def __init__(self, port="COM19", baudrate=9600, timeout=1):
+        try:
+            self.ser = serial.Serial(port, baudrate, timeout=timeout)
+        except serial.SerialException as e:
+            print(f"Error: {e}")
+            self.ser = None
+        
+        if self.ser:
+            self.ser.reset_input_buffer()
+            time.sleep(1)  # Wait for Arduino reset
+    
+    def write(self, data) -> None:
+        """Send data to Arduino with newline termination."""
+        if self.ser is None:
+            return
+        
+        try:
+            if isinstance(data, str):
+                data = data.encode()
+            self.ser.write(data)
+            self.ser.write(b'\n')
+        except serial.SerialException:
+            self.ser = None
+    
+    def read(self):
+        """Read one line from Arduino (until newline)."""
+        if self.ser is None:
+            return None
+        try:
+            line = self.ser.readline().decode('utf-8').strip()
+            return line if line else None
+        except (serial.SerialException, UnicodeDecodeError):
+            return None</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Arduino UART Driver (C++)</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-cpp">// uart_driver.h - Arduino UART interface
+class UART_driver {
+public:
+    UART_driver(USART_t *usart, uint32_t BaudRate, uint8_t DataBit, bool RX_INT);
+    
+    void write(String str) const;
+    String read() const;
+    bool data_available() const;
+    
+private:
+    USART_t *_usart;
+    uint32_t _baudRate;
+    uint8_t _dataBit;
+    bool _RX_INT;
+};</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Arduino Router - Kommando Routing</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-cpp">class Router {
+public:
+    Router(UART_driver* uart_prt, Sensor_driver* sensor_prt, LED* light_prt);
+    
+    void send_all_sensor();       // Broadcast all sensor data
+    void uart_rout(String message); // Route incoming commands
+    
+private:
+    UART_driver* _uart_prt;
+    Sensor_driver* _sensor_prt;
+    LED* _light_prt;
+};</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Kommunikationsprotokol</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext"># Arduino → Raspberry Pi (single-character prefix + data)
+L230           → Lux sensor reading
+M1             → Motion detected (1=true, 0=false)
+C125           → Current reading
+L450|M1|C125   → All sensor data at once (from A command)
+
+# Raspberry Pi → Arduino (commands)
+H              → Health check (Arduino responds with 'H')
+I75            → Set intensity to 75
+L              → Request lux reading
+M              → Request motion status
+C              → Request current reading
+A              → Request all sensor data</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Kritiske Løsninger</h3><p class="text-gray-600 mb-4"><strong>Problem: Program crash uden Arduino tilsluttet</strong><br>read() blokerede uendeligt hvis Arduino ikke var tilsluttet.<br><strong>Løsning:</strong> Connection check, try/catch, return None if disconnected. Tillader udvikling uden hardware.</p><p class="text-gray-600 mb-4"><strong>Problem: Partial messages</strong><br>Hvis UART data kom i flere chunks, var message ufuldstændig.<br><strong>Løsning:</strong> read() blocker indtil newline modtages.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3h15" /><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" /><path d="M6 14h12" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Testing Strategi og Resultater Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Teststrategi</h3><p class="text-gray-600 mb-4">Enheds-testing blev brugt selektivt. Mange klasser var tæt koblet, så isoleret testing ville krævet mange stubs. Større vægt blev derfor lagt på integration testing.</p><p class="text-gray-600 mb-4">Debugger blev også brugt til step-through eksekution for at identificere hvor inputs resulterede i uventet output.</p></div><div><h3 class="text-xl font-semibold mb-4">Processor Testing</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-python"># Test Processor med forskellige input-værdier
+test_cases = [
+    {'motion': True, 'lux': 100, 'mode': 'auto', 'expect_light': True},
+    {'motion': False, 'lux': 800, 'mode': 'auto', 'expect_light': False},
+    {'motion': False, 'lux': 100, 'mode': 'manual', 'set_intensity': 50, 'expect_intensity': 50},
+]
+
+for case in test_cases:
+    result = processor.process(case)
+    assert result['light_on'] == case['expect_light']</code></pre></div><div><h3 class="text-xl font-semibold mb-4">UART Testing</h3><p class="text-gray-600 mb-4"><strong>Tidlig testing:</strong> Arduino IDE serial monitor tilføjede automatisk carriage return efter newline, hvilket fik protokol til at mismatch.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> Testing blev moved til direkte Raspberry Pi ↔ Arduino integration. Integration tests viste stabil kommunikation uden observeret datatab.</p></div><div><h3 class="text-xl font-semibold mb-4">Acceptance Test Resultater</h3><div class="overflow-x-auto mb-4"><table class="w-full border-collapse border border-gray-300"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Use Case</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Status</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Noter</th></tr></thead><tbody><tr><td class="border border-gray-300 px-4 py-2">Bevægelse-baseret auto on/off</td><td class="border border-gray-300 px-4 py-2">⚠️ Partial</td><td class="border border-gray-300 px-4 py-2">Motion sensor detection period matchede ikke test-specifikation. Sensor havde længere response time end forventet.</td></tr><tr><td class="border border-gray-300 px-4 py-2">Naturligt lys regulering</td><td class="border border-gray-300 px-4 py-2">⚠️ Partial</td><td class="border border-gray-300 px-4 py-2">Test konfiguration tillod ikke regulering: system blev ikke instrueret til at aktivere regulating mode (light_regulating=false).</td></tr><tr><td class="border border-gray-300 px-4 py-2">Manuel kontrol</td><td class="border border-gray-300 px-4 py-2">✔️</td><td class="border border-gray-300 px-4 py-2">GUI slider, mode-switching, og manuel intensitet-kontrol virked som specificeret.</td></tr><tr><td class="border border-gray-300 px-4 py-2">Energi/strøm display</td><td class="border border-gray-300 px-4 py-2">⚠️ Partial</td><td class="border border-gray-300 px-4 py-2">ACS712 + opamp hardware var ikke kompatibelt. Sensor producerede for meget støj til nøjagtige målinger.</td></tr><tr><td class="border border-gray-300 px-4 py-2">Mode switching</td><td class="border border-gray-300 px-4 py-2">✔️</td><td class="border border-gray-300 px-4 py-2">Auto/Manual/Regulating mode-transitions virked korrekt. Test spec selv var uklar om forventet adfærd.</td></tr><tr><td class="border border-gray-300 px-4 py-2">Developer Health Check</td><td class="border border-gray-300 px-4 py-2">✔️</td><td class="border border-gray-300 px-4 py-2">Health check virked. UX-problem: status ændrede sig for hurtigt til at være synlig.</td></tr></tbody></table></div></div><div><h3 class="text-xl font-semibold mb-4">Identificerede Fejl</h3><p class="text-gray-600 mb-4"><strong>Motion Sensor:</strong> Af og til detekteringsfejl kunne få lyset til at slukke uventet.</p><p class="text-gray-600 mb-4"><strong>Strøm Sensor:</strong> Ikke kalibreret mod kendt strøm. Målinger var derfor unøjagtige.</p><p class="text-gray-600 mb-4"><strong>Extra Set Knap:</strong> Implementering krævede extra bekræftelse i stedet for at slider-selv udløste ændring.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-purple-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Hardware Arkitektur Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">System Layout</h3><p class="text-gray-600 mb-4">Hardwaren var split i separate moduler frem for én PCB. Dette tillod moduler at være placeret på forskellige fysiske lokationer og gjorde debugging lettere.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>Arduino Mega 2560 - sensor og LED kontrol</li><li>Raspberry Pi + touch display - data processing og GUI</li><li>ACS712 current sensor - strømmåling</li><li>Operationel forstærker - current signal amplification</li><li>LED/transistor modul - lyscontrol</li><li>Motion sensor - bevægelsesdetektering</li><li>Light sensor (LDR) - naturligt lys måling</li></ul></div><div><h3 class="text-xl font-semibold mb-4">UART Forbindelse</h3><p class="text-gray-600 mb-4">Raspberry Pi og Arduino kommunikerer gennem crossed UART forbindelse.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Arduino TX (pin 18) → Raspberry Pi RX (GPIO 15)
+Arduino RX (pin 19) ← Raspberry Pi TX (GPIO 14)
+Common GND</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Kritiske Designbeslutninger</h3><p class="text-gray-600 mb-4"><strong>Strøm Sensor:</strong> ACS712 producerede kun små spændingsændringer ved lav LED-strøm. Operationel forstærker blev tilføjet for at øge måleområde, men introducerede støj der reducerede nyttelighed.</p><p class="text-gray-600 mb-4"><strong>LED Kontrol:</strong> Otte LED'er drevet gennem BD139 NPN transistor i stedet for direkte Arduino pins. 24mA per LED med 63Ω modstand. 470Ω base-modstand for transistor. Danner basis for PWM lys-intensitet kontrol.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-orange-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Min Rolle & Tekn Bidrag Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Primære Ansvar (Høj Indflydelse)</h3><p class="text-gray-600 mb-4"><strong>Raspberry Pi Python:</strong></p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>✔️ <strong>Data Klasse</strong> - NumPy-baseret struktureret historiklager med intelligent filtrering</li><li>✔️ <strong>Processor Klasse</strong> - Centraliseret lyskontrol-logik med intelligent state management (booleans: light_on, light_auto, light_regulating)</li><li>✔️ <strong>UART Driver (Rpi)</strong> - Robust seriel kommunikation med error handling og connection resilience</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Sekundære Ansvar (Medium Indflydelse)</h3><p class="text-gray-600 mb-4"><strong>Arduino C++:</strong></p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>✔️ <strong>UART Driver refactoring</strong> - Konverteret fra funktional til OOP stil</li><li>✔️ <strong>Router</strong> - Kommando-routing og sensor data broadcasting</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Testing & Bug Fixing</h3><p class="text-gray-600 mb-4"><strong>Raspberry Pi Router:</strong> Debugging af integration mellem UART, Router, Processor, og Data. Identificering og fix af dataflow-problemer.</p></div><div><h3 class="text-xl font-semibold mb-4">Technical Highlights</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>NumPy dtype-driven development for type-safety ved høj performance</li><li>Centraliseret state management (single source of truth)</li><li>Centraliseret kontrollogik (alle beslutninger på ét sted)</li><li>Robust error-handling uden hardware dependency</li><li>Simpel abstraktion af mode-kontrol uden over-modellering</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="conclusion" class="section-anchor container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Conclusion</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Results</h3>
+              <p class="text-gray-600 mb-4">Systemet arbejdede som forventet. Lysreguleringen aktiverede og deaktiverede automatisk baseret på tilstedeværelse med korrekt tidsvindue, og justerede lysintensitet dynamisk efter naturligt lys. Mode-switching mellem Auto/Manual/Regulating virked pålideligt. Kommunikationen mellem Arduino og Raspberry Pi var stabil, og systemet bevarte fuld historik uden datakab. Projektets primære mål blev opnået: automatisk energieffektiv lyscontrol med brugervenlig betjening.</p>
+            </div>
+            <div>
+              
+      <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
+        <span class="lucide-icon inline-flex items-center justify-center text-yellow-400 flex-shrink-0" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+        <p class="text-sm text-yellow-700">Over-modellering af statespace er farligt. Initialt designede vi en kompleks to-dimensional state machine med mange tilstande. Efter flere iterationer blev det klart, at denne kompleksitet var helt unødvendig—simple boolean-flags løste problemet bedre. <strong>Lektie 1:</strong> Start altid minimal, og tilføj kompleksitet kun når den er berettiget.
+
+UML-kode alignering er kritisk. Når arkitekturen i diagrammer ikke matchede koden, opstod confusion mellem komponenter og deres ansvarsgrænser. Vi måtte refaktorere for at få dem til at stemme overens. <strong>Lektie 2:</strong> Diagrammer skal være levende dokumentation, ikke abstrakt kunst.
+
+Små, fokuserede komponenter slår et stort system. Router-klassen blev det problematiske punkt fordi den gjorde for meget. Opdeling af ansvaret gjorde debugging og testing signifikant lettere. <strong>Lektie 3:</strong> Hver klasse skal have ét klart ansvar.
+
+Hardware-valg skal valideres tidligt. ACS712 current sensor viste sig ukompatibelt først under test—hvis vi havde prototypet tidligere, havde vi fundet det straks. <strong>Lektie 4:</strong> End-to-end test med ægte hardware er uundværlig; simulering er ikke nok.
+
+Test-miljøer kan være misleadende. Arduino IDE's serial monitor tilføjede automatisk carriage return, som fik protokollen til at fejle. Kun når vi testede direkte Rpi↔Arduino blev det ægte problem synligt. <strong>Lektie 5:</strong> Test med de faktiske komponenter, ikke med dev-tools.</p>
+      </div>
+    
+              
+      <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-600">
+        <li>Motion sensor hardware: Bedre kalibrering for pålidelig detection, muligvis dual-sensor redundance</li><li>Current sensor: Passivt RC-filter i stedet for opamp amplification (mindre støj)</li><li>Processor: Extract complex nested if-statements til navngivne helper-metoder</li><li>UART: Implementer timeout-based retry-logik for robusthed ved intermittent connections</li><li>Acceptance tests: Bedre specificering med klare preconditions, observable assertions, worst-case scenarios</li><li>Optimization: Deep sleep modes for lavere Raspberry Pi strømforbrug i idle-tilstand</li>
+      </ul>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Info</h2>
+          </div>
+          <div class="flex flex-wrap gap-8 text-gray-600">
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">20. Maj 2026</p></div>
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">1 semester</p></div>
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+              <p class="font-medium">5 members</p>
+              
+      <ul class="mt-2 space-y-1 text-sm">
+        <li>Asger Grundtdal Stidsen — </li><li>Yusuf Cakir — </li>
+      </ul>
+    
+            </div>
+          </div>
+          
+      <div class="mt-6 pt-6 border-t border-gray-200">
+        <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
+        <div class="flex flex-wrap gap-3">
+          
+              <a href="https://github.com/UNIprojekter/S2-RPI" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
+                <i class="fas fa-github" style="font-size: 1rem;"></i>
+                Repository: Raspberry pi
+              </a>
+            
+              <a href="https://github.com/UNIprojekter/S2-ARDUINO" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
+                <i class="fas fa-github" style="font-size: 1rem;"></i>
+                Repository: Arduino
+              </a>
+            
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 mr-20">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <span class="text-xl font-bold">MyPortfolio</span>
+              <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
+                Code and layout may be used with proper credit.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+
+  
+  <!-- Client-side JavaScript bundle -->
+  <script src="/dist/app.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+</body>
+</html>

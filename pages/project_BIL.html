@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio">
+  <title>BIL - Autonomt Køretøjskontrolsystem</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/css/common/standerd.css">
+  <link rel="stylesheet" href="/css/common/config.css">
+  
+  <link rel="stylesheet" href="/css/project/style.css">
+  
+</head>
+<body>
+  
+      <div class="bg-white shadow-md sticky top-0 z-40">
+        <a href="/" class="absolute top-3 left-3 text-blue-500">
+          <svg class="lucide-icon" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="container mx-auto px-6 pl-9 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center title-wrap">
+              <svg class="lucide-icon mr-3" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;">
+                <path d="M19 3H5c-1 0-2 1-2 2v14c0 1 1 2 2 2h14c1 0 2-1 2-2V5c0-1-1-2-2-2z"></path>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h2"></path>
+              </svg>
+              <div class="title">
+                <h1 class="project-title">BIL - Autonomt Køretøjskontrolsystem (Indlejrede Systemer)</h1>
+                <span class="project-subtitle">Documentation</span>
+              </div>
+            </div>
+
+            <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+              <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
+              <div id="nav-links" class="sections-panel" aria-hidden="true">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#conclusion" class="nav-link">Conclusion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="overview" class="section-anchor mb-16 container mx-auto px-6 pt-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Overview</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+              <p class="text-gray-600 mb-6">BIL-projektet er en indlejret systembillede til styring af et autonomt køretøj ved hjælp af en AVR-mikrokontroller. Systemet integrerer motorstyrings, lyscontrolitering, sensorinputbehandling og UART-baseret brugergrænseflade. Dette første-semester universitets projekt demonstrerer interrupt-drevet arkitektur, real-time state machine design og hardware abstraction principper.</p>
+              <h3 class="text-xl font-semibold mb-4">Objectives</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Implementere motor-styring med variable hastighedskontrol og retningsændring</li><li>Automatisere køretøj-sensorfeedback gennem refleksbrik-detektion for præcis positionsbestemmelse</li><li>Sikre lyskontrol med PWM-baseret intensitetsregulering for forlygte, baglys, og bremsekontrol</li><li>Tilbyde bruger-interface gennem UART-baseret menusystem til realtidskommandokontrol</li><li>Validere systemintegration af hardware-drivere og kommunikationsprotokoller under operationelle betingelser</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+              <div class="space-y-4">
+                
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fefce8; color: #eab308">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Motorkontrolsystem</h4>
+            <p class="text-sm text-gray-500">PWM-baseret motorcontrol med gradual accelerationsprofiler, retningsvalg og glatte hastighedstransitioner for at forhindre mekanisk stød</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fefce8; color: #eab308">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Uafhængig Lyscontrol</h4>
+            <p class="text-sm text-gray-500">Tre uafhængige lyskredsløb (for, bag, bremsekontrol) med PWM duty cycle kontrol for realistisk lysintensitetsmodulation</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #ecf0ff; color: #06b6d4">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Refleksbrik-Baseret Positionering</h4>
+            <p class="text-sm text-gray-500">Tæller-baseret køretøjspositionering ved hjælp af eksterne interrupts, adaptiv debounce-timing (200ms/500ms) og real-time state machine progression</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #eff6ff; color: #3b82f6">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.247 7.761a6 6 0 0 1 0 8.478" /><path d="M19.075 4.933a10 10 0 0 1 0 14.134" /><path d="M4.925 19.067a10 10 0 0 1 0-14.134" /><path d="M7.753 16.239a6 6 0 0 1 0-8.478" /><circle cx="12" cy="12" r="2" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">UART Kommunikationsgrænseflade</h4>
+            <p class="text-sm text-gray-500">Seriel kommunikation ved 9600 baud til menu-drevet kontrol, telemetritransmission og systemdebugning over terminal</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #faf5ff; color: #a855f7">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2" /><path d="M12 2v2" /><path d="M17 20v2" /><path d="M17 2v2" /><path d="M2 12h2" /><path d="M2 17h2" /><path d="M2 7h2" /><path d="M20 12h2" /><path d="M20 17h2" /><path d="M20 7h2" /><path d="M7 20v2" /><path d="M7 2v2" /><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="8" y="8" width="8" height="8" rx="1" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Interrupt-Drevet Arkitektur</h4>
+            <p class="text-sm text-gray-500">Effektiv asynkron hændelseshåndtering med timer-baseret debouncing, eliminering af sensorbounce og sikring af pålidelige state transitions</p>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Arkitektur: Lagdelt indlejret systemdesign Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">System Architecture</h3><p class="text-gray-600 mb-4">BIL-systemet følger en klassisk indlejret systemarkitektur med klar adskillelse af bekymringer på tvers af tre lag:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Brugerinterface-lag</strong> - UART menu-system (_menuSYS, menu, kontrole) til manuel kontrol og debugging</li><li><strong>Kontrollogik-lag</strong> - Hoved-event loop med state machine drevet af Refleks_count positionsvariabel (0-9)</li><li><strong>Hardware Abstraction Lag</strong> - Modulare driverkomponenter (motor, lys, sensor, timer, UART) der indkapsler port-manipulation</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Data Flow Pipeline</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Sensorinput (Refleksbrik)
+         ↓
+[INT0_vect / INT1_vect ISR Udløst]
+         ↓
+   Increment Refleks_count
+   Deaktiver Interrupts (debounce)
+   Start Timer (200-500ms)
+   Send UART telemetri
+         ↓
+    [Timer Interrupt]
+         ↓
+  Gen-aktiver Interrupts
+         ↓
+[Hoved-loop Læs Refleks_count]
+         ↓
+Beslutningslogik:
+  Tilstand 0: Initialisering (menu venter)
+  Tilstand 1-6: Progressive tilstande
+  Tilstand 7-8: Høj-hastighed tilstande (200ms timer)
+  Tilstand 9+: Sluttilstande
+         ↓
+[Udfør Kontrol Kommandoer]
+  - Sæt Motor PWM
+  - Sæt Lysværdier
+  - Afspil audio signaler
+  - Opdater LED visning</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Command-Response Flow</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Brugerinput (UART Menu)
+         ↓
+[_menuSYS behandler input]
+         ↓
+[_menuSYS dispatcher til menu()]
+         ↓
+[menu() viser muligheder]
+         ↓
+[Bruger valg → kontrole()]
+         ↓
+[kontrole udfører kommandoer]
+  - motorPWM() / motorPWMGradvis()
+  - SetForlys() / SetBaklys() / SetBaglys()
+  - SOMO_Play_*() for audio
+         ↓
+[Telemetri sendt tilbage via UNISendInteger()]</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Interrupt Timing and Debounce</h3><p class="text-gray-600 mb-4">Systemet bruger adaptiv debounce-timing til at håndtere varierende køretøjhastigheder. Når en refleks registreres, deaktiveres interrupts i en konfigureret varighed før re-aktivering. Dette forhindrer flere interrupt-triggering fra en enkelt refleks passage, da sensorerne driver ind og ud af detektionsområdet.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Tilstande 0-6 (Normal hastighed)</strong> - 500ms debounce vindue: tillader tid for køretøjet at passere refleks uden gen-triggering</li><li><strong>Tilstande 7-8 (Høj hastighed)</strong> - 200ms debounce vindue: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks</li><li><strong>Adaptiv timing</strong> - Timer5 konfigureret i ISR med forskellige værdier baseret på aktuel tilstand, optimering for forventet køretøjhastighed på hvert progressions stadium</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-yellow-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Motordriver - PWM-Baseret Hastigheds- og Retningskontrol Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Purpose and Design</h3><p class="text-gray-600 mb-4">Motordriveren administrerer alle motorstyringsoperationer ved hjælp af PWM (Pulse Width Modulation) på Timer0. Den sørger for både øjeblikkelig hastighedsændring og graduel accelerationsprofiler til at forhindre mekanisk stød og sikre glatte overgange. Driveren accepterer delvise statændringer - hastighed kan modificeres uafhængigt uden at påvirke retningsindstillinger.</p></div><div><h3 class="text-xl font-semibold mb-4">Key Design Decision</h3><p class="text-gray-600 mb-4">Motordriveren kræver IKKE fuld initialisering på hver kommando. Når initMotor() konfigurerer Timer0 og retningspinne, modificerer efterfølgende motorPWM() eller motorPWMGradvis() opkald kun PWM duty cycle. Dette tillader menusystemet at justere motorhastighed til enhver tid uden at nulstille retning eller påtage sig initialiseringsomkostninger. Manglende eller uændrede parametre bevarer deres tidligere tilstand.</p></div><div><h3 class="text-xl font-semibold mb-4">Main Functions</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>initMotor()</strong> - Engangs initialisering: konfigurerer Timer0 til PWM output, sætter retningskontrolpinne som digitale output, etablerer PWM frekvens</li><li><strong>motorPWM(uint8_t speed, uint8_t retning)</strong> - Øjeblikkelig hastighedssændring: sætter motor PWM værdi (0-255 skalå) og retning. Speed=0 stopper motor. Retning: 0=bagud, 1=fremad</li><li><strong>motorPWMGradvis(int16_t startSpeed, int16_t topSpeed, int8_t step, uint8_t retning, uint16_t delay_ms)</strong> - Graduel acceleration: glat ramping af motor fra startSpeed til topSpeed, inkrement PWM ved step værdi hver delay_ms millisekunder</li><li><strong>motorIdle()</strong> - Stop motor: sætter PWM til 0, bevarer retning til næste kommando</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Code Example</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-c">// From main.c - System initialization
+initMotor();  // Configure Timer0 and direction pins once
+
+// State 1: Gradual acceleration from rest
+motorPWMGradvis(0, 200, 1, 1, 10);
+// Start at 0 PWM, ramp to 200 PWM (forward direction)
+// Increment by 1 every 10ms = 2 seconds total ramp time
+
+// Menu system: immediate speed adjustment
+motorPWM(150, 1);  // Jump to 150 PWM forward (no ramp)
+motorPWM(0, 1);    // Stop immediately
+
+// State 9: Motor idle
+motorIdle();  // Set PWM to 0, direction preserved</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Problems Solved</h3><p class="text-gray-600 mb-4"><strong>Problem:</strong> Direkte PWM spring forårsager pludselig acceleration, hvilket skaber mekanisk stød og vibration i motor og tandhjul.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> motorPWMGradvis() implementerer glat accelerations-ramp med konfigurerbar trin størrelse og forsinkelse mellem inkrementer, spredt hastighedssændring over flere tidsintervaller.</p><p class="text-gray-600 mb-4"><strong>Problem:</strong> Ingen måde at teste motorcontrol uden at udløse sensor-baseret state machine.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> Menusystemet kan kalde motorPWM() og motorPWMGradvis() direkte til enhver tid, hvilket tillader uafhængig test af motoradfærd før sensor integrationstestning.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-yellow-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12v6" /><path d="M4.077 10.615A1 1 0 0 0 5 12h14a1 1 0 0 0 .923-1.385l-3.077-7.384A2 2 0 0 0 15 2H9a2 2 0 0 0-1.846 1.23Z" /><path d="M8 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Lysdriver - Uafhængig PWM-baseret Lyskontrol Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Purpose and Design</h3><p class="text-gray-600 mb-4">Lysdriver styrer tre uafhængige lyskredsløb ved hjælp af PWM duty cycle modulation til realistisk lysintensitets justering. Dette afspejler virkelig køretøj adfærd hvor baglys dimmers under normal drift og stiv op til bremsesignaler. Hver lys opererer på sin egen timer register med uafhængig kontrol.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Forlygte (Forlys)</strong> - Primær fremadrettet belysning</li><li><strong>Baklys (Bag/Bremsely)</strong> - Bag indikator og bremsesignal</li><li><strong>Baglys (Bakgear/Tilbagelys)</strong> - Gear bagud indikator</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Key Design Decision</h3><p class="text-gray-600 mb-4">Hver lysfunktion accepterer KUN sin egen duty cycle parameter og modificerer KUN sit tilsvarende timer register. Dette design forhindrer utilsigtet interferens mellem lys og tillader state machine at kontrollere alle tre uafhængigt. I modsætning til til/fra kontrol muliggør PWM duty cycle realistisk lysintensitets modulation (0-255 skalå) hvor forskellige tilstande kan sætte forskellige intensiteter.</p></div><div><h3 class="text-xl font-semibold mb-4">Main Functions</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>SetForlys(uint8_t dutyCycle)</strong> - Kontroller forlysintensitet: 0=fra, 255=maksimal intensitet</li><li><strong>SetBaklys(uint8_t dutyCycle)</strong> - Kontroller bag bremsely intensitet</li><li><strong>SetBaglys(uint8_t dutyCycle)</strong> - Kontroller tilbagelys intensitet</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Code Example</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-c">// From main.c - System initialization (all lights off)
+SetForlys(0);   // Front light: off
+SetBaklys(0);   // Brake light: off
+SetBaglys(0);   // Reverse light: off
+
+// State 1 (acceleration): Lights on, moderate intensity
+SetForlys(150);  // Front light: ~59% brightness
+SetBaklys(100);  // Brake light: ~39% brightness
+SetBaglys(0);    // Reverse light: remains off
+
+// State 2-6: Progressive state transitions adjust lighting independently
+// SetForlys(120); SetBaklys(80);  // Example state 2
+// SetForlys(180); SetBaklys(150); // Example state 7 (higher speed)
+
+// Reverse operation
+SetForlys(0);    // Front off
+SetBaklys(0);    // Brake off
+SetBaglys(200);  // Reverse light: ~78% brightness</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Problems Solved</h3><p class="text-gray-600 mb-4"><strong>Problem:</strong> Simpel til/fra lys matcher ikke rigtig køretøj adfærd hvor baglys dimmers under normal drift og stivner op til bremsesignaler.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> PWM duty cycle tillader lysintensitets modulation fra 0-255, muliggørende realistisk intensitetskontrol der matcher forventet køretøj lyser adfærd ved forskellige hastigheder og tilstande.</p><p class="text-gray-600 mb-4"><strong>Problem:</strong> Tre uafhængige lyskredsløb kræver isoleret kontrol uden krydsforstyrrelser.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> Separate funktioner for hver lyskreds løb, hver modificerer kun sit eget timer register, forhindrer utilsigtet interferens og tillader samtidig uafhængig lysintensitets justeringer.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-cyan-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Sensorhåndterer - Interrupt-Drevet Refleksbrik Detektion Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Purpose and Design</h3><p class="text-gray-600 mb-4">Sensorhåndtereren administrerer ekstern interrupt behandling til refleksbrik detektion. Når køretøjet passerer over en reflektiv markering, udløses en ekstern interrupt (INT0 eller INT1), som inkrementerer en global positionstæller. Systemet starter derefter en timer-baseret debounce mekanisme til at forhindre flere tællinger fra en enkelt refleks passage.</p></div><div><h3 class="text-xl font-semibold mb-4">Key Design Decision</h3><p class="text-gray-600 mb-4">Snarere end kontinuerlig analog sensor læsning bruger systemet en tæller-baseret state machine hvor interrupts deaktiveres umiddelbart efter triggering og gen-aktiveres kun efter en timer udsøbt (debounce deatime). Dette giver præcis, støjfri positions tracking. Eksterne interrupts deaktiveres (EIMSK = 0b00000000) i ISR, forhindrer flere tællinger mens køretøjet stadig passerer over en refleks.</p></div><div><h3 class="text-xl font-semibold mb-4">Main Functions</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Initsensor()</strong> - Engangs konfiguration: muliggør INT0 og INT1 eksterne interrupt pinne, sætter kant trigger mode, konfigurerer interrupt mask register (EIMSK)</li><li><strong>start_timer(uint16_t deadtime_ms)</strong> - Initierer Timer5 med specificeret deatime i millisekunder. Når timer udsøbt, ISR gen-aktiverer eksterne interrupts (EIMSK = 0b00000011)</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Global State Variable</h3><p class="text-gray-600 mb-4"><strong>Refleks_count</strong> - Volatile unsigned char (0-9): sporer køretøjs position relativt til reflekser. Dette er den PRIØRE state variabel der kontrollerer hele system progression. Hoved-loop læser denne værdi for at bestemme hvilken tilstand der skal udføres.</p></div><div><h3 class="text-xl font-semibold mb-4">Code Example</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-c">// ISR triggered when reflective strip passes sensor
+ISR(INT0_vect) {
+    Refleks_count++;              // Increment position counter
+    EIMSK = 0b00000000;           // Disable ALL external interrupts
+    
+    // Adaptive debounce: high-speed states use shorter window
+    if(Refleks_count == 7 || Refleks_count == 8) {
+        start_timer(200);         // High-speed: 200ms debounce
+    } else {
+        start_timer(500);         // Normal: 500ms debounce
+    }
+    
+    UNISendInteger(USART2, Refleks_count);  // Send count via UART
+}
+
+// Timer ISR (Timer5) - re-enables interrupts after debounce
+// EIMSK = 0b00000011;  // Re-enable INT0 and INT1</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Debounce Mechanism</h3><p class="text-gray-600 mb-4">Systemet genkender at en enkelt refleks passage optager tid mens sensor driver ind/ud af detektionsområde. Uden debouncing skaber dette flere interrupt triggers for en logisk hændelse. Løsningen: umiddelbart deaktiverer interrupts efter trigger, derefter gen-aktiverer efter en timer-baseret deatime vindue.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>500ms debounce (Tilstande 0-6)</strong> - Standard operation: sikrer køretøjet føldigtende passerer refleks før næste trigger muligværd</li><li><strong>200ms debounce (Tilstande 7-8)</strong> - Høj-hastighed operation: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks</li><li><strong>Adaptiv timing</strong> - Dynamisk konfigureret i ISR baseret på Refleks_count værdi, optimering for forventet hastighed i hver tilstand</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Problems Solved</h3><p class="text-gray-600 mb-4"><strong>Problem:</strong> Enkelt refleks forårsager 5-15 interrupt triggers mens sensor forvirrende detektionszone skaber gentagne kant transitioner.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> Debounce timer deaktiverer interrupts i fast varighed efter trigger, eliminering af falske tællinger og sikring af nøjagtigt en tælling pr refleks passage.</p><p class="text-gray-600 mb-4"><strong>Problem:</strong> Fastsat 500ms debounce vindue for lang til høj-hastighed køretøj tilstande hvor reflekser passerer hurtigere.</p><p class="text-gray-600 mb-4"><strong>Løsning:</strong> Adaptiv debounce timing i ISR - automatisk skifter til 200ms for høj-hastighed tilstande (7-8), sikring at ingen refleks mistes samtidig med vedligeholdelse af bounce beskyttelse ved lavere hastigheder.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.247 7.761a6 6 0 0 1 0 8.478" /><path d="M19.075 4.933a10 10 0 0 1 0 14.134" /><path d="M4.925 19.067a10 10 0 0 1 0-14.134" /><path d="M7.753 16.239a6 6 0 0 1 0-8.478" /><circle cx="12" cy="12" r="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">UART Kommunikation - Serielgrænseflade til Kontrol og Telemetri Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Purpose and Design</h3><p class="text-gray-600 mb-4">UART-driveren giver seriel kommunikation mellem mikrokontrolleren og eksterne systemer (menu grænseflade, debugging, telemetri). Den abstrakt lavniveau register manipulation bag en simpel initialisering og transmissions grænseflade.</p></div><div><h3 class="text-xl font-semibold mb-4">Main Functions</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>InitUSARTArgs(USART_t *usart, uint16_t baudrate, uint8_t databits, uint8_t stopbits)</strong> - Konfigurerer specificeret USART perifer med baud rate, data bit tælling og stop bit tælling</li><li><strong>UNISendInteger(USART_t *usart, int value)</strong> - Transmitterer heltal værdi som ASCII tekst streng over UART seriel linje</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Code Example</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-c">// From main.c - initialization at program startup
+InitUSARTArgs(USART2, 9600, 8, 0);  // Configure USART2: 9600 baud, 8 data, 0 stop
+
+// During sensor ISR - transmit reflector count
+ISR(INT0_vect) {
+    Refleks_count++;
+    UNISendInteger(USART2, Refleks_count);  // Sends "1", "2", ... "9" as text
+    // Terminal receives: "1\r\n1\r\n2\r\n2\r\n3" etc.
+}
+
+// Menu system uses UART for user interaction
+_menuSYS(USART2);  // Displays options and reads user input from serial</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Technical Specifications</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Baud Rate</strong> - 9600 bits/sekund (9600 baud)</li><li><strong>Data Format</strong> - 8 bits pr tegn, 0 stop bits</li><li><strong>Interface</strong> - USART2 perifer på AVR mikrokontroller</li><li><strong>Kommunikationstype</strong> - Asynkron seriel, blokerende transmision</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-green-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Menusystem - Bruger Interface og Kontrollogik Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Purpose and Design</h3><p class="text-gray-600 mb-4">Menusystemet giver en tekst-baseret brugerinterface over UART til test og kontrol af køretøj drift. Det kører i hoved-loop under initialiserings fase og selektivt under autonom drift, muliggørende real-time debugging og manual intervention.</p></div><div><h3 class="text-xl font-semibold mb-4">Main Functions</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>_menuSYS(USART_t *usart)</strong> - Hoved menu dispatcher: gentagne gange kaldet i hoved loop til visning af muligheder og udsendelse af bruger kommandoer</li><li><strong>menu(USART_t *usart)</strong> - Menu visning og input capture: viser tilgængelige muligheder og læser bruger valg fra seriel</li><li><strong>kontrole(USART_t *usart)</strong> - Kommando udførelse: baseret på menu valg, kalder passende driver funktioner (motor hastighed, lys, audio)</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Operational Flow</h3><p class="text-gray-600 mb-4">Menusystemet opererer som en ikke-blokerende state machine der kører kun når Refleks_count er i specifikke tilstande (primært 0 under initialisering). Når sensor detekterer første refleks (Refleks_count inkrementer til 1), kan menu kaldes mellem state transitioner til debugging. Designet tillader autonom progression mens der forbliver responsivt til manuelle kommandoer.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-c">// Main execution flow
+// INITIALIZATION: Refleks_count == 0
+while(Refleks_count == 0) {
+    _menuSYS(USART2);  // Display menu, wait for user input
+}
+
+// STATE 1: Gradual Acceleration
+SetForlys(150);  SetBaklys(100);  SetBaglys(0);
+motorPWMGradvis(0, 200, 1, 1, 10);  // 0 → 200 PWM over 2 seconds
+while(Refleks_count == 1) {
+    _menuSYS(USART2);  // Menu remains available for debugging
+}
+
+// STATES 2-9: Progressive State Transitions
+// Each state configures lights and motor differently
+// Sensor detection increments Refleks_count, triggering next state</code></pre></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-green-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Test og Validering Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Hardware Integration Testing</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Motorcontrol</strong> - Verifikation af PWM output på oscilloskop; bekræftet glatte acceleration profiler ved hjælp af motorPWMGradvis() med varierende trin størrelser</li><li><strong>Sensor detektion</strong> - Testning af interrupt triggering ved manuel refleks passage over sensor; bekræftet korrekt Refleks_count inkrementering</li><li><strong>Lyskredsløb</strong> - Validering af uafhængig lyskontrol og PWM intensitets justering; måling af duty cycle på hver lys output</li><li><strong>UART kommunikation</strong> - Bekræftet telemetri output over seriel terminal ved 9600 baud; verifikation af menu input/output flow</li><li><strong>Interrupt timing</strong> - Verifikation af timer-baseret debounce ved hjælp af oscilloskop (indfanget interrupt deaktivering/aktivering timing); bekræftet forhindring af flere tællinger pr refleks</li><li><strong>State transitioner</strong> - Bekræftet progression gennem alle 9 tilstande uden manuel intervention; validering af timing mellem refleks detektioner</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Known Limitations</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Fast refleks tælling</strong> - System antager nøjagtigt 9 reflekser på spor; tæller fortsætter forbel 9 hvis spor ikke stoppes</li><li><strong>Menu under autonomy</strong> - Menu forbliver aktiv under autonom drift (ikke-blokerende men potentielt forvirrende)</li><li><strong>Ingen fejlbehandling</strong> - Manglende fejl recovery til afbrudt sensorer eller fejlede motor initialisering</li><li><strong>Blokerende UART</strong> - UNISendInteger() er blokering; høj-frekvens telemetri kunne forsinke motorcontrol med millisekunder</li><li><strong>Ingen hastigheds feedback</strong> - Ingen encoder eller tachometer; motor hastighed estimeret fra PWM værdi kun</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Test Equipment and Methods</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Oscilloskop</strong> - Indfanget PWM bølgeformer til motor og lys; verifikation af interrupt timing og debounce vindue</li><li><strong>Seriel Terminal (PuTTY)</strong> - Menu interaktion og telemetri overvågning ved 9600 baud</li><li><strong>Manuel refleks positionering</strong> - Triggering af sensor ved passage af refleks over detektionszone</li><li><strong>Strømforsyning med strømbegrænsning</strong> - Motor belastningstest med konfigurerbar strøm begrænsninger</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-purple-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Projektstruktur og Filorganisering Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Directory Layout</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">bil/
+├── bil.atsln                    # Atmel Studio løsningsfil
+├── bil/                         # Hoved projektmappe
+│   ├── main.c                   # Hoved program og state machine
+│   ├── motor_driver.c / .h      # Motor PWM og retningskontrol
+│   ├── Lys_driver.c / .h        # Lys: for, bag, tilbag
+│   ├── Sensor_delay.c / .h      # Interrupt håndteler, debounce timer
+│   ├── uniuart.c / .h           # UART kommunikations grænseflade
+│   ├── menu.c / .h              # Menusystem og brugerinterface
+│   ├── somo.c / .h              # Audio afspilning (SOMO modul)
+│   ├── led.c / .h               # LED status display
+│   ├── PWM_driver.c / .h        # PWM abstraktion lag
+│   ├── Uart.c / .h              # Lavniveau UART driver
+│   └── bil.cproj                # Atmel Studio projekt config
+└── .git/                         # Git versions kontrol</code></pre></div><div><h3 class="text-xl font-semibold mb-4">File Responsibilities</h3><p class="text-gray-600 mb-4"><strong>main.c</strong> - Indeholder program indångspunkt, state machine logik og ISR definitioner (INT0_vect, INT1_vect). Hoved loop læser Refleks_count og kontrollerer state progression.</p><p class="text-gray-600 mb-4"><strong>motor_driver.c / .h</strong> - Motor kontrol implementering: Timer0 PWM konfiguration, hastigheds/retnings kontrol, graduel acceleration logik.</p><p class="text-gray-600 mb-4"><strong>Lys_driver.c / .h</strong> - Lys kontrol: SetForlys, SetBaklys, SetBaglys funktioner med PWM duty cycle modulation for hver lyskreds løb.</p><p class="text-gray-600 mb-4"><strong>Sensor_delay.c / .h</strong> - Ekstern interrupt konfiguration (INT0, INT1), sensor initialisering, timer-baseret debounce håndtering via Timer5.</p><p class="text-gray-600 mb-4"><strong>uniuart.c / .h</strong> - UART initialisering (baud rate, data format) og transmision (UNISendInteger til telemetri).</p><p class="text-gray-600 mb-4"><strong>menu.c / .h</strong> - Menusystem: visning af muligheder over UART, capture bruger input, dispatcher kommandoer til kontrole().</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-purple-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2" /><path d="M12 2v2" /><path d="M17 20v2" /><path d="M17 2v2" /><path d="M2 12h2" /><path d="M2 17h2" /><path d="M2 7h2" /><path d="M20 12h2" /><path d="M20 17h2" /><path d="M20 7h2" /><path d="M7 20v2" /><path d="M7 2v2" /><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="8" y="8" width="8" height="8" rx="1" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Teknologier og Hardware Platform Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Microcontroller Specifications</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Device</strong> - AVR ATmega serie (Atmel Studio kompatibel)</li><li><strong>Architecture</strong> - 8-bit RISC processor</li><li><strong>Clock Frequency</strong> - 16 MHz (F_CPU = 16000000 Hz)</li><li><strong>Flash Memory</strong> - Tilstrækkeligt til programkode og konstanter</li><li><strong>RAM</strong> - Tilstrækkeligt til globale variabler og stack</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Peripherals Used</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Timer0</strong> - PWM generation til motor hastigheds kontrol</li><li><strong>Timer5</strong> - Timing håndtering til sensor debounce deatime</li><li><strong>INT0 / INT1</strong> - Eksterne interrupt pinne til refleksbrik sensor input</li><li><strong>USART2</strong> - Seriel kommunikation ved 9600 baud</li><li><strong>Multiple PWM outputs</strong> - Uafhængig duty cycle kontrol til tre lyskredsløb</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Development Tools</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Atmel Studio 7</strong> - Integreret udviklings miljø og compiler</li><li><strong>AVR-GCC</strong> - GNU C compiler toolchain til AVR arkitektur</li><li><strong>Seriel Terminal</strong> - PuTTY eller Arduino IDE seriel monitor til UART interaktion</li><li><strong>Oscilloskop</strong> - Hardware verifikation af PWM og interrupt timing</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="conclusion" class="section-anchor container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Conclusion</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Results</h3>
+              <p class="text-gray-600 mb-4">BIL-systemet arbejdede som forventet. Interrupt-drevet sensor håndtering med adaptiv debounce-timing eliminerede sensorbounce og optimerede for varierende køretøjhastigheder. PWM-baseret motorcontrol med glatte accelerationsprofiler forhindrede mekanisk stød og gav flydende hastighedsovergange. Uafhængig lyskontrol muliggjorde realistisk multi-circuit lysintensitetsmodulation. State machine progression drevet af præcis sensor positionering arbejdede pålidelig gennem alle 9 tilstande. UART-kommunikationen var stabil, og systemet bevarte fuld telemetri uden datatab. Projektets primære mål blev opnået: fuldt funktionelt autonomt køretøjkontrolsystem med robust interrupt-arkitektur.</p>
+            </div>
+            <div>
+              
+      <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
+        <span class="lucide-icon inline-flex items-center justify-center text-yellow-400 flex-shrink-0" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+        <p class="text-sm text-yellow-700">Adaptiv debounce-timing er kritisk for interrupt-drevet design. Initialt brugte vi fastsat 500ms vinduer, men opdagede at høj-hastighed tilstande krævede kortere windows (200ms). <strong>Lektie 1:</strong> Tilstandsafhængig timing løste problemet bedre end én global værdi.
+
+Volatile globale variabler er essensielle for ISR-data. Vi erfarede at compiler-optimering fjernede læsninger hvis Refleks_count ikke var volatile, hvilket fik state machine til at hænge. <strong>Lektie 2:</strong> Memory barriers og volatile keywords er ikke valfri i embedded ISR design.
+
+Non-blokerende menusystem er vigtig under autonom operation. Initialt ville vi blokere menuen, men det forhindrede sensor interrupt håndtering. Redesign til polling-baseret menu tillod samtidig sensor og bruger-input. <strong>Lektie 3:</strong> Blokering i ISR-kontekst er farligt; alt skal være interrupt-safe.
+
+Hardware-timing kan ikke afhænge af software estimates. Vi antog 10ms PWM-trin ville give glat acceleration, men oscilloskop-måling viste variabilitet. Timere-baseret acceleration i stedet for loop-counts gav konsistent adfærd. <strong>Lektie 4:</strong> Validér timing-kritiske operationer med hardware-instrumenter.
+
+Modularisering af drivers reducerer debug-tid væsentligt. Isolerede test af motor, lys og sensor var langt lettere end at teste det samlede system først. <strong>Lektie 5:</strong> Hver driver-modul skal være selvstændigt testbar før integration.</p>
+      </div>
+    
+              
+      <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-600">
+        <li>Encoder-baseret feedback: Tilføj rotationsencodere til motormodulet for høj-præcision position-tracking uden at stole på statiske reflekser</li><li>Forhindringsgenkendelse: Ultrasoniske sensorer for autonome navigationsforbedringer</li><li>Telemetri logging: SD-kort integration for opsamling af historik til post-analysis</li><li>Trådløs kontrol: Bluetooth- eller RF-modul til fjernbetjening uden seriel kabel</li><li>Energistyring: Batteri-monitor og low-power sleep-modes til øget autonomi</li><li>Fejlgendannelse: Timeouts og watchdog-timer for at håndtere sensor-fejl gracefully</li>
+      </ul>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Info</h2>
+          </div>
+          <div class="flex flex-wrap gap-8 text-gray-600">
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">December 2025</p></div>
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">1 semester</p></div>
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+              <p class="font-medium">5 members</p>
+              
+      <ul class="mt-2 space-y-1 text-sm">
+        <li>Asger Fyr — </li><li><a href="https://www.linkedin.com/in/mark-kruse-schirmer-nielsen-2aa168262" class="text-blue-500 hover:underline">Mark Kruse Schirmer Nielsen</a> — </li>
+      </ul>
+    
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    
+
+  
+  <!-- Client-side JavaScript bundle -->
+  <script src="/dist/app.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+</body>
+</html>

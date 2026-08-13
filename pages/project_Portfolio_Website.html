@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio">
+  <title>Portfolio Website Documentation</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/css/common/standerd.css">
+  <link rel="stylesheet" href="/css/common/config.css">
+  
+  <link rel="stylesheet" href="/css/project/style.css">
+  
+</head>
+<body>
+  
+      <div class="bg-white shadow-md sticky top-0 z-40">
+        <a href="/" class="absolute top-3 left-3 text-blue-500">
+          <svg class="lucide-icon" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="container mx-auto px-6 pl-9 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center title-wrap">
+              <svg class="lucide-icon mr-3" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;">
+                <path d="M19 3H5c-1 0-2 1-2 2v14c0 1 1 2 2 2h14c1 0 2-1 2-2V5c0-1-1-2-2-2z"></path>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h2"></path>
+              </svg>
+              <div class="title">
+                <h1 class="project-title">Portfolio Website</h1>
+                <span class="project-subtitle">Documentation</span>
+              </div>
+            </div>
+
+            <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+              <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
+              <div id="nav-links" class="sections-panel" aria-hidden="true">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#conclusion" class="nav-link">Conclusion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="overview" class="section-anchor mb-16 container mx-auto px-6 pt-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Overview</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+              <p class="text-gray-600 mb-6">Et moderne portfolio website til præsentation af projekter, færdigheder og kontaktinformation. Siden er bygget med fokus på skalerbarhed, brugervenlighed og et elegant, responsivt design.</p>
+              <h3 class="text-xl font-semibold mb-4">Objectives</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Præsentere projekter og tekniske kompetencer på en overskuelig måde</li><li>Sikre nem navigation og hurtig adgang til information</li><li>Muliggøre nem udvidelse og vedligeholdelse af indholdet</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+              <div class="space-y-4">
+                
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fff7ed; color: #f97316">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Responsivt Design</h4>
+            <p class="text-sm text-gray-500">Siden tilpasser sig alle skærmstørrelser og enheder for optimal brugeroplevelse.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #eff6ff; color: #3b82f6">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Hurtig Ydeevne</h4>
+            <p class="text-sm text-gray-500">Bygget med moderne frontend-teknologier for lynhurtig indlæsning og navigation.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fefce8; color: #eab308">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Komponentbaseret Arkitektur</h4>
+            <p class="text-sm text-gray-500">Genanvendelige komponenter gør det let at udvide og vedligeholde websitet.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fff7ed; color: #f97316">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">CV og Kontakt</h4>
+            <p class="text-sm text-gray-500">Indeholder CV-download og kontaktformular for direkte henvendelser.</p>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8 mt-8">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" /><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" /><circle cx="13" cy="7" r="1" fill="currentColor" /><rect x="8" y="2" width="14" height="14" rx="2" /></svg></span>Project Images
+        </h3>
+        <div class="image-gallery">
+          
+      <div class="image-card cursor-pointer">
+        <img src="https://i.pinimg.com/736x/83/04/77/8304774632a374472f5f01fc73ddeab5.jpg" alt="Portfolio Website Screenshot" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Forsiden af portfolio websitet med projektoversigt og navigation.</p>
+      </div>
+    
+        </div>
+      </div>
+    
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-green-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Teknologier og Arkitektur Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Teknologier og Arkitektur</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>TypeScript + esbuild (bundle)</li><li>Tailwind CSS</li><li>EmailJS (kontaktformular)</li><li>Font Awesome (ikoner)</li><li>p5.js (header animation)</li><li>highlight.js (kodeblokke)</li></ul><p class="text-gray-600 mb-4">Projektet er bygget med et komponentbaseret design, hvilket gør det let at tilføje nye sektioner og projekter uden at ændre grundstrukturen. Sider defineres som JSON-konfigurationsfiler.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-orange-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /><circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Design og Brugervenlighed Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Design og Brugervenlighed</h3><p class="text-gray-600 mb-4">Designet er minimalistisk og let at navigere, med fokus på læsbarhed og hurtig adgang til information. Farvepaletten er rolig og professionel, og alle elementer er optimeret til både desktop og mobil.</p><div class="bg-gray-100 rounded-lg p-4 mb-4"><ul class="space-y-2"><li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><span>Responsivt layout</span></li><li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><span>Letforståelig navigation</span></li><li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><span>Hurtig adgang til projekter og kontakt</span></li><li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><span>Tilgængelighed for alle brugere</span></li></ul></div></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-green-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Integrationer Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Integrationer</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>EmailJS til kontaktformular (direkte e-mail fra siden)</li><li>CV-download som PDF via html2pdf.js</li><li>Eksterne links til projekter og GitHub</li></ul></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="conclusion" class="section-anchor container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Conclusion</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Results</h3>
+              <p class="text-gray-600 mb-4">Portfolio websitet har gjort det let at præsentere projekter og kompetencer for potentielle arbejdsgivere og samarbejdspartnere. Siden er nem at udvide og vedligeholde, og brugervenligheden er i top.</p>
+            </div>
+            <div>
+              
+      <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
+        <span class="lucide-icon inline-flex items-center justify-center text-yellow-400 flex-shrink-0" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+        <p class="text-sm text-yellow-700">Vigtigheden af komponentbaseret udvikling og at prioritere brugervenlighed og skalerbarhed fra starten.</p>
+      </div>
+    
+              
+      <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-600">
+        <li>Tilføje blogsektion med artikler og guides</li><li>Implementere dark mode toggle</li><li>Flere sprogvalg (internationalisering)</li><li>Endnu flere animationer og microinteractions</li>
+      </ul>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Info</h2>
+          </div>
+          <div class="flex flex-wrap gap-8 text-gray-600">
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">April 2025</p></div>
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">2 måneder</p></div>
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+              <p class="font-medium">Solo project</p>
+              
+      <ul class="mt-2 space-y-1 text-sm">
+        <li>Asger Grundtdal Stidsen — Fullstack Developer, Designer</li>
+      </ul>
+    
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    
+
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 mr-20">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <span class="text-xl font-bold">MyPortfolio</span>
+              <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
+                Code and layout may be used with proper credit.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+
+  
+  <!-- Client-side JavaScript bundle -->
+  <script src="/dist/app.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+</body>
+</html>

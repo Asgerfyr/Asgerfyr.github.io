@@ -26,7 +26,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "code-2",
+        "icon": "code",
         "color": "green",
         "title": "Teknologier og Arkitektur",
         "content": {

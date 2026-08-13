@@ -76,7 +76,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "sitemap",
+        "icon": "layout",
         "color": "blue",
         "title": "Arkitektur: Pipeline-Model med 6 Komponenter",
         "content": {
@@ -316,7 +316,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "arrows-rotate",
+        "icon": "rotate-cw",
         "color": "green",
         "title": "Router Klasse - Central Routing",
         "content": {
@@ -380,7 +380,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "ethernet",
+        "icon": "radio",
         "color": "cyan",
         "title": "UART Communication: Raspberry Pi ↔ Arduino",
         "content": {
@@ -444,7 +444,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "vial",
+        "icon": "beaker",
         "color": "blue",
         "title": "Testing Strategi og Resultater",
         "content": {
@@ -539,7 +539,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "cube",
+        "icon": "box",
         "color": "purple",
         "title": "Hardware Arkitektur",
         "content": {

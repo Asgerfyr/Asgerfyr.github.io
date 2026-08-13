@@ -15,7 +15,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "fire",
+        "icon": "flame",
         "color": "red",
         "title": "Styring af brændselsfyr",
         "content": {
@@ -83,7 +83,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "cube",
+        "icon": "box",
         "color": "purple",
         "title": "4x4x4-LED cube med Arduino Mega",
         "content": {

@@ -1,12 +1,10 @@
 export const Skills = {
-  render(_props: Record<string, unknown>): HTMLElement {
-    const section = document.createElement('section');
-    section.id = 'skills';
-    section.className = 'py-20';
-    section.innerHTML = `
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-4">
-          My <span class="text-blue-600">Skills</span>
+  render(_props: Record<string, unknown> = {}): string {
+    return `
+      <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">
+            My <span class="text-blue-600">Skills</span>
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Here's an overview of my technical skills and expertise across different areas.
@@ -37,8 +35,7 @@ export const Skills = {
             </span>
           </div>
         </div>
-      </div>
+      </section>
     `;
-    return section;
   },
 };

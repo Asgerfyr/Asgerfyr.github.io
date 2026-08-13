@@ -32,9 +32,9 @@ export interface ComponentDefinition {
 // Generic render function type used by the registry
 export type RenderChildren = (defs: ComponentDefinition[], container: HTMLElement) => Promise<void>;
 export type RenderFn = (
-  props: Record<string, unknown>,
-  renderChildren?: RenderChildren
-) => Promise<HTMLElement> | HTMLElement;
+  props?: Record<string, unknown> | any,
+  renderChildren?: RenderChildren | any
+) => string | HTMLElement | Promise<HTMLElement> | any;
 
 // Atom props
 export interface ButtonProps extends ComponentProps {

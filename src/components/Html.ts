@@ -1,10 +1,13 @@
 export const Html = {
-  render(props: Record<string, unknown>): HTMLElement {
+  render(props: Record<string, unknown> = {}): string {
     const tag = (props.tag as string) || 'div';
-    const el = document.createElement(tag);
-    if (props.className) el.className = props.className as string;
-    if (props.id) el.id = props.id as string;
-    el.innerHTML = (props.html as string) ?? '';
-    return el;
+    const className = (props.className as string) ?? '';
+    const id = (props.id as string) ?? '';
+    const html = (props.html as string) ?? '';
+
+    const classAttr = className ? ` class="${className}"` : '';
+    const idAttr = id ? ` id="${id}"` : '';
+
+    return `<${tag}${idAttr}${classAttr}>${html}</${tag}>`;
   },
 };

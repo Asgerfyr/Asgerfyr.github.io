@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dist/
+Disallow: /tasks/
+Disallow: /data/
+
+Sitemap: https://asgergs.dk/sitemap.xml

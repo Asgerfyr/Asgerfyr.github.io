@@ -1,22 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <link data-default-icon="https://cdn-icons-png.flaticon.com/512/17663/17663604.png"
-    rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/17663/17663604.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio">
   <title>Asger Portfolio</title>
+  
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.dom.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
-  <link rel="stylesheet" href="/css/common/standerd.css" />
-  <link rel="stylesheet" href="/css/index/style.css" />
-  <link rel="stylesheet" href="/css/project/style.css" />
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/css/common/standerd.css">
+  <link rel="stylesheet" href="/css/common/config.css">
+  <link rel="stylesheet" href="/css/index/style.css">
+  
+  
 </head>
 <body>
-  <div id="app"></div>
+  
+      <header id="header">
+        <div id="header-canvas"></div>
+        <div id="header-skill-title" class="absolute">
+          <div class="js-tryper-container">
+            <h2 class="js-tryper" style="display: inline" data-info='{"strings":[{"string":"","typeStyle":"deleteTo","pauseFor":500},{"string":"Frontend Developer","pauseFor":300},{"string":"<div class=\"type-error\">Frontend</div> Developer","typeStyle":"blink","pauseFor":1000},{"string":"<div class=\"type-error\">Frontend</div>","typeStyle":"deleteTo"},{"string":"Frontend","typeStyle":"blink"},{"string":"","typeStyle":"deleteTo","pauseFor":1000},{"string":"Backend Developer","pauseFor":300},{"string":"<div class=\"type-error\">Backend</div> Developer","typeStyle":"blink","pauseFor":1000},{"string":"<div class=\"type-error\">Backend</div>","typeStyle":"deleteTo"},{"string":"Backend","typeStyle":"blink"},{"string":"","typeStyle":"deleteTo","pauseFor":1000},{"string":"Full Stack Dev","pauseFor":1000},{"string":"eloper","pauseFor":4000},{"string":"","typeStyle":"deleteTo","pauseFor":1000},{"string":"Keen interest in Math","pauseFor":1000},{"string":"<div style=\"display:block;\">Keen interest in Math</div>","typeStyle":"blink","pauseFor":100},{"string":"and robotics","pauseFor":2000},{"string":"<div style=\"display:block;\">Keen interest in Math</div>","typeStyle":"deleteTo"},{"string":"Keen interest in Math","typeStyle":"blink"}],"typeSpeed":60,"loop":true}'></h2>
+            <div class="js-curser" style="display: inline"></div>
+          </div>
+        </div>
+        <div class="absolute" id="header-text-box">
+          <h1>Hi, I'm <span class="color-title-highlight">Asger Stidsen</span></h1>
+          <h2 id="header-text-undertitle">The world need solutions not problems</h2>
+          <div class="flex-container pu-5">
+            <a class="a-button" href="#contact">Hire Me</a><a class="a-button" href="#projects">View Work</a>
+          </div>
+        </div>
+        <div class="overflow-hidden absolute" id="header-image-box">
+          <div class="reletive skew-10 fill-y" id="header-image-container">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczNBRBKHOo3HregmviZUKSGBLiBKCvnvEMopZRn2mF4jRCYXyw6wrv8qDtlce-ou2-wsSAUcn0YenqG0dIa_RNymJs2LT4RSs2CwudJTRqmTBHfnpKA_tMFs2hOs91RuCxfTaIRIyuYPUegHwvxD-cFS=w570-h820-s-no-gm?authuser=0" alt="Profile Picture" class="fill-y" id="header-image" />
+          </div>
+        </div>
+        <div class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text">
+          Just a template image for now
+        </div>
+      </header>
+    
+
+      <nav>
+        <div class="flex-container px-20">
+          <div id="nav-header">
+            <a href="#header" class="text-big color-title-highlight">Portfolio</a>
+          </div>
+          <div class="menu-container" id="nav-menu">
+            <button class="menu-button" id="nav-menu-btn" aria-label="Toggle menu">
+              <i class="fas fa-bars" style="font-size: var(--big-font-size)"></i>
+            </button>
+            <div class="menu-content" id="nav-menu-content">
+              <div class="flex-container" id="nav-menu-items">
+                <a href="#about" class="nav-menu-link">About</a><a href="#projects" class="nav-menu-link">Projects</a><a href="#skills" class="nav-menu-link">Skills</a><a href="#contact" class="nav-menu-link">Contact</a>
+                <button class="theme-toggle dark-theme menu-button">
+                  <i class="fa-solid fa-moon dark icon"></i>
+                  <i class="fa-solid fa-sun light icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+
+      <section id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            About <span class="text-blue-600">Me</span>
+          </h2>
+          <div class="flex flex-col gap-12 items-center">
+            <div class="js-tryper-container">
+              <p class="js-tryper" style="display: inline" id="quotes-typewriter" data-info='{"strings":[{"string":"I think in patterns, not panic.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I see every project as a chance to grow and contribute.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"Every problem is an opportunity in disguise.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I genuinely enjoy figuring things out.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I turn constraints into creative opportunities.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"Complexity does not scare me, it inspires me.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I believe problem-solving should feel like play.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I solve problems with curiosity, not just code.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"For me, coding is problem-solving with purpose.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I do not look for quick fixes, I look for lasting solutions.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300},{"string":"I have fun making ideas work.","pauseFor":5000},{"string":"","typeStyle":"deleteTo","pauseFor":300}],"typeSpeed":60,"loop":true}'></p>
+              <div class="js-curser" id="quotes-curser" style="display: inline"></div>
+            </div>
+            <div class="w-5/6">
+              <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+              <div id="about-me" class="compresed mb-6">
+                <div class="flex flex-col gap-8 about-text">
+                  <div>Mit navn er Asger, jeg er <span class="age"></span>-år og læser til softwareingeniør efter at have afsluttet en HTX med Matematik A, Fysik A og Programmering B. Jeg har en stor passion for at kode og udvikle løsninger - både digitale og fysiske - som gør hverdagen lettere og mere effektiv gennem automatisering.</div>
+                  <div>Mine interesser spænder bredt: fra hardware til backend, fra databasedesign til frontend-udvikling. Jeg ser mig selv som en fullstack-udvikler og nyder at arbejde i hele stacken - både når det handler om logik, struktur og brugeroplevelse.</div>
+                  <div>En særlig drivkraft for mig er arbejdet med robotter og fysiske enheder. Jeg fascineres af, hvordan nogle linjer kode kan få en fysisk maskine til at bevæge sig, reagere og udføre opgaver i den virkelige verden.</div>
+                  <div>Jeg prioriterer struktur og skalerbarhed i mine løsninger. Min <a href="/pages/project.html?project=portfolio-hjemmeside">portfolio-hjemmeside</a> er et eksempel: Den er bygget op omkring et JSON-baseret system, så nye projekter let kan tilføjes uden at kode en ny underside hver gang.</div>
+                  <div>Gennem mit studie har jeg opnået gode samarbejdsevner og erfaring med værktøjer som Git og versionsstyring i praksis.</div>
+                  <div>Du kan se nogle af mine projekter <a href="#projects">her</a>.</div>
+                </div>
+                <div id="fade"></div>
+                <button id="about-me-read-more" onclick="readMore()">↓</button>
+              </div>
+              <div class="flex flex-wrap gap-x-12 gap-y-6">
+                <div>
+                  <p class="font-medium"><span class="text-blue-600">Name:</span> Asger Grundtdal Stidsen</p>
+                  <p class="font-medium"><span class="text-blue-600">Email:</span> asger.g.stidsen@gmail.com</p>
+                </div>
+                <div>
+                  <p class="font-medium"><span class="text-blue-600">From:</span> Hadsten, Denmark</p>
+                  <p class="font-medium"><span class="text-blue-600">Currently:</span> Employed</p>
+                </div>
+              </div>
+              <div class="mt-8 flex flex-wrap gap-x-8 gap-y-6">
+                <a href="/pages/cv.html?download=false"
+                  class="mr-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center">
+                  Gå til CV <i class="fa-solid fa-file ml-2"></i>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="/pages/cv.html?download=true"
+                  class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center">
+                  Download CV <i class="fas fa-download ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+      <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">
+            My <span class="text-blue-600">Projects</span>
+          </h2>
+          <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Here are some of my recent projects. Click on any project to view more details.
+          </p>
+          <div class="m-auto flex justify-center mb-12 w-2/3">
+            <div class="project-filters inline-flex rounded-md shadow-sm">
+              <button data-filter="all" class="filter-btn px-4 py-2 text-sm font-medium rounded-l-lg rounded-r bg-blue-600 text-white">
+                All Projects
+              </button>
+              <button data-filter="IoT" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">IoT</button><button data-filter="Backend" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Backend</button><button data-filter="Embedded_System" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Embedded_System</button><button data-filter="Web" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Web</button><button data-filter="Fullstack" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Fullstack</button><button data-filter="Frontend" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Frontend</button><button data-filter="Database" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Database</button><button data-filter="Sikkerhed" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Sikkerhed</button><button data-filter="Python" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Python</button><button data-filter="Indlejret_System" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Indlejret_System</button><button data-filter="Mikrokontroller" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Mikrokontroller</button><button data-filter="Automotive" class="filter-btn px-4 py-2 text-sm font-medium bg-white text-gray-700">Automotive</button>
+            </div>
+          </div>
+          <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div class="project-card Indlejret_System Mikrokontroller IoT Automotive" id="Project-BIL_Autonomous_Vehicle" data-project-key="BIL_Autonomous_Vehicle">
+          <div class="h-48 overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/pw/ABLVV85_placeholder" alt="BIL - Autonomt Køretøjskontrolsystem" class="project-image transition duration-500 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1 text-black">BIL - Autonomt Køretøjskontrolsystem</h3>
+            <p class="text-sm text-gray-500 mb-3">December 2025</p>
+            <p class="text-gray-600 mb-4">Interrupt-drevet indlejret system til autonom køretøjskontrol ved hjelp af AVR mikrokontroller.</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Motorcontrol</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Sensor Integration</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Lysmanagement</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">State Machine</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Real-time Systemer</span></div>
+          </div>
+        </div>
+      
+        <div class="project-card IoT Embedded_System Python Backend" id="Project-Light_Regulation_System" data-project-key="Light_Regulation_System">
+          <div class="h-48 overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0" alt="Light Regulation System" class="project-image transition duration-500 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1 text-black">Light Regulation System</h3>
+            <p class="text-sm text-gray-500 mb-3">May 2026</p>
+            <p class="text-gray-600 mb-4">Intelligent automatisk lysregulering baseret på tilstedeværelse og naturligt lys.</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Pipeline Architecture</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Centralized Logic</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">IoT</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Real-time Control</span></div>
+          </div>
+        </div>
+      
+        <div class="project-card IoT Embedded_System" id="Project-BT_Sound_System" data-project-key="BT_Sound_System">
+          <div class="h-48 overflow-hidden">
+            <img src="https://i.pinimg.com/736x/bf/ac/f6/bfacf6f39d514b822a9e5277c2aa48e9.jpg" alt="BT Sound System" class="project-image transition duration-500 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1 text-black">BT Sound System</h3>
+            <p class="text-sm text-gray-500 mb-3">May 2025</p>
+            <p class="text-gray-600 mb-4">Et trådløst Bluetooth lydsystem til at eliminere kabler, kompatibelt med forskelige enheder.</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Hardware Design</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">IoT</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">DIY Electronics</span></div>
+          </div>
+        </div>
+      
+        <div class="project-card Web Fullstack Backend Frontend Database Sikkerhed" id="Project-MilWeb" data-project-key="MilWeb">
+          <div class="h-48 overflow-hidden">
+            <img src="https://i.pinimg.com/736x/9f/ab/96/9fab9693c09373298cbb7123a704aba4.jpg" alt="MilWeb" class="project-image transition duration-500 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1 text-black">MilWeb</h3>
+            <p class="text-sm text-gray-500 mb-3">May 2025</p>
+            <p class="text-gray-600 mb-4">Et militært koordineringssystem til visualisering og håndtering af troppebevægelser.</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Sikkerhed</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">UI/UX</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Rollebaseret adgang</span><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Responsivt Design</span></div>
+          </div>
+        </div>
+      
+        <div class="project-card" id="Project-Udokumenterede_projekter" data-project-key="Udokumenterede_projekter">
+          <div class="h-48 overflow-hidden">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.1PH9m5E_T9guOvEqicK1GwHaHT?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Udokumenterede projekter" class="project-image transition duration-500 hover:scale-110" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1 text-black">Udokumenterede projekter</h3>
+            <p class="text-sm text-gray-500 mb-3"></p>
+            <p class="text-gray-600 mb-4">Dette er procjekter der ikke er dokumenteret endnu. eller procjekter der ikke er færdige.</p>
+            <div class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+      
+          </div>
+          <div class="text-center mt-12">
+            <a href="/pages/template.html?page=project_viewer"
+              class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
+              View All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+    
+
+      <div class="to-top-arrow-trigger">
+        <button class="to-top-arrow" title="Back to top">
+          <i class="fas fa-chevron-up"></i>
+        </button>
+      </div>
+    
+
+      <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">
+            My <span class="text-blue-600">Skills</span>
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Here's an overview of my technical skills and expertise across different areas.
+        </p>
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/3">
+            <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
+            <div class="space-y-6">
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">JavaScript:</span><span class="font-medium">Erfaren+</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Frontend:</span><span class="font-medium">Erfaren</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">C#:</span><span class="font-medium">middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Python:</span><span class="font-medium">Erfaren</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Node and Express:</span><span class="font-medium">middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Database and Mysql:</span><span class="font-medium">middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">3D modeling/3D printing:</span><span class="font-medium">Erfaren</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Design brugergrænseflade:</span><span class="font-medium">begynder</span></div>
+            </div>
+          </div>
+          <div class="lg:w-2/3">
+            <span class="pb-5 pt-10 block">
+              Jeg har erfaring med udvikling af både frontend- og backend-løsninger, herunder design af brugervenlige og strukturerede webapplikationer med fokus på sikkerhed, datastyring og rollebaseret adgang.
+            </span>
+            <span class="pb-5 block">
+              Inden for hardware og embedded systemer har jeg erfaring med styring, automation og integration af sensorer og aktuatorer. Jeg kan designe kredsløb, udvikle firmware og opsætte trådløse systemer med fokus på stabilitet, funktionalitet og sikkerhed.
+            </span>
+            <span class="pb-5 block">
+              Jeg har også erfaring med 3D-modellering og print, hvor jeg kan skabe kabinetter, mekaniske dele og strukturer, som kombinerer funktionalitet, præcision og brugervenlighed.
+            </span>
+          </div>
+        </div>
+      </section>
+    
+
+      <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">
+            Get In <span class="text-blue-600">Touch</span>
+          </h2>
+          <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+          </p>
+          <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+              <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4"><i class="fas fa-envelope text-blue-600"></i></div>
+                  <div><h4 class="font-medium">Email</h4><p class="text-white-600">Asger.g.stidsen@gmail.com</p></div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4"><i class="fas fa-phone-alt text-blue-600"></i></div>
+                  <div><h4 class="font-medium">Phone</h4><p class="text-white-600">+45 50 56 91 45</p></div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4"><i class="fas fa-map-marker-alt text-blue-600"></i></div>
+                  <div><h4 class="font-medium">Location</h4><p class="text-white-600">Hadsten 8370, Denmark</p></div>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold mt-10 mb-6">Follow Me</h3>
+              <div class="flex space-x-4">
+                <a href="https://github.com/asgerfyr" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/asger-stidsen-a906902b0/" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/30637407/asger-stidsen" target="_blank" rel="noopener" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                  <i class="fab fa-stack-overflow"></i>
+                </a>
+              </div>
+            </div>
+            <div class="md:w-1/2">
+              <form id="contact-form" class="bg-white p-6 rounded-lg shadow-md text-gray-700">
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                  <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                  <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="mb-4">
+                  <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                  <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                  <textarea id="message" rows="4" name="message" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="popup">Beskeden er sendt</div>
+      </section>
+    
+
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 mr-20">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <span class="text-xl font-bold">MyPortfolio</span>
+              <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
+                Code and layout may be used with proper credit.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+
+  
+  <!-- Client-side JavaScript bundle -->
   <script src="/dist/app.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script src="/js/common/typewriter.js"></script>
+  <script src="/js/index/page-function.js"></script>
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+  <script src="/js/common/popup.js"></script>
+  <script src="/js/common/inserts.js"></script>
+  <script src="/js/common/to-top-arrow.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="/js/index/contact-send.js"></script>
 </body>
 </html>

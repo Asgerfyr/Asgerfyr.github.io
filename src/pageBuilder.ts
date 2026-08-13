@@ -3,14 +3,31 @@ import type { PageConfig, ComponentDefinition } from './types';
 
 export class PageBuilder {
   static async renderDefs(defs: ComponentDefinition[], container: HTMLElement): Promise<void> {
+    // Extract sections from ProjectSection components in the layout
+    const sections = ['Overview'];
+    for (const def of defs) {
+      if (def.component === 'ProjectSection' && def.props?.title) {
+        sections.push(def.props.title as string);
+      }
+    }
+    sections.push('Conclusion');
+
     for (const def of defs) {
       const Component = ComponentRegistry.get(def.component);
       if (!Component) {
         console.warn(`Component '${def.component}' not registered`);
         continue;
       }
-      const el = await Component.render(def.props ?? {}, PageBuilder.renderDefs.bind(PageBuilder));
-      container.appendChild(el);
+
+      // Pass sections to ProjectHeader
+      const props = def.component === 'ProjectHeader' 
+        ? { ...def.props, sections }
+        : def.props;
+
+      const html = await Component.render(props ?? {});
+      
+      // Insert HTML directly without wrapper
+      container.insertAdjacentHTML('beforeend', html);
     }
   }
 

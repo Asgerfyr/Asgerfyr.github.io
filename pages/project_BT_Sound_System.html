@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio">
+  <title>BT Sound System Documentation</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="/css/common/standerd.css">
+  <link rel="stylesheet" href="/css/common/config.css">
+  
+  <link rel="stylesheet" href="/css/project/style.css">
+  
+</head>
+<body>
+  
+      <div class="bg-white shadow-md sticky top-0 z-40">
+        <a href="/" class="absolute top-3 left-3 text-blue-500">
+          <svg class="lucide-icon" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="container mx-auto px-6 pl-9 py-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center title-wrap">
+              <svg class="lucide-icon mr-3" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;">
+                <path d="M19 3H5c-1 0-2 1-2 2v14c0 1 1 2 2 2h14c1 0 2-1 2-2V5c0-1-1-2-2-2z"></path>
+                <path d="M9 7h6"></path>
+                <path d="M9 11h6"></path>
+                <path d="M9 15h2"></path>
+              </svg>
+              <div class="title">
+                <h1 class="project-title">BT Sound System</h1>
+                <span class="project-subtitle">Documentation</span>
+              </div>
+            </div>
+
+            <div class="actions" style="display:flex;align-items:center;gap:0.5rem">
+              <button id="sections-toggle" class="menu-button" aria-expanded="false" aria-controls="nav-links">Sections ▼</button>
+              <div id="nav-links" class="sections-panel" aria-hidden="true">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#conclusion" class="nav-link">Conclusion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="overview" class="section-anchor mb-16 container mx-auto px-6 pt-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Overview</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Project Description</h3>
+              <p class="text-gray-600 mb-6">Projektet omhandler udviklingen af et trådløst Bluetooth-musikanlæg designet til diskret montering under en seng. Det moderniserer et ældre analogt lydsystem ved at tilføje trådløs streamingkapabilitet, som gør det muligt at forbinde smartphones, tablets og computere uden brug af kabler, hvilket øger fleksibiliteten og brugervenligheden.</p>
+              <h3 class="text-xl font-semibold mb-4">Objectives</h3>
+              <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <li>Udvikle en stabil og brugervenlig trådløs lydmodtager baseret på ESP32 med <abbr data-tooltip="Advanced Audio Distribution Profile">Bluetooth A2DP</abbr> streaming</li><li>Designe en strømforsyning med fysisk og elektrisk adskillelse mellem 230 V AC og lavspændingskredsløb (5 V DC) for at sikre elsikkerhed</li><li>Udarbejde et kompakt kabinet med 3D-print, som fysisk adskiller strømforsyning og lyd-kredsløbet</li><li>Udvikle pålideligt kredsløb og firmware, der sikrer stabil streaming og nem integration med eksisterende lydsystem</li><li>Anvende 3D-modellering til at optimere kabinetdesign med fokus på funktionalitet og enkel installation</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+              <div class="space-y-4">
+                
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #eff6ff; color: #3b82f6">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">ESP32 Bluetooth-integration</h4>
+            <p class="text-sm text-gray-500">Implementering af <abbr data-tooltip="Advanced Audio Distribution Profile">Bluetooth A2DP</abbr>-protokol på ESP32 for trådløs modtagelse af lydsignaler.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #fefce8; color: #eab308">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><circle cx="12" cy="12" r="4" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Strømforsyning med sikker isolation</h4>
+            <p class="text-sm text-gray-500">Omformning af 230 V AC til 5 V DC med fysisk og elektrisk adskillelse mellem netspænding og lavspændingskredsløb.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #faf5ff; color: #a855f7">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Kredsløbsdesign</h4>
+            <p class="text-sm text-gray-500">Udvikling af elektronisk kredsløb med minimal elektrisk støj ved hjælp af passivt RC-filter.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #f0fdf4; color: #22c55e">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">Firmwareudvikling</h4>
+            <p class="text-sm text-gray-500">Programmering af ESP32 med <abbr data-tooltip="Advanced Audio Distribution Profile">Bluetooth A2DP</abbr> ved brug af BluetoothA2DPSink-biblioteket til pålidelig streaming og fejlhåndtering.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="p-3 rounded-full mr-3 flex-shrink-0 flex justify-center items-center" style="width:2.5rem; background-color: #faf5ff; color: #a855f7">
+            <span class="lucide-icon inline-flex items-center justify-center " style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" /></svg></span>
+          </div>
+          <div>
+            <h4 class="font-medium">3D-modellering og printning</h4>
+            <p class="text-sm text-gray-500">Design af et kompakt kabinet med fokus på fysisk adskillelse af strømforsyning og lydsektion, effektiv varmeafledning og enkel installation under sengen.</p>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8 mt-8">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" /><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" /><circle cx="13" cy="7" r="1" fill="currentColor" /><rect x="8" y="2" width="14" height="14" rx="2" /></svg></span>Project Images
+        </h3>
+        <div class="image-gallery">
+          
+      <div class="image-card cursor-pointer">
+        <img src="https://i.pinimg.com/736x/28/85/fb/2885fbb7427c9ed0e11563d3a6294c2d.jpg" alt="Trådløst Bluetooth-musikanlæg under seng" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Trådløst Bluetooth-musikanlæg installeret under seng</p>
+      </div>
+    
+      <div class="image-card cursor-pointer">
+        <img src="https://i.pinimg.com/736x/d7/f4/e9/d7f4e957e879cd4d2c65af7c69fe611a.jpg" alt="Trådløst Bluetooth-musikanlæg fra toppen" class="w-full h-48 object-cover rounded-lg">
+        <p class="text-sm text-gray-500 mt-2 text-center">Trådløst Bluetooth-musikanlæg set oppe fra med ledningsmontering</p>
+      </div>
+    
+        </div>
+      </div>
+    
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Hardware Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Intro</h3><p class="text-gray-600 mb-4">Denne sektion beskriver de centrale hardwarekomponenter i projektet samt deres tilslutninger. Alle komponenter er valgt med fokus på sikkerhed, kompatibilitet og enkel integration. <div class="h-5"></div></p></div><div><h3 class="text-xl font-semibold mb-4">Komponentliste</h3><div class="overflow-x-auto mb-4"><table class="w-full border-collapse border border-gray-300"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Komponent</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Antal</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Specifikation</th><th class="border border-gray-300 px-4 py-2 text-left font-semibold">Funktion</th></tr></thead><tbody><tr><td class="border border-gray-300 px-4 py-2">ESP32 DevKit v1</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">-</td><td class="border border-gray-300 px-4 py-2">Bluetooth-modtagelse og audio-output</td></tr><tr><td class="border border-gray-300 px-4 py-2">Standard USB strømreguleringsenhed</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">230V AC → 5V DC, 2A, CE-godkendt</td><td class="border border-gray-300 px-4 py-2">Forsyning med isolation via USB</td></tr><tr><td class="border border-gray-300 px-4 py-2">USB-kabel</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">USB-A til Micro USB</td><td class="border border-gray-300 px-4 py-2">Strøm til ESP32 via Micro USB</td></tr><tr><td class="border border-gray-300 px-4 py-2">3,5 mm jack hunstik</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">Stereo</td><td class="border border-gray-300 px-4 py-2">Analog lydudgang ─> forstærker</td></tr><tr><td class="border border-gray-300 px-4 py-2">Modstand</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">20 Ω</td><td class="border border-gray-300 px-4 py-2">RC-filter</td></tr><tr><td class="border border-gray-300 px-4 py-2">Kondensator</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">Elektrolytisk</td><td class="border border-gray-300 px-4 py-2">RC-filter</td></tr><tr><td class="border border-gray-300 px-4 py-2">Stikdåse hun</td><td class="border border-gray-300 px-4 py-2">2</td><td class="border border-gray-300 px-4 py-2">Til 230V</td><td class="border border-gray-300 px-4 py-2">USB strømregulering i kabinet og forstærker</td></tr><tr><td class="border border-gray-300 px-4 py-2">Stik han</td><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">Til 230V</td><td class="border border-gray-300 px-4 py-2">Tilslutning i stikkontakt for strømforsyning</td></tr><tr><td class="border border-gray-300 px-4 py-2">PLA til 3D-print</td><td class="border border-gray-300 px-4 py-2">110 g</td><td class="border border-gray-300 px-4 py-2">Hvid PLA</td><td class="border border-gray-300 px-4 py-2">Kabinetproduktion</td></tr><tr><td class="border border-gray-300 px-4 py-2">screw</td><td class="border border-gray-300 px-4 py-2">2</td><td class="border border-gray-300 px-4 py-2">2mm X 11mm</td><td class="border border-gray-300 px-4 py-2">Kabinet montering</td></tr></tbody></table></div></div><div><h3 class="text-xl font-semibold mb-4">Pinout</h3><p class="text-gray-600 mb-4">ESP32 bruger sine indbyggede <abbr data-tooltip="Digital-to-Analog Converter outputs">DAC-udgange</abbr> (GPIO 25 og 26) til at sende lyd i 0,6-1,0 V RMS-niveau direkte til et 3,5 mm jack-stik. Jackens jord forbindes til ESP32's GND.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">ESP32 GPIO 25 ──────> DAC_R → Jack-stik højre (R)
+ESP32 GPIO 26 ──────> DAC_L → Jack-stik venstre (L)
+ESP32 GND     ──────> Jack-stik ground (G)</code></pre></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Kode Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">Formålet med koden</h3><p class="text-gray-600 mb-4">Koden gør ESP32 i stand til at modtage og afspille lyd via <abbr data-tooltip="Advanced Audio Distribution Profile">Bluetooth A2DP</abbr>.</p></div><div><h3 class="text-xl font-semibold mb-4">Kode</h3><p class="text-gray-600 mb-4">BluetoothA2DPSink er et bibliotek til ESP32, der håndterer <abbr data-tooltip="Advanced Audio Distribution Profile">Bluetooth A2DP</abbr>-modtagelse og afspiller lyd via <abbr data-tooltip="Digital-to-Analog Converter outputs">DAC-udgange</abbr>.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-cpp">#include "AudioTools.h"
+#include "BluetoothA2DPSink.h"
+
+AnalogAudioStream out;
+BluetoothA2DPSink a2dp_sink(out);
+
+void setup() {
+    a2dp_sink.start("MyMusic");
+}
+
+void loop() {
+}</code></pre><p class="text-gray-600 mb-4">Link til biblioteket: <a href="https://github.com/pschatzmann/ESP32-A2DP" target="_blank">https://github.com/pschatzmann/ESP32-A2DP</a></p></div><div><h3 class="text-xl font-semibold mb-4">Ændringer</h3><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li>set_volume(50)</li><li>set_auto_reconnect(true)</li></ul><p class="text-gray-600 mb-4">ESP32'ens start()-funktion sætter som standard lydstyrken til 0. Derfor er set_volume(50) tilføjet, så enheden starter med en passende lydstyrke på 50 %.</p><p class="text-gray-600 mb-4">Derudover er reconnect() implementeret, så ESP'en automatisk forsøger at genoprette forbindelsen til den sidst tilsluttede enhed, hvis strømmen afbrydes og enheden genstarter.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="section-anchor mb-16 container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4" /><path d="M10 17h4" /><path d="M10 7h4" /><path d="M18 12h2" /><path d="M18 18h2" /><path d="M18 6h2" /><path d="M4 12h2" /><path d="M4 18h2" /><path d="M4 6h2" /><rect x="6" y="2" width="12" height="20" rx="2" /></svg></span>
+            <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Kredsløb Documentation</h2>
+          </div>
+          <div class="section-grid-container">
+            <div><h3 class="text-xl font-semibold mb-4">RC-filter - hvad og hvorfor</h3><p class="text-gray-600 mb-4">For at fjerne støj fra ESP32's <abbr data-tooltip="Digital-to-Analog Converter outputs">DAC-udgange</abbr> er der tilføjet et simpelt RC-lavpasfilter. Det forbedrer lydkvaliteten og dæmper uønskede højfrekvente signaler.</p></div><div><h3 class="text-xl font-semibold mb-4">Funktion og virkemåde</h3><p class="text-gray-600 mb-4">RC-kredsløbet fungerer som et passivt lavpasfilter, der reducerer højfrekvent støj fra strømforsyningen, som ellers kunne påvirke lydkvaliteten. Filtreringen sker ved, at modstanden (20Ω) og kondensatoren sammen dæmper hurtige spændingsændringer.</p></div><div><h3 class="text-xl font-semibold mb-4">Hvorfor dette kredsløb?</h3><p class="text-gray-600 mb-4">Kredsløbet er valgt for at fjerne elektrisk støj ved til og frakobling, som kan forårsage uønsket lydstøj. Specifikt blev der observeret støj, der blev værre ved lav volumen, hvilket RC-filtret effektivt dæmper.</p></div><div><h3 class="text-xl font-semibold mb-4">Andre løsninger</h3><p class="text-gray-600 mb-4">Andre løsninger som aktive filtre eller brug af eksterne DAC-moduler blev vurderet, men blev ikke valgt på grund af projektets hurtige forløb.</p></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="conclusion" class="section-anchor container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Conclusion</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Results</h3>
+              <p class="text-gray-600 mb-4">Projektet leverer en funktionel, trådløs Bluetooth-lydløsning, der opfylder krav til brugervenlighed, sikkerhed og lydkvalitet med minimal kompleksitet og lave omkostninger.</p>
+            </div>
+            <div>
+              
+      <h3 class="text-xl font-semibold mb-4">Lessons Learned</h3>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 flex gap-3">
+        <span class="lucide-icon inline-flex items-center justify-center text-yellow-400 flex-shrink-0" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg></span>
+        <p class="text-sm text-yellow-700">Jordforbindelser er essentielle i elektriske komponenter for at reducere støj, især i lydkomponenter, der arbejder med frekvenser med lav amplitude.</p>
+      </div>
+    
+              
+      <h3 class="text-xl font-semibold mb-4">Future Improvements</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-600">
+        <li>Inkorporering af jordforbindelse for at reducere støj</li><li>Forbedring af passive RC-kredsløb for bedre stabilitet</li><li>Udskiftning af USB-strømregulering for at minimere støj</li><li>Tilføjelse af deep sleep-funktionalitet for lavere strømforbrug</li>
+      </ul>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            <span class="lucide-icon inline-flex items-center justify-center text-blue-500 mr-3" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></span>
+            <h2 class="text-2xl font-bold">Project Info</h2>
+          </div>
+          <div class="flex flex-wrap gap-8 text-gray-600">
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">May 2025</p></div>
+            <div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">3 Months</p></div>
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+              <p class="font-medium">Solo project</p>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    
+
+      <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 mr-20">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+              <span class="text-xl font-bold">MyPortfolio</span>
+              <p class="text-gray-400 mt-2 max-w-[40vw]">© 2025 Asger Stidsen. Written content may not be copied or reused.
+                Code and layout may be used with proper credit.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+
+  
+  <!-- Client-side JavaScript bundle -->
+  <script src="/dist/app.js"></script>
+  
+  <!-- Page-specific scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="/js/common/smooth-sctolling-links.js"></script>
+</body>
+</html>

@@ -60,7 +60,7 @@
     {
       "component": "ProjectSection",
       "props": {
-        "icon": "sitemap",
+        "icon": "layout",
         "color": "blue",
         "title": "Arkitektur: Lagdelt indlejret systemdesign",
         "content": {

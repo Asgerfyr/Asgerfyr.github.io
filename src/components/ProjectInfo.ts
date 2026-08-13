@@ -3,61 +3,59 @@ import { iconRegistry } from '../utils/icons';
 interface TeamMember { name: string; role: string; link?: string; }
 
 export const ProjectInfo = {
-  render(props: Record<string, unknown>): HTMLElement {
+  render(props: Record<string, unknown> = {}): string {
     const date    = (props.completion_date as string)       ?? '';
     const size    = (props.team_size       as number)       ?? 1;
-    const members = (props.team_members    as TeamMember[]) ?? [];
+    const members = (props.team_members    as Array<{ name: string; role: string; link?: string }>) ?? [];
     const dur     = (props.duration        as string)       ?? '';
     const links   = (props.project_links   as Array<{ label: string; icon?: string; url: string }>) ?? [];
 
-    const wrapper = document.createElement('div');
-    wrapper.className = 'container mx-auto px-6 pb-8';
+    const linksHtml = links.length ? `
+      <div class="mt-6 pt-6 border-t border-gray-200">
+        <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
+        <div class="flex flex-wrap gap-3">
+          ${links.map(l => {
+            const iconClass = l.icon ? `fa-${l.icon}` : '';
+            const iconHtml = iconClass ? `<i class="fas ${iconClass}" style="font-size: 1rem;"></i>` : '';
+            return `
+              <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
+                ${iconHtml}
+                ${l.label}
+              </a>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    ` : '';
 
-    const card = document.createElement('div');
-    card.className = 'bg-white rounded-xl shadow-md overflow-hidden p-6';
-    
-    let linksHtml = '';
-    if (links.length) {
-      linksHtml = `
-        <div>
-          <p class="text-xs text-gray-400 uppercase mb-3 font-semibold">Project Links</p>
-          <div class="flex flex-wrap gap-3">
-            ${links.map(l => {
-              const iconHtml = l.icon ? iconRegistry.renderIconHTML(l.icon, { size: '1rem' }) : '';
-              return `
-                <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm font-medium">
-                  ${iconHtml}
-                  ${l.label}
-                </a>
-              `;
-            }).join('')}
+    const membersHtml = members.length ? `
+      <ul class="mt-2 space-y-1 text-sm">
+        ${members.map(m => `<li>${m.link ? `<a href="${m.link}" class="text-blue-500 hover:underline">${m.name}</a>` : m.name} — ${m.role}</li>`).join('')}
+      </ul>
+    ` : '';
+
+    return `
+      <div class="container mx-auto px-6 pb-8">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-6">
+          <div class="flex items-center mb-6">
+            ${iconRegistry.renderIconHTML('info', {
+              size: '1.5rem',
+              className: 'text-blue-500 mr-3',
+            })}
+            <h2 class="text-2xl font-bold">Project Info</h2>
           </div>
-        </div>
-      `;
-    }
-
-    card.innerHTML = `
-      <div class="flex items-center mb-6">
-        ${iconRegistry.renderIconHTML('info', {
-          size: '1.5rem',
-          className: 'text-blue-500 mr-3',
-        })}
-        <h2 class="text-2xl font-bold">Project Info</h2>
-      </div>
-      <div class="flex flex-wrap gap-8 text-gray-600">
-        ${date  ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">${date}</p></div>` : ''}
-        ${dur   ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">${dur}</p></div>` : ''}
-        <div>
-          <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
-          <p class="font-medium">${size === 1 ? 'Solo project' : `${size} members`}</p>
-          ${members.length ? `<ul class="mt-2 space-y-1 text-sm">
-            ${members.map(m => `<li>${m.link ? `<a href="${m.link}" class="text-blue-500 hover:underline">${m.name}</a>` : m.name} — ${m.role}</li>`).join('')}
-          </ul>` : ''}
+          <div class="flex flex-wrap gap-8 text-gray-600">
+            ${date  ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Completion</p><p class="font-medium">${date}</p></div>` : ''}
+            ${dur   ? `<div><p class="text-xs text-gray-400 uppercase mb-1">Duration</p><p class="font-medium">${dur}</p></div>` : ''}
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">Team</p>
+              <p class="font-medium">${size === 1 ? 'Solo project' : `${size} members`}</p>
+              ${membersHtml}
+            </div>
+          </div>
+          ${linksHtml}
         </div>
       </div>
-      ${linksHtml ? `<div class="mt-6 pt-6 border-t border-gray-200">${linksHtml}</div>` : ''}
     `;
-    wrapper.appendChild(card);
-    return wrapper;
   },
 };
