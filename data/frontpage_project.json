@@ -52,7 +52,7 @@
 },
 "BIL_Autonomous_Vehicle": {
   "title": "BIL - Autonomt Køretøjskontrolsystem",
-  "image": "https://lh3.googleusercontent.com/pw/ABLVV85_placeholder",
+  "image": "https://lh3.googleusercontent.com/pw/AP1GczO3uUWf2QigHBd_32m9QhQTbWOywmulNXSfowhCaMRCTDMMCpbnFl-GHTvKHMrOSOBCJkjJhyeyWTftpVF8f1i-8R7sxgHHYLZjTmVVddSb69c06LhU2wMcCXCLv0coTMaefxHoQzv_BkFClV5ShcvT=w1350-h993-s-no-gm?authuser=0",
   "sub_description": "Interrupt-drevet indlejret system til autonom køretøjskontrol ved hjelp af AVR mikrokontroller.",
   "description": "BIL er et første-semester universitet indlejret systems projekt, der styrer et autonomt køretøj via en AVR mikrokontroller. Systemet integrerer PWM-baseret motorcontrol, uafhængig lyskontrol, refleksbrik-baseret positionering, og UART-baseret brugergrænseflade. Projektet demonstrerer interrupt-drevet arkitektur, real-time state machine design, og hardware abstraction principler.",
   "topics": ["C", "AVR", "Atmel Studio", "Indlejrede Systemer", "Mikrokontroller", "PWM", "UART", "Interrupts"],
