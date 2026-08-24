@@ -30,7 +30,7 @@ export const ProjectList = {
       return `
         <div class="project-card${categories}" id="Project-${key}" data-project-key="${key}">
           <div class="h-48 overflow-hidden">
-            <img src="${project.image}" alt="${project.title}" class="project-image transition duration-500 hover:scale-110" />
+            <img src="${project.image}" alt="${project.title}" class="project-image transition duration-500 hover:scale-110">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-1 text-black">${project.title}</h3>

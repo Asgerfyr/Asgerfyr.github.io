@@ -40,6 +40,48 @@ ComponentRegistry.register('ProjectConclusion', ProjectConclusion);
 ComponentRegistry.register('ProjectInfo', ProjectInfo);
 ComponentRegistry.register('ToTopArrow', ToTopArrow);
 
+function initProjectImageShowcase(): void {
+  const cards = document.querySelectorAll('.image-card');
+  if (!cards.length) return;
+
+  let container = document.getElementById('image_showcase_container') as HTMLDivElement | null;
+  let showcaseImage = document.getElementById('image_showcase') as HTMLImageElement | null;
+
+  if (!container || !showcaseImage) {
+    container = document.createElement('div');
+    container.id = 'image_showcase_container';
+    container.className = 'invis';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
+    container.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323;background-color:white" />';
+    document.body.appendChild(container);
+
+    showcaseImage = container.querySelector('#image_showcase') as HTMLImageElement;
+
+    container.addEventListener('click', () => {
+      container!.classList.add('invis');
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const card = (e.target as HTMLElement).closest('.image-card') as HTMLElement | null;
+    if (!card) return;
+
+    const image = card.querySelector('img') as HTMLImageElement | null;
+    if (!image || !showcaseImage || !container) return;
+
+    showcaseImage.src = image.src;
+    showcaseImage.alt = image.alt;
+    container.classList.remove('invis');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && container && !container.classList.contains('invis')) {
+      container.classList.add('invis');
+    }
+  });
+}
+
 // Project card click handler (event delegation for static HTML - HOME PAGE ONLY)
 // This handler is skipped for project_viewer since it has its own handlers
 let page: string;
@@ -47,6 +89,12 @@ let page: string;
 // Determine page from URL params
 const pageFromURL = new URLSearchParams(window.location.search).get('page') ?? 'home';
 page = pageFromURL;
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProjectImageShowcase);
+} else {
+  initProjectImageShowcase();
+}
 
 if (page !== 'project_viewer') {
   document.addEventListener('click', async (e) => {

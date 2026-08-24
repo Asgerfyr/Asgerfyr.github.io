@@ -2,7 +2,6 @@ import type { HeaderProps } from '../types';
 
 const TYPEWRITER_DATA = {
   strings: [
-    { string: '', typeStyle: 'deleteTo', pauseFor: 500 },
     { string: 'Frontend Developer', pauseFor: 300 },
     { string: '<div class="type-error">Frontend</div> Developer', typeStyle: 'blink', pauseFor: 1000 },
     { string: '<div class="type-error">Frontend</div>', typeStyle: 'deleteTo' },
@@ -21,6 +20,7 @@ const TYPEWRITER_DATA = {
     { string: 'and robotics', pauseFor: 2000 },
     { string: '<div style="display:block;">Keen interest in Math</div>', typeStyle: 'deleteTo' },
     { string: 'Keen interest in Math', typeStyle: 'blink' },
+    { string: '', typeStyle: 'deleteTo', pauseFor: 500 },
   ],
   typeSpeed: 60,
   loop: true,
@@ -53,7 +53,7 @@ export const Header = {
         </div>
         <div class="overflow-hidden absolute" id="header-image-box">
           <div class="reletive skew-10 fill-y" id="header-image-container">
-            <img src="${image}" alt="Profile Picture" class="fill-y" id="header-image" />
+            <img src="${image}" alt="Profile Picture" class="fill-y" id="header-image">
           </div>
         </div>
         <div class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text">

@@ -93,7 +93,6 @@
   // src/components/Header.ts
   var TYPEWRITER_DATA = {
     strings: [
-      { string: "", typeStyle: "deleteTo", pauseFor: 500 },
       { string: "Frontend Developer", pauseFor: 300 },
       { string: '<div class="type-error">Frontend</div> Developer', typeStyle: "blink", pauseFor: 1e3 },
       { string: '<div class="type-error">Frontend</div>', typeStyle: "deleteTo" },
@@ -142,7 +141,7 @@
         </div>
         <div class="overflow-hidden absolute" id="header-image-box">
           <div class="reletive skew-10 fill-y" id="header-image-container">
-            <img src="${image}" alt="Profile Picture" class="fill-y" id="header-image" />
+            <img src="${image}" alt="Profile Picture" class="fill-y" id="header-image">
           </div>
         </div>
         <div class="highlight absolute bottom-90 no-wrap round-20 p5" id="header-image-text">
@@ -282,7 +281,7 @@
         return `
         <div class="project-card${categories2}" id="Project-${key}" data-project-key="${key}">
           <div class="h-48 overflow-hidden">
-            <img src="${project.image}" alt="${project.title}" class="project-image transition duration-500 hover:scale-110" />
+            <img src="${project.image}" alt="${project.title}" class="project-image transition duration-500 hover:scale-110">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-1 text-black">${project.title}</h3>
@@ -343,34 +342,35 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-3xl font-bold text-center mb-4">
             My <span class="text-blue-600">Skills</span>
-        </h2>
-        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Here's an overview of my technical skills and expertise across different areas.
-        </p>
-        <div class="flex flex-col lg:flex-row gap-12">
-          <div class="lg:w-1/3">
-            <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
-            <div class="space-y-6">
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">JavaScript:</span><span class="font-medium">Erfaren+</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Frontend:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">C#:</span><span class="font-medium">middelm\xE5dig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Python:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Node and Express:</span><span class="font-medium">middelm\xE5dig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Database and Mysql:</span><span class="font-medium">middelm\xE5dig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">3D modeling/3D printing:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Design brugergr\xE6nseflade:</span><span class="font-medium">begynder</span></div>
+          </h2>
+          <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Here's an overview of my technical skills and expertise across different areas.
+          </p>
+          <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/3">
+              <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
+              <div class="space-y-6">
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">JavaScript:</span><span class="font-medium">Erfaren+</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">Frontend:</span><span class="font-medium">Erfaren</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">C#:</span><span class="font-medium">middelm\xE5dig</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">Python:</span><span class="font-medium">Erfaren</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">Node and Express:</span><span class="font-medium">middelm\xE5dig</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">Database and Mysql:</span><span class="font-medium">middelm\xE5dig</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">3D modeling/3D printing:</span><span class="font-medium">Erfaren</span></div>
+                <div class="flex justify-between mb-1 border-b"><span class="font-medium">Design brugergr\xE6nseflade:</span><span class="font-medium">begynder</span></div>
+              </div>
             </div>
-          </div>
-          <div class="lg:w-2/3">
-            <span class="pb-5 pt-10 block">
-              Jeg har erfaring med udvikling af b\xE5de frontend- og backend-l\xF8sninger, herunder design af brugervenlige og strukturerede webapplikationer med fokus p\xE5 sikkerhed, datastyring og rollebaseret adgang.
-            </span>
-            <span class="pb-5 block">
-              Inden for hardware og embedded systemer har jeg erfaring med styring, automation og integration af sensorer og aktuatorer. Jeg kan designe kredsl\xF8b, udvikle firmware og ops\xE6tte tr\xE5dl\xF8se systemer med fokus p\xE5 stabilitet, funktionalitet og sikkerhed.
-            </span>
-            <span class="pb-5 block">
-              Jeg har ogs\xE5 erfaring med 3D-modellering og print, hvor jeg kan skabe kabinetter, mekaniske dele og strukturer, som kombinerer funktionalitet, pr\xE6cision og brugervenlighed.
-            </span>
+            <div class="lg:w-2/3">
+              <span class="pb-5 pt-10 block">
+                Jeg har erfaring med udvikling af b\xE5de frontend- og backend-l\xF8sninger, herunder design af brugervenlige og strukturerede webapplikationer med fokus p\xE5 sikkerhed, datastyring og rollebaseret adgang.
+              </span>
+              <span class="pb-5 block">
+                Inden for hardware og embedded systemer har jeg erfaring med styring, automation og integration af sensorer og aktuatorer. Jeg kan designe kredsl\xF8b, udvikle firmware og ops\xE6tte tr\xE5dl\xF8se systemer med fokus p\xE5 stabilitet, funktionalitet og sikkerhed.
+              </span>
+              <span class="pb-5 block">
+                Jeg har ogs\xE5 erfaring med 3D-modellering og print, hvor jeg kan skabe kabinetter, mekaniske dele og strukturer, som kombinerer funktionalitet, pr\xE6cision og brugervenlighed.
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -424,15 +424,15 @@
               <form id="contact-form" class="bg-white p-6 rounded-lg shadow-md text-gray-700">
                 <div class="mb-4">
                   <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                  <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="mb-4">
                   <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                  <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="mb-4">
                   <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                  <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="mb-4">
                   <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
@@ -773,6 +773,7 @@
     AtSign: () => AtSign,
     Atom: () => Atom,
     AudioLines: () => AudioLines,
+    AudioLinesOff: () => AudioLinesOff,
     AudioLinesX: () => AudioLinesX,
     AudioWaveform: () => AudioWaveform,
     Award: () => Award,
@@ -979,6 +980,7 @@
     Captions: () => Captions,
     CaptionsOff: () => CaptionsOff,
     Car: () => Car,
+    CarBattery: () => CarBattery,
     CarFront: () => CarFront,
     CarTaxiFront: () => CarTaxiFront,
     Caravan: () => Caravan,
@@ -1709,6 +1711,7 @@
     ListChecks: () => ListChecks,
     ListChevronsDownUp: () => ListChevronsDownUp,
     ListChevronsUpDown: () => ListChevronsUpDown,
+    ListClock: () => ListClock,
     ListCollapse: () => ListCollapse,
     ListEnd: () => ListEnd,
     ListFilter: () => ListFilter,
@@ -1830,6 +1833,7 @@
     Microchip: () => Microchip,
     Microscope: () => Microscope,
     Microwave: () => Microwave,
+    MidiPort: () => MidiPort,
     Milestone: () => Milestone,
     Milk: () => Milk,
     MilkOff: () => MilkOff,
@@ -1856,6 +1860,8 @@
     MonitorX: () => MonitorX,
     Moon: () => Moon,
     MoonStar: () => MoonStar,
+    Mop: () => Mop,
+    MopSparkles: () => MopSparkles,
     MoreHorizontal: () => Ellipsis,
     MoreVertical: () => EllipsisVertical,
     Mosque: () => Mosque,
@@ -2313,6 +2319,7 @@
     SquareDashedMousePointer: () => SquareDashedMousePointer,
     SquareDashedText: () => SquareDashedText,
     SquareDashedTopSolid: () => SquareDashedTopSolid,
+    SquareDimensions: () => SquareDimensions,
     SquareDivide: () => SquareDivide,
     SquareDot: () => SquareDot,
     SquareEqual: () => SquareEqual,
@@ -2347,6 +2354,7 @@
     SquareStar: () => SquareStar,
     SquareStop: () => SquareStop,
     SquareTerminal: () => SquareTerminal,
+    SquareText: () => SquareText,
     SquareUser: () => SquareUser,
     SquareUserRound: () => SquareUserRound,
     SquareX: () => SquareX,
@@ -2527,6 +2535,7 @@
     Upload: () => Upload,
     UploadCloud: () => CloudUpload,
     Usb: () => Usb,
+    UsbCPort: () => UsbCPort,
     User: () => User,
     User2: () => UserRound,
     UserCheck: () => UserCheck,
@@ -2920,6 +2929,7 @@
     AtSign: () => AtSign,
     Atom: () => Atom,
     AudioLines: () => AudioLines,
+    AudioLinesOff: () => AudioLinesOff,
     AudioLinesX: () => AudioLinesX,
     AudioWaveform: () => AudioWaveform,
     Award: () => Award,
@@ -3126,6 +3136,7 @@
     Captions: () => Captions,
     CaptionsOff: () => CaptionsOff,
     Car: () => Car,
+    CarBattery: () => CarBattery,
     CarFront: () => CarFront,
     CarTaxiFront: () => CarTaxiFront,
     Caravan: () => Caravan,
@@ -3856,6 +3867,7 @@
     ListChecks: () => ListChecks,
     ListChevronsDownUp: () => ListChevronsDownUp,
     ListChevronsUpDown: () => ListChevronsUpDown,
+    ListClock: () => ListClock,
     ListCollapse: () => ListCollapse,
     ListEnd: () => ListEnd,
     ListFilter: () => ListFilter,
@@ -3977,6 +3989,7 @@
     Microchip: () => Microchip,
     Microscope: () => Microscope,
     Microwave: () => Microwave,
+    MidiPort: () => MidiPort,
     Milestone: () => Milestone,
     Milk: () => Milk,
     MilkOff: () => MilkOff,
@@ -4003,6 +4016,8 @@
     MonitorX: () => MonitorX,
     Moon: () => Moon,
     MoonStar: () => MoonStar,
+    Mop: () => Mop,
+    MopSparkles: () => MopSparkles,
     MoreHorizontal: () => Ellipsis,
     MoreVertical: () => EllipsisVertical,
     Mosque: () => Mosque,
@@ -4460,6 +4475,7 @@
     SquareDashedMousePointer: () => SquareDashedMousePointer,
     SquareDashedText: () => SquareDashedText,
     SquareDashedTopSolid: () => SquareDashedTopSolid,
+    SquareDimensions: () => SquareDimensions,
     SquareDivide: () => SquareDivide,
     SquareDot: () => SquareDot,
     SquareEqual: () => SquareEqual,
@@ -4494,6 +4510,7 @@
     SquareStar: () => SquareStar,
     SquareStop: () => SquareStop,
     SquareTerminal: () => SquareTerminal,
+    SquareText: () => SquareText,
     SquareUser: () => SquareUser,
     SquareUserRound: () => SquareUserRound,
     SquareX: () => SquareX,
@@ -4674,6 +4691,7 @@
     Upload: () => Upload,
     UploadCloud: () => CloudUpload,
     Usb: () => Usb,
+    UsbCPort: () => UsbCPort,
     User: () => User,
     User2: () => UserRound,
     UserCheck: () => UserCheck,
@@ -4811,6 +4829,14 @@
     ["path", { d: "M3.304 13h6.392" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/a-large-small.mjs
+  var ALargeSmall = [
+    ["path", { d: "m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" }],
+    ["path", { d: "M15.697 14h5.606" }],
+    ["path", { d: "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }],
+    ["path", { d: "M3.304 13h6.392" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/a-arrow-up.mjs
   var AArrowUp = [
     ["path", { d: "m14 11 4-4 4 4" }],
@@ -4828,14 +4854,6 @@
     ["path", { d: "M13.76 17.5a5 5 0 0 0-6.88-6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/a-large-small.mjs
-  var ALargeSmall = [
-    ["path", { d: "m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" }],
-    ["path", { d: "M15.697 14h5.606" }],
-    ["path", { d: "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }],
-    ["path", { d: "M3.304 13h6.392" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/activity.mjs
   var Activity = [
     [
@@ -4844,6 +4862,14 @@
         d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/air-vent.mjs
+  var AirVent = [
+    ["path", { d: "M18 17.5a2.5 2.5 0 1 1-4 2.03V12" }],
+    ["path", { d: "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }],
+    ["path", { d: "M6 8h12" }],
+    ["path", { d: "M6.6 15.572A2 2 0 1 0 10 17v-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/ad.mjs
@@ -4857,14 +4883,6 @@
       }
     ],
     ["rect", { x: "2", y: "5", width: "20", height: "14", rx: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/air-vent.mjs
-  var AirVent = [
-    ["path", { d: "M18 17.5a2.5 2.5 0 1 1-4 2.03V12" }],
-    ["path", { d: "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }],
-    ["path", { d: "M6 8h12" }],
-    ["path", { d: "M6.6 15.572A2 2 0 1 0 10 17v-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/airplay.mjs
@@ -4914,15 +4932,6 @@
     ["path", { d: "M9 13h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/alarm-smoke.mjs
-  var AlarmSmoke = [
-    ["path", { d: "M11 21c0-2.5 2-2.5 2-5" }],
-    ["path", { d: "M16 21c0-2.5 2-2.5 2-5" }],
-    ["path", { d: "m19 8-.8 3a1.25 1.25 0 0 1-1.2 1H7a1.25 1.25 0 0 1-1.2-1L5 8" }],
-    ["path", { d: "M21 3a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z" }],
-    ["path", { d: "M6 21c0-2.5 2-2.5 2-5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/alarm-clock.mjs
   var AlarmClock = [
     ["circle", { cx: "12", cy: "13", r: "8" }],
@@ -4931,6 +4940,15 @@
     ["path", { d: "m22 6-3-3" }],
     ["path", { d: "M6.38 18.7 4 21" }],
     ["path", { d: "M17.64 18.67 20 21" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/alarm-smoke.mjs
+  var AlarmSmoke = [
+    ["path", { d: "M11 21c0-2.5 2-2.5 2-5" }],
+    ["path", { d: "M16 21c0-2.5 2-2.5 2-5" }],
+    ["path", { d: "m19 8-.8 3a1.25 1.25 0 0 1-1.2 1H7a1.25 1.25 0 0 1-1.2-1L5 8" }],
+    ["path", { d: "M21 3a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z" }],
+    ["path", { d: "M6 21c0-2.5 2-2.5 2-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/album.mjs
@@ -5040,6 +5058,13 @@
     ["path", { d: "M22 2H2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/align-start-vertical.mjs
+  var AlignStartVertical = [
+    ["rect", { width: "9", height: "6", x: "6", y: "14", rx: "2" }],
+    ["rect", { width: "16", height: "6", x: "6", y: "4", rx: "2" }],
+    ["path", { d: "M2 2v20" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/align-vertical-distribute-center.mjs
   var AlignVerticalDistributeCenter = [
     ["path", { d: "M22 17h-3" }],
@@ -5048,13 +5073,6 @@
     ["path", { d: "M7 7H2" }],
     ["rect", { x: "5", y: "14", width: "14", height: "6", rx: "2" }],
     ["rect", { x: "7", y: "4", width: "10", height: "6", rx: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/align-start-vertical.mjs
-  var AlignStartVertical = [
-    ["rect", { width: "9", height: "6", x: "6", y: "14", rx: "2" }],
-    ["rect", { width: "16", height: "6", x: "6", y: "4", rx: "2" }],
-    ["path", { d: "M2 2v20" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/align-vertical-distribute-start.mjs
@@ -5080,6 +5098,13 @@
     ["path", { d: "M2 12h20" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/align-vertical-justify-start.mjs
+  var AlignVerticalJustifyStart = [
+    ["rect", { width: "14", height: "6", x: "5", y: "16", rx: "2" }],
+    ["rect", { width: "10", height: "6", x: "7", y: "6", rx: "2" }],
+    ["path", { d: "M2 2h20" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/align-vertical-justify-end.mjs
   var AlignVerticalJustifyEnd = [
     ["rect", { width: "14", height: "6", x: "5", y: "12", rx: "2" }],
@@ -5094,19 +5119,23 @@
     ["path", { d: "M22 4H2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/align-vertical-justify-start.mjs
-  var AlignVerticalJustifyStart = [
-    ["rect", { width: "14", height: "6", x: "5", y: "16", rx: "2" }],
-    ["rect", { width: "10", height: "6", x: "7", y: "6", rx: "2" }],
-    ["path", { d: "M2 2h20" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/align-vertical-space-between.mjs
   var AlignVerticalSpaceBetween = [
     ["rect", { width: "14", height: "6", x: "5", y: "15", rx: "2" }],
     ["rect", { width: "10", height: "6", x: "7", y: "3", rx: "2" }],
     ["path", { d: "M2 21h20" }],
     ["path", { d: "M2 3h20" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/ampersand.mjs
+  var Ampersand = [
+    ["path", { d: "M16 12h3" }],
+    [
+      "path",
+      {
+        d: "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/ambulance.mjs
@@ -5123,17 +5152,6 @@
     ["path", { d: "M9 18h6" }],
     ["circle", { cx: "17", cy: "18", r: "2" }],
     ["circle", { cx: "7", cy: "18", r: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/ampersand.mjs
-  var Ampersand = [
-    ["path", { d: "M16 12h3" }],
-    [
-      "path",
-      {
-        d: "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/ampersands.mjs
@@ -5182,6 +5200,15 @@
     ["path", { d: "M12 16v6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/anvil.mjs
+  var Anvil = [
+    ["path", { d: "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }],
+    ["path", { d: "M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z" }],
+    ["path", { d: "M9 12v5" }],
+    ["path", { d: "M15 12v5" }],
+    ["path", { d: "M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/aperture.mjs
   var Aperture = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
@@ -5191,15 +5218,6 @@
     ["path", { d: "M9.69 16 3.95 6.06" }],
     ["path", { d: "M14.31 16H2.83" }],
     ["path", { d: "m16.62 12-5.74 9.94" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/anvil.mjs
-  var Anvil = [
-    ["path", { d: "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }],
-    ["path", { d: "M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z" }],
-    ["path", { d: "M9 12v5" }],
-    ["path", { d: "M15 12v5" }],
-    ["path", { d: "M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/app-window-mac.mjs
@@ -5253,6 +5271,17 @@
     ["path", { d: "M10 12h4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/arrow-big-down-dash.mjs
+  var ArrowBigDownDash = [
+    [
+      "path",
+      {
+        d: "M14 8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-6.939 6.939a1.207 1.207 0 0 1-1.708 0l-6.94-6.94a.707.707 0 0 1 .5-1.206H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1z"
+      }
+    ],
+    ["path", { d: "M9 4h6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/armchair.mjs
   var Armchair = [
     ["path", { d: "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" }],
@@ -5264,17 +5293,6 @@
     ],
     ["path", { d: "M5 18v2" }],
     ["path", { d: "M19 18v2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/arrow-big-down-dash.mjs
-  var ArrowBigDownDash = [
-    [
-      "path",
-      {
-        d: "M14 8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-6.939 6.939a1.207 1.207 0 0 1-1.708 0l-6.94-6.94a.707.707 0 0 1 .5-1.206H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1z"
-      }
-    ],
-    ["path", { d: "M9 4h6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-big-down.mjs
@@ -5329,6 +5347,16 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/arrow-big-up.mjs
+  var ArrowBigUp = [
+    [
+      "path",
+      {
+        d: "M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/arrow-big-up-dash.mjs
   var ArrowBigUpDash = [
     [
@@ -5338,16 +5366,6 @@
       }
     ],
     ["path", { d: "M9 20h6" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/arrow-big-up.mjs
-  var ArrowBigUp = [
-    [
-      "path",
-      {
-        d: "M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-down-0-1.mjs
@@ -5419,14 +5437,6 @@
     ["path", { d: "M19 21H5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/arrow-down-up.mjs
-  var ArrowDownUp = [
-    ["path", { d: "m3 16 4 4 4-4" }],
-    ["path", { d: "M7 20V4" }],
-    ["path", { d: "m21 8-4-4-4 4" }],
-    ["path", { d: "M17 4v16" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/arrow-down-wide-narrow.mjs
   var ArrowDownWideNarrow = [
     ["path", { d: "m3 16 4 4 4-4" }],
@@ -5445,6 +5455,14 @@
     ["path", { d: "M20 18h-5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/arrow-down-up.mjs
+  var ArrowDownUp = [
+    ["path", { d: "m3 16 4 4 4-4" }],
+    ["path", { d: "M7 20V4" }],
+    ["path", { d: "m21 8-4-4-4 4" }],
+    ["path", { d: "M17 4v16" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/arrow-down.mjs
   var ArrowDown = [
     ["path", { d: "M12 5v14" }],
@@ -5458,14 +5476,6 @@
     ["path", { d: "M21 19V5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/arrow-left-right.mjs
-  var ArrowLeftRight = [
-    ["path", { d: "M8 3 4 7l4 4" }],
-    ["path", { d: "M4 7h16" }],
-    ["path", { d: "m16 21 4-4-4-4" }],
-    ["path", { d: "M20 17H4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/arrow-left-to-line.mjs
   var ArrowLeftToLine = [
     ["path", { d: "M3 19V5" }],
@@ -5473,10 +5483,12 @@
     ["path", { d: "M7 12h14" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/arrow-left.mjs
-  var ArrowLeft = [
-    ["path", { d: "m12 19-7-7 7-7" }],
-    ["path", { d: "M19 12H5" }]
+  // node_modules/lucide/dist/esm/icons/arrow-left-right.mjs
+  var ArrowLeftRight = [
+    ["path", { d: "M8 3 4 7l4 4" }],
+    ["path", { d: "M4 7h16" }],
+    ["path", { d: "m16 21 4-4-4-4" }],
+    ["path", { d: "M20 17H4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-right-from-line.mjs
@@ -5486,11 +5498,10 @@
     ["path", { d: "m15 18 6-6-6-6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/arrow-right-to-line.mjs
-  var ArrowRightToLine = [
-    ["path", { d: "M17 12H3" }],
-    ["path", { d: "m11 18 6-6-6-6" }],
-    ["path", { d: "M21 5v14" }]
+  // node_modules/lucide/dist/esm/icons/arrow-left.mjs
+  var ArrowLeft = [
+    ["path", { d: "m12 19-7-7 7-7" }],
+    ["path", { d: "M19 12H5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-right-left.mjs
@@ -5499,6 +5510,13 @@
     ["path", { d: "M20 7H4" }],
     ["path", { d: "m8 21-4-4 4-4" }],
     ["path", { d: "M4 17h16" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/arrow-right-to-line.mjs
+  var ArrowRightToLine = [
+    ["path", { d: "M17 12H3" }],
+    ["path", { d: "m11 18 6-6-6-6" }],
+    ["path", { d: "M21 5v14" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-right.mjs
@@ -5516,15 +5534,6 @@
     ["path", { d: "M15 20h4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/arrow-up-1-0.mjs
-  var ArrowUp10 = [
-    ["path", { d: "m3 8 4-4 4 4" }],
-    ["path", { d: "M7 4v16" }],
-    ["path", { d: "M17 10V4h-2" }],
-    ["path", { d: "M15 10h4" }],
-    ["rect", { x: "15", y: "14", width: "4", height: "6", ry: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/arrow-up-a-z.mjs
   var ArrowUpAZ = [
     ["path", { d: "m3 8 4-4 4 4" }],
@@ -5532,6 +5541,15 @@
     ["path", { d: "M20 8h-5" }],
     ["path", { d: "M15 10V6.5a2.5 2.5 0 0 1 5 0V10" }],
     ["path", { d: "M15 14h5l-5 6h5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/arrow-up-1-0.mjs
+  var ArrowUp10 = [
+    ["path", { d: "m3 8 4-4 4 4" }],
+    ["path", { d: "M7 4v16" }],
+    ["path", { d: "M17 10V4h-2" }],
+    ["path", { d: "M15 10h4" }],
+    ["rect", { x: "15", y: "14", width: "4", height: "6", ry: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/arrow-up-down.mjs
@@ -5669,6 +5687,19 @@
     ["path", { d: "M6 6v11" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/audio-lines-off.mjs
+  var AudioLinesOff = [
+    ["path", { d: "M10 10v11" }],
+    ["path", { d: "M10 3v1.35" }],
+    ["path", { d: "M14 14v1" }],
+    ["path", { d: "M14 8v.35" }],
+    ["path", { d: "M18 5v7.35" }],
+    ["path", { d: "M2 10v3" }],
+    ["path", { d: "m2 2 20 20" }],
+    ["path", { d: "M22 10v3" }],
+    ["path", { d: "M6 6v11" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/audio-lines.mjs
   var AudioLines = [
     ["path", { d: "M2 10v3" }],
@@ -5700,6 +5731,14 @@
     ["circle", { cx: "12", cy: "8", r: "6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/axis-3d.mjs
+  var Axis3d = [
+    ["path", { d: "M13.5 10.5 15 9" }],
+    ["path", { d: "M4 4v15a1 1 0 0 0 1 1h15" }],
+    ["path", { d: "M4.293 19.707 6 18" }],
+    ["path", { d: "m9 15 1.5-1.5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/axe.mjs
   var Axe = [
     ["path", { d: "m14 12-8.381 8.38a1 1 0 0 1-3.001-3L11 9" }],
@@ -5709,14 +5748,6 @@
         d: "M15 15.5a.5.5 0 0 0 .5.5A6.5 6.5 0 0 0 22 9.5a.5.5 0 0 0-.5-.5h-1.672a2 2 0 0 1-1.414-.586l-5.062-5.062a1.205 1.205 0 0 0-1.704 0L9.352 5.648a1.205 1.205 0 0 0 0 1.704l5.062 5.062A2 2 0 0 1 15 13.828z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/axis-3d.mjs
-  var Axis3d = [
-    ["path", { d: "M13.5 10.5 15 9" }],
-    ["path", { d: "M4 4v15a1 1 0 0 0 1 1h15" }],
-    ["path", { d: "M4.293 19.707 6 18" }],
-    ["path", { d: "m9 15 1.5-1.5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/baby.mjs
@@ -5813,18 +5844,6 @@
     ["path", { d: "m13 17-5-1h1a4 4 0 0 0 0-8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/badge-info.mjs
-  var BadgeInfo = [
-    [
-      "path",
-      {
-        d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
-      }
-    ],
-    ["line", { x1: "12", x2: "12", y1: "16", y2: "12" }],
-    ["line", { x1: "12", x2: "12.01", y1: "8", y2: "8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/badge-japanese-yen.mjs
   var BadgeJapaneseYen = [
     [
@@ -5839,6 +5858,18 @@
     ["path", { d: "M9 16h6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/badge-info.mjs
+  var BadgeInfo = [
+    [
+      "path",
+      {
+        d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+      }
+    ],
+    ["line", { x1: "12", x2: "12", y1: "16", y2: "12" }],
+    ["line", { x1: "12", x2: "12.01", y1: "8", y2: "8" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/badge-minus.mjs
   var BadgeMinus = [
     [
@@ -5847,18 +5878,6 @@
         d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
       }
     ],
-    ["line", { x1: "8", x2: "16", y1: "12", y2: "12" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/badge-plus.mjs
-  var BadgePlus = [
-    [
-      "path",
-      {
-        d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
-      }
-    ],
-    ["line", { x1: "12", x2: "12", y1: "8", y2: "16" }],
     ["line", { x1: "8", x2: "16", y1: "12", y2: "12" }]
   ];
 
@@ -5873,6 +5892,18 @@
     ["path", { d: "m15 9-6 6" }],
     ["path", { d: "M9 9h.01" }],
     ["path", { d: "M15 15h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/badge-plus.mjs
+  var BadgePlus = [
+    [
+      "path",
+      {
+        d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+      }
+    ],
+    ["line", { x1: "12", x2: "12", y1: "8", y2: "16" }],
+    ["line", { x1: "8", x2: "16", y1: "12", y2: "12" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/badge-pound-sterling.mjs
@@ -5949,6 +5980,15 @@
     ["line", { x1: "9", x2: "15", y1: "9", y2: "15" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/baggage-claim.mjs
+  var BaggageClaim = [
+    ["path", { d: "M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2" }],
+    ["path", { d: "M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10" }],
+    ["rect", { width: "13", height: "8", x: "8", y: "6", rx: "1" }],
+    ["circle", { cx: "18", cy: "20", r: "2" }],
+    ["circle", { cx: "9", cy: "20", r: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/badge.mjs
   var Badge = [
     [
@@ -5959,20 +5999,17 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/baggage-claim.mjs
-  var BaggageClaim = [
-    ["path", { d: "M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2" }],
-    ["path", { d: "M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10" }],
-    ["rect", { width: "13", height: "8", x: "8", y: "6", rx: "1" }],
-    ["circle", { cx: "18", cy: "20", r: "2" }],
-    ["circle", { cx: "9", cy: "20", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/balloon.mjs
   var Balloon = [
     ["path", { d: "M12 16v1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v1" }],
     ["path", { d: "M12 6a2 2 0 0 1 2 2" }],
     ["path", { d: "M18 8c0 4-3.5 8-6 8s-6-4-6-8a6 6 0 0 1 12 0" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/ban.mjs
+  var Ban = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M4.929 4.929 19.07 19.071" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/banana.mjs
@@ -5995,12 +6032,6 @@
     ["path", { d: "M18 6v12" }],
     ["path", { d: "M6 6v12" }],
     ["rect", { x: "2", y: "6", width: "20", height: "12", rx: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/ban.mjs
-  var Ban = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M4.929 4.929 19.07 19.071" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/banknote-arrow-down.mjs
@@ -6072,13 +6103,6 @@
     ["path", { d: "M3.54 8h16.914" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/baseline.mjs
-  var Baseline = [
-    ["path", { d: "M4 20h16" }],
-    ["path", { d: "m6 16 6-12 6 12" }],
-    ["path", { d: "M8 12h8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/bath.mjs
   var Bath = [
     ["path", { d: "M10 4 8 6" }],
@@ -6086,6 +6110,13 @@
     ["path", { d: "M2 12h20" }],
     ["path", { d: "M7 19v2" }],
     ["path", { d: "M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/baseline.mjs
+  var Baseline = [
+    ["path", { d: "M4 20h16" }],
+    ["path", { d: "m6 16 6-12 6 12" }],
+    ["path", { d: "M8 12h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/battery-charging.mjs
@@ -6138,6 +6169,13 @@
     ["path", { d: "M6 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/beaker.mjs
+  var Beaker = [
+    ["path", { d: "M4.5 3h15" }],
+    ["path", { d: "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" }],
+    ["path", { d: "M6 14h12" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/battery.mjs
   var Battery = [
     ["path", { d: "M 22 14 L 22 10" }],
@@ -6150,13 +6188,6 @@
     ["path", { d: "M10.75 5.093A6 6 0 0 1 22 8c0 2.411-.61 4.68-1.683 6.66" }],
     ["path", { d: "M5.341 10.62a4 4 0 0 0 6.487 1.208M10.62 5.341a4.015 4.015 0 0 1 2.039 2.04" }],
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/beaker.mjs
-  var Beaker = [
-    ["path", { d: "M4.5 3h15" }],
-    ["path", { d: "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" }],
-    ["path", { d: "M6 14h12" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/bean.mjs
@@ -6193,21 +6224,6 @@
     ["path", { d: "M6 8v9" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/beef-off.mjs
-  var BeefOff = [
-    ["path", { d: "M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12" }],
-    ["path", { d: "M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04" }],
-    ["path", { d: "M18.013 18.013C15.029 20.349 10.831 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5" }],
-    ["path", { d: "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-.139 4.393" }],
-    ["path", { d: "m2 2 20 20" }],
-    [
-      "path",
-      {
-        d: "M6.355 6.37a7 7 0 0 0-.075.23c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c3.356 0 6.993-1.267 9.85-3.151"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/beef.mjs
   var Beef = [
     [
@@ -6225,18 +6241,19 @@
     ["circle", { cx: "12.5", cy: "8.5", r: "2.5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/beer.mjs
-  var Beer = [
-    ["path", { d: "M17 11h1a3 3 0 0 1 0 6h-1" }],
-    ["path", { d: "M9 12v6" }],
-    ["path", { d: "M13 12v6" }],
+  // node_modules/lucide/dist/esm/icons/beef-off.mjs
+  var BeefOff = [
+    ["path", { d: "M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12" }],
+    ["path", { d: "M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04" }],
+    ["path", { d: "M18.013 18.013C15.029 20.349 10.831 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5" }],
+    ["path", { d: "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-.139 4.393" }],
+    ["path", { d: "m2 2 20 20" }],
     [
       "path",
       {
-        d: "M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"
+        d: "M6.355 6.37a7 7 0 0 0-.075.23c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c3.356 0 6.993-1.267 9.85-3.151"
       }
-    ],
-    ["path", { d: "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" }]
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/beer-off.mjs
@@ -6254,6 +6271,20 @@
       }
     ],
     ["path", { d: "M9 14.6V18" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/beer.mjs
+  var Beer = [
+    ["path", { d: "M17 11h1a3 3 0 0 1 0 6h-1" }],
+    ["path", { d: "M9 12v6" }],
+    ["path", { d: "M13 12v6" }],
+    [
+      "path",
+      {
+        d: "M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"
+      }
+    ],
+    ["path", { d: "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/bell-check.mjs
@@ -6337,6 +6368,13 @@
     ["path", { d: "M4 2C2.8 3.7 2 5.7 2 8" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/between-horizontal-end.mjs
+  var BetweenHorizontalEnd = [
+    ["rect", { width: "13", height: "7", x: "3", y: "3", rx: "1" }],
+    ["path", { d: "m22 15-3-3 3-3" }],
+    ["rect", { width: "13", height: "7", x: "3", y: "14", rx: "1" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/bell.mjs
   var Bell = [
     ["path", { d: "M10.268 21a2 2 0 0 0 3.464 0" }],
@@ -6346,13 +6384,6 @@
         d: "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/between-horizontal-end.mjs
-  var BetweenHorizontalEnd = [
-    ["rect", { width: "13", height: "7", x: "3", y: "3", rx: "1" }],
-    ["path", { d: "m22 15-3-3 3-3" }],
-    ["rect", { width: "13", height: "7", x: "3", y: "14", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/between-horizontal-start.mjs
@@ -6376,14 +6407,6 @@
     ["rect", { width: "7", height: "13", x: "14", y: "8", rx: "1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/bike.mjs
-  var Bike = [
-    ["circle", { cx: "18.5", cy: "17.5", r: "3.5" }],
-    ["circle", { cx: "5.5", cy: "17.5", r: "3.5" }],
-    ["circle", { cx: "15", cy: "5", r: "1" }],
-    ["path", { d: "M12 17.5V14l-3-3 4-3 2 3h2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/biceps-flexed.mjs
   var BicepsFlexed = [
     [
@@ -6394,6 +6417,14 @@
     ],
     ["path", { d: "M15 14a5 5 0 0 0-7.584 2" }],
     ["path", { d: "M9.964 6.825C8.019 7.977 9.5 13 8 15" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/bike.mjs
+  var Bike = [
+    ["circle", { cx: "18.5", cy: "17.5", r: "3.5" }],
+    ["circle", { cx: "5.5", cy: "17.5", r: "3.5" }],
+    ["circle", { cx: "15", cy: "5", r: "1" }],
+    ["path", { d: "M12 17.5V14l-3-3 4-3 2 3h2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/binary.mjs
@@ -6460,6 +6491,12 @@
     ["circle", { cx: "12", cy: "10", r: "2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/blend.mjs
+  var Blend = [
+    ["circle", { cx: "9", cy: "9", r: "7" }],
+    ["circle", { cx: "15", cy: "15", r: "7" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/bitcoin.mjs
   var Bitcoin = [
     [
@@ -6468,12 +6505,6 @@
         d: "M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.29 4.26m5.908 1.042.348-1.97M7.48 20.364l3.126-17.727"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/blend.mjs
-  var Blend = [
-    ["circle", { cx: "9", cy: "9", r: "7" }],
-    ["circle", { cx: "15", cy: "15", r: "7" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/blender.mjs
@@ -6489,17 +6520,6 @@
     ["path", { d: "M7.565 8.787A5 5 0 0 0 12 8a5 5 0 0 1 4.56-.75" }],
     ["path", { d: "M19 2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 .688 1.5" }],
     ["path", { d: "M12 18h.01" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/blinds.mjs
-  var Blinds = [
-    ["path", { d: "M3 3h18" }],
-    ["path", { d: "M20 7H8" }],
-    ["path", { d: "M20 11H8" }],
-    ["path", { d: "M10 19h10" }],
-    ["path", { d: "M8 15h12" }],
-    ["path", { d: "M4 3v14" }],
-    ["circle", { cx: "4", cy: "19", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/blocks.mjs
@@ -6520,6 +6540,17 @@
     ["line", { x1: "3", x2: "6", y1: "12", y2: "12" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/blinds.mjs
+  var Blinds = [
+    ["path", { d: "M3 3h18" }],
+    ["path", { d: "M20 7H8" }],
+    ["path", { d: "M20 11H8" }],
+    ["path", { d: "M10 19h10" }],
+    ["path", { d: "M8 15h12" }],
+    ["path", { d: "M4 3v14" }],
+    ["circle", { cx: "4", cy: "19", r: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/bluetooth-off.mjs
   var BluetoothOff = [
     ["path", { d: "m17 17-5 5V12l-5 5" }],
@@ -6527,15 +6558,15 @@
     ["path", { d: "M14.5 9.5 17 7l-5-5v4.5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/bluetooth.mjs
-  var Bluetooth = [["path", { d: "m7 7 10 10-5 5V2l5 5L7 17" }]];
-
   // node_modules/lucide/dist/esm/icons/bluetooth-searching.mjs
   var BluetoothSearching = [
     ["path", { d: "m7 7 10 10-5 5V2l5 5L7 17" }],
     ["path", { d: "M20.83 14.83a4 4 0 0 0 0-5.66" }],
     ["path", { d: "M18 12h.01" }]
   ];
+
+  // node_modules/lucide/dist/esm/icons/bluetooth.mjs
+  var Bluetooth = [["path", { d: "m7 7 10 10-5 5V2l5 5L7 17" }]];
 
   // node_modules/lucide/dist/esm/icons/bold.mjs
   var Bold = [
@@ -6563,6 +6594,16 @@
     ["path", { d: "m22 2-1.5 1.5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/bone.mjs
+  var Bone = [
+    [
+      "path",
+      {
+        d: "M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/bone-fracture.mjs
   var BoneFracture = [
     [
@@ -6579,16 +6620,6 @@
       "path",
       {
         d: "M9.698 14.19a.15.15 0 0 0 .112.112l2.074.489a.15.15 0 0 1 .072.252L10 17c-.7.7 0 1.69 0 2.5a1 1 0 0 1-5 0 .495.495 0 0 0-.5-.5 1 1 0 0 1 0-5c.81 0 1.8.7 2.5 0l1.956-1.957a.15.15 0 0 1 .252.072z"
-      }
-    ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/bone.mjs
-  var Bone = [
-    [
-      "path",
-      {
-        d: "M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"
       }
     ]
   ];
@@ -6624,15 +6655,6 @@
     ["path", { d: "M8 8v3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/book-check.mjs
-  var BookCheck = [
-    [
-      "path",
-      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-    ],
-    ["path", { d: "m9 9.5 2 2 4-4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/book-copy.mjs
   var BookCopy = [
     ["path", { d: "M5 7a2 2 0 0 0-2 2v11" }],
@@ -6641,6 +6663,15 @@
       "path",
       { d: "M9 15V4a2 2 0 0 1 2-2h9.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H11a2 2 0 0 1 0-4h10" }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/book-check.mjs
+  var BookCheck = [
+    [
+      "path",
+      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+    ],
+    ["path", { d: "m9 9.5 2 2 4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/book-dashed.mjs
@@ -6693,16 +6724,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/book-image.mjs
-  var BookImage = [
-    ["path", { d: "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17" }],
-    [
-      "path",
-      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-    ],
-    ["circle", { cx: "10", cy: "8", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/book-key.mjs
   var BookKey = [
     ["path", { d: "M13 2H6.5A2.5 2.5 0 0 0 4 4.5v15" }],
@@ -6710,6 +6731,14 @@
     ["path", { d: "M17 4h2" }],
     ["path", { d: "M20 15.2V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }],
     ["circle", { cx: "17", cy: "10", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/book-lock.mjs
+  var BookLock = [
+    ["path", { d: "M18 6V4a2 2 0 1 0-4 0v2" }],
+    ["path", { d: "M20 15v6a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }],
+    ["path", { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10" }],
+    ["rect", { x: "12", y: "6", width: "8", height: "5", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/book-marked.mjs
@@ -6721,12 +6750,14 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/book-lock.mjs
-  var BookLock = [
-    ["path", { d: "M18 6V4a2 2 0 1 0-4 0v2" }],
-    ["path", { d: "M20 15v6a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }],
-    ["path", { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10" }],
-    ["rect", { x: "12", y: "6", width: "8", height: "5", rx: "1" }]
+  // node_modules/lucide/dist/esm/icons/book-image.mjs
+  var BookImage = [
+    ["path", { d: "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17" }],
+    [
+      "path",
+      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+    ],
+    ["circle", { cx: "10", cy: "8", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/book-minus.mjs
@@ -6786,14 +6817,6 @@
     ["path", { d: "M9 10h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/book-search.mjs
-  var BookSearch = [
-    ["path", { d: "M11 22H5.5a1 1 0 0 1 0-5h4.501" }],
-    ["path", { d: "m21 22-1.879-1.878" }],
-    ["path", { d: "M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" }],
-    ["circle", { cx: "17", cy: "18", r: "3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/book-text.mjs
   var BookText = [
     [
@@ -6802,6 +6825,14 @@
     ],
     ["path", { d: "M8 11h8" }],
     ["path", { d: "M8 7h6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/book-search.mjs
+  var BookSearch = [
+    ["path", { d: "M11 22H5.5a1 1 0 0 1 0-5h4.501" }],
+    ["path", { d: "m21 22-1.879-1.878" }],
+    ["path", { d: "M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" }],
+    ["circle", { cx: "17", cy: "18", r: "3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/book-type.mjs
@@ -6824,16 +6855,6 @@
     ["path", { d: "m9 5 3-3 3 3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/book-up.mjs
-  var BookUp = [
-    ["path", { d: "M12 13V7" }],
-    [
-      "path",
-      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-    ],
-    ["path", { d: "m9 10 3-3 3 3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/book-user.mjs
   var BookUser = [
     ["path", { d: "M15 13a3 3 0 1 0-6 0" }],
@@ -6842,6 +6863,16 @@
       { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
     ],
     ["circle", { cx: "12", cy: "8", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/book-up.mjs
+  var BookUp = [
+    ["path", { d: "M12 13V7" }],
+    [
+      "path",
+      { d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+    ],
+    ["path", { d: "m9 10 3-3 3 3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/book-x.mjs
@@ -6941,17 +6972,6 @@
     ["circle", { cx: "16", cy: "15", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/bot-off.mjs
-  var BotOff = [
-    ["path", { d: "M13.67 8H18a2 2 0 0 1 2 2v4.33" }],
-    ["path", { d: "M2 14h2" }],
-    ["path", { d: "M20 14h2" }],
-    ["path", { d: "M22 22 2 2" }],
-    ["path", { d: "M8 8H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 1.414-.586" }],
-    ["path", { d: "M9 13v2" }],
-    ["path", { d: "M9.67 4H12v2.33" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/bot-message-square.mjs
   var BotMessageSquare = [
     ["path", { d: "M12 6V2H8" }],
@@ -6965,6 +6985,17 @@
       }
     ],
     ["path", { d: "M9 11v2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/bot-off.mjs
+  var BotOff = [
+    ["path", { d: "M13.67 8H18a2 2 0 0 1 2 2v4.33" }],
+    ["path", { d: "M2 14h2" }],
+    ["path", { d: "M20 14h2" }],
+    ["path", { d: "M22 22 2 2" }],
+    ["path", { d: "M8 8H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 1.414-.586" }],
+    ["path", { d: "M9 13v2" }],
+    ["path", { d: "M9.67 4H12v2.33" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/bot.mjs
@@ -7180,6 +7211,12 @@
     ["rect", { x: "4", y: "6", width: "16", height: "10", rx: "2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/briefcase.mjs
+  var Briefcase = [
+    ["path", { d: "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" }],
+    ["rect", { width: "20", height: "14", x: "2", y: "6", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/briefcase-medical.mjs
   var BriefcaseMedical = [
     ["path", { d: "M12 11v4" }],
@@ -7195,12 +7232,6 @@
     ["rect", { x: "8", y: "8", width: "8", height: "8", rx: "2" }],
     ["path", { d: "M4 10a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2" }],
     ["path", { d: "M14 20a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/briefcase.mjs
-  var Briefcase = [
-    ["path", { d: "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" }],
-    ["rect", { width: "20", height: "14", x: "2", y: "6", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/broccoli.mjs
@@ -7281,6 +7312,22 @@
     ["circle", { cx: "7.5", cy: "4.5", r: "2.5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/bug-off.mjs
+  var BugOff = [
+    ["path", { d: "M12 20v-8" }],
+    ["path", { d: "M12.656 7H14a4 4 0 0 1 4 4v1.344" }],
+    ["path", { d: "M14.12 3.88 16 2" }],
+    ["path", { d: "M17.123 17.123A6 6 0 0 1 6 14v-3a4 4 0 0 1 1.72-3.287" }],
+    ["path", { d: "m2 2 20 20" }],
+    ["path", { d: "M21 5a4 4 0 0 1-3.55 3.97" }],
+    ["path", { d: "M22 13h-3.344" }],
+    ["path", { d: "M3 21a4 4 0 0 1 3.81-4" }],
+    ["path", { d: "M3 5a4 4 0 0 0 3.55 3.97" }],
+    ["path", { d: "M6 13H2" }],
+    ["path", { d: "m8 2 1.88 1.88" }],
+    ["path", { d: "M9.712 4.06A3 3 0 0 1 15 6v1.13" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/bug-play.mjs
   var BugPlay = [
     ["path", { d: "M10 19.655A6 6 0 0 1 6 14v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 3.97" }],
@@ -7299,20 +7346,28 @@
     ["path", { d: "M9 7.13V6a3 3 0 1 1 6 0v1.13" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/bug-off.mjs
-  var BugOff = [
-    ["path", { d: "M12 20v-8" }],
-    ["path", { d: "M12.656 7H14a4 4 0 0 1 4 4v1.344" }],
-    ["path", { d: "M14.12 3.88 16 2" }],
-    ["path", { d: "M17.123 17.123A6 6 0 0 1 6 14v-3a4 4 0 0 1 1.72-3.287" }],
-    ["path", { d: "m2 2 20 20" }],
-    ["path", { d: "M21 5a4 4 0 0 1-3.55 3.97" }],
-    ["path", { d: "M22 13h-3.344" }],
-    ["path", { d: "M3 21a4 4 0 0 1 3.81-4" }],
-    ["path", { d: "M3 5a4 4 0 0 0 3.55 3.97" }],
-    ["path", { d: "M6 13H2" }],
-    ["path", { d: "m8 2 1.88 1.88" }],
-    ["path", { d: "M9.712 4.06A3 3 0 0 1 15 6v1.13" }]
+  // node_modules/lucide/dist/esm/icons/building-2.mjs
+  var Building2 = [
+    ["path", { d: "M10 12h4" }],
+    ["path", { d: "M10 8h4" }],
+    ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3" }],
+    ["path", { d: "M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" }],
+    ["path", { d: "M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/building.mjs
+  var Building = [
+    ["path", { d: "M12 10h.01" }],
+    ["path", { d: "M12 14h.01" }],
+    ["path", { d: "M12 6h.01" }],
+    ["path", { d: "M16 10h.01" }],
+    ["path", { d: "M16 14h.01" }],
+    ["path", { d: "M16 6h.01" }],
+    ["path", { d: "M8 10h.01" }],
+    ["path", { d: "M8 14h.01" }],
+    ["path", { d: "M8 6h.01" }],
+    ["path", { d: "M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" }],
+    ["rect", { x: "4", y: "2", width: "16", height: "20", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/bug.mjs
@@ -7328,15 +7383,6 @@
     ["path", { d: "M6 13H2" }],
     ["path", { d: "m8 2 1.88 1.88" }],
     ["path", { d: "M9 7.13V6a3 3 0 1 1 6 0v1.13" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/building-2.mjs
-  var Building2 = [
-    ["path", { d: "M10 12h4" }],
-    ["path", { d: "M10 8h4" }],
-    ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3" }],
-    ["path", { d: "M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" }],
-    ["path", { d: "M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/bus-front.mjs
@@ -7368,21 +7414,6 @@
     ["circle", { cx: "16", cy: "18", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/building.mjs
-  var Building = [
-    ["path", { d: "M12 10h.01" }],
-    ["path", { d: "M12 14h.01" }],
-    ["path", { d: "M12 6h.01" }],
-    ["path", { d: "M16 10h.01" }],
-    ["path", { d: "M16 14h.01" }],
-    ["path", { d: "M16 6h.01" }],
-    ["path", { d: "M8 10h.01" }],
-    ["path", { d: "M8 14h.01" }],
-    ["path", { d: "M8 6h.01" }],
-    ["path", { d: "M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" }],
-    ["rect", { x: "4", y: "2", width: "16", height: "20", rx: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/cable-car.mjs
   var CableCar = [
     ["path", { d: "M10 3h.01" }],
@@ -7393,17 +7424,6 @@
     ["path", { d: "M9 12v5" }],
     ["path", { d: "M15 12v5" }],
     ["path", { d: "M4 17h16" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/cable.mjs
-  var Cable = [
-    ["path", { d: "M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z" }],
-    ["path", { d: "M17 21v-2" }],
-    ["path", { d: "M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10" }],
-    ["path", { d: "M21 21v-2" }],
-    ["path", { d: "M3 5V3" }],
-    ["path", { d: "M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z" }],
-    ["path", { d: "M7 5V3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cake-slice.mjs
@@ -7417,6 +7437,17 @@
       }
     ],
     ["circle", { cx: "9", cy: "7", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/cable.mjs
+  var Cable = [
+    ["path", { d: "M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z" }],
+    ["path", { d: "M17 21v-2" }],
+    ["path", { d: "M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10" }],
+    ["path", { d: "M21 21v-2" }],
+    ["path", { d: "M3 5V3" }],
+    ["path", { d: "M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z" }],
+    ["path", { d: "M7 5V3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cake.mjs
@@ -7567,15 +7598,6 @@
     ["path", { d: "M8 2v3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/calendar-minus.mjs
-  var CalendarMinus = [
-    ["path", { d: "M16 18h6" }],
-    ["path", { d: "M16 2v3" }],
-    ["path", { d: "M21 14V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8.3" }],
-    ["path", { d: "M3 9h18" }],
-    ["path", { d: "M8 2v3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/calendar-minus-2.mjs
   var CalendarMinus2 = [
     ["path", { d: "M8 2v3" }],
@@ -7583,6 +7605,15 @@
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }],
     ["path", { d: "M3 9h18" }],
     ["path", { d: "M10 15h4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/calendar-minus.mjs
+  var CalendarMinus = [
+    ["path", { d: "M16 18h6" }],
+    ["path", { d: "M16 2v3" }],
+    ["path", { d: "M21 14V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8.3" }],
+    ["path", { d: "M3 9h18" }],
+    ["path", { d: "M8 2v3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/calendar-plus-2.mjs
@@ -7615,6 +7646,18 @@
     ["path", { d: "M8 2v3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/calendar-range.mjs
+  var CalendarRange = [
+    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }],
+    ["path", { d: "M16 2v3" }],
+    ["path", { d: "M3 9h18" }],
+    ["path", { d: "M8 2v3" }],
+    ["path", { d: "M17 13h-6" }],
+    ["path", { d: "M13 17H7" }],
+    ["path", { d: "M7 13h.01" }],
+    ["path", { d: "M17 17h.01" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/calendar-search.mjs
   var CalendarSearch = [
     ["path", { d: "M16 2v3" }],
@@ -7635,18 +7678,6 @@
     ["path", { d: "M21 8.517V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h3.517" }],
     ["path", { d: "M3 9h4" }],
     ["path", { d: "M8 2v3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/calendar-range.mjs
-  var CalendarRange = [
-    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }],
-    ["path", { d: "M16 2v3" }],
-    ["path", { d: "M3 9h18" }],
-    ["path", { d: "M8 2v3" }],
-    ["path", { d: "M17 13h-6" }],
-    ["path", { d: "M13 17H7" }],
-    ["path", { d: "M7 13h.01" }],
-    ["path", { d: "M17 17h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/calendar-x-2.mjs
@@ -7804,10 +7835,14 @@
     ["path", { d: "M7 15h2.5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/captions.mjs
-  var Captions = [
-    ["rect", { width: "18", height: "14", x: "3", y: "5", rx: "2", ry: "2" }],
-    ["path", { d: "M7 15h4M15 15h2M7 11h2M13 11h4" }]
+  // node_modules/lucide/dist/esm/icons/car-battery.mjs
+  var CarBattery = [
+    ["path", { d: "M14 13h4" }],
+    ["path", { d: "M16 15v-4" }],
+    ["path", { d: "M18 5v2" }],
+    ["path", { d: "M6 13h4" }],
+    ["path", { d: "M6 5v2" }],
+    ["rect", { x: "2", y: "7", width: "20", height: "12", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/car-front.mjs
@@ -7818,6 +7853,12 @@
     ["rect", { width: "18", height: "8", x: "3", y: "10", rx: "2" }],
     ["path", { d: "M5 18v2" }],
     ["path", { d: "M19 18v2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/captions.mjs
+  var Captions = [
+    ["rect", { width: "18", height: "14", x: "3", y: "5", rx: "2", ry: "2" }],
+    ["path", { d: "M7 15h4M15 15h2M7 11h2M13 11h4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/car-taxi-front.mjs
@@ -7960,17 +8001,6 @@
     ["path", { d: "M7 9h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/chart-area.mjs
-  var ChartArea = [
-    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
-    [
-      "path",
-      {
-        d: "M7 11.207a.5.5 0 0 1 .146-.353l2-2a.5.5 0 0 1 .708 0l3.292 3.292a.5.5 0 0 0 .708 0l4.292-4.292a.5.5 0 0 1 .854.353V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/cctv.mjs
   var Cctv = [
     [
@@ -7986,6 +8016,17 @@
     ["path", { d: "M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15" }],
     ["path", { d: "M2 21v-4" }],
     ["path", { d: "M7 9h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/chart-area.mjs
+  var ChartArea = [
+    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
+    [
+      "path",
+      {
+        d: "M7 11.207a.5.5 0 0 1 .146-.353l2-2a.5.5 0 0 1 .708 0l3.292 3.292a.5.5 0 0 0 .708 0l4.292-4.292a.5.5 0 0 1 .854.353V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/chart-bar-big.mjs
@@ -8028,13 +8069,6 @@
     ["path", { d: "M7 6h3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/chart-column-big.mjs
-  var ChartColumnBig = [
-    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
-    ["rect", { x: "15", y: "5", width: "4", height: "12", rx: "1" }],
-    ["rect", { x: "7", y: "8", width: "4", height: "9", rx: "1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/chart-candlestick.mjs
   var ChartCandlestick = [
     ["path", { d: "M9 5v4" }],
@@ -8044,6 +8078,13 @@
     ["rect", { width: "4", height: "8", x: "15", y: "5", rx: "1" }],
     ["path", { d: "M17 13v3" }],
     ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/chart-column-big.mjs
+  var ChartColumnBig = [
+    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
+    ["rect", { x: "15", y: "5", width: "4", height: "12", rx: "1" }],
+    ["rect", { x: "7", y: "8", width: "4", height: "9", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/chart-column-decreasing.mjs
@@ -8062,6 +8103,14 @@
     ["path", { d: "M8 17v-3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/chart-column.mjs
+  var ChartColumn = [
+    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
+    ["path", { d: "M18 17V9" }],
+    ["path", { d: "M13 17V5" }],
+    ["path", { d: "M8 17v-3" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/chart-column-stacked.mjs
   var ChartColumnStacked = [
     ["path", { d: "M11 13H7" }],
@@ -8069,14 +8118,6 @@
     ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
     ["rect", { x: "15", y: "5", width: "4", height: "12", rx: "1" }],
     ["rect", { x: "7", y: "8", width: "4", height: "9", rx: "1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/chart-column.mjs
-  var ChartColumn = [
-    ["path", { d: "M3 3v16a2 2 0 0 0 2 2h16" }],
-    ["path", { d: "M18 17V9" }],
-    ["path", { d: "M13 17V5" }],
-    ["path", { d: "M8 17v-3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/chart-gantt.mjs
@@ -8185,25 +8226,6 @@
   // node_modules/lucide/dist/esm/icons/check.mjs
   var Check = [["path", { d: "M20 6 9 17l-5-5" }]];
 
-  // node_modules/lucide/dist/esm/icons/chef-hat.mjs
-  var ChefHat = [
-    [
-      "path",
-      {
-        d: "M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"
-      }
-    ],
-    ["path", { d: "M6 17h12" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/cherry.mjs
-  var Cherry = [
-    ["path", { d: "M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }],
-    ["path", { d: "M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }],
-    ["path", { d: "M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" }],
-    ["path", { d: "M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/chess-bishop.mjs
   var ChessBishop = [
     ["path", { d: "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }],
@@ -8215,6 +8237,25 @@
     ],
     ["path", { d: "m16 7-2.5 2.5" }],
     ["path", { d: "M9 2h6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/cherry.mjs
+  var Cherry = [
+    ["path", { d: "M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }],
+    ["path", { d: "M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }],
+    ["path", { d: "M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" }],
+    ["path", { d: "M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/chef-hat.mjs
+  var ChefHat = [
+    [
+      "path",
+      {
+        d: "M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"
+      }
+    ],
+    ["path", { d: "M6 17h12" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/chess-king.mjs
@@ -8244,15 +8285,6 @@
     ["path", { d: "M9.713 12.185 7 18" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/chess-pawn.mjs
-  var ChessPawn = [
-    ["path", { d: "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }],
-    ["path", { d: "m14.5 10 1.5 8" }],
-    ["path", { d: "M7 10h10" }],
-    ["path", { d: "m8 18 1.5-8" }],
-    ["circle", { cx: "12", cy: "6", r: "4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/chess-queen.mjs
   var ChessQueen = [
     ["path", { d: "M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" }],
@@ -8274,6 +8306,15 @@
     ["path", { d: "M6 2v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2" }],
     ["path", { d: "M6 4h12" }],
     ["path", { d: "m7 18 1-9" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/chess-pawn.mjs
+  var ChessPawn = [
+    ["path", { d: "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }],
+    ["path", { d: "m14.5 10 1.5 8" }],
+    ["path", { d: "M7 10h10" }],
+    ["path", { d: "m8 18 1.5-8" }],
+    ["circle", { cx: "12", cy: "6", r: "4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/chevron-down.mjs
@@ -8345,16 +8386,16 @@
     ["path", { d: "m13 17 5-5-5-5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/chevrons-up.mjs
-  var ChevronsUp = [
-    ["path", { d: "m17 11-5-5-5 5" }],
-    ["path", { d: "m17 18-5-5-5 5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/chevrons-up-down.mjs
   var ChevronsUpDown = [
     ["path", { d: "m7 15 5 5 5-5" }],
     ["path", { d: "m7 9 5-5 5 5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/chevrons-up.mjs
+  var ChevronsUp = [
+    ["path", { d: "m17 11-5-5-5 5" }],
+    ["path", { d: "m17 18-5-5-5 5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/church.mjs
@@ -8418,25 +8459,18 @@
     ["path", { d: "M8 22H2v-6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-arrow-out-down-right.mjs
-  var CircleArrowOutDownRight = [
-    ["path", { d: "M12 22a10 10 0 1 1 10-10" }],
-    ["path", { d: "M22 22 12 12" }],
-    ["path", { d: "M22 16v6h-6" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/circle-arrow-out-up-left.mjs
-  var CircleArrowOutUpLeft = [
-    ["path", { d: "M2 8V2h6" }],
-    ["path", { d: "m2 2 10 10" }],
-    ["path", { d: "M12 2A10 10 0 1 1 2 12" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/circle-arrow-out-up-right.mjs
   var CircleArrowOutUpRight = [
     ["path", { d: "M22 12A10 10 0 1 1 12 2" }],
     ["path", { d: "M22 2 12 12" }],
     ["path", { d: "M16 2h6v6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/circle-arrow-out-down-right.mjs
+  var CircleArrowOutDownRight = [
+    ["path", { d: "M12 22a10 10 0 1 1 10-10" }],
+    ["path", { d: "M22 22 12 12" }],
+    ["path", { d: "M22 16v6h-6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-arrow-right.mjs
@@ -8446,6 +8480,13 @@
     ["path", { d: "M8 12h8" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/circle-arrow-out-up-left.mjs
+  var CircleArrowOutUpLeft = [
+    ["path", { d: "M2 8V2h6" }],
+    ["path", { d: "m2 2 10 10" }],
+    ["path", { d: "M12 2A10 10 0 1 1 2 12" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/circle-arrow-up.mjs
   var CircleArrowUp = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
@@ -8453,16 +8494,16 @@
     ["path", { d: "M12 16V8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-check-big.mjs
-  var CircleCheckBig = [
-    ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335" }],
-    ["path", { d: "m9 11 3 3L22 4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/circle-check.mjs
   var CircleCheck = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["path", { d: "m9 12 2 2 4-4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/circle-check-big.mjs
+  var CircleCheckBig = [
+    ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335" }],
+    ["path", { d: "m9 11 3 3L22 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-chevron-down.mjs
@@ -8543,18 +8584,18 @@
     ["path", { d: "M7 12h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-euro.mjs
-  var CircleEuro = [
-    ["path", { d: "M15 9.4a4 4 0 1 0 0 5.2" }],
-    ["path", { d: "M7 12h5" }],
-    ["circle", { cx: "12", cy: "12", r: "10" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/circle-equal.mjs
   var CircleEqual = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["path", { d: "M7 10h10" }],
     ["path", { d: "M7 14h10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/circle-euro.mjs
+  var CircleEuro = [
+    ["path", { d: "M15 9.4a4 4 0 1 0 0 5.2" }],
+    ["path", { d: "M7 12h5" }],
+    ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-fading-arrow-up.mjs
@@ -8615,19 +8656,19 @@
     ["path", { d: "M9 17V7h4a3 3 0 0 1 0 6H9" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-pause.mjs
-  var CirclePause = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["line", { x1: "10", x2: "10", y1: "15", y2: "9" }],
-    ["line", { x1: "14", x2: "14", y1: "15", y2: "9" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/circle-percent.mjs
   var CirclePercent = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["path", { d: "m15 9-6 6" }],
     ["path", { d: "M9 9h.01" }],
     ["path", { d: "M15 15h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/circle-pause.mjs
+  var CirclePause = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["line", { x1: "10", x2: "10", y1: "15", y2: "9" }],
+    ["line", { x1: "14", x2: "14", y1: "15", y2: "9" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-pile.mjs
@@ -8651,6 +8692,13 @@
     ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/circle-plus.mjs
+  var CirclePlus = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M8 12h8" }],
+    ["path", { d: "M12 8v8" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/circle-pound-sterling.mjs
   var CirclePoundSterling = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
@@ -8666,13 +8714,6 @@
     ["path", { d: "M7.998 9.003a5 5 0 1 0 8-.005" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-plus.mjs
-  var CirclePlus = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M8 12h8" }],
-    ["path", { d: "M12 8v8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/circle-question-mark.mjs
   var CircleQuestionMark = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
@@ -8686,13 +8727,19 @@
     ["path", { d: "M22 2 2 22" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/circle-small.mjs
-  var CircleSmall = [["circle", { cx: "12", cy: "12", r: "6" }]];
-
   // node_modules/lucide/dist/esm/icons/circle-slash.mjs
   var CircleSlash = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["line", { x1: "9", x2: "15", y1: "15", y2: "9" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/circle-small.mjs
+  var CircleSmall = [["circle", { cx: "12", cy: "12", r: "6" }]];
+
+  // node_modules/lucide/dist/esm/icons/circle-stop.mjs
+  var CircleStop = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["rect", { x: "9", y: "9", width: "6", height: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-star.mjs
@@ -8704,12 +8751,6 @@
         d: "M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/circle-stop.mjs
-  var CircleStop = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["rect", { x: "9", y: "9", width: "6", height: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/circle-user-round.mjs
@@ -8733,6 +8774,9 @@
     ["path", { d: "m9 9 6 6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/circle.mjs
+  var Circle = [["circle", { cx: "12", cy: "12", r: "10" }]];
+
   // node_modules/lucide/dist/esm/icons/circuit-board.mjs
   var CircuitBoard = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
@@ -8741,9 +8785,6 @@
     ["path", { d: "M7 21v-4a2 2 0 0 1 2-2h4" }],
     ["circle", { cx: "15", cy: "15", r: "2" }]
   ];
-
-  // node_modules/lucide/dist/esm/icons/circle.mjs
-  var Circle = [["circle", { cx: "12", cy: "12", r: "10" }]];
 
   // node_modules/lucide/dist/esm/icons/citrus.mjs
   var Citrus = [
@@ -8764,6 +8805,13 @@
     ["path", { d: "m6.18 5.276 3.1 3.899" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/clipboard-check.mjs
+  var ClipboardCheck = [
+    ["rect", { width: "8", height: "4", x: "8", y: "2", rx: "1", ry: "1" }],
+    ["path", { d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }],
+    ["path", { d: "m9 14 2 2 4-4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/clipboard-clock.mjs
   var ClipboardClock = [
     ["path", { d: "M16 14v2.2l1.6 1" }],
@@ -8771,13 +8819,6 @@
     ["path", { d: "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" }],
     ["circle", { cx: "16", cy: "16", r: "6" }],
     ["rect", { x: "8", y: "2", width: "8", height: "4", rx: "1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/clipboard-check.mjs
-  var ClipboardCheck = [
-    ["rect", { width: "8", height: "4", x: "8", y: "2", rx: "1", ry: "1" }],
-    ["path", { d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "m9 14 2 2 4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/clipboard-copy.mjs
@@ -8891,22 +8932,16 @@
     ["path", { d: "M12 6v6l-2-4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/clock-2.mjs
-  var Clock2 = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M12 6v6l4-2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/clock-12.mjs
   var Clock12 = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["path", { d: "M12 6v6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/clock-3.mjs
-  var Clock3 = [
+  // node_modules/lucide/dist/esm/icons/clock-2.mjs
+  var Clock2 = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M12 6v6h4" }]
+    ["path", { d: "M12 6v6l4-2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/clock-4.mjs
@@ -8919,6 +8954,12 @@
   var Clock5 = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
     ["path", { d: "M12 6v6l2 4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/clock-3.mjs
+  var Clock3 = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M12 6v6h4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/clock-6.mjs
@@ -8945,20 +8986,20 @@
     ["path", { d: "M12 6v6H8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/clock-alert.mjs
-  var ClockAlert = [
-    ["path", { d: "M12 6v6l4 2" }],
-    ["path", { d: "M20 12v5" }],
-    ["path", { d: "M20 21h.01" }],
-    ["path", { d: "M21.25 8.2A10 10 0 1 0 16 21.16" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/clock-arrow-down.mjs
   var ClockArrowDown = [
     ["path", { d: "M12 6v6l2 1" }],
     ["path", { d: "M12.337 21.994a10 10 0 1 1 9.588-8.767" }],
     ["path", { d: "m14 18 4 4 4-4" }],
     ["path", { d: "M18 14v8" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/clock-alert.mjs
+  var ClockAlert = [
+    ["path", { d: "M12 6v6l4 2" }],
+    ["path", { d: "M20 12v5" }],
+    ["path", { d: "M20 21h.01" }],
+    ["path", { d: "M21.25 8.2A10 10 0 1 0 16 21.16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/clock-arrow-left.mjs
@@ -8977,19 +9018,19 @@
     ["path", { d: "m18 22 4-4-4-4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/clock-check.mjs
-  var ClockCheck = [
-    ["path", { d: "M12 6v6l4 2" }],
-    ["path", { d: "M22 12a10 10 0 1 0-11 9.95" }],
-    ["path", { d: "m22 16-5.5 5.5L14 19" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/clock-arrow-up.mjs
   var ClockArrowUp = [
     ["path", { d: "M12 6v6l1.56.78" }],
     ["path", { d: "M13.227 21.925a10 10 0 1 1 8.767-9.588" }],
     ["path", { d: "m14 18 4-4 4 4" }],
     ["path", { d: "M18 22v-8" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/clock-check.mjs
+  var ClockCheck = [
+    ["path", { d: "M12 6v6l4 2" }],
+    ["path", { d: "M22 12a10 10 0 1 0-11 9.95" }],
+    ["path", { d: "m22 16-5.5 5.5L14 19" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/clock-fading.mjs
@@ -9010,17 +9051,17 @@
     ["path", { d: "M21.92 13.267a10 10 0 1 0-8.653 8.653" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/clock.mjs
-  var Clock = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M12 6v6l4 2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/closed-caption.mjs
   var ClosedCaption = [
     ["path", { d: "M10 9.17a3 3 0 1 0 0 5.66" }],
     ["path", { d: "M17 9.17a3 3 0 1 0 0 5.66" }],
     ["rect", { x: "2", y: "5", width: "20", height: "14", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/clock.mjs
+  var Clock = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M12 6v6l4 2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cloud-alert.mjs
@@ -9056,13 +9097,6 @@
     ["path", { d: "m9.228 18.148-.923.383" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/cloud-download.mjs
-  var CloudDownload = [
-    ["path", { d: "M12 13v8l-4-4" }],
-    ["path", { d: "m12 21 4-4" }],
-    ["path", { d: "M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/cloud-drizzle.mjs
   var CloudDrizzle = [
     ["path", { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }],
@@ -9074,11 +9108,11 @@
     ["path", { d: "M12 16v1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/cloud-fog.mjs
-  var CloudFog = [
-    ["path", { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }],
-    ["path", { d: "M16 17H7" }],
-    ["path", { d: "M17 21H9" }]
+  // node_modules/lucide/dist/esm/icons/cloud-download.mjs
+  var CloudDownload = [
+    ["path", { d: "M12 13v8l-4-4" }],
+    ["path", { d: "m12 21 4-4" }],
+    ["path", { d: "M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cloud-hail.mjs
@@ -9090,6 +9124,13 @@
     ["path", { d: "M8 20h.01" }],
     ["path", { d: "M12 16v2" }],
     ["path", { d: "M12 22h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/cloud-fog.mjs
+  var CloudFog = [
+    ["path", { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }],
+    ["path", { d: "M16 17H7" }],
+    ["path", { d: "M17 21H9" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cloud-lightning.mjs
@@ -9145,17 +9186,6 @@
     ["path", { d: "M12 16v6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/cloud-snow.mjs
-  var CloudSnow = [
-    ["path", { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }],
-    ["path", { d: "M8 15h.01" }],
-    ["path", { d: "M8 19h.01" }],
-    ["path", { d: "M12 17h.01" }],
-    ["path", { d: "M12 21h.01" }],
-    ["path", { d: "M16 15h.01" }],
-    ["path", { d: "M16 19h.01" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/cloud-sun-rain.mjs
   var CloudSunRain = [
     ["path", { d: "M12 2v2" }],
@@ -9166,6 +9196,17 @@
     ["path", { d: "M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24" }],
     ["path", { d: "M11 20v2" }],
     ["path", { d: "M7 19v2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/cloud-snow.mjs
+  var CloudSnow = [
+    ["path", { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }],
+    ["path", { d: "M8 15h.01" }],
+    ["path", { d: "M8 19h.01" }],
+    ["path", { d: "M12 17h.01" }],
+    ["path", { d: "M12 21h.01" }],
+    ["path", { d: "M16 15h.01" }],
+    ["path", { d: "M16 19h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cloud-sun.mjs
@@ -9203,22 +9244,6 @@
     ["path", { d: "M21.832 9A3 3 0 0 0 19 7h-2.207a5.5 5.5 0 0 0-10.72.61" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/club.mjs
-  var Club = [
-    [
-      "path",
-      { d: "M17.28 9.05a5.5 5.5 0 1 0-10.56 0A5.5 5.5 0 1 0 12 17.66a5.5 5.5 0 1 0 5.28-8.6Z" }
-    ],
-    ["path", { d: "M12 17.66L12 22" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/code-xml.mjs
-  var CodeXml = [
-    ["path", { d: "m18 16 4-4-4-4" }],
-    ["path", { d: "m6 8-4 4 4 4" }],
-    ["path", { d: "m14.5 4-5 16" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/clover.mjs
   var Clover = [
     ["path", { d: "M16.17 7.83 2 22" }],
@@ -9229,6 +9254,22 @@
       }
     ],
     ["path", { d: "m7.83 7.83 8.34 8.34" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/code-xml.mjs
+  var CodeXml = [
+    ["path", { d: "m18 16 4-4-4-4" }],
+    ["path", { d: "m6 8-4 4 4 4" }],
+    ["path", { d: "m14.5 4-5 16" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/club.mjs
+  var Club = [
+    [
+      "path",
+      { d: "M17.28 9.05a5.5 5.5 0 1 0-10.56 0A5.5 5.5 0 1 0 12 17.66a5.5 5.5 0 1 0 5.28-8.6Z" }
+    ],
+    ["path", { d: "M12 17.66L12 22" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/code.mjs
@@ -9323,6 +9364,17 @@
     ["rect", { x: "3", y: "3", width: "7", height: "7", rx: "1" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/compass.mjs
+  var Compass = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    [
+      "path",
+      {
+        d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/command.mjs
   var Command = [
     ["path", { d: "M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" }]
@@ -9356,17 +9408,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/compass.mjs
-  var Compass = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    [
-      "path",
-      {
-        d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/computer.mjs
   var Computer = [
     ["rect", { width: "14", height: "8", x: "5", y: "2", rx: "2" }],
@@ -9389,6 +9430,15 @@
     ["ellipse", { cx: "12", cy: "19", rx: "9", ry: "3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/contact-round.mjs
+  var ContactRound = [
+    ["path", { d: "M16 2v2" }],
+    ["path", { d: "M17.915 21a6 6 0 10-12 0" }],
+    ["path", { d: "M8 2v2" }],
+    ["circle", { cx: "12", cy: "11", r: "4" }],
+    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/construction.mjs
   var Construction = [
     ["rect", { x: "2", y: "6", width: "20", height: "8", rx: "1" }],
@@ -9399,15 +9449,6 @@
     ["path", { d: "M10 14 2.3 6.3" }],
     ["path", { d: "m14 6 7.7 7.7" }],
     ["path", { d: "m8 6 8 8" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/contact-round.mjs
-  var ContactRound = [
-    ["path", { d: "M16 2v2" }],
-    ["path", { d: "M17.915 21a6 6 0 10-12 0" }],
-    ["path", { d: "M8 2v2" }],
-    ["circle", { cx: "12", cy: "11", r: "4" }],
-    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/contact.mjs
@@ -9433,6 +9474,12 @@
     ["path", { d: "M18 17.5V9.4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/contrast.mjs
+  var Contrast = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M12 18a6 6 0 0 0 0-12v12z" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/cookie.mjs
   var Cookie = [
     ["path", { d: "M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" }],
@@ -9441,12 +9488,6 @@
     ["path", { d: "M12 12v.01" }],
     ["path", { d: "M11 17v.01" }],
     ["path", { d: "M7 14v.01" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/contrast.mjs
-  var Contrast = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M12 18a6 6 0 0 0 0-12v12z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/cooking-pot.mjs
@@ -9471,17 +9512,17 @@
     ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/copy-plus.mjs
-  var CopyPlus = [
-    ["line", { x1: "15", x2: "15", y1: "12", y2: "18" }],
-    ["line", { x1: "12", x2: "18", y1: "15", y2: "15" }],
+  // node_modules/lucide/dist/esm/icons/copy-slash.mjs
+  var CopySlash = [
+    ["line", { x1: "12", x2: "18", y1: "18", y2: "12" }],
     ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2" }],
     ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/copy-slash.mjs
-  var CopySlash = [
-    ["line", { x1: "12", x2: "18", y1: "18", y2: "12" }],
+  // node_modules/lucide/dist/esm/icons/copy-plus.mjs
+  var CopyPlus = [
+    ["line", { x1: "15", x2: "15", y1: "12", y2: "18" }],
+    ["line", { x1: "12", x2: "18", y1: "15", y2: "15" }],
     ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2" }],
     ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" }]
   ];
@@ -9500,12 +9541,6 @@
     ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/copyright.mjs
-  var Copyright = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M14.83 14.83a4 4 0 1 1 0-5.66" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/copyleft.mjs
   var Copyleft = [
     ["circle", { cx: "12", cy: "12", r: "10" }],
@@ -9518,22 +9553,28 @@
     ["path", { d: "m9 10-5 5 5 5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/copyright.mjs
+  var Copyright = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M14.83 14.83a4 4 0 1 1 0-5.66" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/corner-down-right.mjs
   var CornerDownRight = [
     ["path", { d: "m15 10 5 5-5 5" }],
     ["path", { d: "M4 4v7a4 4 0 0 0 4 4h12" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/corner-left-up.mjs
-  var CornerLeftUp = [
-    ["path", { d: "M14 9 9 4 4 9" }],
-    ["path", { d: "M20 20h-7a4 4 0 0 1-4-4V4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/corner-left-down.mjs
   var CornerLeftDown = [
     ["path", { d: "m14 15-5 5-5-5" }],
     ["path", { d: "M20 4h-7a4 4 0 0 0-4 4v12" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/corner-left-up.mjs
+  var CornerLeftUp = [
+    ["path", { d: "M14 9 9 4 4 9" }],
+    ["path", { d: "M20 20h-7a4 4 0 0 1-4-4V4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/corner-right-down.mjs
@@ -9661,15 +9702,6 @@
     ["path", { d: "m12 8 1-6h2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/currency.mjs
-  var Currency = [
-    ["circle", { cx: "12", cy: "12", r: "8" }],
-    ["line", { x1: "3", x2: "6", y1: "3", y2: "6" }],
-    ["line", { x1: "21", x2: "18", y1: "3", y2: "6" }],
-    ["line", { x1: "3", x2: "6", y1: "21", y2: "18" }],
-    ["line", { x1: "21", x2: "18", y1: "21", y2: "18" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/cylinder.mjs
   var Cylinder = [
     ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3" }],
@@ -9687,6 +9719,15 @@
     ["path", { d: "M7 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1L10 4a1 1 0 0 0-1-1z" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/currency.mjs
+  var Currency = [
+    ["circle", { cx: "12", cy: "12", r: "8" }],
+    ["line", { x1: "3", x2: "6", y1: "3", y2: "6" }],
+    ["line", { x1: "21", x2: "18", y1: "3", y2: "6" }],
+    ["line", { x1: "3", x2: "6", y1: "21", y2: "18" }],
+    ["line", { x1: "21", x2: "18", y1: "21", y2: "18" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/database-arrow-down.mjs
   var DatabaseArrowDown = [
     ["path", { d: "m16 19 3 3 3-3" }],
@@ -9695,16 +9736,6 @@
     ["path", { d: "M3 12A9 3 0 0 0 15.182 14.806" }],
     ["path", { d: "M3 5V19A9 3 0 0 0 13.318 21.968" }],
     ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/database-backup.mjs
-  var DatabaseBackup = [
-    ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3" }],
-    ["path", { d: "M3 12a9 3 0 0 0 5 2.69" }],
-    ["path", { d: "M21 9.3V5" }],
-    ["path", { d: "M3 5v14a9 3 0 0 0 6.47 2.88" }],
-    ["path", { d: "M12 12v4h4" }],
-    ["path", { d: "M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/database-arrow-up.mjs
@@ -9724,6 +9755,16 @@
     ["path", { d: "M3 12A9 3 0 0 0 21 12" }],
     ["path", { d: "M3 5V19A9 3 0 0 0 13.318 21.968" }],
     ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/database-backup.mjs
+  var DatabaseBackup = [
+    ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3" }],
+    ["path", { d: "M3 12a9 3 0 0 0 5 2.69" }],
+    ["path", { d: "M21 9.3V5" }],
+    ["path", { d: "M3 5v14a9 3 0 0 0 6.47 2.88" }],
+    ["path", { d: "M12 12v4h4" }],
+    ["path", { d: "M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/database-minus.mjs
@@ -9856,12 +9897,6 @@
     ["path", { d: "M14.7 14.8h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/dice-1.mjs
-  var Dice1 = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
-    ["path", { d: "M12 12h.01" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/diamond-plus.mjs
   var DiamondPlus = [
     ["path", { d: "M12 8v8" }],
@@ -9884,19 +9919,17 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/dice-1.mjs
+  var Dice1 = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
+    ["path", { d: "M12 12h.01" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/dice-2.mjs
   var Dice2 = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
     ["path", { d: "M15 9h.01" }],
     ["path", { d: "M9 15h.01" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/dice-3.mjs
-  var Dice3 = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
-    ["path", { d: "M16 8h.01" }],
-    ["path", { d: "M12 12h.01" }],
-    ["path", { d: "M8 16h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/dice-4.mjs
@@ -9906,6 +9939,14 @@
     ["path", { d: "M8 8h.01" }],
     ["path", { d: "M8 16h.01" }],
     ["path", { d: "M16 16h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/dice-3.mjs
+  var Dice3 = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
+    ["path", { d: "M16 8h.01" }],
+    ["path", { d: "M12 12h.01" }],
+    ["path", { d: "M8 16h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/dice-6.mjs
@@ -9968,17 +10009,17 @@
     ["path", { d: "M12 12h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/disc.mjs
-  var Disc = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["circle", { cx: "12", cy: "12", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/divide.mjs
   var Divide = [
     ["circle", { cx: "12", cy: "6", r: "1" }],
     ["line", { x1: "5", x2: "19", y1: "12", y2: "12" }],
     ["circle", { cx: "12", cy: "18", r: "1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/disc.mjs
+  var Disc = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["circle", { cx: "12", cy: "12", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/dna-off.mjs
@@ -10010,6 +10051,13 @@
     ["path", { d: "M9 22c1.798-1.998 2.518-3.995 2.807-5.993" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/dock.mjs
+  var Dock = [
+    ["path", { d: "M2 8h20" }],
+    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }],
+    ["path", { d: "M6 16h12" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/dog.mjs
   var Dog = [
     ["path", { d: "M11.25 16.25h1.5L12 17z" }],
@@ -10029,19 +10077,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/dock.mjs
-  var Dock = [
-    ["path", { d: "M2 8h20" }],
-    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }],
-    ["path", { d: "M6 16h12" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/dollar-sign.mjs
-  var DollarSign = [
-    ["line", { x1: "12", x2: "12", y1: "2", y2: "22" }],
-    ["path", { d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/donut.mjs
   var Donut = [
     [
@@ -10051,6 +10086,12 @@
       }
     ],
     ["circle", { cx: "12", cy: "12", r: "3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/dollar-sign.mjs
+  var DollarSign = [
+    ["line", { x1: "12", x2: "12", y1: "2", y2: "22" }],
+    ["path", { d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/door-closed-locked.mjs
@@ -10086,15 +10127,6 @@
   // node_modules/lucide/dist/esm/icons/dot.mjs
   var Dot = [["circle", { cx: "12", cy: "12", r: "1" }]];
 
-  // node_modules/lucide/dist/esm/icons/drafting-compass.mjs
-  var DraftingCompass = [
-    ["path", { d: "m12.99 6.74 1.93 3.44" }],
-    ["path", { d: "M19.136 12a10 10 0 0 1-14.271 0" }],
-    ["path", { d: "m21 21-2.16-3.84" }],
-    ["path", { d: "m3 21 8.02-14.26" }],
-    ["circle", { cx: "12", cy: "5", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/download.mjs
   var Download = [
     ["path", { d: "M12 15V3" }],
@@ -10102,21 +10134,13 @@
     ["path", { d: "m7 10 5 5 5-5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/drama.mjs
-  var Drama = [
-    ["path", { d: "M10 11h.01" }],
-    ["path", { d: "M14 6h.01" }],
-    ["path", { d: "M18 6h.01" }],
-    ["path", { d: "M6.5 13.1h.01" }],
-    ["path", { d: "M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3" }],
-    ["path", { d: "M17.4 9.9c-.8.8-2 .8-2.8 0" }],
-    [
-      "path",
-      {
-        d: "M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7"
-      }
-    ],
-    ["path", { d: "M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4" }]
+  // node_modules/lucide/dist/esm/icons/drafting-compass.mjs
+  var DraftingCompass = [
+    ["path", { d: "m12.99 6.74 1.93 3.44" }],
+    ["path", { d: "M19.136 12a10 10 0 0 1-14.271 0" }],
+    ["path", { d: "m21 21-2.16-3.84" }],
+    ["path", { d: "m3 21 8.02-14.26" }],
+    ["circle", { cx: "12", cy: "5", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/drill.mjs
@@ -10147,6 +10171,23 @@
     ["rect", { x: "10", y: "8", width: "4", height: "8", rx: "1" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/drama.mjs
+  var Drama = [
+    ["path", { d: "M10 11h.01" }],
+    ["path", { d: "M14 6h.01" }],
+    ["path", { d: "M18 6h.01" }],
+    ["path", { d: "M6.5 13.1h.01" }],
+    ["path", { d: "M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3" }],
+    ["path", { d: "M17.4 9.9c-.8.8-2 .8-2.8 0" }],
+    [
+      "path",
+      {
+        d: "M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7"
+      }
+    ],
+    ["path", { d: "M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/droplet-off.mjs
   var DropletOff = [
     [
@@ -10157,16 +10198,6 @@
     ],
     ["path", { d: "m2 2 20 20" }],
     ["path", { d: "M8.795 8.797A11 11 0 0 1 8 9.5C6 11.1 5 13 5 15a7 7 0 0 0 13.222 3.208" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/droplet.mjs
-  var Droplet = [
-    [
-      "path",
-      {
-        d: "M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/droplets.mjs
@@ -10181,6 +10212,16 @@
       "path",
       {
         d: "M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"
+      }
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/droplet.mjs
+  var Droplet = [
+    [
+      "path",
+      {
+        d: "M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
       }
     ]
   ];
@@ -10221,6 +10262,12 @@
     ["path", { d: "m9.6 14.4 4.8-4.8" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/ear.mjs
+  var Ear = [
+    ["path", { d: "M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" }],
+    ["path", { d: "M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/ear-off.mjs
   var EarOff = [
     ["path", { d: "M6 18.5a3.5 3.5 0 1 0 7 0c0-1.57.92-2.52 2.04-3.46" }],
@@ -10228,6 +10275,16 @@
     ["path", { d: "M8.8 3.15A6.5 6.5 0 0 1 19 8.5c0 1.63-.44 2.81-1.09 3.76" }],
     ["path", { d: "M12.5 6A2.5 2.5 0 0 1 15 8.5M10 13a2 2 0 0 0 1.82-1.18" }],
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/earth-lock.mjs
+  var EarthLock = [
+    ["path", { d: "M7 3.34V5a3 3 0 0 0 3 3" }],
+    ["path", { d: "M11 21.95V18a2 2 0 0 0-2-2 2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" }],
+    ["path", { d: "M21.54 15H17a2 2 0 0 0-2 2v4.54" }],
+    ["path", { d: "M12 2a10 10 0 1 0 9.54 13" }],
+    ["path", { d: "M20 6V4a2 2 0 1 0-4 0v2" }],
+    ["rect", { width: "8", height: "5", x: "14", y: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/earth.mjs
@@ -10241,20 +10298,10 @@
     ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/ear.mjs
-  var Ear = [
-    ["path", { d: "M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" }],
-    ["path", { d: "M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/earth-lock.mjs
-  var EarthLock = [
-    ["path", { d: "M7 3.34V5a3 3 0 0 0 3 3" }],
-    ["path", { d: "M11 21.95V18a2 2 0 0 0-2-2 2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" }],
-    ["path", { d: "M21.54 15H17a2 2 0 0 0-2 2v4.54" }],
-    ["path", { d: "M12 2a10 10 0 1 0 9.54 13" }],
-    ["path", { d: "M20 6V4a2 2 0 1 0-4 0v2" }],
-    ["rect", { width: "8", height: "5", x: "14", y: "6", rx: "1" }]
+  // node_modules/lucide/dist/esm/icons/eclipse.mjs
+  var Eclipse = [
+    ["circle", { cx: "12", cy: "12", r: "10" }],
+    ["path", { d: "M12 2a7 7 0 1 0 10 10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/egg-fried.mjs
@@ -10266,12 +10313,6 @@
         d: "M3 8c0-3.5 2.5-6 6.5-6 5 0 4.83 3 7.5 5s5 2 5 6c0 4.5-2.5 6.5-7 6.5-2.5 0-2.5 2.5-6 2.5s-7-2-7-5.5c0-3 1.5-3 1.5-5C3.5 10 3 9 3 8Z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/eclipse.mjs
-  var Eclipse = [
-    ["circle", { cx: "12", cy: "12", r: "10" }],
-    ["path", { d: "M12 2a7 7 0 1 0 10 10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/egg-off.mjs
@@ -10329,6 +10370,17 @@
     ["line", { x1: "5", x2: "19", y1: "15", y2: "15" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/eraser.mjs
+  var Eraser = [
+    [
+      "path",
+      {
+        d: "M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
+      }
+    ],
+    ["path", { d: "m5.082 11.09 8.828 8.828" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/ethernet-port.mjs
   var EthernetPort = [
     ["path", { d: "M10 8v1" }],
@@ -10341,17 +10393,6 @@
       }
     ],
     ["path", { d: "M6 8v1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/eraser.mjs
-  var Eraser = [
-    [
-      "path",
-      {
-        d: "M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21"
-      }
-    ],
-    ["path", { d: "m5.082 11.09 8.828 8.828" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/euro.mjs
@@ -10401,19 +10442,6 @@
     ["path", { d: "m9 18 .722-3.25" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/eye-dashed.mjs
-  var EyeDashed = [
-    ["path", { d: "M13.054 18.946a11 11 0 0 1-2.11 0" }],
-    ["path", { d: "M13.054 5.054a11 11 0 0 0-2.11-.001" }],
-    ["path", { d: "M17.072 6.274a11 11 0 0 1 1.753 1.173" }],
-    ["path", { d: "M18.825 16.552a11 11 0 0 1-1.753 1.174" }],
-    ["path", { d: "M2.514 13.303a11 11 0 0 1-.452-.954 1 1 0 0 1 0-.697 11 11 0 0 1 .45-.955" }],
-    ["path", { d: "M21.485 10.697a11 11 0 0 1 .453.955 1 1 0 0 1 0 .697 11 11 0 0 1-.453.954" }],
-    ["path", { d: "M5.173 7.448a11 11 0 0 1 1.753-1.174" }],
-    ["path", { d: "M6.926 17.726a11 11 0 0 1-1.753-1.174" }],
-    ["circle", { cx: "12", cy: "12", r: "3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/eye-off.mjs
   var EyeOff = [
     [
@@ -10430,6 +10458,19 @@
       }
     ],
     ["path", { d: "m2 2 20 20" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/eye-dashed.mjs
+  var EyeDashed = [
+    ["path", { d: "M13.054 18.946a11 11 0 0 1-2.11 0" }],
+    ["path", { d: "M13.054 5.054a11 11 0 0 0-2.11-.001" }],
+    ["path", { d: "M17.072 6.274a11 11 0 0 1 1.753 1.173" }],
+    ["path", { d: "M18.825 16.552a11 11 0 0 1-1.753 1.174" }],
+    ["path", { d: "M2.514 13.303a11 11 0 0 1-.452-.954 1 1 0 0 1 0-.697 11 11 0 0 1 .45-.955" }],
+    ["path", { d: "M21.485 10.697a11 11 0 0 1 .453.955 1 1 0 0 1 0 .697 11 11 0 0 1-.453.954" }],
+    ["path", { d: "M5.173 7.448a11 11 0 0 1 1.753-1.174" }],
+    ["path", { d: "M6.926 17.726a11 11 0 0 1-1.753-1.174" }],
+    ["circle", { cx: "12", cy: "12", r: "3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/eye.mjs
@@ -10461,6 +10502,14 @@
     ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/face-neutral.mjs
+  var FaceNeutral = [
+    ["path", { d: "M15 10V9" }],
+    ["path", { d: "M8 16h8" }],
+    ["path", { d: "M9 10V9" }],
+    ["circle", { cx: "12", cy: "12", r: "10" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/face-grinning.mjs
   var FaceGrinning = [
     ["path", { d: "M15 10V9" }],
@@ -10468,14 +10517,6 @@
       "path",
       { d: "M7.084 14.302a5.12 5.12 0 009.833 0 .24.24 0 00-.235-.302H7.32a.24.24 0 00-.235.302" }
     ],
-    ["path", { d: "M9 10V9" }],
-    ["circle", { cx: "12", cy: "12", r: "10" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/face-neutral.mjs
-  var FaceNeutral = [
-    ["path", { d: "M15 10V9" }],
-    ["path", { d: "M8 16h8" }],
     ["path", { d: "M9 10V9" }],
     ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
@@ -10488,14 +10529,6 @@
     ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/face-slightly-smiling.mjs
-  var FaceSlightlySmiling = [
-    ["path", { d: "M15 10V9" }],
-    ["path", { d: "M16.472 15a6 6 0 01-8.943 0" }],
-    ["path", { d: "M9 10V9" }],
-    ["circle", { cx: "12", cy: "12", r: "10" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/face-slightly-smiling-plus.mjs
   var FaceSlightlySmilingPlus = [
     ["path", { d: "M13.267 2.08a10 10 0 108.653 8.653" }],
@@ -10504,6 +10537,25 @@
     ["path", { d: "M16.472 15a6 6 0 01-8.943 0" }],
     ["path", { d: "M19 2v6" }],
     ["path", { d: "M9 10V9" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/face-slightly-smiling.mjs
+  var FaceSlightlySmiling = [
+    ["path", { d: "M15 10V9" }],
+    ["path", { d: "M16.472 15a6 6 0 01-8.943 0" }],
+    ["path", { d: "M9 10V9" }],
+    ["circle", { cx: "12", cy: "12", r: "10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/fan.mjs
+  var Fan = [
+    [
+      "path",
+      {
+        d: "M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"
+      }
+    ],
+    ["path", { d: "M12 12v.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/factory.mjs
@@ -10519,21 +10571,21 @@
     ["path", { d: "M8 16h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/fan.mjs
-  var Fan = [
-    [
-      "path",
-      {
-        d: "M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"
-      }
-    ],
-    ["path", { d: "M12 12v.01" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/fast-forward.mjs
   var FastForward = [
     ["path", { d: "M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z" }],
     ["path", { d: "M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/fence.mjs
+  var Fence = [
+    ["path", { d: "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }],
+    ["path", { d: "M6 8h4" }],
+    ["path", { d: "M6 18h4" }],
+    ["path", { d: "m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }],
+    ["path", { d: "M14 8h4" }],
+    ["path", { d: "M14 18h4" }],
+    ["path", { d: "m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/feather.mjs
@@ -10559,17 +10611,6 @@
     ["path", { d: "m9 22 3-8 3 8" }],
     ["path", { d: "M8 22h8" }],
     ["path", { d: "M18 18.7a9 9 0 1 0-12 0" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/fence.mjs
-  var Fence = [
-    ["path", { d: "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }],
-    ["path", { d: "M6 8h4" }],
-    ["path", { d: "M6 18h4" }],
-    ["path", { d: "m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }],
-    ["path", { d: "M14 8h4" }],
-    ["path", { d: "M14 18h4" }],
-    ["path", { d: "m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-archive.mjs
@@ -10703,6 +10744,18 @@
     ["path", { d: "m16 13-3.5 3.5-2-2L8 17" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/file-check-corner.mjs
+  var FileCheckCorner = [
+    [
+      "path",
+      {
+        d: "M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"
+      }
+    ],
+    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
+    ["path", { d: "m14 20 2 2 4-4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/file-chart-pie.mjs
   var FileChartPie = [
     [
@@ -10719,18 +10772,6 @@
         d: "M9 16a1 1 0 0 1-1-1v-4c0-.552.45-1.008.995-.917a6 6 0 0 1 4.922 4.922c.091.544-.365.995-.917.995z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/file-check-corner.mjs
-  var FileCheckCorner = [
-    [
-      "path",
-      {
-        d: "M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"
-      }
-    ],
-    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
-    ["path", { d: "m14 20 2 2 4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-check.mjs
@@ -10800,19 +10841,6 @@
     ["circle", { cx: "7", cy: "18", r: "3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/file-diff.mjs
-  var FileDiff = [
-    [
-      "path",
-      {
-        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
-      }
-    ],
-    ["path", { d: "M9 10h6" }],
-    ["path", { d: "M12 13V7" }],
-    ["path", { d: "M9 17h6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/file-digit.mjs
   var FileDigit = [
     [
@@ -10827,6 +10855,19 @@
     ["rect", { x: "2", y: "16", width: "4", height: "6", rx: "2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/file-diff.mjs
+  var FileDiff = [
+    [
+      "path",
+      {
+        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+      }
+    ],
+    ["path", { d: "M9 10h6" }],
+    ["path", { d: "M12 13V7" }],
+    ["path", { d: "M9 17h6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/file-down.mjs
   var FileDown = [
     [
@@ -10838,6 +10879,18 @@
     ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
     ["path", { d: "M12 18v-6" }],
     ["path", { d: "m9 15 3 3 3-3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-exclamation-point.mjs
+  var FileExclamationPoint = [
+    [
+      "path",
+      {
+        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+      }
+    ],
+    ["path", { d: "M12 9v4" }],
+    ["path", { d: "M12 17h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-headphone.mjs
@@ -10870,18 +10923,6 @@
         d: "M3.62 18.8A2.25 2.25 0 1 1 7 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a1 1 0 0 1-1.507 0z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/file-exclamation-point.mjs
-  var FileExclamationPoint = [
-    [
-      "path",
-      {
-        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
-      }
-    ],
-    ["path", { d: "M12 9v4" }],
-    ["path", { d: "M12 17h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-image.mjs
@@ -10961,19 +11002,6 @@
     ["path", { d: "M9 15h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/file-music.mjs
-  var FileMusic = [
-    [
-      "path",
-      {
-        d: "M11.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v10.35"
-      }
-    ],
-    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
-    ["path", { d: "M8 20v-7l3 1.474" }],
-    ["circle", { cx: "6", cy: "20", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/file-output.mjs
   var FileOutput = [
     [
@@ -10985,6 +11013,19 @@
     ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
     ["path", { d: "m5 11-3 3" }],
     ["path", { d: "m5 17-3-3h10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-music.mjs
+  var FileMusic = [
+    [
+      "path",
+      {
+        d: "M11.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v10.35"
+      }
+    ],
+    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
+    ["path", { d: "M8 20v-7l3 1.474" }],
+    ["circle", { cx: "6", cy: "20", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-pen-line.mjs
@@ -11162,18 +11203,6 @@
     ["path", { d: "M14 17h2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/file-symlink.mjs
-  var FileSymlink = [
-    [
-      "path",
-      {
-        d: "M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7"
-      }
-    ],
-    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
-    ["path", { d: "m10 18 3-3-3-3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/file-stack.mjs
   var FileStack = [
     ["path", { d: "M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1" }],
@@ -11184,6 +11213,18 @@
         d: "M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-symlink.mjs
+  var FileSymlink = [
+    [
+      "path",
+      {
+        d: "M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7"
+      }
+    ],
+    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
+    ["path", { d: "m10 18 3-3-3-3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-terminal.mjs
@@ -11254,19 +11295,6 @@
     ["path", { d: "m15 15-3-3-3 3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/file-user.mjs
-  var FileUser = [
-    [
-      "path",
-      {
-        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
-      }
-    ],
-    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
-    ["path", { d: "M16 22a4 4 0 0 0-8 0" }],
-    ["circle", { cx: "12", cy: "15", r: "3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/file-video-camera.mjs
   var FileVideoCamera = [
     [
@@ -11281,6 +11309,19 @@
       { d: "m10 17.843 3.033-1.755a.64.64 0 0 1 .967.56v4.704a.65.65 0 0 1-.967.56L10 20.157" }
     ],
     ["rect", { width: "7", height: "6", x: "3", y: "16", rx: "1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-user.mjs
+  var FileUser = [
+    [
+      "path",
+      {
+        d: "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+      }
+    ],
+    ["path", { d: "M14 2v5a1 1 0 0 0 1 1h5" }],
+    ["path", { d: "M16 22a4 4 0 0 0-8 0" }],
+    ["circle", { cx: "12", cy: "15", r: "3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/file-volume.mjs
@@ -11357,6 +11398,16 @@
     ["path", { d: "M17 16.5h4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/fire-extinguisher.mjs
+  var FireExtinguisher = [
+    ["path", { d: "M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5" }],
+    ["path", { d: "M9 18h8" }],
+    ["path", { d: "M18 3h-3" }],
+    ["path", { d: "M11 3a6 6 0 0 0-6 6v11" }],
+    ["path", { d: "M5 13h4" }],
+    ["path", { d: "M17 10a4 4 0 0 0-8 0v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2Z" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/fingerprint-pattern.mjs
   var FingerprintPattern = [
     ["path", { d: "M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" }],
@@ -11368,16 +11419,6 @@
     ["path", { d: "M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" }],
     ["path", { d: "M8.65 22c.21-.66.45-1.32.57-2" }],
     ["path", { d: "M9 6.8a6 6 0 0 1 9 5.2v2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/fire-extinguisher.mjs
-  var FireExtinguisher = [
-    ["path", { d: "M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5" }],
-    ["path", { d: "M9 18h8" }],
-    ["path", { d: "M18 3h-3" }],
-    ["path", { d: "M11 3a6 6 0 0 0-6 6v11" }],
-    ["path", { d: "M5 13h4" }],
-    ["path", { d: "M17 10a4 4 0 0 0-8 0v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2Z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/fish-off.mjs
@@ -11447,6 +11488,11 @@
     ["path", { d: "M7.656 2H8c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10.347" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/flag-triangle-right.mjs
+  var FlagTriangleRight = [
+    ["path", { d: "M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/flag-triangle-left.mjs
   var FlagTriangleLeft = [
     ["path", { d: "M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5" }]
@@ -11460,11 +11506,6 @@
         d: "M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/flag-triangle-right.mjs
-  var FlagTriangleRight = [
-    ["path", { d: "M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/flame-kindling.mjs
@@ -11595,6 +11636,15 @@
     ["path", { d: "M14.12 14.12 16 16" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/focus.mjs
+  var Focus = [
+    ["circle", { cx: "12", cy: "12", r: "3" }],
+    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
+    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
+    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
+    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/fold-horizontal.mjs
   var FoldHorizontal = [
     ["path", { d: "M2 12h6" }],
@@ -11605,15 +11655,6 @@
     ["path", { d: "M12 20v2" }],
     ["path", { d: "m19 9-3 3 3 3" }],
     ["path", { d: "m5 15 3-3-3-3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/focus.mjs
-  var Focus = [
-    ["circle", { cx: "12", cy: "12", r: "3" }],
-    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
-    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
-    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/fold-vertical.mjs
@@ -11641,15 +11682,15 @@
     ["path", { d: "M15 17v-2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/folder-check.mjs
-  var FolderCheck = [
+  // node_modules/lucide/dist/esm/icons/folder-bookmark.mjs
+  var FolderBookmark = [
+    ["path", { d: "M12 6v8l3-3 3 3V6" }],
     [
       "path",
       {
-        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"
       }
-    ],
-    ["path", { d: "m9 13 2 2 4-4" }]
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-clock.mjs
@@ -11662,17 +11703,6 @@
       }
     ],
     ["circle", { cx: "16", cy: "16", r: "6" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/folder-bookmark.mjs
-  var FolderBookmark = [
-    ["path", { d: "M12 6v8l3-3 3 3V6" }],
-    [
-      "path",
-      {
-        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-closed.mjs
@@ -11696,6 +11726,17 @@
         d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folder-check.mjs
+  var FolderCheck = [
+    [
+      "path",
+      {
+        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+      }
+    ],
+    ["path", { d: "m9 13 2 2 4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-cog.mjs
@@ -11766,18 +11807,6 @@
     ["path", { d: "M7 13h3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/folder-input.mjs
-  var FolderInput = [
-    [
-      "path",
-      {
-        d: "M2 9V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1"
-      }
-    ],
-    ["path", { d: "M2 13h10" }],
-    ["path", { d: "m9 16 3-3-3-3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/folder-heart.mjs
   var FolderHeart = [
     [
@@ -11794,17 +11823,16 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/folder-kanban.mjs
-  var FolderKanban = [
+  // node_modules/lucide/dist/esm/icons/folder-input.mjs
+  var FolderInput = [
     [
       "path",
       {
-        d: "M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
+        d: "M2 9V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1"
       }
     ],
-    ["path", { d: "M8 10v4" }],
-    ["path", { d: "M12 10v2" }],
-    ["path", { d: "M16 10v6" }]
+    ["path", { d: "M2 13h10" }],
+    ["path", { d: "m9 16 3-3-3-3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-key.mjs
@@ -11818,6 +11846,19 @@
     ["path", { d: "M19 12v6" }],
     ["path", { d: "M19 14h2" }],
     ["circle", { cx: "19", cy: "20", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folder-kanban.mjs
+  var FolderKanban = [
+    [
+      "path",
+      {
+        d: "M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
+      }
+    ],
+    ["path", { d: "M8 10v4" }],
+    ["path", { d: "M12 10v2" }],
+    ["path", { d: "M16 10v6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-minus.mjs
@@ -11854,6 +11895,16 @@
     ["circle", { cx: "14", cy: "15", r: "1" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/folder-open.mjs
+  var FolderOpen = [
+    [
+      "path",
+      {
+        d: "m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/folder-output.mjs
   var FolderOutput = [
     [
@@ -11864,16 +11915,6 @@
     ],
     ["path", { d: "M2 13h10" }],
     ["path", { d: "m5 10-3 3 3 3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/folder-open.mjs
-  var FolderOpen = [
-    [
-      "path",
-      {
-        d: "m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-pen.mjs
@@ -11904,18 +11945,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/folder-search-2.mjs
-  var FolderSearch2 = [
-    ["circle", { cx: "11.5", cy: "12.5", r: "2.5" }],
-    [
-      "path",
-      {
-        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
-      }
-    ],
-    ["path", { d: "M13.3 14.3 15 16" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/folder-root.mjs
   var FolderRoot = [
     [
@@ -11926,6 +11955,18 @@
     ],
     ["circle", { cx: "12", cy: "13", r: "2" }],
     ["path", { d: "M12 15v5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folder-search-2.mjs
+  var FolderSearch2 = [
+    ["circle", { cx: "11.5", cy: "12.5", r: "2.5" }],
+    [
+      "path",
+      {
+        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+      }
+    ],
+    ["path", { d: "M13.3 14.3 15 16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/folder-search.mjs
@@ -11951,44 +11992,6 @@
     ["path", { d: "m8 16 3-3-3-3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/folder-sync.mjs
-  var FolderSync = [
-    [
-      "path",
-      {
-        d: "M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v.5"
-      }
-    ],
-    ["path", { d: "M12 10v4h4" }],
-    ["path", { d: "m12 14 1.535-1.605a5 5 0 0 1 8 1.5" }],
-    ["path", { d: "M22 22v-4h-4" }],
-    ["path", { d: "m22 18-1.535 1.605a5 5 0 0 1-8-1.5" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/folder-up.mjs
-  var FolderUp = [
-    [
-      "path",
-      {
-        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
-      }
-    ],
-    ["path", { d: "M12 10v6" }],
-    ["path", { d: "m9 13 3-3 3 3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/folder-x.mjs
-  var FolderX = [
-    [
-      "path",
-      {
-        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
-      }
-    ],
-    ["path", { d: "m9.5 10.5 5 5" }],
-    ["path", { d: "m14.5 10.5-5 5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/folder-tree.mjs
   var FolderTree = [
     [
@@ -12007,6 +12010,44 @@
     ["path", { d: "M3 3v13a2 2 0 0 0 2 2h3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/folder-up.mjs
+  var FolderUp = [
+    [
+      "path",
+      {
+        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+      }
+    ],
+    ["path", { d: "M12 10v6" }],
+    ["path", { d: "m9 13 3-3 3 3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folder-sync.mjs
+  var FolderSync = [
+    [
+      "path",
+      {
+        d: "M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v.5"
+      }
+    ],
+    ["path", { d: "M12 10v4h4" }],
+    ["path", { d: "m12 14 1.535-1.605a5 5 0 0 1 8 1.5" }],
+    ["path", { d: "M22 22v-4h-4" }],
+    ["path", { d: "m22 18-1.535 1.605a5 5 0 0 1-8-1.5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folder-x.mjs
+  var FolderX = [
+    [
+      "path",
+      {
+        d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+      }
+    ],
+    ["path", { d: "m9.5 10.5 5 5" }],
+    ["path", { d: "m14.5 10.5-5 5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/folder.mjs
   var Folder = [
     [
@@ -12015,6 +12056,17 @@
         d: "M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/folders.mjs
+  var Folders = [
+    [
+      "path",
+      {
+        d: "M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z"
+      }
+    ],
+    ["path", { d: "M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/footprints.mjs
@@ -12033,17 +12085,6 @@
     ],
     ["path", { d: "M16 17h4" }],
     ["path", { d: "M4 13h4" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/folders.mjs
-  var Folders = [
-    [
-      "path",
-      {
-        d: "M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z"
-      }
-    ],
-    ["path", { d: "M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/forklift.mjs
@@ -12133,6 +12174,13 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/gallery-horizontal.mjs
+  var GalleryHorizontal = [
+    ["path", { d: "M2 3v18" }],
+    ["rect", { width: "12", height: "18", x: "6", y: "3", rx: "2" }],
+    ["path", { d: "M22 3v18" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/gallery-horizontal-end.mjs
   var GalleryHorizontalEnd = [
     ["path", { d: "M2 7v10" }],
@@ -12140,11 +12188,11 @@
     ["rect", { width: "12", height: "18", x: "10", y: "3", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/gallery-horizontal.mjs
-  var GalleryHorizontal = [
-    ["path", { d: "M2 3v18" }],
-    ["rect", { width: "12", height: "18", x: "6", y: "3", rx: "2" }],
-    ["path", { d: "M22 3v18" }]
+  // node_modules/lucide/dist/esm/icons/gallery-vertical-end.mjs
+  var GalleryVerticalEnd = [
+    ["path", { d: "M7 2h10" }],
+    ["path", { d: "M5 6h14" }],
+    ["rect", { width: "18", height: "12", x: "3", y: "10", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/gallery-thumbnails.mjs
@@ -12154,13 +12202,6 @@
     ["path", { d: "M9 21h1" }],
     ["path", { d: "M14 21h1" }],
     ["path", { d: "M19 21h1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/gallery-vertical-end.mjs
-  var GalleryVerticalEnd = [
-    ["path", { d: "M7 2h10" }],
-    ["path", { d: "M5 6h14" }],
-    ["rect", { width: "18", height: "12", x: "3", y: "10", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/gallery-vertical.mjs
@@ -12256,19 +12297,19 @@
     ["path", { d: "M9 12V3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/ghost.mjs
-  var Ghost = [
-    ["path", { d: "M9 10h.01" }],
-    ["path", { d: "M15 10h.01" }],
-    ["path", { d: "M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/gift.mjs
   var Gift = [
     ["path", { d: "M12 7v14" }],
     ["path", { d: "M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" }],
     ["path", { d: "M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5" }],
     ["rect", { x: "3", y: "7", width: "18", height: "4", rx: "1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/ghost.mjs
+  var Ghost = [
+    ["path", { d: "M9 10h.01" }],
+    ["path", { d: "M15 10h.01" }],
+    ["path", { d: "M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/git-branch-minus.mjs
@@ -12303,13 +12344,6 @@
     ["line", { x1: "15", x2: "21", y1: "12", y2: "12" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/git-commit-vertical.mjs
-  var GitCommitVertical = [
-    ["path", { d: "M12 3v6" }],
-    ["circle", { cx: "12", cy: "12", r: "3" }],
-    ["path", { d: "M12 15v6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/git-compare-arrows.mjs
   var GitCompareArrows = [
     ["circle", { cx: "5", cy: "6", r: "3" }],
@@ -12320,21 +12354,19 @@
     ["path", { d: "m9 15 3 3-3 3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/git-commit-vertical.mjs
+  var GitCommitVertical = [
+    ["path", { d: "M12 3v6" }],
+    ["circle", { cx: "12", cy: "12", r: "3" }],
+    ["path", { d: "M12 15v6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/git-compare.mjs
   var GitCompare = [
     ["circle", { cx: "18", cy: "18", r: "3" }],
     ["circle", { cx: "6", cy: "6", r: "3" }],
     ["path", { d: "M13 6h3a2 2 0 0 1 2 2v7" }],
     ["path", { d: "M11 18H8a2 2 0 0 1-2-2V9" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/git-fork.mjs
-  var GitFork = [
-    ["circle", { cx: "12", cy: "18", r: "3" }],
-    ["circle", { cx: "6", cy: "6", r: "3" }],
-    ["circle", { cx: "18", cy: "6", r: "3" }],
-    ["path", { d: "M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" }],
-    ["path", { d: "M12 12v3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/git-graph.mjs
@@ -12345,6 +12377,15 @@
     ["path", { d: "M12 3v18" }],
     ["circle", { cx: "19", cy: "6", r: "3" }],
     ["path", { d: "M16 15.7A9 9 0 0 0 19 9" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/git-fork.mjs
+  var GitFork = [
+    ["circle", { cx: "12", cy: "18", r: "3" }],
+    ["circle", { cx: "6", cy: "6", r: "3" }],
+    ["circle", { cx: "18", cy: "6", r: "3" }],
+    ["path", { d: "M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9" }],
+    ["path", { d: "M12 12v3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/git-merge-conflict.mjs
@@ -12410,14 +12451,6 @@
     ["line", { x1: "6", x2: "6", y1: "9", y2: "21" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/git-pull-request.mjs
-  var GitPullRequest = [
-    ["circle", { cx: "18", cy: "18", r: "3" }],
-    ["circle", { cx: "6", cy: "6", r: "3" }],
-    ["path", { d: "M13 6h3a2 2 0 0 1 2 2v7" }],
-    ["line", { x1: "6", x2: "6", y1: "9", y2: "21" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/glass-water.mjs
   var GlassWater = [
     [
@@ -12427,6 +12460,14 @@
       }
     ],
     ["path", { d: "M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/git-pull-request.mjs
+  var GitPullRequest = [
+    ["circle", { cx: "18", cy: "18", r: "3" }],
+    ["circle", { cx: "6", cy: "6", r: "3" }],
+    ["path", { d: "M13 6h3a2 2 0 0 1 2 2v7" }],
+    ["line", { x1: "6", x2: "6", y1: "9", y2: "21" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/glasses.mjs
@@ -12493,18 +12534,6 @@
     ["circle", { cx: "8", cy: "11", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/graduation-cap.mjs
-  var GraduationCap = [
-    [
-      "path",
-      {
-        d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
-      }
-    ],
-    ["path", { d: "M22 10v6" }],
-    ["path", { d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/grape.mjs
   var Grape = [
     ["path", { d: "M22 5V2l-5.89 5.89" }],
@@ -12516,6 +12545,18 @@
     ["circle", { cx: "6.56", cy: "13.2", r: "3" }],
     ["circle", { cx: "10.8", cy: "17.44", r: "3" }],
     ["circle", { cx: "5", cy: "19", r: "3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/graduation-cap.mjs
+  var GraduationCap = [
+    [
+      "path",
+      {
+        d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+      }
+    ],
+    ["path", { d: "M22 10v6" }],
+    ["path", { d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/grid-2x2-check.mjs
@@ -12577,6 +12618,16 @@
     ["path", { d: "M15 3v18" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/grip-horizontal.mjs
+  var GripHorizontal = [
+    ["circle", { cx: "12", cy: "9", r: "1" }],
+    ["circle", { cx: "19", cy: "9", r: "1" }],
+    ["circle", { cx: "5", cy: "9", r: "1" }],
+    ["circle", { cx: "12", cy: "15", r: "1" }],
+    ["circle", { cx: "19", cy: "15", r: "1" }],
+    ["circle", { cx: "5", cy: "15", r: "1" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/grip-vertical.mjs
   var GripVertical = [
     ["circle", { cx: "9", cy: "12", r: "1" }],
@@ -12610,32 +12661,6 @@
     ["rect", { width: "7", height: "5", x: "10", y: "12", rx: "1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/grip-horizontal.mjs
-  var GripHorizontal = [
-    ["circle", { cx: "12", cy: "9", r: "1" }],
-    ["circle", { cx: "19", cy: "9", r: "1" }],
-    ["circle", { cx: "5", cy: "9", r: "1" }],
-    ["circle", { cx: "12", cy: "15", r: "1" }],
-    ["circle", { cx: "19", cy: "15", r: "1" }],
-    ["circle", { cx: "5", cy: "15", r: "1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/ham.mjs
-  var Ham = [
-    ["path", { d: "M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856" }],
-    [
-      "path",
-      { d: "M13.144 21.144A7.274 4.365 45 0 0 2.856 10.856a7.274 4.365 45 0 0 10.288 10.288" }
-    ],
-    [
-      "path",
-      {
-        d: "M16.565 10.435 18.6 8.4a2.501 2.501 0 1 0 1.65-4.65 2.5 2.5 0 1 0-4.66 1.66l-2.024 2.025"
-      }
-    ],
-    ["path", { d: "m8.5 16.5-1-1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/guitar.mjs
   var Guitar = [
     ["path", { d: "m11.9 12.1 4.514-4.514" }],
@@ -12652,6 +12677,22 @@
         d: "M8.23 9.85A3 3 0 0 1 11 8a5 5 0 0 1 5 5 3 3 0 0 1-1.85 2.77l-.92.38A2 2 0 0 0 12 18a4 4 0 0 1-4 4 6 6 0 0 1-6-6 4 4 0 0 1 4-4 2 2 0 0 0 1.85-1.23z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/ham.mjs
+  var Ham = [
+    ["path", { d: "M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856" }],
+    [
+      "path",
+      { d: "M13.144 21.144A7.274 4.365 45 0 0 2.856 10.856a7.274 4.365 45 0 0 10.288 10.288" }
+    ],
+    [
+      "path",
+      {
+        d: "M16.565 10.435 18.6 8.4a2.501 2.501 0 1 0 1.65-4.65 2.5 2.5 0 1 0-4.66 1.66l-2.024 2.025"
+      }
+    ],
+    ["path", { d: "m8.5 16.5-1-1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/hamburger.mjs
@@ -12766,6 +12807,17 @@
     ["path", { d: "M5 14v6a1 1 0 0 1-1 1H2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/handbag.mjs
+  var Handbag = [
+    [
+      "path",
+      {
+        d: "M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z"
+      }
+    ],
+    ["path", { d: "M8 11V6a4 4 0 0 1 8 0v5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/hand.mjs
   var Hand = [
     ["path", { d: "M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }],
@@ -12777,17 +12829,6 @@
         d: "M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/handbag.mjs
-  var Handbag = [
-    [
-      "path",
-      {
-        d: "M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z"
-      }
-    ],
-    ["path", { d: "M8 11V6a4 4 0 0 1 8 0v5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/handshake.mjs
@@ -12813,6 +12854,15 @@
     ["path", { d: "M10 18h.01" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/hard-drive-upload.mjs
+  var HardDriveUpload = [
+    ["path", { d: "m16 6-4-4-4 4" }],
+    ["path", { d: "M12 2v8" }],
+    ["rect", { width: "20", height: "8", x: "2", y: "14", rx: "2" }],
+    ["path", { d: "M6 18h.01" }],
+    ["path", { d: "M10 18h.01" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/hard-drive.mjs
   var HardDrive = [
     ["path", { d: "M10 16h.01" }],
@@ -12824,15 +12874,6 @@
     ],
     ["path", { d: "M21.946 12.013H2.054" }],
     ["path", { d: "M6 16h.01" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/hard-drive-upload.mjs
-  var HardDriveUpload = [
-    ["path", { d: "m16 6-4-4-4 4" }],
-    ["path", { d: "M12 2v8" }],
-    ["rect", { width: "20", height: "8", x: "2", y: "14", rx: "2" }],
-    ["path", { d: "M6 18h.01" }],
-    ["path", { d: "M10 18h.01" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/hard-hat.mjs
@@ -12891,17 +12932,6 @@
     ["rect", { x: "2", y: "5", width: "20", height: "14", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/hdmi-port.mjs
-  var HdmiPort = [
-    [
-      "path",
-      {
-        d: "M22 9a1 1 0 00-1-1H3a1 1 0 00-1 1v4a1 1 0 001 1h.5a2 2 0 011.6.8l.3.4A2 2 0 007 16h10a2 2 0 001.6-.8l.3-.4a2 2 0 011.6-.8h.5a1 1 0 001-1z"
-      }
-    ],
-    ["path", { d: "M8 12h8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/heading-1.mjs
   var Heading1 = [
     ["path", { d: "M4 12h8" }],
@@ -12916,6 +12946,17 @@
     ["path", { d: "M4 18V6" }],
     ["path", { d: "M12 18V6" }],
     ["path", { d: "M21 18h-4c0-4 4-3 4-6 0-1.5-2-2.5-4-1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/hdmi-port.mjs
+  var HdmiPort = [
+    [
+      "path",
+      {
+        d: "M22 9a1 1 0 00-1-1H3a1 1 0 00-1 1v4a1 1 0 001 1h.5a2 2 0 011.6.8l.3.4A2 2 0 007 16h10a2 2 0 001.6-.8l.3-.4a2 2 0 011.6-.8h.5a1 1 0 001-1z"
+      }
+    ],
+    ["path", { d: "M8 12h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/heading-3.mjs
@@ -12936,15 +12977,6 @@
     ["path", { d: "M4 18V6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/heading-5.mjs
-  var Heading5 = [
-    ["path", { d: "M4 12h8" }],
-    ["path", { d: "M4 18V6" }],
-    ["path", { d: "M12 18V6" }],
-    ["path", { d: "M17 13v-3h4" }],
-    ["path", { d: "M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/heading-6.mjs
   var Heading6 = [
     ["path", { d: "M4 12h8" }],
@@ -12961,14 +12993,13 @@
     ["path", { d: "M18 20V4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/headphones.mjs
-  var Headphones = [
-    [
-      "path",
-      {
-        d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"
-      }
-    ]
+  // node_modules/lucide/dist/esm/icons/heading-5.mjs
+  var Heading5 = [
+    ["path", { d: "M4 12h8" }],
+    ["path", { d: "M4 18V6" }],
+    ["path", { d: "M12 18V6" }],
+    ["path", { d: "M17 13v-3h4" }],
+    ["path", { d: "M17 17.7c.4.2.8.3 1.3.3 1.5 0 2.7-1.1 2.7-2.5S19.8 13 18.3 13H17" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/headphone-off.mjs
@@ -12978,6 +13009,16 @@
     ["path", { d: "m2 2 20 20" }],
     ["path", { d: "M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3" }],
     ["path", { d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/headphones.mjs
+  var Headphones = [
+    [
+      "path",
+      {
+        d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/headset.mjs
@@ -13116,6 +13157,12 @@
     ["path", { d: "M8 13H2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/highlighter.mjs
+  var Highlighter = [
+    ["path", { d: "m9 11-6 6v3h9l3-3" }],
+    ["path", { d: "m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/hexagon.mjs
   var Hexagon = [
     [
@@ -13124,21 +13171,6 @@
         d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/highlighter.mjs
-  var Highlighter = [
-    ["path", { d: "m9 11-6 6v3h9l3-3" }],
-    ["path", { d: "m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/hospital.mjs
-  var Hospital = [
-    ["path", { d: "M12 7v4" }],
-    ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3" }],
-    ["path", { d: "M14 9h-4" }],
-    ["path", { d: "M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/hop-off.mjs
@@ -13205,6 +13237,15 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/hospital.mjs
+  var Hospital = [
+    ["path", { d: "M12 7v4" }],
+    ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3" }],
+    ["path", { d: "M14 9h-4" }],
+    ["path", { d: "M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" }],
+    ["path", { d: "M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/hotel.mjs
   var Hotel = [
     ["path", { d: "M10 22v-6.57" }],
@@ -13217,6 +13258,14 @@
     ["path", { d: "M8 11h.01" }],
     ["path", { d: "M8 7h.01" }],
     ["rect", { x: "4", y: "2", width: "16", height: "20", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/hourglass.mjs
+  var Hourglass = [
+    ["path", { d: "M5 22h14" }],
+    ["path", { d: "M5 2h14" }],
+    ["path", { d: "M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" }],
+    ["path", { d: "M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/house-heart.mjs
@@ -13246,14 +13295,6 @@
         d: "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/hourglass.mjs
-  var Hourglass = [
-    ["path", { d: "M5 22h14" }],
-    ["path", { d: "M5 2h14" }],
-    ["path", { d: "M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" }],
-    ["path", { d: "M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/house-plus.mjs
@@ -13428,17 +13469,6 @@
     ["path", { d: "M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/inbox.mjs
-  var Inbox = [
-    ["polyline", { points: "22 12 16 12 14 15 10 15 8 12 2 12" }],
-    [
-      "path",
-      {
-        d: "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/indian-rupee.mjs
   var IndianRupee = [
     ["path", { d: "M6 3h12" }],
@@ -13451,6 +13481,17 @@
   // node_modules/lucide/dist/esm/icons/infinity.mjs
   var Infinity = [
     ["path", { d: "M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/inbox.mjs
+  var Inbox = [
+    ["polyline", { points: "22 12 16 12 14 15 10 15 8 12 2 12" }],
+    [
+      "path",
+      {
+        d: "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/info.mjs
@@ -13503,13 +13544,6 @@
     ["circle", { cx: "12", cy: "6", r: "3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/kanban.mjs
-  var Kanban = [
-    ["path", { d: "M5 3v14" }],
-    ["path", { d: "M12 3v8" }],
-    ["path", { d: "M19 3v18" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/kayak.mjs
   var Kayak = [
     ["path", { d: "M18 17a1 1 0 0 0-1 1v1a2 2 0 1 0 2-2z" }],
@@ -13521,6 +13555,13 @@
     ],
     ["path", { d: "m6.707 6.707 10.586 10.586" }],
     ["path", { d: "M7 5a2 2 0 1 0-2 2h1a1 1 0 0 0 1-1z" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/kanban.mjs
+  var Kanban = [
+    ["path", { d: "M5 3v14" }],
+    ["path", { d: "M12 3v8" }],
+    ["path", { d: "M19 3v18" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/key-round.mjs
@@ -13571,19 +13612,6 @@
     ["path", { d: "M18 12v4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/keyboard.mjs
-  var Keyboard = [
-    ["path", { d: "M10 8h.01" }],
-    ["path", { d: "M12 12h.01" }],
-    ["path", { d: "M14 8h.01" }],
-    ["path", { d: "M16 12h.01" }],
-    ["path", { d: "M18 8h.01" }],
-    ["path", { d: "M6 8h.01" }],
-    ["path", { d: "M7 16h10" }],
-    ["path", { d: "M8 12h.01" }],
-    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/keyboard-off.mjs
   var KeyboardOff = [
     ["path", { d: "M 20 4 A2 2 0 0 1 22 6" }],
@@ -13596,6 +13624,19 @@
     ["path", { d: "M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2" }],
     ["path", { d: "M6 8h.01" }],
     ["path", { d: "M8 12h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/keyboard.mjs
+  var Keyboard = [
+    ["path", { d: "M10 8h.01" }],
+    ["path", { d: "M12 12h.01" }],
+    ["path", { d: "M14 8h.01" }],
+    ["path", { d: "M16 12h.01" }],
+    ["path", { d: "M18 8h.01" }],
+    ["path", { d: "M6 8h.01" }],
+    ["path", { d: "M7 16h10" }],
+    ["path", { d: "M8 12h.01" }],
+    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/lamp-ceiling.mjs
@@ -13635,6 +13676,18 @@
     ["path", { d: "M9 22h6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/lamp-wall-down.mjs
+  var LampWallDown = [
+    [
+      "path",
+      {
+        d: "M19.929 18.629A1 1 0 0 1 19 20H9a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 11 13h6a1 1 0 0 1 .928.629z"
+      }
+    ],
+    ["path", { d: "M6 3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" }],
+    ["path", { d: "M8 6h4a2 2 0 0 1 2 2v5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/lamp-wall-up.mjs
   var LampWallUp = [
     [
@@ -13657,18 +13710,6 @@
       }
     ],
     ["path", { d: "M8 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/lamp-wall-down.mjs
-  var LampWallDown = [
-    [
-      "path",
-      {
-        d: "M19.929 18.629A1 1 0 0 1 19 20H9a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 11 13h6a1 1 0 0 1 .928.629z"
-      }
-    ],
-    ["path", { d: "M6 3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" }],
-    ["path", { d: "M8 6h4a2 2 0 0 1 2 2v5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/land-plot.mjs
@@ -13697,6 +13738,13 @@
     ["path", { d: "M6 18v-7" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/laptop-minimal-check.mjs
+  var LaptopMinimalCheck = [
+    ["path", { d: "M2 20h20" }],
+    ["path", { d: "m9 10 2 2 4-4" }],
+    ["rect", { x: "3", y: "4", width: "18", height: "12", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/languages.mjs
   var Languages = [
     ["path", { d: "m5 8 6 6" }],
@@ -13705,13 +13753,6 @@
     ["path", { d: "M7 2h1" }],
     ["path", { d: "m22 22-5-10-5 10" }],
     ["path", { d: "M14 18h6" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/laptop-minimal-check.mjs
-  var LaptopMinimalCheck = [
-    ["path", { d: "M2 20h20" }],
-    ["path", { d: "m9 10 2 2 4-4" }],
-    ["rect", { x: "3", y: "4", width: "18", height: "12", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/laptop-minimal.mjs
@@ -13731,13 +13772,6 @@
     ["path", { d: "M20.054 15.987H3.946" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/lasso.mjs
-  var Lasso = [
-    ["path", { d: "M3.704 14.467a10 8 0 1 1 3.115 2.375" }],
-    ["path", { d: "M7 22a5 5 0 0 1-2-3.994" }],
-    ["circle", { cx: "5", cy: "16", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/lasso-select.mjs
   var LassoSelect = [
     ["path", { d: "M7 22a5 5 0 0 1-2-4" }],
@@ -13755,16 +13789,11 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/layer-arrow-up.mjs
-  var LayerArrowUp = [
-    ["path", { d: "M12 14V4" }],
-    [
-      "path",
-      {
-        d: "M7.674 10.774 2.58 13.09a1 1 0 000 1.822l8.6 3.91a2 2 0 001.65 0l8.58-3.9a1 1 0 00.59-.92 1 1 0 00-.59-.922l-5.078-2.308"
-      }
-    ],
-    ["path", { d: "m9 7 3-3 3 3" }]
+  // node_modules/lucide/dist/esm/icons/lasso.mjs
+  var Lasso = [
+    ["path", { d: "M3.704 14.467a10 8 0 1 1 3.115 2.375" }],
+    ["path", { d: "M7 22a5 5 0 0 1-2-3.994" }],
+    ["circle", { cx: "5", cy: "16", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/layer-arrow-down.mjs
@@ -13778,6 +13807,18 @@
       }
     ],
     ["path", { d: "m9 17 3 3 3-3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/layer-arrow-up.mjs
+  var LayerArrowUp = [
+    ["path", { d: "M12 14V4" }],
+    [
+      "path",
+      {
+        d: "M7.674 10.774 2.58 13.09a1 1 0 000 1.822l8.6 3.91a2 2 0 001.65 0l8.58-3.9a1 1 0 00.59-.92 1 1 0 00-.59-.922l-5.078-2.308"
+      }
+    ],
+    ["path", { d: "m9 7 3-3 3 3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/layers-2.mjs
@@ -14046,14 +14087,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/link-2-off.mjs
-  var Link2Off = [
-    ["path", { d: "M9 17H7A5 5 0 0 1 7 7" }],
-    ["path", { d: "M15 7h2a5 5 0 0 1 4 8" }],
-    ["line", { x1: "8", x2: "12", y1: "12", y2: "12" }],
-    ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/line-style.mjs
   var LineStyle = [
     ["path", { d: "M11 5h2" }],
@@ -14064,10 +14097,12 @@
     ["path", { d: "M3 5h2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/link.mjs
-  var Link = [
-    ["path", { d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" }],
-    ["path", { d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" }]
+  // node_modules/lucide/dist/esm/icons/link-2-off.mjs
+  var Link2Off = [
+    ["path", { d: "M9 17H7A5 5 0 0 1 7 7" }],
+    ["path", { d: "M15 7h2a5 5 0 0 1 4 8" }],
+    ["line", { x1: "8", x2: "12", y1: "12", y2: "12" }],
+    ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/link-2.mjs
@@ -14075,6 +14110,12 @@
     ["path", { d: "M9 17H7A5 5 0 0 1 7 7h2" }],
     ["path", { d: "M15 7h2a5 5 0 1 1 0 10h-2" }],
     ["line", { x1: "8", x2: "16", y1: "12", y2: "12" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/link.mjs
+  var Link = [
+    ["path", { d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" }],
+    ["path", { d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/list-check.mjs
@@ -14110,6 +14151,15 @@
     ["path", { d: "M3 19h8" }],
     ["path", { d: "m15 8 3-3 3 3" }],
     ["path", { d: "m15 16 3 3 3-3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/list-clock.mjs
+  var ListClock = [
+    ["path", { d: "M16 13v2.2l1.6 1" }],
+    ["path", { d: "M3 12h3.458" }],
+    ["path", { d: "M3 19h3.832" }],
+    ["path", { d: "M3 5h18" }],
+    ["circle", { cx: "16", cy: "15", r: "6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/list-collapse.mjs
@@ -14162,6 +14212,14 @@
     ["path", { d: "m3 8 4 4-4 4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/list-minus.mjs
+  var ListMinus = [
+    ["path", { d: "M16 5H3" }],
+    ["path", { d: "M11 12H3" }],
+    ["path", { d: "M16 19H3" }],
+    ["path", { d: "M21 12h-6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/list-music.mjs
   var ListMusic = [
     ["path", { d: "M16 5H3" }],
@@ -14169,14 +14227,6 @@
     ["path", { d: "M11 19H3" }],
     ["path", { d: "M21 16V5" }],
     ["circle", { cx: "18", cy: "16", r: "3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/list-minus.mjs
-  var ListMinus = [
-    ["path", { d: "M16 5H3" }],
-    ["path", { d: "M11 12H3" }],
-    ["path", { d: "M16 19H3" }],
-    ["path", { d: "M21 12h-6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/list-ordered.mjs
@@ -14270,9 +14320,6 @@
     ["path", { d: "m20.5 9.5-5 5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/loader-circle.mjs
-  var LoaderCircle = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56" }]];
-
   // node_modules/lucide/dist/esm/icons/list.mjs
   var List = [
     ["path", { d: "M3 5h.01" }],
@@ -14282,6 +14329,9 @@
     ["path", { d: "M8 12h13" }],
     ["path", { d: "M8 19h13" }]
   ];
+
+  // node_modules/lucide/dist/esm/icons/loader-circle.mjs
+  var LoaderCircle = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56" }]];
 
   // node_modules/lucide/dist/esm/icons/loader-pinwheel.mjs
   var LoaderPinwheel = [
@@ -14359,18 +14409,18 @@
     ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/log-out.mjs
-  var LogOut = [
-    ["path", { d: "m16 17 5-5-5-5" }],
-    ["path", { d: "M21 12H9" }],
-    ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/log-in.mjs
   var LogIn = [
     ["path", { d: "m10 17 5-5-5-5" }],
     ["path", { d: "M15 12H3" }],
     ["path", { d: "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/log-out.mjs
+  var LogOut = [
+    ["path", { d: "m16 17 5-5-5-5" }],
+    ["path", { d: "M21 12H9" }],
+    ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/logs.mjs
@@ -14477,14 +14527,6 @@
     ["path", { d: "m22 22-1.5-1.5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/mail-x.mjs
-  var MailX = [
-    ["path", { d: "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9" }],
-    ["path", { d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" }],
-    ["path", { d: "m17 17 4 4" }],
-    ["path", { d: "m21 17-4 4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/mail-warning.mjs
   var MailWarning = [
     ["path", { d: "M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5" }],
@@ -14493,10 +14535,12 @@
     ["path", { d: "M20 22v.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/mail.mjs
-  var Mail = [
-    ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" }],
-    ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2" }]
+  // node_modules/lucide/dist/esm/icons/mail-x.mjs
+  var MailX = [
+    ["path", { d: "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9" }],
+    ["path", { d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" }],
+    ["path", { d: "m17 17 4 4" }],
+    ["path", { d: "m21 17-4 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/mailbox.mjs
@@ -14505,6 +14549,12 @@
     ["polyline", { points: "15,9 18,9 18,11" }],
     ["path", { d: "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2" }],
     ["line", { x1: "6", x2: "7", y1: "10", y2: "10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/mail.mjs
+  var Mail = [
+    ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" }],
+    ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/mails.mjs
@@ -14686,6 +14736,23 @@
     ["circle", { cx: "12", cy: "10", r: "3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/map-pinned.mjs
+  var MapPinned = [
+    [
+      "path",
+      {
+        d: "M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"
+      }
+    ],
+    ["circle", { cx: "12", cy: "8", r: "2" }],
+    [
+      "path",
+      {
+        d: "M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/map-plus.mjs
   var MapPlus = [
     [
@@ -14710,23 +14777,6 @@
     ],
     ["path", { d: "M15 5.764v15" }],
     ["path", { d: "M9 3.236v15" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/map-pinned.mjs
-  var MapPinned = [
-    [
-      "path",
-      {
-        d: "M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"
-      }
-    ],
-    ["circle", { cx: "12", cy: "8", r: "2" }],
-    [
-      "path",
-      {
-        d: "M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/mars-stroke.mjs
@@ -14883,18 +14933,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/message-circle-off.mjs
-  var MessageCircleOff = [
-    ["path", { d: "m2 2 20 20" }],
-    [
-      "path",
-      {
-        d: "M4.93 4.929a10 10 0 0 0-1.938 11.412 2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 0 0 11.302-1.989"
-      }
-    ],
-    ["path", { d: "M8.35 2.69A10 10 0 0 1 21.3 15.65" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/message-circle-more.mjs
   var MessageCircleMore = [
     [
@@ -14906,6 +14944,18 @@
     ["path", { d: "M8 12h.01" }],
     ["path", { d: "M12 12h.01" }],
     ["path", { d: "M16 12h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/message-circle-off.mjs
+  var MessageCircleOff = [
+    ["path", { d: "m2 2 20 20" }],
+    [
+      "path",
+      {
+        d: "M4.93 4.929a10 10 0 0 0-1.938 11.412 2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 0 0 11.302-1.989"
+      }
+    ],
+    ["path", { d: "M8.35 2.69A10 10 0 0 1 21.3 15.65" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/message-circle-plus.mjs
@@ -14989,17 +15039,16 @@
     ["path", { d: "m9 11 2 2 4-4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/message-square-diff.mjs
-  var MessageSquareDiff = [
+  // node_modules/lucide/dist/esm/icons/message-square-code.mjs
+  var MessageSquareCode = [
     [
       "path",
       {
         d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
       }
     ],
-    ["path", { d: "M10 15h4" }],
-    ["path", { d: "M10 9h4" }],
-    ["path", { d: "M12 7v4" }]
+    ["path", { d: "m10 8-3 3 3 3" }],
+    ["path", { d: "m14 14 3-3-3-3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/message-square-dashed.mjs
@@ -15016,16 +15065,17 @@
     ["path", { d: "M8 3h2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/message-square-code.mjs
-  var MessageSquareCode = [
+  // node_modules/lucide/dist/esm/icons/message-square-diff.mjs
+  var MessageSquareDiff = [
     [
       "path",
       {
         d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
       }
     ],
-    ["path", { d: "m10 8-3 3 3 3" }],
-    ["path", { d: "m14 14 3-3-3-3" }]
+    ["path", { d: "M10 15h4" }],
+    ["path", { d: "M10 9h4" }],
+    ["path", { d: "M12 7v4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/message-square-dot.mjs
@@ -15092,18 +15142,6 @@
     ["path", { d: "M8.656 3H20a2 2 0 0 1 2 2v11.344" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/message-square-quote.mjs
-  var MessageSquareQuote = [
-    ["path", { d: "M14 14a2 2 0 0 0 2-2V8h-2" }],
-    [
-      "path",
-      {
-        d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
-      }
-    ],
-    ["path", { d: "M8 14a2 2 0 0 0 2-2V8H8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/message-square-plus.mjs
   var MessageSquarePlus = [
     [
@@ -15114,6 +15152,18 @@
     ],
     ["path", { d: "M12 8v6" }],
     ["path", { d: "M9 11h6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/message-square-quote.mjs
+  var MessageSquareQuote = [
+    ["path", { d: "M14 14a2 2 0 0 0 2-2V8h-2" }],
+    [
+      "path",
+      {
+        d: "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+      }
+    ],
+    ["path", { d: "M8 14a2 2 0 0 0 2-2V8H8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/message-square-reply.mjs
@@ -15262,13 +15312,6 @@
     ["circle", { cx: "16", cy: "7", r: "5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/mic.mjs
-  var Mic = [
-    ["path", { d: "M12 19v3" }],
-    ["path", { d: "M19 10v2a7 7 0 0 1-14 0v-2" }],
-    ["rect", { x: "9", y: "2", width: "6", height: "13", rx: "3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/microchip.mjs
   var Microchip = [
     ["path", { d: "M10 12h4" }],
@@ -15283,6 +15326,13 @@
     ["rect", { x: "6", y: "2", width: "12", height: "20", rx: "2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/mic.mjs
+  var Mic = [
+    ["path", { d: "M12 19v3" }],
+    ["path", { d: "M19 10v2a7 7 0 0 1-14 0v-2" }],
+    ["rect", { x: "9", y: "2", width: "6", height: "13", rx: "3" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/microscope.mjs
   var Microscope = [
     ["path", { d: "M6 18h8" }],
@@ -15293,18 +15343,6 @@
     ["path", { d: "M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/milestone.mjs
-  var Milestone = [
-    ["path", { d: "M12 13v8" }],
-    ["path", { d: "M12 3v3" }],
-    [
-      "path",
-      {
-        d: "M18.172 6a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/microwave.mjs
   var Microwave = [
     ["rect", { width: "20", height: "15", x: "2", y: "4", rx: "2" }],
@@ -15312,6 +15350,17 @@
     ["path", { d: "M18 8v7" }],
     ["path", { d: "M6 19v2" }],
     ["path", { d: "M18 19v2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/midi-port.mjs
+  var MidiPort = [
+    ["path", { d: "M12 18h.01" }],
+    ["path", { d: "M15 2.458V5a1 1 0 01-1 1h-4a1 1 0 01-1-1V2.458" }],
+    ["path", { d: "M16 16h.01" }],
+    ["path", { d: "M18 12h.01" }],
+    ["path", { d: "M6 12h.01" }],
+    ["path", { d: "M8 16h.01" }],
+    ["circle", { cx: "12", cy: "12", r: "10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/milk-off.mjs
@@ -15325,6 +15374,18 @@
     ],
     ["path", { d: "M7 15a6.47 6.47 0 0 1 5 0 6.472 6.472 0 0 0 3.435.435" }],
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/milestone.mjs
+  var Milestone = [
+    ["path", { d: "M12 13v8" }],
+    ["path", { d: "M12 3v3" }],
+    [
+      "path",
+      {
+        d: "M18.172 6a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/milk.mjs
@@ -15358,6 +15419,13 @@
   // node_modules/lucide/dist/esm/icons/minus.mjs
   var Minus = [["path", { d: "M5 12h14" }]];
 
+  // node_modules/lucide/dist/esm/icons/mirror-rectangular.mjs
+  var MirrorRectangular = [
+    ["path", { d: "M11 6 8 9" }],
+    ["path", { d: "m16 7-8 8" }],
+    ["rect", { x: "4", y: "2", width: "16", height: "20", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/mirror-round.mjs
   var MirrorRound = [
     ["path", { d: "M10 6.6 8.6 8" }],
@@ -15373,13 +15441,6 @@
     ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
     ["path", { d: "M12 17v4" }],
     ["path", { d: "M8 21h8" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/mirror-rectangular.mjs
-  var MirrorRectangular = [
-    ["path", { d: "M11 6 8 9" }],
-    ["path", { d: "m16 7-8 8" }],
-    ["rect", { x: "4", y: "2", width: "16", height: "20", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/monitor-cloud.mjs
@@ -15432,6 +15493,15 @@
     ["path", { d: "M8.656 3H20a2 2 0 0 1 2 2v10a2 2 0 0 1-.293 1.042" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/monitor-pause.mjs
+  var MonitorPause = [
+    ["path", { d: "M10 13V7" }],
+    ["path", { d: "M14 13V7" }],
+    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
+    ["path", { d: "M12 17v4" }],
+    ["path", { d: "M8 21h8" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/monitor-play.mjs
   var MonitorPlay = [
     [
@@ -15443,15 +15513,6 @@
     ["path", { d: "M12 17v4" }],
     ["path", { d: "M8 21h8" }],
     ["rect", { x: "2", y: "3", width: "20", height: "14", rx: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/monitor-pause.mjs
-  var MonitorPause = [
-    ["path", { d: "M10 13V7" }],
-    ["path", { d: "M14 13V7" }],
-    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
-    ["path", { d: "M12 17v4" }],
-    ["path", { d: "M8 21h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/monitor-smartphone.mjs
@@ -15479,15 +15540,6 @@
     ["rect", { x: "9", y: "7", width: "6", height: "6", rx: "1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/monitor-up.mjs
-  var MonitorUp = [
-    ["path", { d: "m9 10 3-3 3 3" }],
-    ["path", { d: "M12 13V7" }],
-    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
-    ["path", { d: "M12 17v4" }],
-    ["path", { d: "M8 21h8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/monitor-x.mjs
   var MonitorX = [
     ["path", { d: "m14.5 12.5-5-5" }],
@@ -15497,11 +15549,13 @@
     ["path", { d: "M8 21h8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/monitor.mjs
-  var Monitor = [
+  // node_modules/lucide/dist/esm/icons/monitor-up.mjs
+  var MonitorUp = [
+    ["path", { d: "m9 10 3-3 3 3" }],
+    ["path", { d: "M12 13V7" }],
     ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
-    ["line", { x1: "8", x2: "16", y1: "21", y2: "21" }],
-    ["line", { x1: "12", x2: "12", y1: "17", y2: "21" }]
+    ["path", { d: "M12 17v4" }],
+    ["path", { d: "M8 21h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/moon-star.mjs
@@ -15516,12 +15570,50 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/monitor.mjs
+  var Monitor = [
+    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }],
+    ["line", { x1: "8", x2: "16", y1: "21", y2: "21" }],
+    ["line", { x1: "12", x2: "12", y1: "17", y2: "21" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/mop-sparkles.mjs
+  var MopSparkles = [
+    ["path", { d: "M10 22a3 3 0 01-3-3" }],
+    ["path", { d: "M10 22c2.761 0 5-1.79 5-4-4.42 0-4.08-5-8.5-5a4.501 4.501 0 000 9z" }],
+    ["path", { d: "M10 3H8" }],
+    ["path", { d: "M12.5 11.5 22 2" }],
+    ["path", { d: "M20 13v4" }],
+    ["path", { d: "M22 15h-4" }],
+    ["path", { d: "M4 5v4" }],
+    ["path", { d: "M6 7H2" }],
+    [
+      "path",
+      {
+        d: "m6.98 13.02 2.665-2.664a1.21 1.21 0 011.71 0l2.29 2.288a1.21 1.21 0 010 1.712l-2.088 2.087"
+      }
+    ],
+    ["path", { d: "M9 2v2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/moon.mjs
   var Moon = [
     [
       "path",
       {
         d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+      }
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/mop.mjs
+  var Mop = [
+    ["path", { d: "M10 22c2.761 0 5-1.79 5-4-4.42 0-4.08-5-8.5-5a1 1 0 100 9za3 3 0 01-3-3" }],
+    ["path", { d: "M12.5 11.5 22 2" }],
+    [
+      "path",
+      {
+        d: "m6.98 13.02 2.665-2.664a1.21 1.21 0 011.71 0l2.29 2.288a1.21 1.21 0 010 1.712l-2.088 2.087"
       }
     ]
   ];
@@ -15550,21 +15642,13 @@
     ["circle", { cx: "5", cy: "17", r: "3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/mountain.mjs
+  var Mountain = [["path", { d: "m8 3 4 8 5-5 5 15H2L8 3z" }]];
+
   // node_modules/lucide/dist/esm/icons/mountain-snow.mjs
   var MountainSnow = [
     ["path", { d: "m8 3 4 8 5-5 5 15H2L8 3z" }],
     ["path", { d: "M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/mountain.mjs
-  var Mountain = [["path", { d: "m8 3 4 8 5-5 5 15H2L8 3z" }]];
-
-  // node_modules/lucide/dist/esm/icons/mouse-off.mjs
-  var MouseOff = [
-    ["path", { d: "M12 6v.343" }],
-    ["path", { d: "M18.218 18.218A7 7 0 0 1 5 15V9a7 7 0 0 1 .782-3.218" }],
-    ["path", { d: "M19 13.343V9A7 7 0 0 0 8.56 2.902" }],
-    ["path", { d: "M22 22 2 2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/mouse-left.mjs
@@ -15572,6 +15656,14 @@
     ["path", { d: "M12 7.318V10" }],
     ["path", { d: "M5 10v5a7 7 0 0 0 14 0V9c0-3.527-2.608-6.515-6-7" }],
     ["circle", { cx: "7", cy: "4", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/mouse-off.mjs
+  var MouseOff = [
+    ["path", { d: "M12 6v.343" }],
+    ["path", { d: "M18.218 18.218A7 7 0 0 1 5 15V9a7 7 0 0 1 .782-3.218" }],
+    ["path", { d: "M19 13.343V9A7 7 0 0 0 8.56 2.902" }],
+    ["path", { d: "M22 22 2 2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/mouse-pointer-2-off.mjs
@@ -15608,17 +15700,6 @@
     ["path", { d: "m11.8 11.8 8.4 8.4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/mouse-pointer.mjs
-  var MousePointer = [
-    ["path", { d: "M12.586 12.586 19 19" }],
-    [
-      "path",
-      {
-        d: "M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/mouse-pointer-click.mjs
   var MousePointerClick = [
     ["path", { d: "M14 4.1 12 6" }],
@@ -15629,6 +15710,17 @@
       "path",
       {
         d: "M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"
+      }
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/mouse-pointer.mjs
+  var MousePointer = [
+    ["path", { d: "M12.586 12.586 19 19" }],
+    [
+      "path",
+      {
+        d: "M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z"
       }
     ]
   ];
@@ -15654,18 +15746,18 @@
     ["path", { d: "m18 16 3 3-3 3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/move-diagonal.mjs
-  var MoveDiagonal = [
-    ["path", { d: "M11 19H5v-6" }],
-    ["path", { d: "M13 5h6v6" }],
-    ["path", { d: "M19 5 5 19" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/move-diagonal-2.mjs
   var MoveDiagonal2 = [
     ["path", { d: "M19 13v6h-6" }],
     ["path", { d: "M5 11V5h6" }],
     ["path", { d: "m5 5 14 14" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/move-diagonal.mjs
+  var MoveDiagonal = [
+    ["path", { d: "M11 19H5v-6" }],
+    ["path", { d: "M13 5h6v6" }],
+    ["path", { d: "M19 5 5 19" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/move-down-left.mjs
@@ -15680,17 +15772,17 @@
     ["path", { d: "M5 5L19 19" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/move-down.mjs
+  var MoveDown = [
+    ["path", { d: "M8 18L12 22L16 18" }],
+    ["path", { d: "M12 2V22" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/move-horizontal.mjs
   var MoveHorizontal = [
     ["path", { d: "m18 8 4 4-4 4" }],
     ["path", { d: "M2 12h20" }],
     ["path", { d: "m6 8-4 4 4 4" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/move-down.mjs
-  var MoveDown = [
-    ["path", { d: "M8 18L12 22L16 18" }],
-    ["path", { d: "M12 2V22" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/move-left.mjs
@@ -15705,16 +15797,16 @@
     ["path", { d: "M2 12H22" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/move-up-right.mjs
-  var MoveUpRight = [
-    ["path", { d: "M13 5H19V11" }],
-    ["path", { d: "M19 5L5 19" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/move-up-left.mjs
   var MoveUpLeft = [
     ["path", { d: "M5 11V5H11" }],
     ["path", { d: "M5 5L19 19" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/move-up-right.mjs
+  var MoveUpRight = [
+    ["path", { d: "M13 5H19V11" }],
+    ["path", { d: "M19 5L5 19" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/move-up.mjs
@@ -15746,18 +15838,18 @@
     ["path", { d: "M12 18V2l7 4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/music-3.mjs
-  var Music3 = [
-    ["circle", { cx: "12", cy: "18", r: "4" }],
-    ["path", { d: "M16 18V2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/music-4.mjs
   var Music4 = [
     ["path", { d: "M9 18V5l12-2v13" }],
     ["path", { d: "m9 9 12-2" }],
     ["circle", { cx: "6", cy: "18", r: "3" }],
     ["circle", { cx: "18", cy: "16", r: "3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/music-3.mjs
+  var Music3 = [
+    ["circle", { cx: "12", cy: "18", r: "4" }],
+    ["path", { d: "M16 18V2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/music.mjs
@@ -15784,6 +15876,9 @@
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/navigation.mjs
+  var Navigation3 = [["polygon", { points: "3 11 22 2 13 21 11 13 3 11" }]];
+
   // node_modules/lucide/dist/esm/icons/network.mjs
   var Network = [
     ["rect", { x: "16", y: "16", width: "6", height: "6", rx: "1" }],
@@ -15791,22 +15886,6 @@
     ["rect", { x: "9", y: "2", width: "6", height: "6", rx: "1" }],
     ["path", { d: "M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" }],
     ["path", { d: "M12 12V8" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/navigation.mjs
-  var Navigation3 = [["polygon", { points: "3 11 22 2 13 21 11 13 3 11" }]];
-
-  // node_modules/lucide/dist/esm/icons/newspaper.mjs
-  var Newspaper = [
-    ["path", { d: "M15 18h-5" }],
-    ["path", { d: "M18 14h-8" }],
-    [
-      "path",
-      {
-        d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
-      }
-    ],
-    ["rect", { width: "8", height: "4", x: "10", y: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/nfc.mjs
@@ -15823,6 +15902,19 @@
     ["path", { d: "m8.5 4 7 4" }],
     ["path", { d: "m8.5 8 7-4" }],
     ["circle", { cx: "12", cy: "17", r: "5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/newspaper.mjs
+  var Newspaper = [
+    ["path", { d: "M15 18h-5" }],
+    ["path", { d: "M18 14h-8" }],
+    [
+      "path",
+      {
+        d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+      }
+    ],
+    ["rect", { width: "8", height: "4", x: "10", y: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/notebook-pen.mjs
@@ -15875,6 +15967,17 @@
     ["path", { d: "M16 2v20" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/notepad-text.mjs
+  var NotepadText = [
+    ["path", { d: "M8 2v4" }],
+    ["path", { d: "M12 2v4" }],
+    ["path", { d: "M16 2v4" }],
+    ["rect", { width: "16", height: "18", x: "4", y: "4", rx: "2" }],
+    ["path", { d: "M8 10h6" }],
+    ["path", { d: "M8 14h8" }],
+    ["path", { d: "M8 18h5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/notepad-text-dashed.mjs
   var NotepadTextDashed = [
     ["path", { d: "M8 2v4" }],
@@ -15887,17 +15990,6 @@
     ["path", { d: "M7 22H6a2 2 0 0 1-2-2v-2" }],
     ["path", { d: "M4 14v-2" }],
     ["path", { d: "M4 8V6a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "M8 10h6" }],
-    ["path", { d: "M8 14h8" }],
-    ["path", { d: "M8 18h5" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/notepad-text.mjs
-  var NotepadText = [
-    ["path", { d: "M8 2v4" }],
-    ["path", { d: "M12 2v4" }],
-    ["path", { d: "M16 2v4" }],
-    ["rect", { width: "16", height: "18", x: "4", y: "4", rx: "2" }],
     ["path", { d: "M8 10h6" }],
     ["path", { d: "M8 14h8" }],
     ["path", { d: "M8 18h5" }]
@@ -15922,18 +16014,6 @@
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/octagon-alert.mjs
-  var OctagonAlert = [
-    ["path", { d: "M12 16h.01" }],
-    ["path", { d: "M12 8v4" }],
-    [
-      "path",
-      {
-        d: "M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/nut.mjs
   var Nut = [
     ["path", { d: "M12 4V2" }],
@@ -15947,6 +16027,18 @@
       "path",
       {
         d: "M12 4C8 4 4.5 6 4 8c-.243.97-.919 1.952-2 3 1.31-.082 1.972-.29 3-1 .54.92.982 1.356 2 2 1.452-.647 1.954-1.098 2.5-2 .595.995 1.151 1.427 2.5 2 1.31-.621 1.862-1.058 2.5-2 .629.977 1.162 1.423 2.5 2 1.209-.548 1.68-.967 2-2 1.032.916 1.683 1.157 3 1-1.297-1.036-1.758-2.03-2-3-.5-2-4-4-8-4Z"
+      }
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/octagon-alert.mjs
+  var OctagonAlert = [
+    ["path", { d: "M12 16h.01" }],
+    ["path", { d: "M12 8v4" }],
+    [
+      "path",
+      {
+        d: "M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z"
       }
     ]
   ];
@@ -15986,16 +16078,6 @@
     ["path", { d: "m9 9 6 6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/omega.mjs
-  var Omega = [
-    [
-      "path",
-      {
-        d: "M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/octagon.mjs
   var Octagon = [
     [
@@ -16006,10 +16088,29 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/omega.mjs
+  var Omega = [
+    [
+      "path",
+      {
+        d: "M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/option.mjs
   var Option = [
     ["path", { d: "M14 3h7" }],
     ["path", { d: "M3 3h5.28a1 1 0 0 1 .948.684l5.544 16.632a1 1 0 0 0 .949.684H21" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/orbit.mjs
+  var Orbit = [
+    ["path", { d: "M20.341 6.484A10 10 0 0 1 10.266 21.85" }],
+    ["path", { d: "M3.659 17.516A10 10 0 0 1 13.74 2.152" }],
+    ["circle", { cx: "12", cy: "12", r: "3" }],
+    ["circle", { cx: "19", cy: "5", r: "2" }],
+    ["circle", { cx: "5", cy: "19", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/origami.mjs
@@ -16027,27 +16128,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/orbit.mjs
-  var Orbit = [
-    ["path", { d: "M20.341 6.484A10 10 0 0 1 10.266 21.85" }],
-    ["path", { d: "M3.659 17.516A10 10 0 0 1 13.74 2.152" }],
-    ["circle", { cx: "12", cy: "12", r: "3" }],
-    ["circle", { cx: "19", cy: "5", r: "2" }],
-    ["circle", { cx: "5", cy: "19", r: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/package-2.mjs
-  var Package2 = [
-    ["path", { d: "M12 3v6" }],
-    [
-      "path",
-      {
-        d: "M16.76 3a2 2 0 0 1 1.8 1.1l2.23 4.479a2 2 0 0 1 .21.891V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.472a2 2 0 0 1 .211-.894L5.45 4.1A2 2 0 0 1 7.24 3z"
-      }
-    ],
-    ["path", { d: "M3.054 9.013h17.893" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/package-check.mjs
   var PackageCheck = [
     ["path", { d: "M12 22V12" }],
@@ -16060,6 +16140,18 @@
     ],
     ["path", { d: "M3.29 7 12 12l8.71-5" }],
     ["path", { d: "m7.5 4.27 8.997 5.148" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/package-2.mjs
+  var Package2 = [
+    ["path", { d: "M12 3v6" }],
+    [
+      "path",
+      {
+        d: "M16.76 3a2 2 0 0 1 1.8 1.1l2.23 4.479a2 2 0 0 1 .21.891V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.472a2 2 0 0 1 .211-.894L5.45 4.1A2 2 0 0 1 7.24 3z"
+      }
+    ],
+    ["path", { d: "M3.054 9.013h17.893" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/package-minus.mjs
@@ -16241,6 +16333,13 @@
     ["path", { d: "m9 12-2 2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/panel-bottom-close.mjs
+  var PanelBottomClose = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M3 15h18" }],
+    ["path", { d: "m15 8-3 3-3-3" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/panel-bottom-dashed.mjs
   var PanelBottomDashed = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
@@ -16248,13 +16347,6 @@
     ["path", { d: "M19 15h2" }],
     ["path", { d: "M3 15h2" }],
     ["path", { d: "M9 15h1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/panel-bottom-close.mjs
-  var PanelBottomClose = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M3 15h18" }],
-    ["path", { d: "m15 8-3 3-3-3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/panel-bottom-open.mjs
@@ -16312,13 +16404,6 @@
     ["path", { d: "M9 3v18" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/panel-right-close.mjs
-  var PanelRightClose = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M15 3v18" }],
-    ["path", { d: "m8 9 3 3-3 3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/panel-right-dashed.mjs
   var PanelRightDashed = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
@@ -16326,6 +16411,13 @@
     ["path", { d: "M15 19v2" }],
     ["path", { d: "M15 3v2" }],
     ["path", { d: "M15 9v1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/panel-right-close.mjs
+  var PanelRightClose = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M15 3v18" }],
+    ["path", { d: "m8 9 3 3-3 3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/panel-right-open.mjs
@@ -16339,19 +16431,6 @@
   var PanelRight = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "M15 3v18" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/panel-top-bottom-dashed.mjs
-  var PanelTopBottomDashed = [
-    ["path", { d: "M14 15h1" }],
-    ["path", { d: "M14 9h1" }],
-    ["path", { d: "M19 15h2" }],
-    ["path", { d: "M19 9h2" }],
-    ["path", { d: "M3 15h2" }],
-    ["path", { d: "M3 9h2" }],
-    ["path", { d: "M9 15h1" }],
-    ["path", { d: "M9 9h1" }],
-    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/panel-top-close.mjs
@@ -16368,6 +16447,19 @@
     ["path", { d: "M19 9h2" }],
     ["path", { d: "M3 9h2" }],
     ["path", { d: "M9 9h1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/panel-top-bottom-dashed.mjs
+  var PanelTopBottomDashed = [
+    ["path", { d: "M14 15h1" }],
+    ["path", { d: "M14 9h1" }],
+    ["path", { d: "M19 15h2" }],
+    ["path", { d: "M19 9h2" }],
+    ["path", { d: "M3 15h2" }],
+    ["path", { d: "M3 9h2" }],
+    ["path", { d: "M9 15h1" }],
+    ["path", { d: "M9 9h1" }],
+    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/panel-top-open.mjs
@@ -16420,6 +16512,16 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/paperclip.mjs
+  var Paperclip = [
+    [
+      "path",
+      {
+        d: "m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/parasol.mjs
   var Parasol = [
     ["path", { d: "M12.5 11.134 18.196 21" }],
@@ -16430,16 +16532,6 @@
       }
     ],
     ["path", { d: "M21 21H3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/paperclip.mjs
-  var Paperclip = [
-    [
-      "path",
-      {
-        d: "m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/parentheses.mjs
@@ -16460,6 +16552,12 @@
       }
     ],
     ["path", { d: "M9 9a3 3 0 1 1 6 0" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/pause.mjs
+  var Pause = [
+    ["rect", { x: "14", y: "3", width: "5", height: "18", rx: "1" }],
+    ["rect", { x: "5", y: "3", width: "5", height: "18", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/party-popper.mjs
@@ -16496,12 +16594,6 @@
         d: "M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/pause.mjs
-  var Pause = [
-    ["rect", { x: "14", y: "3", width: "5", height: "18", rx: "1" }],
-    ["rect", { x: "5", y: "3", width: "5", height: "18", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/pc-case.mjs
@@ -16588,6 +16680,21 @@
     ["path", { d: "m2 2 20 20" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/pencil-ruler.mjs
+  var PencilRuler = [
+    ["path", { d: "M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13" }],
+    ["path", { d: "m8 6 2-2" }],
+    ["path", { d: "m18 16 2-2" }],
+    ["path", { d: "m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17" }],
+    [
+      "path",
+      {
+        d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
+      }
+    ],
+    ["path", { d: "m15 5 4 4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/pencil-sparkles.mjs
   var PencilSparkles = [
     ["path", { d: "M10 3H8" }],
@@ -16603,21 +16710,6 @@
     ["path", { d: "M4 5v4" }],
     ["path", { d: "M6 7H2" }],
     ["path", { d: "M9 2v2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/pencil-ruler.mjs
-  var PencilRuler = [
-    ["path", { d: "M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13" }],
-    ["path", { d: "m8 6 2-2" }],
-    ["path", { d: "m18 16 2-2" }],
-    ["path", { d: "m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17" }],
-    [
-      "path",
-      {
-        d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
-      }
-    ],
-    ["path", { d: "m15 5 4 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/pencil.mjs
@@ -16641,14 +16733,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/person-standing.mjs
-  var PersonStanding = [
-    ["circle", { cx: "12", cy: "5", r: "1" }],
-    ["path", { d: "m9 20 3-6 3 6" }],
-    ["path", { d: "m6 8 6 2 6-2" }],
-    ["path", { d: "M12 10v4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/percent.mjs
   var Percent = [
     ["line", { x1: "19", x2: "5", y1: "5", y2: "19" }],
@@ -16660,6 +16744,14 @@
   var Phi = [
     ["path", { d: "M12 2v20" }],
     ["circle", { cx: "12", cy: "12", r: "7" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/person-standing.mjs
+  var PersonStanding = [
+    ["circle", { cx: "12", cy: "5", r: "1" }],
+    ["path", { d: "m9 20 3-6 3 6" }],
+    ["path", { d: "m6 8 6 2 6-2" }],
+    ["path", { d: "M12 10v4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/philippine-peso.mjs
@@ -16860,14 +16952,6 @@
     ["rect", { width: "16", height: "5", x: "4", y: "2", rx: "1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/pin-off.mjs
-  var PinOff = [
-    ["path", { d: "M12 17v5" }],
-    ["path", { d: "M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89" }],
-    ["path", { d: "m2 2 20 20" }],
-    ["path", { d: "M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/pill.mjs
   var Pill = [
     ["path", { d: "m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" }],
@@ -16883,6 +16967,14 @@
         d: "M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/pin-off.mjs
+  var PinOff = [
+    ["path", { d: "M12 17v5" }],
+    ["path", { d: "M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89" }],
+    ["path", { d: "m2 2 20 20" }],
+    ["path", { d: "M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/pipette.mjs
@@ -16999,6 +17091,20 @@
     ["path", { d: "M18 11.66V22a4 4 0 0 0 4-4V6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/pointer.mjs
+  var Pointer = [
+    ["path", { d: "M22 14a8 8 0 0 1-8 8" }],
+    ["path", { d: "M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }],
+    ["path", { d: "M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1" }],
+    ["path", { d: "M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10" }],
+    [
+      "path",
+      {
+        d: "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
+      }
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/podium.mjs
   var Podium = [
     ["path", { d: "M12 6V2h-1" }],
@@ -17024,20 +17130,6 @@
     ["path", { d: "m2 2 20 20" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/pointer.mjs
-  var Pointer = [
-    ["path", { d: "M22 14a8 8 0 0 1-8 8" }],
-    ["path", { d: "M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }],
-    ["path", { d: "M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1" }],
-    ["path", { d: "M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10" }],
-    [
-      "path",
-      {
-        d: "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/popcorn.mjs
   var Popcorn = [
     ["path", { d: "M18 8a2 2 0 0 0 0-4 2 2 0 0 0-4 0 2 2 0 0 0-4 0 2 2 0 0 0-4 0 2 2 0 0 0 0 4" }],
@@ -17049,14 +17141,6 @@
         d: "M20 8c.5 0 .9.4.8 1l-2.6 12c-.1.5-.7 1-1.2 1H7c-.6 0-1.1-.4-1.2-1L3.2 9c-.1-.6.3-1 .8-1Z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/pound-sterling.mjs
-  var PoundSterling = [
-    ["path", { d: "M18 7c0-5.333-8-5.333-8 0" }],
-    ["path", { d: "M10 7v14" }],
-    ["path", { d: "M6 21h12" }],
-    ["path", { d: "M6 13h10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/popsicle.mjs
@@ -17080,6 +17164,14 @@
   var Power = [
     ["path", { d: "M12 2v10" }],
     ["path", { d: "M18.4 6.6a9 9 0 1 1-12.77.04" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/pound-sterling.mjs
+  var PoundSterling = [
+    ["path", { d: "M18 7c0-5.333-8-5.333-8 0" }],
+    ["path", { d: "M10 7v14" }],
+    ["path", { d: "M6 21h12" }],
+    ["path", { d: "M6 13h10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/presentation.mjs
@@ -17143,17 +17235,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/pyramid.mjs
-  var Pyramid = [
-    [
-      "path",
-      {
-        d: "M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z"
-      }
-    ],
-    ["path", { d: "M12 2v20" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/qr-code.mjs
   var QrCode = [
     ["rect", { width: "5", height: "5", x: "3", y: "3", rx: "1" }],
@@ -17168,6 +17249,17 @@
     ["path", { d: "M16 12h1" }],
     ["path", { d: "M21 12v.01" }],
     ["path", { d: "M12 21v-1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/pyramid.mjs
+  var Pyramid = [
+    [
+      "path",
+      {
+        d: "M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z"
+      }
+    ],
+    ["path", { d: "M12 2v20" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/quote.mjs
@@ -17255,6 +17347,14 @@
     ["path", { d: "M7.753 16.239a6 6 0 0 1 0-8.478" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/radio-receiver.mjs
+  var RadioReceiver = [
+    ["path", { d: "M5 16v2" }],
+    ["path", { d: "M19 16v2" }],
+    ["rect", { width: "20", height: "8", x: "2", y: "8", rx: "2" }],
+    ["path", { d: "M18 12h.01" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/radio-tower.mjs
   var RadioTower = [
     ["path", { d: "M4.9 16.1C1 12.2 1 5.8 4.9 1.9" }],
@@ -17266,14 +17366,6 @@
     ["path", { d: "m8 22 4-11 4 11" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/radio-receiver.mjs
-  var RadioReceiver = [
-    ["path", { d: "M5 16v2" }],
-    ["path", { d: "M19 16v2" }],
-    ["rect", { width: "20", height: "8", x: "2", y: "8", rx: "2" }],
-    ["path", { d: "M18 12h.01" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/radio.mjs
   var Radio = [
     ["path", { d: "M16.247 7.761a6 6 0 0 1 0 8.478" }],
@@ -17283,19 +17375,19 @@
     ["circle", { cx: "12", cy: "12", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/rainbow.mjs
-  var Rainbow = [
-    ["path", { d: "M22 17a10 10 0 0 0-20 0" }],
-    ["path", { d: "M6 17a6 6 0 0 1 12 0" }],
-    ["path", { d: "M10 17a2 2 0 0 1 4 0" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/radius.mjs
   var Radius = [
     ["path", { d: "M20.34 17.52a10 10 0 1 0-2.82 2.82" }],
     ["circle", { cx: "19", cy: "19", r: "2" }],
     ["path", { d: "m13.41 13.41 4.18 4.18" }],
     ["circle", { cx: "12", cy: "12", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/rainbow.mjs
+  var Rainbow = [
+    ["path", { d: "M22 17a10 10 0 0 0-20 0" }],
+    ["path", { d: "M6 17a6 6 0 0 1 12 0" }],
+    ["path", { d: "M10 17a2 2 0 0 1 4 0" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/rat.mjs
@@ -17458,6 +17550,11 @@
     ["path", { d: "M7 12h.01" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/rectangle-horizontal.mjs
+  var RectangleHorizontal = [
+    ["rect", { width: "20", height: "12", x: "2", y: "6", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/rectangle-goggles.mjs
   var RectangleGoggles = [
     [
@@ -17466,11 +17563,6 @@
         d: "M20 6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-1.6-.8l-1.6-2.13a1 1 0 0 0-1.6 0L9.6 17.2A2 2 0 0 1 8 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/rectangle-horizontal.mjs
-  var RectangleHorizontal = [
-    ["rect", { width: "20", height: "12", x: "2", y: "6", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/rectangle-vertical.mjs
@@ -17499,15 +17591,15 @@
     ["path", { d: "M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/redo-dot.mjs
-  var RedoDot = [
-    ["circle", { cx: "12", cy: "17", r: "1" }],
+  // node_modules/lucide/dist/esm/icons/redo.mjs
+  var Redo = [
     ["path", { d: "M21 7v6h-6" }],
     ["path", { d: "M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/redo.mjs
-  var Redo = [
+  // node_modules/lucide/dist/esm/icons/redo-dot.mjs
+  var RedoDot = [
+    ["circle", { cx: "12", cy: "17", r: "1" }],
     ["path", { d: "M21 7v6h-6" }],
     ["path", { d: "M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7" }]
   ];
@@ -17581,14 +17673,6 @@
     ["path", { d: "M11 10h1v4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/repeat-2.mjs
-  var Repeat2 = [
-    ["path", { d: "m2 9 3-3 3 3" }],
-    ["path", { d: "M13 18H7a2 2 0 0 1-2-2V6" }],
-    ["path", { d: "m22 15-3 3-3-3" }],
-    ["path", { d: "M11 6h6a2 2 0 0 1 2 2v10" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/repeat-off.mjs
   var RepeatOff = [
     ["path", { d: "M11.656 6H21l-4-4" }],
@@ -17598,6 +17682,14 @@
     ["path", { d: "m21 6-4 4" }],
     ["path", { d: "M3 11v-1a4 4 0 0 1 3.102-3.898" }],
     ["path", { d: "m7 22-4-4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/repeat-2.mjs
+  var Repeat2 = [
+    ["path", { d: "m2 9 3-3 3 3" }],
+    ["path", { d: "M13 18H7a2 2 0 0 1-2-2V6" }],
+    ["path", { d: "m22 15-3 3-3-3" }],
+    ["path", { d: "M11 6h6a2 2 0 0 1 2 2v10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/repeat.mjs
@@ -17696,14 +17788,6 @@
     ["path", { d: "M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/rocking-chair.mjs
-  var RockingChair = [
-    ["path", { d: "m15 13 3.708 7.416" }],
-    ["path", { d: "M3 19a15 15 0 0 0 18 0" }],
-    ["path", { d: "m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18" }],
-    ["path", { d: "m9 13-3.708 7.416" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/roller-coaster.mjs
   var RollerCoaster = [
     ["path", { d: "M6 19V5" }],
@@ -17713,6 +17797,14 @@
     ["path", { d: "M18 19v-6" }],
     ["path", { d: "M22 19V9" }],
     ["path", { d: "M2 19V9a4 4 0 0 1 4-4c2 0 4 1.33 6 4s4 4 6 4a4 4 0 1 0-3-6.65" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/rocking-chair.mjs
+  var RockingChair = [
+    ["path", { d: "m15 13 3.708 7.416" }],
+    ["path", { d: "M3 19a15 15 0 0 0 18 0" }],
+    ["path", { d: "m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18" }],
+    ["path", { d: "m9 13-3.708 7.416" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/rose.mjs
@@ -17741,13 +17833,6 @@
     ["path", { d: "M12 7v5l4 2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/rotate-ccw-square.mjs
-  var RotateCcwSquare = [
-    ["path", { d: "M20 9V7a2 2 0 0 0-2-2h-6" }],
-    ["path", { d: "m15 2-3 3 3 3" }],
-    ["path", { d: "M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/rotate-ccw-key.mjs
   var RotateCcwKey = [
     ["path", { d: "M12 7v6" }],
@@ -17755,6 +17840,13 @@
     ["path", { d: "M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8" }],
     ["path", { d: "M3 3v5h5" }],
     ["circle", { cx: "12", cy: "15", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/rotate-ccw-square.mjs
+  var RotateCcwSquare = [
+    ["path", { d: "M20 9V7a2 2 0 0 0-2-2h-6" }],
+    ["path", { d: "m15 2-3 3 3 3" }],
+    ["path", { d: "M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/rotate-ccw.mjs
@@ -17839,13 +17931,6 @@
     ["path", { d: "M21 16.5H3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/rss.mjs
-  var Rss = [
-    ["path", { d: "M4 11a9 9 0 0 1 9 9" }],
-    ["path", { d: "M4 4a16 16 0 0 1 16 16" }],
-    ["circle", { cx: "5", cy: "19", r: "1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/ruler-dimension-line.mjs
   var RulerDimensionLine = [
     ["path", { d: "M10 15v-3" }],
@@ -17856,6 +17941,13 @@
     ["path", { d: "M22 8V4" }],
     ["path", { d: "M6 15v-3" }],
     ["rect", { x: "2", y: "12", width: "20", height: "8", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/rss.mjs
+  var Rss = [
+    ["path", { d: "M4 11a9 9 0 0 1 9 9" }],
+    ["path", { d: "M4 4a16 16 0 0 1 16 16" }],
+    ["circle", { cx: "5", cy: "19", r: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/ruler.mjs
@@ -18120,6 +18212,15 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/scan-line.mjs
+  var ScanLine = [
+    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
+    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
+    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
+    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }],
+    ["path", { d: "M7 12h10" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/scan-qr-code.mjs
   var ScanQrCode = [
     ["path", { d: "M17 12v4a1 1 0 0 1-1 1h-4" }],
@@ -18130,15 +18231,6 @@
     ["path", { d: "M7 17h.01" }],
     ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }],
     ["rect", { x: "7", y: "7", width: "5", height: "5", rx: "1" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/scan-line.mjs
-  var ScanLine = [
-    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
-    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
-    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }],
-    ["path", { d: "M7 12h10" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/scan-search.mjs
@@ -18171,14 +18263,6 @@
     ["path", { d: "M7 16h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/scan.mjs
-  var Scan = [
-    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
-    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
-    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
-    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/school.mjs
   var School = [
     ["path", { d: "M14 21v-3a2 2 0 0 0-4 0v3" }],
@@ -18205,13 +18289,12 @@
     ["path", { d: "M22 12h-2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/scissors.mjs
-  var Scissors = [
-    ["circle", { cx: "6", cy: "6", r: "3" }],
-    ["path", { d: "M8.12 8.12 12 12" }],
-    ["path", { d: "M20 4 8.12 15.88" }],
-    ["circle", { cx: "6", cy: "18", r: "3" }],
-    ["path", { d: "M14.8 14.8 20 20" }]
+  // node_modules/lucide/dist/esm/icons/scan.mjs
+  var Scan = [
+    ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2" }],
+    ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2" }],
+    ["path", { d: "M21 17v2a2 2 0 0 1-2 2h-2" }],
+    ["path", { d: "M7 21H5a2 2 0 0 1-2-2v-2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/scooter.mjs
@@ -18220,6 +18303,15 @@
     ["path", { d: "M6.95 17h5.142c.523 0 .95-.406 1.063-.916a6.5 6.5 0 0 1 5.345-5.009" }],
     ["circle", { cx: "19.5", cy: "17.5", r: "2.5" }],
     ["circle", { cx: "4.5", cy: "17.5", r: "2.5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/scissors.mjs
+  var Scissors = [
+    ["circle", { cx: "6", cy: "6", r: "3" }],
+    ["path", { d: "M8.12 8.12 12 12" }],
+    ["path", { d: "M20 4 8.12 15.88" }],
+    ["circle", { cx: "6", cy: "18", r: "3" }],
+    ["path", { d: "M14.8 14.8 20 20" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/screen-share-off.mjs
@@ -18302,16 +18394,16 @@
     ["path", { d: "m21 21-4.3-4.3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/search.mjs
-  var Search = [
-    ["path", { d: "m21 21-4.34-4.34" }],
-    ["circle", { cx: "11", cy: "11", r: "8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/section.mjs
   var Section2 = [
     ["path", { d: "M16 5a4 3 0 0 0-8 0c0 4 8 3 8 7a4 3 0 0 1-8 0" }],
     ["path", { d: "M8 19a4 3 0 0 0 8 0c0-4-8-3-8-7a4 3 0 0 1 8 0" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/search.mjs
+  var Search = [
+    ["path", { d: "m21 21-4.34-4.34" }],
+    ["circle", { cx: "11", cy: "11", r: "8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/send-horizontal.mjs
@@ -18351,13 +18443,6 @@
     ["path", { d: "m8 8 4-4 4 4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/separator-vertical.mjs
-  var SeparatorVertical = [
-    ["path", { d: "M12 3v18" }],
-    ["path", { d: "m16 16 4-4-4-4" }],
-    ["path", { d: "m8 8-4 4 4 4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/server-cog.mjs
   var ServerCog = [
     ["path", { d: "m10.852 14.772-.383.923" }],
@@ -18372,6 +18457,13 @@
     ["path", { d: "M6 6h.01" }],
     ["path", { d: "m9.228 10.852-.923-.383" }],
     ["path", { d: "m9.228 13.148-.923.383" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/separator-vertical.mjs
+  var SeparatorVertical = [
+    ["path", { d: "M12 3v18" }],
+    ["path", { d: "m16 16 4-4-4-4" }],
+    ["path", { d: "m8 8-4 4 4 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/server-crash.mjs
@@ -18430,6 +18522,15 @@
     ["circle", { cx: "12", cy: "12", r: "3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/share-2.mjs
+  var Share2 = [
+    ["circle", { cx: "18", cy: "5", r: "3" }],
+    ["circle", { cx: "6", cy: "12", r: "3" }],
+    ["circle", { cx: "18", cy: "19", r: "3" }],
+    ["line", { x1: "8.59", x2: "15.42", y1: "13.51", y2: "17.49" }],
+    ["line", { x1: "15.41", x2: "8.59", y1: "6.51", y2: "10.49" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/shapes.mjs
   var Shapes = [
     [
@@ -18440,15 +18541,6 @@
     ],
     ["rect", { x: "3", y: "14", width: "7", height: "7", rx: "1" }],
     ["circle", { cx: "17.5", cy: "17.5", r: "3.5" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/share-2.mjs
-  var Share2 = [
-    ["circle", { cx: "18", cy: "5", r: "3" }],
-    ["circle", { cx: "6", cy: "12", r: "3" }],
-    ["circle", { cx: "18", cy: "19", r: "3" }],
-    ["line", { x1: "8.59", x2: "15.42", y1: "13.51", y2: "17.49" }],
-    ["line", { x1: "15.41", x2: "8.59", y1: "6.51", y2: "10.49" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/share.mjs
@@ -18488,6 +18580,17 @@
     ["path", { d: "M4 4h16" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/shield-ban.mjs
+  var ShieldBan = [
+    [
+      "path",
+      {
+        d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+      }
+    ],
+    ["path", { d: "m4.243 5.21 14.39 12.472" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/shield-alert.mjs
   var ShieldAlert = [
     [
@@ -18498,17 +18601,6 @@
     ],
     ["path", { d: "M12 8v4" }],
     ["path", { d: "M12 16h.01" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/shield-ban.mjs
-  var ShieldBan = [
-    [
-      "path",
-      {
-        d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-      }
-    ],
-    ["path", { d: "m4.243 5.21 14.39 12.472" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/shield-check.mjs
@@ -18619,18 +18711,6 @@
     ["path", { d: "M9 12h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/shield-plus.mjs
-  var ShieldPlus = [
-    [
-      "path",
-      {
-        d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-      }
-    ],
-    ["path", { d: "M9 12h6" }],
-    ["path", { d: "M12 9v6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/shield-off.mjs
   var ShieldOff = [
     ["path", { d: "m2 2 20 20" }],
@@ -18646,6 +18726,18 @@
         d: "M9.309 3.652A12.252 12.252 0 0 0 11.24 2.28a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v7a9.784 9.784 0 0 1-.08 1.264"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/shield-plus.mjs
+  var ShieldPlus = [
+    [
+      "path",
+      {
+        d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+      }
+    ],
+    ["path", { d: "M9 12h6" }],
+    ["path", { d: "M12 9v6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/shield-question-mark.mjs
@@ -18694,6 +18786,20 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/ship-wheel.mjs
+  var ShipWheel = [
+    ["circle", { cx: "12", cy: "12", r: "8" }],
+    ["path", { d: "M12 2v7.5" }],
+    ["path", { d: "m19 5-5.23 5.23" }],
+    ["path", { d: "M22 12h-7.5" }],
+    ["path", { d: "m19 19-5.23-5.23" }],
+    ["path", { d: "M12 14.5V22" }],
+    ["path", { d: "M10.23 13.77 5 19" }],
+    ["path", { d: "M9.5 12H2" }],
+    ["path", { d: "M10.23 10.23 5 5" }],
+    ["circle", { cx: "12", cy: "12", r: "2.5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/ship.mjs
   var Ship = [
     ["path", { d: "M12 10.189V14" }],
@@ -18711,20 +18817,6 @@
         d: "M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/ship-wheel.mjs
-  var ShipWheel = [
-    ["circle", { cx: "12", cy: "12", r: "8" }],
-    ["path", { d: "M12 2v7.5" }],
-    ["path", { d: "m19 5-5.23 5.23" }],
-    ["path", { d: "M22 12h-7.5" }],
-    ["path", { d: "m19 19-5.23-5.23" }],
-    ["path", { d: "M12 14.5V22" }],
-    ["path", { d: "M10.23 13.77 5 19" }],
-    ["path", { d: "M9.5 12H2" }],
-    ["path", { d: "M10.23 10.23 5 5" }],
-    ["circle", { cx: "12", cy: "12", r: "2.5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/shirt.mjs
@@ -18863,18 +18955,18 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/signal-low.mjs
+  var SignalLow = [
+    ["path", { d: "M2 20h.01" }],
+    ["path", { d: "M7 20v-4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/signal-high.mjs
   var SignalHigh = [
     ["path", { d: "M2 20h.01" }],
     ["path", { d: "M7 20v-4" }],
     ["path", { d: "M12 20v-8" }],
     ["path", { d: "M17 20V8" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/signal-low.mjs
-  var SignalLow = [
-    ["path", { d: "M2 20h.01" }],
-    ["path", { d: "M7 20v-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/signal-medium.mjs
@@ -18884,6 +18976,9 @@
     ["path", { d: "M12 20v-8" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/signal-zero.mjs
+  var SignalZero = [["path", { d: "M2 20h.01" }]];
+
   // node_modules/lucide/dist/esm/icons/signal.mjs
   var Signal = [
     ["path", { d: "M2 20h.01" }],
@@ -18892,9 +18987,6 @@
     ["path", { d: "M17 20V8" }],
     ["path", { d: "M22 4v16" }]
   ];
-
-  // node_modules/lucide/dist/esm/icons/signal-zero.mjs
-  var SignalZero = [["path", { d: "M2 20h.01" }]];
 
   // node_modules/lucide/dist/esm/icons/signature.mjs
   var Signature = [
@@ -18907,14 +18999,6 @@
     ["path", { d: "M3 21h18" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/signpost-big.mjs
-  var SignpostBig = [
-    ["path", { d: "M10 9H4L2 7l2-2h6" }],
-    ["path", { d: "M14 5h6l2 2-2 2h-6" }],
-    ["path", { d: "M10 22V4a2 2 0 1 1 4 0v18" }],
-    ["path", { d: "M8 22h8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/signpost.mjs
   var Signpost = [
     ["path", { d: "M12 13v8" }],
@@ -18925,6 +19009,14 @@
         d: "M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/signpost-big.mjs
+  var SignpostBig = [
+    ["path", { d: "M10 9H4L2 7l2-2h6" }],
+    ["path", { d: "M14 5h6l2 2-2 2h-6" }],
+    ["path", { d: "M10 22V4a2 2 0 1 1 4 0v18" }],
+    ["path", { d: "M8 22h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/siren.mjs
@@ -19025,12 +19117,6 @@
     ["path", { d: "M19.91 4.1a15.91 15.91 0 0 1 .01 15.8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/smartphone.mjs
-  var Smartphone = [
-    ["rect", { width: "14", height: "20", x: "5", y: "2", rx: "2", ry: "2" }],
-    ["path", { d: "M12 18h.01" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/snail.mjs
   var Snail = [
     ["path", { d: "M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" }],
@@ -19069,6 +19155,12 @@
     ["path", { d: "M9.607 21H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7V7a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/smartphone.mjs
+  var Smartphone = [
+    ["rect", { width: "14", height: "20", x: "5", y: "2", rx: "2", ry: "2" }],
+    ["path", { d: "M12 18h.01" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/sofa.mjs
   var Sofa = [
     ["path", { d: "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" }],
@@ -19099,6 +19191,9 @@
     ["path", { d: "m8.66 7.66 1.41 1.41" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/space.mjs
+  var Space = [["path", { d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" }]];
+
   // node_modules/lucide/dist/esm/icons/soup.mjs
   var Soup = [
     ["path", { d: "M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" }],
@@ -19108,9 +19203,6 @@
     ["path", { d: "M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62" }],
     ["path", { d: "M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62" }]
   ];
-
-  // node_modules/lucide/dist/esm/icons/space.mjs
-  var Space = [["path", { d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" }]];
 
   // node_modules/lucide/dist/esm/icons/spade.mjs
   var Spade = [
@@ -19178,19 +19270,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/spline-pointer.mjs
-  var SplinePointer = [
-    [
-      "path",
-      {
-        d: "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z"
-      }
-    ],
-    ["path", { d: "M5 17A12 12 0 0 1 17 5" }],
-    ["circle", { cx: "19", cy: "5", r: "2" }],
-    ["circle", { cx: "5", cy: "19", r: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/spell-check.mjs
   var SpellCheck = [
     ["path", { d: "m6 16 6-12 6 12" }],
@@ -19227,6 +19306,19 @@
         d: "m7 10.56 12.558-3.642A2 2 0 0 0 19.018 3H5a2 2 0 0 0-.558 3.921l1.115.32A2 2 0 0 1 7 9.163v7.178"
       }
     ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/spline-pointer.mjs
+  var SplinePointer = [
+    [
+      "path",
+      {
+        d: "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z"
+      }
+    ],
+    ["path", { d: "M5 17A12 12 0 0 1 17 5" }],
+    ["circle", { cx: "19", cy: "5", r: "2" }],
+    ["circle", { cx: "5", cy: "19", r: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/sport-shoe.mjs
@@ -19269,6 +19361,12 @@
     ["path", { d: "m13 19 8-2" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/square-activity.mjs
+  var SquareActivity = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M17 12h-2l-2 5-2-10-2 5H7" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/sprout.mjs
   var Sprout = [
     [
@@ -19281,23 +19379,17 @@
     ["path", { d: "M5 21h14" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-activity.mjs
-  var SquareActivity = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M17 12h-2l-2 5-2-10-2 5H7" }]
+  // node_modules/lucide/dist/esm/icons/square-arrow-down-left.mjs
+  var SquareArrowDownLeft = [
+    ["path", { d: "M15 15H9l6-6" }],
+    ["path", { d: "M9 15V9" }],
+    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-arrow-down-right.mjs
   var SquareArrowDownRight = [
     ["path", { d: "M15 15 9 9" }],
     ["path", { d: "M9 15h6V9" }],
-    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/square-arrow-down-left.mjs
-  var SquareArrowDownLeft = [
-    ["path", { d: "M15 15H9l6-6" }],
-    ["path", { d: "M9 15V9" }],
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
@@ -19388,14 +19480,6 @@
     ["path", { d: "M12 16V8" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-asterisk.mjs
-  var SquareAsterisk = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M12 8v8" }],
-    ["path", { d: "m8.5 14 7-4" }],
-    ["path", { d: "m8.5 10 7 4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-bottom-dashed-scissors.mjs
   var SquareBottomDashedScissors = [
     ["path", { d: "M14 21h1" }],
@@ -19406,6 +19490,14 @@
     ["path", { d: "M9.56 9.56 12 12" }],
     ["circle", { cx: "8.5", cy: "15.5", r: "1.5" }],
     ["circle", { cx: "8.5", cy: "8.5", r: "1.5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-asterisk.mjs
+  var SquareAsterisk = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M12 8v8" }],
+    ["path", { d: "m8.5 14 7-4" }],
+    ["path", { d: "m8.5 10 7 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-centerline-dashed-horizontal.mjs
@@ -19428,18 +19520,6 @@
     ["path", { d: "M22 12h-2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-check-big.mjs
-  var SquareCheckBig = [
-    ["path", { d: "M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" }],
-    ["path", { d: "m9 11 3 3L22 4" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/square-chevron-down.mjs
-  var SquareChevronDown = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "m16 10-4 4-4-4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-chart-gantt.mjs
   var SquareChartGantt = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
@@ -19448,10 +19528,22 @@
     ["path", { d: "M11 16h5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/square-check-big.mjs
+  var SquareCheckBig = [
+    ["path", { d: "M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" }],
+    ["path", { d: "m9 11 3 3L22 4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/square-check.mjs
   var SquareCheck = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "m9 12 2 2 4-4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-chevron-down.mjs
+  var SquareChevronDown = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "m16 10-4 4-4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-chevron-left.mjs
@@ -19460,16 +19552,16 @@
     ["path", { d: "m14 16-4-4 4-4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-chevron-up.mjs
-  var SquareChevronUp = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "m8 14 4-4 4 4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-chevron-right.mjs
   var SquareChevronRight = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "m10 8 4 4-4 4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-chevron-up.mjs
+  var SquareChevronUp = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "m8 14 4-4 4 4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-code.mjs
@@ -19479,13 +19571,6 @@
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-dashed-bottom.mjs
-  var SquareDashedBottom = [
-    ["path", { d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2" }],
-    ["path", { d: "M9 21h1" }],
-    ["path", { d: "M14 21h1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-dashed-bottom-code.mjs
   var SquareDashedBottomCode = [
     ["path", { d: "M10 9.5 8 12l2 2.5" }],
@@ -19493,6 +19578,13 @@
     ["path", { d: "m14 9.5 2 2.5-2 2.5" }],
     ["path", { d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2" }],
     ["path", { d: "M9 21h1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-dashed-bottom.mjs
+  var SquareDashedBottom = [
+    ["path", { d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2" }],
+    ["path", { d: "M9 21h1" }],
+    ["path", { d: "M14 21h1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-dashed-kanban.mjs
@@ -19533,6 +19625,19 @@
     ["path", { d: "M3 14v1" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/square-dashed-top-solid.mjs
+  var SquareDashedTopSolid = [
+    ["path", { d: "M14 21h1" }],
+    ["path", { d: "M21 14v1" }],
+    ["path", { d: "M21 19a2 2 0 0 1-2 2" }],
+    ["path", { d: "M21 9v1" }],
+    ["path", { d: "M3 14v1" }],
+    ["path", { d: "M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" }],
+    ["path", { d: "M3 9v1" }],
+    ["path", { d: "M5 21a2 2 0 0 1-2-2" }],
+    ["path", { d: "M9 21h1" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/square-dashed-text.mjs
   var SquareDashedText = [
     ["path", { d: "M14 21h1" }],
@@ -19552,19 +19657,6 @@
     ["path", { d: "M9 3h1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-dashed-top-solid.mjs
-  var SquareDashedTopSolid = [
-    ["path", { d: "M14 21h1" }],
-    ["path", { d: "M21 14v1" }],
-    ["path", { d: "M21 19a2 2 0 0 1-2 2" }],
-    ["path", { d: "M21 9v1" }],
-    ["path", { d: "M3 14v1" }],
-    ["path", { d: "M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" }],
-    ["path", { d: "M3 9v1" }],
-    ["path", { d: "M5 21a2 2 0 0 1-2-2" }],
-    ["path", { d: "M9 21h1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-dashed.mjs
   var SquareDashed = [
     ["path", { d: "M5 3a2 2 0 0 0-2 2" }],
@@ -19579,6 +19671,13 @@
     ["path", { d: "M21 9v1" }],
     ["path", { d: "M3 14v1" }],
     ["path", { d: "M21 14v1" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-dimensions.mjs
+  var SquareDimensions = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M12 7H7v5" }],
+    ["path", { d: "M12 17h5v-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-divide.mjs
@@ -19602,19 +19701,19 @@
     ["path", { d: "M7 14h10" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/square-function.mjs
+  var SquareFunction = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
+    ["path", { d: "M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3" }],
+    ["path", { d: "M9 11.2h5.7" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/square-kanban.mjs
   var SquareKanban = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "M8 7v7" }],
     ["path", { d: "M12 7v4" }],
     ["path", { d: "M16 7v9" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/square-function.mjs
-  var SquareFunction = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", ry: "2" }],
-    ["path", { d: "M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3" }],
-    ["path", { d: "M9 11.2h5.7" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-library.mjs
@@ -19634,18 +19733,18 @@
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-minus.mjs
-  var SquareMinus = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M8 12h8" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-menu.mjs
   var SquareMenu = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "M7 8h10" }],
     ["path", { d: "M7 12h10" }],
     ["path", { d: "M7 16h10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-minus.mjs
+  var SquareMinus = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M8 12h8" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-mouse-pointer.mjs
@@ -19659,6 +19758,13 @@
     ["path", { d: "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/square-off.mjs
+  var SquareOff = [
+    ["path", { d: "M20.4 20.4a2 2 0 01-1.4.6H5a2 2 0 01-2-2V5a2 2 0 01.59-1.41" }],
+    ["path", { d: "M21 15.3V5a2 2 0 00-2-2H8.7" }],
+    ["path", { d: "M22 22 2 2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/square-parking-off.mjs
   var SquareParkingOff = [
     ["path", { d: "M3.6 3.6A2 2 0 0 1 5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-.59 1.41" }],
@@ -19666,13 +19772,6 @@
     ["path", { d: "m2 2 20 20" }],
     ["path", { d: "M13 13a3 3 0 1 0 0-6H9v2" }],
     ["path", { d: "M9 17v-2.3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/square-off.mjs
-  var SquareOff = [
-    ["path", { d: "M20.4 20.4a2 2 0 01-1.4.6H5a2 2 0 01-2-2V5a2 2 0 01.59-1.41" }],
-    ["path", { d: "M21 15.3V5a2 2 0 00-2-2H8.7" }],
-    ["path", { d: "M22 22 2 2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-parking.mjs
@@ -19748,16 +19847,16 @@
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-round-corner.mjs
-  var SquareRoundCorner = [
-    ["path", { d: "M21 11a8 8 0 0 0-8-8" }],
-    ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-radical.mjs
   var SquareRadical = [
     ["path", { d: "M7 12h2l2 5 2-10h4" }],
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-round-corner.mjs
+  var SquareRoundCorner = [
+    ["path", { d: "M21 11a8 8 0 0 0-8-8" }],
+    ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-scissors.mjs
@@ -19770,16 +19869,16 @@
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-slash.mjs
-  var SquareSlash = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["line", { x1: "9", x2: "15", y1: "15", y2: "9" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-sigma.mjs
   var SquareSigma = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
     ["path", { d: "M16 8.9V7H8l4 5-4 5h8v-1.9" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-slash.mjs
+  var SquareSlash = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["line", { x1: "9", x2: "15", y1: "15", y2: "9" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-split-horizontal.mjs
@@ -19809,12 +19908,6 @@
     ["rect", { width: "8", height: "8", x: "14", y: "14", rx: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/square-stop.mjs
-  var SquareStop = [
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["rect", { x: "9", y: "9", width: "6", height: "6", rx: "1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/square-star.mjs
   var SquareStar = [
     [
@@ -19824,6 +19917,12 @@
       }
     ],
     ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-stop.mjs
+  var SquareStop = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["rect", { x: "9", y: "9", width: "6", height: "6", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-terminal.mjs
@@ -19838,6 +19937,14 @@
     ["path", { d: "M18 21a6 6 0 0 0-12 0" }],
     ["circle", { cx: "12", cy: "11", r: "4" }],
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-text.mjs
+  var SquareText = [
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M7 8h8" }],
+    ["path", { d: "M7 12h10" }],
+    ["path", { d: "M7 16h6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/square-user.mjs
@@ -19943,6 +20050,17 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/star-check.mjs
+  var StarCheck = [
+    [
+      "path",
+      {
+        d: "m19.06 12.501 2.78-2.707a.53.53 0 0 0-.294-.905l-5.166-.755a2.1 2.1 0 0 1-1.595-1.16l-2.31-4.68a.53.53 0 0 0-.95.001L9.216 6.974a2.1 2.1 0 0 1-1.597 1.16l-5.165.755a.53.53 0 0 0-.294.906l3.736 3.637a2.1 2.1 0 0 1 .611 1.879l-.88 5.139a.53.53 0 0 0 .769.56l4.617-2.428.027-.014"
+      }
+    ],
+    ["path", { d: "m15 18 2 2 4-4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/stamp.mjs
   var Stamp = [
     ["path", { d: "M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13" }],
@@ -19953,17 +20071,6 @@
       }
     ],
     ["path", { d: "M5 22h14" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/star-check.mjs
-  var StarCheck = [
-    [
-      "path",
-      {
-        d: "m19.06 12.501 2.78-2.707a.53.53 0 0 0-.294-.905l-5.166-.755a2.1 2.1 0 0 1-1.595-1.16l-2.31-4.68a.53.53 0 0 0-.95.001L9.216 6.974a2.1 2.1 0 0 1-1.597 1.16l-5.165.755a.53.53 0 0 0-.294.906l3.736 3.637a2.1 2.1 0 0 1 .611 1.879l-.88 5.139a.53.53 0 0 0 .769.56l4.617-2.428.027-.014"
-      }
-    ],
-    ["path", { d: "m15 18 2 2 4-4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/star-half.mjs
@@ -19987,6 +20094,18 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/star-plus.mjs
+  var StarPlus = [
+    [
+      "path",
+      {
+        d: "M11.013 18.582 6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904L20 11.5"
+      }
+    ],
+    ["path", { d: "M15 18h6" }],
+    ["path", { d: "M18 15v6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/star-off.mjs
   var StarOff = [
     [
@@ -20004,16 +20123,14 @@
     ["path", { d: "m2 2 20 20" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/star-plus.mjs
-  var StarPlus = [
+  // node_modules/lucide/dist/esm/icons/star.mjs
+  var Star = [
     [
       "path",
       {
-        d: "M11.013 18.582 6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16l2.309-4.679a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904L20 11.5"
+        d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
       }
-    ],
-    ["path", { d: "M15 18h6" }],
-    ["path", { d: "M18 15v6" }]
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/star-x.mjs
@@ -20026,16 +20143,6 @@
       }
     ],
     ["path", { d: "m20.5 15.5-5 5" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/star.mjs
-  var Star = [
-    [
-      "path",
-      {
-        d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/step-back.mjs
@@ -20081,18 +20188,6 @@
     ["path", { d: "M10 16s.8 1 2 1c1.3 0 2-1 2-1" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/sticky-note-minus.mjs
-  var StickyNoteMinus = [
-    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }],
-    [
-      "path",
-      {
-        d: "M21 14V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.35"
-      }
-    ],
-    ["path", { d: "M21 18h-6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/sticky-note-check.mjs
   var StickyNoteCheck = [
     ["path", { d: "m15 19 2 2 4-4" }],
@@ -20105,6 +20200,18 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/sticky-note-minus.mjs
+  var StickyNoteMinus = [
+    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }],
+    [
+      "path",
+      {
+        d: "M21 14V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.35"
+      }
+    ],
+    ["path", { d: "M21 18h-6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/sticky-note-off.mjs
   var StickyNoteOff = [
     ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }],
@@ -20113,15 +20220,17 @@
     ["path", { d: "M8.656 3H15a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 21 9v6.344" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/sticky-note.mjs
-  var StickyNote = [
+  // node_modules/lucide/dist/esm/icons/sticky-note-x.mjs
+  var StickyNoteX = [
+    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }],
+    ["path", { d: "m16 16 5 5" }],
     [
       "path",
       {
-        d: "M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"
+        d: "M21 12V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7"
       }
     ],
-    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }]
+    ["path", { d: "m21 16-5 5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/sticky-note-plus.mjs
@@ -20137,17 +20246,15 @@
     ["path", { d: "M21 18h-6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/sticky-note-x.mjs
-  var StickyNoteX = [
-    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }],
-    ["path", { d: "m16 16 5 5" }],
+  // node_modules/lucide/dist/esm/icons/sticky-note.mjs
+  var StickyNote = [
     [
       "path",
       {
-        d: "M21 12V9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7"
+        d: "M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"
       }
     ],
-    ["path", { d: "m21 16-5 5" }]
+    ["path", { d: "M15 3v5a1 1 0 0 0 1 1h5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/sticky-notes.mjs
@@ -20180,12 +20287,6 @@
     ["path", { d: "M14 12 8.47 2.302" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/stretch-horizontal.mjs
-  var StretchHorizontal = [
-    ["rect", { width: "20", height: "6", x: "2", y: "4", rx: "2" }],
-    ["rect", { width: "20", height: "6", x: "2", y: "14", rx: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/store.mjs
   var Store = [
     ["path", { d: "M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" }],
@@ -20196,6 +20297,12 @@
       }
     ],
     ["path", { d: "M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/stretch-horizontal.mjs
+  var StretchHorizontal = [
+    ["rect", { width: "20", height: "6", x: "2", y: "4", rx: "2" }],
+    ["rect", { width: "20", height: "6", x: "2", y: "14", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/stretch-vertical.mjs
@@ -20300,18 +20407,6 @@
     ["path", { d: "m19.07 4.93-1.41 1.41" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/sunset.mjs
-  var Sunset = [
-    ["path", { d: "M12 10V2" }],
-    ["path", { d: "m4.93 10.93 1.41 1.41" }],
-    ["path", { d: "M2 18h2" }],
-    ["path", { d: "M20 18h2" }],
-    ["path", { d: "m19.07 10.93-1.41 1.41" }],
-    ["path", { d: "M22 22H2" }],
-    ["path", { d: "m16 6-4 4-4-4" }],
-    ["path", { d: "M16 18a4 4 0 0 0-8 0" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/sunrise.mjs
   var Sunrise = [
     ["path", { d: "M12 2v8" }],
@@ -20321,6 +20416,18 @@
     ["path", { d: "m19.07 10.93-1.41 1.41" }],
     ["path", { d: "M22 22H2" }],
     ["path", { d: "m8 6 4-4 4 4" }],
+    ["path", { d: "M16 18a4 4 0 0 0-8 0" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/sunset.mjs
+  var Sunset = [
+    ["path", { d: "M12 10V2" }],
+    ["path", { d: "m4.93 10.93 1.41 1.41" }],
+    ["path", { d: "M2 18h2" }],
+    ["path", { d: "M20 18h2" }],
+    ["path", { d: "m19.07 10.93-1.41 1.41" }],
+    ["path", { d: "M22 22H2" }],
+    ["path", { d: "m16 6-4 4-4-4" }],
     ["path", { d: "M16 18a4 4 0 0 0-8 0" }]
   ];
 
@@ -20383,16 +20490,6 @@
     ["line", { x1: "3", x2: "5", y1: "19", y2: "21" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/table-2.mjs
-  var Table2 = [
-    [
-      "path",
-      {
-        d: "M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
-      }
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/syringe.mjs
   var Syringe = [
     ["path", { d: "m18 2 4 4" }],
@@ -20401,6 +20498,16 @@
     ["path", { d: "m9 11 4 4" }],
     ["path", { d: "m5 19-3 3" }],
     ["path", { d: "m14 4 6 6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/table-2.mjs
+  var Table2 = [
+    [
+      "path",
+      {
+        d: "M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/table-cells-merge.mjs
@@ -20435,14 +20542,6 @@
     ["path", { d: "M5 3v18" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/table-properties.mjs
-  var TableProperties = [
-    ["path", { d: "M15 3v18" }],
-    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M21 9H3" }],
-    ["path", { d: "M21 15H3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/table-of-contents.mjs
   var TableOfContents = [
     ["path", { d: "M16 5H3" }],
@@ -20451,6 +20550,14 @@
     ["path", { d: "M21 5h.01" }],
     ["path", { d: "M21 12h.01" }],
     ["path", { d: "M21 19h.01" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/table-properties.mjs
+  var TableProperties = [
+    ["path", { d: "M15 3v18" }],
+    ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M21 9H3" }],
+    ["path", { d: "M21 15H3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/table-rows-split.mjs
@@ -20510,6 +20617,17 @@
     ["circle", { cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/tag.mjs
+  var Tag = [
+    [
+      "path",
+      {
+        d: "M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
+      }
+    ],
+    ["circle", { cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/tag-x.mjs
   var TagX = [
     [
@@ -20520,17 +20638,6 @@
     ],
     ["path", { d: "m16.5 10.5 5 5" }],
     ["path", { d: "m21.5 10.5-5 5" }],
-    ["circle", { cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/tag.mjs
-  var Tag = [
-    [
-      "path",
-      {
-        d: "M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
-      }
-    ],
     ["circle", { cx: "7.5", cy: "7.5", r: ".5", fill: "currentColor" }]
   ];
 
@@ -20654,13 +20761,6 @@
     ["path", { d: "M14.5 16h-5" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/text-align-center.mjs
-  var TextAlignCenter = [
-    ["path", { d: "M21 5H3" }],
-    ["path", { d: "M17 12H7" }],
-    ["path", { d: "M19 19H5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/test-tubes.mjs
   var TestTubes = [
     ["path", { d: "M9 2v17.5A2.5 2.5 0 0 1 6.5 22A2.5 2.5 0 0 1 4 19.5V2" }],
@@ -20669,6 +20769,13 @@
     ["path", { d: "M14 2h7" }],
     ["path", { d: "M9 16H4" }],
     ["path", { d: "M20 16h-5" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/text-align-center.mjs
+  var TextAlignCenter = [
+    ["path", { d: "M21 5H3" }],
+    ["path", { d: "M17 12H7" }],
+    ["path", { d: "M19 19H5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/text-align-end.mjs
@@ -20813,6 +20920,17 @@
     ["path", { d: "m9 12 2 2 4-4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/ticket-minus.mjs
+  var TicketMinus = [
+    [
+      "path",
+      {
+        d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
+      }
+    ],
+    ["path", { d: "M9 12h6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/ticket-percent.mjs
   var TicketPercent = [
     [
@@ -20826,17 +20944,6 @@
     ["path", { d: "M15 15h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/ticket-minus.mjs
-  var TicketMinus = [
-    [
-      "path",
-      {
-        d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
-      }
-    ],
-    ["path", { d: "M9 12h6" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/ticket-plus.mjs
   var TicketPlus = [
     [
@@ -20847,6 +20954,17 @@
     ],
     ["path", { d: "M9 12h6" }],
     ["path", { d: "M12 9v6" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/ticket-slash.mjs
+  var TicketSlash = [
+    [
+      "path",
+      {
+        d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
+      }
+    ],
+    ["path", { d: "m9.5 14.5 5-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/ticket-x.mjs
@@ -20872,17 +20990,6 @@
     ["path", { d: "M13 5v2" }],
     ["path", { d: "M13 17v2" }],
     ["path", { d: "M13 11v2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/ticket-slash.mjs
-  var TicketSlash = [
-    [
-      "path",
-      {
-        d: "M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
-      }
-    ],
-    ["path", { d: "m9.5 14.5 5-5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/tickets-plane.mjs
@@ -20932,14 +21039,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/timer-reset.mjs
-  var TimerReset = [
-    ["path", { d: "M10 2h4" }],
-    ["path", { d: "M12 14v-4" }],
-    ["path", { d: "M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6" }],
-    ["path", { d: "M9 17H4v5" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/timer-off.mjs
   var TimerOff = [
     ["path", { d: "M10 2h4" }],
@@ -20947,6 +21046,14 @@
     ["path", { d: "M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2" }],
     ["path", { d: "m2 2 20 20" }],
     ["path", { d: "M12 12v-2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/timer-reset.mjs
+  var TimerReset = [
+    ["path", { d: "M10 2h4" }],
+    ["path", { d: "M12 14v-4" }],
+    ["path", { d: "M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6" }],
+    ["path", { d: "M9 17H4v5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/timer.mjs
@@ -21026,6 +21133,13 @@
     ["ellipse", { cx: "12", cy: "12.5", rx: "10", ry: "8.5" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/touchpad.mjs
+  var Touchpad = [
+    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }],
+    ["path", { d: "M2 14h20" }],
+    ["path", { d: "M12 20v-6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/touchpad-off.mjs
   var TouchpadOff = [
     ["path", { d: "M12 20v-6" }],
@@ -21036,23 +21150,11 @@
     ["path", { d: "M9.656 4H20a2 2 0 0 1 2 2v10.344" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/touchpad.mjs
-  var Touchpad = [
-    ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2" }],
-    ["path", { d: "M2 14h20" }],
-    ["path", { d: "M12 20v-6" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/towel-rack.mjs
-  var TowelRack = [
-    ["path", { d: "M22 7h-2" }],
-    [
-      "path",
-      {
-        d: "M6.5 3h11A2.5 2.5 0 0 1 20 5.5V20a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V5.5a1 1 0 0 0-5 0V17a1 1 0 0 0 1 1h4"
-      }
-    ],
-    ["path", { d: "M9 7H2" }]
+  // node_modules/lucide/dist/esm/icons/toy-brick.mjs
+  var ToyBrick = [
+    ["rect", { width: "18", height: "12", x: "3", y: "8", rx: "1" }],
+    ["path", { d: "M10 8V5c0-.6-.4-1-1-1H6a1 1 0 0 0-1 1v3" }],
+    ["path", { d: "M19 8V5c0-.6-.4-1-1-1h-3a1 1 0 0 0-1 1v3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/tower-control.mjs
@@ -21066,11 +21168,16 @@
     ["path", { d: "M13 2h-2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/toy-brick.mjs
-  var ToyBrick = [
-    ["rect", { width: "18", height: "12", x: "3", y: "8", rx: "1" }],
-    ["path", { d: "M10 8V5c0-.6-.4-1-1-1H6a1 1 0 0 0-1 1v3" }],
-    ["path", { d: "M19 8V5c0-.6-.4-1-1-1h-3a1 1 0 0 0-1 1v3" }]
+  // node_modules/lucide/dist/esm/icons/towel-rack.mjs
+  var TowelRack = [
+    ["path", { d: "M22 7h-2" }],
+    [
+      "path",
+      {
+        d: "M6.5 3h11A2.5 2.5 0 0 1 20 5.5V20a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V5.5a1 1 0 0 0-5 0V17a1 1 0 0 0 1 1h4"
+      }
+    ],
+    ["path", { d: "M9 7H2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/tractor.mjs
@@ -21099,16 +21206,6 @@
     ["path", { d: "M9.194 6.57a5 2.5 0 0 0 5.61 0" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/train-front.mjs
-  var TrainFront = [
-    ["path", { d: "M8 3.1V7a4 4 0 0 0 8 0V3.1" }],
-    ["path", { d: "m9 15-1-1" }],
-    ["path", { d: "m15 15 1-1" }],
-    ["path", { d: "M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z" }],
-    ["path", { d: "m8 19-2 3" }],
-    ["path", { d: "m16 19 2 3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/train-front-tunnel.mjs
   var TrainFrontTunnel = [
     ["path", { d: "M2 22V12a10 10 0 1 1 20 0v10" }],
@@ -21118,6 +21215,16 @@
     ["path", { d: "M10 19a4 4 0 0 1-4-4v-3a6 6 0 1 1 12 0v3a4 4 0 0 1-4 4Z" }],
     ["path", { d: "m9 19-2 3" }],
     ["path", { d: "m15 19 2 3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/train-front.mjs
+  var TrainFront = [
+    ["path", { d: "M8 3.1V7a4 4 0 0 0 8 0V3.1" }],
+    ["path", { d: "m9 15-1-1" }],
+    ["path", { d: "m15 15 1-1" }],
+    ["path", { d: "M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z" }],
+    ["path", { d: "m8 19-2 3" }],
+    ["path", { d: "m16 19 2 3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/train-track.mjs
@@ -21142,15 +21249,6 @@
     ["path", { d: "M16 15h.01" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/trash-2.mjs
-  var Trash2 = [
-    ["path", { d: "M10 11v6" }],
-    ["path", { d: "M14 11v6" }],
-    ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" }],
-    ["path", { d: "M3 6h18" }],
-    ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/transgender.mjs
   var Transgender = [
     ["path", { d: "M12 16v6" }],
@@ -21161,6 +21259,15 @@
     ["path", { d: "m22 2-7.17 7.17" }],
     ["path", { d: "M8 5 5 8" }],
     ["circle", { cx: "12", cy: "12", r: "4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/trash-2.mjs
+  var Trash2 = [
+    ["path", { d: "M10 11v6" }],
+    ["path", { d: "M14 11v6" }],
+    ["path", { d: "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" }],
+    ["path", { d: "M3 6h18" }],
+    ["path", { d: "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/trash.mjs
@@ -21289,13 +21396,6 @@
     ["circle", { cx: "7", cy: "19", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/turkish-lira.mjs
-  var TurkishLira = [
-    ["path", { d: "M15 4 5 9" }],
-    ["path", { d: "m15 8.5-10 5" }],
-    ["path", { d: "M18 12a9 9 0 0 1-9 9V3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/truck.mjs
   var Truck = [
     ["path", { d: "M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" }],
@@ -21306,6 +21406,13 @@
     ],
     ["circle", { cx: "17", cy: "18", r: "2" }],
     ["circle", { cx: "7", cy: "18", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/turkish-lira.mjs
+  var TurkishLira = [
+    ["path", { d: "M15 4 5 9" }],
+    ["path", { d: "m15 8.5-10 5" }],
+    ["path", { d: "M18 12a9 9 0 0 1-9 9V3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/turntable.mjs
@@ -21329,12 +21436,6 @@
     ["path", { d: "M16.93 10H20a2 2 0 0 1 0 4H2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/tv-minimal.mjs
-  var TvMinimal = [
-    ["path", { d: "M7 21h10" }],
-    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/tv-minimal-play.mjs
   var TvMinimalPlay = [
     [
@@ -21351,6 +21452,12 @@
   var Tv = [
     ["path", { d: "m17 2-5 5-5-5" }],
     ["rect", { width: "20", height: "15", x: "2", y: "7", rx: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/tv-minimal.mjs
+  var TvMinimal = [
+    ["path", { d: "M7 21h10" }],
+    ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/type-outline.mjs
@@ -21370,13 +21477,6 @@
     ["path", { d: "M9 20h6" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/umbrella.mjs
-  var Umbrella = [
-    ["path", { d: "M12 13v7a2 2 0 0 0 4 0" }],
-    ["path", { d: "M12 2v2" }],
-    ["path", { d: "M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/umbrella-off.mjs
   var UmbrellaOff = [
     ["path", { d: "M12 13v7a2 2 0 0 0 4 0" }],
@@ -21384,6 +21484,13 @@
     ["path", { d: "M18.656 13h2.336a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-12.07-7.51" }],
     ["path", { d: "m2 2 20 20" }],
     ["path", { d: "M5.961 5.957a10.28 10.28 0 0 0-3.922 5.769A1 1 0 0 0 3 13h10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/umbrella.mjs
+  var Umbrella = [
+    ["path", { d: "M12 13v7a2 2 0 0 0 4 0" }],
+    ["path", { d: "M12 2v2" }],
+    ["path", { d: "M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/underline.mjs
@@ -21495,6 +21602,12 @@
     ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/usb-c-port.mjs
+  var UsbCPort = [
+    ["path", { d: "M6 12h12" }],
+    ["rect", { x: "2", y: "8", width: "20", height: "8", rx: "4" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/usb.mjs
   var Usb = [
     ["circle", { cx: "10", cy: "7", r: "1" }],
@@ -21513,21 +21626,6 @@
     ["circle", { cx: "9", cy: "7", r: "4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/user-cog.mjs
-  var UserCog = [
-    ["path", { d: "M10 15H6a4 4 0 0 0-4 4v2" }],
-    ["path", { d: "m14.305 16.53.923-.382" }],
-    ["path", { d: "m15.228 13.852-.923-.383" }],
-    ["path", { d: "m16.852 12.228-.383-.923" }],
-    ["path", { d: "m16.852 17.772-.383.924" }],
-    ["path", { d: "m19.148 12.228.383-.923" }],
-    ["path", { d: "m19.53 18.696-.382-.924" }],
-    ["path", { d: "m20.772 13.852.924-.383" }],
-    ["path", { d: "m20.772 16.148.924.383" }],
-    ["circle", { cx: "18", cy: "15", r: "3" }],
-    ["circle", { cx: "9", cy: "7", r: "4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/user-key.mjs
   var UserKey = [
     ["path", { d: "M20 11v6" }],
@@ -21543,6 +21641,21 @@
     ["path", { d: "M9.5 15H7a4 4 0 0 0-4 4v2" }],
     ["circle", { cx: "10", cy: "7", r: "4" }],
     ["rect", { x: "13", y: "16", width: "8", height: "5", rx: ".899" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/user-cog.mjs
+  var UserCog = [
+    ["path", { d: "M10 15H6a4 4 0 0 0-4 4v2" }],
+    ["path", { d: "m14.305 16.53.923-.382" }],
+    ["path", { d: "m15.228 13.852-.923-.383" }],
+    ["path", { d: "m16.852 12.228-.383-.923" }],
+    ["path", { d: "m16.852 17.772-.383.924" }],
+    ["path", { d: "m19.148 12.228.383-.923" }],
+    ["path", { d: "m19.53 18.696-.382-.924" }],
+    ["path", { d: "m20.772 13.852.924-.383" }],
+    ["path", { d: "m20.772 16.148.924.383" }],
+    ["circle", { cx: "18", cy: "15", r: "3" }],
+    ["circle", { cx: "9", cy: "7", r: "4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/user-minus.mjs
@@ -21602,6 +21715,13 @@
     ["circle", { cx: "18", cy: "18", r: "3" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/user-round-minus.mjs
+  var UserRoundMinus = [
+    ["path", { d: "M2 21a8 8 0 0 1 13.292-6" }],
+    ["circle", { cx: "10", cy: "8", r: "5" }],
+    ["path", { d: "M22 19h-6" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/user-round-key.mjs
   var UserRoundKey = [
     ["path", { d: "M19 11v6" }],
@@ -21609,13 +21729,6 @@
     ["path", { d: "M2 21a8 8 0 0 1 12.868-6.349" }],
     ["circle", { cx: "10", cy: "8", r: "5" }],
     ["circle", { cx: "19", cy: "19", r: "2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/user-round-minus.mjs
-  var UserRoundMinus = [
-    ["path", { d: "M2 21a8 8 0 0 1 13.292-6" }],
-    ["circle", { cx: "10", cy: "8", r: "5" }],
-    ["path", { d: "M22 19h-6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/user-round-pen.mjs
@@ -21692,18 +21805,18 @@
     ["circle", { cx: "10", cy: "7", r: "4" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/user.mjs
-  var User = [
-    ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" }],
-    ["circle", { cx: "12", cy: "7", r: "4" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/user-x.mjs
   var UserX = [
     ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }],
     ["circle", { cx: "9", cy: "7", r: "4" }],
     ["line", { x1: "17", x2: "22", y1: "8", y2: "13" }],
     ["line", { x1: "22", x2: "17", y1: "8", y2: "13" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/user.mjs
+  var User = [
+    ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" }],
+    ["circle", { cx: "12", cy: "7", r: "4" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/users-round.mjs
@@ -21761,14 +21874,6 @@
     ["circle", { cx: "7", cy: "18", r: "2" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/variable.mjs
-  var Variable = [
-    ["path", { d: "M8 21s-4-3-4-9 4-9 4-9" }],
-    ["path", { d: "M16 3s4 3 4 9-4 9-4 9" }],
-    ["line", { x1: "15", x2: "9", y1: "9", y2: "15" }],
-    ["line", { x1: "9", x2: "15", y1: "9", y2: "15" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/vault.mjs
   var Vault = [
     ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2" }],
@@ -21781,6 +21886,14 @@
     ["circle", { cx: "16.5", cy: "16.5", r: ".5", fill: "currentColor" }],
     ["path", { d: "m13.4 13.4 2.7 2.7" }],
     ["circle", { cx: "12", cy: "12", r: "2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/variable.mjs
+  var Variable = [
+    ["path", { d: "M8 21s-4-3-4-9 4-9 4-9" }],
+    ["path", { d: "M16 3s4 3 4 9-4 9-4 9" }],
+    ["line", { x1: "15", x2: "9", y1: "9", y2: "15" }],
+    ["line", { x1: "9", x2: "15", y1: "9", y2: "15" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/vector-square.mjs
@@ -21802,6 +21915,15 @@
     ["path", { d: "M2 2a26.6 26.6 0 0 1 10 20c.9-6.82 1.5-9.5 4-14" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/venus-and-mars.mjs
+  var VenusAndMars = [
+    ["path", { d: "M10 20h4" }],
+    ["path", { d: "M12 16v6" }],
+    ["path", { d: "M17 2h4v4" }],
+    ["path", { d: "m21 2-5.46 5.46" }],
+    ["circle", { cx: "12", cy: "11", r: "5" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/venetian-mask.mjs
   var VenetianMask = [
     ["path", { d: "M18 11c-1.5 0-2.5.5-3 2" }],
@@ -21812,15 +21934,6 @@
       }
     ],
     ["path", { d: "M6 11c1.5 0 2.5.5 3 2" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/venus-and-mars.mjs
-  var VenusAndMars = [
-    ["path", { d: "M10 20h4" }],
-    ["path", { d: "M12 16v6" }],
-    ["path", { d: "M17 2h4v4" }],
-    ["path", { d: "m21 2-5.46 5.46" }],
-    ["circle", { cx: "12", cy: "11", r: "5" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/venus.mjs
@@ -21839,18 +21952,18 @@
     ["line", { x1: "2", x2: "22", y1: "2", y2: "22" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/vibrate.mjs
-  var Vibrate = [
-    ["path", { d: "m2 8 2 2-2 2 2 2-2 2" }],
-    ["path", { d: "m22 8-2 2 2 2-2 2 2 2" }],
-    ["rect", { width: "8", height: "14", x: "8", y: "5", rx: "1" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/video-off.mjs
   var VideoOff = [
     ["path", { d: "M10.66 6H14a2 2 0 0 1 2 2v2.5l5.248-3.062A.5.5 0 0 1 22 7.87v8.196" }],
     ["path", { d: "M16 16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" }],
     ["path", { d: "m2 2 20 20" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/vibrate.mjs
+  var Vibrate = [
+    ["path", { d: "m2 8 2 2-2 2 2 2-2 2" }],
+    ["path", { d: "m22 8-2 2 2 2-2 2 2 2" }],
+    ["rect", { width: "8", height: "14", x: "8", y: "5", rx: "1" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/video.mjs
@@ -21881,13 +21994,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/voicemail.mjs
-  var Voicemail = [
-    ["circle", { cx: "6", cy: "12", r: "4" }],
-    ["circle", { cx: "18", cy: "12", r: "4" }],
-    ["line", { x1: "6", x2: "18", y1: "16", y2: "16" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/volleyball.mjs
   var Volleyball = [
     ["path", { d: "M11 7a16 16 20 0 1 10.98 4.362" }],
@@ -21896,6 +22002,13 @@
     ["path", { d: "M20.66 17A13 13 0 0 0 12 12a13 13 0 0 1 0-10" }],
     ["path", { d: "M8.17 15.366a16 16 0 0 1-1.713-11.69" }],
     ["circle", { cx: "12", cy: "12", r: "10" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/voicemail.mjs
+  var Voicemail = [
+    ["circle", { cx: "6", cy: "12", r: "4" }],
+    ["circle", { cx: "18", cy: "12", r: "4" }],
+    ["line", { x1: "6", x2: "18", y1: "16", y2: "16" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/volume-1.mjs
@@ -21947,13 +22060,6 @@
     ["line", { x1: "16", x2: "22", y1: "9", y2: "15" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/wallet-cards.mjs
-  var WalletCards = [
-    ["path", { d: "M3 11h3.75a2 2 0 0 1 1.6.8l.45.6a4 4 0 0 0 6.4 0l.45-.6a2 2 0 0 1 1.6-.8H21" }],
-    ["path", { d: "M3 7h18" }],
-    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/volume.mjs
   var Volume = [
     [
@@ -21969,6 +22075,13 @@
     ["path", { d: "m9 12 2 2 4-4" }],
     ["path", { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }],
     ["path", { d: "M22 19H2" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/wallet-cards.mjs
+  var WalletCards = [
+    ["path", { d: "M3 11h3.75a2 2 0 0 1 1.6.8l.45.6a4 4 0 0 0 6.4 0l.45-.6a2 2 0 0 1 1.6-.8H21" }],
+    ["path", { d: "M3 7h18" }],
+    ["rect", { x: "3", y: "3", width: "18", height: "18", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/wallet-minimal.mjs
@@ -22143,6 +22256,21 @@
     ["path", { d: "M8.478 2.817a8 8 0 0 1 10.705 10.705" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/webcam.mjs
+  var Webcam = [
+    ["circle", { cx: "12", cy: "10", r: "8" }],
+    ["circle", { cx: "12", cy: "10", r: "3" }],
+    ["path", { d: "M7 22h10" }],
+    ["path", { d: "M12 22v-4" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/webhook.mjs
+  var Webhook = [
+    ["path", { d: "M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" }],
+    ["path", { d: "m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" }],
+    ["path", { d: "m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/webhook-off.mjs
   var WebhookOff = [
     ["path", { d: "M17 17h-5c-1.09-.02-1.94.92-2.5 1.9A3 3 0 1 1 2.57 15" }],
@@ -22154,19 +22282,15 @@
     ["path", { d: "m2 2 20 20" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/webhook.mjs
-  var Webhook = [
-    ["path", { d: "M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" }],
-    ["path", { d: "m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" }],
-    ["path", { d: "m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/webcam.mjs
-  var Webcam = [
-    ["circle", { cx: "12", cy: "10", r: "8" }],
-    ["circle", { cx: "12", cy: "10", r: "3" }],
-    ["path", { d: "M7 22h10" }],
-    ["path", { d: "M12 22v-4" }]
+  // node_modules/lucide/dist/esm/icons/weight.mjs
+  var Weight = [
+    ["circle", { cx: "12", cy: "5", r: "3" }],
+    [
+      "path",
+      {
+        d: "M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z"
+      }
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/weight-tilde.mjs
@@ -22179,17 +22303,6 @@
     ],
     ["path", { d: "M7.999 15a2.5 2.5 0 0 1 4 0 2.5 2.5 0 0 0 4 0" }],
     ["circle", { cx: "12", cy: "5", r: "3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/weight.mjs
-  var Weight = [
-    ["circle", { cx: "12", cy: "5", r: "3" }],
-    [
-      "path",
-      {
-        d: "M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z"
-      }
-    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/wheat-off.mjs
@@ -22371,6 +22484,13 @@
     ["path", { d: "M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z" }]
   ];
 
+  // node_modules/lucide/dist/esm/icons/workflow.mjs
+  var Workflow = [
+    ["rect", { width: "8", height: "8", x: "3", y: "3", rx: "2" }],
+    ["path", { d: "M7 11v4a2 2 0 0 0 2 2h4" }],
+    ["rect", { width: "8", height: "8", x: "13", y: "13", rx: "2" }]
+  ];
+
   // node_modules/lucide/dist/esm/icons/worm.mjs
   var Worm = [
     ["path", { d: "m19 12-1.5 3" }],
@@ -22381,13 +22501,6 @@
         d: "M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z"
       }
     ]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/workflow.mjs
-  var Workflow = [
-    ["rect", { width: "8", height: "8", x: "3", y: "3", rx: "2" }],
-    ["path", { d: "M7 11v4a2 2 0 0 0 2 2h4" }],
-    ["rect", { width: "8", height: "8", x: "13", y: "13", rx: "2" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/wrench-off.mjs
@@ -22485,18 +22598,24 @@
     ["circle", { cx: "17", cy: "17", r: "3" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/zodiac-leo.mjs
-  var ZodiacLeo = [
-    ["path", { d: "M10 16c0-4-3-4.5-3-8a5 5 0 0 1 10 0c0 3.466-3 6.196-3 10a3 3 0 0 0 6 0" }],
-    ["circle", { cx: "7", cy: "16", r: "3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/zodiac-gemini.mjs
   var ZodiacGemini = [
     ["path", { d: "M16 4.525v14.948" }],
     ["path", { d: "M20 3A17 17 0 0 1 4 3" }],
     ["path", { d: "M4 21a17 17 0 0 1 16 0" }],
     ["path", { d: "M8 4.525v14.948" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/zodiac-leo.mjs
+  var ZodiacLeo = [
+    ["path", { d: "M10 16c0-4-3-4.5-3-8a5 5 0 0 1 10 0c0 3.466-3 6.196-3 10a3 3 0 0 0 6 0" }],
+    ["circle", { cx: "7", cy: "16", r: "3" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/zodiac-ophiuchus.mjs
+  var ZodiacOphiuchus = [
+    ["path", { d: "M3 10A6.06 6.06 0 0 1 12 10 A6.06 6.06 0 0 0 21 10" }],
+    ["path", { d: "M6 3v12a6 6 0 0 0 12 0V3" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/zodiac-libra.mjs
@@ -22508,17 +22627,18 @@
     ["path", { d: "M3 20h18" }]
   ];
 
-  // node_modules/lucide/dist/esm/icons/zodiac-ophiuchus.mjs
-  var ZodiacOphiuchus = [
-    ["path", { d: "M3 10A6.06 6.06 0 0 1 12 10 A6.06 6.06 0 0 0 21 10" }],
-    ["path", { d: "M6 3v12a6 6 0 0 0 12 0V3" }]
-  ];
-
   // node_modules/lucide/dist/esm/icons/zodiac-pisces.mjs
   var ZodiacPisces = [
     ["path", { d: "M19 21a15 15 0 0 1 0-18" }],
     ["path", { d: "M20 12H4" }],
     ["path", { d: "M5 3a15 15 0 0 1 0 18" }]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/zodiac-sagittarius.mjs
+  var ZodiacSagittarius = [
+    ["path", { d: "M15 3h6v6" }],
+    ["path", { d: "M21 3 3 21" }],
+    ["path", { d: "m9 9 6 6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/zodiac-scorpio.mjs
@@ -22527,13 +22647,6 @@
     ["path", { d: "m22 19-3 3" }],
     ["path", { d: "M5 19V5.5a1 1 0 0 1 5 0" }],
     ["path", { d: "M5 5.5A2.5 2.5 0 0 0 2.5 3" }]
-  ];
-
-  // node_modules/lucide/dist/esm/icons/zodiac-sagittarius.mjs
-  var ZodiacSagittarius = [
-    ["path", { d: "M15 3h6v6" }],
-    ["path", { d: "M21 3 3 21" }],
-    ["path", { d: "m9 9 6 6" }]
   ];
 
   // node_modules/lucide/dist/esm/icons/zodiac-taurus.mjs
@@ -23021,9 +23134,50 @@
   ComponentRegistry.register("ProjectConclusion", ProjectConclusion);
   ComponentRegistry.register("ProjectInfo", ProjectInfo);
   ComponentRegistry.register("ToTopArrow", ToTopArrow);
+  function initProjectImageShowcase() {
+    const cards = document.querySelectorAll(".image-card");
+    if (!cards.length)
+      return;
+    let container = document.getElementById("image_showcase_container");
+    let showcaseImage = document.getElementById("image_showcase");
+    if (!container || !showcaseImage) {
+      container = document.createElement("div");
+      container.id = "image_showcase_container";
+      container.className = "invis";
+      container.style.alignItems = "center";
+      container.style.justifyContent = "center";
+      container.innerHTML = '<img id="image_showcase" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;border:5px solid #242323;background-color:white" />';
+      document.body.appendChild(container);
+      showcaseImage = container.querySelector("#image_showcase");
+      container.addEventListener("click", () => {
+        container.classList.add("invis");
+      });
+    }
+    document.addEventListener("click", (e) => {
+      const card = e.target.closest(".image-card");
+      if (!card)
+        return;
+      const image = card.querySelector("img");
+      if (!image || !showcaseImage || !container)
+        return;
+      showcaseImage.src = image.src;
+      showcaseImage.alt = image.alt;
+      container.classList.remove("invis");
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && container && !container.classList.contains("invis")) {
+        container.classList.add("invis");
+      }
+    });
+  }
   var page;
   var pageFromURL = new URLSearchParams(window.location.search).get("page") ?? "home";
   page = pageFromURL;
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initProjectImageShowcase);
+  } else {
+    initProjectImageShowcase();
+  }
   if (page !== "project_viewer") {
     document.addEventListener("click", async (e) => {
       const card = e.target.closest(".project-card");
@@ -23278,7 +23432,7 @@
 
 lucide/dist/esm/defaultAttributes.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23286,7 +23440,7 @@ lucide/dist/esm/defaultAttributes.mjs:
 
 lucide/dist/esm/createElement.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23294,7 +23448,7 @@ lucide/dist/esm/createElement.mjs:
 
 lucide/dist/esm/shared/src/utils/hasA11yProp.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23302,7 +23456,7 @@ lucide/dist/esm/shared/src/utils/hasA11yProp.mjs:
 
 lucide/dist/esm/shared/src/utils/mergeClasses.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23310,7 +23464,7 @@ lucide/dist/esm/shared/src/utils/mergeClasses.mjs:
 
 lucide/dist/esm/shared/src/utils/toCamelCase.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23318,7 +23472,7 @@ lucide/dist/esm/shared/src/utils/toCamelCase.mjs:
 
 lucide/dist/esm/shared/src/utils/toPascalCase.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23326,7 +23480,7 @@ lucide/dist/esm/shared/src/utils/toPascalCase.mjs:
 
 lucide/dist/esm/replaceElement.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23334,23 +23488,7 @@ lucide/dist/esm/replaceElement.mjs:
 
 lucide/dist/esm/icons/a-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/a-arrow-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/accessibility.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23358,7 +23496,23 @@ lucide/dist/esm/icons/accessibility.mjs:
 
 lucide/dist/esm/icons/a-large-small.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/a-arrow-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/accessibility.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23366,15 +23520,7 @@ lucide/dist/esm/icons/a-large-small.mjs:
 
 lucide/dist/esm/icons/activity.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ad.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23382,7 +23528,15 @@ lucide/dist/esm/icons/ad.mjs:
 
 lucide/dist/esm/icons/air-vent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ad.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23390,7 +23544,7 @@ lucide/dist/esm/icons/air-vent.mjs:
 
 lucide/dist/esm/icons/airplay.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23398,7 +23552,7 @@ lucide/dist/esm/icons/airplay.mjs:
 
 lucide/dist/esm/icons/alarm-clock-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23406,7 +23560,7 @@ lucide/dist/esm/icons/alarm-clock-check.mjs:
 
 lucide/dist/esm/icons/alarm-clock-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23414,7 +23568,7 @@ lucide/dist/esm/icons/alarm-clock-minus.mjs:
 
 lucide/dist/esm/icons/alarm-clock-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23422,15 +23576,7 @@ lucide/dist/esm/icons/alarm-clock-off.mjs:
 
 lucide/dist/esm/icons/alarm-clock-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/alarm-smoke.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23438,7 +23584,15 @@ lucide/dist/esm/icons/alarm-smoke.mjs:
 
 lucide/dist/esm/icons/alarm-clock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/alarm-smoke.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23446,7 +23600,7 @@ lucide/dist/esm/icons/alarm-clock.mjs:
 
 lucide/dist/esm/icons/album.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23454,7 +23608,7 @@ lucide/dist/esm/icons/album.mjs:
 
 lucide/dist/esm/icons/align-center-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23462,7 +23616,7 @@ lucide/dist/esm/icons/align-center-horizontal.mjs:
 
 lucide/dist/esm/icons/align-center-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23470,7 +23624,7 @@ lucide/dist/esm/icons/align-center-vertical.mjs:
 
 lucide/dist/esm/icons/align-end-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23478,7 +23632,7 @@ lucide/dist/esm/icons/align-end-horizontal.mjs:
 
 lucide/dist/esm/icons/align-end-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23486,7 +23640,7 @@ lucide/dist/esm/icons/align-end-vertical.mjs:
 
 lucide/dist/esm/icons/align-horizontal-distribute-center.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23494,7 +23648,7 @@ lucide/dist/esm/icons/align-horizontal-distribute-center.mjs:
 
 lucide/dist/esm/icons/align-horizontal-distribute-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23502,7 +23656,7 @@ lucide/dist/esm/icons/align-horizontal-distribute-end.mjs:
 
 lucide/dist/esm/icons/align-horizontal-distribute-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23510,7 +23664,7 @@ lucide/dist/esm/icons/align-horizontal-distribute-start.mjs:
 
 lucide/dist/esm/icons/align-horizontal-justify-center.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23518,7 +23672,7 @@ lucide/dist/esm/icons/align-horizontal-justify-center.mjs:
 
 lucide/dist/esm/icons/align-horizontal-justify-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23526,7 +23680,7 @@ lucide/dist/esm/icons/align-horizontal-justify-end.mjs:
 
 lucide/dist/esm/icons/align-horizontal-justify-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23534,7 +23688,7 @@ lucide/dist/esm/icons/align-horizontal-justify-start.mjs:
 
 lucide/dist/esm/icons/align-horizontal-space-around.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23542,7 +23696,7 @@ lucide/dist/esm/icons/align-horizontal-space-around.mjs:
 
 lucide/dist/esm/icons/align-horizontal-space-between.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23550,15 +23704,7 @@ lucide/dist/esm/icons/align-horizontal-space-between.mjs:
 
 lucide/dist/esm/icons/align-start-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/align-vertical-distribute-center.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23566,7 +23712,15 @@ lucide/dist/esm/icons/align-vertical-distribute-center.mjs:
 
 lucide/dist/esm/icons/align-start-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/align-vertical-distribute-center.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23574,7 +23728,7 @@ lucide/dist/esm/icons/align-start-vertical.mjs:
 
 lucide/dist/esm/icons/align-vertical-distribute-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23582,7 +23736,7 @@ lucide/dist/esm/icons/align-vertical-distribute-start.mjs:
 
 lucide/dist/esm/icons/align-vertical-distribute-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23590,23 +23744,7 @@ lucide/dist/esm/icons/align-vertical-distribute-end.mjs:
 
 lucide/dist/esm/icons/align-vertical-justify-center.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/align-vertical-justify-end.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/align-vertical-space-around.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23614,7 +23752,23 @@ lucide/dist/esm/icons/align-vertical-space-around.mjs:
 
 lucide/dist/esm/icons/align-vertical-justify-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/align-vertical-justify-end.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/align-vertical-space-around.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23622,15 +23776,7 @@ lucide/dist/esm/icons/align-vertical-justify-start.mjs:
 
 lucide/dist/esm/icons/align-vertical-space-between.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ambulance.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23638,7 +23784,15 @@ lucide/dist/esm/icons/ambulance.mjs:
 
 lucide/dist/esm/icons/ampersand.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ambulance.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23646,7 +23800,7 @@ lucide/dist/esm/icons/ampersand.mjs:
 
 lucide/dist/esm/icons/ampersands.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23654,7 +23808,7 @@ lucide/dist/esm/icons/ampersands.mjs:
 
 lucide/dist/esm/icons/amphora.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23662,7 +23816,7 @@ lucide/dist/esm/icons/amphora.mjs:
 
 lucide/dist/esm/icons/anchor.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23670,7 +23824,7 @@ lucide/dist/esm/icons/anchor.mjs:
 
 lucide/dist/esm/icons/angle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23678,15 +23832,7 @@ lucide/dist/esm/icons/angle.mjs:
 
 lucide/dist/esm/icons/antenna.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/aperture.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23694,7 +23840,15 @@ lucide/dist/esm/icons/aperture.mjs:
 
 lucide/dist/esm/icons/anvil.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/aperture.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23702,7 +23856,7 @@ lucide/dist/esm/icons/anvil.mjs:
 
 lucide/dist/esm/icons/app-window-mac.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23710,7 +23864,7 @@ lucide/dist/esm/icons/app-window-mac.mjs:
 
 lucide/dist/esm/icons/app-window.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23718,7 +23872,7 @@ lucide/dist/esm/icons/app-window.mjs:
 
 lucide/dist/esm/icons/apple.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23726,7 +23880,7 @@ lucide/dist/esm/icons/apple.mjs:
 
 lucide/dist/esm/icons/archive-restore.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23734,7 +23888,7 @@ lucide/dist/esm/icons/archive-restore.mjs:
 
 lucide/dist/esm/icons/archive-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23742,15 +23896,7 @@ lucide/dist/esm/icons/archive-x.mjs:
 
 lucide/dist/esm/icons/archive.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/armchair.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23758,7 +23904,15 @@ lucide/dist/esm/icons/armchair.mjs:
 
 lucide/dist/esm/icons/arrow-big-down-dash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/armchair.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23766,7 +23920,7 @@ lucide/dist/esm/icons/arrow-big-down-dash.mjs:
 
 lucide/dist/esm/icons/arrow-big-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23774,7 +23928,7 @@ lucide/dist/esm/icons/arrow-big-down.mjs:
 
 lucide/dist/esm/icons/arrow-big-left-dash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23782,7 +23936,7 @@ lucide/dist/esm/icons/arrow-big-left-dash.mjs:
 
 lucide/dist/esm/icons/arrow-big-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23790,7 +23944,7 @@ lucide/dist/esm/icons/arrow-big-left.mjs:
 
 lucide/dist/esm/icons/arrow-big-right-dash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23798,15 +23952,7 @@ lucide/dist/esm/icons/arrow-big-right-dash.mjs:
 
 lucide/dist/esm/icons/arrow-big-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/arrow-big-up-dash.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23814,7 +23960,15 @@ lucide/dist/esm/icons/arrow-big-up-dash.mjs:
 
 lucide/dist/esm/icons/arrow-big-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/arrow-big-up-dash.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23822,7 +23976,7 @@ lucide/dist/esm/icons/arrow-big-up.mjs:
 
 lucide/dist/esm/icons/arrow-down-0-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23830,7 +23984,7 @@ lucide/dist/esm/icons/arrow-down-0-1.mjs:
 
 lucide/dist/esm/icons/arrow-down-1-0.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23838,7 +23992,7 @@ lucide/dist/esm/icons/arrow-down-1-0.mjs:
 
 lucide/dist/esm/icons/arrow-down-a-z.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23846,7 +24000,7 @@ lucide/dist/esm/icons/arrow-down-a-z.mjs:
 
 lucide/dist/esm/icons/arrow-down-from-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23854,7 +24008,7 @@ lucide/dist/esm/icons/arrow-down-from-line.mjs:
 
 lucide/dist/esm/icons/arrow-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23862,7 +24016,7 @@ lucide/dist/esm/icons/arrow-down-left.mjs:
 
 lucide/dist/esm/icons/arrow-down-narrow-wide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23870,7 +24024,7 @@ lucide/dist/esm/icons/arrow-down-narrow-wide.mjs:
 
 lucide/dist/esm/icons/arrow-down-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23878,7 +24032,7 @@ lucide/dist/esm/icons/arrow-down-right.mjs:
 
 lucide/dist/esm/icons/arrow-down-to-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23886,15 +24040,7 @@ lucide/dist/esm/icons/arrow-down-to-dot.mjs:
 
 lucide/dist/esm/icons/arrow-down-to-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/arrow-down-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23902,7 +24048,7 @@ lucide/dist/esm/icons/arrow-down-up.mjs:
 
 lucide/dist/esm/icons/arrow-down-wide-narrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23910,7 +24056,15 @@ lucide/dist/esm/icons/arrow-down-wide-narrow.mjs:
 
 lucide/dist/esm/icons/arrow-down-z-a.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/arrow-down-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23918,7 +24072,7 @@ lucide/dist/esm/icons/arrow-down-z-a.mjs:
 
 lucide/dist/esm/icons/arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23926,15 +24080,7 @@ lucide/dist/esm/icons/arrow-down.mjs:
 
 lucide/dist/esm/icons/arrow-left-from-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/arrow-left-right.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23942,15 +24088,15 @@ lucide/dist/esm/icons/arrow-left-right.mjs:
 
 lucide/dist/esm/icons/arrow-left-to-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/arrow-left.mjs:
+lucide/dist/esm/icons/arrow-left-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23958,15 +24104,15 @@ lucide/dist/esm/icons/arrow-left.mjs:
 
 lucide/dist/esm/icons/arrow-right-from-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/arrow-right-to-line.mjs:
+lucide/dist/esm/icons/arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23974,7 +24120,15 @@ lucide/dist/esm/icons/arrow-right-to-line.mjs:
 
 lucide/dist/esm/icons/arrow-right-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/arrow-right-to-line.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23982,7 +24136,7 @@ lucide/dist/esm/icons/arrow-right-left.mjs:
 
 lucide/dist/esm/icons/arrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -23990,15 +24144,7 @@ lucide/dist/esm/icons/arrow-right.mjs:
 
 lucide/dist/esm/icons/arrow-up-0-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/arrow-up-1-0.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24006,7 +24152,15 @@ lucide/dist/esm/icons/arrow-up-1-0.mjs:
 
 lucide/dist/esm/icons/arrow-up-a-z.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/arrow-up-1-0.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24014,7 +24168,7 @@ lucide/dist/esm/icons/arrow-up-a-z.mjs:
 
 lucide/dist/esm/icons/arrow-up-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24022,7 +24176,7 @@ lucide/dist/esm/icons/arrow-up-down.mjs:
 
 lucide/dist/esm/icons/arrow-up-from-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24030,7 +24184,7 @@ lucide/dist/esm/icons/arrow-up-from-dot.mjs:
 
 lucide/dist/esm/icons/arrow-up-from-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24038,7 +24192,7 @@ lucide/dist/esm/icons/arrow-up-from-line.mjs:
 
 lucide/dist/esm/icons/arrow-up-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24046,7 +24200,7 @@ lucide/dist/esm/icons/arrow-up-left.mjs:
 
 lucide/dist/esm/icons/arrow-up-narrow-wide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24054,7 +24208,7 @@ lucide/dist/esm/icons/arrow-up-narrow-wide.mjs:
 
 lucide/dist/esm/icons/arrow-up-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24062,7 +24216,7 @@ lucide/dist/esm/icons/arrow-up-right.mjs:
 
 lucide/dist/esm/icons/arrow-up-to-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24070,7 +24224,7 @@ lucide/dist/esm/icons/arrow-up-to-line.mjs:
 
 lucide/dist/esm/icons/arrow-up-wide-narrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24078,7 +24232,7 @@ lucide/dist/esm/icons/arrow-up-wide-narrow.mjs:
 
 lucide/dist/esm/icons/arrow-up-z-a.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24086,7 +24240,7 @@ lucide/dist/esm/icons/arrow-up-z-a.mjs:
 
 lucide/dist/esm/icons/arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24094,7 +24248,7 @@ lucide/dist/esm/icons/arrow-up.mjs:
 
 lucide/dist/esm/icons/arrows-up-from-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24102,7 +24256,7 @@ lucide/dist/esm/icons/arrows-up-from-line.mjs:
 
 lucide/dist/esm/icons/asterisk.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24110,7 +24264,7 @@ lucide/dist/esm/icons/asterisk.mjs:
 
 lucide/dist/esm/icons/astroid.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24118,7 +24272,7 @@ lucide/dist/esm/icons/astroid.mjs:
 
 lucide/dist/esm/icons/at-sign.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24126,7 +24280,7 @@ lucide/dist/esm/icons/at-sign.mjs:
 
 lucide/dist/esm/icons/atom.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24134,7 +24288,15 @@ lucide/dist/esm/icons/atom.mjs:
 
 lucide/dist/esm/icons/audio-lines-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/audio-lines-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24142,7 +24304,7 @@ lucide/dist/esm/icons/audio-lines-x.mjs:
 
 lucide/dist/esm/icons/audio-lines.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24150,7 +24312,7 @@ lucide/dist/esm/icons/audio-lines.mjs:
 
 lucide/dist/esm/icons/audio-waveform.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24158,15 +24320,7 @@ lucide/dist/esm/icons/audio-waveform.mjs:
 
 lucide/dist/esm/icons/award.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/axe.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24174,7 +24328,15 @@ lucide/dist/esm/icons/axe.mjs:
 
 lucide/dist/esm/icons/axis-3d.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/axe.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24182,7 +24344,7 @@ lucide/dist/esm/icons/axis-3d.mjs:
 
 lucide/dist/esm/icons/baby.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24190,7 +24352,7 @@ lucide/dist/esm/icons/baby.mjs:
 
 lucide/dist/esm/icons/backpack.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24198,7 +24360,7 @@ lucide/dist/esm/icons/backpack.mjs:
 
 lucide/dist/esm/icons/badge-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24206,7 +24368,7 @@ lucide/dist/esm/icons/badge-alert.mjs:
 
 lucide/dist/esm/icons/badge-cent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24214,7 +24376,7 @@ lucide/dist/esm/icons/badge-cent.mjs:
 
 lucide/dist/esm/icons/badge-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24222,7 +24384,7 @@ lucide/dist/esm/icons/badge-check.mjs:
 
 lucide/dist/esm/icons/badge-dollar-sign.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24230,7 +24392,7 @@ lucide/dist/esm/icons/badge-dollar-sign.mjs:
 
 lucide/dist/esm/icons/badge-euro.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24238,15 +24400,7 @@ lucide/dist/esm/icons/badge-euro.mjs:
 
 lucide/dist/esm/icons/badge-indian-rupee.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/badge-info.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24254,7 +24408,15 @@ lucide/dist/esm/icons/badge-info.mjs:
 
 lucide/dist/esm/icons/badge-japanese-yen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/badge-info.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24262,15 +24424,7 @@ lucide/dist/esm/icons/badge-japanese-yen.mjs:
 
 lucide/dist/esm/icons/badge-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/badge-plus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24278,7 +24432,15 @@ lucide/dist/esm/icons/badge-plus.mjs:
 
 lucide/dist/esm/icons/badge-percent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/badge-plus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24286,7 +24448,7 @@ lucide/dist/esm/icons/badge-percent.mjs:
 
 lucide/dist/esm/icons/badge-pound-sterling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24294,7 +24456,7 @@ lucide/dist/esm/icons/badge-pound-sterling.mjs:
 
 lucide/dist/esm/icons/badge-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24302,7 +24464,7 @@ lucide/dist/esm/icons/badge-question-mark.mjs:
 
 lucide/dist/esm/icons/badge-russian-ruble.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24310,7 +24472,7 @@ lucide/dist/esm/icons/badge-russian-ruble.mjs:
 
 lucide/dist/esm/icons/badge-swiss-franc.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24318,7 +24480,7 @@ lucide/dist/esm/icons/badge-swiss-franc.mjs:
 
 lucide/dist/esm/icons/badge-turkish-lira.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24326,15 +24488,7 @@ lucide/dist/esm/icons/badge-turkish-lira.mjs:
 
 lucide/dist/esm/icons/badge-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/badge.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24342,7 +24496,15 @@ lucide/dist/esm/icons/badge.mjs:
 
 lucide/dist/esm/icons/baggage-claim.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/badge.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24350,23 +24512,7 @@ lucide/dist/esm/icons/baggage-claim.mjs:
 
 lucide/dist/esm/icons/balloon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/banana.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bandage.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24374,7 +24520,23 @@ lucide/dist/esm/icons/bandage.mjs:
 
 lucide/dist/esm/icons/ban.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/banana.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bandage.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24382,7 +24544,7 @@ lucide/dist/esm/icons/ban.mjs:
 
 lucide/dist/esm/icons/banknote-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24390,7 +24552,7 @@ lucide/dist/esm/icons/banknote-arrow-down.mjs:
 
 lucide/dist/esm/icons/banknote-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24398,7 +24560,7 @@ lucide/dist/esm/icons/banknote-arrow-up.mjs:
 
 lucide/dist/esm/icons/banknote-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24406,7 +24568,7 @@ lucide/dist/esm/icons/banknote-check.mjs:
 
 lucide/dist/esm/icons/banknote-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24414,7 +24576,7 @@ lucide/dist/esm/icons/banknote-x.mjs:
 
 lucide/dist/esm/icons/banknote.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24422,7 +24584,7 @@ lucide/dist/esm/icons/banknote.mjs:
 
 lucide/dist/esm/icons/barcode.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24430,15 +24592,7 @@ lucide/dist/esm/icons/barcode.mjs:
 
 lucide/dist/esm/icons/barrel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/baseline.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24446,7 +24600,15 @@ lucide/dist/esm/icons/baseline.mjs:
 
 lucide/dist/esm/icons/bath.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/baseline.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24454,7 +24616,7 @@ lucide/dist/esm/icons/bath.mjs:
 
 lucide/dist/esm/icons/battery-charging.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24462,7 +24624,7 @@ lucide/dist/esm/icons/battery-charging.mjs:
 
 lucide/dist/esm/icons/battery-full.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24470,7 +24632,7 @@ lucide/dist/esm/icons/battery-full.mjs:
 
 lucide/dist/esm/icons/battery-low.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24478,7 +24640,7 @@ lucide/dist/esm/icons/battery-low.mjs:
 
 lucide/dist/esm/icons/battery-medium.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24486,7 +24648,7 @@ lucide/dist/esm/icons/battery-medium.mjs:
 
 lucide/dist/esm/icons/battery-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24494,23 +24656,7 @@ lucide/dist/esm/icons/battery-plus.mjs:
 
 lucide/dist/esm/icons/battery-warning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/battery.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bean-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24518,7 +24664,23 @@ lucide/dist/esm/icons/bean-off.mjs:
 
 lucide/dist/esm/icons/beaker.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/battery.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bean-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24526,7 +24688,7 @@ lucide/dist/esm/icons/beaker.mjs:
 
 lucide/dist/esm/icons/bean.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24534,7 +24696,7 @@ lucide/dist/esm/icons/bean.mjs:
 
 lucide/dist/esm/icons/bed-double.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24542,7 +24704,7 @@ lucide/dist/esm/icons/bed-double.mjs:
 
 lucide/dist/esm/icons/bed-single.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24550,15 +24712,7 @@ lucide/dist/esm/icons/bed-single.mjs:
 
 lucide/dist/esm/icons/bed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/beef-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24566,15 +24720,15 @@ lucide/dist/esm/icons/beef-off.mjs:
 
 lucide/dist/esm/icons/beef.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/beer.mjs:
+lucide/dist/esm/icons/beef-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24582,7 +24736,15 @@ lucide/dist/esm/icons/beer.mjs:
 
 lucide/dist/esm/icons/beer-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/beer.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24590,7 +24752,7 @@ lucide/dist/esm/icons/beer-off.mjs:
 
 lucide/dist/esm/icons/bell-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24598,7 +24760,7 @@ lucide/dist/esm/icons/bell-check.mjs:
 
 lucide/dist/esm/icons/bell-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24606,7 +24768,7 @@ lucide/dist/esm/icons/bell-dot.mjs:
 
 lucide/dist/esm/icons/bell-electric.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24614,7 +24776,7 @@ lucide/dist/esm/icons/bell-electric.mjs:
 
 lucide/dist/esm/icons/bell-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24622,7 +24784,7 @@ lucide/dist/esm/icons/bell-minus.mjs:
 
 lucide/dist/esm/icons/bell-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24630,7 +24792,7 @@ lucide/dist/esm/icons/bell-off.mjs:
 
 lucide/dist/esm/icons/bell-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24638,15 +24800,7 @@ lucide/dist/esm/icons/bell-plus.mjs:
 
 lucide/dist/esm/icons/bell-ring.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bell.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24654,7 +24808,15 @@ lucide/dist/esm/icons/bell.mjs:
 
 lucide/dist/esm/icons/between-horizontal-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bell.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24662,7 +24824,7 @@ lucide/dist/esm/icons/between-horizontal-end.mjs:
 
 lucide/dist/esm/icons/between-horizontal-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24670,7 +24832,7 @@ lucide/dist/esm/icons/between-horizontal-start.mjs:
 
 lucide/dist/esm/icons/between-vertical-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24678,15 +24840,7 @@ lucide/dist/esm/icons/between-vertical-end.mjs:
 
 lucide/dist/esm/icons/between-vertical-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bike.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24694,7 +24848,15 @@ lucide/dist/esm/icons/bike.mjs:
 
 lucide/dist/esm/icons/biceps-flexed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bike.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24702,7 +24864,7 @@ lucide/dist/esm/icons/biceps-flexed.mjs:
 
 lucide/dist/esm/icons/binary.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24710,7 +24872,7 @@ lucide/dist/esm/icons/binary.mjs:
 
 lucide/dist/esm/icons/binoculars.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24718,7 +24880,7 @@ lucide/dist/esm/icons/binoculars.mjs:
 
 lucide/dist/esm/icons/biohazard.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24726,7 +24888,7 @@ lucide/dist/esm/icons/biohazard.mjs:
 
 lucide/dist/esm/icons/bird.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24734,15 +24896,7 @@ lucide/dist/esm/icons/bird.mjs:
 
 lucide/dist/esm/icons/birdhouse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bitcoin.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24750,7 +24904,15 @@ lucide/dist/esm/icons/bitcoin.mjs:
 
 lucide/dist/esm/icons/blend.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bitcoin.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24758,15 +24920,7 @@ lucide/dist/esm/icons/blend.mjs:
 
 lucide/dist/esm/icons/blender.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/blinds.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24774,7 +24928,7 @@ lucide/dist/esm/icons/blinds.mjs:
 
 lucide/dist/esm/icons/blocks.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24782,7 +24936,15 @@ lucide/dist/esm/icons/blocks.mjs:
 
 lucide/dist/esm/icons/bluetooth-connected.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/blinds.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24790,15 +24952,7 @@ lucide/dist/esm/icons/bluetooth-connected.mjs:
 
 lucide/dist/esm/icons/bluetooth-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bluetooth.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24806,7 +24960,15 @@ lucide/dist/esm/icons/bluetooth.mjs:
 
 lucide/dist/esm/icons/bluetooth-searching.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bluetooth.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24814,7 +24976,7 @@ lucide/dist/esm/icons/bluetooth-searching.mjs:
 
 lucide/dist/esm/icons/bold.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24822,7 +24984,7 @@ lucide/dist/esm/icons/bold.mjs:
 
 lucide/dist/esm/icons/bolt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24830,15 +24992,7 @@ lucide/dist/esm/icons/bolt.mjs:
 
 lucide/dist/esm/icons/bomb.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bone-fracture.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24846,7 +25000,15 @@ lucide/dist/esm/icons/bone-fracture.mjs:
 
 lucide/dist/esm/icons/bone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bone-fracture.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24854,7 +25016,7 @@ lucide/dist/esm/icons/bone.mjs:
 
 lucide/dist/esm/icons/book-a.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24862,7 +25024,7 @@ lucide/dist/esm/icons/book-a.mjs:
 
 lucide/dist/esm/icons/book-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24870,15 +25032,7 @@ lucide/dist/esm/icons/book-alert.mjs:
 
 lucide/dist/esm/icons/book-audio.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/book-check.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24886,7 +25040,15 @@ lucide/dist/esm/icons/book-check.mjs:
 
 lucide/dist/esm/icons/book-copy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/book-check.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24894,7 +25056,7 @@ lucide/dist/esm/icons/book-copy.mjs:
 
 lucide/dist/esm/icons/book-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24902,7 +25064,7 @@ lucide/dist/esm/icons/book-dashed.mjs:
 
 lucide/dist/esm/icons/book-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24910,7 +25072,7 @@ lucide/dist/esm/icons/book-down.mjs:
 
 lucide/dist/esm/icons/book-headphones.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24918,15 +25080,7 @@ lucide/dist/esm/icons/book-headphones.mjs:
 
 lucide/dist/esm/icons/book-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/book-image.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24934,15 +25088,7 @@ lucide/dist/esm/icons/book-image.mjs:
 
 lucide/dist/esm/icons/book-key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/book-marked.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24950,7 +25096,23 @@ lucide/dist/esm/icons/book-marked.mjs:
 
 lucide/dist/esm/icons/book-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/book-marked.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/book-image.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24958,7 +25120,7 @@ lucide/dist/esm/icons/book-lock.mjs:
 
 lucide/dist/esm/icons/book-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24966,7 +25128,7 @@ lucide/dist/esm/icons/book-minus.mjs:
 
 lucide/dist/esm/icons/book-open-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24974,7 +25136,7 @@ lucide/dist/esm/icons/book-open-check.mjs:
 
 lucide/dist/esm/icons/book-open-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24982,7 +25144,7 @@ lucide/dist/esm/icons/book-open-text.mjs:
 
 lucide/dist/esm/icons/book-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -24990,15 +25152,7 @@ lucide/dist/esm/icons/book-open.mjs:
 
 lucide/dist/esm/icons/book-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/book-search.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25006,7 +25160,15 @@ lucide/dist/esm/icons/book-search.mjs:
 
 lucide/dist/esm/icons/book-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/book-search.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25014,7 +25176,7 @@ lucide/dist/esm/icons/book-text.mjs:
 
 lucide/dist/esm/icons/book-type.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25022,15 +25184,7 @@ lucide/dist/esm/icons/book-type.mjs:
 
 lucide/dist/esm/icons/book-up-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/book-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25038,7 +25192,15 @@ lucide/dist/esm/icons/book-up.mjs:
 
 lucide/dist/esm/icons/book-user.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/book-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25046,7 +25208,7 @@ lucide/dist/esm/icons/book-user.mjs:
 
 lucide/dist/esm/icons/book-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25054,7 +25216,7 @@ lucide/dist/esm/icons/book-x.mjs:
 
 lucide/dist/esm/icons/book.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25062,7 +25224,7 @@ lucide/dist/esm/icons/book.mjs:
 
 lucide/dist/esm/icons/bookmark-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25070,7 +25232,7 @@ lucide/dist/esm/icons/bookmark-check.mjs:
 
 lucide/dist/esm/icons/bookmark-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25078,7 +25240,7 @@ lucide/dist/esm/icons/bookmark-minus.mjs:
 
 lucide/dist/esm/icons/bookmark-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25086,7 +25248,7 @@ lucide/dist/esm/icons/bookmark-off.mjs:
 
 lucide/dist/esm/icons/bookmark-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25094,7 +25256,7 @@ lucide/dist/esm/icons/bookmark-plus.mjs:
 
 lucide/dist/esm/icons/bookmark-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25102,7 +25264,7 @@ lucide/dist/esm/icons/bookmark-x.mjs:
 
 lucide/dist/esm/icons/bookmark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25110,15 +25272,7 @@ lucide/dist/esm/icons/bookmark.mjs:
 
 lucide/dist/esm/icons/boom-box.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bot-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25126,7 +25280,15 @@ lucide/dist/esm/icons/bot-off.mjs:
 
 lucide/dist/esm/icons/bot-message-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bot-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25134,7 +25296,7 @@ lucide/dist/esm/icons/bot-message-square.mjs:
 
 lucide/dist/esm/icons/bot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25142,7 +25304,7 @@ lucide/dist/esm/icons/bot.mjs:
 
 lucide/dist/esm/icons/bottle-wine.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25150,7 +25312,7 @@ lucide/dist/esm/icons/bottle-wine.mjs:
 
 lucide/dist/esm/icons/bow-arrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25158,7 +25320,7 @@ lucide/dist/esm/icons/bow-arrow.mjs:
 
 lucide/dist/esm/icons/box.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25166,7 +25328,7 @@ lucide/dist/esm/icons/box.mjs:
 
 lucide/dist/esm/icons/boxes.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25174,7 +25336,7 @@ lucide/dist/esm/icons/boxes.mjs:
 
 lucide/dist/esm/icons/braces.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25182,7 +25344,7 @@ lucide/dist/esm/icons/braces.mjs:
 
 lucide/dist/esm/icons/brackets.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25190,7 +25352,7 @@ lucide/dist/esm/icons/brackets.mjs:
 
 lucide/dist/esm/icons/brain-circuit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25198,7 +25360,7 @@ lucide/dist/esm/icons/brain-circuit.mjs:
 
 lucide/dist/esm/icons/brain-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25206,7 +25368,7 @@ lucide/dist/esm/icons/brain-cog.mjs:
 
 lucide/dist/esm/icons/brain.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25214,7 +25376,7 @@ lucide/dist/esm/icons/brain.mjs:
 
 lucide/dist/esm/icons/brick-wall-fire.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25222,7 +25384,7 @@ lucide/dist/esm/icons/brick-wall-fire.mjs:
 
 lucide/dist/esm/icons/brick-wall-shield.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25230,7 +25392,7 @@ lucide/dist/esm/icons/brick-wall-shield.mjs:
 
 lucide/dist/esm/icons/brick-wall.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25238,7 +25400,7 @@ lucide/dist/esm/icons/brick-wall.mjs:
 
 lucide/dist/esm/icons/briefcase-business.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25246,23 +25408,7 @@ lucide/dist/esm/icons/briefcase-business.mjs:
 
 lucide/dist/esm/icons/briefcase-conveyor-belt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/briefcase-medical.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bring-to-front.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25270,7 +25416,23 @@ lucide/dist/esm/icons/bring-to-front.mjs:
 
 lucide/dist/esm/icons/briefcase.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/briefcase-medical.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bring-to-front.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25278,7 +25440,7 @@ lucide/dist/esm/icons/briefcase.mjs:
 
 lucide/dist/esm/icons/broccoli.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25286,7 +25448,7 @@ lucide/dist/esm/icons/broccoli.mjs:
 
 lucide/dist/esm/icons/broom-sparkles.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25294,7 +25456,7 @@ lucide/dist/esm/icons/broom-sparkles.mjs:
 
 lucide/dist/esm/icons/broom.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25302,7 +25464,7 @@ lucide/dist/esm/icons/broom.mjs:
 
 lucide/dist/esm/icons/brush-cleaning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25310,7 +25472,7 @@ lucide/dist/esm/icons/brush-cleaning.mjs:
 
 lucide/dist/esm/icons/brush.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25318,15 +25480,7 @@ lucide/dist/esm/icons/brush.mjs:
 
 lucide/dist/esm/icons/bubbles.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bug-play.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25334,15 +25488,15 @@ lucide/dist/esm/icons/bug-play.mjs:
 
 lucide/dist/esm/icons/bug-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/bug.mjs:
+lucide/dist/esm/icons/bug-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25350,23 +25504,7 @@ lucide/dist/esm/icons/bug.mjs:
 
 lucide/dist/esm/icons/building-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bus-front.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/bus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25374,7 +25512,31 @@ lucide/dist/esm/icons/bus.mjs:
 
 lucide/dist/esm/icons/building.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bug.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bus-front.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/bus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25382,15 +25544,7 @@ lucide/dist/esm/icons/building.mjs:
 
 lucide/dist/esm/icons/cable-car.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/cable.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25398,7 +25552,15 @@ lucide/dist/esm/icons/cable.mjs:
 
 lucide/dist/esm/icons/cake-slice.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/cable.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25406,7 +25568,7 @@ lucide/dist/esm/icons/cake-slice.mjs:
 
 lucide/dist/esm/icons/cake.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25414,7 +25576,7 @@ lucide/dist/esm/icons/cake.mjs:
 
 lucide/dist/esm/icons/calculator.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25422,7 +25584,7 @@ lucide/dist/esm/icons/calculator.mjs:
 
 lucide/dist/esm/icons/calendar-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25430,7 +25592,7 @@ lucide/dist/esm/icons/calendar-1.mjs:
 
 lucide/dist/esm/icons/calendar-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25438,7 +25600,7 @@ lucide/dist/esm/icons/calendar-arrow-down.mjs:
 
 lucide/dist/esm/icons/calendar-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25446,7 +25608,7 @@ lucide/dist/esm/icons/calendar-arrow-up.mjs:
 
 lucide/dist/esm/icons/calendar-check-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25454,7 +25616,7 @@ lucide/dist/esm/icons/calendar-check-2.mjs:
 
 lucide/dist/esm/icons/calendar-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25462,7 +25624,7 @@ lucide/dist/esm/icons/calendar-check.mjs:
 
 lucide/dist/esm/icons/calendar-clock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25470,7 +25632,7 @@ lucide/dist/esm/icons/calendar-clock.mjs:
 
 lucide/dist/esm/icons/calendar-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25478,7 +25640,7 @@ lucide/dist/esm/icons/calendar-cog.mjs:
 
 lucide/dist/esm/icons/calendar-days.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25486,7 +25648,7 @@ lucide/dist/esm/icons/calendar-days.mjs:
 
 lucide/dist/esm/icons/calendar-fold.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25494,15 +25656,7 @@ lucide/dist/esm/icons/calendar-fold.mjs:
 
 lucide/dist/esm/icons/calendar-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/calendar-minus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25510,7 +25664,15 @@ lucide/dist/esm/icons/calendar-minus.mjs:
 
 lucide/dist/esm/icons/calendar-minus-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/calendar-minus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25518,7 +25680,7 @@ lucide/dist/esm/icons/calendar-minus-2.mjs:
 
 lucide/dist/esm/icons/calendar-plus-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25526,7 +25688,7 @@ lucide/dist/esm/icons/calendar-plus-2.mjs:
 
 lucide/dist/esm/icons/calendar-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25534,23 +25696,7 @@ lucide/dist/esm/icons/calendar-off.mjs:
 
 lucide/dist/esm/icons/calendar-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/calendar-search.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/calendar-sync.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25558,7 +25704,23 @@ lucide/dist/esm/icons/calendar-sync.mjs:
 
 lucide/dist/esm/icons/calendar-range.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/calendar-search.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/calendar-sync.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25566,7 +25728,7 @@ lucide/dist/esm/icons/calendar-range.mjs:
 
 lucide/dist/esm/icons/calendar-x-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25574,7 +25736,7 @@ lucide/dist/esm/icons/calendar-x-2.mjs:
 
 lucide/dist/esm/icons/calendar-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25582,7 +25744,7 @@ lucide/dist/esm/icons/calendar-x.mjs:
 
 lucide/dist/esm/icons/calendar.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25590,7 +25752,7 @@ lucide/dist/esm/icons/calendar.mjs:
 
 lucide/dist/esm/icons/calendars.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25598,7 +25760,7 @@ lucide/dist/esm/icons/calendars.mjs:
 
 lucide/dist/esm/icons/camera-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25606,7 +25768,7 @@ lucide/dist/esm/icons/camera-off.mjs:
 
 lucide/dist/esm/icons/camera.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25614,7 +25776,7 @@ lucide/dist/esm/icons/camera.mjs:
 
 lucide/dist/esm/icons/candy-cane.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25622,7 +25784,7 @@ lucide/dist/esm/icons/candy-cane.mjs:
 
 lucide/dist/esm/icons/candy-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25630,7 +25792,7 @@ lucide/dist/esm/icons/candy-off.mjs:
 
 lucide/dist/esm/icons/candy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25638,7 +25800,7 @@ lucide/dist/esm/icons/candy.mjs:
 
 lucide/dist/esm/icons/cannabis-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25646,7 +25808,7 @@ lucide/dist/esm/icons/cannabis-off.mjs:
 
 lucide/dist/esm/icons/cannabis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25654,15 +25816,15 @@ lucide/dist/esm/icons/cannabis.mjs:
 
 lucide/dist/esm/icons/captions-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/captions.mjs:
+lucide/dist/esm/icons/car-battery.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25670,7 +25832,15 @@ lucide/dist/esm/icons/captions.mjs:
 
 lucide/dist/esm/icons/car-front.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/captions.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25678,7 +25848,7 @@ lucide/dist/esm/icons/car-front.mjs:
 
 lucide/dist/esm/icons/car-taxi-front.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25686,7 +25856,7 @@ lucide/dist/esm/icons/car-taxi-front.mjs:
 
 lucide/dist/esm/icons/car.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25694,7 +25864,7 @@ lucide/dist/esm/icons/car.mjs:
 
 lucide/dist/esm/icons/caravan.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25702,7 +25872,7 @@ lucide/dist/esm/icons/caravan.mjs:
 
 lucide/dist/esm/icons/card-sim.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25710,7 +25880,7 @@ lucide/dist/esm/icons/card-sim.mjs:
 
 lucide/dist/esm/icons/carrot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25718,7 +25888,7 @@ lucide/dist/esm/icons/carrot.mjs:
 
 lucide/dist/esm/icons/case-lower.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25726,7 +25896,7 @@ lucide/dist/esm/icons/case-lower.mjs:
 
 lucide/dist/esm/icons/case-sensitive.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25734,7 +25904,7 @@ lucide/dist/esm/icons/case-sensitive.mjs:
 
 lucide/dist/esm/icons/case-upper.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25742,7 +25912,7 @@ lucide/dist/esm/icons/case-upper.mjs:
 
 lucide/dist/esm/icons/cassette-tape.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25750,7 +25920,7 @@ lucide/dist/esm/icons/cassette-tape.mjs:
 
 lucide/dist/esm/icons/cast.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25758,7 +25928,7 @@ lucide/dist/esm/icons/cast.mjs:
 
 lucide/dist/esm/icons/castle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25766,7 +25936,7 @@ lucide/dist/esm/icons/castle.mjs:
 
 lucide/dist/esm/icons/cat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25774,15 +25944,7 @@ lucide/dist/esm/icons/cat.mjs:
 
 lucide/dist/esm/icons/cctv-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chart-area.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25790,7 +25952,15 @@ lucide/dist/esm/icons/chart-area.mjs:
 
 lucide/dist/esm/icons/cctv.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chart-area.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25798,7 +25968,7 @@ lucide/dist/esm/icons/cctv.mjs:
 
 lucide/dist/esm/icons/chart-bar-big.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25806,7 +25976,7 @@ lucide/dist/esm/icons/chart-bar-big.mjs:
 
 lucide/dist/esm/icons/chart-bar-decreasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25814,7 +25984,7 @@ lucide/dist/esm/icons/chart-bar-decreasing.mjs:
 
 lucide/dist/esm/icons/chart-bar-increasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25822,7 +25992,7 @@ lucide/dist/esm/icons/chart-bar-increasing.mjs:
 
 lucide/dist/esm/icons/chart-bar-stacked.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25830,15 +26000,7 @@ lucide/dist/esm/icons/chart-bar-stacked.mjs:
 
 lucide/dist/esm/icons/chart-bar.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chart-column-big.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25846,7 +26008,15 @@ lucide/dist/esm/icons/chart-column-big.mjs:
 
 lucide/dist/esm/icons/chart-candlestick.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chart-column-big.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25854,7 +26024,7 @@ lucide/dist/esm/icons/chart-candlestick.mjs:
 
 lucide/dist/esm/icons/chart-column-decreasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25862,15 +26032,7 @@ lucide/dist/esm/icons/chart-column-decreasing.mjs:
 
 lucide/dist/esm/icons/chart-column-increasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chart-column-stacked.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25878,7 +26040,15 @@ lucide/dist/esm/icons/chart-column-stacked.mjs:
 
 lucide/dist/esm/icons/chart-column.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chart-column-stacked.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25886,7 +26056,7 @@ lucide/dist/esm/icons/chart-column.mjs:
 
 lucide/dist/esm/icons/chart-gantt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25894,7 +26064,7 @@ lucide/dist/esm/icons/chart-gantt.mjs:
 
 lucide/dist/esm/icons/chart-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25902,7 +26072,7 @@ lucide/dist/esm/icons/chart-line.mjs:
 
 lucide/dist/esm/icons/chart-network.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25910,7 +26080,7 @@ lucide/dist/esm/icons/chart-network.mjs:
 
 lucide/dist/esm/icons/chart-no-axes-column-decreasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25918,7 +26088,7 @@ lucide/dist/esm/icons/chart-no-axes-column-decreasing.mjs:
 
 lucide/dist/esm/icons/chart-no-axes-column-increasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25926,7 +26096,7 @@ lucide/dist/esm/icons/chart-no-axes-column-increasing.mjs:
 
 lucide/dist/esm/icons/chart-no-axes-column.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25934,7 +26104,7 @@ lucide/dist/esm/icons/chart-no-axes-column.mjs:
 
 lucide/dist/esm/icons/chart-no-axes-combined.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25942,7 +26112,7 @@ lucide/dist/esm/icons/chart-no-axes-combined.mjs:
 
 lucide/dist/esm/icons/chart-no-axes-gantt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25950,7 +26120,7 @@ lucide/dist/esm/icons/chart-no-axes-gantt.mjs:
 
 lucide/dist/esm/icons/chart-pie.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25958,7 +26128,7 @@ lucide/dist/esm/icons/chart-pie.mjs:
 
 lucide/dist/esm/icons/chart-scatter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25966,7 +26136,7 @@ lucide/dist/esm/icons/chart-scatter.mjs:
 
 lucide/dist/esm/icons/chart-spline.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25974,7 +26144,7 @@ lucide/dist/esm/icons/chart-spline.mjs:
 
 lucide/dist/esm/icons/check-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25982,7 +26152,7 @@ lucide/dist/esm/icons/check-check.mjs:
 
 lucide/dist/esm/icons/check-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -25990,23 +26160,7 @@ lucide/dist/esm/icons/check-line.mjs:
 
 lucide/dist/esm/icons/check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chef-hat.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/cherry.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26014,7 +26168,23 @@ lucide/dist/esm/icons/cherry.mjs:
 
 lucide/dist/esm/icons/chess-bishop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/cherry.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chef-hat.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26022,7 +26192,7 @@ lucide/dist/esm/icons/chess-bishop.mjs:
 
 lucide/dist/esm/icons/chess-king.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26030,15 +26200,7 @@ lucide/dist/esm/icons/chess-king.mjs:
 
 lucide/dist/esm/icons/chess-knight.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chess-pawn.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26046,7 +26208,7 @@ lucide/dist/esm/icons/chess-pawn.mjs:
 
 lucide/dist/esm/icons/chess-queen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26054,7 +26216,15 @@ lucide/dist/esm/icons/chess-queen.mjs:
 
 lucide/dist/esm/icons/chess-rook.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chess-pawn.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26062,7 +26232,7 @@ lucide/dist/esm/icons/chess-rook.mjs:
 
 lucide/dist/esm/icons/chevron-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26070,7 +26240,7 @@ lucide/dist/esm/icons/chevron-down.mjs:
 
 lucide/dist/esm/icons/chevron-first.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26078,7 +26248,7 @@ lucide/dist/esm/icons/chevron-first.mjs:
 
 lucide/dist/esm/icons/chevron-last.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26086,7 +26256,7 @@ lucide/dist/esm/icons/chevron-last.mjs:
 
 lucide/dist/esm/icons/chevron-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26094,7 +26264,7 @@ lucide/dist/esm/icons/chevron-left.mjs:
 
 lucide/dist/esm/icons/chevron-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26102,7 +26272,7 @@ lucide/dist/esm/icons/chevron-right.mjs:
 
 lucide/dist/esm/icons/chevron-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26110,7 +26280,7 @@ lucide/dist/esm/icons/chevron-up.mjs:
 
 lucide/dist/esm/icons/chevrons-down-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26118,7 +26288,7 @@ lucide/dist/esm/icons/chevrons-down-up.mjs:
 
 lucide/dist/esm/icons/chevrons-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26126,7 +26296,7 @@ lucide/dist/esm/icons/chevrons-down.mjs:
 
 lucide/dist/esm/icons/chevrons-left-right-ellipsis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26134,7 +26304,7 @@ lucide/dist/esm/icons/chevrons-left-right-ellipsis.mjs:
 
 lucide/dist/esm/icons/chevrons-left-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26142,7 +26312,7 @@ lucide/dist/esm/icons/chevrons-left-right.mjs:
 
 lucide/dist/esm/icons/chevrons-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26150,7 +26320,7 @@ lucide/dist/esm/icons/chevrons-left.mjs:
 
 lucide/dist/esm/icons/chevrons-right-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26158,15 +26328,7 @@ lucide/dist/esm/icons/chevrons-right-left.mjs:
 
 lucide/dist/esm/icons/chevrons-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/chevrons-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26174,7 +26336,15 @@ lucide/dist/esm/icons/chevrons-up.mjs:
 
 lucide/dist/esm/icons/chevrons-up-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chevrons-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26182,7 +26352,7 @@ lucide/dist/esm/icons/chevrons-up-down.mjs:
 
 lucide/dist/esm/icons/church.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26190,7 +26360,7 @@ lucide/dist/esm/icons/church.mjs:
 
 lucide/dist/esm/icons/cigarette-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26198,7 +26368,7 @@ lucide/dist/esm/icons/cigarette-off.mjs:
 
 lucide/dist/esm/icons/cigarette.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26206,7 +26376,7 @@ lucide/dist/esm/icons/cigarette.mjs:
 
 lucide/dist/esm/icons/circle-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26214,7 +26384,7 @@ lucide/dist/esm/icons/circle-alert.mjs:
 
 lucide/dist/esm/icons/circle-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26222,7 +26392,7 @@ lucide/dist/esm/icons/circle-arrow-down.mjs:
 
 lucide/dist/esm/icons/circle-arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26230,23 +26400,7 @@ lucide/dist/esm/icons/circle-arrow-left.mjs:
 
 lucide/dist/esm/icons/circle-arrow-out-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-arrow-out-down-right.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-arrow-out-up-left.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26254,7 +26408,15 @@ lucide/dist/esm/icons/circle-arrow-out-up-left.mjs:
 
 lucide/dist/esm/icons/circle-arrow-out-up-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-arrow-out-down-right.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26262,7 +26424,15 @@ lucide/dist/esm/icons/circle-arrow-out-up-right.mjs:
 
 lucide/dist/esm/icons/circle-arrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-arrow-out-up-left.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26270,15 +26440,7 @@ lucide/dist/esm/icons/circle-arrow-right.mjs:
 
 lucide/dist/esm/icons/circle-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-check-big.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26286,7 +26448,15 @@ lucide/dist/esm/icons/circle-check-big.mjs:
 
 lucide/dist/esm/icons/circle-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-check-big.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26294,7 +26464,7 @@ lucide/dist/esm/icons/circle-check.mjs:
 
 lucide/dist/esm/icons/circle-chevron-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26302,7 +26472,7 @@ lucide/dist/esm/icons/circle-chevron-down.mjs:
 
 lucide/dist/esm/icons/circle-chevron-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26310,7 +26480,7 @@ lucide/dist/esm/icons/circle-chevron-left.mjs:
 
 lucide/dist/esm/icons/circle-chevron-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26318,7 +26488,7 @@ lucide/dist/esm/icons/circle-chevron-right.mjs:
 
 lucide/dist/esm/icons/circle-chevron-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26326,7 +26496,7 @@ lucide/dist/esm/icons/circle-chevron-up.mjs:
 
 lucide/dist/esm/icons/circle-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26334,7 +26504,7 @@ lucide/dist/esm/icons/circle-dashed.mjs:
 
 lucide/dist/esm/icons/circle-divide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26342,7 +26512,7 @@ lucide/dist/esm/icons/circle-divide.mjs:
 
 lucide/dist/esm/icons/circle-dollar-sign.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26350,7 +26520,7 @@ lucide/dist/esm/icons/circle-dollar-sign.mjs:
 
 lucide/dist/esm/icons/circle-dot-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26358,7 +26528,7 @@ lucide/dist/esm/icons/circle-dot-dashed.mjs:
 
 lucide/dist/esm/icons/circle-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26366,15 +26536,7 @@ lucide/dist/esm/icons/circle-dot.mjs:
 
 lucide/dist/esm/icons/circle-ellipsis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-euro.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26382,7 +26544,15 @@ lucide/dist/esm/icons/circle-euro.mjs:
 
 lucide/dist/esm/icons/circle-equal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-euro.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26390,7 +26560,7 @@ lucide/dist/esm/icons/circle-equal.mjs:
 
 lucide/dist/esm/icons/circle-fading-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26398,7 +26568,7 @@ lucide/dist/esm/icons/circle-fading-arrow-up.mjs:
 
 lucide/dist/esm/icons/circle-fading-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26406,7 +26576,7 @@ lucide/dist/esm/icons/circle-fading-plus.mjs:
 
 lucide/dist/esm/icons/circle-gauge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26414,7 +26584,7 @@ lucide/dist/esm/icons/circle-gauge.mjs:
 
 lucide/dist/esm/icons/circle-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26422,7 +26592,7 @@ lucide/dist/esm/icons/circle-minus.mjs:
 
 lucide/dist/esm/icons/circle-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26430,7 +26600,7 @@ lucide/dist/esm/icons/circle-off.mjs:
 
 lucide/dist/esm/icons/circle-parking-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26438,15 +26608,7 @@ lucide/dist/esm/icons/circle-parking-off.mjs:
 
 lucide/dist/esm/icons/circle-parking.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-pause.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26454,7 +26616,15 @@ lucide/dist/esm/icons/circle-pause.mjs:
 
 lucide/dist/esm/icons/circle-percent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-pause.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26462,7 +26632,7 @@ lucide/dist/esm/icons/circle-percent.mjs:
 
 lucide/dist/esm/icons/circle-pile.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26470,23 +26640,7 @@ lucide/dist/esm/icons/circle-pile.mjs:
 
 lucide/dist/esm/icons/circle-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-pound-sterling.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-power.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26494,7 +26648,23 @@ lucide/dist/esm/icons/circle-power.mjs:
 
 lucide/dist/esm/icons/circle-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-pound-sterling.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-power.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26502,7 +26672,7 @@ lucide/dist/esm/icons/circle-plus.mjs:
 
 lucide/dist/esm/icons/circle-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26510,15 +26680,7 @@ lucide/dist/esm/icons/circle-question-mark.mjs:
 
 lucide/dist/esm/icons/circle-slash-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circle-small.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26526,15 +26688,15 @@ lucide/dist/esm/icons/circle-small.mjs:
 
 lucide/dist/esm/icons/circle-slash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/circle-star.mjs:
+lucide/dist/esm/icons/circle-small.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26542,7 +26704,15 @@ lucide/dist/esm/icons/circle-star.mjs:
 
 lucide/dist/esm/icons/circle-stop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circle-star.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26550,7 +26720,7 @@ lucide/dist/esm/icons/circle-stop.mjs:
 
 lucide/dist/esm/icons/circle-user-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26558,7 +26728,7 @@ lucide/dist/esm/icons/circle-user-round.mjs:
 
 lucide/dist/esm/icons/circle-user.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26566,15 +26736,7 @@ lucide/dist/esm/icons/circle-user.mjs:
 
 lucide/dist/esm/icons/circle-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/circuit-board.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26582,7 +26744,15 @@ lucide/dist/esm/icons/circuit-board.mjs:
 
 lucide/dist/esm/icons/circle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/circuit-board.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26590,7 +26760,7 @@ lucide/dist/esm/icons/circle.mjs:
 
 lucide/dist/esm/icons/citrus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26598,15 +26768,7 @@ lucide/dist/esm/icons/citrus.mjs:
 
 lucide/dist/esm/icons/clapperboard.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/clipboard-clock.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26614,7 +26776,15 @@ lucide/dist/esm/icons/clipboard-clock.mjs:
 
 lucide/dist/esm/icons/clipboard-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clipboard-clock.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26622,7 +26792,7 @@ lucide/dist/esm/icons/clipboard-check.mjs:
 
 lucide/dist/esm/icons/clipboard-copy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26630,7 +26800,7 @@ lucide/dist/esm/icons/clipboard-copy.mjs:
 
 lucide/dist/esm/icons/clipboard-list.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26638,7 +26808,7 @@ lucide/dist/esm/icons/clipboard-list.mjs:
 
 lucide/dist/esm/icons/clipboard-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26646,7 +26816,7 @@ lucide/dist/esm/icons/clipboard-minus.mjs:
 
 lucide/dist/esm/icons/clipboard-paste.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26654,7 +26824,7 @@ lucide/dist/esm/icons/clipboard-paste.mjs:
 
 lucide/dist/esm/icons/clipboard-pen-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26662,7 +26832,7 @@ lucide/dist/esm/icons/clipboard-pen-line.mjs:
 
 lucide/dist/esm/icons/clipboard-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26670,7 +26840,7 @@ lucide/dist/esm/icons/clipboard-pen.mjs:
 
 lucide/dist/esm/icons/clipboard-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26678,7 +26848,7 @@ lucide/dist/esm/icons/clipboard-plus.mjs:
 
 lucide/dist/esm/icons/clipboard-type.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26686,7 +26856,7 @@ lucide/dist/esm/icons/clipboard-type.mjs:
 
 lucide/dist/esm/icons/clipboard-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26694,7 +26864,7 @@ lucide/dist/esm/icons/clipboard-x.mjs:
 
 lucide/dist/esm/icons/clipboard.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26702,7 +26872,7 @@ lucide/dist/esm/icons/clipboard.mjs:
 
 lucide/dist/esm/icons/clock-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26710,7 +26880,7 @@ lucide/dist/esm/icons/clock-1.mjs:
 
 lucide/dist/esm/icons/clock-10.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26718,15 +26888,7 @@ lucide/dist/esm/icons/clock-10.mjs:
 
 lucide/dist/esm/icons/clock-11.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/clock-2.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26734,15 +26896,15 @@ lucide/dist/esm/icons/clock-2.mjs:
 
 lucide/dist/esm/icons/clock-12.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/clock-3.mjs:
+lucide/dist/esm/icons/clock-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26750,7 +26912,7 @@ lucide/dist/esm/icons/clock-3.mjs:
 
 lucide/dist/esm/icons/clock-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26758,7 +26920,15 @@ lucide/dist/esm/icons/clock-4.mjs:
 
 lucide/dist/esm/icons/clock-5.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clock-3.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26766,7 +26936,7 @@ lucide/dist/esm/icons/clock-5.mjs:
 
 lucide/dist/esm/icons/clock-6.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26774,7 +26944,7 @@ lucide/dist/esm/icons/clock-6.mjs:
 
 lucide/dist/esm/icons/clock-7.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26782,7 +26952,7 @@ lucide/dist/esm/icons/clock-7.mjs:
 
 lucide/dist/esm/icons/clock-8.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26790,15 +26960,7 @@ lucide/dist/esm/icons/clock-8.mjs:
 
 lucide/dist/esm/icons/clock-9.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/clock-alert.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26806,7 +26968,15 @@ lucide/dist/esm/icons/clock-alert.mjs:
 
 lucide/dist/esm/icons/clock-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clock-alert.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26814,7 +26984,7 @@ lucide/dist/esm/icons/clock-arrow-down.mjs:
 
 lucide/dist/esm/icons/clock-arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26822,15 +26992,7 @@ lucide/dist/esm/icons/clock-arrow-left.mjs:
 
 lucide/dist/esm/icons/clock-arrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/clock-check.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26838,7 +27000,15 @@ lucide/dist/esm/icons/clock-check.mjs:
 
 lucide/dist/esm/icons/clock-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clock-check.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26846,7 +27016,7 @@ lucide/dist/esm/icons/clock-arrow-up.mjs:
 
 lucide/dist/esm/icons/clock-fading.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26854,15 +27024,7 @@ lucide/dist/esm/icons/clock-fading.mjs:
 
 lucide/dist/esm/icons/clock-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/clock.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26870,7 +27032,15 @@ lucide/dist/esm/icons/clock.mjs:
 
 lucide/dist/esm/icons/closed-caption.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clock.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26878,7 +27048,7 @@ lucide/dist/esm/icons/closed-caption.mjs:
 
 lucide/dist/esm/icons/cloud-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26886,7 +27056,7 @@ lucide/dist/esm/icons/cloud-alert.mjs:
 
 lucide/dist/esm/icons/cloud-backup.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26894,7 +27064,7 @@ lucide/dist/esm/icons/cloud-backup.mjs:
 
 lucide/dist/esm/icons/cloud-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26902,15 +27072,7 @@ lucide/dist/esm/icons/cloud-check.mjs:
 
 lucide/dist/esm/icons/cloud-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/cloud-download.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26918,15 +27080,15 @@ lucide/dist/esm/icons/cloud-download.mjs:
 
 lucide/dist/esm/icons/cloud-drizzle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/cloud-fog.mjs:
+lucide/dist/esm/icons/cloud-download.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26934,7 +27096,15 @@ lucide/dist/esm/icons/cloud-fog.mjs:
 
 lucide/dist/esm/icons/cloud-hail.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/cloud-fog.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26942,7 +27112,7 @@ lucide/dist/esm/icons/cloud-hail.mjs:
 
 lucide/dist/esm/icons/cloud-lightning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26950,7 +27120,7 @@ lucide/dist/esm/icons/cloud-lightning.mjs:
 
 lucide/dist/esm/icons/cloud-moon-rain.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26958,7 +27128,7 @@ lucide/dist/esm/icons/cloud-moon-rain.mjs:
 
 lucide/dist/esm/icons/cloud-moon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26966,7 +27136,7 @@ lucide/dist/esm/icons/cloud-moon.mjs:
 
 lucide/dist/esm/icons/cloud-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26974,7 +27144,7 @@ lucide/dist/esm/icons/cloud-off.mjs:
 
 lucide/dist/esm/icons/cloud-rain-wind.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26982,15 +27152,7 @@ lucide/dist/esm/icons/cloud-rain-wind.mjs:
 
 lucide/dist/esm/icons/cloud-rain.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/cloud-snow.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -26998,7 +27160,15 @@ lucide/dist/esm/icons/cloud-snow.mjs:
 
 lucide/dist/esm/icons/cloud-sun-rain.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/cloud-snow.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27006,7 +27176,7 @@ lucide/dist/esm/icons/cloud-sun-rain.mjs:
 
 lucide/dist/esm/icons/cloud-sun.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27014,7 +27184,7 @@ lucide/dist/esm/icons/cloud-sun.mjs:
 
 lucide/dist/esm/icons/cloud-sync.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27022,7 +27192,7 @@ lucide/dist/esm/icons/cloud-sync.mjs:
 
 lucide/dist/esm/icons/cloud-upload.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27030,7 +27200,7 @@ lucide/dist/esm/icons/cloud-upload.mjs:
 
 lucide/dist/esm/icons/cloud.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27038,23 +27208,7 @@ lucide/dist/esm/icons/cloud.mjs:
 
 lucide/dist/esm/icons/cloudy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/club.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/code-xml.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27062,7 +27216,23 @@ lucide/dist/esm/icons/code-xml.mjs:
 
 lucide/dist/esm/icons/clover.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/code-xml.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/club.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27070,7 +27240,7 @@ lucide/dist/esm/icons/clover.mjs:
 
 lucide/dist/esm/icons/code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27078,7 +27248,7 @@ lucide/dist/esm/icons/code.mjs:
 
 lucide/dist/esm/icons/coffee.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27086,7 +27256,7 @@ lucide/dist/esm/icons/coffee.mjs:
 
 lucide/dist/esm/icons/cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27094,7 +27264,7 @@ lucide/dist/esm/icons/cog.mjs:
 
 lucide/dist/esm/icons/coins.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27102,7 +27272,7 @@ lucide/dist/esm/icons/coins.mjs:
 
 lucide/dist/esm/icons/columns-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27110,7 +27280,7 @@ lucide/dist/esm/icons/columns-2.mjs:
 
 lucide/dist/esm/icons/columns-3-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27118,7 +27288,7 @@ lucide/dist/esm/icons/columns-3-cog.mjs:
 
 lucide/dist/esm/icons/columns-3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27126,7 +27296,7 @@ lucide/dist/esm/icons/columns-3.mjs:
 
 lucide/dist/esm/icons/columns-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27134,23 +27304,7 @@ lucide/dist/esm/icons/columns-4.mjs:
 
 lucide/dist/esm/icons/combine.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/command.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/component.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27158,7 +27312,23 @@ lucide/dist/esm/icons/component.mjs:
 
 lucide/dist/esm/icons/compass.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/command.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/component.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27166,7 +27336,7 @@ lucide/dist/esm/icons/compass.mjs:
 
 lucide/dist/esm/icons/computer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27174,7 +27344,7 @@ lucide/dist/esm/icons/computer.mjs:
 
 lucide/dist/esm/icons/concierge-bell.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27182,15 +27352,7 @@ lucide/dist/esm/icons/concierge-bell.mjs:
 
 lucide/dist/esm/icons/cone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/construction.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27198,7 +27360,15 @@ lucide/dist/esm/icons/construction.mjs:
 
 lucide/dist/esm/icons/contact-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/construction.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27206,7 +27376,7 @@ lucide/dist/esm/icons/contact-round.mjs:
 
 lucide/dist/esm/icons/contact.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27214,15 +27384,7 @@ lucide/dist/esm/icons/contact.mjs:
 
 lucide/dist/esm/icons/container.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/cookie.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27230,7 +27392,15 @@ lucide/dist/esm/icons/cookie.mjs:
 
 lucide/dist/esm/icons/contrast.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/cookie.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27238,7 +27408,7 @@ lucide/dist/esm/icons/contrast.mjs:
 
 lucide/dist/esm/icons/cooking-pot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27246,7 +27416,7 @@ lucide/dist/esm/icons/cooking-pot.mjs:
 
 lucide/dist/esm/icons/copy-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27254,15 +27424,7 @@ lucide/dist/esm/icons/copy-check.mjs:
 
 lucide/dist/esm/icons/copy-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/copy-plus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27270,7 +27432,15 @@ lucide/dist/esm/icons/copy-plus.mjs:
 
 lucide/dist/esm/icons/copy-slash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/copy-plus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27278,7 +27448,7 @@ lucide/dist/esm/icons/copy-slash.mjs:
 
 lucide/dist/esm/icons/copy-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27286,15 +27456,7 @@ lucide/dist/esm/icons/copy-x.mjs:
 
 lucide/dist/esm/icons/copy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/copyright.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27302,7 +27464,7 @@ lucide/dist/esm/icons/copyright.mjs:
 
 lucide/dist/esm/icons/copyleft.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27310,7 +27472,15 @@ lucide/dist/esm/icons/copyleft.mjs:
 
 lucide/dist/esm/icons/corner-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/copyright.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27318,15 +27488,7 @@ lucide/dist/esm/icons/corner-down-left.mjs:
 
 lucide/dist/esm/icons/corner-down-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/corner-left-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27334,7 +27496,15 @@ lucide/dist/esm/icons/corner-left-up.mjs:
 
 lucide/dist/esm/icons/corner-left-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/corner-left-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27342,7 +27512,7 @@ lucide/dist/esm/icons/corner-left-down.mjs:
 
 lucide/dist/esm/icons/corner-right-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27350,7 +27520,7 @@ lucide/dist/esm/icons/corner-right-down.mjs:
 
 lucide/dist/esm/icons/corner-right-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27358,7 +27528,7 @@ lucide/dist/esm/icons/corner-right-up.mjs:
 
 lucide/dist/esm/icons/corner-up-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27366,7 +27536,7 @@ lucide/dist/esm/icons/corner-up-left.mjs:
 
 lucide/dist/esm/icons/corner-up-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27374,7 +27544,7 @@ lucide/dist/esm/icons/corner-up-right.mjs:
 
 lucide/dist/esm/icons/cpu.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27382,7 +27552,7 @@ lucide/dist/esm/icons/cpu.mjs:
 
 lucide/dist/esm/icons/creative-commons.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27390,7 +27560,7 @@ lucide/dist/esm/icons/creative-commons.mjs:
 
 lucide/dist/esm/icons/credit-card.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27398,7 +27568,7 @@ lucide/dist/esm/icons/credit-card.mjs:
 
 lucide/dist/esm/icons/croissant.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27406,7 +27576,7 @@ lucide/dist/esm/icons/croissant.mjs:
 
 lucide/dist/esm/icons/crop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27414,7 +27584,7 @@ lucide/dist/esm/icons/crop.mjs:
 
 lucide/dist/esm/icons/cross.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27422,7 +27592,7 @@ lucide/dist/esm/icons/cross.mjs:
 
 lucide/dist/esm/icons/crosshair.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27430,7 +27600,7 @@ lucide/dist/esm/icons/crosshair.mjs:
 
 lucide/dist/esm/icons/crown.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27438,7 +27608,7 @@ lucide/dist/esm/icons/crown.mjs:
 
 lucide/dist/esm/icons/cuboid.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27446,15 +27616,7 @@ lucide/dist/esm/icons/cuboid.mjs:
 
 lucide/dist/esm/icons/cup-soda.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/currency.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27462,7 +27624,7 @@ lucide/dist/esm/icons/currency.mjs:
 
 lucide/dist/esm/icons/cylinder.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27470,7 +27632,15 @@ lucide/dist/esm/icons/cylinder.mjs:
 
 lucide/dist/esm/icons/dam.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/currency.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27478,15 +27648,7 @@ lucide/dist/esm/icons/dam.mjs:
 
 lucide/dist/esm/icons/database-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/database-backup.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27494,7 +27656,7 @@ lucide/dist/esm/icons/database-backup.mjs:
 
 lucide/dist/esm/icons/database-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27502,7 +27664,15 @@ lucide/dist/esm/icons/database-arrow-up.mjs:
 
 lucide/dist/esm/icons/database-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/database-backup.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27510,7 +27680,7 @@ lucide/dist/esm/icons/database-check.mjs:
 
 lucide/dist/esm/icons/database-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27518,7 +27688,7 @@ lucide/dist/esm/icons/database-minus.mjs:
 
 lucide/dist/esm/icons/database-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27526,7 +27696,7 @@ lucide/dist/esm/icons/database-plus.mjs:
 
 lucide/dist/esm/icons/database-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27534,7 +27704,7 @@ lucide/dist/esm/icons/database-search.mjs:
 
 lucide/dist/esm/icons/database-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27542,7 +27712,7 @@ lucide/dist/esm/icons/database-x.mjs:
 
 lucide/dist/esm/icons/database-zap.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27550,7 +27720,7 @@ lucide/dist/esm/icons/database-zap.mjs:
 
 lucide/dist/esm/icons/database.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27558,7 +27728,7 @@ lucide/dist/esm/icons/database.mjs:
 
 lucide/dist/esm/icons/decimals-arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27566,7 +27736,7 @@ lucide/dist/esm/icons/decimals-arrow-left.mjs:
 
 lucide/dist/esm/icons/decimals-arrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27574,7 +27744,7 @@ lucide/dist/esm/icons/decimals-arrow-right.mjs:
 
 lucide/dist/esm/icons/delete.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27582,7 +27752,7 @@ lucide/dist/esm/icons/delete.mjs:
 
 lucide/dist/esm/icons/dessert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27590,7 +27760,7 @@ lucide/dist/esm/icons/dessert.mjs:
 
 lucide/dist/esm/icons/diameter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27598,7 +27768,7 @@ lucide/dist/esm/icons/diameter.mjs:
 
 lucide/dist/esm/icons/diamond-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27606,15 +27776,7 @@ lucide/dist/esm/icons/diamond-minus.mjs:
 
 lucide/dist/esm/icons/diamond-percent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/dice-1.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27622,7 +27784,7 @@ lucide/dist/esm/icons/dice-1.mjs:
 
 lucide/dist/esm/icons/diamond-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27630,7 +27792,15 @@ lucide/dist/esm/icons/diamond-plus.mjs:
 
 lucide/dist/esm/icons/diamond.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/dice-1.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27638,15 +27808,7 @@ lucide/dist/esm/icons/diamond.mjs:
 
 lucide/dist/esm/icons/dice-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/dice-3.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27654,7 +27816,15 @@ lucide/dist/esm/icons/dice-3.mjs:
 
 lucide/dist/esm/icons/dice-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/dice-3.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27662,7 +27832,7 @@ lucide/dist/esm/icons/dice-4.mjs:
 
 lucide/dist/esm/icons/dice-6.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27670,7 +27840,7 @@ lucide/dist/esm/icons/dice-6.mjs:
 
 lucide/dist/esm/icons/dice-5.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27678,7 +27848,7 @@ lucide/dist/esm/icons/dice-5.mjs:
 
 lucide/dist/esm/icons/dices.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27686,7 +27856,7 @@ lucide/dist/esm/icons/dices.mjs:
 
 lucide/dist/esm/icons/diff.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27694,7 +27864,7 @@ lucide/dist/esm/icons/diff.mjs:
 
 lucide/dist/esm/icons/disc-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27702,7 +27872,7 @@ lucide/dist/esm/icons/disc-2.mjs:
 
 lucide/dist/esm/icons/disc-3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27710,15 +27880,7 @@ lucide/dist/esm/icons/disc-3.mjs:
 
 lucide/dist/esm/icons/disc-album.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/disc.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27726,7 +27888,15 @@ lucide/dist/esm/icons/disc.mjs:
 
 lucide/dist/esm/icons/divide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/disc.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27734,7 +27904,7 @@ lucide/dist/esm/icons/divide.mjs:
 
 lucide/dist/esm/icons/dna-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27742,15 +27912,7 @@ lucide/dist/esm/icons/dna-off.mjs:
 
 lucide/dist/esm/icons/dna.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/dog.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27758,15 +27920,15 @@ lucide/dist/esm/icons/dog.mjs:
 
 lucide/dist/esm/icons/dock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/dollar-sign.mjs:
+lucide/dist/esm/icons/dog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27774,7 +27936,15 @@ lucide/dist/esm/icons/dollar-sign.mjs:
 
 lucide/dist/esm/icons/donut.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/dollar-sign.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27782,7 +27952,7 @@ lucide/dist/esm/icons/donut.mjs:
 
 lucide/dist/esm/icons/door-closed-locked.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27790,7 +27960,7 @@ lucide/dist/esm/icons/door-closed-locked.mjs:
 
 lucide/dist/esm/icons/door-closed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27798,7 +27968,7 @@ lucide/dist/esm/icons/door-closed.mjs:
 
 lucide/dist/esm/icons/door-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27806,15 +27976,7 @@ lucide/dist/esm/icons/door-open.mjs:
 
 lucide/dist/esm/icons/dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/drafting-compass.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27822,15 +27984,15 @@ lucide/dist/esm/icons/drafting-compass.mjs:
 
 lucide/dist/esm/icons/download.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/drama.mjs:
+lucide/dist/esm/icons/drafting-compass.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27838,7 +28000,7 @@ lucide/dist/esm/icons/drama.mjs:
 
 lucide/dist/esm/icons/drill.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27846,7 +28008,15 @@ lucide/dist/esm/icons/drill.mjs:
 
 lucide/dist/esm/icons/drone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/drama.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27854,15 +28024,7 @@ lucide/dist/esm/icons/drone.mjs:
 
 lucide/dist/esm/icons/droplet-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/droplet.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27870,7 +28032,15 @@ lucide/dist/esm/icons/droplet.mjs:
 
 lucide/dist/esm/icons/droplets.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/droplet.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27878,7 +28048,7 @@ lucide/dist/esm/icons/droplets.mjs:
 
 lucide/dist/esm/icons/drum.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27886,7 +28056,7 @@ lucide/dist/esm/icons/drum.mjs:
 
 lucide/dist/esm/icons/drumstick.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27894,23 +28064,7 @@ lucide/dist/esm/icons/drumstick.mjs:
 
 lucide/dist/esm/icons/dumbbell.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ear-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/earth.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27918,7 +28072,15 @@ lucide/dist/esm/icons/earth.mjs:
 
 lucide/dist/esm/icons/ear.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ear-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27926,15 +28088,15 @@ lucide/dist/esm/icons/ear.mjs:
 
 lucide/dist/esm/icons/earth-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/egg-fried.mjs:
+lucide/dist/esm/icons/earth.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27942,7 +28104,15 @@ lucide/dist/esm/icons/egg-fried.mjs:
 
 lucide/dist/esm/icons/eclipse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/egg-fried.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27950,7 +28120,7 @@ lucide/dist/esm/icons/eclipse.mjs:
 
 lucide/dist/esm/icons/egg-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27958,7 +28128,7 @@ lucide/dist/esm/icons/egg-off.mjs:
 
 lucide/dist/esm/icons/egg.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27966,7 +28136,7 @@ lucide/dist/esm/icons/egg.mjs:
 
 lucide/dist/esm/icons/eject.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27974,7 +28144,7 @@ lucide/dist/esm/icons/eject.mjs:
 
 lucide/dist/esm/icons/ellipse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27982,7 +28152,7 @@ lucide/dist/esm/icons/ellipse.mjs:
 
 lucide/dist/esm/icons/ellipsis-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27990,7 +28160,7 @@ lucide/dist/esm/icons/ellipsis-vertical.mjs:
 
 lucide/dist/esm/icons/ellipsis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -27998,7 +28168,7 @@ lucide/dist/esm/icons/ellipsis.mjs:
 
 lucide/dist/esm/icons/equal-approximately.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28006,7 +28176,7 @@ lucide/dist/esm/icons/equal-approximately.mjs:
 
 lucide/dist/esm/icons/equal-not.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28014,15 +28184,7 @@ lucide/dist/esm/icons/equal-not.mjs:
 
 lucide/dist/esm/icons/equal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ethernet-port.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28030,7 +28192,15 @@ lucide/dist/esm/icons/ethernet-port.mjs:
 
 lucide/dist/esm/icons/eraser.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ethernet-port.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28038,7 +28208,7 @@ lucide/dist/esm/icons/eraser.mjs:
 
 lucide/dist/esm/icons/euro.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28046,7 +28216,7 @@ lucide/dist/esm/icons/euro.mjs:
 
 lucide/dist/esm/icons/ev-charger.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28054,7 +28224,7 @@ lucide/dist/esm/icons/ev-charger.mjs:
 
 lucide/dist/esm/icons/expand.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28062,7 +28232,7 @@ lucide/dist/esm/icons/expand.mjs:
 
 lucide/dist/esm/icons/external-link.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28070,15 +28240,7 @@ lucide/dist/esm/icons/external-link.mjs:
 
 lucide/dist/esm/icons/eye-closed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/eye-dashed.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28086,7 +28248,15 @@ lucide/dist/esm/icons/eye-dashed.mjs:
 
 lucide/dist/esm/icons/eye-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/eye-dashed.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28094,7 +28264,7 @@ lucide/dist/esm/icons/eye-off.mjs:
 
 lucide/dist/esm/icons/eye.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28102,7 +28272,7 @@ lucide/dist/esm/icons/eye.mjs:
 
 lucide/dist/esm/icons/face-angry.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28110,15 +28280,7 @@ lucide/dist/esm/icons/face-angry.mjs:
 
 lucide/dist/esm/icons/face-expressionless.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/face-grinning.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28126,7 +28288,15 @@ lucide/dist/esm/icons/face-grinning.mjs:
 
 lucide/dist/esm/icons/face-neutral.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/face-grinning.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28134,15 +28304,7 @@ lucide/dist/esm/icons/face-neutral.mjs:
 
 lucide/dist/esm/icons/face-slightly-frowning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/face-slightly-smiling.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28150,15 +28312,15 @@ lucide/dist/esm/icons/face-slightly-smiling.mjs:
 
 lucide/dist/esm/icons/face-slightly-smiling-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/factory.mjs:
+lucide/dist/esm/icons/face-slightly-smiling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28166,7 +28328,15 @@ lucide/dist/esm/icons/factory.mjs:
 
 lucide/dist/esm/icons/fan.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/factory.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28174,23 +28344,7 @@ lucide/dist/esm/icons/fan.mjs:
 
 lucide/dist/esm/icons/fast-forward.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/feather.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ferris-wheel.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28198,7 +28352,23 @@ lucide/dist/esm/icons/ferris-wheel.mjs:
 
 lucide/dist/esm/icons/fence.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/feather.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ferris-wheel.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28206,7 +28376,7 @@ lucide/dist/esm/icons/fence.mjs:
 
 lucide/dist/esm/icons/file-archive.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28214,7 +28384,7 @@ lucide/dist/esm/icons/file-archive.mjs:
 
 lucide/dist/esm/icons/file-axis-3d.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28222,7 +28392,7 @@ lucide/dist/esm/icons/file-axis-3d.mjs:
 
 lucide/dist/esm/icons/file-badge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28230,7 +28400,7 @@ lucide/dist/esm/icons/file-badge.mjs:
 
 lucide/dist/esm/icons/file-box.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28238,7 +28408,7 @@ lucide/dist/esm/icons/file-box.mjs:
 
 lucide/dist/esm/icons/file-braces-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28246,7 +28416,7 @@ lucide/dist/esm/icons/file-braces-corner.mjs:
 
 lucide/dist/esm/icons/file-braces.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28254,7 +28424,7 @@ lucide/dist/esm/icons/file-braces.mjs:
 
 lucide/dist/esm/icons/file-chart-column-increasing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28262,7 +28432,7 @@ lucide/dist/esm/icons/file-chart-column-increasing.mjs:
 
 lucide/dist/esm/icons/file-chart-column.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28270,15 +28440,7 @@ lucide/dist/esm/icons/file-chart-column.mjs:
 
 lucide/dist/esm/icons/file-chart-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-chart-pie.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28286,7 +28448,15 @@ lucide/dist/esm/icons/file-chart-pie.mjs:
 
 lucide/dist/esm/icons/file-check-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-chart-pie.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28294,7 +28464,7 @@ lucide/dist/esm/icons/file-check-corner.mjs:
 
 lucide/dist/esm/icons/file-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28302,7 +28472,7 @@ lucide/dist/esm/icons/file-check.mjs:
 
 lucide/dist/esm/icons/file-clock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28310,7 +28480,7 @@ lucide/dist/esm/icons/file-clock.mjs:
 
 lucide/dist/esm/icons/file-code-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28318,7 +28488,7 @@ lucide/dist/esm/icons/file-code-corner.mjs:
 
 lucide/dist/esm/icons/file-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28326,15 +28496,7 @@ lucide/dist/esm/icons/file-code.mjs:
 
 lucide/dist/esm/icons/file-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-diff.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28342,7 +28504,15 @@ lucide/dist/esm/icons/file-diff.mjs:
 
 lucide/dist/esm/icons/file-digit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-diff.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28350,23 +28520,7 @@ lucide/dist/esm/icons/file-digit.mjs:
 
 lucide/dist/esm/icons/file-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-headphone.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-heart.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28374,7 +28528,23 @@ lucide/dist/esm/icons/file-heart.mjs:
 
 lucide/dist/esm/icons/file-exclamation-point.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-headphone.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-heart.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28382,7 +28552,7 @@ lucide/dist/esm/icons/file-exclamation-point.mjs:
 
 lucide/dist/esm/icons/file-image.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28390,7 +28560,7 @@ lucide/dist/esm/icons/file-image.mjs:
 
 lucide/dist/esm/icons/file-input.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28398,7 +28568,7 @@ lucide/dist/esm/icons/file-input.mjs:
 
 lucide/dist/esm/icons/file-key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28406,7 +28576,7 @@ lucide/dist/esm/icons/file-key.mjs:
 
 lucide/dist/esm/icons/file-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28414,7 +28584,7 @@ lucide/dist/esm/icons/file-lock.mjs:
 
 lucide/dist/esm/icons/file-minus-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28422,15 +28592,7 @@ lucide/dist/esm/icons/file-minus-corner.mjs:
 
 lucide/dist/esm/icons/file-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-music.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28438,7 +28600,15 @@ lucide/dist/esm/icons/file-music.mjs:
 
 lucide/dist/esm/icons/file-output.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-music.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28446,7 +28616,7 @@ lucide/dist/esm/icons/file-output.mjs:
 
 lucide/dist/esm/icons/file-pen-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28454,7 +28624,7 @@ lucide/dist/esm/icons/file-pen-line.mjs:
 
 lucide/dist/esm/icons/file-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28462,7 +28632,7 @@ lucide/dist/esm/icons/file-pen.mjs:
 
 lucide/dist/esm/icons/file-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28470,7 +28640,7 @@ lucide/dist/esm/icons/file-play.mjs:
 
 lucide/dist/esm/icons/file-plus-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28478,7 +28648,7 @@ lucide/dist/esm/icons/file-plus-corner.mjs:
 
 lucide/dist/esm/icons/file-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28486,7 +28656,7 @@ lucide/dist/esm/icons/file-plus.mjs:
 
 lucide/dist/esm/icons/file-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28494,7 +28664,7 @@ lucide/dist/esm/icons/file-question-mark.mjs:
 
 lucide/dist/esm/icons/file-scan.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28502,7 +28672,7 @@ lucide/dist/esm/icons/file-scan.mjs:
 
 lucide/dist/esm/icons/file-search-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28510,7 +28680,7 @@ lucide/dist/esm/icons/file-search-corner.mjs:
 
 lucide/dist/esm/icons/file-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28518,7 +28688,7 @@ lucide/dist/esm/icons/file-search.mjs:
 
 lucide/dist/esm/icons/file-signal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28526,7 +28696,7 @@ lucide/dist/esm/icons/file-signal.mjs:
 
 lucide/dist/esm/icons/file-sliders.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28534,15 +28704,7 @@ lucide/dist/esm/icons/file-sliders.mjs:
 
 lucide/dist/esm/icons/file-spreadsheet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-symlink.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28550,7 +28712,15 @@ lucide/dist/esm/icons/file-symlink.mjs:
 
 lucide/dist/esm/icons/file-stack.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-symlink.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28558,7 +28728,7 @@ lucide/dist/esm/icons/file-stack.mjs:
 
 lucide/dist/esm/icons/file-terminal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28566,7 +28736,7 @@ lucide/dist/esm/icons/file-terminal.mjs:
 
 lucide/dist/esm/icons/file-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28574,7 +28744,7 @@ lucide/dist/esm/icons/file-text.mjs:
 
 lucide/dist/esm/icons/file-type-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28582,7 +28752,7 @@ lucide/dist/esm/icons/file-type-corner.mjs:
 
 lucide/dist/esm/icons/file-type.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28590,15 +28760,7 @@ lucide/dist/esm/icons/file-type.mjs:
 
 lucide/dist/esm/icons/file-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/file-user.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28606,7 +28768,15 @@ lucide/dist/esm/icons/file-user.mjs:
 
 lucide/dist/esm/icons/file-video-camera.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-user.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28614,7 +28784,7 @@ lucide/dist/esm/icons/file-video-camera.mjs:
 
 lucide/dist/esm/icons/file-volume.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28622,7 +28792,7 @@ lucide/dist/esm/icons/file-volume.mjs:
 
 lucide/dist/esm/icons/file-x-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28630,7 +28800,7 @@ lucide/dist/esm/icons/file-x-corner.mjs:
 
 lucide/dist/esm/icons/file-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28638,7 +28808,7 @@ lucide/dist/esm/icons/file-x.mjs:
 
 lucide/dist/esm/icons/file.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28646,7 +28816,7 @@ lucide/dist/esm/icons/file.mjs:
 
 lucide/dist/esm/icons/files.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28654,15 +28824,7 @@ lucide/dist/esm/icons/files.mjs:
 
 lucide/dist/esm/icons/film.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/fingerprint-pattern.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28670,7 +28832,15 @@ lucide/dist/esm/icons/fingerprint-pattern.mjs:
 
 lucide/dist/esm/icons/fire-extinguisher.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/fingerprint-pattern.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28678,7 +28848,7 @@ lucide/dist/esm/icons/fire-extinguisher.mjs:
 
 lucide/dist/esm/icons/fish-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28686,7 +28856,7 @@ lucide/dist/esm/icons/fish-off.mjs:
 
 lucide/dist/esm/icons/fish-symbol.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28694,7 +28864,7 @@ lucide/dist/esm/icons/fish-symbol.mjs:
 
 lucide/dist/esm/icons/fish.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28702,7 +28872,7 @@ lucide/dist/esm/icons/fish.mjs:
 
 lucide/dist/esm/icons/fishing-hook.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28710,7 +28880,7 @@ lucide/dist/esm/icons/fishing-hook.mjs:
 
 lucide/dist/esm/icons/fishing-rod.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28718,23 +28888,7 @@ lucide/dist/esm/icons/fishing-rod.mjs:
 
 lucide/dist/esm/icons/flag-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/flag-triangle-left.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/flag.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28742,7 +28896,23 @@ lucide/dist/esm/icons/flag.mjs:
 
 lucide/dist/esm/icons/flag-triangle-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/flag-triangle-left.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/flag.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28750,7 +28920,7 @@ lucide/dist/esm/icons/flag-triangle-right.mjs:
 
 lucide/dist/esm/icons/flame-kindling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28758,7 +28928,7 @@ lucide/dist/esm/icons/flame-kindling.mjs:
 
 lucide/dist/esm/icons/flame.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28766,7 +28936,7 @@ lucide/dist/esm/icons/flame.mjs:
 
 lucide/dist/esm/icons/flashlight-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28774,7 +28944,7 @@ lucide/dist/esm/icons/flashlight-off.mjs:
 
 lucide/dist/esm/icons/flashlight.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28782,7 +28952,7 @@ lucide/dist/esm/icons/flashlight.mjs:
 
 lucide/dist/esm/icons/flask-conical-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28790,7 +28960,7 @@ lucide/dist/esm/icons/flask-conical-off.mjs:
 
 lucide/dist/esm/icons/flask-conical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28798,7 +28968,7 @@ lucide/dist/esm/icons/flask-conical.mjs:
 
 lucide/dist/esm/icons/flask-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28806,7 +28976,7 @@ lucide/dist/esm/icons/flask-round.mjs:
 
 lucide/dist/esm/icons/flip-horizontal-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28814,7 +28984,7 @@ lucide/dist/esm/icons/flip-horizontal-2.mjs:
 
 lucide/dist/esm/icons/flip-vertical-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28822,7 +28992,7 @@ lucide/dist/esm/icons/flip-vertical-2.mjs:
 
 lucide/dist/esm/icons/flower-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28830,15 +29000,7 @@ lucide/dist/esm/icons/flower-2.mjs:
 
 lucide/dist/esm/icons/flower.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/fold-horizontal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28846,7 +29008,15 @@ lucide/dist/esm/icons/fold-horizontal.mjs:
 
 lucide/dist/esm/icons/focus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/fold-horizontal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28854,7 +29024,7 @@ lucide/dist/esm/icons/focus.mjs:
 
 lucide/dist/esm/icons/fold-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28862,23 +29032,7 @@ lucide/dist/esm/icons/fold-vertical.mjs:
 
 lucide/dist/esm/icons/folder-archive.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-check.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-clock.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28886,7 +29040,15 @@ lucide/dist/esm/icons/folder-clock.mjs:
 
 lucide/dist/esm/icons/folder-bookmark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-clock.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28894,7 +29056,7 @@ lucide/dist/esm/icons/folder-bookmark.mjs:
 
 lucide/dist/esm/icons/folder-closed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28902,7 +29064,15 @@ lucide/dist/esm/icons/folder-closed.mjs:
 
 lucide/dist/esm/icons/folder-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-check.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28910,7 +29080,7 @@ lucide/dist/esm/icons/folder-code.mjs:
 
 lucide/dist/esm/icons/folder-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28918,7 +29088,7 @@ lucide/dist/esm/icons/folder-cog.mjs:
 
 lucide/dist/esm/icons/folder-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28926,7 +29096,7 @@ lucide/dist/esm/icons/folder-dot.mjs:
 
 lucide/dist/esm/icons/folder-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28934,7 +29104,7 @@ lucide/dist/esm/icons/folder-down.mjs:
 
 lucide/dist/esm/icons/folder-git-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28942,15 +29112,7 @@ lucide/dist/esm/icons/folder-git-2.mjs:
 
 lucide/dist/esm/icons/folder-git.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-input.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28958,15 +29120,15 @@ lucide/dist/esm/icons/folder-input.mjs:
 
 lucide/dist/esm/icons/folder-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/folder-kanban.mjs:
+lucide/dist/esm/icons/folder-input.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28974,7 +29136,15 @@ lucide/dist/esm/icons/folder-kanban.mjs:
 
 lucide/dist/esm/icons/folder-key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-kanban.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28982,7 +29152,7 @@ lucide/dist/esm/icons/folder-key.mjs:
 
 lucide/dist/esm/icons/folder-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28990,7 +29160,7 @@ lucide/dist/esm/icons/folder-minus.mjs:
 
 lucide/dist/esm/icons/folder-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -28998,15 +29168,7 @@ lucide/dist/esm/icons/folder-lock.mjs:
 
 lucide/dist/esm/icons/folder-open-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-output.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29014,7 +29176,15 @@ lucide/dist/esm/icons/folder-output.mjs:
 
 lucide/dist/esm/icons/folder-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-output.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29022,7 +29192,7 @@ lucide/dist/esm/icons/folder-open.mjs:
 
 lucide/dist/esm/icons/folder-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29030,15 +29200,7 @@ lucide/dist/esm/icons/folder-pen.mjs:
 
 lucide/dist/esm/icons/folder-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-search-2.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29046,7 +29208,15 @@ lucide/dist/esm/icons/folder-search-2.mjs:
 
 lucide/dist/esm/icons/folder-root.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-search-2.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29054,7 +29224,7 @@ lucide/dist/esm/icons/folder-root.mjs:
 
 lucide/dist/esm/icons/folder-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29062,31 +29232,7 @@ lucide/dist/esm/icons/folder-search.mjs:
 
 lucide/dist/esm/icons/folder-symlink.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-sync.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/folder-x.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29094,7 +29240,31 @@ lucide/dist/esm/icons/folder-x.mjs:
 
 lucide/dist/esm/icons/folder-tree.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-sync.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/folder-x.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29102,15 +29272,7 @@ lucide/dist/esm/icons/folder-tree.mjs:
 
 lucide/dist/esm/icons/folder.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/footprints.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29118,7 +29280,15 @@ lucide/dist/esm/icons/footprints.mjs:
 
 lucide/dist/esm/icons/folders.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/footprints.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29126,7 +29296,7 @@ lucide/dist/esm/icons/folders.mjs:
 
 lucide/dist/esm/icons/forklift.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29134,7 +29304,7 @@ lucide/dist/esm/icons/forklift.mjs:
 
 lucide/dist/esm/icons/form.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29142,7 +29312,7 @@ lucide/dist/esm/icons/form.mjs:
 
 lucide/dist/esm/icons/forward.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29150,7 +29320,7 @@ lucide/dist/esm/icons/forward.mjs:
 
 lucide/dist/esm/icons/frame.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29158,7 +29328,7 @@ lucide/dist/esm/icons/frame.mjs:
 
 lucide/dist/esm/icons/fuel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29166,7 +29336,7 @@ lucide/dist/esm/icons/fuel.mjs:
 
 lucide/dist/esm/icons/fullscreen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29174,7 +29344,7 @@ lucide/dist/esm/icons/fullscreen.mjs:
 
 lucide/dist/esm/icons/funnel-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29182,7 +29352,7 @@ lucide/dist/esm/icons/funnel-plus.mjs:
 
 lucide/dist/esm/icons/funnel-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29190,15 +29360,7 @@ lucide/dist/esm/icons/funnel-x.mjs:
 
 lucide/dist/esm/icons/funnel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/gallery-horizontal-end.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29206,15 +29368,15 @@ lucide/dist/esm/icons/gallery-horizontal-end.mjs:
 
 lucide/dist/esm/icons/gallery-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/gallery-thumbnails.mjs:
+lucide/dist/esm/icons/gallery-horizontal-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29222,7 +29384,15 @@ lucide/dist/esm/icons/gallery-thumbnails.mjs:
 
 lucide/dist/esm/icons/gallery-vertical-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/gallery-thumbnails.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29230,7 +29400,7 @@ lucide/dist/esm/icons/gallery-vertical-end.mjs:
 
 lucide/dist/esm/icons/gallery-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29238,7 +29408,7 @@ lucide/dist/esm/icons/gallery-vertical.mjs:
 
 lucide/dist/esm/icons/gamepad-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29246,7 +29416,7 @@ lucide/dist/esm/icons/gamepad-2.mjs:
 
 lucide/dist/esm/icons/gamepad-directional.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29254,7 +29424,7 @@ lucide/dist/esm/icons/gamepad-directional.mjs:
 
 lucide/dist/esm/icons/gamepad.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29262,7 +29432,7 @@ lucide/dist/esm/icons/gamepad.mjs:
 
 lucide/dist/esm/icons/gauge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29270,7 +29440,7 @@ lucide/dist/esm/icons/gauge.mjs:
 
 lucide/dist/esm/icons/gavel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29278,7 +29448,7 @@ lucide/dist/esm/icons/gavel.mjs:
 
 lucide/dist/esm/icons/gem.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29286,15 +29456,7 @@ lucide/dist/esm/icons/gem.mjs:
 
 lucide/dist/esm/icons/georgian-lari.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ghost.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29302,7 +29464,15 @@ lucide/dist/esm/icons/ghost.mjs:
 
 lucide/dist/esm/icons/gift.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ghost.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29310,7 +29480,7 @@ lucide/dist/esm/icons/gift.mjs:
 
 lucide/dist/esm/icons/git-branch-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29318,7 +29488,7 @@ lucide/dist/esm/icons/git-branch-minus.mjs:
 
 lucide/dist/esm/icons/git-branch-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29326,7 +29496,7 @@ lucide/dist/esm/icons/git-branch-plus.mjs:
 
 lucide/dist/esm/icons/git-branch.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29334,15 +29504,7 @@ lucide/dist/esm/icons/git-branch.mjs:
 
 lucide/dist/esm/icons/git-commit-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/git-commit-vertical.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29350,7 +29512,15 @@ lucide/dist/esm/icons/git-commit-vertical.mjs:
 
 lucide/dist/esm/icons/git-compare-arrows.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/git-commit-vertical.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29358,15 +29528,7 @@ lucide/dist/esm/icons/git-compare-arrows.mjs:
 
 lucide/dist/esm/icons/git-compare.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/git-fork.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29374,7 +29536,15 @@ lucide/dist/esm/icons/git-fork.mjs:
 
 lucide/dist/esm/icons/git-graph.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/git-fork.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29382,7 +29552,7 @@ lucide/dist/esm/icons/git-graph.mjs:
 
 lucide/dist/esm/icons/git-merge-conflict.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29390,7 +29560,7 @@ lucide/dist/esm/icons/git-merge-conflict.mjs:
 
 lucide/dist/esm/icons/git-merge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29398,7 +29568,7 @@ lucide/dist/esm/icons/git-merge.mjs:
 
 lucide/dist/esm/icons/git-pull-request-arrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29406,7 +29576,7 @@ lucide/dist/esm/icons/git-pull-request-arrow.mjs:
 
 lucide/dist/esm/icons/git-pull-request-closed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29414,7 +29584,7 @@ lucide/dist/esm/icons/git-pull-request-closed.mjs:
 
 lucide/dist/esm/icons/git-pull-request-create-arrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29422,7 +29592,7 @@ lucide/dist/esm/icons/git-pull-request-create-arrow.mjs:
 
 lucide/dist/esm/icons/git-pull-request-create.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29430,15 +29600,7 @@ lucide/dist/esm/icons/git-pull-request-create.mjs:
 
 lucide/dist/esm/icons/git-pull-request-draft.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/git-pull-request.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29446,7 +29608,15 @@ lucide/dist/esm/icons/git-pull-request.mjs:
 
 lucide/dist/esm/icons/glass-water.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/git-pull-request.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29454,7 +29624,7 @@ lucide/dist/esm/icons/glass-water.mjs:
 
 lucide/dist/esm/icons/glasses.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29462,7 +29632,7 @@ lucide/dist/esm/icons/glasses.mjs:
 
 lucide/dist/esm/icons/globe-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29470,7 +29640,7 @@ lucide/dist/esm/icons/globe-check.mjs:
 
 lucide/dist/esm/icons/globe-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29478,7 +29648,7 @@ lucide/dist/esm/icons/globe-lock.mjs:
 
 lucide/dist/esm/icons/globe-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29486,7 +29656,7 @@ lucide/dist/esm/icons/globe-off.mjs:
 
 lucide/dist/esm/icons/globe-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29494,7 +29664,7 @@ lucide/dist/esm/icons/globe-x.mjs:
 
 lucide/dist/esm/icons/globe.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29502,7 +29672,7 @@ lucide/dist/esm/icons/globe.mjs:
 
 lucide/dist/esm/icons/goal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29510,15 +29680,7 @@ lucide/dist/esm/icons/goal.mjs:
 
 lucide/dist/esm/icons/gpu.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/graduation-cap.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29526,7 +29688,15 @@ lucide/dist/esm/icons/graduation-cap.mjs:
 
 lucide/dist/esm/icons/grape.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/graduation-cap.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29534,7 +29704,7 @@ lucide/dist/esm/icons/grape.mjs:
 
 lucide/dist/esm/icons/grid-2x2-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29542,7 +29712,7 @@ lucide/dist/esm/icons/grid-2x2-check.mjs:
 
 lucide/dist/esm/icons/grid-2x2-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29550,7 +29720,7 @@ lucide/dist/esm/icons/grid-2x2-plus.mjs:
 
 lucide/dist/esm/icons/grid-2x2-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29558,7 +29728,7 @@ lucide/dist/esm/icons/grid-2x2-x.mjs:
 
 lucide/dist/esm/icons/grid-2x2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29566,7 +29736,7 @@ lucide/dist/esm/icons/grid-2x2.mjs:
 
 lucide/dist/esm/icons/grid-3x2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29574,31 +29744,7 @@ lucide/dist/esm/icons/grid-3x2.mjs:
 
 lucide/dist/esm/icons/grid-3x3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/grip-vertical.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/grip.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/group.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29606,15 +29752,31 @@ lucide/dist/esm/icons/group.mjs:
 
 lucide/dist/esm/icons/grip-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/ham.mjs:
+lucide/dist/esm/icons/grip-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/grip.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/group.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29622,7 +29784,15 @@ lucide/dist/esm/icons/ham.mjs:
 
 lucide/dist/esm/icons/guitar.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ham.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29630,7 +29800,7 @@ lucide/dist/esm/icons/guitar.mjs:
 
 lucide/dist/esm/icons/hamburger.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29638,7 +29808,7 @@ lucide/dist/esm/icons/hamburger.mjs:
 
 lucide/dist/esm/icons/hammer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29646,7 +29816,7 @@ lucide/dist/esm/icons/hammer.mjs:
 
 lucide/dist/esm/icons/hand-coins.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29654,7 +29824,7 @@ lucide/dist/esm/icons/hand-coins.mjs:
 
 lucide/dist/esm/icons/hand-fist.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29662,7 +29832,7 @@ lucide/dist/esm/icons/hand-fist.mjs:
 
 lucide/dist/esm/icons/hand-grab.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29670,7 +29840,7 @@ lucide/dist/esm/icons/hand-grab.mjs:
 
 lucide/dist/esm/icons/hand-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29678,7 +29848,7 @@ lucide/dist/esm/icons/hand-heart.mjs:
 
 lucide/dist/esm/icons/hand-helping.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29686,7 +29856,7 @@ lucide/dist/esm/icons/hand-helping.mjs:
 
 lucide/dist/esm/icons/hand-metal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29694,15 +29864,7 @@ lucide/dist/esm/icons/hand-metal.mjs:
 
 lucide/dist/esm/icons/hand-platter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/hand.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29710,7 +29872,15 @@ lucide/dist/esm/icons/hand.mjs:
 
 lucide/dist/esm/icons/handbag.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/hand.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29718,7 +29888,7 @@ lucide/dist/esm/icons/handbag.mjs:
 
 lucide/dist/esm/icons/handshake.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29726,15 +29896,7 @@ lucide/dist/esm/icons/handshake.mjs:
 
 lucide/dist/esm/icons/hard-drive-download.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/hard-drive.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29742,7 +29904,15 @@ lucide/dist/esm/icons/hard-drive.mjs:
 
 lucide/dist/esm/icons/hard-drive-upload.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/hard-drive.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29750,7 +29920,7 @@ lucide/dist/esm/icons/hard-drive-upload.mjs:
 
 lucide/dist/esm/icons/hard-hat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29758,7 +29928,7 @@ lucide/dist/esm/icons/hard-hat.mjs:
 
 lucide/dist/esm/icons/hash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29766,7 +29936,7 @@ lucide/dist/esm/icons/hash.mjs:
 
 lucide/dist/esm/icons/hat-glasses.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29774,7 +29944,7 @@ lucide/dist/esm/icons/hat-glasses.mjs:
 
 lucide/dist/esm/icons/haze.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29782,15 +29952,7 @@ lucide/dist/esm/icons/haze.mjs:
 
 lucide/dist/esm/icons/hd.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/hdmi-port.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29798,7 +29960,7 @@ lucide/dist/esm/icons/hdmi-port.mjs:
 
 lucide/dist/esm/icons/heading-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29806,7 +29968,15 @@ lucide/dist/esm/icons/heading-1.mjs:
 
 lucide/dist/esm/icons/heading-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/hdmi-port.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29814,7 +29984,7 @@ lucide/dist/esm/icons/heading-2.mjs:
 
 lucide/dist/esm/icons/heading-3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29822,15 +29992,7 @@ lucide/dist/esm/icons/heading-3.mjs:
 
 lucide/dist/esm/icons/heading-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/heading-5.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29838,7 +30000,7 @@ lucide/dist/esm/icons/heading-5.mjs:
 
 lucide/dist/esm/icons/heading-6.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29846,15 +30008,15 @@ lucide/dist/esm/icons/heading-6.mjs:
 
 lucide/dist/esm/icons/heading.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/headphones.mjs:
+lucide/dist/esm/icons/heading-5.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29862,7 +30024,15 @@ lucide/dist/esm/icons/headphones.mjs:
 
 lucide/dist/esm/icons/headphone-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/headphones.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29870,7 +30040,7 @@ lucide/dist/esm/icons/headphone-off.mjs:
 
 lucide/dist/esm/icons/headset.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29878,7 +30048,7 @@ lucide/dist/esm/icons/headset.mjs:
 
 lucide/dist/esm/icons/heart-crack.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29886,7 +30056,7 @@ lucide/dist/esm/icons/heart-crack.mjs:
 
 lucide/dist/esm/icons/heart-handshake.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29894,7 +30064,7 @@ lucide/dist/esm/icons/heart-handshake.mjs:
 
 lucide/dist/esm/icons/heart-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29902,7 +30072,7 @@ lucide/dist/esm/icons/heart-minus.mjs:
 
 lucide/dist/esm/icons/heart-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29910,7 +30080,7 @@ lucide/dist/esm/icons/heart-off.mjs:
 
 lucide/dist/esm/icons/heart-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29918,7 +30088,7 @@ lucide/dist/esm/icons/heart-plus.mjs:
 
 lucide/dist/esm/icons/heart-pulse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29926,7 +30096,7 @@ lucide/dist/esm/icons/heart-pulse.mjs:
 
 lucide/dist/esm/icons/heart-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29934,7 +30104,7 @@ lucide/dist/esm/icons/heart-x.mjs:
 
 lucide/dist/esm/icons/heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29942,7 +30112,7 @@ lucide/dist/esm/icons/heart.mjs:
 
 lucide/dist/esm/icons/heater.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29950,15 +30120,7 @@ lucide/dist/esm/icons/heater.mjs:
 
 lucide/dist/esm/icons/helicopter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/hexagon.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29966,15 +30128,15 @@ lucide/dist/esm/icons/hexagon.mjs:
 
 lucide/dist/esm/icons/highlighter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/hospital.mjs:
+lucide/dist/esm/icons/hexagon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29982,7 +30144,7 @@ lucide/dist/esm/icons/hospital.mjs:
 
 lucide/dist/esm/icons/hop-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29990,7 +30152,15 @@ lucide/dist/esm/icons/hop-off.mjs:
 
 lucide/dist/esm/icons/hop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/hospital.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -29998,23 +30168,7 @@ lucide/dist/esm/icons/hop.mjs:
 
 lucide/dist/esm/icons/hotel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/house-heart.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/house-plug.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30022,7 +30176,23 @@ lucide/dist/esm/icons/house-plug.mjs:
 
 lucide/dist/esm/icons/hourglass.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/house-heart.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/house-plug.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30030,7 +30200,7 @@ lucide/dist/esm/icons/hourglass.mjs:
 
 lucide/dist/esm/icons/house-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30038,7 +30208,7 @@ lucide/dist/esm/icons/house-plus.mjs:
 
 lucide/dist/esm/icons/house-wifi.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30046,7 +30216,7 @@ lucide/dist/esm/icons/house-wifi.mjs:
 
 lucide/dist/esm/icons/ice-cream-bowl.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30054,7 +30224,7 @@ lucide/dist/esm/icons/ice-cream-bowl.mjs:
 
 lucide/dist/esm/icons/house.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30062,7 +30232,7 @@ lucide/dist/esm/icons/house.mjs:
 
 lucide/dist/esm/icons/ice-cream-cone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30070,7 +30240,7 @@ lucide/dist/esm/icons/ice-cream-cone.mjs:
 
 lucide/dist/esm/icons/id-card-lanyard.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30078,7 +30248,7 @@ lucide/dist/esm/icons/id-card-lanyard.mjs:
 
 lucide/dist/esm/icons/id-card.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30086,7 +30256,7 @@ lucide/dist/esm/icons/id-card.mjs:
 
 lucide/dist/esm/icons/image-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30094,7 +30264,7 @@ lucide/dist/esm/icons/image-down.mjs:
 
 lucide/dist/esm/icons/image-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30102,7 +30272,7 @@ lucide/dist/esm/icons/image-minus.mjs:
 
 lucide/dist/esm/icons/image-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30110,7 +30280,7 @@ lucide/dist/esm/icons/image-off.mjs:
 
 lucide/dist/esm/icons/image-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30118,7 +30288,7 @@ lucide/dist/esm/icons/image-play.mjs:
 
 lucide/dist/esm/icons/image-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30126,7 +30296,7 @@ lucide/dist/esm/icons/image-plus.mjs:
 
 lucide/dist/esm/icons/image-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30134,7 +30304,7 @@ lucide/dist/esm/icons/image-up.mjs:
 
 lucide/dist/esm/icons/image-upscale.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30142,7 +30312,7 @@ lucide/dist/esm/icons/image-upscale.mjs:
 
 lucide/dist/esm/icons/image.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30150,7 +30320,7 @@ lucide/dist/esm/icons/image.mjs:
 
 lucide/dist/esm/icons/images.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30158,15 +30328,7 @@ lucide/dist/esm/icons/images.mjs:
 
 lucide/dist/esm/icons/import.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/inbox.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30174,7 +30336,7 @@ lucide/dist/esm/icons/inbox.mjs:
 
 lucide/dist/esm/icons/indian-rupee.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30182,7 +30344,15 @@ lucide/dist/esm/icons/indian-rupee.mjs:
 
 lucide/dist/esm/icons/infinity.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/inbox.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30190,7 +30360,7 @@ lucide/dist/esm/icons/infinity.mjs:
 
 lucide/dist/esm/icons/info.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30198,7 +30368,7 @@ lucide/dist/esm/icons/info.mjs:
 
 lucide/dist/esm/icons/inspection-panel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30206,7 +30376,7 @@ lucide/dist/esm/icons/inspection-panel.mjs:
 
 lucide/dist/esm/icons/italic.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30214,7 +30384,7 @@ lucide/dist/esm/icons/italic.mjs:
 
 lucide/dist/esm/icons/iteration-ccw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30222,7 +30392,7 @@ lucide/dist/esm/icons/iteration-ccw.mjs:
 
 lucide/dist/esm/icons/iteration-cw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30230,7 +30400,7 @@ lucide/dist/esm/icons/iteration-cw.mjs:
 
 lucide/dist/esm/icons/japanese-yen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30238,15 +30408,7 @@ lucide/dist/esm/icons/japanese-yen.mjs:
 
 lucide/dist/esm/icons/joystick.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/kanban.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30254,7 +30416,15 @@ lucide/dist/esm/icons/kanban.mjs:
 
 lucide/dist/esm/icons/kayak.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/kanban.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30262,7 +30432,7 @@ lucide/dist/esm/icons/kayak.mjs:
 
 lucide/dist/esm/icons/key-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30270,7 +30440,7 @@ lucide/dist/esm/icons/key-round.mjs:
 
 lucide/dist/esm/icons/key-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30278,7 +30448,7 @@ lucide/dist/esm/icons/key-square.mjs:
 
 lucide/dist/esm/icons/key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30286,15 +30456,7 @@ lucide/dist/esm/icons/key.mjs:
 
 lucide/dist/esm/icons/keyboard-music.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/keyboard.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30302,7 +30464,15 @@ lucide/dist/esm/icons/keyboard.mjs:
 
 lucide/dist/esm/icons/keyboard-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/keyboard.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30310,7 +30480,7 @@ lucide/dist/esm/icons/keyboard-off.mjs:
 
 lucide/dist/esm/icons/lamp-ceiling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30318,7 +30488,7 @@ lucide/dist/esm/icons/lamp-ceiling.mjs:
 
 lucide/dist/esm/icons/lamp-desk.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30326,23 +30496,7 @@ lucide/dist/esm/icons/lamp-desk.mjs:
 
 lucide/dist/esm/icons/lamp-floor.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/lamp-wall-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/lamp.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30350,7 +30504,23 @@ lucide/dist/esm/icons/lamp.mjs:
 
 lucide/dist/esm/icons/lamp-wall-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/lamp-wall-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/lamp.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30358,7 +30528,7 @@ lucide/dist/esm/icons/lamp-wall-down.mjs:
 
 lucide/dist/esm/icons/land-plot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30366,15 +30536,7 @@ lucide/dist/esm/icons/land-plot.mjs:
 
 lucide/dist/esm/icons/landmark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/languages.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30382,7 +30544,15 @@ lucide/dist/esm/icons/languages.mjs:
 
 lucide/dist/esm/icons/laptop-minimal-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/languages.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30390,7 +30560,7 @@ lucide/dist/esm/icons/laptop-minimal-check.mjs:
 
 lucide/dist/esm/icons/laptop-minimal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30398,15 +30568,7 @@ lucide/dist/esm/icons/laptop-minimal.mjs:
 
 lucide/dist/esm/icons/laptop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/lasso.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30414,15 +30576,15 @@ lucide/dist/esm/icons/lasso.mjs:
 
 lucide/dist/esm/icons/lasso-select.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/layer-arrow-up.mjs:
+lucide/dist/esm/icons/lasso.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30430,7 +30592,15 @@ lucide/dist/esm/icons/layer-arrow-up.mjs:
 
 lucide/dist/esm/icons/layer-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/layer-arrow-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30438,7 +30608,7 @@ lucide/dist/esm/icons/layer-arrow-down.mjs:
 
 lucide/dist/esm/icons/layers-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30446,7 +30616,7 @@ lucide/dist/esm/icons/layers-2.mjs:
 
 lucide/dist/esm/icons/layers-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30454,7 +30624,7 @@ lucide/dist/esm/icons/layers-arrow-down.mjs:
 
 lucide/dist/esm/icons/layers-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30462,7 +30632,7 @@ lucide/dist/esm/icons/layers-arrow-up.mjs:
 
 lucide/dist/esm/icons/layers-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30470,7 +30640,7 @@ lucide/dist/esm/icons/layers-minus.mjs:
 
 lucide/dist/esm/icons/layers-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30478,7 +30648,7 @@ lucide/dist/esm/icons/layers-plus.mjs:
 
 lucide/dist/esm/icons/layers.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30486,7 +30656,7 @@ lucide/dist/esm/icons/layers.mjs:
 
 lucide/dist/esm/icons/layout-dashboard.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30494,7 +30664,7 @@ lucide/dist/esm/icons/layout-dashboard.mjs:
 
 lucide/dist/esm/icons/layout-freeform.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30502,7 +30672,7 @@ lucide/dist/esm/icons/layout-freeform.mjs:
 
 lucide/dist/esm/icons/layout-grid.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30510,7 +30680,7 @@ lucide/dist/esm/icons/layout-grid.mjs:
 
 lucide/dist/esm/icons/layout-list.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30518,7 +30688,7 @@ lucide/dist/esm/icons/layout-list.mjs:
 
 lucide/dist/esm/icons/layout-panel-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30526,7 +30696,7 @@ lucide/dist/esm/icons/layout-panel-left.mjs:
 
 lucide/dist/esm/icons/layout-panel-top.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30534,7 +30704,7 @@ lucide/dist/esm/icons/layout-panel-top.mjs:
 
 lucide/dist/esm/icons/layout-template.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30542,7 +30712,7 @@ lucide/dist/esm/icons/layout-template.mjs:
 
 lucide/dist/esm/icons/leaf.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30550,7 +30720,7 @@ lucide/dist/esm/icons/leaf.mjs:
 
 lucide/dist/esm/icons/leafy-green.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30558,7 +30728,7 @@ lucide/dist/esm/icons/leafy-green.mjs:
 
 lucide/dist/esm/icons/lectern.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30566,7 +30736,7 @@ lucide/dist/esm/icons/lectern.mjs:
 
 lucide/dist/esm/icons/lens-concave.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30574,7 +30744,7 @@ lucide/dist/esm/icons/lens-concave.mjs:
 
 lucide/dist/esm/icons/lens-convex.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30582,7 +30752,7 @@ lucide/dist/esm/icons/lens-convex.mjs:
 
 lucide/dist/esm/icons/library-big.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30590,7 +30760,7 @@ lucide/dist/esm/icons/library-big.mjs:
 
 lucide/dist/esm/icons/library.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30598,7 +30768,7 @@ lucide/dist/esm/icons/library.mjs:
 
 lucide/dist/esm/icons/life-buoy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30606,7 +30776,7 @@ lucide/dist/esm/icons/life-buoy.mjs:
 
 lucide/dist/esm/icons/ligature.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30614,7 +30784,7 @@ lucide/dist/esm/icons/ligature.mjs:
 
 lucide/dist/esm/icons/lightbulb-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30622,7 +30792,7 @@ lucide/dist/esm/icons/lightbulb-off.mjs:
 
 lucide/dist/esm/icons/lightbulb.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30630,7 +30800,7 @@ lucide/dist/esm/icons/lightbulb.mjs:
 
 lucide/dist/esm/icons/line-dot-right-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30638,15 +30808,7 @@ lucide/dist/esm/icons/line-dot-right-horizontal.mjs:
 
 lucide/dist/esm/icons/line-squiggle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/link-2-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30654,15 +30816,15 @@ lucide/dist/esm/icons/link-2-off.mjs:
 
 lucide/dist/esm/icons/line-style.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/link.mjs:
+lucide/dist/esm/icons/link-2-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30670,7 +30832,15 @@ lucide/dist/esm/icons/link.mjs:
 
 lucide/dist/esm/icons/link-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/link.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30678,7 +30848,7 @@ lucide/dist/esm/icons/link-2.mjs:
 
 lucide/dist/esm/icons/list-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30686,7 +30856,7 @@ lucide/dist/esm/icons/list-check.mjs:
 
 lucide/dist/esm/icons/list-checks.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30694,7 +30864,7 @@ lucide/dist/esm/icons/list-checks.mjs:
 
 lucide/dist/esm/icons/list-chevrons-down-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30702,7 +30872,15 @@ lucide/dist/esm/icons/list-chevrons-down-up.mjs:
 
 lucide/dist/esm/icons/list-chevrons-up-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/list-clock.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30710,7 +30888,7 @@ lucide/dist/esm/icons/list-chevrons-up-down.mjs:
 
 lucide/dist/esm/icons/list-collapse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30718,7 +30896,7 @@ lucide/dist/esm/icons/list-collapse.mjs:
 
 lucide/dist/esm/icons/list-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30726,7 +30904,7 @@ lucide/dist/esm/icons/list-end.mjs:
 
 lucide/dist/esm/icons/list-filter-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30734,7 +30912,7 @@ lucide/dist/esm/icons/list-filter-plus.mjs:
 
 lucide/dist/esm/icons/list-filter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30742,7 +30920,7 @@ lucide/dist/esm/icons/list-filter.mjs:
 
 lucide/dist/esm/icons/list-indent-decrease.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30750,15 +30928,7 @@ lucide/dist/esm/icons/list-indent-decrease.mjs:
 
 lucide/dist/esm/icons/list-indent-increase.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/list-music.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30766,7 +30936,15 @@ lucide/dist/esm/icons/list-music.mjs:
 
 lucide/dist/esm/icons/list-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/list-music.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30774,7 +30952,7 @@ lucide/dist/esm/icons/list-minus.mjs:
 
 lucide/dist/esm/icons/list-ordered.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30782,7 +30960,7 @@ lucide/dist/esm/icons/list-ordered.mjs:
 
 lucide/dist/esm/icons/list-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30790,7 +30968,7 @@ lucide/dist/esm/icons/list-plus.mjs:
 
 lucide/dist/esm/icons/list-restart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30798,7 +30976,7 @@ lucide/dist/esm/icons/list-restart.mjs:
 
 lucide/dist/esm/icons/list-sort-ascending.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30806,7 +30984,7 @@ lucide/dist/esm/icons/list-sort-ascending.mjs:
 
 lucide/dist/esm/icons/list-sort-descending.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30814,7 +30992,7 @@ lucide/dist/esm/icons/list-sort-descending.mjs:
 
 lucide/dist/esm/icons/list-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30822,7 +31000,7 @@ lucide/dist/esm/icons/list-start.mjs:
 
 lucide/dist/esm/icons/list-todo.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30830,7 +31008,7 @@ lucide/dist/esm/icons/list-todo.mjs:
 
 lucide/dist/esm/icons/list-tree.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30838,7 +31016,7 @@ lucide/dist/esm/icons/list-tree.mjs:
 
 lucide/dist/esm/icons/list-video.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30846,15 +31024,7 @@ lucide/dist/esm/icons/list-video.mjs:
 
 lucide/dist/esm/icons/list-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/loader-circle.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30862,7 +31032,15 @@ lucide/dist/esm/icons/loader-circle.mjs:
 
 lucide/dist/esm/icons/list.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/loader-circle.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30870,7 +31048,7 @@ lucide/dist/esm/icons/list.mjs:
 
 lucide/dist/esm/icons/loader-pinwheel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30878,7 +31056,7 @@ lucide/dist/esm/icons/loader-pinwheel.mjs:
 
 lucide/dist/esm/icons/loader.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30886,7 +31064,7 @@ lucide/dist/esm/icons/loader.mjs:
 
 lucide/dist/esm/icons/locate-fixed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30894,7 +31072,7 @@ lucide/dist/esm/icons/locate-fixed.mjs:
 
 lucide/dist/esm/icons/locate-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30902,7 +31080,7 @@ lucide/dist/esm/icons/locate-off.mjs:
 
 lucide/dist/esm/icons/locate.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30910,7 +31088,7 @@ lucide/dist/esm/icons/locate.mjs:
 
 lucide/dist/esm/icons/lock-keyhole-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30918,7 +31096,7 @@ lucide/dist/esm/icons/lock-keyhole-open.mjs:
 
 lucide/dist/esm/icons/lock-keyhole.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30926,7 +31104,7 @@ lucide/dist/esm/icons/lock-keyhole.mjs:
 
 lucide/dist/esm/icons/lock-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30934,15 +31112,7 @@ lucide/dist/esm/icons/lock-open.mjs:
 
 lucide/dist/esm/icons/lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/log-out.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30950,7 +31120,15 @@ lucide/dist/esm/icons/log-out.mjs:
 
 lucide/dist/esm/icons/log-in.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/log-out.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30958,7 +31136,7 @@ lucide/dist/esm/icons/log-in.mjs:
 
 lucide/dist/esm/icons/logs.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30966,7 +31144,7 @@ lucide/dist/esm/icons/logs.mjs:
 
 lucide/dist/esm/icons/lollipop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30974,7 +31152,7 @@ lucide/dist/esm/icons/lollipop.mjs:
 
 lucide/dist/esm/icons/luggage.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30982,7 +31160,7 @@ lucide/dist/esm/icons/luggage.mjs:
 
 lucide/dist/esm/icons/magnet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30990,7 +31168,7 @@ lucide/dist/esm/icons/magnet.mjs:
 
 lucide/dist/esm/icons/mail-badge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -30998,7 +31176,7 @@ lucide/dist/esm/icons/mail-badge.mjs:
 
 lucide/dist/esm/icons/mail-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31006,7 +31184,7 @@ lucide/dist/esm/icons/mail-minus.mjs:
 
 lucide/dist/esm/icons/mail-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31014,7 +31192,7 @@ lucide/dist/esm/icons/mail-check.mjs:
 
 lucide/dist/esm/icons/mail-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31022,7 +31200,7 @@ lucide/dist/esm/icons/mail-open.mjs:
 
 lucide/dist/esm/icons/mail-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31030,7 +31208,7 @@ lucide/dist/esm/icons/mail-plus.mjs:
 
 lucide/dist/esm/icons/mail-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31038,15 +31216,7 @@ lucide/dist/esm/icons/mail-question-mark.mjs:
 
 lucide/dist/esm/icons/mail-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/mail-x.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31054,15 +31224,15 @@ lucide/dist/esm/icons/mail-x.mjs:
 
 lucide/dist/esm/icons/mail-warning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/mail.mjs:
+lucide/dist/esm/icons/mail-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31070,7 +31240,15 @@ lucide/dist/esm/icons/mail.mjs:
 
 lucide/dist/esm/icons/mailbox.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mail.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31078,7 +31256,7 @@ lucide/dist/esm/icons/mailbox.mjs:
 
 lucide/dist/esm/icons/mails.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31086,7 +31264,7 @@ lucide/dist/esm/icons/mails.mjs:
 
 lucide/dist/esm/icons/map-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31094,7 +31272,7 @@ lucide/dist/esm/icons/map-minus.mjs:
 
 lucide/dist/esm/icons/map-pin-check-inside.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31102,7 +31280,7 @@ lucide/dist/esm/icons/map-pin-check-inside.mjs:
 
 lucide/dist/esm/icons/map-pin-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31110,7 +31288,7 @@ lucide/dist/esm/icons/map-pin-check.mjs:
 
 lucide/dist/esm/icons/map-pin-house.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31118,7 +31296,7 @@ lucide/dist/esm/icons/map-pin-house.mjs:
 
 lucide/dist/esm/icons/map-pin-minus-inside.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31126,7 +31304,7 @@ lucide/dist/esm/icons/map-pin-minus-inside.mjs:
 
 lucide/dist/esm/icons/map-pin-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31134,7 +31312,7 @@ lucide/dist/esm/icons/map-pin-minus.mjs:
 
 lucide/dist/esm/icons/map-pin-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31142,7 +31320,7 @@ lucide/dist/esm/icons/map-pin-off.mjs:
 
 lucide/dist/esm/icons/map-pin-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31150,7 +31328,7 @@ lucide/dist/esm/icons/map-pin-pen.mjs:
 
 lucide/dist/esm/icons/map-pin-plus-inside.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31158,7 +31336,7 @@ lucide/dist/esm/icons/map-pin-plus-inside.mjs:
 
 lucide/dist/esm/icons/map-pin-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31166,7 +31344,7 @@ lucide/dist/esm/icons/map-pin-plus.mjs:
 
 lucide/dist/esm/icons/map-pin-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31174,7 +31352,7 @@ lucide/dist/esm/icons/map-pin-search.mjs:
 
 lucide/dist/esm/icons/map-pin-x-inside.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31182,7 +31360,7 @@ lucide/dist/esm/icons/map-pin-x-inside.mjs:
 
 lucide/dist/esm/icons/map-pin-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31190,23 +31368,7 @@ lucide/dist/esm/icons/map-pin-x.mjs:
 
 lucide/dist/esm/icons/map-pin.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/map-plus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/map.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31214,7 +31376,23 @@ lucide/dist/esm/icons/map.mjs:
 
 lucide/dist/esm/icons/map-pinned.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/map-plus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/map.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31222,7 +31400,7 @@ lucide/dist/esm/icons/map-pinned.mjs:
 
 lucide/dist/esm/icons/mars-stroke.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31230,7 +31408,7 @@ lucide/dist/esm/icons/mars-stroke.mjs:
 
 lucide/dist/esm/icons/mars.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31238,7 +31416,7 @@ lucide/dist/esm/icons/mars.mjs:
 
 lucide/dist/esm/icons/martini.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31246,7 +31424,7 @@ lucide/dist/esm/icons/martini.mjs:
 
 lucide/dist/esm/icons/maximize-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31254,7 +31432,7 @@ lucide/dist/esm/icons/maximize-2.mjs:
 
 lucide/dist/esm/icons/maximize.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31262,7 +31440,7 @@ lucide/dist/esm/icons/maximize.mjs:
 
 lucide/dist/esm/icons/medal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31270,7 +31448,7 @@ lucide/dist/esm/icons/medal.mjs:
 
 lucide/dist/esm/icons/megaphone-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31278,7 +31456,7 @@ lucide/dist/esm/icons/megaphone-off.mjs:
 
 lucide/dist/esm/icons/megaphone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31286,7 +31464,7 @@ lucide/dist/esm/icons/megaphone.mjs:
 
 lucide/dist/esm/icons/memory-stick.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31294,7 +31472,7 @@ lucide/dist/esm/icons/memory-stick.mjs:
 
 lucide/dist/esm/icons/menu.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31302,7 +31480,7 @@ lucide/dist/esm/icons/menu.mjs:
 
 lucide/dist/esm/icons/merge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31310,7 +31488,7 @@ lucide/dist/esm/icons/merge.mjs:
 
 lucide/dist/esm/icons/message-circle-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31318,7 +31496,7 @@ lucide/dist/esm/icons/message-circle-check.mjs:
 
 lucide/dist/esm/icons/message-circle-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31326,7 +31504,7 @@ lucide/dist/esm/icons/message-circle-code.mjs:
 
 lucide/dist/esm/icons/message-circle-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31334,15 +31512,7 @@ lucide/dist/esm/icons/message-circle-dashed.mjs:
 
 lucide/dist/esm/icons/message-circle-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/message-circle-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31350,7 +31520,15 @@ lucide/dist/esm/icons/message-circle-off.mjs:
 
 lucide/dist/esm/icons/message-circle-more.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/message-circle-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31358,7 +31536,7 @@ lucide/dist/esm/icons/message-circle-more.mjs:
 
 lucide/dist/esm/icons/message-circle-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31366,7 +31544,7 @@ lucide/dist/esm/icons/message-circle-plus.mjs:
 
 lucide/dist/esm/icons/message-circle-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31374,7 +31552,7 @@ lucide/dist/esm/icons/message-circle-question-mark.mjs:
 
 lucide/dist/esm/icons/message-circle-reply.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31382,7 +31560,7 @@ lucide/dist/esm/icons/message-circle-reply.mjs:
 
 lucide/dist/esm/icons/message-circle-warning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31390,7 +31568,7 @@ lucide/dist/esm/icons/message-circle-warning.mjs:
 
 lucide/dist/esm/icons/message-circle-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31398,7 +31576,7 @@ lucide/dist/esm/icons/message-circle-x.mjs:
 
 lucide/dist/esm/icons/message-circle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31406,23 +31584,7 @@ lucide/dist/esm/icons/message-circle.mjs:
 
 lucide/dist/esm/icons/message-square-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/message-square-diff.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/message-square-dashed.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31430,7 +31592,23 @@ lucide/dist/esm/icons/message-square-dashed.mjs:
 
 lucide/dist/esm/icons/message-square-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/message-square-dashed.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/message-square-diff.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31438,7 +31616,7 @@ lucide/dist/esm/icons/message-square-code.mjs:
 
 lucide/dist/esm/icons/message-square-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31446,7 +31624,7 @@ lucide/dist/esm/icons/message-square-dot.mjs:
 
 lucide/dist/esm/icons/message-square-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31454,7 +31632,7 @@ lucide/dist/esm/icons/message-square-heart.mjs:
 
 lucide/dist/esm/icons/message-square-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31462,7 +31640,7 @@ lucide/dist/esm/icons/message-square-lock.mjs:
 
 lucide/dist/esm/icons/message-square-more.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31470,15 +31648,7 @@ lucide/dist/esm/icons/message-square-more.mjs:
 
 lucide/dist/esm/icons/message-square-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/message-square-quote.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31486,7 +31656,15 @@ lucide/dist/esm/icons/message-square-quote.mjs:
 
 lucide/dist/esm/icons/message-square-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/message-square-quote.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31494,7 +31672,7 @@ lucide/dist/esm/icons/message-square-plus.mjs:
 
 lucide/dist/esm/icons/message-square-reply.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31502,7 +31680,7 @@ lucide/dist/esm/icons/message-square-reply.mjs:
 
 lucide/dist/esm/icons/message-square-share.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31510,7 +31688,7 @@ lucide/dist/esm/icons/message-square-share.mjs:
 
 lucide/dist/esm/icons/message-square-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31518,7 +31696,7 @@ lucide/dist/esm/icons/message-square-text.mjs:
 
 lucide/dist/esm/icons/message-square-warning.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31526,7 +31704,7 @@ lucide/dist/esm/icons/message-square-warning.mjs:
 
 lucide/dist/esm/icons/message-square-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31534,7 +31712,7 @@ lucide/dist/esm/icons/message-square-x.mjs:
 
 lucide/dist/esm/icons/message-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31542,7 +31720,7 @@ lucide/dist/esm/icons/message-square.mjs:
 
 lucide/dist/esm/icons/messages-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31550,7 +31728,7 @@ lucide/dist/esm/icons/messages-square.mjs:
 
 lucide/dist/esm/icons/metronome.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31558,7 +31736,7 @@ lucide/dist/esm/icons/metronome.mjs:
 
 lucide/dist/esm/icons/mic-audio-lines.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31566,7 +31744,7 @@ lucide/dist/esm/icons/mic-audio-lines.mjs:
 
 lucide/dist/esm/icons/mic-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31574,7 +31752,7 @@ lucide/dist/esm/icons/mic-off.mjs:
 
 lucide/dist/esm/icons/mic-signal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31582,15 +31760,7 @@ lucide/dist/esm/icons/mic-signal.mjs:
 
 lucide/dist/esm/icons/mic-vocal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/mic.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31598,7 +31768,15 @@ lucide/dist/esm/icons/mic.mjs:
 
 lucide/dist/esm/icons/microchip.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mic.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31606,15 +31784,7 @@ lucide/dist/esm/icons/microchip.mjs:
 
 lucide/dist/esm/icons/microscope.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/milestone.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31622,7 +31792,15 @@ lucide/dist/esm/icons/milestone.mjs:
 
 lucide/dist/esm/icons/microwave.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/midi-port.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31630,7 +31808,15 @@ lucide/dist/esm/icons/microwave.mjs:
 
 lucide/dist/esm/icons/milk-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/milestone.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31638,7 +31824,7 @@ lucide/dist/esm/icons/milk-off.mjs:
 
 lucide/dist/esm/icons/milk.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31646,7 +31832,7 @@ lucide/dist/esm/icons/milk.mjs:
 
 lucide/dist/esm/icons/minimize-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31654,7 +31840,7 @@ lucide/dist/esm/icons/minimize-2.mjs:
 
 lucide/dist/esm/icons/minimize.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31662,23 +31848,7 @@ lucide/dist/esm/icons/minimize.mjs:
 
 lucide/dist/esm/icons/minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/mirror-round.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/monitor-check.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31686,7 +31856,23 @@ lucide/dist/esm/icons/monitor-check.mjs:
 
 lucide/dist/esm/icons/mirror-rectangular.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mirror-round.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/monitor-check.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31694,7 +31880,7 @@ lucide/dist/esm/icons/mirror-rectangular.mjs:
 
 lucide/dist/esm/icons/monitor-cloud.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31702,7 +31888,7 @@ lucide/dist/esm/icons/monitor-cloud.mjs:
 
 lucide/dist/esm/icons/monitor-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31710,7 +31896,7 @@ lucide/dist/esm/icons/monitor-cog.mjs:
 
 lucide/dist/esm/icons/monitor-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31718,7 +31904,7 @@ lucide/dist/esm/icons/monitor-dot.mjs:
 
 lucide/dist/esm/icons/monitor-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31726,15 +31912,7 @@ lucide/dist/esm/icons/monitor-down.mjs:
 
 lucide/dist/esm/icons/monitor-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/monitor-play.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31742,7 +31920,15 @@ lucide/dist/esm/icons/monitor-play.mjs:
 
 lucide/dist/esm/icons/monitor-pause.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/monitor-play.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31750,7 +31936,7 @@ lucide/dist/esm/icons/monitor-pause.mjs:
 
 lucide/dist/esm/icons/monitor-smartphone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31758,7 +31944,7 @@ lucide/dist/esm/icons/monitor-smartphone.mjs:
 
 lucide/dist/esm/icons/monitor-speaker.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31766,15 +31952,7 @@ lucide/dist/esm/icons/monitor-speaker.mjs:
 
 lucide/dist/esm/icons/monitor-stop.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/monitor-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31782,15 +31960,15 @@ lucide/dist/esm/icons/monitor-up.mjs:
 
 lucide/dist/esm/icons/monitor-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/monitor.mjs:
+lucide/dist/esm/icons/monitor-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31798,7 +31976,23 @@ lucide/dist/esm/icons/monitor.mjs:
 
 lucide/dist/esm/icons/moon-star.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/monitor.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mop-sparkles.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31806,7 +32000,15 @@ lucide/dist/esm/icons/moon-star.mjs:
 
 lucide/dist/esm/icons/moon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mop.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31814,7 +32016,7 @@ lucide/dist/esm/icons/moon.mjs:
 
 lucide/dist/esm/icons/mosque.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31822,15 +32024,7 @@ lucide/dist/esm/icons/mosque.mjs:
 
 lucide/dist/esm/icons/motorbike.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/mountain-snow.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31838,15 +32032,15 @@ lucide/dist/esm/icons/mountain-snow.mjs:
 
 lucide/dist/esm/icons/mountain.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/mouse-off.mjs:
+lucide/dist/esm/icons/mountain-snow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31854,7 +32048,15 @@ lucide/dist/esm/icons/mouse-off.mjs:
 
 lucide/dist/esm/icons/mouse-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mouse-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31862,7 +32064,7 @@ lucide/dist/esm/icons/mouse-left.mjs:
 
 lucide/dist/esm/icons/mouse-pointer-2-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31870,7 +32072,7 @@ lucide/dist/esm/icons/mouse-pointer-2-off.mjs:
 
 lucide/dist/esm/icons/mouse-pointer-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31878,15 +32080,7 @@ lucide/dist/esm/icons/mouse-pointer-2.mjs:
 
 lucide/dist/esm/icons/mouse-pointer-ban.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/mouse-pointer.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31894,7 +32088,15 @@ lucide/dist/esm/icons/mouse-pointer.mjs:
 
 lucide/dist/esm/icons/mouse-pointer-click.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/mouse-pointer.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31902,7 +32104,7 @@ lucide/dist/esm/icons/mouse-pointer-click.mjs:
 
 lucide/dist/esm/icons/mouse-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31910,7 +32112,7 @@ lucide/dist/esm/icons/mouse-right.mjs:
 
 lucide/dist/esm/icons/mouse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31918,15 +32120,7 @@ lucide/dist/esm/icons/mouse.mjs:
 
 lucide/dist/esm/icons/move-3d.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/move-diagonal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31934,7 +32128,15 @@ lucide/dist/esm/icons/move-diagonal.mjs:
 
 lucide/dist/esm/icons/move-diagonal-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/move-diagonal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31942,7 +32144,7 @@ lucide/dist/esm/icons/move-diagonal-2.mjs:
 
 lucide/dist/esm/icons/move-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31950,15 +32152,7 @@ lucide/dist/esm/icons/move-down-left.mjs:
 
 lucide/dist/esm/icons/move-down-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/move-horizontal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31966,7 +32160,15 @@ lucide/dist/esm/icons/move-horizontal.mjs:
 
 lucide/dist/esm/icons/move-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/move-horizontal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31974,7 +32176,7 @@ lucide/dist/esm/icons/move-down.mjs:
 
 lucide/dist/esm/icons/move-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31982,15 +32184,7 @@ lucide/dist/esm/icons/move-left.mjs:
 
 lucide/dist/esm/icons/move-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/move-up-right.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -31998,7 +32192,15 @@ lucide/dist/esm/icons/move-up-right.mjs:
 
 lucide/dist/esm/icons/move-up-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/move-up-right.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32006,7 +32208,7 @@ lucide/dist/esm/icons/move-up-left.mjs:
 
 lucide/dist/esm/icons/move-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32014,7 +32216,7 @@ lucide/dist/esm/icons/move-up.mjs:
 
 lucide/dist/esm/icons/move-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32022,7 +32224,7 @@ lucide/dist/esm/icons/move-vertical.mjs:
 
 lucide/dist/esm/icons/move.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32030,15 +32232,7 @@ lucide/dist/esm/icons/move.mjs:
 
 lucide/dist/esm/icons/music-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/music-3.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32046,7 +32240,15 @@ lucide/dist/esm/icons/music-3.mjs:
 
 lucide/dist/esm/icons/music-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/music-3.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32054,7 +32256,7 @@ lucide/dist/esm/icons/music-4.mjs:
 
 lucide/dist/esm/icons/music.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32062,7 +32264,7 @@ lucide/dist/esm/icons/music.mjs:
 
 lucide/dist/esm/icons/navigation-2-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32070,7 +32272,7 @@ lucide/dist/esm/icons/navigation-2-off.mjs:
 
 lucide/dist/esm/icons/navigation-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32078,15 +32280,7 @@ lucide/dist/esm/icons/navigation-2.mjs:
 
 lucide/dist/esm/icons/navigation-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/network.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32094,15 +32288,15 @@ lucide/dist/esm/icons/network.mjs:
 
 lucide/dist/esm/icons/navigation.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/newspaper.mjs:
+lucide/dist/esm/icons/network.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32110,7 +32304,7 @@ lucide/dist/esm/icons/newspaper.mjs:
 
 lucide/dist/esm/icons/nfc.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32118,7 +32312,15 @@ lucide/dist/esm/icons/nfc.mjs:
 
 lucide/dist/esm/icons/non-binary.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/newspaper.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32126,7 +32328,7 @@ lucide/dist/esm/icons/non-binary.mjs:
 
 lucide/dist/esm/icons/notebook-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32134,7 +32336,7 @@ lucide/dist/esm/icons/notebook-pen.mjs:
 
 lucide/dist/esm/icons/notebook-tabs.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32142,7 +32344,7 @@ lucide/dist/esm/icons/notebook-tabs.mjs:
 
 lucide/dist/esm/icons/notebook-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32150,15 +32352,7 @@ lucide/dist/esm/icons/notebook-text.mjs:
 
 lucide/dist/esm/icons/notebook.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/notepad-text-dashed.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32166,7 +32360,15 @@ lucide/dist/esm/icons/notepad-text-dashed.mjs:
 
 lucide/dist/esm/icons/notepad-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/notepad-text-dashed.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32174,15 +32376,7 @@ lucide/dist/esm/icons/notepad-text.mjs:
 
 lucide/dist/esm/icons/nut-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/octagon-alert.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32190,7 +32384,15 @@ lucide/dist/esm/icons/octagon-alert.mjs:
 
 lucide/dist/esm/icons/nut.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/octagon-alert.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32198,7 +32400,7 @@ lucide/dist/esm/icons/nut.mjs:
 
 lucide/dist/esm/icons/octagon-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32206,7 +32408,7 @@ lucide/dist/esm/icons/octagon-minus.mjs:
 
 lucide/dist/esm/icons/octagon-pause.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32214,15 +32416,7 @@ lucide/dist/esm/icons/octagon-pause.mjs:
 
 lucide/dist/esm/icons/octagon-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/omega.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32230,7 +32424,15 @@ lucide/dist/esm/icons/omega.mjs:
 
 lucide/dist/esm/icons/octagon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/omega.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32238,15 +32440,7 @@ lucide/dist/esm/icons/octagon.mjs:
 
 lucide/dist/esm/icons/option.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/origami.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32254,15 +32448,15 @@ lucide/dist/esm/icons/origami.mjs:
 
 lucide/dist/esm/icons/orbit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/package-2.mjs:
+lucide/dist/esm/icons/origami.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32270,7 +32464,15 @@ lucide/dist/esm/icons/package-2.mjs:
 
 lucide/dist/esm/icons/package-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/package-2.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32278,7 +32480,7 @@ lucide/dist/esm/icons/package-check.mjs:
 
 lucide/dist/esm/icons/package-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32286,7 +32488,7 @@ lucide/dist/esm/icons/package-minus.mjs:
 
 lucide/dist/esm/icons/package-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32294,7 +32496,7 @@ lucide/dist/esm/icons/package-open.mjs:
 
 lucide/dist/esm/icons/package-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32302,7 +32504,7 @@ lucide/dist/esm/icons/package-plus.mjs:
 
 lucide/dist/esm/icons/package-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32310,7 +32512,7 @@ lucide/dist/esm/icons/package-search.mjs:
 
 lucide/dist/esm/icons/package-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32318,7 +32520,7 @@ lucide/dist/esm/icons/package-x.mjs:
 
 lucide/dist/esm/icons/package.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32326,7 +32528,7 @@ lucide/dist/esm/icons/package.mjs:
 
 lucide/dist/esm/icons/paint-bucket.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32334,7 +32536,7 @@ lucide/dist/esm/icons/paint-bucket.mjs:
 
 lucide/dist/esm/icons/paint-roller.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32342,7 +32544,7 @@ lucide/dist/esm/icons/paint-roller.mjs:
 
 lucide/dist/esm/icons/paintbrush-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32350,7 +32552,7 @@ lucide/dist/esm/icons/paintbrush-vertical.mjs:
 
 lucide/dist/esm/icons/paintbrush.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32358,7 +32560,7 @@ lucide/dist/esm/icons/paintbrush.mjs:
 
 lucide/dist/esm/icons/palette.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32366,15 +32568,7 @@ lucide/dist/esm/icons/palette.mjs:
 
 lucide/dist/esm/icons/panda.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/panel-bottom-dashed.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32382,7 +32576,15 @@ lucide/dist/esm/icons/panel-bottom-dashed.mjs:
 
 lucide/dist/esm/icons/panel-bottom-close.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/panel-bottom-dashed.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32390,7 +32592,7 @@ lucide/dist/esm/icons/panel-bottom-close.mjs:
 
 lucide/dist/esm/icons/panel-bottom-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32398,7 +32600,7 @@ lucide/dist/esm/icons/panel-bottom-open.mjs:
 
 lucide/dist/esm/icons/panel-bottom.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32406,7 +32608,7 @@ lucide/dist/esm/icons/panel-bottom.mjs:
 
 lucide/dist/esm/icons/panel-left-close.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32414,7 +32616,7 @@ lucide/dist/esm/icons/panel-left-close.mjs:
 
 lucide/dist/esm/icons/panel-left-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32422,7 +32624,7 @@ lucide/dist/esm/icons/panel-left-dashed.mjs:
 
 lucide/dist/esm/icons/panel-left-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32430,7 +32632,7 @@ lucide/dist/esm/icons/panel-left-open.mjs:
 
 lucide/dist/esm/icons/panel-left-right-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32438,15 +32640,7 @@ lucide/dist/esm/icons/panel-left-right-dashed.mjs:
 
 lucide/dist/esm/icons/panel-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/panel-right-close.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32454,7 +32648,15 @@ lucide/dist/esm/icons/panel-right-close.mjs:
 
 lucide/dist/esm/icons/panel-right-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/panel-right-close.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32462,7 +32664,7 @@ lucide/dist/esm/icons/panel-right-dashed.mjs:
 
 lucide/dist/esm/icons/panel-right-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32470,15 +32672,7 @@ lucide/dist/esm/icons/panel-right-open.mjs:
 
 lucide/dist/esm/icons/panel-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/panel-top-bottom-dashed.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32486,7 +32680,7 @@ lucide/dist/esm/icons/panel-top-bottom-dashed.mjs:
 
 lucide/dist/esm/icons/panel-top-close.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32494,7 +32688,15 @@ lucide/dist/esm/icons/panel-top-close.mjs:
 
 lucide/dist/esm/icons/panel-top-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/panel-top-bottom-dashed.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32502,7 +32704,7 @@ lucide/dist/esm/icons/panel-top-dashed.mjs:
 
 lucide/dist/esm/icons/panel-top-open.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32510,7 +32712,7 @@ lucide/dist/esm/icons/panel-top-open.mjs:
 
 lucide/dist/esm/icons/panel-top.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32518,7 +32720,7 @@ lucide/dist/esm/icons/panel-top.mjs:
 
 lucide/dist/esm/icons/panels-left-bottom.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32526,7 +32728,7 @@ lucide/dist/esm/icons/panels-left-bottom.mjs:
 
 lucide/dist/esm/icons/panels-right-bottom.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32534,7 +32736,7 @@ lucide/dist/esm/icons/panels-right-bottom.mjs:
 
 lucide/dist/esm/icons/panels-top-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32542,15 +32744,7 @@ lucide/dist/esm/icons/panels-top-left.mjs:
 
 lucide/dist/esm/icons/paper-bag.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/parasol.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32558,7 +32752,15 @@ lucide/dist/esm/icons/parasol.mjs:
 
 lucide/dist/esm/icons/paperclip.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/parasol.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32566,7 +32768,7 @@ lucide/dist/esm/icons/paperclip.mjs:
 
 lucide/dist/esm/icons/parentheses.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32574,23 +32776,7 @@ lucide/dist/esm/icons/parentheses.mjs:
 
 lucide/dist/esm/icons/parking-meter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/party-popper.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/paw-print.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32598,7 +32784,23 @@ lucide/dist/esm/icons/paw-print.mjs:
 
 lucide/dist/esm/icons/pause.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/party-popper.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/paw-print.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32606,7 +32808,7 @@ lucide/dist/esm/icons/pause.mjs:
 
 lucide/dist/esm/icons/pc-case.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32614,7 +32816,7 @@ lucide/dist/esm/icons/pc-case.mjs:
 
 lucide/dist/esm/icons/pen-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32622,7 +32824,7 @@ lucide/dist/esm/icons/pen-line.mjs:
 
 lucide/dist/esm/icons/pen-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32630,7 +32832,7 @@ lucide/dist/esm/icons/pen-off.mjs:
 
 lucide/dist/esm/icons/pen-tool.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32638,7 +32840,7 @@ lucide/dist/esm/icons/pen-tool.mjs:
 
 lucide/dist/esm/icons/pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32646,7 +32848,7 @@ lucide/dist/esm/icons/pen.mjs:
 
 lucide/dist/esm/icons/pencil-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32654,15 +32856,7 @@ lucide/dist/esm/icons/pencil-line.mjs:
 
 lucide/dist/esm/icons/pencil-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/pencil-sparkles.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32670,7 +32864,15 @@ lucide/dist/esm/icons/pencil-sparkles.mjs:
 
 lucide/dist/esm/icons/pencil-ruler.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/pencil-sparkles.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32678,7 +32880,7 @@ lucide/dist/esm/icons/pencil-ruler.mjs:
 
 lucide/dist/esm/icons/pencil.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32686,15 +32888,7 @@ lucide/dist/esm/icons/pencil.mjs:
 
 lucide/dist/esm/icons/pentagon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/person-standing.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32702,7 +32896,7 @@ lucide/dist/esm/icons/person-standing.mjs:
 
 lucide/dist/esm/icons/percent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32710,7 +32904,15 @@ lucide/dist/esm/icons/percent.mjs:
 
 lucide/dist/esm/icons/phi.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/person-standing.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32718,7 +32920,7 @@ lucide/dist/esm/icons/phi.mjs:
 
 lucide/dist/esm/icons/philippine-peso.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32726,7 +32928,7 @@ lucide/dist/esm/icons/philippine-peso.mjs:
 
 lucide/dist/esm/icons/phone-call.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32734,7 +32936,7 @@ lucide/dist/esm/icons/phone-call.mjs:
 
 lucide/dist/esm/icons/phone-forwarded.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32742,7 +32944,7 @@ lucide/dist/esm/icons/phone-forwarded.mjs:
 
 lucide/dist/esm/icons/phone-incoming.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32750,7 +32952,7 @@ lucide/dist/esm/icons/phone-incoming.mjs:
 
 lucide/dist/esm/icons/phone-missed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32758,7 +32960,7 @@ lucide/dist/esm/icons/phone-missed.mjs:
 
 lucide/dist/esm/icons/phone-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32766,7 +32968,7 @@ lucide/dist/esm/icons/phone-off.mjs:
 
 lucide/dist/esm/icons/phone-outgoing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32774,7 +32976,7 @@ lucide/dist/esm/icons/phone-outgoing.mjs:
 
 lucide/dist/esm/icons/phone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32782,7 +32984,7 @@ lucide/dist/esm/icons/phone.mjs:
 
 lucide/dist/esm/icons/pi.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32790,7 +32992,7 @@ lucide/dist/esm/icons/pi.mjs:
 
 lucide/dist/esm/icons/piano.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32798,7 +33000,7 @@ lucide/dist/esm/icons/piano.mjs:
 
 lucide/dist/esm/icons/pickaxe.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32806,7 +33008,7 @@ lucide/dist/esm/icons/pickaxe.mjs:
 
 lucide/dist/esm/icons/picture-in-picture-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32814,7 +33016,7 @@ lucide/dist/esm/icons/picture-in-picture-2.mjs:
 
 lucide/dist/esm/icons/picture-in-picture.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32822,7 +33024,7 @@ lucide/dist/esm/icons/picture-in-picture.mjs:
 
 lucide/dist/esm/icons/piggy-bank.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32830,7 +33032,7 @@ lucide/dist/esm/icons/piggy-bank.mjs:
 
 lucide/dist/esm/icons/pilcrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32838,7 +33040,7 @@ lucide/dist/esm/icons/pilcrow-left.mjs:
 
 lucide/dist/esm/icons/pilcrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32846,7 +33048,7 @@ lucide/dist/esm/icons/pilcrow-right.mjs:
 
 lucide/dist/esm/icons/pilcrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32854,15 +33056,7 @@ lucide/dist/esm/icons/pilcrow.mjs:
 
 lucide/dist/esm/icons/pill-bottle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/pin-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32870,7 +33064,7 @@ lucide/dist/esm/icons/pin-off.mjs:
 
 lucide/dist/esm/icons/pill.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32878,7 +33072,15 @@ lucide/dist/esm/icons/pill.mjs:
 
 lucide/dist/esm/icons/pin.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/pin-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32886,7 +33088,7 @@ lucide/dist/esm/icons/pin.mjs:
 
 lucide/dist/esm/icons/pipette.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32894,7 +33096,7 @@ lucide/dist/esm/icons/pipette.mjs:
 
 lucide/dist/esm/icons/pizza.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32902,7 +33104,7 @@ lucide/dist/esm/icons/pizza.mjs:
 
 lucide/dist/esm/icons/plane-landing.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32910,7 +33112,7 @@ lucide/dist/esm/icons/plane-landing.mjs:
 
 lucide/dist/esm/icons/plane-takeoff.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32918,7 +33120,7 @@ lucide/dist/esm/icons/plane-takeoff.mjs:
 
 lucide/dist/esm/icons/plane.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32926,7 +33128,7 @@ lucide/dist/esm/icons/plane.mjs:
 
 lucide/dist/esm/icons/play-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32934,7 +33136,7 @@ lucide/dist/esm/icons/play-off.mjs:
 
 lucide/dist/esm/icons/play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32942,7 +33144,7 @@ lucide/dist/esm/icons/play.mjs:
 
 lucide/dist/esm/icons/plug-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32950,7 +33152,7 @@ lucide/dist/esm/icons/plug-2.mjs:
 
 lucide/dist/esm/icons/plug-zap.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32958,7 +33160,7 @@ lucide/dist/esm/icons/plug-zap.mjs:
 
 lucide/dist/esm/icons/plug.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32966,7 +33168,7 @@ lucide/dist/esm/icons/plug.mjs:
 
 lucide/dist/esm/icons/plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32974,23 +33176,7 @@ lucide/dist/esm/icons/plus.mjs:
 
 lucide/dist/esm/icons/pocket-knife.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/podium.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/pointer-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -32998,7 +33184,23 @@ lucide/dist/esm/icons/pointer-off.mjs:
 
 lucide/dist/esm/icons/pointer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/podium.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/pointer-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33006,15 +33208,7 @@ lucide/dist/esm/icons/pointer.mjs:
 
 lucide/dist/esm/icons/popcorn.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/pound-sterling.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33022,7 +33216,7 @@ lucide/dist/esm/icons/pound-sterling.mjs:
 
 lucide/dist/esm/icons/popsicle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33030,7 +33224,7 @@ lucide/dist/esm/icons/popsicle.mjs:
 
 lucide/dist/esm/icons/power-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33038,7 +33232,15 @@ lucide/dist/esm/icons/power-off.mjs:
 
 lucide/dist/esm/icons/power.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/pound-sterling.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33046,7 +33248,7 @@ lucide/dist/esm/icons/power.mjs:
 
 lucide/dist/esm/icons/presentation.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33054,7 +33256,7 @@ lucide/dist/esm/icons/presentation.mjs:
 
 lucide/dist/esm/icons/printer-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33062,7 +33264,7 @@ lucide/dist/esm/icons/printer-check.mjs:
 
 lucide/dist/esm/icons/printer-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33070,7 +33272,7 @@ lucide/dist/esm/icons/printer-x.mjs:
 
 lucide/dist/esm/icons/printer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33078,7 +33280,7 @@ lucide/dist/esm/icons/printer.mjs:
 
 lucide/dist/esm/icons/projector.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33086,7 +33288,7 @@ lucide/dist/esm/icons/projector.mjs:
 
 lucide/dist/esm/icons/proportions.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33094,15 +33296,7 @@ lucide/dist/esm/icons/proportions.mjs:
 
 lucide/dist/esm/icons/puzzle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/pyramid.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33110,7 +33304,15 @@ lucide/dist/esm/icons/pyramid.mjs:
 
 lucide/dist/esm/icons/qr-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/pyramid.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33118,7 +33320,7 @@ lucide/dist/esm/icons/qr-code.mjs:
 
 lucide/dist/esm/icons/quote.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33126,7 +33328,7 @@ lucide/dist/esm/icons/quote.mjs:
 
 lucide/dist/esm/icons/rabbit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33134,7 +33336,7 @@ lucide/dist/esm/icons/rabbit.mjs:
 
 lucide/dist/esm/icons/radar.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33142,7 +33344,7 @@ lucide/dist/esm/icons/radar.mjs:
 
 lucide/dist/esm/icons/radiation.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33150,7 +33352,7 @@ lucide/dist/esm/icons/radiation.mjs:
 
 lucide/dist/esm/icons/radical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33158,15 +33360,7 @@ lucide/dist/esm/icons/radical.mjs:
 
 lucide/dist/esm/icons/radio-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/radio-tower.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33174,7 +33368,15 @@ lucide/dist/esm/icons/radio-tower.mjs:
 
 lucide/dist/esm/icons/radio-receiver.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/radio-tower.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33182,15 +33384,7 @@ lucide/dist/esm/icons/radio-receiver.mjs:
 
 lucide/dist/esm/icons/radio.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/rainbow.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33198,7 +33392,15 @@ lucide/dist/esm/icons/rainbow.mjs:
 
 lucide/dist/esm/icons/radius.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/rainbow.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33206,7 +33408,7 @@ lucide/dist/esm/icons/radius.mjs:
 
 lucide/dist/esm/icons/rat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33214,7 +33416,7 @@ lucide/dist/esm/icons/rat.mjs:
 
 lucide/dist/esm/icons/ratio.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33222,7 +33424,7 @@ lucide/dist/esm/icons/ratio.mjs:
 
 lucide/dist/esm/icons/receipt-cent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33230,7 +33432,7 @@ lucide/dist/esm/icons/receipt-cent.mjs:
 
 lucide/dist/esm/icons/receipt-euro.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33238,7 +33440,7 @@ lucide/dist/esm/icons/receipt-euro.mjs:
 
 lucide/dist/esm/icons/receipt-indian-rupee.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33246,7 +33448,7 @@ lucide/dist/esm/icons/receipt-indian-rupee.mjs:
 
 lucide/dist/esm/icons/receipt-japanese-yen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33254,7 +33456,7 @@ lucide/dist/esm/icons/receipt-japanese-yen.mjs:
 
 lucide/dist/esm/icons/receipt-pound-sterling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33262,7 +33464,7 @@ lucide/dist/esm/icons/receipt-pound-sterling.mjs:
 
 lucide/dist/esm/icons/receipt-russian-ruble.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33270,7 +33472,7 @@ lucide/dist/esm/icons/receipt-russian-ruble.mjs:
 
 lucide/dist/esm/icons/receipt-swiss-franc.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33278,7 +33480,7 @@ lucide/dist/esm/icons/receipt-swiss-franc.mjs:
 
 lucide/dist/esm/icons/receipt-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33286,7 +33488,7 @@ lucide/dist/esm/icons/receipt-text.mjs:
 
 lucide/dist/esm/icons/receipt-turkish-lira.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33294,7 +33496,7 @@ lucide/dist/esm/icons/receipt-turkish-lira.mjs:
 
 lucide/dist/esm/icons/receipt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33302,7 +33504,7 @@ lucide/dist/esm/icons/receipt.mjs:
 
 lucide/dist/esm/icons/rectangle-circle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33310,15 +33512,7 @@ lucide/dist/esm/icons/rectangle-circle.mjs:
 
 lucide/dist/esm/icons/rectangle-ellipsis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/rectangle-goggles.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33326,7 +33520,15 @@ lucide/dist/esm/icons/rectangle-goggles.mjs:
 
 lucide/dist/esm/icons/rectangle-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/rectangle-goggles.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33334,7 +33536,7 @@ lucide/dist/esm/icons/rectangle-horizontal.mjs:
 
 lucide/dist/esm/icons/rectangle-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33342,7 +33544,7 @@ lucide/dist/esm/icons/rectangle-vertical.mjs:
 
 lucide/dist/esm/icons/recycle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33350,15 +33552,7 @@ lucide/dist/esm/icons/recycle.mjs:
 
 lucide/dist/esm/icons/redo-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/redo-dot.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33366,7 +33560,15 @@ lucide/dist/esm/icons/redo-dot.mjs:
 
 lucide/dist/esm/icons/redo.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/redo-dot.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33374,7 +33576,7 @@ lucide/dist/esm/icons/redo.mjs:
 
 lucide/dist/esm/icons/refresh-ccw-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33382,7 +33584,7 @@ lucide/dist/esm/icons/refresh-ccw-dot.mjs:
 
 lucide/dist/esm/icons/refresh-ccw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33390,7 +33592,7 @@ lucide/dist/esm/icons/refresh-ccw.mjs:
 
 lucide/dist/esm/icons/refresh-cw-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33398,7 +33600,7 @@ lucide/dist/esm/icons/refresh-cw-off.mjs:
 
 lucide/dist/esm/icons/refresh-cw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33406,7 +33608,7 @@ lucide/dist/esm/icons/refresh-cw.mjs:
 
 lucide/dist/esm/icons/refrigerator.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33414,7 +33616,7 @@ lucide/dist/esm/icons/refrigerator.mjs:
 
 lucide/dist/esm/icons/regex.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33422,7 +33624,7 @@ lucide/dist/esm/icons/regex.mjs:
 
 lucide/dist/esm/icons/remove-formatting.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33430,15 +33632,7 @@ lucide/dist/esm/icons/remove-formatting.mjs:
 
 lucide/dist/esm/icons/repeat-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/repeat-2.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33446,7 +33640,15 @@ lucide/dist/esm/icons/repeat-2.mjs:
 
 lucide/dist/esm/icons/repeat-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/repeat-2.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33454,7 +33656,7 @@ lucide/dist/esm/icons/repeat-off.mjs:
 
 lucide/dist/esm/icons/repeat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33462,7 +33664,7 @@ lucide/dist/esm/icons/repeat.mjs:
 
 lucide/dist/esm/icons/replace-all.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33470,7 +33672,7 @@ lucide/dist/esm/icons/replace-all.mjs:
 
 lucide/dist/esm/icons/replace.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33478,7 +33680,7 @@ lucide/dist/esm/icons/replace.mjs:
 
 lucide/dist/esm/icons/reply-all.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33486,7 +33688,7 @@ lucide/dist/esm/icons/reply-all.mjs:
 
 lucide/dist/esm/icons/reply.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33494,7 +33696,7 @@ lucide/dist/esm/icons/reply.mjs:
 
 lucide/dist/esm/icons/rewind.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33502,7 +33704,7 @@ lucide/dist/esm/icons/rewind.mjs:
 
 lucide/dist/esm/icons/ribbon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33510,7 +33712,7 @@ lucide/dist/esm/icons/ribbon.mjs:
 
 lucide/dist/esm/icons/road.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33518,15 +33720,7 @@ lucide/dist/esm/icons/road.mjs:
 
 lucide/dist/esm/icons/rocket.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/rocking-chair.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33534,7 +33728,15 @@ lucide/dist/esm/icons/rocking-chair.mjs:
 
 lucide/dist/esm/icons/roller-coaster.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/rocking-chair.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33542,7 +33744,7 @@ lucide/dist/esm/icons/roller-coaster.mjs:
 
 lucide/dist/esm/icons/rose.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33550,7 +33752,7 @@ lucide/dist/esm/icons/rose.mjs:
 
 lucide/dist/esm/icons/rotate-3d.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33558,15 +33760,7 @@ lucide/dist/esm/icons/rotate-3d.mjs:
 
 lucide/dist/esm/icons/rotate-ccw-clock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/rotate-ccw-square.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33574,7 +33768,15 @@ lucide/dist/esm/icons/rotate-ccw-square.mjs:
 
 lucide/dist/esm/icons/rotate-ccw-key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/rotate-ccw-square.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33582,7 +33784,7 @@ lucide/dist/esm/icons/rotate-ccw-key.mjs:
 
 lucide/dist/esm/icons/rotate-ccw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33590,7 +33792,7 @@ lucide/dist/esm/icons/rotate-ccw.mjs:
 
 lucide/dist/esm/icons/rotate-cw-fading-clock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33598,7 +33800,7 @@ lucide/dist/esm/icons/rotate-cw-fading-clock.mjs:
 
 lucide/dist/esm/icons/rotate-cw-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33606,7 +33808,7 @@ lucide/dist/esm/icons/rotate-cw-square.mjs:
 
 lucide/dist/esm/icons/rotate-cw.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33614,7 +33816,7 @@ lucide/dist/esm/icons/rotate-cw.mjs:
 
 lucide/dist/esm/icons/route-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33622,7 +33824,7 @@ lucide/dist/esm/icons/route-off.mjs:
 
 lucide/dist/esm/icons/route.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33630,7 +33832,7 @@ lucide/dist/esm/icons/route.mjs:
 
 lucide/dist/esm/icons/router.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33638,7 +33840,7 @@ lucide/dist/esm/icons/router.mjs:
 
 lucide/dist/esm/icons/rows-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33646,7 +33848,7 @@ lucide/dist/esm/icons/rows-2.mjs:
 
 lucide/dist/esm/icons/rows-3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33654,15 +33856,7 @@ lucide/dist/esm/icons/rows-3.mjs:
 
 lucide/dist/esm/icons/rows-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/rss.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33670,7 +33864,15 @@ lucide/dist/esm/icons/rss.mjs:
 
 lucide/dist/esm/icons/ruler-dimension-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/rss.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33678,7 +33880,7 @@ lucide/dist/esm/icons/ruler-dimension-line.mjs:
 
 lucide/dist/esm/icons/ruler.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33686,7 +33888,7 @@ lucide/dist/esm/icons/ruler.mjs:
 
 lucide/dist/esm/icons/russian-ruble.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33694,7 +33896,7 @@ lucide/dist/esm/icons/russian-ruble.mjs:
 
 lucide/dist/esm/icons/sailboat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33702,7 +33904,7 @@ lucide/dist/esm/icons/sailboat.mjs:
 
 lucide/dist/esm/icons/salad.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33710,7 +33912,7 @@ lucide/dist/esm/icons/salad.mjs:
 
 lucide/dist/esm/icons/sandwich.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33718,7 +33920,7 @@ lucide/dist/esm/icons/sandwich.mjs:
 
 lucide/dist/esm/icons/satellite-dish.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33726,7 +33928,7 @@ lucide/dist/esm/icons/satellite-dish.mjs:
 
 lucide/dist/esm/icons/satellite.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33734,7 +33936,7 @@ lucide/dist/esm/icons/satellite.mjs:
 
 lucide/dist/esm/icons/saudi-riyal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33742,7 +33944,7 @@ lucide/dist/esm/icons/saudi-riyal.mjs:
 
 lucide/dist/esm/icons/save-all.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33750,7 +33952,7 @@ lucide/dist/esm/icons/save-all.mjs:
 
 lucide/dist/esm/icons/save-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33758,7 +33960,7 @@ lucide/dist/esm/icons/save-check.mjs:
 
 lucide/dist/esm/icons/save-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33766,7 +33968,7 @@ lucide/dist/esm/icons/save-off.mjs:
 
 lucide/dist/esm/icons/save-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33774,7 +33976,7 @@ lucide/dist/esm/icons/save-pen.mjs:
 
 lucide/dist/esm/icons/save-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33782,7 +33984,7 @@ lucide/dist/esm/icons/save-plus.mjs:
 
 lucide/dist/esm/icons/save.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33790,7 +33992,7 @@ lucide/dist/esm/icons/save.mjs:
 
 lucide/dist/esm/icons/scale-3d.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33798,7 +34000,7 @@ lucide/dist/esm/icons/scale-3d.mjs:
 
 lucide/dist/esm/icons/scale.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33806,7 +34008,7 @@ lucide/dist/esm/icons/scale.mjs:
 
 lucide/dist/esm/icons/scaling.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33814,7 +34016,7 @@ lucide/dist/esm/icons/scaling.mjs:
 
 lucide/dist/esm/icons/scan-barcode.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33822,7 +34024,7 @@ lucide/dist/esm/icons/scan-barcode.mjs:
 
 lucide/dist/esm/icons/scan-box.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33830,7 +34032,7 @@ lucide/dist/esm/icons/scan-box.mjs:
 
 lucide/dist/esm/icons/scan-eye.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33838,7 +34040,7 @@ lucide/dist/esm/icons/scan-eye.mjs:
 
 lucide/dist/esm/icons/scan-face.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33846,15 +34048,7 @@ lucide/dist/esm/icons/scan-face.mjs:
 
 lucide/dist/esm/icons/scan-heart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/scan-qr-code.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33862,7 +34056,15 @@ lucide/dist/esm/icons/scan-qr-code.mjs:
 
 lucide/dist/esm/icons/scan-line.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/scan-qr-code.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33870,7 +34072,7 @@ lucide/dist/esm/icons/scan-line.mjs:
 
 lucide/dist/esm/icons/scan-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33878,7 +34080,7 @@ lucide/dist/esm/icons/scan-search.mjs:
 
 lucide/dist/esm/icons/scan-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33886,15 +34088,7 @@ lucide/dist/esm/icons/scan-square.mjs:
 
 lucide/dist/esm/icons/scan-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/scan.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33902,7 +34096,7 @@ lucide/dist/esm/icons/scan.mjs:
 
 lucide/dist/esm/icons/school.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33910,15 +34104,15 @@ lucide/dist/esm/icons/school.mjs:
 
 lucide/dist/esm/icons/scissors-line-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/scissors.mjs:
+lucide/dist/esm/icons/scan.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33926,7 +34120,15 @@ lucide/dist/esm/icons/scissors.mjs:
 
 lucide/dist/esm/icons/scooter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/scissors.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33934,7 +34136,7 @@ lucide/dist/esm/icons/scooter.mjs:
 
 lucide/dist/esm/icons/screen-share-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33942,7 +34144,7 @@ lucide/dist/esm/icons/screen-share-off.mjs:
 
 lucide/dist/esm/icons/screen-share.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33950,7 +34152,7 @@ lucide/dist/esm/icons/screen-share.mjs:
 
 lucide/dist/esm/icons/scroll-text.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33958,7 +34160,7 @@ lucide/dist/esm/icons/scroll-text.mjs:
 
 lucide/dist/esm/icons/scroll.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33966,7 +34168,7 @@ lucide/dist/esm/icons/scroll.mjs:
 
 lucide/dist/esm/icons/search-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33974,7 +34176,7 @@ lucide/dist/esm/icons/search-alert.mjs:
 
 lucide/dist/esm/icons/search-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33982,7 +34184,7 @@ lucide/dist/esm/icons/search-check.mjs:
 
 lucide/dist/esm/icons/search-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33990,7 +34192,7 @@ lucide/dist/esm/icons/search-code.mjs:
 
 lucide/dist/esm/icons/search-slash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -33998,15 +34200,7 @@ lucide/dist/esm/icons/search-slash.mjs:
 
 lucide/dist/esm/icons/search-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/search.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34014,7 +34208,15 @@ lucide/dist/esm/icons/search.mjs:
 
 lucide/dist/esm/icons/section.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/search.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34022,7 +34224,7 @@ lucide/dist/esm/icons/section.mjs:
 
 lucide/dist/esm/icons/send-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34030,7 +34232,7 @@ lucide/dist/esm/icons/send-horizontal.mjs:
 
 lucide/dist/esm/icons/send-to-back.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34038,7 +34240,7 @@ lucide/dist/esm/icons/send-to-back.mjs:
 
 lucide/dist/esm/icons/send.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34046,15 +34248,7 @@ lucide/dist/esm/icons/send.mjs:
 
 lucide/dist/esm/icons/separator-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/separator-vertical.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34062,7 +34256,15 @@ lucide/dist/esm/icons/separator-vertical.mjs:
 
 lucide/dist/esm/icons/server-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/separator-vertical.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34070,7 +34272,7 @@ lucide/dist/esm/icons/server-cog.mjs:
 
 lucide/dist/esm/icons/server-crash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34078,7 +34280,7 @@ lucide/dist/esm/icons/server-crash.mjs:
 
 lucide/dist/esm/icons/server-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34086,7 +34288,7 @@ lucide/dist/esm/icons/server-off.mjs:
 
 lucide/dist/esm/icons/server-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34094,7 +34296,7 @@ lucide/dist/esm/icons/server-plus.mjs:
 
 lucide/dist/esm/icons/server.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34102,7 +34304,7 @@ lucide/dist/esm/icons/server.mjs:
 
 lucide/dist/esm/icons/settings-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34110,15 +34312,7 @@ lucide/dist/esm/icons/settings-2.mjs:
 
 lucide/dist/esm/icons/settings.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/shapes.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34126,7 +34320,15 @@ lucide/dist/esm/icons/shapes.mjs:
 
 lucide/dist/esm/icons/share-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/shapes.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34134,7 +34336,7 @@ lucide/dist/esm/icons/share-2.mjs:
 
 lucide/dist/esm/icons/share.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34142,7 +34344,7 @@ lucide/dist/esm/icons/share.mjs:
 
 lucide/dist/esm/icons/sheet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34150,7 +34352,7 @@ lucide/dist/esm/icons/sheet.mjs:
 
 lucide/dist/esm/icons/shell.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34158,15 +34360,7 @@ lucide/dist/esm/icons/shell.mjs:
 
 lucide/dist/esm/icons/shelving-unit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/shield-alert.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34174,7 +34368,15 @@ lucide/dist/esm/icons/shield-alert.mjs:
 
 lucide/dist/esm/icons/shield-ban.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/shield-alert.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34182,7 +34384,7 @@ lucide/dist/esm/icons/shield-ban.mjs:
 
 lucide/dist/esm/icons/shield-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34190,7 +34392,7 @@ lucide/dist/esm/icons/shield-check.mjs:
 
 lucide/dist/esm/icons/shield-cog-corner.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34198,7 +34400,7 @@ lucide/dist/esm/icons/shield-cog-corner.mjs:
 
 lucide/dist/esm/icons/shield-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34206,7 +34408,7 @@ lucide/dist/esm/icons/shield-cog.mjs:
 
 lucide/dist/esm/icons/shield-ellipsis.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34214,7 +34416,7 @@ lucide/dist/esm/icons/shield-ellipsis.mjs:
 
 lucide/dist/esm/icons/shield-half.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34222,7 +34424,7 @@ lucide/dist/esm/icons/shield-half.mjs:
 
 lucide/dist/esm/icons/shield-keyhole.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34230,7 +34432,7 @@ lucide/dist/esm/icons/shield-keyhole.mjs:
 
 lucide/dist/esm/icons/shield-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34238,15 +34440,7 @@ lucide/dist/esm/icons/shield-lock.mjs:
 
 lucide/dist/esm/icons/shield-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/shield-plus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34254,7 +34448,15 @@ lucide/dist/esm/icons/shield-plus.mjs:
 
 lucide/dist/esm/icons/shield-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/shield-plus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34262,7 +34464,7 @@ lucide/dist/esm/icons/shield-off.mjs:
 
 lucide/dist/esm/icons/shield-question-mark.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34270,7 +34472,7 @@ lucide/dist/esm/icons/shield-question-mark.mjs:
 
 lucide/dist/esm/icons/shield-user.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34278,7 +34480,7 @@ lucide/dist/esm/icons/shield-user.mjs:
 
 lucide/dist/esm/icons/shield-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34286,15 +34488,7 @@ lucide/dist/esm/icons/shield-x.mjs:
 
 lucide/dist/esm/icons/shield.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ship.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34302,7 +34496,15 @@ lucide/dist/esm/icons/ship.mjs:
 
 lucide/dist/esm/icons/ship-wheel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ship.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34310,7 +34512,7 @@ lucide/dist/esm/icons/ship-wheel.mjs:
 
 lucide/dist/esm/icons/shirt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34318,7 +34520,7 @@ lucide/dist/esm/icons/shirt.mjs:
 
 lucide/dist/esm/icons/shopping-bag.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34326,7 +34528,7 @@ lucide/dist/esm/icons/shopping-bag.mjs:
 
 lucide/dist/esm/icons/shopping-basket.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34334,7 +34536,7 @@ lucide/dist/esm/icons/shopping-basket.mjs:
 
 lucide/dist/esm/icons/shopping-cart.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34342,7 +34544,7 @@ lucide/dist/esm/icons/shopping-cart.mjs:
 
 lucide/dist/esm/icons/shovel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34350,7 +34552,7 @@ lucide/dist/esm/icons/shovel.mjs:
 
 lucide/dist/esm/icons/shower-head.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34358,7 +34560,7 @@ lucide/dist/esm/icons/shower-head.mjs:
 
 lucide/dist/esm/icons/shredder.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34366,7 +34568,7 @@ lucide/dist/esm/icons/shredder.mjs:
 
 lucide/dist/esm/icons/shrimp.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34374,7 +34576,7 @@ lucide/dist/esm/icons/shrimp.mjs:
 
 lucide/dist/esm/icons/shrink.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34382,7 +34584,7 @@ lucide/dist/esm/icons/shrink.mjs:
 
 lucide/dist/esm/icons/shrub.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34390,7 +34592,7 @@ lucide/dist/esm/icons/shrub.mjs:
 
 lucide/dist/esm/icons/shuffle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34398,15 +34600,7 @@ lucide/dist/esm/icons/shuffle.mjs:
 
 lucide/dist/esm/icons/sigma.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/signal-high.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34414,7 +34608,15 @@ lucide/dist/esm/icons/signal-high.mjs:
 
 lucide/dist/esm/icons/signal-low.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/signal-high.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34422,15 +34624,7 @@ lucide/dist/esm/icons/signal-low.mjs:
 
 lucide/dist/esm/icons/signal-medium.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/signal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34438,7 +34632,15 @@ lucide/dist/esm/icons/signal.mjs:
 
 lucide/dist/esm/icons/signal-zero.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/signal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34446,15 +34648,7 @@ lucide/dist/esm/icons/signal-zero.mjs:
 
 lucide/dist/esm/icons/signature.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/signpost-big.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34462,7 +34656,15 @@ lucide/dist/esm/icons/signpost-big.mjs:
 
 lucide/dist/esm/icons/signpost.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/signpost-big.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34470,7 +34672,7 @@ lucide/dist/esm/icons/signpost.mjs:
 
 lucide/dist/esm/icons/siren.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34478,7 +34680,7 @@ lucide/dist/esm/icons/siren.mjs:
 
 lucide/dist/esm/icons/skip-back.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34486,7 +34688,7 @@ lucide/dist/esm/icons/skip-back.mjs:
 
 lucide/dist/esm/icons/skip-forward.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34494,7 +34696,7 @@ lucide/dist/esm/icons/skip-forward.mjs:
 
 lucide/dist/esm/icons/skull.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34502,7 +34704,7 @@ lucide/dist/esm/icons/skull.mjs:
 
 lucide/dist/esm/icons/slash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34510,7 +34712,7 @@ lucide/dist/esm/icons/slash.mjs:
 
 lucide/dist/esm/icons/slice.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34518,7 +34720,7 @@ lucide/dist/esm/icons/slice.mjs:
 
 lucide/dist/esm/icons/sliders-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34526,7 +34728,7 @@ lucide/dist/esm/icons/sliders-horizontal.mjs:
 
 lucide/dist/esm/icons/sliders-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34534,7 +34736,7 @@ lucide/dist/esm/icons/sliders-vertical.mjs:
 
 lucide/dist/esm/icons/smartphone-charging.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34542,15 +34744,7 @@ lucide/dist/esm/icons/smartphone-charging.mjs:
 
 lucide/dist/esm/icons/smartphone-nfc.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/smartphone.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34558,7 +34752,7 @@ lucide/dist/esm/icons/smartphone.mjs:
 
 lucide/dist/esm/icons/snail.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34566,7 +34760,7 @@ lucide/dist/esm/icons/snail.mjs:
 
 lucide/dist/esm/icons/snowflake.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34574,7 +34768,15 @@ lucide/dist/esm/icons/snowflake.mjs:
 
 lucide/dist/esm/icons/soap-dispenser-droplet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/smartphone.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34582,7 +34784,7 @@ lucide/dist/esm/icons/soap-dispenser-droplet.mjs:
 
 lucide/dist/esm/icons/sofa.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34590,15 +34792,7 @@ lucide/dist/esm/icons/sofa.mjs:
 
 lucide/dist/esm/icons/solar-panel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/soup.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34606,7 +34800,15 @@ lucide/dist/esm/icons/soup.mjs:
 
 lucide/dist/esm/icons/space.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/soup.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34614,7 +34816,7 @@ lucide/dist/esm/icons/space.mjs:
 
 lucide/dist/esm/icons/spade.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34622,7 +34824,7 @@ lucide/dist/esm/icons/spade.mjs:
 
 lucide/dist/esm/icons/sparkle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34630,7 +34832,7 @@ lucide/dist/esm/icons/sparkle.mjs:
 
 lucide/dist/esm/icons/sparkles.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34638,7 +34840,7 @@ lucide/dist/esm/icons/sparkles.mjs:
 
 lucide/dist/esm/icons/speaker.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34646,7 +34848,7 @@ lucide/dist/esm/icons/speaker.mjs:
 
 lucide/dist/esm/icons/speech.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34654,15 +34856,7 @@ lucide/dist/esm/icons/speech.mjs:
 
 lucide/dist/esm/icons/spell-check-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/spline-pointer.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34670,7 +34864,7 @@ lucide/dist/esm/icons/spline-pointer.mjs:
 
 lucide/dist/esm/icons/spell-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34678,7 +34872,7 @@ lucide/dist/esm/icons/spell-check.mjs:
 
 lucide/dist/esm/icons/spline.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34686,7 +34880,7 @@ lucide/dist/esm/icons/spline.mjs:
 
 lucide/dist/esm/icons/split.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34694,7 +34888,15 @@ lucide/dist/esm/icons/split.mjs:
 
 lucide/dist/esm/icons/spool.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/spline-pointer.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34702,7 +34904,7 @@ lucide/dist/esm/icons/spool.mjs:
 
 lucide/dist/esm/icons/sport-shoe.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34710,7 +34912,7 @@ lucide/dist/esm/icons/sport-shoe.mjs:
 
 lucide/dist/esm/icons/spotlight.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34718,15 +34920,7 @@ lucide/dist/esm/icons/spotlight.mjs:
 
 lucide/dist/esm/icons/spray-can.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/sprout.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34734,15 +34928,15 @@ lucide/dist/esm/icons/sprout.mjs:
 
 lucide/dist/esm/icons/square-activity.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/square-arrow-down-right.mjs:
+lucide/dist/esm/icons/sprout.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34750,7 +34944,15 @@ lucide/dist/esm/icons/square-arrow-down-right.mjs:
 
 lucide/dist/esm/icons/square-arrow-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-arrow-down-right.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34758,7 +34960,7 @@ lucide/dist/esm/icons/square-arrow-down-left.mjs:
 
 lucide/dist/esm/icons/square-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34766,7 +34968,7 @@ lucide/dist/esm/icons/square-arrow-down.mjs:
 
 lucide/dist/esm/icons/square-arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34774,7 +34976,7 @@ lucide/dist/esm/icons/square-arrow-left.mjs:
 
 lucide/dist/esm/icons/square-arrow-out-down-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34782,7 +34984,7 @@ lucide/dist/esm/icons/square-arrow-out-down-left.mjs:
 
 lucide/dist/esm/icons/square-arrow-out-down-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34790,7 +34992,7 @@ lucide/dist/esm/icons/square-arrow-out-down-right.mjs:
 
 lucide/dist/esm/icons/square-arrow-out-up-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34798,7 +35000,7 @@ lucide/dist/esm/icons/square-arrow-out-up-left.mjs:
 
 lucide/dist/esm/icons/square-arrow-out-up-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34806,7 +35008,7 @@ lucide/dist/esm/icons/square-arrow-out-up-right.mjs:
 
 lucide/dist/esm/icons/square-arrow-right-enter.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34814,7 +35016,7 @@ lucide/dist/esm/icons/square-arrow-right-enter.mjs:
 
 lucide/dist/esm/icons/square-arrow-right-exit.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34822,7 +35024,7 @@ lucide/dist/esm/icons/square-arrow-right-exit.mjs:
 
 lucide/dist/esm/icons/square-arrow-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34830,7 +35032,7 @@ lucide/dist/esm/icons/square-arrow-right.mjs:
 
 lucide/dist/esm/icons/square-arrow-up-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34838,7 +35040,7 @@ lucide/dist/esm/icons/square-arrow-up-left.mjs:
 
 lucide/dist/esm/icons/square-arrow-up-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34846,15 +35048,7 @@ lucide/dist/esm/icons/square-arrow-up-right.mjs:
 
 lucide/dist/esm/icons/square-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-asterisk.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34862,7 +35056,15 @@ lucide/dist/esm/icons/square-asterisk.mjs:
 
 lucide/dist/esm/icons/square-bottom-dashed-scissors.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-asterisk.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34870,7 +35072,7 @@ lucide/dist/esm/icons/square-bottom-dashed-scissors.mjs:
 
 lucide/dist/esm/icons/square-centerline-dashed-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34878,23 +35080,7 @@ lucide/dist/esm/icons/square-centerline-dashed-horizontal.mjs:
 
 lucide/dist/esm/icons/square-centerline-dashed-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-check-big.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-chevron-down.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34902,7 +35088,15 @@ lucide/dist/esm/icons/square-chevron-down.mjs:
 
 lucide/dist/esm/icons/square-chart-gantt.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-check-big.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34910,7 +35104,15 @@ lucide/dist/esm/icons/square-chart-gantt.mjs:
 
 lucide/dist/esm/icons/square-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-chevron-down.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34918,15 +35120,7 @@ lucide/dist/esm/icons/square-check.mjs:
 
 lucide/dist/esm/icons/square-chevron-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-chevron-up.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34934,7 +35128,15 @@ lucide/dist/esm/icons/square-chevron-up.mjs:
 
 lucide/dist/esm/icons/square-chevron-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-chevron-up.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34942,15 +35144,7 @@ lucide/dist/esm/icons/square-chevron-right.mjs:
 
 lucide/dist/esm/icons/square-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-dashed-bottom.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34958,7 +35152,15 @@ lucide/dist/esm/icons/square-dashed-bottom.mjs:
 
 lucide/dist/esm/icons/square-dashed-bottom-code.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-dashed-bottom.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34966,7 +35168,7 @@ lucide/dist/esm/icons/square-dashed-bottom-code.mjs:
 
 lucide/dist/esm/icons/square-dashed-kanban.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34974,15 +35176,7 @@ lucide/dist/esm/icons/square-dashed-kanban.mjs:
 
 lucide/dist/esm/icons/square-dashed-mouse-pointer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-dashed-text.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34990,7 +35184,15 @@ lucide/dist/esm/icons/square-dashed-text.mjs:
 
 lucide/dist/esm/icons/square-dashed-top-solid.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-dashed-text.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -34998,7 +35200,15 @@ lucide/dist/esm/icons/square-dashed-top-solid.mjs:
 
 lucide/dist/esm/icons/square-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-dimensions.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35006,7 +35216,7 @@ lucide/dist/esm/icons/square-dashed.mjs:
 
 lucide/dist/esm/icons/square-divide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35014,7 +35224,7 @@ lucide/dist/esm/icons/square-divide.mjs:
 
 lucide/dist/esm/icons/square-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35022,15 +35232,7 @@ lucide/dist/esm/icons/square-dot.mjs:
 
 lucide/dist/esm/icons/square-equal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-kanban.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35038,7 +35240,15 @@ lucide/dist/esm/icons/square-kanban.mjs:
 
 lucide/dist/esm/icons/square-function.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-kanban.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35046,7 +35256,7 @@ lucide/dist/esm/icons/square-function.mjs:
 
 lucide/dist/esm/icons/square-library.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35054,15 +35264,7 @@ lucide/dist/esm/icons/square-library.mjs:
 
 lucide/dist/esm/icons/square-m.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-minus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35070,7 +35272,15 @@ lucide/dist/esm/icons/square-minus.mjs:
 
 lucide/dist/esm/icons/square-menu.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-minus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35078,15 +35288,7 @@ lucide/dist/esm/icons/square-menu.mjs:
 
 lucide/dist/esm/icons/square-mouse-pointer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-parking-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35094,7 +35296,15 @@ lucide/dist/esm/icons/square-parking-off.mjs:
 
 lucide/dist/esm/icons/square-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-parking-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35102,7 +35312,7 @@ lucide/dist/esm/icons/square-off.mjs:
 
 lucide/dist/esm/icons/square-parking.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35110,7 +35320,7 @@ lucide/dist/esm/icons/square-parking.mjs:
 
 lucide/dist/esm/icons/square-pause.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35118,7 +35328,7 @@ lucide/dist/esm/icons/square-pause.mjs:
 
 lucide/dist/esm/icons/square-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35126,7 +35336,7 @@ lucide/dist/esm/icons/square-pen.mjs:
 
 lucide/dist/esm/icons/square-percent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35134,7 +35344,7 @@ lucide/dist/esm/icons/square-percent.mjs:
 
 lucide/dist/esm/icons/square-pi.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35142,7 +35352,7 @@ lucide/dist/esm/icons/square-pi.mjs:
 
 lucide/dist/esm/icons/square-pilcrow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35150,7 +35360,7 @@ lucide/dist/esm/icons/square-pilcrow.mjs:
 
 lucide/dist/esm/icons/square-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35158,7 +35368,7 @@ lucide/dist/esm/icons/square-play.mjs:
 
 lucide/dist/esm/icons/square-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35166,15 +35376,7 @@ lucide/dist/esm/icons/square-plus.mjs:
 
 lucide/dist/esm/icons/square-power.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-round-corner.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35182,7 +35384,15 @@ lucide/dist/esm/icons/square-round-corner.mjs:
 
 lucide/dist/esm/icons/square-radical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-round-corner.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35190,15 +35400,7 @@ lucide/dist/esm/icons/square-radical.mjs:
 
 lucide/dist/esm/icons/square-scissors.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-slash.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35206,7 +35408,15 @@ lucide/dist/esm/icons/square-slash.mjs:
 
 lucide/dist/esm/icons/square-sigma.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-slash.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35214,7 +35424,7 @@ lucide/dist/esm/icons/square-sigma.mjs:
 
 lucide/dist/esm/icons/square-split-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35222,7 +35432,7 @@ lucide/dist/esm/icons/square-split-horizontal.mjs:
 
 lucide/dist/esm/icons/square-split-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35230,7 +35440,7 @@ lucide/dist/esm/icons/square-split-vertical.mjs:
 
 lucide/dist/esm/icons/square-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35238,15 +35448,7 @@ lucide/dist/esm/icons/square-square.mjs:
 
 lucide/dist/esm/icons/square-stack.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/square-stop.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35254,7 +35456,15 @@ lucide/dist/esm/icons/square-stop.mjs:
 
 lucide/dist/esm/icons/square-star.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-stop.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35262,7 +35472,7 @@ lucide/dist/esm/icons/square-star.mjs:
 
 lucide/dist/esm/icons/square-terminal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35270,7 +35480,15 @@ lucide/dist/esm/icons/square-terminal.mjs:
 
 lucide/dist/esm/icons/square-user-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-text.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35278,7 +35496,7 @@ lucide/dist/esm/icons/square-user-round.mjs:
 
 lucide/dist/esm/icons/square-user.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35286,7 +35504,7 @@ lucide/dist/esm/icons/square-user.mjs:
 
 lucide/dist/esm/icons/square-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35294,7 +35512,7 @@ lucide/dist/esm/icons/square-x.mjs:
 
 lucide/dist/esm/icons/square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35302,7 +35520,7 @@ lucide/dist/esm/icons/square.mjs:
 
 lucide/dist/esm/icons/squares-exclude.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35310,7 +35528,7 @@ lucide/dist/esm/icons/squares-exclude.mjs:
 
 lucide/dist/esm/icons/squares-intersect.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35318,7 +35536,7 @@ lucide/dist/esm/icons/squares-intersect.mjs:
 
 lucide/dist/esm/icons/squares-subtract.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35326,7 +35544,7 @@ lucide/dist/esm/icons/squares-subtract.mjs:
 
 lucide/dist/esm/icons/squares-unite.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35334,7 +35552,7 @@ lucide/dist/esm/icons/squares-unite.mjs:
 
 lucide/dist/esm/icons/squircle-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35342,7 +35560,7 @@ lucide/dist/esm/icons/squircle-dashed.mjs:
 
 lucide/dist/esm/icons/squircle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35350,15 +35568,7 @@ lucide/dist/esm/icons/squircle.mjs:
 
 lucide/dist/esm/icons/squirrel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/stamp.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35366,7 +35576,15 @@ lucide/dist/esm/icons/stamp.mjs:
 
 lucide/dist/esm/icons/star-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/stamp.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35374,7 +35592,7 @@ lucide/dist/esm/icons/star-check.mjs:
 
 lucide/dist/esm/icons/star-half.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35382,15 +35600,7 @@ lucide/dist/esm/icons/star-half.mjs:
 
 lucide/dist/esm/icons/star-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/star-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35398,15 +35608,15 @@ lucide/dist/esm/icons/star-off.mjs:
 
 lucide/dist/esm/icons/star-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/star-x.mjs:
+lucide/dist/esm/icons/star-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35414,7 +35624,15 @@ lucide/dist/esm/icons/star-x.mjs:
 
 lucide/dist/esm/icons/star.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/star-x.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35422,7 +35640,7 @@ lucide/dist/esm/icons/star.mjs:
 
 lucide/dist/esm/icons/step-back.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35430,7 +35648,7 @@ lucide/dist/esm/icons/step-back.mjs:
 
 lucide/dist/esm/icons/step-forward.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35438,7 +35656,7 @@ lucide/dist/esm/icons/step-forward.mjs:
 
 lucide/dist/esm/icons/stethoscope.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35446,15 +35664,7 @@ lucide/dist/esm/icons/stethoscope.mjs:
 
 lucide/dist/esm/icons/sticker.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/sticky-note-minus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35462,7 +35672,15 @@ lucide/dist/esm/icons/sticky-note-minus.mjs:
 
 lucide/dist/esm/icons/sticky-note-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/sticky-note-minus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35470,23 +35688,7 @@ lucide/dist/esm/icons/sticky-note-check.mjs:
 
 lucide/dist/esm/icons/sticky-note-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/sticky-note.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/sticky-note-plus.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35494,7 +35696,23 @@ lucide/dist/esm/icons/sticky-note-plus.mjs:
 
 lucide/dist/esm/icons/sticky-note-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/sticky-note-plus.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/sticky-note.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35502,7 +35720,7 @@ lucide/dist/esm/icons/sticky-note-x.mjs:
 
 lucide/dist/esm/icons/sticky-notes.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35510,15 +35728,7 @@ lucide/dist/esm/icons/sticky-notes.mjs:
 
 lucide/dist/esm/icons/stone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/stretch-horizontal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35526,7 +35736,15 @@ lucide/dist/esm/icons/stretch-horizontal.mjs:
 
 lucide/dist/esm/icons/store.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/stretch-horizontal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35534,7 +35752,7 @@ lucide/dist/esm/icons/store.mjs:
 
 lucide/dist/esm/icons/stretch-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35542,7 +35760,7 @@ lucide/dist/esm/icons/stretch-vertical.mjs:
 
 lucide/dist/esm/icons/strikethrough.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35550,7 +35768,7 @@ lucide/dist/esm/icons/strikethrough.mjs:
 
 lucide/dist/esm/icons/subscript.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35558,7 +35776,7 @@ lucide/dist/esm/icons/subscript.mjs:
 
 lucide/dist/esm/icons/summary.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35566,7 +35784,7 @@ lucide/dist/esm/icons/summary.mjs:
 
 lucide/dist/esm/icons/sun-dim.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35574,7 +35792,7 @@ lucide/dist/esm/icons/sun-dim.mjs:
 
 lucide/dist/esm/icons/sun-medium.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35582,7 +35800,7 @@ lucide/dist/esm/icons/sun-medium.mjs:
 
 lucide/dist/esm/icons/sun-moon.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35590,7 +35808,7 @@ lucide/dist/esm/icons/sun-moon.mjs:
 
 lucide/dist/esm/icons/sun-snow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35598,15 +35816,7 @@ lucide/dist/esm/icons/sun-snow.mjs:
 
 lucide/dist/esm/icons/sun.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/sunset.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35614,7 +35824,15 @@ lucide/dist/esm/icons/sunset.mjs:
 
 lucide/dist/esm/icons/sunrise.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/sunset.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35622,7 +35840,7 @@ lucide/dist/esm/icons/sunrise.mjs:
 
 lucide/dist/esm/icons/superscript.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35630,7 +35848,7 @@ lucide/dist/esm/icons/superscript.mjs:
 
 lucide/dist/esm/icons/swatch-book.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35638,7 +35856,7 @@ lucide/dist/esm/icons/swatch-book.mjs:
 
 lucide/dist/esm/icons/swiss-franc.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35646,7 +35864,7 @@ lucide/dist/esm/icons/swiss-franc.mjs:
 
 lucide/dist/esm/icons/switch-camera.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35654,7 +35872,7 @@ lucide/dist/esm/icons/switch-camera.mjs:
 
 lucide/dist/esm/icons/sword.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35662,15 +35880,7 @@ lucide/dist/esm/icons/sword.mjs:
 
 lucide/dist/esm/icons/swords.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/table-2.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35678,7 +35888,15 @@ lucide/dist/esm/icons/table-2.mjs:
 
 lucide/dist/esm/icons/syringe.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/table-2.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35686,7 +35904,7 @@ lucide/dist/esm/icons/syringe.mjs:
 
 lucide/dist/esm/icons/table-cells-merge.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35694,7 +35912,7 @@ lucide/dist/esm/icons/table-cells-merge.mjs:
 
 lucide/dist/esm/icons/table-cells-split.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35702,15 +35920,7 @@ lucide/dist/esm/icons/table-cells-split.mjs:
 
 lucide/dist/esm/icons/table-columns-split.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/table-properties.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35718,7 +35928,15 @@ lucide/dist/esm/icons/table-properties.mjs:
 
 lucide/dist/esm/icons/table-of-contents.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/table-properties.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35726,7 +35944,7 @@ lucide/dist/esm/icons/table-of-contents.mjs:
 
 lucide/dist/esm/icons/table-rows-split.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35734,7 +35952,7 @@ lucide/dist/esm/icons/table-rows-split.mjs:
 
 lucide/dist/esm/icons/table.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35742,7 +35960,7 @@ lucide/dist/esm/icons/table.mjs:
 
 lucide/dist/esm/icons/tablet-smartphone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35750,7 +35968,7 @@ lucide/dist/esm/icons/tablet-smartphone.mjs:
 
 lucide/dist/esm/icons/tablet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35758,7 +35976,7 @@ lucide/dist/esm/icons/tablet.mjs:
 
 lucide/dist/esm/icons/tablets.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35766,15 +35984,7 @@ lucide/dist/esm/icons/tablets.mjs:
 
 lucide/dist/esm/icons/tag-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/tag-x.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35782,7 +35992,15 @@ lucide/dist/esm/icons/tag-x.mjs:
 
 lucide/dist/esm/icons/tag.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/tag-x.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35790,7 +36008,7 @@ lucide/dist/esm/icons/tag.mjs:
 
 lucide/dist/esm/icons/tags.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35798,7 +36016,7 @@ lucide/dist/esm/icons/tags.mjs:
 
 lucide/dist/esm/icons/tally-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35806,7 +36024,7 @@ lucide/dist/esm/icons/tally-1.mjs:
 
 lucide/dist/esm/icons/tally-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35814,7 +36032,7 @@ lucide/dist/esm/icons/tally-2.mjs:
 
 lucide/dist/esm/icons/tally-3.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35822,7 +36040,7 @@ lucide/dist/esm/icons/tally-3.mjs:
 
 lucide/dist/esm/icons/tally-4.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35830,7 +36048,7 @@ lucide/dist/esm/icons/tally-4.mjs:
 
 lucide/dist/esm/icons/tally-5.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35838,7 +36056,7 @@ lucide/dist/esm/icons/tally-5.mjs:
 
 lucide/dist/esm/icons/tangent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35846,7 +36064,7 @@ lucide/dist/esm/icons/tangent.mjs:
 
 lucide/dist/esm/icons/target.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35854,7 +36072,7 @@ lucide/dist/esm/icons/target.mjs:
 
 lucide/dist/esm/icons/telescope.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35862,7 +36080,7 @@ lucide/dist/esm/icons/telescope.mjs:
 
 lucide/dist/esm/icons/tent-tree.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35870,7 +36088,7 @@ lucide/dist/esm/icons/tent-tree.mjs:
 
 lucide/dist/esm/icons/tent.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35878,7 +36096,7 @@ lucide/dist/esm/icons/tent.mjs:
 
 lucide/dist/esm/icons/terminal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35886,7 +36104,7 @@ lucide/dist/esm/icons/terminal.mjs:
 
 lucide/dist/esm/icons/test-tube-diagonal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35894,15 +36112,7 @@ lucide/dist/esm/icons/test-tube-diagonal.mjs:
 
 lucide/dist/esm/icons/test-tube.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/text-align-center.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35910,7 +36120,15 @@ lucide/dist/esm/icons/text-align-center.mjs:
 
 lucide/dist/esm/icons/test-tubes.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/text-align-center.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35918,7 +36136,7 @@ lucide/dist/esm/icons/test-tubes.mjs:
 
 lucide/dist/esm/icons/text-align-end.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35926,7 +36144,7 @@ lucide/dist/esm/icons/text-align-end.mjs:
 
 lucide/dist/esm/icons/text-align-justify.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35934,7 +36152,7 @@ lucide/dist/esm/icons/text-align-justify.mjs:
 
 lucide/dist/esm/icons/text-align-start.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35942,7 +36160,7 @@ lucide/dist/esm/icons/text-align-start.mjs:
 
 lucide/dist/esm/icons/text-cursor-input.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35950,7 +36168,7 @@ lucide/dist/esm/icons/text-cursor-input.mjs:
 
 lucide/dist/esm/icons/text-initial.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35958,7 +36176,7 @@ lucide/dist/esm/icons/text-initial.mjs:
 
 lucide/dist/esm/icons/text-cursor.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35966,7 +36184,7 @@ lucide/dist/esm/icons/text-cursor.mjs:
 
 lucide/dist/esm/icons/text-quote.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35974,7 +36192,7 @@ lucide/dist/esm/icons/text-quote.mjs:
 
 lucide/dist/esm/icons/text-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35982,7 +36200,7 @@ lucide/dist/esm/icons/text-search.mjs:
 
 lucide/dist/esm/icons/text-wrap.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35990,7 +36208,7 @@ lucide/dist/esm/icons/text-wrap.mjs:
 
 lucide/dist/esm/icons/theater.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -35998,7 +36216,7 @@ lucide/dist/esm/icons/theater.mjs:
 
 lucide/dist/esm/icons/thermometer-snowflake.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36006,7 +36224,7 @@ lucide/dist/esm/icons/thermometer-snowflake.mjs:
 
 lucide/dist/esm/icons/thermometer-sun.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36014,7 +36232,7 @@ lucide/dist/esm/icons/thermometer-sun.mjs:
 
 lucide/dist/esm/icons/thermometer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36022,7 +36240,7 @@ lucide/dist/esm/icons/thermometer.mjs:
 
 lucide/dist/esm/icons/thumbs-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36030,7 +36248,7 @@ lucide/dist/esm/icons/thumbs-down.mjs:
 
 lucide/dist/esm/icons/thumbs-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36038,15 +36256,7 @@ lucide/dist/esm/icons/thumbs-up.mjs:
 
 lucide/dist/esm/icons/ticket-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ticket-percent.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36054,7 +36264,15 @@ lucide/dist/esm/icons/ticket-percent.mjs:
 
 lucide/dist/esm/icons/ticket-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ticket-percent.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36062,23 +36280,7 @@ lucide/dist/esm/icons/ticket-minus.mjs:
 
 lucide/dist/esm/icons/ticket-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ticket-x.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/ticket.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36086,7 +36288,23 @@ lucide/dist/esm/icons/ticket.mjs:
 
 lucide/dist/esm/icons/ticket-slash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ticket-x.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/ticket.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36094,7 +36312,7 @@ lucide/dist/esm/icons/ticket-slash.mjs:
 
 lucide/dist/esm/icons/tickets-plane.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36102,7 +36320,7 @@ lucide/dist/esm/icons/tickets-plane.mjs:
 
 lucide/dist/esm/icons/tickets.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36110,15 +36328,7 @@ lucide/dist/esm/icons/tickets.mjs:
 
 lucide/dist/esm/icons/timeline.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/timer-reset.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36126,7 +36336,15 @@ lucide/dist/esm/icons/timer-reset.mjs:
 
 lucide/dist/esm/icons/timer-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/timer-reset.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36134,7 +36352,7 @@ lucide/dist/esm/icons/timer-off.mjs:
 
 lucide/dist/esm/icons/timer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36142,7 +36360,7 @@ lucide/dist/esm/icons/timer.mjs:
 
 lucide/dist/esm/icons/toggle-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36150,7 +36368,7 @@ lucide/dist/esm/icons/toggle-left.mjs:
 
 lucide/dist/esm/icons/toggle-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36158,7 +36376,7 @@ lucide/dist/esm/icons/toggle-right.mjs:
 
 lucide/dist/esm/icons/toilet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36166,7 +36384,7 @@ lucide/dist/esm/icons/toilet.mjs:
 
 lucide/dist/esm/icons/tool-case.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36174,7 +36392,7 @@ lucide/dist/esm/icons/tool-case.mjs:
 
 lucide/dist/esm/icons/toolbox.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36182,7 +36400,7 @@ lucide/dist/esm/icons/toolbox.mjs:
 
 lucide/dist/esm/icons/tornado.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36190,15 +36408,7 @@ lucide/dist/esm/icons/tornado.mjs:
 
 lucide/dist/esm/icons/torus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/touchpad-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36206,23 +36416,15 @@ lucide/dist/esm/icons/touchpad-off.mjs:
 
 lucide/dist/esm/icons/touchpad.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/towel-rack.mjs:
+lucide/dist/esm/icons/touchpad-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/tower-control.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36230,7 +36432,23 @@ lucide/dist/esm/icons/tower-control.mjs:
 
 lucide/dist/esm/icons/toy-brick.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/tower-control.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/towel-rack.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36238,7 +36456,7 @@ lucide/dist/esm/icons/toy-brick.mjs:
 
 lucide/dist/esm/icons/tractor.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36246,15 +36464,7 @@ lucide/dist/esm/icons/tractor.mjs:
 
 lucide/dist/esm/icons/traffic-cone.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/train-front.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36262,7 +36472,15 @@ lucide/dist/esm/icons/train-front.mjs:
 
 lucide/dist/esm/icons/train-front-tunnel.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/train-front.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36270,7 +36488,7 @@ lucide/dist/esm/icons/train-front-tunnel.mjs:
 
 lucide/dist/esm/icons/train-track.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36278,15 +36496,7 @@ lucide/dist/esm/icons/train-track.mjs:
 
 lucide/dist/esm/icons/tram-front.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/trash-2.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36294,7 +36504,15 @@ lucide/dist/esm/icons/trash-2.mjs:
 
 lucide/dist/esm/icons/transgender.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/trash-2.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36302,7 +36520,7 @@ lucide/dist/esm/icons/transgender.mjs:
 
 lucide/dist/esm/icons/trash.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36310,7 +36528,7 @@ lucide/dist/esm/icons/trash.mjs:
 
 lucide/dist/esm/icons/tree-deciduous.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36318,7 +36536,7 @@ lucide/dist/esm/icons/tree-deciduous.mjs:
 
 lucide/dist/esm/icons/tree-palm.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36326,7 +36544,7 @@ lucide/dist/esm/icons/tree-palm.mjs:
 
 lucide/dist/esm/icons/tree-pine.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36334,7 +36552,7 @@ lucide/dist/esm/icons/tree-pine.mjs:
 
 lucide/dist/esm/icons/trees.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36342,7 +36560,7 @@ lucide/dist/esm/icons/trees.mjs:
 
 lucide/dist/esm/icons/trending-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36350,7 +36568,7 @@ lucide/dist/esm/icons/trending-down.mjs:
 
 lucide/dist/esm/icons/trending-up-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36358,7 +36576,7 @@ lucide/dist/esm/icons/trending-up-down.mjs:
 
 lucide/dist/esm/icons/trending-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36366,7 +36584,7 @@ lucide/dist/esm/icons/trending-up.mjs:
 
 lucide/dist/esm/icons/triangle-alert.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36374,7 +36592,7 @@ lucide/dist/esm/icons/triangle-alert.mjs:
 
 lucide/dist/esm/icons/triangle-dashed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36382,7 +36600,7 @@ lucide/dist/esm/icons/triangle-dashed.mjs:
 
 lucide/dist/esm/icons/triangle-right.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36390,7 +36608,7 @@ lucide/dist/esm/icons/triangle-right.mjs:
 
 lucide/dist/esm/icons/triangle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36398,7 +36616,7 @@ lucide/dist/esm/icons/triangle.mjs:
 
 lucide/dist/esm/icons/trophy.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36406,15 +36624,7 @@ lucide/dist/esm/icons/trophy.mjs:
 
 lucide/dist/esm/icons/truck-electric.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/turkish-lira.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36422,7 +36632,15 @@ lucide/dist/esm/icons/turkish-lira.mjs:
 
 lucide/dist/esm/icons/truck.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/turkish-lira.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36430,7 +36648,7 @@ lucide/dist/esm/icons/truck.mjs:
 
 lucide/dist/esm/icons/turntable.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36438,15 +36656,7 @@ lucide/dist/esm/icons/turntable.mjs:
 
 lucide/dist/esm/icons/turtle.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/tv-minimal.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36454,7 +36664,7 @@ lucide/dist/esm/icons/tv-minimal.mjs:
 
 lucide/dist/esm/icons/tv-minimal-play.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36462,7 +36672,15 @@ lucide/dist/esm/icons/tv-minimal-play.mjs:
 
 lucide/dist/esm/icons/tv.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/tv-minimal.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36470,7 +36688,7 @@ lucide/dist/esm/icons/tv.mjs:
 
 lucide/dist/esm/icons/type-outline.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36478,15 +36696,7 @@ lucide/dist/esm/icons/type-outline.mjs:
 
 lucide/dist/esm/icons/type.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/umbrella.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36494,7 +36704,15 @@ lucide/dist/esm/icons/umbrella.mjs:
 
 lucide/dist/esm/icons/umbrella-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/umbrella.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36502,7 +36720,7 @@ lucide/dist/esm/icons/umbrella-off.mjs:
 
 lucide/dist/esm/icons/underline.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36510,7 +36728,7 @@ lucide/dist/esm/icons/underline.mjs:
 
 lucide/dist/esm/icons/undo-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36518,7 +36736,7 @@ lucide/dist/esm/icons/undo-2.mjs:
 
 lucide/dist/esm/icons/undo-dot.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36526,7 +36744,7 @@ lucide/dist/esm/icons/undo-dot.mjs:
 
 lucide/dist/esm/icons/undo.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36534,7 +36752,7 @@ lucide/dist/esm/icons/undo.mjs:
 
 lucide/dist/esm/icons/unfold-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36542,7 +36760,7 @@ lucide/dist/esm/icons/unfold-horizontal.mjs:
 
 lucide/dist/esm/icons/unfold-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36550,7 +36768,7 @@ lucide/dist/esm/icons/unfold-vertical.mjs:
 
 lucide/dist/esm/icons/ungroup.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36558,7 +36776,7 @@ lucide/dist/esm/icons/ungroup.mjs:
 
 lucide/dist/esm/icons/university.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36566,7 +36784,7 @@ lucide/dist/esm/icons/university.mjs:
 
 lucide/dist/esm/icons/unlink-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36574,7 +36792,7 @@ lucide/dist/esm/icons/unlink-2.mjs:
 
 lucide/dist/esm/icons/unlink.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36582,7 +36800,7 @@ lucide/dist/esm/icons/unlink.mjs:
 
 lucide/dist/esm/icons/unplug.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36590,7 +36808,15 @@ lucide/dist/esm/icons/unplug.mjs:
 
 lucide/dist/esm/icons/upload.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/usb-c-port.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36598,7 +36824,7 @@ lucide/dist/esm/icons/upload.mjs:
 
 lucide/dist/esm/icons/usb.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36606,15 +36832,7 @@ lucide/dist/esm/icons/usb.mjs:
 
 lucide/dist/esm/icons/user-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/user-cog.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36622,7 +36840,7 @@ lucide/dist/esm/icons/user-cog.mjs:
 
 lucide/dist/esm/icons/user-key.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36630,7 +36848,15 @@ lucide/dist/esm/icons/user-key.mjs:
 
 lucide/dist/esm/icons/user-lock.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/user-cog.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36638,7 +36864,7 @@ lucide/dist/esm/icons/user-lock.mjs:
 
 lucide/dist/esm/icons/user-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36646,7 +36872,7 @@ lucide/dist/esm/icons/user-minus.mjs:
 
 lucide/dist/esm/icons/user-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36654,7 +36880,7 @@ lucide/dist/esm/icons/user-pen.mjs:
 
 lucide/dist/esm/icons/user-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36662,7 +36888,7 @@ lucide/dist/esm/icons/user-plus.mjs:
 
 lucide/dist/esm/icons/user-round-arrow-left.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36670,7 +36896,7 @@ lucide/dist/esm/icons/user-round-arrow-left.mjs:
 
 lucide/dist/esm/icons/user-round-check.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36678,15 +36904,7 @@ lucide/dist/esm/icons/user-round-check.mjs:
 
 lucide/dist/esm/icons/user-round-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/user-round-key.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36694,7 +36912,15 @@ lucide/dist/esm/icons/user-round-key.mjs:
 
 lucide/dist/esm/icons/user-round-minus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/user-round-key.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36702,7 +36928,7 @@ lucide/dist/esm/icons/user-round-minus.mjs:
 
 lucide/dist/esm/icons/user-round-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36710,7 +36936,7 @@ lucide/dist/esm/icons/user-round-pen.mjs:
 
 lucide/dist/esm/icons/user-round-plus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36718,7 +36944,7 @@ lucide/dist/esm/icons/user-round-plus.mjs:
 
 lucide/dist/esm/icons/user-round-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36726,7 +36952,7 @@ lucide/dist/esm/icons/user-round-search.mjs:
 
 lucide/dist/esm/icons/user-round-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36734,7 +36960,7 @@ lucide/dist/esm/icons/user-round-x.mjs:
 
 lucide/dist/esm/icons/user-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36742,7 +36968,7 @@ lucide/dist/esm/icons/user-round.mjs:
 
 lucide/dist/esm/icons/user-search.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36750,7 +36976,7 @@ lucide/dist/esm/icons/user-search.mjs:
 
 lucide/dist/esm/icons/user-shield.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36758,15 +36984,7 @@ lucide/dist/esm/icons/user-shield.mjs:
 
 lucide/dist/esm/icons/user-star.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/user.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36774,7 +36992,15 @@ lucide/dist/esm/icons/user.mjs:
 
 lucide/dist/esm/icons/user-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/user.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36782,7 +37008,7 @@ lucide/dist/esm/icons/user-x.mjs:
 
 lucide/dist/esm/icons/users-round.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36790,7 +37016,7 @@ lucide/dist/esm/icons/users-round.mjs:
 
 lucide/dist/esm/icons/users.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36798,7 +37024,7 @@ lucide/dist/esm/icons/users.mjs:
 
 lucide/dist/esm/icons/utensils-crossed.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36806,7 +37032,7 @@ lucide/dist/esm/icons/utensils-crossed.mjs:
 
 lucide/dist/esm/icons/utensils.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36814,7 +37040,7 @@ lucide/dist/esm/icons/utensils.mjs:
 
 lucide/dist/esm/icons/utility-pole.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36822,15 +37048,7 @@ lucide/dist/esm/icons/utility-pole.mjs:
 
 lucide/dist/esm/icons/van.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/variable.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36838,7 +37056,15 @@ lucide/dist/esm/icons/variable.mjs:
 
 lucide/dist/esm/icons/vault.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/variable.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36846,7 +37072,7 @@ lucide/dist/esm/icons/vault.mjs:
 
 lucide/dist/esm/icons/vector-square.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36854,15 +37080,7 @@ lucide/dist/esm/icons/vector-square.mjs:
 
 lucide/dist/esm/icons/vegan.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/venetian-mask.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36870,7 +37088,15 @@ lucide/dist/esm/icons/venetian-mask.mjs:
 
 lucide/dist/esm/icons/venus-and-mars.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/venetian-mask.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36878,7 +37104,7 @@ lucide/dist/esm/icons/venus-and-mars.mjs:
 
 lucide/dist/esm/icons/venus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36886,15 +37112,7 @@ lucide/dist/esm/icons/venus.mjs:
 
 lucide/dist/esm/icons/vibrate-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/vibrate.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36902,7 +37120,15 @@ lucide/dist/esm/icons/vibrate.mjs:
 
 lucide/dist/esm/icons/video-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/vibrate.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36910,7 +37136,7 @@ lucide/dist/esm/icons/video-off.mjs:
 
 lucide/dist/esm/icons/video.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36918,7 +37144,7 @@ lucide/dist/esm/icons/video.mjs:
 
 lucide/dist/esm/icons/videotape.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36926,15 +37152,7 @@ lucide/dist/esm/icons/videotape.mjs:
 
 lucide/dist/esm/icons/view.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/voicemail.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36942,7 +37160,15 @@ lucide/dist/esm/icons/voicemail.mjs:
 
 lucide/dist/esm/icons/volleyball.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/voicemail.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36950,7 +37176,7 @@ lucide/dist/esm/icons/volleyball.mjs:
 
 lucide/dist/esm/icons/volume-1.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36958,7 +37184,7 @@ lucide/dist/esm/icons/volume-1.mjs:
 
 lucide/dist/esm/icons/volume-2.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36966,7 +37192,7 @@ lucide/dist/esm/icons/volume-2.mjs:
 
 lucide/dist/esm/icons/volume-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36974,15 +37200,7 @@ lucide/dist/esm/icons/volume-off.mjs:
 
 lucide/dist/esm/icons/volume-x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/wallet-cards.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36990,7 +37208,7 @@ lucide/dist/esm/icons/wallet-cards.mjs:
 
 lucide/dist/esm/icons/volume.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -36998,7 +37216,15 @@ lucide/dist/esm/icons/volume.mjs:
 
 lucide/dist/esm/icons/vote.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/wallet-cards.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37006,7 +37232,7 @@ lucide/dist/esm/icons/vote.mjs:
 
 lucide/dist/esm/icons/wallet-minimal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37014,7 +37240,7 @@ lucide/dist/esm/icons/wallet-minimal.mjs:
 
 lucide/dist/esm/icons/wallet.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37022,7 +37248,7 @@ lucide/dist/esm/icons/wallet.mjs:
 
 lucide/dist/esm/icons/wallpaper.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37030,7 +37256,7 @@ lucide/dist/esm/icons/wallpaper.mjs:
 
 lucide/dist/esm/icons/wand-sparkles.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37038,7 +37264,7 @@ lucide/dist/esm/icons/wand-sparkles.mjs:
 
 lucide/dist/esm/icons/wand.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37046,7 +37272,7 @@ lucide/dist/esm/icons/wand.mjs:
 
 lucide/dist/esm/icons/warehouse.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37054,7 +37280,7 @@ lucide/dist/esm/icons/warehouse.mjs:
 
 lucide/dist/esm/icons/washing-machine.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37062,7 +37288,7 @@ lucide/dist/esm/icons/washing-machine.mjs:
 
 lucide/dist/esm/icons/watch.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37070,7 +37296,7 @@ lucide/dist/esm/icons/watch.mjs:
 
 lucide/dist/esm/icons/waves-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37078,7 +37304,7 @@ lucide/dist/esm/icons/waves-arrow-down.mjs:
 
 lucide/dist/esm/icons/waves-arrow-up.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37086,7 +37312,7 @@ lucide/dist/esm/icons/waves-arrow-up.mjs:
 
 lucide/dist/esm/icons/waves-horizontal.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37094,7 +37320,7 @@ lucide/dist/esm/icons/waves-horizontal.mjs:
 
 lucide/dist/esm/icons/waves-ladder.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37102,7 +37328,7 @@ lucide/dist/esm/icons/waves-ladder.mjs:
 
 lucide/dist/esm/icons/waves-vertical.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37110,7 +37336,7 @@ lucide/dist/esm/icons/waves-vertical.mjs:
 
 lucide/dist/esm/icons/waypoints.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37118,23 +37344,7 @@ lucide/dist/esm/icons/waypoints.mjs:
 
 lucide/dist/esm/icons/webcam-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/webhook-off.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/webhook.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37142,15 +37352,23 @@ lucide/dist/esm/icons/webhook.mjs:
 
 lucide/dist/esm/icons/webcam.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/weight-tilde.mjs:
+lucide/dist/esm/icons/webhook.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/webhook-off.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37158,7 +37376,15 @@ lucide/dist/esm/icons/weight-tilde.mjs:
 
 lucide/dist/esm/icons/weight.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/weight-tilde.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37166,7 +37392,7 @@ lucide/dist/esm/icons/weight.mjs:
 
 lucide/dist/esm/icons/wheat-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37174,7 +37400,7 @@ lucide/dist/esm/icons/wheat-off.mjs:
 
 lucide/dist/esm/icons/wheat.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37182,7 +37408,7 @@ lucide/dist/esm/icons/wheat.mjs:
 
 lucide/dist/esm/icons/whole-word.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37190,7 +37416,7 @@ lucide/dist/esm/icons/whole-word.mjs:
 
 lucide/dist/esm/icons/wifi-cog.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37198,7 +37424,7 @@ lucide/dist/esm/icons/wifi-cog.mjs:
 
 lucide/dist/esm/icons/wifi-high.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37206,7 +37432,7 @@ lucide/dist/esm/icons/wifi-high.mjs:
 
 lucide/dist/esm/icons/wifi-low.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37214,7 +37440,7 @@ lucide/dist/esm/icons/wifi-low.mjs:
 
 lucide/dist/esm/icons/wifi-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37222,7 +37448,7 @@ lucide/dist/esm/icons/wifi-off.mjs:
 
 lucide/dist/esm/icons/wifi-pen.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37230,7 +37456,7 @@ lucide/dist/esm/icons/wifi-pen.mjs:
 
 lucide/dist/esm/icons/wifi-sync.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37238,7 +37464,7 @@ lucide/dist/esm/icons/wifi-sync.mjs:
 
 lucide/dist/esm/icons/wifi-zero.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37246,7 +37472,7 @@ lucide/dist/esm/icons/wifi-zero.mjs:
 
 lucide/dist/esm/icons/wifi.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37254,7 +37480,7 @@ lucide/dist/esm/icons/wifi.mjs:
 
 lucide/dist/esm/icons/wind-arrow-down.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37262,7 +37488,7 @@ lucide/dist/esm/icons/wind-arrow-down.mjs:
 
 lucide/dist/esm/icons/wind.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37270,7 +37496,7 @@ lucide/dist/esm/icons/wind.mjs:
 
 lucide/dist/esm/icons/wine-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37278,15 +37504,7 @@ lucide/dist/esm/icons/wine-off.mjs:
 
 lucide/dist/esm/icons/wine.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/worm.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37294,7 +37512,15 @@ lucide/dist/esm/icons/worm.mjs:
 
 lucide/dist/esm/icons/workflow.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/worm.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37302,7 +37528,7 @@ lucide/dist/esm/icons/workflow.mjs:
 
 lucide/dist/esm/icons/wrench-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37310,7 +37536,7 @@ lucide/dist/esm/icons/wrench-off.mjs:
 
 lucide/dist/esm/icons/wrench.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37318,7 +37544,7 @@ lucide/dist/esm/icons/wrench.mjs:
 
 lucide/dist/esm/icons/x-line-top.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37326,7 +37552,7 @@ lucide/dist/esm/icons/x-line-top.mjs:
 
 lucide/dist/esm/icons/x.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37334,7 +37560,7 @@ lucide/dist/esm/icons/x.mjs:
 
 lucide/dist/esm/icons/zap-off.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37342,7 +37568,7 @@ lucide/dist/esm/icons/zap-off.mjs:
 
 lucide/dist/esm/icons/zap.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37350,7 +37576,7 @@ lucide/dist/esm/icons/zap.mjs:
 
 lucide/dist/esm/icons/zodiac-aquarius.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37358,7 +37584,7 @@ lucide/dist/esm/icons/zodiac-aquarius.mjs:
 
 lucide/dist/esm/icons/zodiac-aries.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37366,7 +37592,7 @@ lucide/dist/esm/icons/zodiac-aries.mjs:
 
 lucide/dist/esm/icons/zodiac-cancer.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37374,15 +37600,7 @@ lucide/dist/esm/icons/zodiac-cancer.mjs:
 
 lucide/dist/esm/icons/zodiac-capricorn.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/zodiac-leo.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37390,15 +37608,15 @@ lucide/dist/esm/icons/zodiac-leo.mjs:
 
 lucide/dist/esm/icons/zodiac-gemini.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
    *)
 
-lucide/dist/esm/icons/zodiac-libra.mjs:
+lucide/dist/esm/icons/zodiac-leo.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37406,7 +37624,15 @@ lucide/dist/esm/icons/zodiac-libra.mjs:
 
 lucide/dist/esm/icons/zodiac-ophiuchus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/zodiac-libra.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37414,15 +37640,7 @@ lucide/dist/esm/icons/zodiac-ophiuchus.mjs:
 
 lucide/dist/esm/icons/zodiac-pisces.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/zodiac-scorpio.mjs:
-  (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37430,7 +37648,15 @@ lucide/dist/esm/icons/zodiac-scorpio.mjs:
 
 lucide/dist/esm/icons/zodiac-sagittarius.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/zodiac-scorpio.mjs:
+  (**
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37438,7 +37664,7 @@ lucide/dist/esm/icons/zodiac-sagittarius.mjs:
 
 lucide/dist/esm/icons/zodiac-taurus.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37446,7 +37672,7 @@ lucide/dist/esm/icons/zodiac-taurus.mjs:
 
 lucide/dist/esm/icons/zodiac-virgo.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37454,7 +37680,7 @@ lucide/dist/esm/icons/zodiac-virgo.mjs:
 
 lucide/dist/esm/icons/zoom-in.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37462,7 +37688,7 @@ lucide/dist/esm/icons/zoom-in.mjs:
 
 lucide/dist/esm/icons/zoom-out.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37470,7 +37696,7 @@ lucide/dist/esm/icons/zoom-out.mjs:
 
 lucide/dist/esm/iconsAndAliases.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
@@ -37478,7 +37704,7 @@ lucide/dist/esm/iconsAndAliases.mjs:
 
 lucide/dist/esm/lucide.mjs:
   (**
-   * @license lucide v1.31.0 - ISC
+   * @license lucide v1.33.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.
