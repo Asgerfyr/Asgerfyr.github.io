@@ -54,7 +54,23 @@
             "description": "Effektiv asynkron hændelseshåndtering med timer-baseret debouncing, eliminering af sensorbounce og sikring af pålidelige state transitions"
           }
         ],
-        "images": []
+        "images": [
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczO3uUWf2QigHBd_32m9QhQTbWOywmulNXSfowhCaMRCTDMMCpbnFl-GHTvKHMrOSOBCJkjJhyeyWTftpVF8f1i-8R7sxgHHYLZjTmVVddSb69c06LhU2wMcCXCLv0coTMaefxHoQzv_BkFClV5ShcvT=w1350-h993-s-no-gm?authuser=0",
+            "alt": "Bil produkt",
+            "caption": "Det endelige Produkt (udklædt som chip)"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczOj08OsLY_Ve7N1m_opAtxgH4jTT3mBOKFPeYn5itltz0jWx2-kObAqeamDDkCVqN3UWWoz6gsSFsFmXisyT2_wi9ddyBo7k1ILPMLQCnjZzJuSGf-klwKkgsTyev5oS9nj1oTJi-xaLESl6LpnVayV=w745-h993-s-no-gm?authuser=0",
+            "alt": "Bil skelet ene side",
+            "caption": "Bil skelet ene side"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/pw/AP1GczNNFCZDsB-pe6Vwy31Pw74NpV2UeopOhrJmM-xNasIFEGaPJtSPK976RqQKYIk-kepYlphjpRy9cT8LjYtEdcG_hlr_yRrrpiOJwIINNzqUnF93OtiQ5V5diXI0YFCbzorL9ixrCMQLN52qtAP9G3qw=w744-h993-s-no-gm?authuser=0",
+            "alt": "Bil skelet anden side",
+            "caption": "Bil skelet anden side"
+          }
+        ]
       }
     },
     {
@@ -89,7 +105,7 @@
             {
               "type": "code",
               "language": "plaintext",
-              "content": "Brugerinput (UART Menu)\n         \u2193\n[_menuSYS behandler input]\n         \u2193\n[_menuSYS dispatcher til menu()]\n         \u2193\n[menu() viser muligheder]\n         \u2193\n[Bruger valg \u2192 kontrole()]\n         \u2193\n[kontrole udfører kommandoer]\n  - motorPWM() / motorPWMGradvis()\n  - SetForlys() / SetBaklys() / SetBaglys()\n  - SOMO_Play_*() for audio\n         \u2193\n[Telemetri sendt tilbage via UNISendInteger()]"
+              "content": "Brugerinput (UART Menu)\n         ↓\n[_menuSYS behandler input]\n         ↓\n[_menuSYS dispatcher til menu()]\n         ↓\n[menu() viser muligheder]\n         ↓\n[Bruger valg → kontrole()]\n         ↓\n[kontrole udfører kommandoer]\n  - motorPWM() / motorPWMGradvis()\n  - SetForlys() / SetBaklys() / SetBaglys()\n  - SOMO_Play_*() for audio\n         ↓\n[Telemetri sendt tilbage via UNISendInteger()]"
             }
           ],
           "Interrupt Timing and Debounce": [
