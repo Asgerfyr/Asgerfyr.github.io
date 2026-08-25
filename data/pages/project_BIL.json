@@ -96,29 +96,48 @@
           ],
           "Data Flow Pipeline": [
             {
-              "type": "code",
-              "language": "plaintext",
-              "content": "Sensorinput (Refleksbrik)\n         ↓\n[INT0_vect / INT1_vect ISR Udløst]\n         ↓\n   Increment Refleks_count\n   Deaktiver Interrupts (debounce)\n   Start Timer (200-500ms)\n   Send UART telemetri\n         ↓\n    [Timer Interrupt]\n         ↓\n  Gen-aktiver Interrupts\n         ↓\n[Hoved-loop Læs Refleks_count]\n         ↓\nBeslutningslogik:\n  Tilstand 0: Initialisering (menu venter)\n  Tilstand 1-6: Progressive tilstande\n  Tilstand 7-8: Høj-hastighed tilstande (200ms timer)\n  Tilstand 9+: Sluttilstande\n         ↓\n[Udfør Kontrol Kommandoer]\n  - Sæt Motor PWM\n  - Sæt Lysværdier\n  - Afspil audio signaler\n  - Opdater LED visning"
-            }
-          ],
-          "Command-Response Flow": [
+              "type": "text",
+              "content": "De tre vigtigste kontrolveje er adskilt i stedet for at blive beskrevet som én samlet pipeline: sensorinterrupts opdaterer kun tilstand, hovedloopet forbruger tilstanden, og UART-menuen er en separat manuel vej."
+            },
             {
               "type": "code",
               "language": "plaintext",
-              "content": "Brugerinput (UART Menu)\n         ↓\n[_menuSYS behandler input]\n         ↓\n[_menuSYS dispatcher til menu()]\n         ↓\n[menu() viser muligheder]\n         ↓\n[Bruger valg → kontrole()]\n         ↓\n[kontrole udfører kommandoer]\n  - motorPWM() / motorPWMGradvis()\n  - SetForlys() / SetBaklys() / SetBaglys()\n  - SOMO_Play_*() for audio\n         ↓\n[Telemetri sendt tilbage via UNISendInteger()]"
+              "content": "Interrupt flow\nSensorinput (Refleksbrik)\n  ↓\nINT0_vect / INT1_vect ISR\n  ↓\nRefleks_count++\nEIMSK = 0b00000000\nstart_timer(200 | 500)\nUNISendInteger(...)\n  ↓\nTimer5 overflow ISR\n  ↓\nEIMSK = 0b00000011"
+            },
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Main loop flow\nwhile(1)\n  ↓\nRead Refleks_count\n  ↓\nSwitch on state\n  ├─ 0: initialization / menu waiting\n  ├─ 1-6: progressive states\n  ├─ 7-8: high-speed states\n  └─ 9+: final states\n  ↓\nApply motor / light / audio commands"
+            },
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "UART menu flow\nUART input\n  ↓\n_menuSYS()\n  ├─ 'm' → menu()\n  ├─ 0x01 → kontrole()\n  └─ 0x02 → force next sensor step (debug)\n          ├─ Refleks_count++\n          ├─ EIMSK = 0b00000000\n          └─ start_timer(400)"
             }
           ],
-          "Interrupt Timing and Debounce": [
+          "Debounce And Re-enable Flow": [
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "Debounce flow\nTimer5 overflow ISR\n  ↓\nTCCR5B = 0b00000000\nEIFR = 0b00000011\nEIMSK = 0b00000011\n  ↓\nInterrupts are ready again, but the main loop still owns the next state transition"
+            }
+          ],
+          "Manual Control Flow": [
             {
               "type": "text",
-              "content": "Systemet bruger adaptiv debounce-timing til at håndtere varierende køretøjhastigheder. Når en refleks registreres, deaktiveres interrupts i en konfigureret varighed før re-aktivering. Dette forhindrer flere interrupt-triggering fra en enkelt refleks passage, da sensorerne driver ind og ud af detektionsområdet."
+              "content": "If you are new to the project, read this as the path for commands that a person types through the serial menu. The menu does not wait for the sensor; it simply listens for input, shows options, and sends the chosen command to the right driver."
+            },
+            {
+              "type": "code",
+              "language": "plaintext",
+              "content": "You type a command in the UART menu\n  ↓\nThe system reads that character\n  ↓\nIt decides whether you want the menu, a direct test command, or a sensor step\n  ↓\nThe chosen action is sent to the motor, light, sound, or sensor logic\n  ↓\nThe system prints a response back to the serial terminal"
             },
             {
               "type": "list",
               "content": [
-                "<strong>Tilstande 0-6 (Normal hastighed)</strong> - 500ms debounce vindue: tillader tid for køretøjet at passere refleks uden gen-triggering",
-                "<strong>Tilstande 7-8 (Høj hastighed)</strong> - 200ms debounce vindue: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks",
-                "<strong>Adaptiv timing</strong> - Timer5 konfigureret i ISR med forskellige værdier baseret på aktuel tilstand, optimering for forventet køretøjhastighed på hvert progressions stadium"
+                "<strong>menu()</strong> - The normal text menu you see on the terminal",
+                "<strong>kontrole()</strong> - The direct test path for changing values quickly",
+                "<strong>Feedback</strong> - The system prints the result back so you know the command worked"
               ]
             }
           ]

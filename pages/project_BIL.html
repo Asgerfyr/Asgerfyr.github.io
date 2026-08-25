@@ -158,47 +158,57 @@
             <h2 class="text-2xl font-bold" style="margin-left: 0.75rem;">Arkitektur: Lagdelt indlejret systemdesign Documentation</h2>
           </div>
           <div class="section-grid-container">
-            <div><h3 class="text-xl font-semibold mb-4">System Architecture</h3><p class="text-gray-600 mb-4">BIL-systemet følger en klassisk indlejret systemarkitektur med klar adskillelse af bekymringer på tvers af tre lag:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Brugerinterface-lag</strong> - UART menu-system (_menuSYS, menu, kontrole) til manuel kontrol og debugging</li><li><strong>Kontrollogik-lag</strong> - Hoved-event loop med state machine drevet af Refleks_count positionsvariabel (0-9)</li><li><strong>Hardware Abstraction Lag</strong> - Modulare driverkomponenter (motor, lys, sensor, timer, UART) der indkapsler port-manipulation</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Data Flow Pipeline</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Sensorinput (Refleksbrik)
-         ↓
-[INT0_vect / INT1_vect ISR Udløst]
-         ↓
-   Increment Refleks_count
-   Deaktiver Interrupts (debounce)
-   Start Timer (200-500ms)
-   Send UART telemetri
-         ↓
-    [Timer Interrupt]
-         ↓
-  Gen-aktiver Interrupts
-         ↓
-[Hoved-loop Læs Refleks_count]
-         ↓
-Beslutningslogik:
-  Tilstand 0: Initialisering (menu venter)
-  Tilstand 1-6: Progressive tilstande
-  Tilstand 7-8: Høj-hastighed tilstande (200ms timer)
-  Tilstand 9+: Sluttilstande
-         ↓
-[Udfør Kontrol Kommandoer]
-  - Sæt Motor PWM
-  - Sæt Lysværdier
-  - Afspil audio signaler
-  - Opdater LED visning</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Command-Response Flow</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Brugerinput (UART Menu)
-         ↓
-[_menuSYS behandler input]
-         ↓
-[_menuSYS dispatcher til menu()]
-         ↓
-[menu() viser muligheder]
-         ↓
-[Bruger valg → kontrole()]
-         ↓
-[kontrole udfører kommandoer]
-  - motorPWM() / motorPWMGradvis()
-  - SetForlys() / SetBaklys() / SetBaglys()
-  - SOMO_Play_*() for audio
-         ↓
-[Telemetri sendt tilbage via UNISendInteger()]</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Interrupt Timing and Debounce</h3><p class="text-gray-600 mb-4">Systemet bruger adaptiv debounce-timing til at håndtere varierende køretøjhastigheder. Når en refleks registreres, deaktiveres interrupts i en konfigureret varighed før re-aktivering. Dette forhindrer flere interrupt-triggering fra en enkelt refleks passage, da sensorerne driver ind og ud af detektionsområdet.</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Tilstande 0-6 (Normal hastighed)</strong> - 500ms debounce vindue: tillader tid for køretøjet at passere refleks uden gen-triggering</li><li><strong>Tilstande 7-8 (Høj hastighed)</strong> - 200ms debounce vindue: køretøjet bevæger sig hurtigere, kortere debounce forhindrer at misse næste refleks</li><li><strong>Adaptiv timing</strong> - Timer5 konfigureret i ISR med forskellige værdier baseret på aktuel tilstand, optimering for forventet køretøjhastighed på hvert progressions stadium</li></ul></div>
+            <div><h3 class="text-xl font-semibold mb-4">System Architecture</h3><p class="text-gray-600 mb-4">BIL-systemet følger en klassisk indlejret systemarkitektur med klar adskillelse af bekymringer på tvers af tre lag:</p><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>Brugerinterface-lag</strong> - UART menu-system (_menuSYS, menu, kontrole) til manuel kontrol og debugging</li><li><strong>Kontrollogik-lag</strong> - Hoved-event loop med state machine drevet af Refleks_count positionsvariabel (0-9)</li><li><strong>Hardware Abstraction Lag</strong> - Modulare driverkomponenter (motor, lys, sensor, timer, UART) der indkapsler port-manipulation</li></ul></div><div><h3 class="text-xl font-semibold mb-4">Data Flow Pipeline</h3><p class="text-gray-600 mb-4">De tre vigtigste kontrolveje er adskilt i stedet for at blive beskrevet som én samlet pipeline: sensorinterrupts opdaterer kun tilstand, hovedloopet forbruger tilstanden, og UART-menuen er en separat manuel vej.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Interrupt flow
+Sensorinput (Refleksbrik)
+  ↓
+INT0_vect / INT1_vect ISR
+  ↓
+Refleks_count++
+EIMSK = 0b00000000
+start_timer(200 | 500)
+UNISendInteger(...)
+  ↓
+Timer5 overflow ISR
+  ↓
+EIMSK = 0b00000011</code></pre><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Main loop flow
+while(1)
+  ↓
+Read Refleks_count
+  ↓
+Switch on state
+  ├─ 0: initialization / menu waiting
+  ├─ 1-6: progressive states
+  ├─ 7-8: high-speed states
+  └─ 9+: final states
+  ↓
+Apply motor / light / audio commands</code></pre><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">UART menu flow
+UART input
+  ↓
+_menuSYS()
+  ├─ 'm' → menu()
+  ├─ 0x01 → kontrole()
+  └─ 0x02 → force next sensor step (debug)
+          ├─ Refleks_count++
+          ├─ EIMSK = 0b00000000
+          └─ start_timer(400)</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Debounce And Re-enable Flow</h3><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Debounce flow
+Timer5 overflow ISR
+  ↓
+TCCR5B = 0b00000000
+EIFR = 0b00000011
+EIMSK = 0b00000011
+  ↓
+Interrupts are ready again, but the main loop still owns the next state transition</code></pre></div><div><h3 class="text-xl font-semibold mb-4">Manual Control Flow</h3><p class="text-gray-600 mb-4">Manual control should be read as a separate path from the sensor-driven state machine. `_menuSYS()` routes into `menu()` for interactive commands and into `kontrole()` for direct debug actions without waiting for the next reflective marker.</p><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4"><code class="language-plaintext">Manual command flow
+Brugerinput
+  ↓
+_menuSYS()
+  ↓
+menu() or kontrole()
+  ↓
+motorPWM() / motorPWMGradvis()
+SetForlys() / SetBaklys() / SetBaglys()
+SOMO_Play_*()
+  ↓
+UNISendInteger() / UNISendString() telemetry</code></pre><ul class="list-disc pl-6 space-y-2 text-gray-600 mb-4"><li><strong>menu()</strong> - Human-readable menu for set/get/debug interactions</li><li><strong>kontrole()</strong> - Direct command dispatcher for test actions and state overrides</li><li><strong>Telemetri</strong> - Echoes current values back over UART after command execution</li></ul></div>
           </div>
         </div>
       </div>
