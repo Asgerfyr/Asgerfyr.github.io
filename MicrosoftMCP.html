@@ -86,27 +86,23 @@
     <h2>Formål</h2>
 
     <p>
-        Formålet med Microsoft MCP-adgangen er at gøre det muligt for en
-        applikation automatisk at uploade en opsummering af et møde til
-        én specifik delt OneDrive-mappe.
+        Applikationen er en del af et skoleprojekt, hvor møder løbende
+        opsummeres, og opsummeringen automatisk uploades som en fil til
+        én delt OneDrive-mappe, som bruges til projektets dokumentation.
     </p>
 
     <p>
-        Applikationen genererer en færdig mødeopsummering som en fil.
-        Denne fil skal efterfølgende automatisk uploades til den aftalte
-        mappe, så den kan gemmes og tilgås af de relevante personer.
+        Skolen har bedt om, at adgangen holdes så begrænset som muligt,
+        så applikationen ikke kan eksportere eller på anden måde tage
+        data ud af skolens systemer. Denne side begrunder, hvorfor den
+        valgte tilladelse er den mindst mulige, jeg har kunnet finde,
+        der kan løse opgaven.
     </p>
 
-    <h2>Den ønskede adgang</h2>
+    <h2>Anmodet adgang</h2>
 
     <p>
-        Microsoft MCP bruges som forbindelsen mellem applikationen og
-        Microsoft 365. For OneDrive-operationen anvendes Microsoft Graph
-        API'ets tilladelsesmodel.
-    </p>
-
-    <p>
-        Den ønskede underliggende Microsoft Graph-tilladelse er:
+        Jeg anmoder om Microsoft Graph-tilladelsen:
     </p>
 
     <div class="info">
@@ -121,73 +117,83 @@
 
     <p>
         Jeg ville foretrække en endnu mere begrænset tilladelse, hvis en
-        sådan understøttes af Microsoft MCP og OneDrive.
-    </p>
-
-    <h2>Hvordan adgangen anvendes</h2>
-
-    <p>
-        Selvom <code>Files.ReadWrite</code> teknisk set giver bredere
-        rettigheder, vil applikationen være begrænset til én bestemt
-        funktion og én bestemt mappe.
+        sådan understøttes.
     </p>
 
     <p>
-        Applikationen vil udelukkende udføre en blind fil-upload til den
-        specifikke mappe.
+        Applikationen vil dog ikke udnytte den bredere adgang, som
+        tilladelsen teknisk giver. Den vil være
+        <span class="important">begrænset til udelukkende at udføre én
+        specifik handling</span>: at uploade den færdige mødeopsummering
+        som en fil til én bestemt, forudbestemt mappe i OneDrive.
     </p>
 
-    <p>Applikationen vil ikke:</p>
-
-    <ul>
-        <li>læse eksisterende OneDrive-filer</li>
-        <li>hente eller analysere filer</li>
-        <li>gennemse brugerens mapper eller filer</li>
-        <li>ændre eksisterende filer</li>
-        <li>slette filer</li>
-        <li>bruge OneDrive til andre formål end den specificerede upload</li>
-    </ul>
-
     <p>
-        Applikationen modtager altså en allerede færdig mødeopsummering
-        og uploader den som en fil til den specifikke mappe.
+        Den konkrete funktion er derfor i praksis en
+        <span class="important">blind fil-upload</span> til én fast
+        mappe — intet andet.
     </p>
 
     <h2>Hvorfor ikke en mere begrænset tilladelse?</h2>
 
     <p>
-        Jeg har undersøgt mulighederne for en mere restriktiv
-        Microsoft-tilladelse.
+        Jeg har konkret undersøgt to mere restriktive Microsoft
+        Graph-tilladelser: <code>Files.ReadWrite.AppFolder</code> og
+        <code>Files.ReadWrite.Selected</code>.
     </p>
 
     <p>
-        <code>Files.ReadWrite.AppFolder</code> er mere begrænset, men
-        tilladelsen er beregnet til applikationens egen OneDrive App Folder.
-        Den kan derfor ikke anvendes til den delte OneDrive-mappe, som
-        denne løsning skal uploade til.
+        <code>Files.ReadWrite.AppFolder</code> er den mest begrænsede
+        tilladelse, jeg har fundet. Den giver kun adgang til en enkelt,
+        dedikeret App Folder, som Microsoft opretter specifikt til
+        applikationen.
     </p>
 
     <p>
-        Der findes også <code>Files.ReadWrite.Selected</code>, som umiddelbart
-        kunne være relevant, da den kan begrænse adgangen til udvalgte
-        filer eller mapper. Microsoft beskriver dog denne tilladelse som
-        en preview-tilladelse med specifikke anvendelsesområder og fraråder
-        brugen af den til direkte kald til Microsoft Graph API'er.
+        Ifølge Microsofts egen dokumentation giver tilladelsen
+        <span class="important">udelukkende</span> adgang til denne ene
+        App Folder og ikke til andre mapper i OneDrive, herunder delte
+        mapper. Mødeopsummeringen skal derimod uploades til en allerede
+        eksisterende, delt mappe, som bruges til dokumentation for et
+        specifikt semesterprojekt, og ikke til applikationens egen
+        isolerede mappe. <code>Files.ReadWrite.AppFolder</code> kan
+        derfor ikke bruges til dette formål.
     </p>
 
     <p>
-        Derfor er <code>Files.ReadWrite</code> den mindst privilegerede
-        almindelige tilladelse, jeg har kunnet finde, som kan udføre den
-        nødvendige upload til den delte mappe gennem Microsoft MCP.
+        <code>Files.ReadWrite.Selected</code> lignede umiddelbart det
+        tætteste match, da den kan begrænse adgangen til kun de filer
+        eller mapper, brugeren selv har valgt, i stedet for hele
+        OneDrive.
+    </p>
+
+    <p>
+        Den er dog en delegeret tilladelse, som kun kan bruges sammen med
+        et logget ind arbejds- eller skolekonto. Microsoft markerer den
+        selv som en preview-tilladelse med begrænset support og fraråder
+        udtrykkeligt at bruge den til at kalde Microsoft Graph API'et
+        direkte — den er beregnet til at blive brugt sammen med
+        Microsofts fil- og mappe-vælger. Da applikationen kalder
+        Graph API'et direkte uden en vælger-dialog for hver upload,
+        følger jeg Microsofts egen anbefaling ved ikke at bruge
+        <code>Files.ReadWrite.Selected</code> til dette formål.
+    </p>
+
+    <p>
+        På den baggrund er <code>Files.ReadWrite</code> den mindst
+        privilegerede almindelige tilladelse, jeg har kunnet finde, der
+        kan udføre den nødvendige upload.
     </p>
 
     <h2>Hvis IT har en bedre løsning</h2>
 
     <p>
-        Hvis skolens IT-afdeling kender en anden Microsoft MCP-konfiguration,
-        Microsoft Graph-tilladelse eller anden teknisk løsning, der kan give
-        applikationen <span class="important">kun upload-adgang til den
-        specifikke mappe</span>, vil jeg meget gerne benytte denne i stedet.
+        Hvis skolens IT-afdeling kender en anden Microsoft Graph-tilladelse
+        end <code>Files.ReadWrite</code>, <code>Files.ReadWrite.AppFolder</code>
+        eller <code>Files.ReadWrite.Selected</code> — eller en anden
+        teknisk konfiguration — der kan give applikationen
+        <span class="important">kun upload-adgang til den specifikke
+        mappe</span>, vil jeg meget gerne benytte denne i stedet.
     </p>
 
     <p>
@@ -196,12 +202,6 @@
         mindst mulige rettigheder.
     </p>
 
-    <p>
-        Mit mål er ikke at få bred adgang til skolens data. Formålet er
-        udelukkende at kunne placere den relevante mødeopsummering
-        automatisk i den aftalte delte mappe.
-    </p>
-    
     <footer>
         Sidst opdateret: 3. september 2026
     </footer>
