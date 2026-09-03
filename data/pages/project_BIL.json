@@ -14,7 +14,7 @@
     {
       "component": "ProjectOverview",
       "props": {
-        "description": "BIL-projektet er en indlejret systembillede til styring af et autonomt køretøj ved hjælp af en AVR-mikrokontroller. Systemet integrerer motorstyrings, lyscontrolitering, sensorinputbehandling og UART-baseret brugergrænseflade. Dette første-semester universitets projekt demonstrerer interrupt-drevet arkitektur, real-time state machine design og hardware abstraction principper.",
+        "description": "BIL-projektet er et indlejret system til styring af et autonomt køretøj ved hjælp af en AVR-mikrokontroller. Systemet indeholder motorstyring, lysstyring, sensorbehandling og en UART-baseret brugergrænseflade. Bilen blev desuden udstyret med et pendul, hvor opgaven var at minimere hurtige accelerationer for at begrænse pendulets udsving. Projektet demonstrerer brugen af interrupts, real-time state machines og hardware abstraction.",
         "objectives": [
           "Implementere motor-styring med variable hastighedskontrol og retningsændring",
           "Automatisere køretøj-sensorfeedback gennem refleksbrik-detektion for præcis positionsbestemmelse",
@@ -97,7 +97,7 @@
           "Data Flow Pipeline": [
             {
               "type": "text",
-              "content": "De tre vigtigste kontrolveje er adskilt i stedet for at blive beskrevet som én samlet pipeline: sensorinterrupts opdaterer kun tilstand, hovedloopet forbruger tilstanden, og UART-menuen er en separat manuel vej."
+              "content": "De tre vigtigste kontrolveje er adskilt: sensorinterrupts opdaterer kun tilstand, hovedloopet forbruger tilstanden, og UART-menuen er en separat manuel vej."
             },
             {
               "type": "code",
@@ -125,7 +125,7 @@
           "Manual Control Flow": [
             {
               "type": "text",
-              "content": "If you are new to the project, read this as the path for commands that a person types through the serial menu. The menu does not wait for the sensor; it simply listens for input, shows options, and sends the chosen command to the right driver."
+              "content": "The code under is the path for commands that a person types through the serial menu. The menu does not wait for the sensor; it simply listens for input, shows options, and sends the chosen command to the right driver."
             },
             {
               "type": "code",
@@ -160,7 +160,7 @@
           "Key Design Decision": [
             {
               "type": "text",
-              "content": "Motordriveren kræver IKKE fuld initialisering på hver kommando. Når initMotor() konfigurerer Timer0 og retningspinne, modificerer efterfølgende motorPWM() eller motorPWMGradvis() opkald kun PWM duty cycle. Dette tillader menusystemet at justere motorhastighed til enhver tid uden at nulstille retning eller påtage sig initialiseringsomkostninger. Manglende eller uændrede parametre bevarer deres tidligere tilstand."
+              "content": "Motordriveren behøver ikke initialiseres ved hver kommando.\ninitMotor() indstiller timeren og motorens retning én gang.\nDerefter ændrer motorPWM() og motorPWMGradvis() kun motorens hastighed.\nRetning og andre indstillinger bevares, hvis de ikke ændres."
             }
           ],
           "Main Functions": [
@@ -184,11 +184,11 @@
           "Problems Solved": [
             {
               "type": "text",
-              "content": "<strong>Problem:</strong> Direkte PWM spring forårsager pludselig acceleration, hvilket skaber mekanisk stød og vibration i motor og tandhjul."
+              "content": "<strong>Problem:</strong> Bilen er udstyret med et pendul, som kan få store udsving ved hurtige accelerationer og opbremsninger. Derfor skal motorens hastighed ændres gradvist."
             },
             {
               "type": "text",
-              "content": "<strong>Løsning:</strong> motorPWMGradvis() implementerer glat accelerations-ramp med konfigurerbar trin størrelse og forsinkelse mellem inkrementer, spredt hastighedssændring over flere tidsintervaller."
+              "content": "<strong>Løsning:</strong> motorPWMGradvis() ændrer PWM-værdien trinvis over tid, så bilen accelererer og bremser mere gradvist. Dette hjælper med at begrænse pendulets udsving."
             },
             {
               "type": "text",
@@ -212,7 +212,7 @@
           "Purpose and Design": [
             {
               "type": "text",
-              "content": "Lysdriver styrer tre uafhængige lyskredsløb ved hjælp af PWM duty cycle modulation til realistisk lysintensitets justering. Dette afspejler virkelig køretøj adfærd hvor baglys dimmers under normal drift og stiv op til bremsesignaler. Hver lys opererer på sin egen timer register med uafhængig kontrol."
+              "content": "Lysdriver styrer tre uafhængige lyskredsløb ved hjælp af PWM duty cycle modulation til realistisk lysintensitets justering. Dette afspejler virkelig køretøj adfærd hvor baglys dæmpes under normal drift og forstærkes til bremsesignaler. Hver lys opererer på sin egen timer register med uafhængig kontrol."
             },
             {
               "type": "list",
@@ -244,24 +244,6 @@
               "type": "code",
               "language": "c",
               "content": "// From main.c - System initialization (all lights off)\nSetForlys(0);   // Front light: off\nSetBaklys(0);   // Brake light: off\nSetBaglys(0);   // Reverse light: off\n\n// State 1 (acceleration): Lights on, moderate intensity\nSetForlys(150);  // Front light: ~59% brightness\nSetBaklys(100);  // Brake light: ~39% brightness\nSetBaglys(0);    // Reverse light: remains off\n\n// State 2-6: Progressive state transitions adjust lighting independently\n// SetForlys(120); SetBaklys(80);  // Example state 2\n// SetForlys(180); SetBaklys(150); // Example state 7 (higher speed)\n\n// Reverse operation\nSetForlys(0);    // Front off\nSetBaklys(0);    // Brake off\nSetBaglys(200);  // Reverse light: ~78% brightness"
-            }
-          ],
-          "Problems Solved": [
-            {
-              "type": "text",
-              "content": "<strong>Problem:</strong> Simpel til/fra lys matcher ikke rigtig køretøj adfærd hvor baglys dimmers under normal drift og stivner op til bremsesignaler."
-            },
-            {
-              "type": "text",
-              "content": "<strong>Løsning:</strong> PWM duty cycle tillader lysintensitets modulation fra 0-255, muliggørende realistisk intensitetskontrol der matcher forventet køretøj lyser adfærd ved forskellige hastigheder og tilstande."
-            },
-            {
-              "type": "text",
-              "content": "<strong>Problem:</strong> Tre uafhængige lyskredsløb kræver isoleret kontrol uden krydsforstyrrelser."
-            },
-            {
-              "type": "text",
-              "content": "<strong>Løsning:</strong> Separate funktioner for hver lyskreds løb, hver modificerer kun sit eget timer register, forhindrer utilsigtet interferens og tillader samtidig uafhængig lysintensitets justeringer."
             }
           ]
         }
@@ -298,7 +280,7 @@
           "Global State Variable": [
             {
               "type": "text",
-              "content": "<strong>Refleks_count</strong> - Volatile unsigned char (0-9): sporer køretøjs position relativt til reflekser. Dette er den PRIØRE state variabel der kontrollerer hele system progression. Hoved-loop læser denne værdi for at bestemme hvilken tilstand der skal udføres."
+              "content": "<strong>Refleks_count</strong> - volatile unsigned char (0–9): Sporer køretøjets position i forhold til reflekserne. Dette er den primære state-variabel, som styrer systemets progression. Hovedløkken læser værdien for at bestemme, hvilken tilstand der skal udføres."
             }
           ],
           "Code Example": [
@@ -325,7 +307,7 @@
           "Problems Solved": [
             {
               "type": "text",
-              "content": "<strong>Problem:</strong> Enkelt refleks forårsager 5-15 interrupt triggers mens sensor forvirrende detektionszone skaber gentagne kant transitioner."
+              "content": "<strong>Problem:</strong> Enkelt refleks forårsager flere interrupt triggers mens sensor forvirrende detektionszone skaber gentagne kant transitioner."
             },
             {
               "type": "text",

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Begrundelse for Microsoft Graph-adgang</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #222;
+            background: #f5f5f5;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 21px;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .info {
+            background: #f5f7fa;
+            border-left: 4px solid #555;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+
+        .important {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <h1>Begrundelse for Microsoft Graph-adgang</h1>
+
+    <h2>Formål</h2>
+
+    <p>
+        Formålet med applikationen er automatisk at uploade en opsummering
+        af et møde til én specifik delt OneDrive-mappe.
+    </p>
+
+    <p>
+        Applikationen genererer en færdig mødeopsummering som en fil.
+        Denne fil skal efterfølgende automatisk uploades til den aftalte
+        mappe, så den kan gemmes og tilgås af de relevante personer.
+    </p>
+
+    <h2>Anmodet adgang</h2>
+
+    <p>
+        Jeg anmoder om Microsoft Graph-tilladelsen:
+    </p>
+
+    <div class="info">
+        <code>Files.ReadWrite</code>
+    </div>
+
+    <p>
+        Dette er den mindst privilegerede almindelige Microsoft Graph-tilladelse,
+        jeg har kunnet finde, som understøtter upload af filer til den ønskede
+        delte mappe.
+    </p>
+
+    <p>
+        Jeg ville gerne anvende en mere begrænset tilladelse, hvis en sådan findes.
+    </p>
+
+    <p>
+        Applikationen vil dog ikke udnytte den bredere adgang, som tilladelsen
+        teknisk giver. Den vil være begrænset i sin funktion til udelukkende
+        at uploade den færdige mødeopsummering til én på forhånd specificeret mappe.
+    </p>
+
+    <p>Applikationen vil ikke:</p>
+
+    <ul>
+        <li>læse eksisterende OneDrive-filer</li>
+        <li>hente eller analysere filer</li>
+        <li>ændre eksisterende filer</li>
+        <li>slette filer</li>
+        <li>gennemse brugerens mapper eller filer</li>
+        <li>bruge OneDrive til andre formål end den specificerede upload</li>
+    </ul>
+
+    <p>
+        Den konkrete funktion er derfor i praksis en
+        <span class="important">blind fil-upload</span>:
+        Applikationen modtager en færdig mødeopsummering og uploader den
+        til den specifikke mappe.
+    </p>
+
+    <h2>Hvorfor ikke en mere begrænset tilladelse?</h2>
+
+    <p>
+        Jeg har undersøgt mulighederne for en mere restriktiv
+        Microsoft Graph-tilladelse.
+    </p>
+
+    <p>
+        <code>Files.ReadWrite.AppFolder</code> er mere begrænset, men den er
+        beregnet til applikationens egen App Folder og kan derfor ikke anvendes
+        til den delte OneDrive-mappe, som denne løsning skal uploade til.
+    </p>
+
+    <p>
+        Der findes også <code>Files.ReadWrite.Selected</code>, som umiddelbart
+        kunne ligne en løsning, fordi den kan begrænse adgangen til udvalgte
+        filer eller mapper. Microsoft beskriver dog denne tilladelse som en
+        preview-tilladelse med specifikke anvendelsesområder og fraråder brugen
+        af den til direkte kald til Microsoft Graph API'er.
+    </p>
+
+    <p>
+        På den baggrund er <code>Files.ReadWrite</code> den mindst privilegerede
+        almindelige tilladelse, jeg har kunnet finde, der kan udføre den
+        nødvendige upload.
+    </p>
+
+    <h2>Hvis IT har en bedre løsning</h2>
+
+    <p>
+        Hvis skolens IT-afdeling kender en anden Microsoft-tilladelse eller
+        konfiguration, der kan give applikationen
+        <span class="important">
+            kun upload-adgang til den specifikke mappe
+        </span>,
+        vil jeg meget gerne benytte denne i stedet.
+    </p>
+
+    <p>
+        Jeg laver gerne en ny ansøgning med en mere restriktiv tilladelse,
+        hvis IT kan anvise en løsning, der bedre følger princippet om
+        mindst mulige rettigheder.
+    </p>
+
+    <p>
+        Mit mål er ikke at få bred adgang til skolens data, men udelukkende
+        at få mulighed for automatisk at placere den ene relevante
+        mødeopsummering i den aftalte mappe.
+    </p>
+
+    <footer>
+        Sidst opdateret: 3. september 2026
+    </footer>
+
+</main>
+
+</body>
+</html>
