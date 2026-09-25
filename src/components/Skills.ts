@@ -13,14 +13,18 @@ export const Skills = {
           <div class="lg:w-1/3">
             <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
             <div class="space-y-6">
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">JavaScript:</span><span class="font-medium">Erfaren+</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">JavaScript:</span><span class="font-medium">Middelmådig</span></div>
               <div class="flex justify-between mb-1 border-b"><span class="font-medium">Frontend:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">C#:</span><span class="font-medium">middelmådig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Python:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Node and Express:</span><span class="font-medium">middelmådig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Database and Mysql:</span><span class="font-medium">middelmådig</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">3D modeling/3D printing:</span><span class="font-medium">Erfaren</span></div>
-              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Design brugergrænseflade:</span><span class="font-medium">begynder</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">C#:</span><span class="font-medium">Begynder</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">C++:</span><span class="font-medium">Middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Python:</span><span class="font-medium">Erfaren</span></div>              
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Databases strukturer:</span><span class="font-medium">Middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">3D modeling/3D printing:</span><span class="font-medium">Middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Design brugergrænseflade:</span><span class="font-medium">Middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Mobil apps:</span><span class="font-medium">Middelmådig</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Hypervisor:</span><span class="font-medium">Begynder</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Agentisk arbejde:</span><span class="font-medium">Erfaren</span></div>
+              <div class="flex justify-between mb-1 border-b"><span class="font-medium">Prompt engineering:</span><span class="font-medium">Erfaren</span></div>
             </div>
           </div>
           <div class="lg:w-2/3">
