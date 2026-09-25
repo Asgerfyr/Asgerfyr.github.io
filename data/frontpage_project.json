@@ -38,6 +38,18 @@
   "link": "BT Sound System",
   "pageKey": "project_BT_Sound_System"
 },
+"BIL_Autonomous_Vehicle": {
+  "title": "BIL - Autonomt Køretøjskontrolsystem",
+  "image": "https://lh3.googleusercontent.com/pw/AP1GczO3uUWf2QigHBd_32m9QhQTbWOywmulNXSfowhCaMRCTDMMCpbnFl-GHTvKHMrOSOBCJkjJhyeyWTftpVF8f1i-8R7sxgHHYLZjTmVVddSb69c06LhU2wMcCXCLv0coTMaefxHoQzv_BkFClV5ShcvT=w1350-h993-s-no-gm?authuser=0",
+  "sub_description": "Interrupt-drevet indlejret system til autonom køretøjskontrol ved hjelp af AVR mikrokontroller.",
+  "description": "BIL er et første-semester universitet indlejret systems projekt, der styrer et autonomt køretøj via en AVR mikrokontroller. Systemet integrerer PWM-baseret motorcontrol, uafhængig lyskontrol, refleksbrik-baseret positionering, og UART-baseret brugergrænseflade. Projektet demonstrerer interrupt-drevet arkitektur, real-time state machine design, og hardware abstraction principler.",
+  "topics": ["C", "AVR", "Atmel Studio", "Indlejrede Systemer", "Mikrokontroller", "PWM", "UART", "Interrupts"],
+  "topicsSummery": ["Motorcontrol", "Sensor Integration", "Lysmanagement", "State Machine", "Real-time Systemer"],
+  "category": ["Indlejret_System", "Mikrokontroller", "IoT", "Automotive"],
+  "date": "December 2025",
+  "link": "BIL",
+  "pageKey": "project_BIL"
+},
 "Light_Regulation_System": {
   "title": "Light Regulation System",
   "image": "https://lh3.googleusercontent.com/pw/AP1GczOeA_nDoGx7mC0CZA_lb70HRMT0pdvvKyRiV2Tvoxx6ky7a7H39aw3ItHH4Rpx-ob6TPMnD5eUCtWAkH__tJU3Y1q-AALpn2o7p8P-6sK3Rq7BSyPkroalMpRQor0afRDC1l6KE0NaIVNjDzXtW3Dep=w1389-h1042-s-no-gm?authuser=0",
@@ -49,18 +61,5 @@
   "date": "May 2026",
   "link": "Light Regulation System",
   "pageKey": "project_LR_Light_Regulation"
-},
-"BIL_Autonomous_Vehicle": {
-  "title": "BIL - Autonomt Køretøjskontrolsystem",
-  "image": "https://lh3.googleusercontent.com/pw/ABLVV85_placeholder",
-  "sub_description": "Interrupt-drevet indlejret system til autonom køretøjskontrol ved hjelp af AVR mikrokontroller.",
-  "description": "BIL er et første-semester universitet indlejret systems projekt, der styrer et autonomt køretøj via en AVR mikrokontroller. Systemet integrerer PWM-baseret motorcontrol, uafhængig lyskontrol, refleksbrik-baseret positionering, og UART-baseret brugergrænseflade. Projektet demonstrerer interrupt-drevet arkitektur, real-time state machine design, og hardware abstraction principler.",
-  "topics": ["C", "AVR", "Atmel Studio", "Indlejrede Systemer", "Mikrokontroller", "PWM", "UART", "Interrupts"],
-  "topicsSummery": ["Motorcontrol", "Sensor Integration", "Lysmanagement", "State Machine", "Real-time Systemer"],
-  "category": ["Indlejret_System", "Mikrokontroller", "IoT", "Automotive"],
-  "date": "December 2025",
-  "link": "BIL",
-  "pageKey": "project_BIL"
 }
-
 }

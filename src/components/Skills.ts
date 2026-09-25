@@ -25,18 +25,19 @@ export const Skills = {
               <div class="flex justify-between mb-1 border-b"><span class="font-medium">Hypervisor:</span><span class="font-medium">Begynder</span></div>
               <div class="flex justify-between mb-1 border-b"><span class="font-medium">Agentisk arbejde:</span><span class="font-medium">Erfaren</span></div>
               <div class="flex justify-between mb-1 border-b"><span class="font-medium">Prompt engineering:</span><span class="font-medium">Erfaren</span></div>
+              </div>
             </div>
-          </div>
-          <div class="lg:w-2/3">
-            <span class="pb-5 pt-10 block">
-              Jeg har erfaring med udvikling af både frontend- og backend-løsninger, herunder design af brugervenlige og strukturerede webapplikationer med fokus på sikkerhed, datastyring og rollebaseret adgang.
-            </span>
-            <span class="pb-5 block">
-              Inden for hardware og embedded systemer har jeg erfaring med styring, automation og integration af sensorer og aktuatorer. Jeg kan designe kredsløb, udvikle firmware og opsætte trådløse systemer med fokus på stabilitet, funktionalitet og sikkerhed.
-            </span>
-            <span class="pb-5 block">
-              Jeg har også erfaring med 3D-modellering og print, hvor jeg kan skabe kabinetter, mekaniske dele og strukturer, som kombinerer funktionalitet, præcision og brugervenlighed.
-            </span>
+            <div class="lg:w-2/3">
+              <span class="pb-5 pt-10 block">
+                Jeg har erfaring med udvikling af både frontend- og backend-løsninger, herunder design af brugervenlige og strukturerede webapplikationer med fokus på sikkerhed, datastyring og rollebaseret adgang.
+              </span>
+              <span class="pb-5 block">
+                Inden for hardware og embedded systemer har jeg erfaring med styring, automation og integration af sensorer og aktuatorer. Jeg kan designe kredsløb, udvikle firmware og opsætte trådløse systemer med fokus på stabilitet, funktionalitet og sikkerhed.
+              </span>
+              <span class="pb-5 block">
+                Jeg har også erfaring med 3D-modellering og print, hvor jeg kan skabe kabinetter, mekaniske dele og strukturer, som kombinerer funktionalitet, præcision og brugervenlighed.
+              </span>
+            </div>
           </div>
         </div>
       </section>
